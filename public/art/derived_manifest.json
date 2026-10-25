@@ -1,5 +1,5 @@
 {
-  "note": "Derived deployment copies (WebP). Originals are unchanged in handoff/02_ART_ASSETS and remain the identity authority.",
+  "note": "Derived deployment copies (WebP). Originals are unchanged in handoff/02_ART_ASSETS and remain the identity authority. Character images ship from their all-ages edits (edited_from); reference sheets are not shipped.",
   "encoder": "sharp 0.35.4 / libvips 8.18.6",
   "assets": [
     {
@@ -94,30 +94,20 @@
       "source_member": "art/backgrounds/bg_moonwater_quay.png"
     },
     {
-      "asset_id": "tavri_character_sheet",
-      "kind": "character_sheet",
-      "file": "tavri_character_sheet.webp",
-      "width": 1448,
-      "height": 1086,
-      "bytes": 297994,
-      "sha256": "8e6219f5f916400098844a228caf9f052ce1dbc3436a9341d218ec83e3d5011b",
-      "source_path": "02_ART_ASSETS/reference_sheets/tavri_sheet.png",
-      "source_sha256": "23df465e6f084a25a9ec429623b12bf0c4138ebe601c74f09bfa50cf7571cd1d",
-      "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/character_sheet.png"
-    },
-    {
       "asset_id": "tavri_tavri_private_confession",
       "kind": "midpoint_CG",
       "file": "tavri_tavri_private_confession.webp",
       "width": 1448,
       "height": 1086,
-      "bytes": 254042,
-      "sha256": "c30b5e3c35df608ea38fedafb028b8f0a0232a3436120d64bad6b5d7c2cf87cc",
+      "bytes": 253888,
+      "sha256": "7649d581727312550cd21bc65e8844dae6065be74ab47fd94fdd1078d7823b6f",
       "source_path": "02_ART_ASSETS/midpoint_cg/tavri_private_confession.png",
       "source_sha256": "966ca9fb3eedcbc6d2aa0f66ff2cbdb147962c20d63bf409959a35c6937f7e7b",
       "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/events/tavri_private_confession.png"
+      "source_member": "art/events/tavri_private_confession.png",
+      "edited_from": "art-src/edited/tavri_tavri_private_confession.png",
+      "edited_sha256": "54c3ab86e3e1800184fe3812533791a398bda7bfd840d33400e67aacbcfa5a52",
+      "edit_spec": "scripts/art/modest/tavri_tavri_private_confession.json"
     },
     {
       "asset_id": "tavri_tavri_playful",
@@ -125,12 +115,15 @@
       "file": "tavri_tavri_playful.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 213464,
-      "sha256": "d38fb35c1400cefb01c93ad4a156189b2d04f70fb74f282de2b841023926b725",
+      "bytes": 212634,
+      "sha256": "f3653c57acc4c80454333363cf71445e714256653218f19c63df231d70813d3b",
       "source_path": "02_ART_ASSETS/sprites/tavri_playful.png",
       "source_sha256": "6a837113004ed11e5a57a26f16bd7398a71779860e2a24022f5bb835322afc2a",
       "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/sprites/tavri_playful.png"
+      "source_member": "art/sprites/tavri_playful.png",
+      "edited_from": "art-src/edited/tavri_tavri_playful.png",
+      "edited_sha256": "28a78ade31ee30e5bea5b5c78cac9642ec72f5fffdbaa049d31675068def8f10",
+      "edit_spec": "scripts/art/modest/tavri_tavri_playful.json"
     },
     {
       "asset_id": "tavri_tavri_neutral",
@@ -138,12 +131,15 @@
       "file": "tavri_tavri_neutral.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 240720,
-      "sha256": "e1b6d1a15689cc262eb43e3ce8037f3fbf66b92b12f8a8ba22d4008887e3d272",
+      "bytes": 237678,
+      "sha256": "064fb7d2d95fdb4e2c98ec6501da519bd33bf17e0fdc0c21050f32d7277fe0d7",
       "source_path": "02_ART_ASSETS/sprites/tavri_neutral.png",
       "source_sha256": "241d1d4418c69afd340835d9b0d1d53003d66f360e3adea71998ccea75d969fe",
       "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/sprites/tavri_neutral.png"
+      "source_member": "art/sprites/tavri_neutral.png",
+      "edited_from": "art-src/edited/tavri_tavri_neutral.png",
+      "edited_sha256": "b23b460596776060dfab7f1b80b50eb70137cb41d32e010096bf9d856f4b13c8",
+      "edit_spec": "scripts/art/modest/tavri_tavri_neutral.json"
     },
     {
       "asset_id": "tavri_tavri_worried",
@@ -151,12 +147,15 @@
       "file": "tavri_tavri_worried.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 230150,
-      "sha256": "4235f9c8b26309f9b50e359f01c74ede2407a6dd85d27aa4e51c08ef803dd4b4",
+      "bytes": 226532,
+      "sha256": "9ff0523301d93223ed3ca4a3216e45989d0bd20d84f2037d4ae2c814a7f5f8c5",
       "source_path": "02_ART_ASSETS/sprites/tavri_worried.png",
       "source_sha256": "d54fe24d85a4319abe3fcf617be23c9bbdb28f1ccedc0c6fbb605c035860914f",
       "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/sprites/tavri_worried.png"
+      "source_member": "art/sprites/tavri_worried.png",
+      "edited_from": "art-src/edited/tavri_tavri_worried.png",
+      "edited_sha256": "6d4e519e909904701f6d0670e23e079ef23e3fdebe72266693b49dbe668cefe2",
+      "edit_spec": "scripts/art/modest/tavri_tavri_worried.json"
     },
     {
       "asset_id": "tavri_tavri_annoyed",
@@ -164,12 +163,15 @@
       "file": "tavri_tavri_annoyed.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 207364,
-      "sha256": "9063f267405934a7c2e27b3ef5148adee54f84b4cc6d736450c9f04868f21343",
+      "bytes": 206336,
+      "sha256": "3b49eef2282457ba28e76c2e2c35d76c353631eef28116066fe95fa7c8af4c9f",
       "source_path": "02_ART_ASSETS/sprites/tavri_annoyed.png",
       "source_sha256": "66c9fa0336e35e530447648a3a07dca73918986ccc904c5428a488d36deaa3de",
       "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/sprites/tavri_annoyed.png"
+      "source_member": "art/sprites/tavri_annoyed.png",
+      "edited_from": "art-src/edited/tavri_tavri_annoyed.png",
+      "edited_sha256": "46567bea0579f7965d91d6a45c60acfc4abc37351d30729f4432c4d9182c2698",
+      "edit_spec": "scripts/art/modest/tavri_tavri_annoyed.json"
     },
     {
       "asset_id": "tavri_tavri_surprised",
@@ -177,25 +179,15 @@
       "file": "tavri_tavri_surprised.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 204872,
-      "sha256": "a286354ba1f6a3e8a15a706cb651fa8c7e2bd246bfe5fcc353b77fabc19d4185",
+      "bytes": 203758,
+      "sha256": "6e3dc2bc1019ec5cf93d2843915662f7df4b4bc62dccfb3c078550490d40262d",
       "source_path": "02_ART_ASSETS/sprites/tavri_surprised.png",
       "source_sha256": "36d193b37b32baaac00e59cd839b2ce782179799b6552c9b0e2918962941c962",
       "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/sprites/tavri_surprised.png"
-    },
-    {
-      "asset_id": "nerelle_character_sheet",
-      "kind": "character_sheet",
-      "file": "nerelle_character_sheet.webp",
-      "width": 1600,
-      "height": 1088,
-      "bytes": 204708,
-      "sha256": "2169684d635b2da2702444ee9d2e6c48d3580780171051a69d12d60f3bcdc798",
-      "source_path": "02_ART_ASSETS/reference_sheets/nerelle_sheet.png",
-      "source_sha256": "06b65de877cabf66804a4ada477c8178f29e912081c6aeb93a40155ed906cb2f",
-      "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/character_sheet.png"
+      "source_member": "art/sprites/tavri_surprised.png",
+      "edited_from": "art-src/edited/tavri_tavri_surprised.png",
+      "edited_sha256": "a4d9accad1d273d8ba952d898aed6ff5ab07abca5dbaa9723b5e217ebd8e032a",
+      "edit_spec": "scripts/art/modest/tavri_tavri_surprised.json"
     },
     {
       "asset_id": "nerelle_nerelle_forbidden_journey",
@@ -203,12 +195,15 @@
       "file": "nerelle_nerelle_forbidden_journey.webp",
       "width": 1448,
       "height": 1086,
-      "bytes": 309854,
-      "sha256": "f804c42fa5c5f6a2e6453d34b2f5809f3d00b5860bf633c377f447e9edd3963e",
+      "bytes": 286230,
+      "sha256": "d37cdf87c3866681741dc1f9a1279aa8a592557d3df6cf93fee762c989585f11",
       "source_path": "02_ART_ASSETS/midpoint_cg/nerelle_forbidden_journey.png",
       "source_sha256": "629a575feee9458e64a54b76c7b3377e4dbb19a7a71c5e3dc4b5235d988bda94",
       "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/events/nerelle_forbidden_journey.png"
+      "source_member": "art/events/nerelle_forbidden_journey.png",
+      "edited_from": "art-src/edited/nerelle_nerelle_forbidden_journey.png",
+      "edited_sha256": "550646c37a50c52c4bc24ea4953166b2ffdc39d9d91778424e86b5a86d742c77",
+      "edit_spec": "scripts/art/modest/nerelle_nerelle_forbidden_journey.json"
     },
     {
       "asset_id": "nerelle_nerelle_annoyed",
@@ -216,12 +211,15 @@
       "file": "nerelle_nerelle_annoyed.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 359346,
-      "sha256": "6fa18a67c98b01c9241df6c294f92acc2813adb80b80b9dcca3f4535d9b62e9a",
+      "bytes": 111154,
+      "sha256": "217ce95d6b5c89e2ce72c2627f9b2e086365cf3d54d5a4e6823dadde42cac5f8",
       "source_path": "02_ART_ASSETS/sprites/nerelle_annoyed.png",
       "source_sha256": "79c880939424a1e32731d80a91bd91b4b7da31efd8a2636310b3960a52b31dc5",
       "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/sprites/nerelle_annoyed.png"
+      "source_member": "art/sprites/nerelle_annoyed.png",
+      "edited_from": "art-src/edited/nerelle_nerelle_annoyed.png",
+      "edited_sha256": "f94d81b7e481938c1c1a7b4a0c302dda968a2a22e1a82e8b7e4ebc83318b48c6",
+      "edit_spec": "scripts/art/modest/nerelle_nerelle_annoyed.json"
     },
     {
       "asset_id": "nerelle_nerelle_neutral",
@@ -229,12 +227,15 @@
       "file": "nerelle_nerelle_neutral.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 349752,
-      "sha256": "e5ffba95cfd04d9d7e403cafbe3a20418fe263a7eb9345157355ad8d58ba1c0d",
+      "bytes": 100328,
+      "sha256": "6fe18d4f3e701818a70b133c1b1c9eed66b9cd08ba03c24121c104fa85db9d0f",
       "source_path": "02_ART_ASSETS/sprites/nerelle_neutral.png",
       "source_sha256": "a442cf0b37c4df6556bc12e312c1ae14816bfddd6e2a88d21e628573b5ab6cf2",
       "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/sprites/nerelle_neutral.png"
+      "source_member": "art/sprites/nerelle_neutral.png",
+      "edited_from": "art-src/edited/nerelle_nerelle_neutral.png",
+      "edited_sha256": "6a0819cd285d9a6e9c4ada5ec2d4246d8511ae62305fbfaf878619f0f4e18888",
+      "edit_spec": "scripts/art/modest/nerelle_nerelle_neutral.json"
     },
     {
       "asset_id": "nerelle_nerelle_playful",
@@ -242,12 +243,15 @@
       "file": "nerelle_nerelle_playful.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 341190,
-      "sha256": "02a6ac3c16f4687f1a9b16e1cba59763dff4b326fb0ac080b895365ab8c8a77b",
+      "bytes": 106626,
+      "sha256": "4c630a490dfa75af5634db8a65bdfd8f75fdb14d6f41732f6e9cd123bf9c2d5a",
       "source_path": "02_ART_ASSETS/sprites/nerelle_playful.png",
       "source_sha256": "6ecf2371443dc8acfd900cba7fd01cb37230ecf023f0c0dd7b788bd54a0c3de4",
       "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/sprites/nerelle_playful.png"
+      "source_member": "art/sprites/nerelle_playful.png",
+      "edited_from": "art-src/edited/nerelle_nerelle_playful.png",
+      "edited_sha256": "7e961abec70ef2debc060eb01de6c9beba01ace771170b37b300ffdf85a92b3a",
+      "edit_spec": "scripts/art/modest/nerelle_nerelle_playful.json"
     },
     {
       "asset_id": "nerelle_nerelle_surprised",
@@ -255,12 +259,15 @@
       "file": "nerelle_nerelle_surprised.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 341166,
-      "sha256": "7e704235b8b19e71f6c3afc9e04d3d066e1dd0ec5131427b4ab07f5419928c35",
+      "bytes": 103124,
+      "sha256": "a05bab275f9a20a591ebe7b0fae3c0cafe5ceeac1269a9a9b555439c581dc2ee",
       "source_path": "02_ART_ASSETS/sprites/nerelle_surprised.png",
       "source_sha256": "a8b537b6c927fc056a37707554c94a9fd52612aa725c9f852c9aaf1d5a91a4c3",
       "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/sprites/nerelle_surprised.png"
+      "source_member": "art/sprites/nerelle_surprised.png",
+      "edited_from": "art-src/edited/nerelle_nerelle_surprised.png",
+      "edited_sha256": "29bfd20299d128a72756d2ff055299dd21d7b6304d16c951e381c87b505ee1bb",
+      "edit_spec": "scripts/art/modest/nerelle_nerelle_surprised.json"
     },
     {
       "asset_id": "nerelle_nerelle_worried",
@@ -268,25 +275,15 @@
       "file": "nerelle_nerelle_worried.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 337108,
-      "sha256": "1afb08ce25ce15bcf6cdcf3da4f293b7d94104f21a2112746aa95e1b8ea858cc",
+      "bytes": 100708,
+      "sha256": "b13480f676d5cace4c2d08a15ee547c905e1d73e779917948a49e314ad49bca0",
       "source_path": "02_ART_ASSETS/sprites/nerelle_worried.png",
       "source_sha256": "17d547b34751017cb9513f33f4b2fd688ab0e9df490766e0c945e111fa5052f4",
       "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "art/sprites/nerelle_worried.png"
-    },
-    {
-      "asset_id": "kaedra_character_sheet",
-      "kind": "character_sheet",
-      "file": "kaedra_character_sheet.webp",
-      "width": 1600,
-      "height": 960,
-      "bytes": 199382,
-      "sha256": "9c09c442622cdda16b3b2a1b6960c8abf2e23abf8972fe9c3e748519ce5cb9c2",
-      "source_path": "02_ART_ASSETS/reference_sheets/kaedra_sheet.png",
-      "source_sha256": "fcd2ab72fcbf722837abb432c819284842154ac85af562725cb1058eb005567a",
-      "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/character_sheet.png"
+      "source_member": "art/sprites/nerelle_worried.png",
+      "edited_from": "art-src/edited/nerelle_nerelle_worried.png",
+      "edited_sha256": "228b0baf2d096d34fbe33a229e20c20f9cd90fd77ce4545d7c070fe233cbf976",
+      "edit_spec": "scripts/art/modest/nerelle_nerelle_worried.json"
     },
     {
       "asset_id": "kaedra_kaedra_royal_trial",
@@ -294,12 +291,15 @@
       "file": "kaedra_kaedra_royal_trial.webp",
       "width": 1448,
       "height": 1086,
-      "bytes": 267248,
-      "sha256": "fb11ccc93b9579f760c9aa45d28c877f0776947aab7278441bf087cec62e9860",
+      "bytes": 268546,
+      "sha256": "cf2e4559277a4f15edafbde825cf9b8b132653becd09add5ba161435e2c98278",
       "source_path": "02_ART_ASSETS/midpoint_cg/kaedra_royal_trial.png",
       "source_sha256": "c60ac63733f29aba53a4004a3e5197c33885345010aec408668cd4d080fca48a",
       "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/events/kaedra_royal_trial.png"
+      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/events/kaedra_royal_trial.png",
+      "edited_from": "art-src/edited/kaedra_kaedra_royal_trial.png",
+      "edited_sha256": "8426b516dfa89b884189c0eb194e1700de288d44e596593abc9e36f054b6d997",
+      "edit_spec": "scripts/art/modest/kaedra_kaedra_royal_trial.json"
     },
     {
       "asset_id": "kaedra_kaedra_annoyed",
@@ -307,12 +307,15 @@
       "file": "kaedra_kaedra_annoyed.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 234176,
-      "sha256": "a236bf25ddfa342efaea16e5957de87af86c8a37922e73ec149b6df002a43d0e",
+      "bytes": 238824,
+      "sha256": "d85ee983aa503aa81d4b7b8483b789c18938385c5e3e178a420253830c539ab3",
       "source_path": "02_ART_ASSETS/sprites/kaedra_annoyed.png",
       "source_sha256": "1b184506a317926ad3be3182dd308f2817acb5eb18d7cdd2389343c4c8c2d969",
       "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/sprites/kaedra_annoyed.png"
+      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/sprites/kaedra_annoyed.png",
+      "edited_from": "art-src/edited/kaedra_kaedra_annoyed.png",
+      "edited_sha256": "1a02beefab0d7a04ea93139c069c8c72656a1527d228647c70c68ce34cb1a643",
+      "edit_spec": "scripts/art/modest/kaedra_kaedra_annoyed.json"
     },
     {
       "asset_id": "kaedra_kaedra_neutral",
@@ -320,12 +323,15 @@
       "file": "kaedra_kaedra_neutral.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 250640,
-      "sha256": "5255e70c1c4cbe9eb5d99769f59d272450423b2a0102874afac8b0ab8d49999d",
+      "bytes": 254414,
+      "sha256": "633e9bca654f6f911f8370f6588bf75f3464fa78954f03e3fd691823869130b7",
       "source_path": "02_ART_ASSETS/sprites/kaedra_neutral.png",
       "source_sha256": "357aed29d0d07dd4cf1a1b05afdb048eb67bd5d8d58891464ad6575b79f2c54e",
       "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/sprites/kaedra_neutral.png"
+      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/sprites/kaedra_neutral.png",
+      "edited_from": "art-src/edited/kaedra_kaedra_neutral.png",
+      "edited_sha256": "51e5aefd469c46450ed8c7ce2937a94d01aa299896750e2087bd67c54263111a",
+      "edit_spec": "scripts/art/modest/kaedra_kaedra_neutral.json"
     },
     {
       "asset_id": "kaedra_kaedra_playful",
@@ -333,12 +339,15 @@
       "file": "kaedra_kaedra_playful.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 253216,
-      "sha256": "715bf66fe1ae6ad17b594388ad5740291878384fdde21715fb28e2f2f9cb3208",
+      "bytes": 258738,
+      "sha256": "c921052cbee27e732a760423bef6adcdc03416f5424f00e5d723c712bf51a995",
       "source_path": "02_ART_ASSETS/sprites/kaedra_playful.png",
       "source_sha256": "7108da8e38759cbe2e31a1d10340ce92cf0e250558d0a04528898b95d40e8a4d",
       "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/sprites/kaedra_playful.png"
+      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/sprites/kaedra_playful.png",
+      "edited_from": "art-src/edited/kaedra_kaedra_playful.png",
+      "edited_sha256": "f7940926e3de3f4a9c215cc30c6c9709918deed978e8a54662e5d16c689919ef",
+      "edit_spec": "scripts/art/modest/kaedra_kaedra_playful.json"
     },
     {
       "asset_id": "kaedra_kaedra_surprised",
@@ -346,12 +355,15 @@
       "file": "kaedra_kaedra_surprised.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 249820,
-      "sha256": "223b813aedd867be38b532fe5863cbb1ae7483cac0f700e0c1ddc97521177985",
+      "bytes": 251514,
+      "sha256": "bd15e9ce556fba70c61bb6c0c036a191efe80f961a129a7ebca0de09b16cf002",
       "source_path": "02_ART_ASSETS/sprites/kaedra_surprised.png",
       "source_sha256": "4b9fb95cedf4d6dac9e827a4cd57f91976ef4944d7964857106bca03c8c52f92",
       "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/sprites/kaedra_surprised.png"
+      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/sprites/kaedra_surprised.png",
+      "edited_from": "art-src/edited/kaedra_kaedra_surprised.png",
+      "edited_sha256": "2daed3dfd538b01588c6142eb97db08df46cac9d34c556953f326d7f0168a18c",
+      "edit_spec": "scripts/art/modest/kaedra_kaedra_surprised.json"
     },
     {
       "asset_id": "kaedra_kaedra_worried",
@@ -359,12 +371,15 @@
       "file": "kaedra_kaedra_worried.webp",
       "width": 768,
       "height": 1152,
-      "bytes": 241600,
-      "sha256": "9c20016d2fdece67da1a8c9108fce0a02d7034a706b5554a4fc4f55f8e6a0db5",
+      "bytes": 250306,
+      "sha256": "ca65b6f519c2f8386825b30d72a273368c9a7e729a550d7f80404e89c1971d1d",
       "source_path": "02_ART_ASSETS/sprites/kaedra_worried.png",
       "source_sha256": "7a8420c2d1a62b2d6ebe892629da816ea21b2d0a68380ef4926b4dcf71706e84",
       "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
-      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/sprites/kaedra_worried.png"
+      "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/art/sprites/kaedra_worried.png",
+      "edited_from": "art-src/edited/kaedra_kaedra_worried.png",
+      "edited_sha256": "62d648a8a921e2ddfe145209d8fea87d16df1827e85f9170a50cfdc65bf266f6",
+      "edit_spec": "scripts/art/modest/kaedra_kaedra_worried.json"
     }
   ]
 }
