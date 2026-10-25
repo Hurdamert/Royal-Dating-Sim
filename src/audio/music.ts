@@ -32,7 +32,8 @@ export interface MusicState {
 
 const CUE_TRACKS: Record<MusicCue, TrackId[]> = { title: ['titleOpening', 'titleLoop'], prologue: ['town'] };
 const PREF_KEY = 'royal-exceptions:music';
-const VOLUME = 0.55;
+// Master music volume (0–1). Owner asked for it 50% lower on 2026-10-25 (was 0.55).
+const VOLUME = 0.275;
 const FADE_OUT = 0.8;
 const FADE_IN = 0.04;
 const MAX_LEAD = 4096;
