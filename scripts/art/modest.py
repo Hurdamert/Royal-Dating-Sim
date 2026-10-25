@@ -219,6 +219,10 @@ def main():
             alpha = alpha.copy()
             alpha[int(edit['cutBelow']):, :] = 0
         out = np.clip(rgb, 0, 255).astype(np.uint8)
+        if has_alpha:
+            # Fully transparent pixels carry no colour: never ship hidden original
+            # pixels (e.g. below Nerelle's waterline cut) in the colour channels.
+            out[alpha == 0] = 0
         res = Image.fromarray(np.dstack([out, alpha]) if has_alpha else out, 'RGBA' if has_alpha else 'RGB')
         dst = os.path.join(OUT, f'{asset_id}.png')
         res.save(dst, optimize=True)
