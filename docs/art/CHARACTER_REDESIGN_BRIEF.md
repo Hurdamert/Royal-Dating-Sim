@@ -59,7 +59,7 @@ These come from the character bibles in `handoff/01_APPROVED_CANON/`.
   - *Private Confession:* Tavri sits on the rim of the garden fountain at night, upright, one hand at her collar, tail curled beside her.
   - *Forbidden Journey:* Nerelle sits on the bottom canal step under the moon, upright, with her tail in the water.
   - *Royal Trial:* Kaedra stays in the court scene. If she is drawn on the ground, she kneels or sits upright.
-  - Until new art arrives, the game shows Tavri's and Nerelle's illustrations as close-ups that leave the lying-down pose out of frame (`reframe` in their specs).
+  - The game now ships seated versions of Tavri's and Nerelle's illustrations, redrawn with an AI image editor from the approved art (`scripts/art/redraw/`). Commissioned art can replace them in the same slots.
 
 ## How to drop new art in
 

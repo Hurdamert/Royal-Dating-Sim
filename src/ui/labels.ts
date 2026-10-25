@@ -59,8 +59,8 @@ export function spriteAlt(r: Route, e: Expression): string {
   return `${ROUTE_NAME[r]} ${EXPRESSION_ALT[e]}.`;
 }
 export const CG_ALT: Record<Route, string> = {
-  TAV: 'Illustration: close-up of Tavri in the Royal Gardens at night, one hand at her collar.',
-  NER: 'Illustration: close-up of Nerelle at the water’s edge at night, her chin in her hand, lanterns lit behind her.',
+  TAV: 'Illustration: Tavri sitting on the rim of a garden fountain at night, one hand at her collar, her tail curled beside her.',
+  NER: 'Illustration: Nerelle upright in the canal at night, her arms folded on the stone edge, her tail in the water and the lit city behind her.',
   KAE: 'Illustration: Kaedra, silver-haired, at a palace ceremony with a small spark of light at her hand.',
 };
 

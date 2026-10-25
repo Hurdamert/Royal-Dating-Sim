@@ -4,6 +4,7 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import sharp from 'sharp';
 import { BG_H, BG_W, compositionFor, NERELLE_SPRITE_CUT, NERELLE_WATERLINE, spriteWidth, type Composition, type Rect } from '../../src/ui/staging.ts';
 import { LOCATIONS, ROUTES } from '../../src/core/model.ts';
@@ -95,12 +96,27 @@ describe('Stage compositions', () => {
     for (const a of chars) assert.ok(a.edited_from, `${a.asset_id} ships from its all-ages edit`);
     assert.equal(derived.assets.filter((a) => a.kind === 'character_sheet').length, 0, 'reference sheets are not shipped');
     // Owner request: no illustration shows a princess lying down. The two whose
-    // originals do are shipped as close-ups until seated artwork exists.
+    // originals do ship as recorded seated redraws: reference → editor output →
+    // recorded correction → the shipped edit, every step pinned by its hash.
+    const sha = (f: string) => createHash('sha256').update(readFileSync(f)).digest('hex');
+    const edits = JSON.parse(readFileSync('art-src/edited/EDITS.json', 'utf8')) as Record<string, { edited_sha256: string; redrawn?: string }>;
     for (const id of ['tavri_tavri_private_confession', 'nerelle_nerelle_forbidden_journey']) {
-      const spec = JSON.parse(readFileSync(`scripts/art/modest/${id}.json`, 'utf8')) as { reframe?: { box: number[] } };
-      assert.ok(spec.reframe && spec.reframe.box.length === 4, `${id} is reframed as a close-up`);
-      const [x0, y0, x1, y1] = spec.reframe.box as [number, number, number, number];
-      assert.ok((x1 - x0) * (y1 - y0) <= 0.5 * 1448 * 1086, `${id}: close-up shows at most half the original picture`);
+      const spec = JSON.parse(readFileSync(`scripts/art/modest/${id}.json`, 'utf8')) as { redrawn?: { file: string; record: string } };
+      assert.ok(spec.redrawn, `${id} ships its seated redraw`);
+      const rec = JSON.parse(readFileSync(spec.redrawn.record, 'utf8')) as {
+        prompt: string;
+        reference: { commit: string; sha256: string };
+        generated: { file: string; sha256: string };
+        result: { file: string; sha256: string; size: number[] };
+      };
+      assert.match(rec.prompt, /sits upright/);
+      assert.equal(sha(rec.generated.file), rec.generated.sha256, `${id}: editor output unchanged`);
+      assert.equal(rec.result.file, spec.redrawn.file);
+      assert.equal(sha(rec.result.file), rec.result.sha256, `${id}: corrected picture matches its record`);
+      assert.equal(sha(`art-src/edited/${id}.png`), rec.result.sha256, `${id}: the shipped edit is the redraw, byte for byte`);
+      assert.equal(edits[id]?.edited_sha256, rec.result.sha256);
+      assert.deepEqual(rec.result.size, [1448, 1086]);
+      assert.match(rec.reference.commit, /^[0-9a-f]{40}$/);
     }
     for (const a of chars.filter((x) => x.asset_id.startsWith('nerelle_') && x.kind === 'expression_sprite')) {
       const { data, info } = await sharp(`public/art/${a.file}`).ensureAlpha().raw().toBuffer({ resolveWithObject: true });

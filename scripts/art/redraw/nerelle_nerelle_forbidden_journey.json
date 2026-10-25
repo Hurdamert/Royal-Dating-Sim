@@ -1,0 +1,43 @@
+{
+  "asset_id": "nerelle_nerelle_forbidden_journey",
+  "requested": "Owner, 2026-10-25: \"redraw the art to make them seated\" (after: \"Make the pivotal moment images (them lying on their stomaches) into just them sitting, less \\\"risque\\\" and acceptable for all ages.\")",
+  "tool": {
+    "model": "FLUX.1 Kontext [dev] (Black Forest Labs)",
+    "service": "Hugging Face Space black-forest-labs/FLUX.1-Kontext-Dev, /infer endpoint",
+    "license": "FLUX [dev] Non-Commercial License v2.0 (https://bfl.ai/legal/non-commercial-license-terms), section 2(d) on Outputs"
+  },
+  "date": "2026-10-25",
+  "settings": {
+    "seed": 11,
+    "randomize_seed": false,
+    "steps": 28,
+    "guidance_scale": 2.5
+  },
+  "reference": {
+    "what": "The all-ages edit of the approved original (scripts/art/modest.py, before any close-up reframing)",
+    "file": "art-src/edited/nerelle_nerelle_forbidden_journey.png",
+    "commit": "fcca5b5a25090b054b8e11f9ed90d3efadbfb6fc",
+    "sha256": "550646c37a50c52c4bc24ea4953166b2ffdc39d9d91778424e86b5a86d742c77",
+    "url": "https://raw.githubusercontent.com/Hurdamert/Royal-Dating-Sim/fcca5b5a25090b054b8e11f9ed90d3efadbfb6fc/art-src/edited/nerelle_nerelle_forbidden_journey.png"
+  },
+  "prompt": "Change her pose so she sits upright on the bottom stone step at the water edge, facing the viewer, back straight, hands folded in her lap, her single mermaid fish tail resting in the water, no legs. Keep her face, blue hair, pearl and shell ornaments, fin ears, jewelry and her pale sea-glass high-necked long-sleeved blouse the same. Keep the moonlit canal and lit castle. Same painterly anime style.",
+  "generated": {
+    "file": "art-src/redrawn/nerelle_nerelle_forbidden_journey.generated.webp",
+    "sha256": "9e2dafad10bda63b0bcc97a5a7c6c2b2641f0da5f64b86f5de38c20849503a22",
+    "size": [
+      1168,
+      880
+    ],
+    "note": "the editor's output, byte for byte"
+  },
+  "correction": "Repainted lilac shell-cup shapes on the front of her blouse as plain blouse fabric (scripts/art/redraw.py, nerelle_plain_blouse).",
+  "result": {
+    "file": "art-src/redrawn/nerelle_nerelle_forbidden_journey.png",
+    "sha256": "41578e88819af30200b9da3565b2d48204f9a23b08a3fff8b9bb847695936764",
+    "size": [
+      1448,
+      1086
+    ],
+    "pixelsCorrected": 15709
+  }
+}

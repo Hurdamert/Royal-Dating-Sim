@@ -28,7 +28,8 @@
     "source_sha256": "79c880939424a1e32731d80a91bd91b4b7da31efd8a2636310b3960a52b31dc5"
   },
   "nerelle_nerelle_forbidden_journey": {
-    "edited_sha256": "cfad13d169143f842169dbcc480d9bf46d9ebf8a73c974e8966cec89ad1430f3",
+    "edited_sha256": "41578e88819af30200b9da3565b2d48204f9a23b08a3fff8b9bb847695936764",
+    "redrawn": "scripts/art/redraw/nerelle_nerelle_forbidden_journey.json",
     "source_sha256": "629a575feee9458e64a54b76c7b3377e4dbb19a7a71c5e3dc4b5235d988bda94"
   },
   "nerelle_nerelle_neutral": {
@@ -60,7 +61,8 @@
     "source_sha256": "6a837113004ed11e5a57a26f16bd7398a71779860e2a24022f5bb835322afc2a"
   },
   "tavri_tavri_private_confession": {
-    "edited_sha256": "9ccf98157e25af52f26cdd6153d7d43051c449014ed99396b12536a780964332",
+    "edited_sha256": "25e9e133f306a2c2d6fc4666d087504fb3dda24a54a3a04962879fc7689f3fc8",
+    "redrawn": "scripts/art/redraw/tavri_tavri_private_confession.json",
     "source_sha256": "966ca9fb3eedcbc6d2aa0f66ff2cbdb147962c20d63bf409959a35c6937f7e7b"
   },
   "tavri_tavri_surprised": {

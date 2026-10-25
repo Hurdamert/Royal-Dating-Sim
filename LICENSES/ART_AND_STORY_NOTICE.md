@@ -15,6 +15,17 @@ and art originals with recorded SHA-256 hashes).
   `scripts/art/modest.py`): exposed skin below the chin is repainted as
   clothing, and Kaedra uses the alternate ash-silver hair and violet eyes from
   her bible. The character reference sheets are no longer shipped to players.
+- Two midpoint illustrations whose originals show the princess lying down
+  (Tavri's *Private Confession*, Nerelle's *Forbidden Journey*) were redrawn in
+  seated/upright poses with an AI image editor, FLUX.1 Kontext [dev] by Black
+  Forest Labs (Hugging Face Space), using the all-ages edit of each approved
+  original as the reference. The editor's raw output, prompt, seed and settings
+  are kept (`art-src/redrawn/`, `scripts/art/redraw/`), and `scripts/art/redraw.py`
+  applies two small recorded corrections. FLUX [dev] Non-Commercial License v2.0
+  §2(d): Black Forest Labs claims no ownership of outputs and permits their use
+  "for any purpose (including for commercial purposes)"; §4(a)(i) is worded more
+  narrowly, so review the license before any commercial release.
+  https://bfl.ai/legal/non-commercial-license-terms
 - The shipped dialogue is the owner-requested revision in
   `content/revisions/dialogue-v2/`, layered on the frozen text.
 - Rights are held by the project owner. No license to reuse the art or story is

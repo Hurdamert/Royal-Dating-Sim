@@ -34,7 +34,8 @@ Deploying to Cloudflare Pages: [docs/DEPLOY.md](docs/DEPLOY.md).
 | `npm run content` / `content:check` | Compile story text from the frozen archives, apply the owner-approved dialogue revision (`content/revisions/dialogue-v2/`), write `src/content/generated/content.json` / verify it is current. `CONTENT_REVISION=none` builds the frozen text instead |
 | `node --import tsx scripts/check-revision.ts <dir>` | Writer's check for revision scene files: mechanics must match the base; lists lines the dialogue heuristics flag |
 | `node scripts/dialogue-audit.mjs [--base]` | Heuristic audit of the shipped (or frozen) dialogue |
-| `python3 scripts/art/modest.py <asset_id>…` | All-ages wardrobe edit of a character image from its original, per `scripts/art/modest/<asset_id>.json` → `art-src/edited/` |
+| `python3 scripts/art/modest.py <asset_id>…` | All-ages wardrobe edit of a character image from its original, per `scripts/art/modest/<asset_id>.json` → `art-src/edited/` (the two seated midpoint redraws are copied in from `art-src/redrawn/`) |
+| `python3 scripts/art/redraw.py` | Re-apply the recorded corrections to the seated midpoint redraws (`scripts/art/redraw/<asset_id>.json` records the reference, prompt, seed and hashes) |
 | `npm run art` / `art:check` | Build / verify the WebP deployment copies in `public/art/` from the hash-checked originals (character images from their all-ages edits) |
 | `npm run fonts` | Fetch Cormorant Garamond and Source Sans 3 (SIL OFL 1.1) and their license texts |
 | `npm run typecheck` | Strict TypeScript for the app, scripts and tests |

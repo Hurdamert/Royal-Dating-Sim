@@ -1,0 +1,43 @@
+{
+  "asset_id": "tavri_tavri_private_confession",
+  "requested": "Owner, 2026-10-25: \"redraw the art to make them seated\" (after: \"Make the pivotal moment images (them lying on their stomaches) into just them sitting, less \\\"risque\\\" and acceptable for all ages.\")",
+  "tool": {
+    "model": "FLUX.1 Kontext [dev] (Black Forest Labs)",
+    "service": "Hugging Face Space black-forest-labs/FLUX.1-Kontext-Dev, /infer endpoint",
+    "license": "FLUX [dev] Non-Commercial License v2.0 (https://bfl.ai/legal/non-commercial-license-terms), section 2(d) on Outputs"
+  },
+  "date": "2026-10-25",
+  "settings": {
+    "seed": 11,
+    "randomize_seed": false,
+    "steps": 28,
+    "guidance_scale": 2.5
+  },
+  "reference": {
+    "what": "The all-ages edit of the approved original (scripts/art/modest.py, before any close-up reframing)",
+    "file": "art-src/edited/tavri_tavri_private_confession.png",
+    "commit": "fcca5b5a25090b054b8e11f9ed90d3efadbfb6fc",
+    "sha256": "54c3ab86e3e1800184fe3812533791a398bda7bfd840d33400e67aacbcfa5a52",
+    "url": "https://raw.githubusercontent.com/Hurdamert/Royal-Dating-Sim/fcca5b5a25090b054b8e11f9ed90d3efadbfb6fc/art-src/edited/tavri_tavri_private_confession.png"
+  },
+  "prompt": "Change her pose so she sits upright and demurely on the stone rim of a garden fountain, facing the viewer, knees together, feet hidden under her long floor-length skirt, one hand at her collar and the other resting in her lap, fox tail curled beside her. Keep her face, red hair, fox ears, earrings, ivory high-necked long-sleeved gown and burgundy gold robe the same. Keep the night garden. Same painterly anime style.",
+  "generated": {
+    "file": "art-src/redrawn/tavri_tavri_private_confession.generated.webp",
+    "sha256": "d212d558c04289f8a305ca9628fa7f6151a168b4512c7821201e72fb30308c6c",
+    "size": [
+      1168,
+      880
+    ],
+    "note": "the editor's output, byte for byte"
+  },
+  "correction": "Removed a second piece of fox tail the editor drew on her left (canon: one tail); rebuilt the pool water and rim behind it (scripts/art/redraw.py, tavri_one_tail).",
+  "result": {
+    "file": "art-src/redrawn/tavri_tavri_private_confession.png",
+    "sha256": "25e9e133f306a2c2d6fc4666d087504fb3dda24a54a3a04962879fc7689f3fc8",
+    "size": [
+      1448,
+      1086
+    ],
+    "pixelsCorrected": 15982
+  }
+}

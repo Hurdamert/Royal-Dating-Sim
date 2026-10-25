@@ -5,17 +5,21 @@ following the hand-placed regions in scripts/art/modest/<asset_id>.json, repaint
 exposed skin below the chin as garment fabric: high collars, covered shoulders,
 chests and arms, long sleeves. Faces, hands, hair, jewellery and the original
 line art stay untouched. Optional palette shifts (Kaedra's approved alternate
-ash-silver hair and violet eyes) are applied from the same spec, and an optional
-"reframe" box turns an illustration into a close-up (used for the two midpoint
-illustrations whose originals show the princess lying down).
+ash-silver hair and violet eyes) are applied from the same spec.
+
+Two midpoint illustrations show the princess lying down in the original. Their
+specs name a "redrawn" picture (seated pose, scripts/art/redraw.py), which is
+shipped instead; the spec's other steps then describe the reference picture the
+redraw started from, which `--reference <asset_id>` rebuilds for checking.
 
   python3 scripts/art/modest.py            # write art-src/edited/*.png
   python3 scripts/art/modest.py --preview  # also write side-by-side previews
+  python3 scripts/art/modest.py --reference <asset_id>  # rebuild a redraw's reference picture
 
 The edited PNGs are checked in; scripts/optimize-art.mjs derives the shipped
 WebP files from them and records both hashes in public/art/derived_manifest.json.
 """
-import hashlib, json, os, sys
+import hashlib, json, os, shutil, sys
 import numpy as np
 import cv2
 from PIL import Image
@@ -201,6 +205,19 @@ def main():
         src = os.path.join(ROOT, 'handoff', manifest[asset_id]['path'])
         if sha(src) != manifest[asset_id]['sha256']:
             sys.exit(f'original hash mismatch: {src}')
+        reference = '--reference' in sys.argv
+        if edit.get('redrawn') and not reference:
+            # Ship the redrawn picture byte for byte, after checking its recorded hash.
+            rd = edit['redrawn']
+            rec = json.load(open(os.path.join(ROOT, rd['record'])))
+            pic = os.path.join(ROOT, rd['file'])
+            if sha(pic) != rec['result']['sha256']:
+                sys.exit(f'{asset_id}: redrawn picture does not match its record')
+            dst = os.path.join(OUT, f'{asset_id}.png')
+            shutil.copyfile(pic, dst)
+            record[asset_id] = {'source_sha256': manifest[asset_id]['sha256'], 'edited_sha256': sha(dst), 'redrawn': rd['record']}
+            print(asset_id, 'redrawn (seated)')
+            continue
         im = Image.open(src)
         has_alpha = im.mode == 'RGBA'
         arr = np.array(im.convert('RGBA'))
@@ -226,13 +243,13 @@ def main():
             # pixels (e.g. below Nerelle's waterline cut) in the colour channels.
             out[alpha == 0] = 0
         res = Image.fromarray(np.dstack([out, alpha]) if has_alpha else out, 'RGBA' if has_alpha else 'RGB')
-        if edit.get('reframe'):
-            # Close-up framing: crop to the box (same aspect ratio as the original),
-            # then scale back to the original size so the image keeps its slot.
-            x0, y0, x1, y1 = edit['reframe']['box']
-            if abs((x1 - x0) * res.height - (y1 - y0) * res.width) > res.width:
-                sys.exit(f'{asset_id}: reframe box must keep the {res.width}x{res.height} aspect ratio')
-            res = res.crop((x0, y0, x1, y1)).resize(res.size, Image.LANCZOS)
+        if reference:
+            # The picture a redraw started from (see scripts/art/redraw/<id>.json "reference").
+            os.makedirs(os.path.join(OUT, '..', 'preview'), exist_ok=True)
+            dst = os.path.join(OUT, '..', 'preview', f'{asset_id}.reference.png')
+            res.save(dst, optimize=True)
+            print(asset_id, 'reference', sha(dst))
+            continue
         dst = os.path.join(OUT, f'{asset_id}.png')
         res.save(dst, optimize=True)
         record[asset_id] = {'source_sha256': manifest[asset_id]['sha256'], 'edited_sha256': sha(dst)}
@@ -247,7 +264,7 @@ def main():
             os.makedirs(os.path.join(OUT, '..', 'preview'), exist_ok=True)
             sheet.save(os.path.join(OUT, '..', 'preview', f'{asset_id}.jpg'), quality=85)
         print(asset_id, 'covered px' if covered is not None else '', int(covered.sum()) if covered is not None else '')
-    if not only:
+    if not only and '--reference' not in sys.argv:
         json.dump(record, open(os.path.join(OUT, 'EDITS.json'), 'w'), indent=2, sort_keys=True)
 
 

@@ -255,8 +255,10 @@ export function Credits({ onBack }: { onBack: () => void }) {
       <h1>Credits &amp; licenses</h1>
       <h2>Story and art</h2>
       <p>
-        All story text, characters and illustrations are original project content for <em>Royal Exceptions</em>, approved by the project owner and shipped unchanged
-        from the frozen source archives (images are re-encoded copies of the approved originals). No stock imagery, generated runtime text or third-party artwork is used.
+        All story text, characters and illustrations are original project content for <em>Royal Exceptions</em>, approved by the project owner. At the owner’s request
+        the character art ships in an all-ages edit of the approved originals, and two pivotal-moment illustrations (Tavri’s <em>Private Confession</em>, Nerelle’s{' '}
+        <em>Forbidden Journey</em>) were redrawn in seated poses with an AI image editor (FLUX.1 Kontext [dev], Black Forest Labs), using the approved art as the
+        reference. No stock imagery or generated runtime text is used.
         {` ${CONTENT.scenes ? Object.keys(CONTENT.scenes).length : 0} authored scenes are included.`}
       </p>
       <h2>Fonts</h2>
