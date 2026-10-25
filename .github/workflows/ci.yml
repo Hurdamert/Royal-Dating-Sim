@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # The first lockfile could not be generated in the authoring environment
+      # (no registry access). Commit package-lock.json after the first install;
+      # from then on CI uses `npm ci` for reproducible installs.
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+
+      - name: Fetch OFL fonts and licenses
+        run: npm run fonts
+
+      - name: Source integrity (8 archives, 28 art originals)
+        run: npm run verify:sources
+
+      - name: Content table matches the frozen archives
+        run: npm run content:check
+
+      - name: Derived art matches the originals
+        run: npm run art:check
+
+      - name: Type-check (strict)
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests (engine, witnesses, validation, backups, staging, contrast)
+        run: npm test
+
+      - name: Build (Vite)
+        run: npm run build
+
+      - name: Install Chromium for browser tests
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser tests (persistence + end-to-end against dist/)
+        run: npm run test:browser
+        env:
+          SITE_DIR: dist
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-and-evidence
+          path: |
+            dist
+            docs/screenshots
+            package-lock.json

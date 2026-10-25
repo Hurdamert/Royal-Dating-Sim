@@ -132,12 +132,12 @@ export function EncounterPlayer({
 
   // Resumed at ready_to_commit: finish that same commit once (same actionId, so
   // a commit that had already landed is recognised as a duplicate, not re-awarded).
+  // Runs on mount only; the draft it reads is fixed for this component's lifetime.
   useEffect(() => {
     if (resume?.stage === 'ready_to_commit' && originChoiceInit && !autoCommitted.current) {
       autoCommitted.current = true;
       void doCommit(originChoiceInit, proposalChoiceInit);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const abandon = async () => {

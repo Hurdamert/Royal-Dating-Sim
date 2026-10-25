@@ -51,7 +51,7 @@ const STANDARD: Composition = {
 const NERELLE_GARDENS: Composition = {
   crop: { x: 672, y: 379, w: 1000, h: 562 },
   cropPhone: { x: 992, y: 385, w: 680, h: 382 },
-  sprite: { height: 420, cx: 1572, top: 630 - 0.56 * 420 },
+  sprite: { height: 420, cx: 1572, top: 640 - 0.56 * 420 },
   occluder: [
     [1300, 470],
     [1452, 470],
@@ -105,7 +105,9 @@ export function spriteWidth(p: SpritePlacement): number {
 const pct = (v: number) => `${+v.toFixed(4)}%`;
 
 /** CSS custom properties positioning the "world" layer for a crop. */
-export function cropVars(c: Rect, prefix: string): Record<string, string> {
+export type StyleMap = Record<string, string>;
+
+export function cropVars(c: Rect, prefix: string): StyleMap {
   return {
     [`--${prefix}w`]: pct((BG_W / c.w) * 100),
     [`--${prefix}h`]: pct((BG_H / c.h) * 100),
@@ -114,7 +116,7 @@ export function cropVars(c: Rect, prefix: string): Record<string, string> {
   };
 }
 
-export function spriteStyle(p: SpritePlacement): Record<string, string> {
+export function spriteStyle(p: SpritePlacement): StyleMap {
   const w = spriteWidth(p);
   return {
     left: pct(((p.cx - w / 2) / BG_W) * 100),

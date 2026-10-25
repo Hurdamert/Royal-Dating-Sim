@@ -47,7 +47,7 @@ export function Stage({ location, princess, cg, caption }: StageProps) {
     const c = backgroundOnly();
     return (
       <figure className="stage" data-testid="stage" data-stage="bust" data-route={princess.route}>
-        <div className="stage__world" style={{ ...cropVars(c.crop, 'd'), ...cropVars(c.cropPhone, 'p') } as CSSProperties}>
+        <div className="stage__world" style={{ ...cropVars(c.crop, 'd'), ...cropVars(c.cropPhone, 'p') } as unknown as CSSProperties}>
           <Img src={art.background(location)} alt={bgAlt} className="stage__bg" />
         </div>
         <div className="stage__bust" aria-hidden={false}>
@@ -59,7 +59,7 @@ export function Stage({ location, princess, cg, caption }: StageProps) {
   }
 
   const c = comp ?? backgroundOnly();
-  const vars = { ...cropVars(c.crop, 'd'), ...cropVars(c.cropPhone, 'p') } as CSSProperties;
+  const vars = { ...cropVars(c.crop, 'd'), ...cropVars(c.cropPhone, 'p') } as unknown as CSSProperties;
   return (
     <figure
       className="stage"
@@ -75,7 +75,7 @@ export function Stage({ location, princess, cg, caption }: StageProps) {
             src={art.sprite(princess.route, princess.expression)}
             alt={`${spriteAlt(princess.route, princess.expression)}${c.waterborne ? ` She is in the water${location === 'royal_gardens' ? ' of the canal' : ''}.` : ''}`}
             className="stage__sprite"
-            style={spriteStyle(c.sprite)}
+            style={spriteStyle(c.sprite) as unknown as CSSProperties}
           />
         )}
         {princess && c.occluder && (
