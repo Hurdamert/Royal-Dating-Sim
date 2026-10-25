@@ -328,7 +328,7 @@ describe('End-to-end (built site, Chromium)', () => {
     // emulate that rule so the "waits for the first click" path is exercised.
     await ctx.addInitScript(() => {
       let activated = false;
-      for (const t of ['pointerdown', 'keydown']) addEventListener(t, () => (activated = true), { capture: true });
+      for (const t of ['pointerdown', 'keydown']) window.addEventListener(t, () => (activated = true), { capture: true });
       const Real = window.AudioContext;
       window.AudioContext = class extends Real {
         constructor(...a) {
