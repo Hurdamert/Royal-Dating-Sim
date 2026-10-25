@@ -88,6 +88,21 @@ describe('Stage compositions', () => {
     }
   });
 
+  test('All-ages art: every shipped character image comes from its edit; reference sheets are not shipped; Nerelle ends at the waterline', async () => {
+    const derived = JSON.parse(readFileSync('public/art/derived_manifest.json', 'utf8')) as { assets: { asset_id: string; kind: string; file: string; edited_from?: string }[] };
+    const chars = derived.assets.filter((a) => a.kind === 'expression_sprite' || a.kind === 'midpoint_CG');
+    assert.equal(chars.length, 18);
+    for (const a of chars) assert.ok(a.edited_from, `${a.asset_id} ships from its all-ages edit`);
+    assert.equal(derived.assets.filter((a) => a.kind === 'character_sheet').length, 0, 'reference sheets are not shipped');
+    for (const a of chars.filter((x) => x.asset_id.startsWith('nerelle_') && x.kind === 'expression_sprite')) {
+      const { data, info } = await sharp(`public/art/${a.file}`).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+      const from = Math.ceil(NERELLE_SPRITE_CUT * info.height) + 1;
+      let opaque = 0;
+      for (let y = from; y < info.height; y++) for (let x = 0; x < info.width; x++) if (data[(y * info.width + x) * 4 + 3]! > 8) opaque++;
+      assert.equal(opaque, 0, `${a.file}: nothing below the waterline cut`);
+    }
+  });
+
   test('Gardens: Nerelle is at screen-right beside the canal in both desktop and 320px crops; label names the canal', () => {
     const c = compositionFor('NER', 'royal_gardens')!;
     for (const [name, k] of crops(c)) {
