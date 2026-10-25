@@ -41,7 +41,16 @@ async function open(viewport = DESKTOP) {
   await page.getByTestId('title').waitFor();
   return { ctx, page, errors };
 }
-const shot = async (page, name) => sharp(await page.screenshot({ fullPage: true })).webp({ quality: 80 }).toFile(join(SHOTS, `${name}.webp`));
+// Screenshots wait until every picture on the page has finished decoding and the
+// stage has revealed its princess, so a capture never shows a half-loaded scene.
+const settleImages = (page) =>
+  page.waitForFunction(() =>
+    [...document.images].every((i) => i.complete) && [...document.querySelectorAll('.stage__world')].every((w) => w.getAttribute('data-ready') !== 'false'),
+  );
+const shot = async (page, name) => {
+  await settleImages(page);
+  await sharp(await page.screenshot({ fullPage: true })).webp({ quality: 80 }).toFile(join(SHOTS, `${name}.webp`));
+};
 
 describe('End-to-end (built site, Chromium)', () => {
   test('F07 keyboard only: new game → train → meet → choose → saved → reload → restart', async () => {
@@ -152,9 +161,61 @@ describe('End-to-end (built site, Chromium)', () => {
       await playEncounter(page, 'correct');
       // Quay: Fri afternoon (Day 5)
       while (!((await snapshot(page)).run.day === 5 && (await snapshot(page)).run.slot === 'afternoon')) await rest(page);
+      // Slow the quay picture down: while it loads, Nerelle must not be shown in her
+      // quay position over a blank or stale (Gardens) picture.
+      let release;
+      const gate = new Promise((r) => (release = r));
+      await page.route('**/bg_moonwater_quay.webp', async (r) => {
+        await gate;
+        await r.continue();
+      });
       await goto(page, 'moonwater_quay');
       assert.equal(await page.getByTestId('stage').getAttribute('data-stage'), 'waterborne');
+      const pending = await page.evaluate(() => ({
+        ready: document.querySelector('.stage__world').getAttribute('data-ready'),
+        sprite: getComputedStyle(document.querySelector('.stage__sprite')).visibility,
+        occluder: getComputedStyle(document.querySelector('.stage__occluder')).visibility,
+        bg: document.querySelector('.stage__bg').getAttribute('src'),
+      }));
+      assert.deepEqual(
+        { ready: pending.ready, sprite: pending.sprite, occluder: pending.occluder },
+        { ready: 'false', sprite: 'hidden', occluder: 'hidden' },
+        'princess hidden while the location picture loads',
+      );
+      assert.match(pending.bg, /bg_moonwater_quay/);
+      release();
+      await page.waitForSelector('.stage__world[data-ready="true"]');
+      assert.equal(await page.evaluate(() => getComputedStyle(document.querySelector('.stage__sprite')).visibility), 'visible');
+      await page.unroute('**/bg_moonwater_quay.webp');
       await shot(page, `${tag}-nerelle-quay-hub`);
+      await ctx.close();
+    }
+  });
+
+  test('Tutorial: six cards fit at 320px and on desktop, and every card names the route\'s own details', async () => {
+    for (const [vp, tag] of [[DESKTOP, 'desktop-1280x850'], [PHONE, 'mobile-320x740']]) {
+      const { ctx, page } = await open(vp);
+      await page.getByTestId('title').waitFor();
+      await page.getByTestId('new-run').click();
+      await page.locator('input[data-route="KAE"]').check({ force: true });
+      await page.getByTestId('begin').click();
+      await page.getByTestId('presentation').waitFor();
+      while (!(await page.getByTestId('tutorial').count())) await page.getByTestId('continue').click();
+      const steps = [];
+      for (let i = 0; i < 6; i++) {
+        const t = page.getByTestId('tutorial');
+        steps.push(await t.getAttribute('data-step'));
+        const o = await horizontalOverflow(page);
+        assert.ok(o.scrollWidth <= o.clientWidth + 1, `${tag} tutorial ${steps.at(-1)}: overflow ${o.offenders.join(' | ')}`);
+        if (steps.at(-1) === 'goal' || steps.at(-1) === 'talk') await shot(page, `${tag}-tutorial-${steps.at(-1)}`);
+        const text = await t.innerText();
+        if (steps.at(-1) === 'find') for (const place of ['Adventurers’ Guild', 'Palace Court', 'Royal Gardens']) assert.ok(text.includes(place), `find card names ${place}`);
+        if (steps.at(-1) === 'train') assert.match(text, /Strength and Intelligence/);
+        if (i < 5) await page.getByTestId('tutorial-next').click();
+      }
+      assert.deepEqual(steps, ['goal', 'time', 'find', 'talk', 'train', 'save']);
+      await page.getByTestId('tutorial-done').click();
+      await page.getByTestId('hub').waitFor();
       await ctx.close();
     }
   });
