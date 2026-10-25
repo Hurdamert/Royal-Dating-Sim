@@ -5,7 +5,9 @@ following the hand-placed regions in scripts/art/modest/<asset_id>.json, repaint
 exposed skin below the chin as garment fabric: high collars, covered shoulders,
 chests and arms, long sleeves. Faces, hands, hair, jewellery and the original
 line art stay untouched. Optional palette shifts (Kaedra's approved alternate
-ash-silver hair and violet eyes) are applied from the same spec.
+ash-silver hair and violet eyes) are applied from the same spec, and an optional
+"reframe" box turns an illustration into a close-up (used for the two midpoint
+illustrations whose originals show the princess lying down).
 
   python3 scripts/art/modest.py            # write art-src/edited/*.png
   python3 scripts/art/modest.py --preview  # also write side-by-side previews
@@ -224,6 +226,13 @@ def main():
             # pixels (e.g. below Nerelle's waterline cut) in the colour channels.
             out[alpha == 0] = 0
         res = Image.fromarray(np.dstack([out, alpha]) if has_alpha else out, 'RGBA' if has_alpha else 'RGB')
+        if edit.get('reframe'):
+            # Close-up framing: crop to the box (same aspect ratio as the original),
+            # then scale back to the original size so the image keeps its slot.
+            x0, y0, x1, y1 = edit['reframe']['box']
+            if abs((x1 - x0) * res.height - (y1 - y0) * res.width) > res.width:
+                sys.exit(f'{asset_id}: reframe box must keep the {res.width}x{res.height} aspect ratio')
+            res = res.crop((x0, y0, x1, y1)).resize(res.size, Image.LANCZOS)
         dst = os.path.join(OUT, f'{asset_id}.png')
         res.save(dst, optimize=True)
         record[asset_id] = {'source_sha256': manifest[asset_id]['sha256'], 'edited_sha256': sha(dst)}

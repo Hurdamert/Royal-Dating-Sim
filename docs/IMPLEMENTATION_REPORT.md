@@ -115,6 +115,7 @@ The project owner asked, in the implementation chat, to "make the dialogue funni
 - Bare shoulders, arms and necklines are repainted as opaque clothing with matching shading.
 - Sheer fabric is made opaque.
 - Nerelle is shown shoulder-deep in water.
+- The two midpoint illustrations whose originals show the princess lying down (Tavri's *Private Confession*, Nerelle's *Forbidden Journey*) are reframed as close-ups of head, shoulders and hand. The owner asked for seated poses instead; that needs new artwork, and the brief now specifies it.
 
 Horns, wings, tails, ears and fins are unchanged. The tool (`scripts/art/modest.py`) reads the original, checks its hash, applies the per-image spec in `scripts/art/modest/` and writes `art-src/edited/`. `EDITS.json` and the deployed manifest record the original and edited hashes, and `art:check` verifies both. The character reference sheets are no longer deployed.
 

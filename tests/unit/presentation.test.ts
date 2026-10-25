@@ -94,6 +94,14 @@ describe('Stage compositions', () => {
     assert.equal(chars.length, 18);
     for (const a of chars) assert.ok(a.edited_from, `${a.asset_id} ships from its all-ages edit`);
     assert.equal(derived.assets.filter((a) => a.kind === 'character_sheet').length, 0, 'reference sheets are not shipped');
+    // Owner request: no illustration shows a princess lying down. The two whose
+    // originals do are shipped as close-ups until seated artwork exists.
+    for (const id of ['tavri_tavri_private_confession', 'nerelle_nerelle_forbidden_journey']) {
+      const spec = JSON.parse(readFileSync(`scripts/art/modest/${id}.json`, 'utf8')) as { reframe?: { box: number[] } };
+      assert.ok(spec.reframe && spec.reframe.box.length === 4, `${id} is reframed as a close-up`);
+      const [x0, y0, x1, y1] = spec.reframe.box as [number, number, number, number];
+      assert.ok((x1 - x0) * (y1 - y0) <= 0.5 * 1448 * 1086, `${id}: close-up shows at most half the original picture`);
+    }
     for (const a of chars.filter((x) => x.asset_id.startsWith('nerelle_') && x.kind === 'expression_sprite')) {
       const { data, info } = await sharp(`public/art/${a.file}`).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
       const from = Math.ceil(NERELLE_SPRITE_CUT * info.height) + 1;

@@ -55,7 +55,11 @@ These come from the character bibles in `handoff/01_APPROVED_CANON/`.
   - an armoured court gown in charcoal and bronze; the violet and silver can replace the old garnet;
   - no combat poses;
   - in the *Royal Trial* illustration, her magic is a small spark, not a blast.
-- **Midpoint illustrations:** the composition notes in each bible still apply, for example the protagonist's figure in the *Royal Trial* is not gendered canon.
+- **Midpoint illustrations:** the composition notes in each bible still apply, for example the protagonist's figure in the *Royal Trial* is not gendered canon. The owner asked (2026-10-25) that **no illustration shows a princess lying down**; each one sits upright:
+  - *Private Confession:* Tavri sits on the rim of the garden fountain at night, upright, one hand at her collar, tail curled beside her.
+  - *Forbidden Journey:* Nerelle sits on the bottom canal step under the moon, upright, with her tail in the water.
+  - *Royal Trial:* Kaedra stays in the court scene. If she is drawn on the ground, she kneels or sits upright.
+  - Until new art arrives, the game shows Tavri's and Nerelle's illustrations as close-ups that leave the lying-down pose out of frame (`reframe` in their specs).
 
 ## How to drop new art in
 

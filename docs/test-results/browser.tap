@@ -3,193 +3,193 @@
 > node --test --test-concurrency=1 tests/browser/*.test.mjs
 
 TAP version 13
-# Built site/: app-JGUSAFVQ.js, app-EGYJBPCB.css (2404 KiB of JS/CSS incl. source maps)
+# Built site/: app-FYPV2QX4.js, app-EGYJBPCB.css (2404 KiB of JS/CSS incl. source maps)
 # Subtest: End-to-end (built site, Chromium)
     # Subtest: F07 keyboard only: new game → train → meet → choose → saved → reload → restart
     ok 1 - F07 keyboard only: new game → train → meet → choose → saved → reload → restart
       ---
-      duration_ms: 1478.151869
+      duration_ms: 2056.842929
       type: 'test'
       ...
     # Subtest: F04 Nerelle is waterborne at screen-right in the Gardens canal and at the Quay (1280×850 and 320×740)
     ok 2 - F04 Nerelle is waterborne at screen-right in the Gardens canal and at the Quay (1280×850 and 320×740)
       ---
-      duration_ms: 6610.03833
+      duration_ms: 7611.752792
       type: 'test'
       ...
     # Subtest: Tutorial: six cards fit at 320px and on desktop, and every card names the route's own details
     ok 3 - Tutorial: six cards fit at 320px and on desktop, and every card names the route's own details
       ---
-      duration_ms: 3042.007921
+      duration_ms: 3219.50457
       type: 'test'
       ...
     # Subtest: F06 320px and 200% zoom: no horizontal overflow, ≥16px dialogue, ≥44px choices, on every main screen
     ok 4 - F06 320px and 200% zoom: no horizontal overflow, ≥16px dialogue, ≥44px choices, on every main screen
       ---
-      duration_ms: 5504.050703
+      duration_ms: 6343.289681
       type: 'test'
       ...
     # Subtest: E03 (UI) refresh mid-conversation offers to resume the same conversation, with nothing awarded
     ok 5 - E03 (UI) refresh mid-conversation offers to resume the same conversation, with nothing awarded
       ---
-      duration_ms: 2180.724474
+      duration_ms: 2435.911836
       type: 'test'
       ...
     # Subtest: (review fix) an unfinished conversation blocks other actions until it is resumed or left; leaving costs nothing
     ok 6 - (review fix) an unfinished conversation blocks other actions until it is resumed or left; leaving costs nothing
       ---
-      duration_ms: 1899.135923
+      duration_ms: 2094.679684
       type: 'test'
       ...
     # Subtest: (review fix) a picture that fails to load shows a labelled placeholder with ERR_ASSET_LOAD, and play continues
     ok 7 - (review fix) a picture that fails to load shows a labelled placeholder with ERR_ASSET_LOAD, and play continues
       ---
-      duration_ms: 1173.247485
+      duration_ms: 1334.872318
       type: 'test'
       ...
     # Subtest: E05 (UI) a second tab is read-only with actions disabled
     ok 8 - E05 (UI) a second tab is read-only with actions disabled
       ---
-      duration_ms: 1780.47965
+      duration_ms: 1791.335382
       type: 'test'
       ...
     # Subtest: C/D (UI) a perfect Tavri route wins, the midpoint shows its CG, the epilogue plays and the gallery unlocks
     ok 9 - C/D (UI) a perfect Tavri route wins, the midpoint shows its CG, the epilogue plays and the gallery unlocks
       ---
-      duration_ms: 15844.20484
+      duration_ms: 16870.082472
       type: 'test'
       ...
     # Subtest: D06/E11 (UI) Day 28 evening ends the run with CORE-FAIL-01; journal stays readable; restart needs confirmation
     ok 10 - D06/E11 (UI) Day 28 evening ends the run with CORE-FAIL-01; journal stays readable; restart needs confirmation
       ---
-      duration_ms: 7896.080358
+      duration_ms: 9324.657837
       type: 'test'
       ...
     # Subtest: E07/E09 (UI) export a backup, import it in a fresh browser with preview and explicit confirmation
     ok 11 - E07/E09 (UI) export a backup, import it in a fresh browser with preview and explicit confirmation
       ---
-      duration_ms: 1883.670933
+      duration_ms: 2380.431638
       type: 'test'
       ...
     # Subtest: F08 runtime makes no external network requests and keeps playing offline after load
     ok 12 - F08 runtime makes no external network requests and keeps playing offline after load
       ---
-      duration_ms: 1769.291073
+      duration_ms: 2059.425732
       type: 'test'
       ...
     # Subtest: F10 accessibility basics: every image has alt (or is decorative), buttons are named, landmarks exist, focus is visible
     ok 13 - F10 accessibility basics: every image has alt (or is decorative), buttons are named, landmarks exist, focus is visible
       ---
-      duration_ms: 1530.386517
+      duration_ms: 1956.303154
       type: 'test'
       ...
     # Subtest: screenshots for owner review: title, new run, hub, Tavri and Kaedra scenes on desktop and 320px
     ok 14 - screenshots for owner review: title, new run, hub, Tavri and Kaedra scenes on desktop and 320px
       ---
-      duration_ms: 7483.860595
+      duration_ms: 8218.844615
       type: 'test'
       ...
     1..14
 ok 1 - End-to-end (built site, Chromium)
   ---
-  duration_ms: 60177.292823
+  duration_ms: 68280.099433
   type: 'suite'
   ...
 # Subtest: E. Persistence in a real browser
     # Subtest: E01 every action is one transaction: revision+1, one journal record, previous_good = prior state
     ok 1 - E01 every action is one transaction: revision+1, one journal record, previous_good = prior state
       ---
-      duration_ms: 272.097929
+      duration_ms: 240.481426
       type: 'test'
       ...
     # Subtest: E02 forced abort mid-commit leaves active, previous_good, gallery, revision untouched; user sees error
     ok 2 - E02 forced abort mid-commit leaves active, previous_good, gallery, revision untouched; user sees error
       ---
-      duration_ms: 224.119543
+      duration_ms: 223.744595
       type: 'test'
       ...
     # Subtest: E03 refresh at intro/choice/branch/linked stage resumes the same draft; after commit there is no draft and no double award
     ok 3 - E03 refresh at intro/choice/branch/linked stage resumes the same draft; after commit there is no draft and no double award
       ---
-      duration_ms: 1186.732428
+      duration_ms: 1453.380526
       type: 'test'
       ...
     # Subtest: E03 a draft from an older revision is discarded with ERR_DRAFT_CONFLICT, at no cost
     ok 4 - E03 a draft from an older revision is discarded with ERR_DRAFT_CONFLICT, at no cost
       ---
-      duration_ms: 223.355129
+      duration_ms: 224.617985
       type: 'test'
       ...
     # Subtest: E04 double-click / rapid retry of the same actionId awards once
     ok 5 - E04 double-click / rapid retry of the same actionId awards once
       ---
-      duration_ms: 186.150104
+      duration_ms: 230.797154
       type: 'test'
       ...
     # Subtest: E05 second tab is read-only; it cannot commit; takeover after writer closes reloads newest revision
     ok 6 - E05 second tab is read-only; it cannot commit; takeover after writer closes reloads newest revision
       ---
-      duration_ms: 367.575736
+      duration_ms: 418.243955
       type: 'test'
       ...
     # Subtest: E06 Web Locks unsupported → read-only; IndexedDB unavailable → no writable play
     ok 7 - E06 Web Locks unsupported → read-only; IndexedDB unavailable → no writable play
       ---
-      duration_ms: 321.264754
+      duration_ms: 316.127913
       type: 'test'
       ...
     # Subtest: E07/E09/D07 export → import round trip; preview/cancel changes nothing; confirm keeps previous_good and unions gallery
     ok 8 - E07/E09/D07 export → import round trip; preview/cancel changes nothing; confirm keeps previous_good and unions gallery
       ---
-      duration_ms: 443.689656
+      duration_ms: 467.250301
       type: 'test'
       ...
     # Subtest: E08 invalid imports are rejected without touching a healthy run
     ok 9 - E08 invalid imports are rejected without touching a healthy run
       ---
-      duration_ms: 220.52631
+      duration_ms: 298.187995
       type: 'test'
       ...
     # Subtest: E10 corrupt active + valid previous_good → recovery view; restore needs explicit call; gallery survives
     ok 10 - E10 corrupt active + valid previous_good → recovery view; restore needs explicit call; gallery survives
       ---
-      duration_ms: 210.610192
+      duration_ms: 255.352505
       type: 'test'
       ...
     # Subtest: E10 (review fix) a new run started from recovery never replaces the good snapshot with the damaged save
     ok 11 - E10 (review fix) a new run started from recovery never replaces the good snapshot with the damaged save
       ---
-      duration_ms: 194.752724
+      duration_ms: 219.226749
       type: 'test'
       ...
     # Subtest: E09 (review fix) "replace my endings" keeps the ending of a won run that stays active, so its backup still imports
     ok 12 - E09 (review fix) "replace my endings" keeps the ending of a won run that stays active, so its backup still imports
       ---
-      duration_ms: 341.571745
+      duration_ms: 365.416104
       type: 'test'
       ...
     # Subtest: D07 (review fix) a damaged gallery record keeps its valid endings and warns; play continues
     ok 13 - D07 (review fix) a damaged gallery record keeps its valid endings and warns; play continues
       ---
-      duration_ms: 188.667805
+      duration_ms: 202.602702
       type: 'test'
       ...
     # Subtest: E11/D07 failed run stays readable until a new run is explicitly started; gallery persists across new runs
     ok 14 - E11/D07 failed run stays readable until a new run is explicitly started; gallery persists across new runs
       ---
-      duration_ms: 399.926183
+      duration_ms: 524.42124
       type: 'test'
       ...
     # Subtest: D02/D07 a won run unlocks its gallery entry in the same transaction
     ok 15 - D02/D07 a won run unlocks its gallery entry in the same transaction
       ---
-      duration_ms: 241.946082
+      duration_ms: 283.473575
       type: 'test'
       ...
     1..15
 ok 2 - E. Persistence in a real browser
   ---
-  duration_ms: 5173.527087
+  duration_ms: 5877.695985
   type: 'suite'
   ...
 1..2
@@ -200,4 +200,4 @@ ok 2 - E. Persistence in a real browser
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 66815.845065
+# duration_ms 75987.83509
