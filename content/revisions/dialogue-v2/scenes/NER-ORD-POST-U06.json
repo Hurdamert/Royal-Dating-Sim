@@ -2,28 +2,75 @@
   "sceneId": "NER-ORD-POST-U06",
   "title": "A Changed Tide",
   "intro": [
-    { "id": "NER-ORD-POST-U06-L01", "speaker": "NARRATOR", "text": "The tide has turned. Every rope tied along the edge hangs at a new angle." },
-    { "id": "NER-ORD-POST-U06-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Everything has moved since we last spoke. The eddy by the wall is gone. There is a new one by your foot.”" },
-    { "id": "NER-ORD-POST-U06-L03", "speaker": "PLAYER", "text": "“Doesn’t that get tiring?”" },
-    { "id": "NER-ORD-POST-U06-L04", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“It means I get a new place twice a day without the trouble of moving house.”" },
-    { "id": "NER-ORD-POST-U06-L05", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Surface people move once a decade and complain about it for a year.”" }
+    {
+      "id": "NER-ORD-POST-U06-L01",
+      "speaker": "NARRATOR",
+      "text": "The tide has turned. Every rope tied along the edge hangs at a new angle."
+    },
+    {
+      "id": "NER-ORD-POST-U06-L02",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Everything has moved since we last spoke. The eddy by the wall is gone. There is a new one by your foot.”"
+    },
+    {
+      "id": "NER-ORD-POST-U06-L03",
+      "speaker": "PLAYER",
+      "text": "“Doesn’t that get tiring?”"
+    },
+    {
+      "id": "NER-ORD-POST-U06-L04",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“It means I get a new place twice a day without the trouble of moving house.”"
+    },
+    {
+      "id": "NER-ORD-POST-U06-L05",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Surface people move once a decade and complain about it for a year.”"
+    }
   ],
   "options": [
     {
       "choiceId": "NER-ORD-POST-U06-C1-YES",
-      "labelText": "“So where’s the good current now? Quiz me.”",
+      "labelText": "“Honestly, where’s the good current now? Quiz me.”",
       "branch": [
-        { "id": "NER-ORD-POST-U06-R-YES-01", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Very well. Point to where you would swim.”" },
-        { "id": "NER-ORD-POST-U06-R-YES-02", "speaker": "NARRATOR", "text": "You point at the calmest patch of water. She points, with great patience, at the patch beside it." },
-        { "id": "NER-ORD-POST-U06-R-YES-03", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Close. Yours would have taken you very politely out to sea.”" }
+        {
+          "id": "NER-ORD-POST-U06-R-YES-01",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“Very well. Point to where you would swim.”"
+        },
+        {
+          "id": "NER-ORD-POST-U06-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "You point at the calmest patch of water. She points, with great patience, at the patch beside it."
+        },
+        {
+          "id": "NER-ORD-POST-U06-R-YES-03",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Close. Yours would have taken you very politely out to sea.”"
+        }
       ]
     },
     {
       "choiceId": "NER-ORD-POST-U06-C1-NO",
       "labelText": "“You could pick one route and stick to it. Less to keep track of.”",
       "branch": [
-        { "id": "NER-ORD-POST-U06-R-NO-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I could. For about six hours.”" },
-        { "id": "NER-ORD-POST-U06-R-NO-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Then the tide turns, and my route goes straight into the wall.”" }
+        {
+          "id": "NER-ORD-POST-U06-R-NO-01",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“I could. For about six hours.”"
+        },
+        {
+          "id": "NER-ORD-POST-U06-R-NO-02",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“Then the tide turns, and my route goes straight into the wall.”"
+        }
       ]
     }
   ]

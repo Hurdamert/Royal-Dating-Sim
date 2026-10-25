@@ -38,7 +38,7 @@
     {
       "id": "TAV-ORD-POST-U03-L07",
       "speaker": "NARRATOR",
-      "text": "She seems very satisfied with act three."
+      "text": "She underlines act three. Twice."
     }
   ],
   "options": [
@@ -66,8 +66,8 @@
         {
           "id": "TAV-ORD-POST-U03-R-NO-01",
           "speaker": "TAVRI",
-          "expression": "NEUTRAL",
-          "text": "“A greatest hits. Of course.”"
+          "expression": "PLAYFUL",
+          "text": "“Greatest hits. Naturally. Track one: the napkin.”"
         },
         {
           "id": "TAV-ORD-POST-U03-R-NO-02",
@@ -78,7 +78,7 @@
     },
     {
       "choiceId": "TAV-ORD-POST-U03-C1-OFF",
-      "labelText": "“Honestly, you’re only worth the time when you’re being funny.”",
+      "labelText": "“You’re only worth the time when you’re being funny.”",
       "branch": [
         {
           "id": "TAV-ORD-POST-U03-R-OFF-01",

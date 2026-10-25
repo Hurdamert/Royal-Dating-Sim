@@ -2,28 +2,73 @@
   "sceneId": "NER-ORD-PRE-F02",
   "title": "The Floating Leaf",
   "intro": [
-    { "id": "NER-ORD-PRE-F02-L01", "speaker": "NARRATOR", "text": "A leaf is turning slow circles beside Nerelle. It shows no sign of leaving." },
-    { "id": "NER-ORD-PRE-F02-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“This leaf has been waiting beside me for several minutes. I suspect it has an appointment.”" },
-    { "id": "NER-ORD-PRE-F02-L03", "speaker": "PLAYER", "text": "“Does it need your signature?”" },
-    { "id": "NER-ORD-PRE-F02-L04", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“I do not recall issuing permits to leaves.”" },
-    { "id": "NER-ORD-PRE-F02-L05", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Still, it has waited more patiently than most ambassadors. I feel I owe it an audience.”" }
+    {
+      "id": "NER-ORD-PRE-F02-L01",
+      "speaker": "NARRATOR",
+      "text": "A leaf is turning slow circles beside Nerelle. It shows no sign of leaving."
+    },
+    {
+      "id": "NER-ORD-PRE-F02-L02",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“It has been waiting there for several minutes. I suspect an appointment.”"
+    },
+    {
+      "id": "NER-ORD-PRE-F02-L03",
+      "speaker": "PLAYER",
+      "text": "“Does it need your signature?”"
+    },
+    {
+      "id": "NER-ORD-PRE-F02-L04",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“I don’t recall issuing permits to leaves.”"
+    },
+    {
+      "id": "NER-ORD-PRE-F02-L05",
+      "speaker": "NARRATOR",
+      "text": "A second leaf drifts up and settles in behind the first. Then a third."
+    },
+    {
+      "id": "NER-ORD-PRE-F02-L06",
+      "speaker": "NERELLE",
+      "expression": "SURPRISED",
+      "text": "“Oh no. It’s a queue.”"
+    }
   ],
   "options": [
     {
       "choiceId": "NER-ORD-PRE-F02-C1-YES",
-      "labelText": "“Maybe it’s off duty. It just likes your company.”",
+      "labelText": "“Put up a sign: *Back after the tide.* You’re off duty.”",
       "branch": [
-        { "id": "NER-ORD-PRE-F02-R-YES-01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“No petition? No grievance?”" },
-        { "id": "NER-ORD-PRE-F02-R-YES-02", "speaker": "NARRATOR", "text": "She looks at the leaf, and then, for slightly too long, at you." },
-        { "id": "NER-ORD-PRE-F02-R-YES-03", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“I will log it as an unofficial visit. Unofficially.”" }
+        {
+          "id": "NER-ORD-PRE-F02-R-YES-01",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“Back after the tide. The council would never.”"
+        },
+        {
+          "id": "NER-ORD-PRE-F02-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She tells the leaves. They drift off politely, one at a time, in order."
+        }
       ]
     },
     {
       "choiceId": "NER-ORD-PRE-F02-C1-NO",
-      "labelText": "“Keep it! Press it and frame it. First official leaf of your reign.”",
+      "labelText": "“Keep the first one! Press it and frame it. First official leaf of your reign.”",
       "branch": [
-        { "id": "NER-ORD-PRE-F02-R-NO-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Drafted into office. It came here to drift.”" },
-        { "id": "NER-ORD-PRE-F02-R-NO-02", "speaker": "NARRATOR", "text": "The leaf, sensing responsibility, drifts away." }
+        {
+          "id": "NER-ORD-PRE-F02-R-NO-01",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Then the other two will want frames.”"
+        },
+        {
+          "id": "NER-ORD-PRE-F02-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "The queue grows by a twig."
+        }
       ]
     }
   ]

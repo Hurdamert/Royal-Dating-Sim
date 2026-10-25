@@ -39,7 +39,7 @@
   "options": [
     {
       "choiceId": "TAV-ORD-PRE-U02-C1-YES",
-      "labelText": "“Forget the quill. Has anyone asked the servants which day they want?”",
+      "labelText": "“Has anyone asked the servants which day they want?”",
       "branch": [
         {
           "id": "TAV-ORD-PRE-U02-R-YES-01",

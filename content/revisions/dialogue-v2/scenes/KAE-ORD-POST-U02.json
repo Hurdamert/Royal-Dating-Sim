@@ -2,27 +2,67 @@
   "sceneId": "KAE-ORD-POST-U02",
   "title": "Off Duty, Sort Of",
   "intro": [
-    { "id": "KAE-ORD-POST-U02-L01", "speaker": "NARRATOR", "text": "Kaedra sits down on a low step. Arranging the tail takes a moment. Then the wings. Then the tail again." },
-    { "id": "KAE-ORD-POST-U02-L02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I am told that sitting is respectable when nothing is on fire.”" },
-    { "id": "KAE-ORD-POST-U02-L03", "speaker": "PLAYER", "text": "“Does it feel strange?”" },
-    { "id": "KAE-ORD-POST-U02-L04", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Very. I keep expecting someone to file a report about my posture.”" },
-    { "id": "KAE-ORD-POST-U02-L05", "speaker": "NARRATOR", "text": "Nearby, a clerk with a clipboard glances over. Kaedra sits up straighter." }
+    {
+      "id": "KAE-ORD-POST-U02-L01",
+      "speaker": "NARRATOR",
+      "text": "Kaedra sits down on a low step. Arranging the tail takes a moment. Then the wings. Then the tail again."
+    },
+    {
+      "id": "KAE-ORD-POST-U02-L02",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“I am told that sitting is respectable when nothing is on fire.”"
+    },
+    {
+      "id": "KAE-ORD-POST-U02-L03",
+      "speaker": "PLAYER",
+      "text": "“Does it feel strange?”"
+    },
+    {
+      "id": "KAE-ORD-POST-U02-L04",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“Very. I keep expecting someone to file a report about my posture.”"
+    },
+    {
+      "id": "KAE-ORD-POST-U02-L05",
+      "speaker": "NARRATOR",
+      "text": "Nearby, a clerk with a clipboard glances over. Kaedra sits up straighter."
+    }
   ],
   "options": [
     {
       "choiceId": "KAE-ORD-POST-U02-C1-YES",
       "labelText": "“Stay put. I’ll tell the clipboard you’re testing the step.”",
       "branch": [
-        { "id": "KAE-ORD-POST-U02-R-YES-01", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“A load test. Yes. Tell him it may take a while.”" },
-        { "id": "KAE-ORD-POST-U02-R-YES-02", "speaker": "NARRATOR", "text": "Her wings loosen. The clerk writes something down and leaves her alone." }
+        {
+          "id": "KAE-ORD-POST-U02-R-YES-01",
+          "speaker": "KAEDRA",
+          "expression": "PLAYFUL",
+          "text": "“A load test. Yes. Tell him it may take a while.”"
+        },
+        {
+          "id": "KAE-ORD-POST-U02-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "Her wings loosen. The clerk writes something down and leaves her alone."
+        }
       ]
     },
     {
       "choiceId": "KAE-ORD-POST-U02-C1-NO",
       "labelText": "“Good call. Rest up so you’re sharp for the next emergency.”",
       "branch": [
-        { "id": "KAE-ORD-POST-U02-R-NO-01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“The next emergency. Yes.”" },
-        { "id": "KAE-ORD-POST-U02-R-NO-02", "speaker": "NARRATOR", "text": "She rests for exactly one regulation minute. Then she gets up to inspect a gate that was fine." }
+        {
+          "id": "KAE-ORD-POST-U02-R-NO-01",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“The next emergency. Yes.”"
+        },
+        {
+          "id": "KAE-ORD-POST-U02-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She rests for exactly one regulation minute. Then she gets up to inspect a gate that was fine."
+        }
       ]
     }
   ]

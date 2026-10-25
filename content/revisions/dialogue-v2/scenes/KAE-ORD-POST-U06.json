@@ -2,28 +2,73 @@
   "sceneId": "KAE-ORD-POST-U06",
   "title": "Sentries and Signatures",
   "intro": [
-    { "id": "KAE-ORD-POST-U06-L01", "speaker": "NARRATOR", "text": "Kaedra signs a sentry roster and hands it on. Her hand stays out a moment longer than the roster does." },
-    { "id": "KAE-ORD-POST-U06-L02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“The sentries can manage their own shifts. Several have done this longer than I have been alive.”" },
-    { "id": "KAE-ORD-POST-U06-L03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“One of them corrected my salute when I was nine. He was right.”" },
-    { "id": "KAE-ORD-POST-U06-L04", "speaker": "PLAYER", "text": "“So you’re not going to check it again?”" },
-    { "id": "KAE-ORD-POST-U06-L05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I am not going to check it again.”" },
-    { "id": "KAE-ORD-POST-U06-L06", "speaker": "NARRATOR", "text": "She looks in the direction the roster went." }
+    {
+      "id": "KAE-ORD-POST-U06-L01",
+      "speaker": "NARRATOR",
+      "text": "Kaedra signs a sentry roster and hands it on. Her hand stays out a moment longer than the roster does."
+    },
+    {
+      "id": "KAE-ORD-POST-U06-L02",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“The sentries can manage their own shifts. Several have done this longer than I have been alive.”"
+    },
+    {
+      "id": "KAE-ORD-POST-U06-L03",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“One of them corrected my salute when I was nine. He was right.”"
+    },
+    {
+      "id": "KAE-ORD-POST-U06-L04",
+      "speaker": "PLAYER",
+      "text": "“So you’re not going to check it again?”"
+    },
+    {
+      "id": "KAE-ORD-POST-U06-L05",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“I am not going to check it again.”"
+    },
+    {
+      "id": "KAE-ORD-POST-U06-L06",
+      "speaker": "NARRATOR",
+      "text": "She looks in the direction the roster went."
+    }
   ],
   "options": [
     {
       "choiceId": "KAE-ORD-POST-U06-C1-YES",
       "labelText": "“The man who fixed your salute can handle a roster. Walk with me?”",
       "branch": [
-        { "id": "KAE-ORD-POST-U06-R-YES-01", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“He did fix it. Thoroughly.”" },
-        { "id": "KAE-ORD-POST-U06-R-YES-02", "speaker": "NARRATOR", "text": "She walks with you. She only looks back once." }
+        {
+          "id": "KAE-ORD-POST-U06-R-YES-01",
+          "speaker": "KAEDRA",
+          "expression": "PLAYFUL",
+          "text": "“He did fix it. Thoroughly.”"
+        },
+        {
+          "id": "KAE-ORD-POST-U06-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She walks with you. She only looks back once."
+        }
       ]
     },
     {
       "choiceId": "KAE-ORD-POST-U06-C1-NO",
       "labelText": "“If it’s bugging you, just check. I always double-check before shipping.”",
       "branch": [
-        { "id": "KAE-ORD-POST-U06-R-NO-01", "speaker": "NARRATOR", "text": "She checks. It is perfect. Across the way, the oldest sentry watches her check it." },
-        { "id": "KAE-ORD-POST-U06-R-NO-02", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“He used to look at my salute like that.”" }
+        {
+          "id": "KAE-ORD-POST-U06-R-NO-01",
+          "speaker": "NARRATOR",
+          "text": "She checks. It is perfect. Across the way, the oldest sentry watches her check it."
+        },
+        {
+          "id": "KAE-ORD-POST-U06-R-NO-02",
+          "speaker": "KAEDRA",
+          "expression": "WORRIED",
+          "text": "“He used to look at my salute like that.”"
+        }
       ]
     }
   ]

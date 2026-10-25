@@ -2,28 +2,73 @@
   "sceneId": "NER-ORD-PRE-U04",
   "title": "The Gulls’ Petition",
   "intro": [
-    { "id": "NER-ORD-PRE-U04-L01", "speaker": "NARRATOR", "text": "A gull lands beside Nerelle, pulls a ribbon off a post, and drops it in the water in front of her." },
-    { "id": "NER-ORD-PRE-U04-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“That is the gulls’ fourth petition this week.”" },
-    { "id": "NER-ORD-PRE-U04-L03", "speaker": "PLAYER", "text": "“What are they petitioning for?”" },
-    { "id": "NER-ORD-PRE-U04-L04", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Better decorations, they claim. Their actual demand is unattended crumbs.”" },
-    { "id": "NER-ORD-PRE-U04-L05", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“I rejected the first three. They ate the third.”" },
-    { "id": "NER-ORD-PRE-U04-L06", "speaker": "NARRATOR", "text": "The gull is now staring at your pocket." }
+    {
+      "id": "NER-ORD-PRE-U04-L01",
+      "speaker": "NARRATOR",
+      "text": "A gull lands beside Nerelle, pulls a ribbon off a post, and drops it in the water in front of her."
+    },
+    {
+      "id": "NER-ORD-PRE-U04-L02",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“That is the gulls’ fourth petition this week.”"
+    },
+    {
+      "id": "NER-ORD-PRE-U04-L03",
+      "speaker": "PLAYER",
+      "text": "“What are they petitioning for?”"
+    },
+    {
+      "id": "NER-ORD-PRE-U04-L04",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Better decorations, they claim. Their actual demand is unattended crumbs.”"
+    },
+    {
+      "id": "NER-ORD-PRE-U04-L05",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“I rejected the first three. They ate the third.”"
+    },
+    {
+      "id": "NER-ORD-PRE-U04-L06",
+      "speaker": "NARRATOR",
+      "text": "The gull is now staring at your pocket."
+    }
   ],
   "options": [
     {
       "choiceId": "NER-ORD-PRE-U04-C1-YES",
       "labelText": "“Petition denied. My pocket stays shut.”",
       "branch": [
-        { "id": "NER-ORD-PRE-U04-R-YES-01", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“A united front. The fish thank you.”" },
-        { "id": "NER-ORD-PRE-U04-R-YES-02", "speaker": "NARRATOR", "text": "The gull looks at your pocket, then at your face, and appears to memorize it." }
+        {
+          "id": "NER-ORD-PRE-U04-R-YES-01",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“A united front. The fish thank you.”"
+        },
+        {
+          "id": "NER-ORD-PRE-U04-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "The gull looks at your pocket, then at your face, and appears to memorize it."
+        }
       ]
     },
     {
       "choiceId": "NER-ORD-PRE-U04-C1-NO",
       "labelText": "“Aw, one crumb won’t hurt. It’s only one gull.”",
       "branch": [
-        { "id": "NER-ORD-PRE-U04-R-NO-01", "speaker": "NARRATOR", "text": "You toss one crumb. Eleven more gulls arrive." },
-        { "id": "NER-ORD-PRE-U04-R-NO-02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Congratulations. You have formally recognized their government.”" }
+        {
+          "id": "NER-ORD-PRE-U04-R-NO-01",
+          "speaker": "NARRATOR",
+          "text": "You toss one crumb. Nine more gulls arrive."
+        },
+        {
+          "id": "NER-ORD-PRE-U04-R-NO-02",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Congratulations. You have formally recognized their government.”"
+        }
       ]
     }
   ]

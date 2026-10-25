@@ -2,35 +2,85 @@
   "sceneId": "TAV-ORD-PRE-U01",
   "title": "The Applause Problem",
   "intro": [
-    { "id": "TAV-ORD-PRE-U01-L01", "speaker": "NARRATOR", "text": "A courtier carrying a tureen of soup bows to Tavri anyway. His hat keeps going." },
-    { "id": "TAV-ORD-PRE-U01-L02", "speaker": "TAVRI", "expression": "PLAYFUL", "text": "“I held a door for that man. That’s all. Three people clapped, and one asked for an encore.”" },
-    { "id": "TAV-ORD-PRE-U01-L03", "speaker": "PLAYER", "text": "“An encore of the door?”" },
-    { "id": "TAV-ORD-PRE-U01-L04", "speaker": "TAVRI", "expression": "NEUTRAL", "text": "“I could hold it again. Slower. Add a little flourish on the hinge.”" },
-    { "id": "TAV-ORD-PRE-U01-L05", "speaker": "NARRATOR", "text": "Her tail is already rehearsing the flourish." }
+    {
+      "id": "TAV-ORD-PRE-U01-L01",
+      "speaker": "NARRATOR",
+      "text": "A courtier carrying a tureen of soup bows to Tavri. His hat keeps going. The soup, narrowly, does not."
+    },
+    {
+      "id": "TAV-ORD-PRE-U01-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“I held a door for that man. That’s all. Three people clapped, and one asked for an encore.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U01-L03",
+      "speaker": "PLAYER",
+      "text": "“An encore of the door?”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U01-L04",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“I could hold it again. Slower. Add a little flourish on the hinge.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U01-L05",
+      "speaker": "NARRATOR",
+      "text": "Her tail is already rehearsing the flourish."
+    }
   ],
   "options": [
     {
       "choiceId": "TAV-ORD-PRE-U01-C1-YES",
-      "labelText": "“Or it could just be a door. Nobody needs a second act.”",
+      "labelText": "“Or you could let the door retire. It’s had a big day.”",
       "branch": [
-        { "id": "TAV-ORD-PRE-U01-R-YES-01", "speaker": "TAVRI", "expression": "SURPRISED", "text": "“Just a door.”" },
-        { "id": "TAV-ORD-PRE-U01-R-YES-02", "speaker": "TAVRI", "expression": "PLAYFUL", "text": "“Radical. Don’t tell the hinge.”" }
+        {
+          "id": "TAV-ORD-PRE-U01-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“Retire the door.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U01-R-YES-02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Radical. Don’t tell the hinge.”"
+        }
       ]
     },
     {
       "choiceId": "TAV-ORD-PRE-U01-C1-NO",
       "labelText": "“Do it. Big flourish. Give them their money’s worth.”",
       "branch": [
-        { "id": "TAV-ORD-PRE-U01-R-NO-01", "speaker": "NARRATOR", "text": "She gives the hinge a magnificent flourish. Two more people clap." },
-        { "id": "TAV-ORD-PRE-U01-R-NO-02", "speaker": "TAVRI", "expression": "NEUTRAL", "text": "“Wonderful. Now it’s a tradition.”" }
+        {
+          "id": "TAV-ORD-PRE-U01-R-NO-01",
+          "speaker": "NARRATOR",
+          "text": "She gives the hinge a magnificent flourish. Two more people clap."
+        },
+        {
+          "id": "TAV-ORD-PRE-U01-R-NO-02",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Wonderful. Now it’s a tradition.”"
+        }
       ]
     },
     {
       "choiceId": "TAV-ORD-PRE-U01-C1-OFF",
       "labelText": "“You only held it so they’d clap. Bit fake, isn’t it?”",
       "branch": [
-        { "id": "TAV-ORD-PRE-U01-R-OFF-01", "speaker": "TAVRI", "expression": "ANNOYED", "text": "“He was carrying soup. But please, keep reviewing me.”" },
-        { "id": "TAV-ORD-PRE-U01-R-OFF-02", "speaker": "NARRATOR", "text": "She leaves through the door. She does not hold it." }
+        {
+          "id": "TAV-ORD-PRE-U01-R-OFF-01",
+          "speaker": "TAVRI",
+          "expression": "ANNOYED",
+          "text": "“He was carrying soup. But please, keep reviewing me.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U01-R-OFF-02",
+          "speaker": "NARRATOR",
+          "text": "She leaves through the door. She does not hold it."
+        }
       ]
     }
   ]

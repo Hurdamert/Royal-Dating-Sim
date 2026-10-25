@@ -2,27 +2,70 @@
   "sceneId": "NER-ORD-PRE-F01",
   "title": "A Surface Expression",
   "intro": [
-    { "id": "NER-ORD-PRE-F01-L01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“A merchant just told his friend that their meeting went swimmingly.”" },
-    { "id": "NER-ORD-PRE-F01-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Was the meeting held in a current? Were there eels?”" },
-    { "id": "NER-ORD-PRE-F01-L03", "speaker": "PLAYER", "text": "“It means it went well.”" },
-    { "id": "NER-ORD-PRE-F01-L04", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Well? Half of swimming is not drowning. The other half is eels.”" },
-    { "id": "NER-ORD-PRE-F01-L05", "speaker": "NARRATOR", "text": "Up on the walkway, the merchant is still telling people how swimmingly it went." }
+    {
+      "id": "NER-ORD-PRE-F01-L01",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“A merchant just told his friend that their meeting went swimmingly.”"
+    },
+    {
+      "id": "NER-ORD-PRE-F01-L02",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Was the meeting held in a current? Were there eels?”"
+    },
+    {
+      "id": "NER-ORD-PRE-F01-L03",
+      "speaker": "PLAYER",
+      "text": "“It means it went well.”"
+    },
+    {
+      "id": "NER-ORD-PRE-F01-L04",
+      "speaker": "NERELLE",
+      "expression": "SURPRISED",
+      "text": "“Well? Half of swimming is not drowning. The other half is eels.”"
+    },
+    {
+      "id": "NER-ORD-PRE-F01-L05",
+      "speaker": "NARRATOR",
+      "text": "Up on the walkway, the merchant is still telling people how swimmingly it went."
+    }
   ],
   "options": [
     {
       "choiceId": "NER-ORD-PRE-F01-C1-YES",
       "labelText": "“So we took your hardest skill and made it mean ‘fine’?”",
       "branch": [
-        { "id": "NER-ORD-PRE-F01-R-YES-01", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Without asking. I am drafting a complaint.”" },
-        { "id": "NER-ORD-PRE-F01-R-YES-02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Polite. Firm. Waterproof.”" }
+        {
+          "id": "NER-ORD-PRE-F01-R-YES-01",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“Without asking. I am drafting a complaint.”"
+        },
+        {
+          "id": "NER-ORD-PRE-F01-R-YES-02",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Polite. Firm. Waterproof.”"
+        }
       ]
     },
     {
       "choiceId": "NER-ORD-PRE-F01-C1-NO",
       "labelText": "“To be fair, swimming must be pretty easy for you.”",
       "branch": [
-        { "id": "NER-ORD-PRE-F01-R-NO-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Easy the way stairs are easy for you.”" },
-        { "id": "NER-ORD-PRE-F01-R-NO-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Ask me again in a riptide.”" }
+        {
+          "id": "NER-ORD-PRE-F01-R-NO-01",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Easy the way stairs are easy for you.”"
+        },
+        {
+          "id": "NER-ORD-PRE-F01-R-NO-02",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“Ask me again in a riptide.”"
+        }
       ]
     }
   ]

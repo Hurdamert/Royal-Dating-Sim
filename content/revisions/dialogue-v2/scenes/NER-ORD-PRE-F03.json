@@ -2,27 +2,70 @@
   "sceneId": "NER-ORD-PRE-F03",
   "title": "The Grandmothers’ Knot",
   "intro": [
-    { "id": "NER-ORD-PRE-F03-L01", "speaker": "NARRATOR", "text": "Nerelle reties the knot on a floating marker without looking at her hands." },
-    { "id": "NER-ORD-PRE-F03-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“A sailor taught me this knot. He insisted his grandmother invented it.”" },
-    { "id": "NER-ORD-PRE-F03-L03", "speaker": "PLAYER", "text": "“Did she?”" },
-    { "id": "NER-ORD-PRE-F03-L04", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Possibly. Six other grandmothers have made the same claim.”" },
-    { "id": "NER-ORD-PRE-F03-L05", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Two have written to the council. One enclosed a diagram and a threat.”" }
+    {
+      "id": "NER-ORD-PRE-F03-L01",
+      "speaker": "NARRATOR",
+      "text": "Nerelle reties the knot on a floating marker without looking at her hands."
+    },
+    {
+      "id": "NER-ORD-PRE-F03-L02",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“A sailor taught me this knot. He insisted his grandmother invented it.”"
+    },
+    {
+      "id": "NER-ORD-PRE-F03-L03",
+      "speaker": "PLAYER",
+      "text": "“Did she?”"
+    },
+    {
+      "id": "NER-ORD-PRE-F03-L04",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Possibly. Six other grandmothers have made the same claim.”"
+    },
+    {
+      "id": "NER-ORD-PRE-F03-L05",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“Two have written to the council. One enclosed a diagram and a threat.”"
+    }
   ],
   "options": [
     {
       "choiceId": "NER-ORD-PRE-F03-C1-YES",
       "labelText": "“Call it the grandmothers’ knot. All seven of them.”",
       "branch": [
-        { "id": "NER-ORD-PRE-F03-R-YES-01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Seven signatories. That is more than our last trade agreement.”" },
-        { "id": "NER-ORD-PRE-F03-R-YES-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“I will propose it. Through a very junior clerk, in case of diagrams.”" }
+        {
+          "id": "NER-ORD-PRE-F03-R-YES-01",
+          "speaker": "NERELLE",
+          "expression": "SURPRISED",
+          "text": "“Seven signatories. That is more than our last trade agreement.”"
+        },
+        {
+          "id": "NER-ORD-PRE-F03-R-YES-02",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“I will propose it. Through a very junior clerk, in case of diagrams.”"
+        }
       ]
     },
     {
       "choiceId": "NER-ORD-PRE-F03-C1-NO",
       "labelText": "“Let’s settle it. Someone must have written down who tied it first.”",
       "branch": [
-        { "id": "NER-ORD-PRE-F03-R-NO-01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“You would take on seven grandmothers?”" },
-        { "id": "NER-ORD-PRE-F03-R-NO-02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Brave. I will tie something nice for your memorial.”" }
+        {
+          "id": "NER-ORD-PRE-F03-R-NO-01",
+          "speaker": "NERELLE",
+          "expression": "SURPRISED",
+          "text": "“You would take on seven grandmothers?”"
+        },
+        {
+          "id": "NER-ORD-PRE-F03-R-NO-02",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Brave. I’ll tie something nice for your memorial.”"
+        }
       ]
     }
   ]

@@ -5,7 +5,7 @@
     {
       "id": "TAV-ORD-POST-U05-L01",
       "speaker": "NARRATOR",
-      "text": "A breeze picks up. Tavri lifts her chin, ready to say something grand about it."
+      "text": "A breeze comes through an open window. Tavri lifts her chin, ready to say something grand about it."
     },
     {
       "id": "TAV-ORD-POST-U05-L02",
@@ -22,7 +22,7 @@
     {
       "id": "TAV-ORD-POST-U05-L05",
       "speaker": "NARRATOR",
-      "text": "She looks delighted with herself. Her tail is enjoying the wind enormously."
+      "text": "Her ears tip back to catch more of it."
     },
     {
       "id": "TAV-ORD-POST-U05-L03",
@@ -33,7 +33,7 @@
       "id": "TAV-ORD-POST-U05-L06",
       "speaker": "TAVRI",
       "expression": "PLAYFUL",
-      "text": "“The kings can get their own wind.”"
+      "text": "“The kings can find their own breeze.”"
     }
   ],
   "options": [
@@ -50,24 +50,24 @@
           "id": "TAV-ORD-POST-U05-R-YES-02",
           "speaker": "TAVRI",
           "expression": "PLAYFUL",
-          "text": "“Don’t tell the kings.”"
+          "text": "“Look at us. Two people, one window, no subtext.”"
         }
       ]
     },
     {
       "choiceId": "TAV-ORD-POST-U05-C1-NO",
-      "labelText": "“No, finish it! ‘Restless and’ what? That was going somewhere.”",
+      "labelText": "“Ooh, my turn. The wind is like the job market: it never tells you which way it’s going.”",
       "branch": [
         {
           "id": "TAV-ORD-POST-U05-R-NO-01",
           "speaker": "TAVRI",
           "expression": "NEUTRAL",
-          "text": "“Restless and… fine.”"
+          "text": "“Mm. Very good.”"
         },
         {
           "id": "TAV-ORD-POST-U05-R-NO-02",
           "speaker": "NARRATOR",
-          "text": "She finishes the metaphor. It’s lovely. By then, the wind has moved on."
+          "text": "She nods at your metaphor the way she nods at ambassadors. The breeze moves on without either of you."
         }
       ]
     }

@@ -2,28 +2,78 @@
   "sceneId": "KAE-ORD-PRE-U06",
   "title": "The Heroic Voice",
   "intro": [
-    { "id": "KAE-ORD-PRE-U06-L01", "speaker": "NARRATOR", "text": "Two officials are arguing over a single sheet of paper. One of them is doing vocal exercises." },
-    { "id": "KAE-ORD-PRE-U06-L02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I inspected a gate. It opens. It closes. It passed.”" },
-    { "id": "KAE-ORD-PRE-U06-L03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“They are deciding whose voice sounds most heroic announcing it.”" },
-    { "id": "KAE-ORD-PRE-U06-L04", "speaker": "NARRATOR", "text": "The second official tries it with a long pause before *closes*. He has requested trumpets." },
-    { "id": "KAE-ORD-PRE-U06-L05", "speaker": "PLAYER", "text": "“Who actually fixed the gate?”" },
-    { "id": "KAE-ORD-PRE-U06-L06", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“The hinge-oiler. He did most of it. Nobody has asked his name.”" }
+    {
+      "id": "KAE-ORD-PRE-U06-L01",
+      "speaker": "NARRATOR",
+      "text": "Two officials are arguing over a single sheet of paper. One of them is doing vocal exercises."
+    },
+    {
+      "id": "KAE-ORD-PRE-U06-L02",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“I inspected a gate. It opens. It closes. It passed.”"
+    },
+    {
+      "id": "KAE-ORD-PRE-U06-L03",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“They are deciding whose voice sounds most heroic announcing it.”"
+    },
+    {
+      "id": "KAE-ORD-PRE-U06-L04",
+      "speaker": "NARRATOR",
+      "text": "The second official tries it with a long pause before *closes*. He has requested trumpets."
+    },
+    {
+      "id": "KAE-ORD-PRE-U06-L05",
+      "speaker": "PLAYER",
+      "text": "“Who actually fixed the gate?”"
+    },
+    {
+      "id": "KAE-ORD-PRE-U06-L06",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“The hinge-oiler. He did most of it. Nobody has asked his name.”"
+    }
   ],
   "options": [
     {
       "choiceId": "KAE-ORD-PRE-U06-C1-YES",
-      "labelText": "“Then announce it in a normal voice, and put the hinge-oiler in it.”",
+      "labelText": "“Just read it out the way you said it to me. ‘It opens. It closes. It passed.’”",
       "branch": [
-        { "id": "KAE-ORD-PRE-U06-R-YES-01", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“His name is Tobble. I asked.”" },
-        { "id": "KAE-ORD-PRE-U06-R-YES-02", "speaker": "NARRATOR", "text": "The announcement goes out in a normal voice, naming Tobble. One official looks physically pained by the absence of trumpets." }
+        {
+          "id": "KAE-ORD-PRE-U06-R-YES-01",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“Very well.”"
+        },
+        {
+          "id": "KAE-ORD-PRE-U06-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She takes the sheet and reads it out in one breath, then adds: *“Hinges by Tobble.”*"
+        },
+        {
+          "id": "KAE-ORD-PRE-U06-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "One official looks physically pained by the absence of trumpets."
+        }
       ]
     },
     {
       "choiceId": "KAE-ORD-PRE-U06-C1-NO",
-      "labelText": "“You did the inspection. You should announce it. Take the credit.”",
+      "labelText": "“Let them have their trumpets. It’s a big moment for a gate.”",
       "branch": [
-        { "id": "KAE-ORD-PRE-U06-R-NO-01", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Then there would be three of us doing vocal exercises.”" },
-        { "id": "KAE-ORD-PRE-U06-R-NO-02", "speaker": "NARRATOR", "text": "The heroic announcement goes ahead, with trumpets. The hinge-oiler is not in it." }
+        {
+          "id": "KAE-ORD-PRE-U06-R-NO-01",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“It is a medium moment for a gate.”"
+        },
+        {
+          "id": "KAE-ORD-PRE-U06-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "The heroic announcement goes ahead, with trumpets. The hinge-oiler is not in it."
+        }
       ]
     }
   ]

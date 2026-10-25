@@ -33,7 +33,7 @@
   "options": [
     {
       "choiceId": "TAV-ORD-PRE-U06-C1-YES",
-      "labelText": "“Let’s stay right here and find out if it’s the goat.”",
+      "labelText": "“Honestly? Let’s stay right here and find out if it’s the goat.”",
       "branch": [
         {
           "id": "TAV-ORD-PRE-U06-R-YES-01",

@@ -2,28 +2,76 @@
   "sceneId": "KAE-ORD-PRE-U05",
   "title": "The Mountain Proverb",
   "intro": [
-    { "id": "KAE-ORD-PRE-U05-L01", "speaker": "NARRATOR", "text": "Someone has hung a carved plaque nearby. Kaedra reads it twice. The second time, she reads it like an inspector." },
-    { "id": "KAE-ORD-PRE-U05-L02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“*The strongest mountain never bends.*”" },
-    { "id": "KAE-ORD-PRE-U05-L03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Written by someone who has never met an avalanche.”" },
-    { "id": "KAE-ORD-PRE-U05-L04", "speaker": "PLAYER", "text": "“What would you carve instead?”" },
-    { "id": "KAE-ORD-PRE-U05-L05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“*A good bridge flexes.* I submitted it. They said it was not inspiring.”" },
-    { "id": "KAE-ORD-PRE-U05-L06", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Neither is a bridge in a river.”" }
+    {
+      "id": "KAE-ORD-PRE-U05-L01",
+      "speaker": "NARRATOR",
+      "text": "Someone has hung a carved plaque nearby. Kaedra reads it twice. The second time, she reads it like an inspector."
+    },
+    {
+      "id": "KAE-ORD-PRE-U05-L02",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“*The strongest mountain never bends.*”"
+    },
+    {
+      "id": "KAE-ORD-PRE-U05-L03",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“Written by someone who has never met an avalanche.”"
+    },
+    {
+      "id": "KAE-ORD-PRE-U05-L04",
+      "speaker": "PLAYER",
+      "text": "“What would you carve instead?”"
+    },
+    {
+      "id": "KAE-ORD-PRE-U05-L05",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“*A good bridge flexes.* I submitted it. They said it was not inspiring.”"
+    },
+    {
+      "id": "KAE-ORD-PRE-U05-L06",
+      "speaker": "KAEDRA",
+      "expression": "PLAYFUL",
+      "text": "“Neither is a bridge in a river.”"
+    }
   ],
   "options": [
     {
       "choiceId": "KAE-ORD-PRE-U05-C1-YES",
-      "labelText": "“A bridge bends because people are walking on it.”",
+      "labelText": "“Carve the load rating. Nothing’s more inspiring than a number you can trust.”",
       "branch": [
-        { "id": "KAE-ORD-PRE-U05-R-YES-01", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“Yours is better.”" },
-        { "id": "KAE-ORD-PRE-U05-R-YES-02", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“I will submit it under your name. Then you can be told it is uninspiring.”" }
+        {
+          "id": "KAE-ORD-PRE-U05-R-YES-01",
+          "speaker": "KAEDRA",
+          "expression": "SURPRISED",
+          "text": "“*Rated for four hundred people and one cart.*”"
+        },
+        {
+          "id": "KAE-ORD-PRE-U05-R-YES-02",
+          "speaker": "KAEDRA",
+          "expression": "PLAYFUL",
+          "text": "“I would stand under that.”"
+        }
       ]
     },
     {
       "choiceId": "KAE-ORD-PRE-U05-C1-NO",
       "labelText": "“I kind of like it, though. Never bend. Very you.”",
       "branch": [
-        { "id": "KAE-ORD-PRE-U05-R-NO-01", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“Very me.”" },
-        { "id": "KAE-ORD-PRE-U05-R-NO-02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I will let the avalanche know.”" }
+        {
+          "id": "KAE-ORD-PRE-U05-R-NO-01",
+          "speaker": "KAEDRA",
+          "expression": "WORRIED",
+          "text": "“Very me.”"
+        },
+        {
+          "id": "KAE-ORD-PRE-U05-R-NO-02",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“I will let the avalanche know.”"
+        }
       ]
     }
   ]

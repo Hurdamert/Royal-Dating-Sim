@@ -1,28 +1,74 @@
 {
   "sceneId": "NER-ORD-POST-U02",
-  "title": "Possibly Goats",
+  "title": "Here Be Cows",
   "intro": [
-    { "id": "NER-ORD-POST-U02-L01", "speaker": "NARRATOR", "text": "Two damp maps lie on the stones, pinned down with pebbles. They disagree about everything." },
-    { "id": "NER-ORD-POST-U02-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“This is a surface map. The sea is a blue patch labeled ‘Sea.’”" },
-    { "id": "NER-ORD-POST-U02-L03", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Ours, meanwhile, shows the land as a blank patch labeled ‘Dry. Possibly goats.’”" },
-    { "id": "NER-ORD-POST-U02-L04", "speaker": "PLAYER", "text": "“So both sides gave up at the shoreline.”" },
-    { "id": "NER-ORD-POST-U02-L05", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Each mapmaker drew home in exquisite detail, and the other side as a rumor.”" }
+    {
+      "id": "NER-ORD-POST-U02-L01",
+      "speaker": "NARRATOR",
+      "text": "Two damp maps lie on the stones at the water’s edge, pinned down with pebbles. They disagree about everything."
+    },
+    {
+      "id": "NER-ORD-POST-U02-L02",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“This is a surface map. The sea is a blue patch labeled ‘Sea.’”"
+    },
+    {
+      "id": "NER-ORD-POST-U02-L03",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“Ours, meanwhile, shows the land as a blank patch labeled ‘Dry. Here be cows.’”"
+    },
+    {
+      "id": "NER-ORD-POST-U02-L04",
+      "speaker": "PLAYER",
+      "text": "“So both sides gave up at the shoreline.”"
+    },
+    {
+      "id": "NER-ORD-POST-U02-L05",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Each mapmaker drew home in exquisite detail, and the other side as a rumor.”"
+    },
+    {
+      "id": "NER-ORD-POST-U02-L06",
+      "speaker": "NARRATOR",
+      "text": "Her tail flicks a little water onto the blank land, as if to see what grows."
+    }
   ],
   "options": [
     {
       "choiceId": "NER-ORD-POST-U02-C1-YES",
-      "labelText": "“Swap? You fix my sea, I’ll fix your goats.”",
+      "labelText": "“Teach me one current. Just one. I’ll draw it in.”",
       "branch": [
-        { "id": "NER-ORD-POST-U02-R-YES-01", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“A fair treaty. Though fixing your sea will take considerably longer.”" },
-        { "id": "NER-ORD-POST-U02-R-YES-02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“There are eleven currents where yours says ‘Sea.’ Bring more pebbles.”" }
+        {
+          "id": "NER-ORD-POST-U02-R-YES-01",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“One. Very well. We start with the shy one.”"
+        },
+        {
+          "id": "NER-ORD-POST-U02-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She guides your finger in a thin blue line across the empty sea. It is the first thing on that map that’s right."
+        }
       ]
     },
     {
       "choiceId": "NER-ORD-POST-U02-C1-NO",
-      "labelText": "“Just draw roads across the sea part. Then nobody gets lost.”",
+      "labelText": "“Let’s merge them into one proper map. I’m good at merges.”",
       "branch": [
-        { "id": "NER-ORD-POST-U02-R-NO-01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Roads. Across the sea.”" },
-        { "id": "NER-ORD-POST-U02-R-NO-02", "speaker": "NARRATOR", "text": "On the blank land of her map, she adds a small note: *Wants roads in the sea.*" }
+        {
+          "id": "NER-ORD-POST-U02-R-NO-01",
+          "speaker": "NERELLE",
+          "expression": "SURPRISED",
+          "text": "“Merge. The sea and the land.”"
+        },
+        {
+          "id": "NER-ORD-POST-U02-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "In the blank land of her map, she adds a small note: *Wants to merge the sea.*"
+        }
       ]
     }
   ]

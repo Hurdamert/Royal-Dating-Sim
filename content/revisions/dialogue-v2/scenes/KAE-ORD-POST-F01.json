@@ -2,28 +2,74 @@
   "sceneId": "KAE-ORD-POST-F01",
   "title": "Quiet Company",
   "intro": [
-    { "id": "KAE-ORD-POST-F01-L01", "speaker": "NARRATOR", "text": "Kaedra has been standing beside you without speaking for some time. A passing guard takes the long way around." },
-    { "id": "KAE-ORD-POST-F01-L02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“People assume I am angry when I am silent.”" },
-    { "id": "KAE-ORD-POST-F01-L03", "speaker": "PLAYER", "text": "“Are you?”" },
-    { "id": "KAE-ORD-POST-F01-L04", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“No. I am deciding whether a joke will land.”" },
-    { "id": "KAE-ORD-POST-F01-L05", "speaker": "PLAYER", "text": "“And?”" },
-    { "id": "KAE-ORD-POST-F01-L06", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Undecided. This is a good silence. The joke would have to be better.”" }
+    {
+      "id": "KAE-ORD-POST-F01-L01",
+      "speaker": "NARRATOR",
+      "text": "Kaedra has been standing beside you without speaking for some time. A passing guard takes the long way around."
+    },
+    {
+      "id": "KAE-ORD-POST-F01-L02",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“People assume I am angry when I am silent.”"
+    },
+    {
+      "id": "KAE-ORD-POST-F01-L03",
+      "speaker": "PLAYER",
+      "text": "“Are you?”"
+    },
+    {
+      "id": "KAE-ORD-POST-F01-L04",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“No. I am deciding whether a joke will land.”"
+    },
+    {
+      "id": "KAE-ORD-POST-F01-L05",
+      "speaker": "PLAYER",
+      "text": "“And?”"
+    },
+    {
+      "id": "KAE-ORD-POST-F01-L06",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“Undecided. This is a good silence. The joke would have to be better.”"
+    }
   ],
   "options": [
     {
       "choiceId": "KAE-ORD-POST-F01-C1-YES",
-      "labelText": "“No rush. It’s a good silence.”",
+      "labelText": "“Take your time. I’ll rate it when it lands.”",
       "branch": [
-        { "id": "KAE-ORD-POST-F01-R-YES-01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“It is.”" },
-        { "id": "KAE-ORD-POST-F01-R-YES-02", "speaker": "NARRATOR", "text": "The silence goes on. A while later, out of nowhere, she snorts at her own joke. She does not explain it." }
+        {
+          "id": "KAE-ORD-POST-F01-R-YES-01",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“Out of ten. Agreed.”"
+        },
+        {
+          "id": "KAE-ORD-POST-F01-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "The silence goes on. A while later, out of nowhere, she snorts at her own joke. She does not explain it."
+        }
       ]
     },
     {
       "choiceId": "KAE-ORD-POST-F01-C1-NO",
       "labelText": "“Go on, tell it. I could use a laugh.”",
       "branch": [
-        { "id": "KAE-ORD-POST-F01-R-NO-01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Very well. A herald walks into a library. He is still talking.”" },
-        { "id": "KAE-ORD-POST-F01-R-NO-02", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“It worked better as a silence.”" }
+        {
+          "id": "KAE-ORD-POST-F01-R-NO-01",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“Very well. A herald walks into a library. He is still talking.”"
+        },
+        {
+          "id": "KAE-ORD-POST-F01-R-NO-02",
+          "speaker": "KAEDRA",
+          "expression": "WORRIED",
+          "text": "“It worked better as a silence.”"
+        }
       ]
     }
   ]

@@ -2,36 +2,89 @@
   "sceneId": "KAE-ORD-PRE-U01",
   "title": "The Doorway Debate",
   "intro": [
-    { "id": "KAE-ORD-PRE-U01-L01", "speaker": "NARRATOR", "text": "An attendant is measuring a stone archway with a ribbon. Then he measures Kaedra’s folded wings. Then the archway again." },
-    { "id": "KAE-ORD-PRE-U01-L02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I have been through narrower arches than this. Once while carrying a cake.”" },
-    { "id": "KAE-ORD-PRE-U01-L03", "speaker": "PLAYER", "text": "“Has anyone asked you?”" },
-    { "id": "KAE-ORD-PRE-U01-L04", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“He has sent for a second ribbon.”" },
-    { "id": "KAE-ORD-PRE-U01-L05", "speaker": "NARRATOR", "text": "A second attendant arrives with a longer ribbon. He approaches her wings the way people approach a bear." }
+    {
+      "id": "KAE-ORD-PRE-U01-L01",
+      "speaker": "NARRATOR",
+      "text": "An attendant is measuring a stone archway with a ribbon. Then he measures Kaedra’s folded wings. Then the archway again."
+    },
+    {
+      "id": "KAE-ORD-PRE-U01-L02",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“I have been through narrower arches than this. Once while carrying a cake.”"
+    },
+    {
+      "id": "KAE-ORD-PRE-U01-L03",
+      "speaker": "PLAYER",
+      "text": "“Has anyone asked you?”"
+    },
+    {
+      "id": "KAE-ORD-PRE-U01-L04",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“He has sent for a second ribbon.”"
+    },
+    {
+      "id": "KAE-ORD-PRE-U01-L05",
+      "speaker": "NARRATOR",
+      "text": "A second attendant arrives with a longer ribbon. He approaches her wings the way people approach a bear."
+    }
   ],
   "options": [
     {
       "choiceId": "KAE-ORD-PRE-U01-C1-YES",
       "labelText": "“She’s right here, you know. You could just ask her.”",
       "branch": [
-        { "id": "KAE-ORD-PRE-U01-R-YES-01", "speaker": "NARRATOR", "text": "The attendants turn to Kaedra. One of them asks, very politely, what she needs." },
-        { "id": "KAE-ORD-PRE-U01-R-YES-02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I need the door to remain a door.”" },
-        { "id": "KAE-ORD-PRE-U01-R-YES-03", "speaker": "NARRATOR", "text": "She walks through. Her wings clear the arch by a hand’s width. Both attendants write this down." }
+        {
+          "id": "KAE-ORD-PRE-U01-R-YES-01",
+          "speaker": "NARRATOR",
+          "text": "The attendants turn to Kaedra. One of them asks, very politely, what she needs."
+        },
+        {
+          "id": "KAE-ORD-PRE-U01-R-YES-02",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“I need the door to remain a door.”"
+        },
+        {
+          "id": "KAE-ORD-PRE-U01-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "She walks through. Her wings clear the arch by a hand’s width. Both attendants write this down."
+        }
       ]
     },
     {
       "choiceId": "KAE-ORD-PRE-U01-C1-NO",
       "labelText": "“Want me to get them to clear the area? Give you a proper runway?”",
       "branch": [
-        { "id": "KAE-ORD-PRE-U01-R-NO-01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I do not require a runway. I require a door.”" },
-        { "id": "KAE-ORD-PRE-U01-R-NO-02", "speaker": "NARRATOR", "text": "Too late. An attendant has heard *clear the area*. A man halfway through a sandwich is escorted off his bench." }
+        {
+          "id": "KAE-ORD-PRE-U01-R-NO-01",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“I do not require a runway. I require a door.”"
+        },
+        {
+          "id": "KAE-ORD-PRE-U01-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "Too late. An attendant has heard *clear the area*. A man halfway through a sandwich is escorted off his bench."
+        }
       ]
     },
     {
       "choiceId": "KAE-ORD-PRE-U01-C1-OFF",
       "labelText": "“Can you blame them? Nobody wants a monster stuck in their doorway.”",
       "branch": [
-        { "id": "KAE-ORD-PRE-U01-R-OFF-01", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“Then you will want to stand somewhere else.”" },
-        { "id": "KAE-ORD-PRE-U01-R-OFF-02", "speaker": "NARRATOR", "text": "She walks through the arch without slowing. It fits. She keeps going." }
+        {
+          "id": "KAE-ORD-PRE-U01-R-OFF-01",
+          "speaker": "KAEDRA",
+          "expression": "ANNOYED",
+          "text": "“Then you will want to stand somewhere else.”"
+        },
+        {
+          "id": "KAE-ORD-PRE-U01-R-OFF-02",
+          "speaker": "NARRATOR",
+          "text": "She walks through the arch without slowing. It fits. She keeps going."
+        }
       ]
     }
   ]

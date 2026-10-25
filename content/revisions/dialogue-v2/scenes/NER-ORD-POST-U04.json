@@ -2,28 +2,73 @@
   "sceneId": "NER-ORD-POST-U04",
   "title": "The Accidental Decree",
   "intro": [
-    { "id": "NER-ORD-POST-U04-L01", "speaker": "NARRATOR", "text": "A clerk on the path is writing very fast. Nerelle is watching his pen with alarm." },
-    { "id": "NER-ORD-POST-U04-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I asked whether the lanterns were safe. He has written it down as a decree.”" },
-    { "id": "NER-ORD-POST-U04-L03", "speaker": "CLERK", "text": "“‘The lanterns shall be safe.’ By order of Her Highness.”" },
-    { "id": "NER-ORD-POST-U04-L04", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Oh dear.”" },
-    { "id": "NER-ORD-POST-U04-L05", "speaker": "CLERK", "text": "“‘Oh dear.’ Second decree. Noted.”" },
-    { "id": "NER-ORD-POST-U04-L06", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“I am now afraid to sneeze.”" }
+    {
+      "id": "NER-ORD-POST-U04-L01",
+      "speaker": "NARRATOR",
+      "text": "A clerk on the path is writing very fast. Nerelle, chin resting on the edge of the water, watches his pen with alarm."
+    },
+    {
+      "id": "NER-ORD-POST-U04-L02",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“I asked whether the lanterns were safe. He has written it down as a decree.”"
+    },
+    {
+      "id": "NER-ORD-POST-U04-L03",
+      "speaker": "CLERK",
+      "text": "“‘The lanterns shall be safe.’ By order of Her Highness.”"
+    },
+    {
+      "id": "NER-ORD-POST-U04-L04",
+      "speaker": "NERELLE",
+      "expression": "SURPRISED",
+      "text": "“Oh dear.”"
+    },
+    {
+      "id": "NER-ORD-POST-U04-L05",
+      "speaker": "CLERK",
+      "text": "“‘Oh dear.’ Second decree. Noted.”"
+    },
+    {
+      "id": "NER-ORD-POST-U04-L06",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“I’m now afraid to hiccup. He’d declare a holiday.”"
+    }
   ],
   "options": [
     {
       "choiceId": "NER-ORD-POST-U04-C1-YES",
-      "labelText": "“She was asking a question. Nerelle, what did you actually want to know?”",
+      "labelText": "“She was asking a question. Nerelle, what did you want to know?”",
       "branch": [
-        { "id": "NER-ORD-POST-U04-R-YES-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Thank you. Whether the third lantern is leaking. It is leaning to the left.”" },
-        { "id": "NER-ORD-POST-U04-R-YES-02", "speaker": "NARRATOR", "text": "The clerk crosses out both decrees. After some thought, he underlines the crossing-out." }
+        {
+          "id": "NER-ORD-POST-U04-R-YES-01",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Thank you. Whether the third lantern is leaking. It is leaning to the left.”"
+        },
+        {
+          "id": "NER-ORD-POST-U04-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "The clerk crosses out both decrees. After some thought, he underlines the crossing-out."
+        }
       ]
     },
     {
       "choiceId": "NER-ORD-POST-U04-C1-NO",
-      "labelText": "“Honestly? ‘The lanterns shall be safe’ is a pretty good law.”",
+      "labelText": "“Keep it! ‘The lanterns shall be safe’ is a pretty good law.”",
       "branch": [
-        { "id": "NER-ORD-POST-U04-R-NO-01", "speaker": "CLERK", "text": "“‘A pretty good law.’ Endorsed by Her Highness’s companion. Noted.”" },
-        { "id": "NER-ORD-POST-U04-R-NO-02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Well. Now we are both in the law.”" }
+        {
+          "id": "NER-ORD-POST-U04-R-NO-01",
+          "speaker": "CLERK",
+          "text": "“‘A pretty good law.’ Endorsed by Her Highness’s companion. Noted.”"
+        },
+        {
+          "id": "NER-ORD-POST-U04-R-NO-02",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Well. Now we are both in the law.”"
+        }
       ]
     }
   ]

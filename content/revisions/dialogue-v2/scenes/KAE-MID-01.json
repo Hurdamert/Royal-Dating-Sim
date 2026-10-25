@@ -2,69 +2,264 @@
   "sceneId": "KAE-MID-01",
   "title": "The Royal Trial (first full midpoint attempt)",
   "intro": [
-    { "id": "KAE-MID-001", "speaker": "NARRATOR", "text": "The Palace Court is holding the Royal Trial, a ceremony to honor the kingdom’s guardians." },
-    { "id": "KAE-MID-002", "speaker": "NARRATOR", "text": "Unofficially, it is testing how much bronze will fit on one podium." },
-    { "id": "KAE-MID-003", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Sixth speech. Thirty-one pages. All of them praising my ability to stand still.”" },
-    { "id": "KAE-MID-004", "speaker": "PLAYER", "text": "“Do they know you have other talents?”" },
-    { "id": "KAE-MID-005", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“One day I may demonstrate sitting.”" },
-    { "id": "KAE-MID-006", "speaker": "NARRATOR", "text": "A herald invites her to light a ceremonial warding sigil above the platform. It is meant to glow for a moment, symbolically." },
-    { "id": "KAE-MID-007", "speaker": "HERALD", "text": "“A gentle flame, Your Highness! Just enough for the court to admire its protection!”" },
-    { "id": "KAE-MID-008", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Understood. Keep the aisle clear.”" },
-    { "id": "KAE-MID-009", "speaker": "NARRATOR", "text": "She raises one hand. A thin band of amber light traces the sigil." },
-    { "id": "KAE-MID-010", "speaker": "NARRATOR", "text": "Then a spark snaps sideways and pops against the empty edge of the platform." },
-    { "id": "KAE-MID-011", "speaker": "NARRATOR", "text": "Nobody is struck. An attendant flinches. Half the front row tries to leave through the same door and trips over the other half." },
-    { "id": "KAE-MID-012", "speaker": "NARRATOR", "text": "The spark fizzles out well short of the banners." },
-    { "id": "KAE-MID-013", "speaker": "HERALD", "text": "“Remain calm! Move away from the platform in an orderly—my shoe! Has anyone seen my shoe?”" },
-    { "id": "KAE-MID-014", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“That was not the pattern I intended.”" },
-    { "id": "KAE-MID-015", "speaker": "NARRATOR", "text": "She closes her hand, and the sigil goes dark at once. Her wings stay folded. Her eyes are already on the crowded aisle." },
-    { "id": "KAE-MID-016", "speaker": "PLAYER", "text": "“The spark’s out. People are bunching up at the doorway.”" },
-    { "id": "KAE-MID-017", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“Yes. They saw it. They saw me lose control.”" }
+    {
+      "id": "KAE-MID-001",
+      "speaker": "NARRATOR",
+      "text": "The Palace Court is holding the Royal Trial, a ceremony to honor the kingdom’s guardians."
+    },
+    {
+      "id": "KAE-MID-002",
+      "speaker": "NARRATOR",
+      "text": "Unofficially, it is testing how much bronze will fit on one podium."
+    },
+    {
+      "id": "KAE-MID-003",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“Sixth speech. Thirty-one pages. All of them praising my ability to stand still.”"
+    },
+    {
+      "id": "KAE-MID-004",
+      "speaker": "PLAYER",
+      "text": "“Do they know you have other talents?”"
+    },
+    {
+      "id": "KAE-MID-005",
+      "speaker": "KAEDRA",
+      "expression": "PLAYFUL",
+      "text": "“One day I may demonstrate sitting.”"
+    },
+    {
+      "id": "KAE-MID-006",
+      "speaker": "NARRATOR",
+      "text": "A herald invites her to light a ceremonial warding sigil above the platform. It is meant to glow for a moment, symbolically."
+    },
+    {
+      "id": "KAE-MID-007",
+      "speaker": "HERALD",
+      "text": "“A gentle flame, Your Highness! Just enough for the court to admire its protection!”"
+    },
+    {
+      "id": "KAE-MID-008",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“Understood. Keep the aisle clear.”"
+    },
+    {
+      "id": "KAE-MID-009",
+      "speaker": "NARRATOR",
+      "text": "She raises one hand. A thin band of amber light traces the sigil."
+    },
+    {
+      "id": "KAE-MID-010",
+      "speaker": "NARRATOR",
+      "text": "Then a spark snaps sideways and pops against the empty edge of the platform."
+    },
+    {
+      "id": "KAE-MID-011",
+      "speaker": "NARRATOR",
+      "text": "Nobody is struck. An attendant flinches. Half the front row tries to leave through the same door and trips over the other half."
+    },
+    {
+      "id": "KAE-MID-012",
+      "speaker": "NARRATOR",
+      "text": "The spark fizzles out well short of the banners."
+    },
+    {
+      "id": "KAE-MID-013",
+      "speaker": "HERALD",
+      "text": "“Remain calm! Move away from the platform in an orderly—my shoe! Has anyone seen my shoe?”"
+    },
+    {
+      "id": "KAE-MID-014",
+      "speaker": "KAEDRA",
+      "expression": "SURPRISED",
+      "text": "“That was not the pattern I intended.”"
+    },
+    {
+      "id": "KAE-MID-015",
+      "speaker": "NARRATOR",
+      "text": "She closes her hand, and the sigil goes dark at once. Her wings stay folded. Her eyes are already on the crowded aisle."
+    },
+    {
+      "id": "KAE-MID-016",
+      "speaker": "PLAYER",
+      "text": "“The spark’s out. People are bunching up at the doorway.”"
+    },
+    {
+      "id": "KAE-MID-017",
+      "speaker": "KAEDRA",
+      "expression": "WORRIED",
+      "text": "“Yes. They saw it. They saw me lose control.”"
+    }
   ],
   "options": [
     {
       "choiceId": "KAE-MID-C1-SAFETY",
       "labelText": "“Your magic’s stopped. Let’s give people room and have the attendants clear the aisle. Then talk somewhere quiet?”",
       "branch": [
-        { "id": "KAE-MID-S01", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“Yes. Tell the herald the side aisle is clear. I will check the platform.”" },
-        { "id": "KAE-MID-S02", "speaker": "NARRATOR", "text": "You steer people toward the side aisle while the attendants open the way. Kaedra checks the platform edge, then every face in the front row." },
-        { "id": "KAE-MID-S03", "speaker": "NARRATOR", "text": "Nobody is hurt. The room settles. Someone hands the herald back his shoe." },
-        { "id": "KAE-MID-S04", "speaker": "HERALD", "text": "“The ceremony has concluded! The speeches will resume after an interval of several years.”" },
-        { "id": "KAE-MID-S05", "speaker": "NARRATOR", "text": "Later, under an arch within the Palace Court, Kaedra stands with her arms folded hard, holding herself steady." },
-        { "id": "KAE-MID-S06", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“When it went sideways, I knew how to stop it.”" },
-        { "id": "KAE-MID-S07", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“I also knew what they would think. That I had finally become the danger they were waiting for.”" },
-        { "id": "KAE-MID-S08", "speaker": "PLAYER", "text": "“It caught you by surprise. You stopped it anyway. Then you checked every face in the front row.”" },
-        { "id": "KAE-MID-S09", "speaker": "PLAYER", "text": "“And you owned it before anyone asked. So you’re shaken. That’s one bad minute out of a lot of good ones.”" },
-        { "id": "KAE-MID-S10", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“They ask me to be a shield. Nobody has written the regulations for a shield that gets frightened.”" },
-        { "id": "KAE-MID-S11", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“I thought you might come here to admire the spectacle.”" },
-        { "id": "KAE-MID-S12", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“Or to tell me I need protecting from myself.”" },
-        { "id": "KAE-MID-S13", "speaker": "PLAYER", "text": "“I came because I care how you feel. What happens next is up to you.”" },
-        { "id": "KAE-MID-S14", "speaker": "NARRATOR", "text": "The line of her jaw loosens. She lets out a long, slow breath." },
-        { "id": "KAE-MID-S15", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“That is an alarmingly sensible answer. I may have to invite you to future ceremonies. As a precaution.”" },
-        { "id": "KAE-MID-S16", "speaker": "PLAYER", "text": "“Do they come with fewer speeches?”" },
-        { "id": "KAE-MID-S17", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I do not make promises I cannot keep.”" },
-        { "id": "KAE-MID-S18", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“But stay a little longer?”" }
+        {
+          "id": "KAE-MID-S01",
+          "speaker": "KAEDRA",
+          "expression": "SURPRISED",
+          "text": "“Yes. Tell the herald the side aisle is clear. I will check the platform.”"
+        },
+        {
+          "id": "KAE-MID-S02",
+          "speaker": "NARRATOR",
+          "text": "You steer people toward the side aisle while the attendants open the way. Kaedra checks the platform edge, then every face in the front row."
+        },
+        {
+          "id": "KAE-MID-S03",
+          "speaker": "NARRATOR",
+          "text": "Nobody is hurt. The room settles. Someone hands the herald back his shoe."
+        },
+        {
+          "id": "KAE-MID-S04",
+          "speaker": "HERALD",
+          "text": "“The ceremony has concluded! The speeches will resume after an interval of several years.”"
+        },
+        {
+          "id": "KAE-MID-S05",
+          "speaker": "NARRATOR",
+          "text": "Later, under an arch within the Palace Court, Kaedra stands with her arms folded hard, holding herself steady."
+        },
+        {
+          "id": "KAE-MID-S06",
+          "speaker": "KAEDRA",
+          "expression": "WORRIED",
+          "text": "“When it went sideways, I knew how to stop it.”"
+        },
+        {
+          "id": "KAE-MID-S07",
+          "speaker": "KAEDRA",
+          "expression": "WORRIED",
+          "text": "“I also knew what they would think. That I had finally become the danger they were waiting for.”"
+        },
+        {
+          "id": "KAE-MID-S08",
+          "speaker": "PLAYER",
+          "text": "“You stopped it in a second, then counted the front row. I watched.”"
+        },
+        {
+          "id": "KAE-MID-S10",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“They ask me to be a shield. Nobody has written the regulations for a shield that gets frightened.”"
+        },
+        {
+          "id": "KAE-MID-S11",
+          "speaker": "KAEDRA",
+          "expression": "WORRIED",
+          "text": "“I thought you might come here to admire the spectacle.”"
+        },
+        {
+          "id": "KAE-MID-S12",
+          "speaker": "KAEDRA",
+          "expression": "WORRIED",
+          "text": "“Or to tell me I need protecting from myself.”"
+        },
+        {
+          "id": "KAE-MID-S13",
+          "speaker": "PLAYER",
+          "text": "“I came for you, not the spectacle. What happens next is yours.”"
+        },
+        {
+          "id": "KAE-MID-S14",
+          "speaker": "NARRATOR",
+          "text": "The line of her jaw loosens. She lets out a long, slow breath."
+        },
+        {
+          "id": "KAE-MID-S15",
+          "speaker": "KAEDRA",
+          "expression": "PLAYFUL",
+          "text": "“That is an unreasonably sensible answer. I may have to invite you to future ceremonies. As a precaution.”"
+        },
+        {
+          "id": "KAE-MID-S16",
+          "speaker": "PLAYER",
+          "text": "“Do they come with fewer speeches?”"
+        },
+        {
+          "id": "KAE-MID-S17",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“I do not make promises I cannot keep.”"
+        },
+        {
+          "id": "KAE-MID-S18",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“But stay a little longer?”"
+        }
       ]
     },
     {
       "choiceId": "KAE-MID-C1-ADMIRE",
       "labelText": "“That was incredible! Forget the crowd. Do a bigger one and they’ll never forget it.”",
       "branch": [
-        { "id": "KAE-MID-W01", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“No.”" },
-        { "id": "KAE-MID-W02", "speaker": "NARRATOR", "text": "She turns away to direct the attendants and checks the platform herself. When she comes back, her voice is cool." },
-        { "id": "KAE-MID-W03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“A frightened crowd is not an audience I need to impress.”" },
-        { "id": "KAE-MID-W04", "speaker": "PLAYER", "text": "“I was trying to be supportive.”" },
-        { "id": "KAE-MID-W05", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“I know. You meant the bigger one as a compliment.”" }
+        {
+          "id": "KAE-MID-W01",
+          "speaker": "KAEDRA",
+          "expression": "ANNOYED",
+          "text": "“No.”"
+        },
+        {
+          "id": "KAE-MID-W02",
+          "speaker": "NARRATOR",
+          "text": "She turns away to direct the attendants and checks the platform herself. When she comes back, her voice is cool."
+        },
+        {
+          "id": "KAE-MID-W03",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“A frightened crowd is not an audience I need to impress.”"
+        },
+        {
+          "id": "KAE-MID-W04",
+          "speaker": "PLAYER",
+          "text": "“I was trying to be supportive.”"
+        },
+        {
+          "id": "KAE-MID-W05",
+          "speaker": "KAEDRA",
+          "expression": "WORRIED",
+          "text": "“I know. You meant the bigger one as a compliment.”"
+        }
       ]
     },
     {
       "choiceId": "KAE-MID-C1-MANAGE",
       "labelText": "“Stand down. I’ll decide when it’s safe for you to use magic again.”",
       "branch": [
-        { "id": "KAE-MID-X01", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“Declaring yourself in charge of me does not make you responsible for me.”" },
-        { "id": "KAE-MID-X02", "speaker": "NARRATOR", "text": "She turns to the attendants. The aisle is clear in under a minute, and the sigil stays dark." },
-        { "id": "KAE-MID-X03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I can account for what happened. You could have helped the people at the door.”" },
-        { "id": "KAE-MID-X04", "speaker": "PLAYER", "text": "“You’re right. I spoke over you.”" },
-        { "id": "KAE-MID-X05", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“You did. I would like you to think about why.”" }
+        {
+          "id": "KAE-MID-X01",
+          "speaker": "KAEDRA",
+          "expression": "ANNOYED",
+          "text": "“You are not in charge of me. Help them.”"
+        },
+        {
+          "id": "KAE-MID-X02",
+          "speaker": "NARRATOR",
+          "text": "She turns to the attendants. The aisle is clear in under a minute, and the sigil stays dark."
+        },
+        {
+          "id": "KAE-MID-X03",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“I can account for what happened. You could have helped the people at the door.”"
+        },
+        {
+          "id": "KAE-MID-X04",
+          "speaker": "PLAYER",
+          "text": "“You’re right. I spoke over you.”"
+        },
+        {
+          "id": "KAE-MID-X05",
+          "speaker": "KAEDRA",
+          "expression": "WORRIED",
+          "text": "“You did. I would like you to think about why.”"
+        }
       ]
     }
   ]

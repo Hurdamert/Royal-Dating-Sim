@@ -2,62 +2,237 @@
   "sceneId": "KAE-FIN-01",
   "title": "Private Vow (first full marriage proposal)",
   "intro": [
-    { "id": "KAE-FIN-001", "speaker": "NARRATOR", "text": "The conversation should be ending. Kaedra stays." },
-    { "id": "KAE-FIN-002", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“You are remarkably difficult to intimidate, for someone who once called this kingdom’s job market a hostile deployment environment.”" },
-    { "id": "KAE-FIN-003", "speaker": "PLAYER", "text": "“Still accurate.”" },
-    { "id": "KAE-FIN-004", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“And yet you kept returning.”" },
-    { "id": "KAE-FIN-005", "speaker": "NARRATOR", "text": "Her wings stay folded. Even her tail has gone still." },
-    { "id": "KAE-FIN-006", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“I want to say something before you assemble a ceremonial argument for why I am impressive.”" },
-    { "id": "KAE-FIN-007", "speaker": "PLAYER", "text": "“Too late. I have three pages.”" },
-    { "id": "KAE-FIN-008", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Then there is still time to prevent a disaster.”" },
-    { "id": "KAE-FIN-009", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I like protecting people. I am not hoping someone will take it off my hands.”" },
-    { "id": "KAE-FIN-017", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“But some days I come home tired. Some days I am unsure.”" },
-    { "id": "KAE-FIN-018", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“I would like to say so without the room going silent.”" },
-    { "id": "KAE-FIN-010", "speaker": "PLAYER", "text": "“Say it to me. I won’t go quiet.”" },
-    { "id": "KAE-FIN-011", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“I have been called a weapon. And a guardian. And, in one very long speech, a legend.”" },
-    { "id": "KAE-FIN-019", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Given the choice, I would be someone’s equal. Someone you can argue with, and laugh with, and still trust to decide.”" },
-    { "id": "KAE-FIN-012", "speaker": "NARRATOR", "text": "She reaches toward you and stops a hand’s width short. The answer matters too much to assume it." },
-    { "id": "KAE-FIN-013", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I care for you. More than I’d planned to.”" },
-    { "id": "KAE-FIN-020", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“You do not need to be fearless around me. I need you to see me clearly.”" },
-    { "id": "KAE-FIN-014", "speaker": "PLAYER", "text": "“Kaedra…”" },
-    { "id": "KAE-FIN-015", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“If this is a proposal, please do not begin with a list of my strengths. I have heard it. Usually with trumpets.”" },
-    { "id": "KAE-FIN-016", "speaker": "NARRATOR", "text": "You leave the three pages in your pocket. One honest answer will have to do." }
+    {
+      "id": "KAE-FIN-001",
+      "speaker": "NARRATOR",
+      "text": "The conversation should be ending. Kaedra stays."
+    },
+    {
+      "id": "KAE-FIN-002",
+      "speaker": "KAEDRA",
+      "expression": "PLAYFUL",
+      "text": "“You are remarkably difficult to intimidate, for someone who once called this kingdom’s job market a hostile deployment environment.”"
+    },
+    {
+      "id": "KAE-FIN-003",
+      "speaker": "PLAYER",
+      "text": "“Still accurate.”"
+    },
+    {
+      "id": "KAE-FIN-004",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“And yet you kept returning.”"
+    },
+    {
+      "id": "KAE-FIN-005",
+      "speaker": "NARRATOR",
+      "text": "Her wings stay folded. Even her tail has gone still."
+    },
+    {
+      "id": "KAE-FIN-006",
+      "speaker": "KAEDRA",
+      "expression": "WORRIED",
+      "text": "“I want to say something before you assemble a ceremonial argument for why I am impressive.”"
+    },
+    {
+      "id": "KAE-FIN-007",
+      "speaker": "PLAYER",
+      "text": "“Too late. I have three pages.”"
+    },
+    {
+      "id": "KAE-FIN-008",
+      "speaker": "KAEDRA",
+      "expression": "PLAYFUL",
+      "text": "“Then there is still time to prevent a disaster.”"
+    },
+    {
+      "id": "KAE-FIN-009",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“I like protecting people. I am not hoping someone will take it off my hands.”"
+    },
+    {
+      "id": "KAE-FIN-017",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“But some days I come home tired. Some days I am unsure.”"
+    },
+    {
+      "id": "KAE-FIN-018",
+      "speaker": "KAEDRA",
+      "expression": "WORRIED",
+      "text": "“I would like to say so without the room going silent.”"
+    },
+    {
+      "id": "KAE-FIN-010",
+      "speaker": "PLAYER",
+      "text": "“Say it to me. I won’t go quiet.”"
+    },
+    {
+      "id": "KAE-FIN-011",
+      "speaker": "KAEDRA",
+      "expression": "WORRIED",
+      "text": "“I have been called a weapon. And a guardian. And, in one very long speech, a legend.”"
+    },
+    {
+      "id": "KAE-FIN-019",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“Given the choice, I would be someone’s equal. Someone you can argue with, and laugh with, and still trust to decide.”"
+    },
+    {
+      "id": "KAE-FIN-012",
+      "speaker": "NARRATOR",
+      "text": "She reaches toward you and stops a hand’s width short. The answer matters too much to assume it."
+    },
+    {
+      "id": "KAE-FIN-013",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“I care for you. More than I’d planned to.”"
+    },
+    {
+      "id": "KAE-FIN-020",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“You do not need to be fearless around me. I need you to see me clearly.”"
+    },
+    {
+      "id": "KAE-FIN-014",
+      "speaker": "PLAYER",
+      "text": "“Kaedra…”"
+    },
+    {
+      "id": "KAE-FIN-015",
+      "speaker": "KAEDRA",
+      "expression": "PLAYFUL",
+      "text": "“If this is a proposal, please do not begin with a list of my strengths. I have heard it. Usually with trumpets.”"
+    },
+    {
+      "id": "KAE-FIN-016",
+      "speaker": "NARRATOR",
+      "text": "You leave the three pages in your pocket. One honest answer will have to do."
+    }
   ],
   "options": [
     {
       "choiceId": "KAE-FIN-C1-EQUAL",
-      "labelText": "“I love your strength, and the gentleness you choose when nobody’s watching. Your decisions stay yours. I want an ordinary life with you, and the extraordinary one. Marry me, as my equal?”",
+      "labelText": "“No list. I love you strong, tired, and gentle when no one’s looking. Your choices stay yours. Marry me, and share an ordinary life as equals?”",
       "branch": [
-        { "id": "KAE-FIN-S01", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“An ordinary life?”" },
-        { "id": "KAE-FIN-S02", "speaker": "PLAYER", "text": "“Ordinary by this kingdom’s standards. There’ll still be royal speeches.”" },
-        { "id": "KAE-FIN-S03", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Acceptable. If I may object to the page count.”" },
-        { "id": "KAE-FIN-S04", "speaker": "NARRATOR", "text": "She takes your hand. Her grip is firm, and loose enough to let go." },
-        { "id": "KAE-FIN-S05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Yes, {PLAYER}.”" },
-        { "id": "KAE-FIN-S08", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“You do not need a guardian. I do not need a commander. I choose you anyway.”" },
-        { "id": "KAE-FIN-S06", "speaker": "PLAYER", "text": "“I can live with that.”" },
-        { "id": "KAE-FIN-S07", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Good. Your proposal passed inspection.”" },
-        { "id": "KAE-FIN-S09", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Barely.”" }
+        {
+          "id": "KAE-FIN-S01",
+          "speaker": "KAEDRA",
+          "expression": "SURPRISED",
+          "text": "“An ordinary life?”"
+        },
+        {
+          "id": "KAE-FIN-S02",
+          "speaker": "PLAYER",
+          "text": "“Ordinary by this kingdom’s standards. There’ll still be royal speeches.”"
+        },
+        {
+          "id": "KAE-FIN-S03",
+          "speaker": "KAEDRA",
+          "expression": "PLAYFUL",
+          "text": "“Acceptable. If I may object to the page count.”"
+        },
+        {
+          "id": "KAE-FIN-S04",
+          "speaker": "NARRATOR",
+          "text": "She takes your hand. Her grip is firm, and loose enough to let go."
+        },
+        {
+          "id": "KAE-FIN-S05",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“Yes, {PLAYER}.”"
+        },
+        {
+          "id": "KAE-FIN-S08",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“You do not need a guardian. I do not need a commander. I choose you anyway.”"
+        },
+        {
+          "id": "KAE-FIN-S06",
+          "speaker": "PLAYER",
+          "text": "“I can live with that.”"
+        },
+        {
+          "id": "KAE-FIN-S07",
+          "speaker": "KAEDRA",
+          "expression": "PLAYFUL",
+          "text": "“Good. Your proposal passed inspection.”"
+        },
+        {
+          "id": "KAE-FIN-S09",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“Barely.”"
+        }
       ]
     },
     {
       "choiceId": "KAE-FIN-C1-IDOL",
       "labelText": "“You’re the greatest guardian who ever lived. I’d worship you every day. Marry me, and I’ll never question a thing you decide.”",
       "branch": [
-        { "id": "KAE-FIN-W01", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“Never?”" },
-        { "id": "KAE-FIN-W02", "speaker": "PLAYER", "text": "“Never.”" },
-        { "id": "KAE-FIN-W03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Then who will tell me when I am wrong?”" },
-        { "id": "KAE-FIN-W05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I have been admired since I was nine. Nobody doing it ever knew me.”" },
-        { "id": "KAE-FIN-W04", "speaker": "NARRATOR", "text": "She lowers the hand she had reached out with and says goodbye. It sounds provisional." }
+        {
+          "id": "KAE-FIN-W01",
+          "speaker": "KAEDRA",
+          "expression": "WORRIED",
+          "text": "“Never?”"
+        },
+        {
+          "id": "KAE-FIN-W02",
+          "speaker": "PLAYER",
+          "text": "“Never.”"
+        },
+        {
+          "id": "KAE-FIN-W03",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“Then who will tell me when I am wrong?”"
+        },
+        {
+          "id": "KAE-FIN-W05",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“I have been admired since I was nine. Nobody doing it ever knew me.”"
+        },
+        {
+          "id": "KAE-FIN-W04",
+          "speaker": "NARRATOR",
+          "text": "She lowers the hand she had reached out with and says goodbye. It sounds provisional."
+        }
       ]
     },
     {
       "choiceId": "KAE-FIN-C1-CARETAKER",
       "labelText": "“I’ll take over your duties and make sure you never make another mistake. Marry me, and you won’t have to be strong anymore.”",
       "branch": [
-        { "id": "KAE-FIN-X01", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“You have misunderstood me. I like being strong.”" },
-        { "id": "KAE-FIN-X02", "speaker": "PLAYER", "text": "“I wanted to make things easier.”" },
-        { "id": "KAE-FIN-X03", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“I asked for somewhere to rest. You are offering to take my life away and call it kindness.”" },
-        { "id": "KAE-FIN-X04", "speaker": "NARRATOR", "text": "Kaedra steps back and studies the offer like a badly fastened clasp. Then she declines it." }
+        {
+          "id": "KAE-FIN-X01",
+          "speaker": "KAEDRA",
+          "expression": "ANNOYED",
+          "text": "“You have misunderstood me. I like being strong.”"
+        },
+        {
+          "id": "KAE-FIN-X02",
+          "speaker": "PLAYER",
+          "text": "“I wanted to make things easier.”"
+        },
+        {
+          "id": "KAE-FIN-X03",
+          "speaker": "KAEDRA",
+          "expression": "WORRIED",
+          "text": "“I asked for somewhere to rest. You are offering to take over my life.”"
+        },
+        {
+          "id": "KAE-FIN-X04",
+          "speaker": "NARRATOR",
+          "text": "Kaedra steps back and studies the offer like a badly fastened clasp. Then she declines it."
+        }
       ]
     }
   ]

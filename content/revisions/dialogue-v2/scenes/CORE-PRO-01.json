@@ -1,14 +1,50 @@
 {
   "sceneId": "CORE-PRO-01",
   "intro": [
-    { "id": "CORE-PRO-001", "speaker": "NARRATOR", "text": "Last night, you were a software engineer reading rejection email number forty-one." },
-    { "id": "CORE-PRO-002", "speaker": "NARRATOR", "text": "It began with *Unfortunately*. They always begin with *Unfortunately*." },
-    { "id": "CORE-PRO-003", "speaker": "PLAYER", "text": "“I’m starting to think the job market was balanced by a game designer who hates me personally.”" },
-    { "id": "CORE-PRO-004", "speaker": "NARRATOR", "text": "Then the world folded like a badly tested menu, and you fell out of it into a kingdom with more castles than entry-level openings." },
-    { "id": "CORE-PRO-005", "speaker": "NARRATOR", "text": "The first thing you see is a royal notice nailed to a wall: *THE COURTSHIP SEASON IS OPEN. TWENTY-EIGHT DAYS. ONE PRINCESS. GENUINE AFFECTION ONLY. NO EXTENSIONS.*" },
-    { "id": "CORE-PRO-006", "speaker": "PLAYER", "text": "“I was hoping for a recruiter, but sure.”" },
-    { "id": "CORE-PRO-007", "speaker": "NARRATOR", "text": "Underneath, in smaller letters: *Improve yourself. Learn her weekly schedule. Remember that the princess is allowed to say no.*" },
-    { "id": "CORE-PRO-008", "speaker": "PLAYER", "text": "“Finally. An application process with clear requirements.”" },
-    { "id": "CORE-PRO-009", "speaker": "NARRATOR", "text": "Day one begins. Somewhere in this kingdom, a princess is about to have a very unusual month." }
+    {
+      "id": "CORE-PRO-001",
+      "speaker": "NARRATOR",
+      "text": "Last night, you were a software engineer reading rejection email number forty-one."
+    },
+    {
+      "id": "CORE-PRO-002",
+      "speaker": "NARRATOR",
+      "text": "It began with *Unfortunately*. They always begin with *Unfortunately*."
+    },
+    {
+      "id": "CORE-PRO-003",
+      "speaker": "PLAYER",
+      "text": "“I’m starting to think the job market was balanced by a game designer who hates me personally.”"
+    },
+    {
+      "id": "CORE-PRO-004",
+      "speaker": "NARRATOR",
+      "text": "Then the world folded like a badly tested dropdown, and you fell out of it into a kingdom with more castles than entry-level openings."
+    },
+    {
+      "id": "CORE-PRO-005",
+      "speaker": "NARRATOR",
+      "text": "The first thing you see is a royal notice nailed to a wall: *THE COURTSHIP SEASON IS OPEN. TWENTY-EIGHT DAYS. ONE PRINCESS. GENUINE AFFECTION ONLY. NO EXTENSIONS.*"
+    },
+    {
+      "id": "CORE-PRO-006",
+      "speaker": "PLAYER",
+      "text": "“I was hoping for a recruiter, but sure.”"
+    },
+    {
+      "id": "CORE-PRO-007",
+      "speaker": "NARRATOR",
+      "text": "Underneath, in smaller letters: *Improve yourself. Learn her weekly schedule. Remember that the princess is allowed to say no.*"
+    },
+    {
+      "id": "CORE-PRO-008",
+      "speaker": "PLAYER",
+      "text": "“Finally. An application process with clear requirements.”"
+    },
+    {
+      "id": "CORE-PRO-009",
+      "speaker": "NARRATOR",
+      "text": "Day one begins. Somewhere in this kingdom, a princess is about to have a very unusual month."
+    }
   ]
 }

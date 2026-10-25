@@ -56,7 +56,7 @@
     },
     {
       "choiceId": "TAV-MR-C1-ADVISE",
-      "labelText": "“Honestly? Stop caring what people think. Problem solved.”",
+      "labelText": "“Easy fix: stop caring what people think. Problem solved.”",
       "branch": [
         {
           "id": "TAV-MR-W01",

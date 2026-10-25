@@ -244,8 +244,8 @@ The patterns below are the ones `scripts/lib/dialogue-rules.mjs` flags. In the r
 
 | Tell | Before (frozen) | After (direction) |
 |---|---|---|
-| **"Not X, it's Y" pivot.** The hardest machine habit to shake. It corrects a claim nobody made [A-Atl][A-tropes]. | "She smiles, not as a performance but as herself." | Show the smile doing something: she forgets to check who's watching. |
-| **Therapy-speak** [A-allegedly][V-NFS] | "You can take a rest because you want to. No permission needed." | "Sit. I'll tell the posture inspector you're testing the bench." |
+| **"Not X, it's Y" pivot.** The hardest machine habit to shake. It corrects a claim nobody made [A-Atl][A-tropes]. | "She smiles, not as a performance but as herself." | Show the smile doing something, e.g. it reaches someone it wasn't aimed at. |
+| **Therapy-speak** [A-allegedly][V-NFS] | "You can take a rest because you want to. No permission needed." | "Sit. I'll guard your boots." |
 | **Theme named outright** | "I would rather be honestly dull than endlessly on command." | A plain line with no flourish, then she notices she did it. |
 | **Moral or aphorism ending** [F-StoryScope] | "Fear is not a substitute for respect." | A dry exit line in her voice, or the narrator showing the cost. |
 | **Warm summarising button** [A-emkam][F9] | "The conversation is not impressive. It is better than that." | Cut it. End on the quarterly-report joke. |

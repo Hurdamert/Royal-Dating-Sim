@@ -17,14 +17,16 @@
     "id": "dialogue-v2",
     "scenesRevised": 77,
     "linesBase": 811,
-    "linesRevised": 1125,
-    "lineIdsAdded": 317,
-    "lineIdsRemoved": 3,
+    "linesRevised": 1129,
+    "lineIdsAdded": 323,
+    "lineIdsRemoved": 5,
     "supportLinesRevised": 28,
-    "filesSha256": "062b1c2438f054e6fa24d50dc872976f3847037083917109a302c3ebda2c2534",
+    "filesSha256": "d1330d3a27f10d174762284a49e53f4aed9f48dca244ed7734e08f529d54576e",
     "removedLineIds": [
       "KAE-FR-005",
+      "KAE-MID-S09",
       "KAE-MR-005",
+      "KAE-POST-S05",
       "NER-PRE-W02"
     ]
   },
@@ -32,5 +34,5 @@
   "squareQuips": 12,
   "activities": 8,
   "strings": 26,
-  "contentSha256": "cc6fb86ce7f8e261383ad314bb4e8e0286551829bab5c913281afc05faffc02f"
+  "contentSha256": "dde36a8c94275d1a3f968875e9fed69f612bb893fa98f1ce17f784fbc0284cae"
 }

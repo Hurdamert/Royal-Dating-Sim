@@ -34,24 +34,30 @@
   "options": [
     {
       "choiceId": "TAV-ORD-PRE-F03-C1-YES",
-      "labelText": "“Or just print ‘Tavri’ and let them find out the rest.”",
+      "labelText": "“Print draft one. The typo’s the most honest word on it.”",
       "branch": [
         {
           "id": "TAV-ORD-PRE-F03-R-YES-01",
           "speaker": "TAVRI",
-          "expression": "PLAYFUL",
-          "text": "“No adjectives. No warranty. I love it.”"
+          "expression": "SURPRISED",
+          "text": "“Effortlessly delighful.”"
         },
         {
           "id": "TAV-ORD-PRE-F03-R-YES-02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“A flaw, in print, on purpose. The clerk will faint.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-F03-R-YES-03",
           "speaker": "NARRATOR",
-          "text": "She crosses out *effortlessly delightful.* It takes her one draft."
+          "text": "She circles the missing *t* and initials it."
         }
       ]
     },
     {
       "choiceId": "TAV-ORD-PRE-F03-C1-NO",
-      "labelText": "“Honestly, keep it. People like knowing what they’re getting.”",
+      "labelText": "“Keep it. People like knowing what they’re getting.”",
       "branch": [
         {
           "id": "TAV-ORD-PRE-F03-R-NO-01",

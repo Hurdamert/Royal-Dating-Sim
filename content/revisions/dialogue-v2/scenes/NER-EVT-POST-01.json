@@ -2,62 +2,235 @@
   "sceneId": "NER-EVT-POST-01",
   "title": "Moonwater Festival",
   "intro": [
-    { "id": "NER-POST-001", "speaker": "NARRATOR", "text": "Ribbons hang from the railings. On the water, small lanterns bob in rows, each painted with a name or a wish." },
-    { "id": "NER-POST-016", "speaker": "NARRATOR", "text": "Lit or unlit, they float. That appears to be the main requirement." },
-    { "id": "NER-POST-002", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Welcome to the Moonwater Festival. Officially, the lanterns honor those who guided us home.”" },
-    { "id": "NER-POST-017", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Unofficially, everyone enjoys making things float, and then we call it solemn.”" },
-    { "id": "NER-POST-003", "speaker": "PLAYER", "text": "“Both can be true.”" },
-    { "id": "NER-POST-004", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Exactly. You are becoming dangerously good at this.”" },
-    { "id": "NER-POST-005", "speaker": "NARRATOR", "text": "A cluster of young sea-dwellers steers a string of lanterns toward her. Nerelle greets every one of them by name." },
-    { "id": "NER-POST-018", "speaker": "NARRATOR", "text": "Then she listens to their concerns one at a time, including a long one about a crab." },
-    { "id": "NER-POST-006", "speaker": "PLAYER", "text": "“They’re glad you’re here.”" },
-    { "id": "NER-POST-007", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“This is my favorite part. They bring me real problems, and sometimes I can help.”" },
-    { "id": "NER-POST-019", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“The crab is a real problem. I have met him.”" },
-    { "id": "NER-POST-008", "speaker": "PLAYER", "text": "“And the parts you don’t love?”" },
-    { "id": "NER-POST-009", "speaker": "NERELLE", "expression": "WORRIED", "text": "“Those exist too. I used to accept every demand, until there was no room left to want anything.”" },
-    { "id": "NER-POST-020", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Now I am sorting them. Duties that are mine. Duties I can share. Habits dressed up as laws.”" },
-    { "id": "NER-POST-021", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“The third pile is the largest. The council is very attached to it.”" },
-    { "id": "NER-POST-010", "speaker": "NARRATOR", "text": "A lantern drifts into an eddy and turns twice. Then it points itself upstream, apparently bound for a different festival." },
-    { "id": "NER-POST-011", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“That one has more independence than half the council.”" },
-    { "id": "NER-POST-012", "speaker": "PLAYER", "text": "“Does it get a say in where it goes?”" },
-    { "id": "NER-POST-013", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Partly. Currents are real. How you travel with them is another matter.”" },
-    { "id": "NER-POST-014", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I want to keep serving my people. I also want to keep learning about yours.”" },
-    { "id": "NER-POST-022", "speaker": "NERELLE", "expression": "WORRIED", "text": "“People hear one wish and assume it cancels the other.”" },
-    { "id": "NER-POST-015", "speaker": "NARRATOR", "text": "She turns from the lanterns to you, waiting to find out what you heard." }
+    {
+      "id": "NER-POST-001",
+      "speaker": "NARRATOR",
+      "text": "Ribbons hang from the railings. On the water, small lanterns bob in rows, each painted with a name or a wish."
+    },
+    {
+      "id": "NER-POST-016",
+      "speaker": "NARRATOR",
+      "text": "Lit or unlit, they float. That appears to be the main requirement."
+    },
+    {
+      "id": "NER-POST-002",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“Welcome to the Moonwater Festival. Officially, the lanterns honor those who guided us home.”"
+    },
+    {
+      "id": "NER-POST-017",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Unofficially, everyone enjoys making things float, and then we call it solemn.”"
+    },
+    {
+      "id": "NER-POST-003",
+      "speaker": "PLAYER",
+      "text": "“Both can be true.”"
+    },
+    {
+      "id": "NER-POST-004",
+      "speaker": "NERELLE",
+      "expression": "SURPRISED",
+      "text": "“Exactly. You’re getting good at this. It’s unsettling.”"
+    },
+    {
+      "id": "NER-POST-005",
+      "speaker": "NARRATOR",
+      "text": "A cluster of young sea-dwellers steers a string of lanterns toward her. Nerelle greets every one of them by name."
+    },
+    {
+      "id": "NER-POST-018",
+      "speaker": "NARRATOR",
+      "text": "Then she listens to their concerns one at a time, including a long one about a crab."
+    },
+    {
+      "id": "NER-POST-006",
+      "speaker": "PLAYER",
+      "text": "“They’re glad you’re here.”"
+    },
+    {
+      "id": "NER-POST-007",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“This is my favorite part. They bring me real problems, and sometimes I can help.”"
+    },
+    {
+      "id": "NER-POST-019",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“The crab is a real problem. I have met him.”"
+    },
+    {
+      "id": "NER-POST-008",
+      "speaker": "PLAYER",
+      "text": "“And the parts you don’t love?”"
+    },
+    {
+      "id": "NER-POST-009",
+      "speaker": "NERELLE",
+      "expression": "WORRIED",
+      "text": "“Those exist too. I used to accept every demand, until there was no room left to want anything.”"
+    },
+    {
+      "id": "NER-POST-020",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Now I am sorting them. Duties that are mine. Duties I can share. Habits dressed up as laws.”"
+    },
+    {
+      "id": "NER-POST-021",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“The third pile is the largest. The council is very attached to it.”"
+    },
+    {
+      "id": "NER-POST-010",
+      "speaker": "NARRATOR",
+      "text": "A lantern drifts into an eddy and turns twice. Then it points itself upstream, apparently bound for a different festival."
+    },
+    {
+      "id": "NER-POST-011",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“That one has more independence than half the council.”"
+    },
+    {
+      "id": "NER-POST-012",
+      "speaker": "PLAYER",
+      "text": "“Does it get a say in where it goes?”"
+    },
+    {
+      "id": "NER-POST-013",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Partly. Currents are real. How you travel with them is another matter.”"
+    },
+    {
+      "id": "NER-POST-014",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“I want to keep serving my people. I also want to keep learning about yours.”"
+    },
+    {
+      "id": "NER-POST-022",
+      "speaker": "NERELLE",
+      "expression": "WORRIED",
+      "text": "“People hear one wish and assume it cancels the other.”"
+    },
+    {
+      "id": "NER-POST-015",
+      "speaker": "NARRATOR",
+      "text": "She turns from the lanterns to you, waiting to find out what you heard."
+    }
   ],
   "options": [
     {
       "choiceId": "NER-POST-C1-ROOM",
       "labelText": "“Keep your people and keep exploring. You sort the piles, and I’ll listen to how they come out.”",
       "branch": [
-        { "id": "NER-POST-S01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Oh, thank goodness. I had a twelve-page petition prepared.”" },
-        { "id": "NER-POST-S02", "speaker": "PLAYER", "text": "“I can still fill out a form, if it helps.”" },
-        { "id": "NER-POST-S03", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Do not tempt me. I know several excellent forms.”" },
-        { "id": "NER-POST-S04", "speaker": "NARRATOR", "text": "She reaches the wayward lantern with a flick of her tail and nudges it back into the channel with the others." },
-        { "id": "NER-POST-S05", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“The sea is my home. And there is a part of me I am still finding out about.”" },
-        { "id": "NER-POST-S07", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I would like anyone close to me to love the whole of that.”" },
-        { "id": "NER-POST-S06", "speaker": "PLAYER", "text": "“The whole of it. Crab included.”" },
-        { "id": "NER-POST-S08", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Especially the crab.”" }
+        {
+          "id": "NER-POST-S01",
+          "speaker": "NERELLE",
+          "expression": "SURPRISED",
+          "text": "“Oh, thank goodness. I had a twelve-page petition prepared.”"
+        },
+        {
+          "id": "NER-POST-S02",
+          "speaker": "PLAYER",
+          "text": "“I can still fill out a form, if it helps.”"
+        },
+        {
+          "id": "NER-POST-S03",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“Don’t tempt me. I know several excellent forms.”"
+        },
+        {
+          "id": "NER-POST-S04",
+          "speaker": "NARRATOR",
+          "text": "She reaches the wayward lantern with a flick of her tail and nudges it back into the channel with the others."
+        },
+        {
+          "id": "NER-POST-S05",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“The sea is my home. And there is a part of me I am still finding out about.”"
+        },
+        {
+          "id": "NER-POST-S07",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“I would like anyone close to me to love the whole of that.”"
+        },
+        {
+          "id": "NER-POST-S06",
+          "speaker": "PLAYER",
+          "text": "“The whole of it. Crab included.”"
+        },
+        {
+          "id": "NER-POST-S08",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“Especially the crab.”"
+        }
       ]
     },
     {
       "choiceId": "NER-POST-C1-SIMPLIFY",
       "labelText": "“Couldn’t someone else do the ceremonies? Then you’d have all your time for exploring.”",
       "branch": [
-        { "id": "NER-POST-W01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Some of them, yes. This one I would not give away.”" },
-        { "id": "NER-POST-W02", "speaker": "PLAYER", "text": "“I thought it’d make things easier.”" },
-        { "id": "NER-POST-W03", "speaker": "NERELLE", "expression": "WORRIED", "text": "“It would. The way a boat is lighter with half of it missing.”" },
-        { "id": "NER-POST-W04", "speaker": "NARRATOR", "text": "A young sea-dweller calls her name. She turns to answer, and the conversation ends there." }
+        {
+          "id": "NER-POST-W01",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Some of them, yes. This one I would not give away.”"
+        },
+        {
+          "id": "NER-POST-W02",
+          "speaker": "PLAYER",
+          "text": "“I thought it’d make things easier.”"
+        },
+        {
+          "id": "NER-POST-W03",
+          "speaker": "NERELLE",
+          "expression": "WORRIED",
+          "text": "“It would. The way a boat is lighter with half of it missing.”"
+        },
+        {
+          "id": "NER-POST-W04",
+          "speaker": "NARRATOR",
+          "text": "A young sea-dweller calls her name. She turns to answer, and the conversation ends there."
+        }
       ]
     },
     {
       "choiceId": "NER-POST-C1-SHAME",
-      "labelText": "“Honestly, this all seems pointless. They’d manage fine without you.”",
+      "labelText": "“This all seems pointless. They’d manage fine without you.”",
       "branch": [
-        { "id": "NER-POST-X01", "speaker": "NERELLE", "expression": "ANNOYED", "text": "“You have been here for one lantern. I have been here for all of them.”" },
-        { "id": "NER-POST-X02", "speaker": "PLAYER", "text": "“I didn’t mean it like that.”" },
-        { "id": "NER-POST-X03", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“You did. Now, if you will excuse me, I am going to be pointless with my people.”" },
-        { "id": "NER-POST-X04", "speaker": "NARRATOR", "text": "She swims out among the festival-goers. Nobody in the water asks you to follow." }
+        {
+          "id": "NER-POST-X01",
+          "speaker": "NERELLE",
+          "expression": "ANNOYED",
+          "text": "“You have been here for one lantern. I have been here for all of them.”"
+        },
+        {
+          "id": "NER-POST-X02",
+          "speaker": "PLAYER",
+          "text": "“I didn’t mean it like that.”"
+        },
+        {
+          "id": "NER-POST-X03",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“You did. Now, if you will excuse me, I am going to be pointless with my people.”"
+        },
+        {
+          "id": "NER-POST-X04",
+          "speaker": "NARRATOR",
+          "text": "She swims out among the festival-goers. Nobody in the water asks you to follow."
+        }
       ]
     }
   ]

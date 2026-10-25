@@ -16,7 +16,7 @@
       "requested": "make the dialogue funnier and less AI generated (do extensive research on how to write it)",
       "date": "2026-10-25",
       "scope": "All story text: 77 scenes (prologue, failure, ordinary conversations, special events, midpoints, proposals, epilogues), 12 Town Square quips and 16 training flavor lines. Words only: scene IDs, choice IDs, outcomes, heart values, stats, schedules and art are unchanged. Frozen source archives are untouched; set CONTENT_REVISION=none to build from the frozen text.",
-      "filesSha256": "062b1c2438f054e6fa24d50dc872976f3847037083917109a302c3ebda2c2534"
+      "filesSha256": "d1330d3a27f10d174762284a49e53f4aed9f48dca244ed7734e08f529d54576e"
     }
   },
   "scenes": {
@@ -107,7 +107,7 @@
           "id": "CORE-PRO-004",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Then the world folded like a badly tested menu, and you fell out of it into a kingdom with more castles than entry-level openings."
+          "text": "Then the world folded like a badly tested dropdown, and you fell out of it into a kingdom with more castles than entry-level openings."
         },
         {
           "id": "CORE-PRO-005",
@@ -431,7 +431,7 @@
         {
           "choiceId": "KAE-POST-C1-COMPASSION",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“You calmed everyone down and got the little one home. I wish that was the story, instead of two monsters.”",
+          "labelText": "“You calmed everyone down and got the little one home. Instead they made monsters out of you both.”",
           "outcomeId": "KAE-POST-O-SEEN",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -458,13 +458,7 @@
               "id": "KAE-POST-S04",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She smiles, and forgets to check who is watching."
-            },
-            {
-              "id": "KAE-POST-S05",
-              "speaker": "KAEDRA",
-              "expression": "NEUTRAL",
-              "text": "“I cannot control every story about me. I can control what I do in them.”"
+              "text": "She smiles. The messenger sees it and starts revising the rumor on the spot."
             },
             {
               "id": "KAE-POST-S06",
@@ -714,7 +708,7 @@
               "id": "KAE-PRE-S06",
               "speaker": "KAEDRA",
               "expression": "NEUTRAL",
-              "text": "“I can speak for myself.”"
+              "text": "“I could have done that alone.”"
             },
             {
               "id": "KAE-PRE-S07",
@@ -943,7 +937,7 @@
         {
           "choiceId": "KAE-FIN-C1-EQUAL",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“I love your strength, and the gentleness you choose when nobody’s watching. Your decisions stay yours. I want an ordinary life with you, and the extraordinary one. Marry me, as my equal?”",
+          "labelText": "“No list. I love you strong, tired, and gentle when no one’s looking. Your choices stay yours. Marry me, and share an ordinary life as equals?”",
           "outcomeId": "KAE-FIN-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 0,
@@ -1070,7 +1064,7 @@
               "id": "KAE-FIN-X03",
               "speaker": "KAEDRA",
               "expression": "WORRIED",
-              "text": "“I asked for somewhere to rest. You are offering to take my life away and call it kindness.”"
+              "text": "“I asked for somewhere to rest. You are offering to take over my life.”"
             },
             {
               "id": "KAE-FIN-X04",
@@ -1139,7 +1133,7 @@
         {
           "choiceId": "KAE-FR-C1-PARTNER",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Yes. I was wrong to make you a symbol or a project. I love who you actually are: capable, kind, sometimes tired, free to choose. Marry me, and let’s both speak honestly?”",
+          "labelText": "“Yes. I made you a symbol, then a project. Wrong both times. I love the real you: capable, kind, sometimes tired, your own boss. Marry me?”",
           "outcomeId": "KAE-FR-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 0,
@@ -1393,13 +1387,7 @@
               "id": "KAE-MID-S08",
               "speaker": "PLAYER",
               "expression": null,
-              "text": "“It caught you by surprise. You stopped it anyway. Then you checked every face in the front row.”"
-            },
-            {
-              "id": "KAE-MID-S09",
-              "speaker": "PLAYER",
-              "expression": null,
-              "text": "“And you owned it before anyone asked. So you’re shaken. That’s one bad minute out of a lot of good ones.”"
+              "text": "“You stopped it in a second, then counted the front row. I watched.”"
             },
             {
               "id": "KAE-MID-S10",
@@ -1423,7 +1411,7 @@
               "id": "KAE-MID-S13",
               "speaker": "PLAYER",
               "expression": null,
-              "text": "“I came because I care how you feel. What happens next is up to you.”"
+              "text": "“I came for you, not the spectacle. What happens next is yours.”"
             },
             {
               "id": "KAE-MID-S14",
@@ -1435,7 +1423,7 @@
               "id": "KAE-MID-S15",
               "speaker": "KAEDRA",
               "expression": "PLAYFUL",
-              "text": "“That is an alarmingly sensible answer. I may have to invite you to future ceremonies. As a precaution.”"
+              "text": "“That is an unreasonably sensible answer. I may have to invite you to future ceremonies. As a precaution.”"
             },
             {
               "id": "KAE-MID-S16",
@@ -1511,7 +1499,7 @@
               "id": "KAE-MID-X01",
               "speaker": "KAEDRA",
               "expression": "ANNOYED",
-              "text": "“Declaring yourself in charge of me does not make you responsible for me.”"
+              "text": "“You are not in charge of me. Help them.”"
             },
             {
               "id": "KAE-MID-X02",
@@ -1604,7 +1592,7 @@
         {
           "choiceId": "KAE-MR-C1-RECOGNIZE",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“I missed what mattered. You kept everyone safe, and I should’ve helped make room. I’m sorry I put your feelings and choices second. I’d like to listen now.”",
+          "labelText": "“I missed it. You kept everyone safe, and I should have helped clear the room. I’m sorry I put your choices second. I’m listening now.”",
           "outcomeId": "KAE-MR-O-TRUST",
           "outcomeClass": "correct",
           "netHalfHearts": 0,
@@ -1645,7 +1633,7 @@
         {
           "choiceId": "KAE-MR-C1-EXCUSE",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Honestly, everyone overreacted. It was one spark. Can we just forget it?”",
+          "labelText": "“Everyone overreacted. It was one spark. Can we just forget it?”",
           "outcomeId": "KAE-MR-O-DISMISSED",
           "outcomeClass": "wrong",
           "netHalfHearts": 0,
@@ -1741,7 +1729,7 @@
         {
           "choiceId": "KAE-ORD-POST-F01-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“No rush. It’s a good silence.”",
+          "labelText": "“Take your time. I’ll rate it when it lands.”",
           "outcomeId": "KAE-ORD-POST-F01-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -1750,7 +1738,7 @@
               "id": "KAE-ORD-POST-F01-R-YES-01",
               "speaker": "KAEDRA",
               "expression": "NEUTRAL",
-              "text": "“It is.”"
+              "text": "“Out of ten. Agreed.”"
             },
             {
               "id": "KAE-ORD-POST-F01-R-YES-02",
@@ -1981,7 +1969,7 @@
               "id": "KAE-ORD-POST-F03-R-NO-01",
               "speaker": "KAEDRA",
               "expression": "ANNOYED",
-              "text": "“No. You were wrong with conviction. I was enjoying it.”"
+              "text": "“No. Defend the diagonal. I was enjoying it.”"
             },
             {
               "id": "KAE-ORD-POST-F03-R-NO-02",
@@ -2045,7 +2033,7 @@
           "id": "KAE-ORD-POST-U01-L06",
           "speaker": "KAEDRA",
           "expression": "NEUTRAL",
-          "text": "“There were eleven of us. The lion got the credit.”"
+          "text": "“There were seven of us. The lion got the credit.”"
         }
       ],
       "choicePointId": "KAE-ORD-POST-U01-C1",
@@ -2053,7 +2041,7 @@
         {
           "choiceId": "KAE-ORD-POST-U01-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Write back. Name the other ten. No lions.”",
+          "labelText": "“Write back. Name the other six. No lions.”",
           "outcomeId": "KAE-ORD-POST-U01-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -2068,7 +2056,7 @@
               "id": "KAE-ORD-POST-U01-R-YES-02",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She is already writing. The reply runs to two pages: ten names, and a sentence about each."
+              "text": "She is already writing. The reply runs to two pages: six names, and a sentence about each."
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -2085,7 +2073,7 @@
               "id": "KAE-ORD-POST-U01-R-NO-01",
               "speaker": "KAEDRA",
               "expression": "ANNOYED",
-              "text": "“Framed. Above the ten people it forgot.”"
+              "text": "“Framed. Above the six people it forgot.”"
             },
             {
               "id": "KAE-ORD-POST-U01-R-NO-02",
@@ -2264,7 +2252,7 @@
               "id": "KAE-ORD-POST-U03-R-YES-02",
               "speaker": "KAEDRA",
               "expression": "PLAYFUL",
-              "text": "“A dangerously attentive companion. I will have to keep an eye on you.”"
+              "text": "“Noted. I will have to keep an eye on you.”"
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -2370,7 +2358,7 @@
         {
           "choiceId": "KAE-ORD-POST-U04-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Honestly, the old way was kind of cool. Nobody messed with you.”",
+          "labelText": "“The old way was kind of cool, though. Nobody messed with you.”",
           "outcomeId": "KAE-ORD-POST-U04-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -2730,7 +2718,7 @@
           "id": "KAE-ORD-PRE-F02-L01",
           "speaker": "KAEDRA",
           "expression": "NEUTRAL",
-          "text": "“Four patrols. Eleven hours. Nothing happened.”"
+          "text": "“Four patrols. Nine hours. Nothing happened.”"
         },
         {
           "id": "KAE-ORD-PRE-F02-L02",
@@ -2754,13 +2742,13 @@
           "id": "KAE-ORD-PRE-F02-L05",
           "speaker": "KAEDRA",
           "expression": "NEUTRAL",
-          "text": "“Page two. A suspicious noise was investigated. It was a goose.”"
+          "text": "“Page two. A suspicious noise was investigated. It was a heron.”"
         },
         {
           "id": "KAE-ORD-PRE-F02-L06",
           "speaker": "KAEDRA",
           "expression": "NEUTRAL",
-          "text": "“The goose was released without charge.”"
+          "text": "“The heron was released without charge.”"
         }
       ],
       "choicePointId": "KAE-ORD-PRE-F02-C1",
@@ -2768,7 +2756,7 @@
         {
           "choiceId": "KAE-ORD-PRE-F02-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“That’s excellent work. Frame the goose part.”",
+          "labelText": "“That’s excellent work. Frame the heron part.”",
           "outcomeId": "KAE-ORD-PRE-F02-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -2776,8 +2764,8 @@
             {
               "id": "KAE-ORD-PRE-F02-R-YES-01",
               "speaker": "KAEDRA",
-              "expression": "SURPRISED",
-              "text": "“Nobody has ever asked about page two.”"
+              "expression": "PLAYFUL",
+              "text": "“Page two, framed. The heron will be insufferable.”"
             },
             {
               "id": "KAE-ORD-PRE-F02-R-YES-02",
@@ -2806,7 +2794,7 @@
               "id": "KAE-ORD-PRE-F02-R-NO-02",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She files the report with the others. The goose goes unappreciated."
+              "text": "She files the report with the others. The heron goes unappreciated."
             }
           ],
           "internalLabel": "Ordinary incorrect, net +1 half-heart"
@@ -2858,7 +2846,7 @@
           "id": "KAE-ORD-PRE-F03-L05",
           "speaker": "KAEDRA",
           "expression": "NEUTRAL",
-          "text": "“Sometimes I will. I will tell you which times.”"
+          "text": "“Sometimes. I will tell you which times.”"
         }
       ],
       "choicePointId": "KAE-ORD-PRE-F03-C1",
@@ -3091,7 +3079,7 @@
         {
           "choiceId": "KAE-ORD-PRE-U02-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Skip the fifth meeting. Who actually has a hammer?”",
+          "labelText": "“Skip the fifth meeting. Who has a hammer?”",
           "outcomeId": "KAE-ORD-PRE-U02-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -3114,7 +3102,7 @@
         {
           "choiceId": "KAE-ORD-PRE-U02-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Honestly? That’s a beautifully bound report.”",
+          "labelText": "“Can we take a moment to admire the binding?”",
           "outcomeId": "KAE-ORD-PRE-U02-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -3123,7 +3111,7 @@
               "id": "KAE-ORD-PRE-U02-R-NO-01",
               "speaker": "KAEDRA",
               "expression": "NEUTRAL",
-              "text": "“It is. I will read it aloud to the stair.”"
+              "text": "“The binding is excellent. I will read it aloud to the stair.”"
             }
           ],
           "internalLabel": "Ordinary incorrect, net +1 half-heart"
@@ -3255,7 +3243,7 @@
           "id": "KAE-ORD-PRE-U04-L01",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Kaedra warms her hands near a lantern. A passer-by carrying a stack of papers takes the long way around her."
+          "text": "Kaedra warms her hands near a lantern. A passer-by carrying a stack of papers swerves wide of her."
         },
         {
           "id": "KAE-ORD-PRE-U04-L02",
@@ -3397,7 +3385,7 @@
         {
           "choiceId": "KAE-ORD-PRE-U05-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“A bridge bends because people are walking on it.”",
+          "labelText": "“Carve the load rating. Nothing’s more inspiring than a number you can trust.”",
           "outcomeId": "KAE-ORD-PRE-U05-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -3406,13 +3394,13 @@
               "id": "KAE-ORD-PRE-U05-R-YES-01",
               "speaker": "KAEDRA",
               "expression": "SURPRISED",
-              "text": "“Yours is better.”"
+              "text": "“*Rated for four hundred people and one cart.*”"
             },
             {
               "id": "KAE-ORD-PRE-U05-R-YES-02",
               "speaker": "KAEDRA",
               "expression": "PLAYFUL",
-              "text": "“I will submit it under your name. Then you can be told it is uninspiring.”"
+              "text": "“I would stand under that.”"
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -3501,7 +3489,7 @@
         {
           "choiceId": "KAE-ORD-PRE-U06-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Then announce it in a normal voice, and put the hinge-oiler in it.”",
+          "labelText": "“Just read it out the way you said it to me. ‘It opens. It closes. It passed.’”",
           "outcomeId": "KAE-ORD-PRE-U06-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -3509,14 +3497,20 @@
             {
               "id": "KAE-ORD-PRE-U06-R-YES-01",
               "speaker": "KAEDRA",
-              "expression": "PLAYFUL",
-              "text": "“His name is Tobble. I asked.”"
+              "expression": "NEUTRAL",
+              "text": "“Very well.”"
             },
             {
               "id": "KAE-ORD-PRE-U06-R-YES-02",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "The announcement goes out in a normal voice, naming Tobble. One official looks physically pained by the absence of trumpets."
+              "text": "She takes the sheet and reads it out in one breath, then adds: *“Hinges by Tobble.”*"
+            },
+            {
+              "id": "KAE-ORD-PRE-U06-R-YES-03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "One official looks physically pained by the absence of trumpets."
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -3524,7 +3518,7 @@
         {
           "choiceId": "KAE-ORD-PRE-U06-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“You did the inspection. You should announce it. Take the credit.”",
+          "labelText": "“Let them have their trumpets. It’s a big moment for a gate.”",
           "outcomeId": "KAE-ORD-PRE-U06-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -3532,8 +3526,8 @@
             {
               "id": "KAE-ORD-PRE-U06-R-NO-01",
               "speaker": "KAEDRA",
-              "expression": "PLAYFUL",
-              "text": "“Then there would be three of us doing vocal exercises.”"
+              "expression": "NEUTRAL",
+              "text": "“It is a medium moment for a gate.”"
             },
             {
               "id": "KAE-ORD-PRE-U06-R-NO-02",
@@ -3597,7 +3591,7 @@
           "id": "NER-EPI-005",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Nerelle waits in the water, in the same high-collared, long-sleeved pearl-and-ocean-blue royal garment she always wears."
+          "text": "Nerelle waits in the water at the head of the channel."
         },
         {
           "id": "NER-EPI-024",
@@ -3663,13 +3657,13 @@
           "id": "NER-EPI-013",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Then come the vows. You both promise to ask, and to listen, and to tell each other the truth."
+          "text": "Then come the vows."
         },
         {
           "id": "NER-EPI-025",
-          "speaker": "NARRATOR",
-          "expression": null,
-          "text": "And to keep meeting where the land runs into the sea."
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“I promise to ask before I decide for both of us. And to keep meeting you where the land runs into the sea.”"
         },
         {
           "id": "NER-EPI-014",
@@ -3687,7 +3681,7 @@
           "id": "NER-EPI-016",
           "speaker": "NERELLE",
           "expression": "PLAYFUL",
-          "text": "“Then it will be a long marriage. You are wrong about currents quite often.”"
+          "text": "“Then it’ll be a long marriage. You’re wrong about currents quite often.”"
         },
         {
           "id": "NER-EPI-017",
@@ -3711,7 +3705,7 @@
           "id": "NER-EPI-020",
           "speaker": "NERELLE",
           "expression": "PLAYFUL",
-          "text": "“Also, your foot is in the wrong current. It is about to visit the sea court without you.”"
+          "text": "“Also, your foot is in the wrong current. It’s about to visit the sea court without you.”"
         }
       ],
       "choicePointId": null,
@@ -3771,7 +3765,7 @@
           "id": "NER-POST-004",
           "speaker": "NERELLE",
           "expression": "SURPRISED",
-          "text": "“Exactly. You are becoming dangerously good at this.”"
+          "text": "“Exactly. You’re getting good at this. It’s unsettling.”"
         },
         {
           "id": "NER-POST-005",
@@ -3896,7 +3890,7 @@
               "id": "NER-POST-S03",
               "speaker": "NERELLE",
               "expression": "PLAYFUL",
-              "text": "“Do not tempt me. I know several excellent forms.”"
+              "text": "“Don’t tempt me. I know several excellent forms.”"
             },
             {
               "id": "NER-POST-S04",
@@ -3969,7 +3963,7 @@
         {
           "choiceId": "NER-POST-C1-SHAME",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Honestly, this all seems pointless. They’d manage fine without you.”",
+          "labelText": "“This all seems pointless. They’d manage fine without you.”",
           "outcomeId": "NER-POST-O-HURT",
           "outcomeClass": "offensive",
           "netHalfHearts": -1,
@@ -4027,7 +4021,7 @@
           "id": "NER-PRE-001",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "A row of small waterproof parcels floats along the railing. Each is tied with a ribbon so precise that a court clerk would weep."
+          "text": "A row of small waterproof parcels bobs below the railing. Each is tied with a ribbon so precise that a court clerk would weep."
         },
         {
           "id": "NER-PRE-002",
@@ -4137,7 +4131,7 @@
         {
           "choiceId": "NER-PRE-C1-LISTEN",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Ask what matters to them, and let them answer however they like. Want to start with the lanterns?”",
+          "labelText": "“Practice on me. Ask what I see in the lantern. I’ll answer badly, and you’re not allowed to grade it.”",
           "outcomeId": "NER-PRE-O-RESPECTED",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -4146,25 +4140,31 @@
               "id": "NER-PRE-S01",
               "speaker": "NERELLE",
               "expression": "SURPRISED",
-              "text": "“Ask, and then let the answer be whatever it is. The council would faint.”"
+              "text": "“Ungraded. The council would faint.”"
             },
             {
               "id": "NER-PRE-S02",
-              "speaker": "PLAYER",
-              "expression": null,
-              "text": "“They don’t teach that in advertising either.”"
+              "speaker": "NERELLE",
+              "expression": "PLAYFUL",
+              "text": "“Very well. What do you see?”"
             },
             {
               "id": "NER-PRE-S03",
-              "speaker": "NERELLE",
-              "expression": "PLAYFUL",
-              "text": "“Their loss.”"
+              "speaker": "PLAYER",
+              "expression": null,
+              "text": "“A worried turnip.”"
+            },
+            {
+              "id": "NER-PRE-S09",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She laughs, and turns to the real lantern’s reflection on the water."
             },
             {
               "id": "NER-PRE-S04",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She turns to the nearest lantern’s reflection on the water. Her fin moves beneath it, and the reflection breaks into a dozen small pieces."
+              "text": "Her fin moves beneath it, and the reflection breaks into a dozen small lights."
             },
             {
               "id": "NER-PRE-S05",
@@ -4188,7 +4188,7 @@
               "id": "NER-PRE-S07",
               "speaker": "NERELLE",
               "expression": "PLAYFUL",
-              "text": "“I will remember it. I will not, however, commission a commemorative plaque.”"
+              "text": "“I’ll remember it. I won’t, however, commission a commemorative plaque.”"
             }
           ],
           "internalLabel": "Correct; net +2 half-hearts"
@@ -4405,7 +4405,7 @@
         {
           "choiceId": "NER-FIN-C1-EQUAL",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“I love your curiosity and how you look after people. You know what matters to you, and I won’t pick your future. Marry me, and we’ll build it together?”",
+          "labelText": "“I love your curiosity, your care for people, and that you know your own mind. Your future’s yours. Marry me, and we’ll build it together?”",
           "outcomeId": "NER-FIN-O-MARRIED",
           "outcomeClass": "correct",
           "netHalfHearts": 0,
@@ -4640,7 +4640,7 @@
               "id": "NER-FR-S03",
               "speaker": "NERELLE",
               "expression": "PLAYFUL",
-              "text": "“I will make a note of this historic event.”"
+              "text": "“I’ll mark it on the tide chart. High water: {PLAYER} listened.”"
             },
             {
               "id": "NER-FR-S04",
@@ -5224,7 +5224,7 @@
           "id": "NER-ORD-POST-F01-L05",
           "speaker": "NERELLE",
           "expression": "PLAYFUL",
-          "text": "“At present, I am thinking like someone who wants lunch and suspects the gulls of plotting.”"
+          "text": "“At present, I am thinking like someone who wants a snack and suspects the gulls of plotting.”"
         }
       ],
       "choicePointId": "NER-ORD-POST-F01-C1",
@@ -5247,7 +5247,7 @@
               "id": "NER-ORD-POST-F01-R-YES-02",
               "speaker": "NERELLE",
               "expression": "PLAYFUL",
-              "text": "“Oh, that is perfect. It is technically an answer, and he will hate it.”"
+              "text": "“Oh, that’s perfect. It’s technically an answer, and he’ll hate it.”"
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -5353,7 +5353,7 @@
         {
           "choiceId": "NER-ORD-POST-F02-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Leave it, it’s pretty. Honestly, the water could use a few more.”",
+          "labelText": "“Leave it, it’s pretty. The water could use a few more.”",
           "outcomeId": "NER-ORD-POST-F02-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -5457,7 +5457,7 @@
         {
           "choiceId": "NER-ORD-POST-F03-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Honestly, the view’s better up here. I can describe it all for you.”",
+          "labelText": "“The view’s better up here, though. I can describe it all for you.”",
           "outcomeId": "NER-ORD-POST-F03-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -5615,13 +5615,13 @@
       "kind": "ordinary",
       "route": "NER",
       "stage": "POST",
-      "title": "Possibly Goats",
+      "title": "Here Be Cows",
       "introLines": [
         {
           "id": "NER-ORD-POST-U02-L01",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Two damp maps lie on the stones, pinned down with pebbles. They disagree about everything."
+          "text": "Two damp maps lie on the stones at the water’s edge, pinned down with pebbles. They disagree about everything."
         },
         {
           "id": "NER-ORD-POST-U02-L02",
@@ -5633,7 +5633,7 @@
           "id": "NER-ORD-POST-U02-L03",
           "speaker": "NERELLE",
           "expression": "PLAYFUL",
-          "text": "“Ours, meanwhile, shows the land as a blank patch labeled ‘Dry. Possibly goats.’”"
+          "text": "“Ours, meanwhile, shows the land as a blank patch labeled ‘Dry. Here be cows.’”"
         },
         {
           "id": "NER-ORD-POST-U02-L04",
@@ -5646,6 +5646,12 @@
           "speaker": "NERELLE",
           "expression": "NEUTRAL",
           "text": "“Each mapmaker drew home in exquisite detail, and the other side as a rumor.”"
+        },
+        {
+          "id": "NER-ORD-POST-U02-L06",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Her tail flicks a little water onto the blank land, as if to see what grows."
         }
       ],
       "choicePointId": "NER-ORD-POST-U02-C1",
@@ -5653,7 +5659,7 @@
         {
           "choiceId": "NER-ORD-POST-U02-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Swap? You fix my sea, I’ll fix your goats.”",
+          "labelText": "“Teach me one current. Just one. I’ll draw it in.”",
           "outcomeId": "NER-ORD-POST-U02-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -5662,13 +5668,13 @@
               "id": "NER-ORD-POST-U02-R-YES-01",
               "speaker": "NERELLE",
               "expression": "PLAYFUL",
-              "text": "“A fair treaty. Though fixing your sea will take considerably longer.”"
+              "text": "“One. Very well. We start with the shy one.”"
             },
             {
               "id": "NER-ORD-POST-U02-R-YES-02",
-              "speaker": "NERELLE",
-              "expression": "NEUTRAL",
-              "text": "“There are eleven currents where yours says ‘Sea.’ Bring more pebbles.”"
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She guides your finger in a thin blue line across the empty sea. It is the first thing on that map that’s right."
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -5676,7 +5682,7 @@
         {
           "choiceId": "NER-ORD-POST-U02-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Just draw roads across the sea part. Then nobody gets lost.”",
+          "labelText": "“Let’s merge them into one proper map. I’m good at merges.”",
           "outcomeId": "NER-ORD-POST-U02-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -5685,13 +5691,13 @@
               "id": "NER-ORD-POST-U02-R-NO-01",
               "speaker": "NERELLE",
               "expression": "SURPRISED",
-              "text": "“Roads. Across the sea.”"
+              "text": "“Merge. The sea and the land.”"
             },
             {
               "id": "NER-ORD-POST-U02-R-NO-02",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "On the blank land of her map, she adds a small note: *Wants roads in the sea.*"
+              "text": "In the blank land of her map, she adds a small note: *Wants to merge the sea.*"
             }
           ],
           "internalLabel": "Ordinary incorrect, net +1 half-heart"
@@ -5766,13 +5772,13 @@
               "id": "NER-ORD-POST-U03-R-YES-01",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "You say nothing. The water says a good deal. After a while, Nerelle nods, as if the current has made a fair point."
+              "text": "You say nothing. The water says a good deal. At thirty seconds, a gull lands between you and screams once."
             },
             {
               "id": "NER-ORD-POST-U03-R-YES-02",
               "speaker": "NERELLE",
               "expression": "PLAYFUL",
-              "text": "“Forty-one seconds. I will have to tell the merchant.”"
+              "text": "“Forty-one seconds. The gull is disqualified.”"
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -5780,7 +5786,7 @@
         {
           "choiceId": "NER-ORD-POST-U03-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Don’t overthink it. Go with your gut. They need an answer.”",
+          "labelText": "“Want me to fill the quiet? I’ve got a story about my knees.”",
           "outcomeId": "NER-ORD-POST-U03-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -5789,13 +5795,13 @@
               "id": "NER-ORD-POST-U03-R-NO-01",
               "speaker": "NERELLE",
               "expression": "NEUTRAL",
-              "text": "“My gut does not sit on the council.”"
+              "text": "“The merchant said that too.”"
             },
             {
               "id": "NER-ORD-POST-U03-R-NO-02",
               "speaker": "NERELLE",
               "expression": "PLAYFUL",
-              "text": "“Also, you only lasted four seconds that time.”"
+              "text": "“Four seconds. He managed seven.”"
             }
           ],
           "internalLabel": "Ordinary incorrect, net +1 half-heart"
@@ -5823,7 +5829,7 @@
           "id": "NER-ORD-POST-U04-L01",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "A clerk on the path is writing very fast. Nerelle is watching his pen with alarm."
+          "text": "A clerk on the path is writing very fast. Nerelle, chin resting on the edge of the water, watches his pen with alarm."
         },
         {
           "id": "NER-ORD-POST-U04-L02",
@@ -5853,7 +5859,7 @@
           "id": "NER-ORD-POST-U04-L06",
           "speaker": "NERELLE",
           "expression": "PLAYFUL",
-          "text": "“I am now afraid to sneeze.”"
+          "text": "“I’m now afraid to hiccup. He’d declare a holiday.”"
         }
       ],
       "choicePointId": "NER-ORD-POST-U04-C1",
@@ -5861,7 +5867,7 @@
         {
           "choiceId": "NER-ORD-POST-U04-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“She was asking a question. Nerelle, what did you actually want to know?”",
+          "labelText": "“She was asking a question. Nerelle, what did you want to know?”",
           "outcomeId": "NER-ORD-POST-U04-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -5884,7 +5890,7 @@
         {
           "choiceId": "NER-ORD-POST-U04-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Honestly? ‘The lanterns shall be safe’ is a pretty good law.”",
+          "labelText": "“Keep it! ‘The lanterns shall be safe’ is a pretty good law.”",
           "outcomeId": "NER-ORD-POST-U04-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -6063,7 +6069,7 @@
         {
           "choiceId": "NER-ORD-POST-U06-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“So where’s the good current now? Quiz me.”",
+          "labelText": "“Honestly, where’s the good current now? Quiz me.”",
           "outcomeId": "NER-ORD-POST-U06-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -6239,7 +6245,7 @@
           "id": "NER-ORD-PRE-F02-L02",
           "speaker": "NERELLE",
           "expression": "NEUTRAL",
-          "text": "“This leaf has been waiting beside me for several minutes. I suspect it has an appointment.”"
+          "text": "“It has been waiting there for several minutes. I suspect an appointment.”"
         },
         {
           "id": "NER-ORD-PRE-F02-L03",
@@ -6251,13 +6257,19 @@
           "id": "NER-ORD-PRE-F02-L04",
           "speaker": "NERELLE",
           "expression": "PLAYFUL",
-          "text": "“I do not recall issuing permits to leaves.”"
+          "text": "“I don’t recall issuing permits to leaves.”"
         },
         {
           "id": "NER-ORD-PRE-F02-L05",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "A second leaf drifts up and settles in behind the first. Then a third."
+        },
+        {
+          "id": "NER-ORD-PRE-F02-L06",
           "speaker": "NERELLE",
-          "expression": "NEUTRAL",
-          "text": "“Still, it has waited more patiently than most ambassadors. I feel I owe it an audience.”"
+          "expression": "SURPRISED",
+          "text": "“Oh no. It’s a queue.”"
         }
       ],
       "choicePointId": "NER-ORD-PRE-F02-C1",
@@ -6265,7 +6277,7 @@
         {
           "choiceId": "NER-ORD-PRE-F02-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Maybe it’s off duty. It just likes your company.”",
+          "labelText": "“Put up a sign: *Back after the tide.* You’re off duty.”",
           "outcomeId": "NER-ORD-PRE-F02-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -6273,20 +6285,14 @@
             {
               "id": "NER-ORD-PRE-F02-R-YES-01",
               "speaker": "NERELLE",
-              "expression": "SURPRISED",
-              "text": "“No petition? No grievance?”"
+              "expression": "PLAYFUL",
+              "text": "“Back after the tide. The council would never.”"
             },
             {
               "id": "NER-ORD-PRE-F02-R-YES-02",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She looks at the leaf, and then, for slightly too long, at you."
-            },
-            {
-              "id": "NER-ORD-PRE-F02-R-YES-03",
-              "speaker": "NERELLE",
-              "expression": "PLAYFUL",
-              "text": "“I will log it as an unofficial visit. Unofficially.”"
+              "text": "She tells the leaves. They drift off politely, one at a time, in order."
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -6294,7 +6300,7 @@
         {
           "choiceId": "NER-ORD-PRE-F02-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Keep it! Press it and frame it. First official leaf of your reign.”",
+          "labelText": "“Keep the first one! Press it and frame it. First official leaf of your reign.”",
           "outcomeId": "NER-ORD-PRE-F02-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -6303,13 +6309,13 @@
               "id": "NER-ORD-PRE-F02-R-NO-01",
               "speaker": "NERELLE",
               "expression": "NEUTRAL",
-              "text": "“Drafted into office. It came here to drift.”"
+              "text": "“Then the other two will want frames.”"
             },
             {
               "id": "NER-ORD-PRE-F02-R-NO-02",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "The leaf, sensing responsibility, drifts away."
+              "text": "The queue grows by a twig."
             }
           ],
           "internalLabel": "Ordinary incorrect, net +1 half-heart"
@@ -6407,7 +6413,7 @@
               "id": "NER-ORD-PRE-F03-R-NO-02",
               "speaker": "NERELLE",
               "expression": "NEUTRAL",
-              "text": "“Brave. I will tie something nice for your memorial.”"
+              "text": "“Brave. I’ll tie something nice for your memorial.”"
             }
           ],
           "internalLabel": "Ordinary incorrect, net +1 half-heart"
@@ -6476,7 +6482,7 @@
               "id": "NER-ORD-PRE-U01-R-YES-01",
               "speaker": "NERELLE",
               "expression": "NEUTRAL",
-              "text": "“A sensible treaty. I will inform the crab.”"
+              "text": "“Agreed. I’ll inform the crab.”"
             },
             {
               "id": "NER-ORD-PRE-U01-R-YES-02",
@@ -6505,7 +6511,7 @@
               "id": "NER-ORD-PRE-U01-R-NO-02",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "The marker bumps the stone again. By the tower’s reckoning, it is late."
+              "text": "The marker bumps the stone again. By the tower’s reckoning, the tide is four minutes behind."
             }
           ],
           "internalLabel": "Ordinary incorrect, net +1 half-heart"
@@ -6611,7 +6617,7 @@
         {
           "choiceId": "NER-ORD-PRE-U02-C1-OFF",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Maybe they’d listen if you weren’t such an odd fish.”",
+          "labelText": "“Maybe they’d listen if you weren’t so strange.”",
           "outcomeId": "NER-ORD-PRE-U02-O-OFF",
           "outcomeClass": "offensive",
           "netHalfHearts": -1,
@@ -6620,7 +6626,7 @@
               "id": "NER-ORD-PRE-U02-R-OFF-01",
               "speaker": "NERELLE",
               "expression": "ANNOYED",
-              "text": "“I am not a fish. My hearing, however, is excellent.”"
+              "text": "“I can hear you perfectly. That is the problem.”"
             },
             {
               "id": "NER-ORD-PRE-U02-R-OFF-02",
@@ -6654,7 +6660,7 @@
           "id": "NER-ORD-PRE-U03-L01",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Two visitors have stopped on the path to greet Nerelle. One bows. The other waves."
+          "text": "Two visitors have stopped on the path to greet Nerelle in the water. One bows. The other waves."
         },
         {
           "id": "NER-ORD-PRE-U03-L02",
@@ -6684,7 +6690,7 @@
           "id": "NER-ORD-PRE-U03-L06",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "The taller visitor adds a curtsy. Part of it lands on a passing duck."
+          "text": "The taller visitor adds a curtsy. A passing duck receives most of it."
         }
       ],
       "choicePointId": "NER-ORD-PRE-U03-C1",
@@ -6692,7 +6698,7 @@
         {
           "choiceId": "NER-ORD-PRE-U03-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Skip the committees. How do you actually like to be greeted?”",
+          "labelText": "“What do you like? A hello? A wave?”",
           "outcomeId": "NER-ORD-PRE-U03-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -6701,13 +6707,13 @@
               "id": "NER-ORD-PRE-U03-R-YES-01",
               "speaker": "NERELLE",
               "expression": "SURPRISED",
-              "text": "“You asked me. You have just outperformed three ceremonial committees.”"
+              "text": "“Three committees, and nobody thought to ask me.”"
             },
             {
               "id": "NER-ORD-PRE-U03-R-YES-02",
               "speaker": "NERELLE",
               "expression": "PLAYFUL",
-              "text": "“Hello is perfect. Waving is lovely. Bowing to ducks is discouraged.”"
+              "text": "“Hello is perfect. A wave is lovely. Bowing to ducks is discouraged.”"
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -6828,7 +6834,7 @@
               "id": "NER-ORD-PRE-U04-R-NO-01",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "You toss one crumb. Eleven more gulls arrive."
+              "text": "You toss one crumb. Nine more gulls arrive."
             },
             {
               "id": "NER-ORD-PRE-U04-R-NO-02",
@@ -6886,7 +6892,7 @@
           "id": "NER-ORD-PRE-U05-L05",
           "speaker": "NERELLE",
           "expression": "NEUTRAL",
-          "text": "“Three ticks means a strong current. Four means strong, and *in a mood*.”"
+          "text": "“Three ticks means strong. *In a mood* has its own mark.”"
         }
       ],
       "choicePointId": "NER-ORD-PRE-U05-C1",
@@ -7013,7 +7019,7 @@
               "id": "NER-ORD-PRE-U06-R-YES-02",
               "speaker": "NERELLE",
               "expression": "PLAYFUL",
-              "text": "“Welcome. From here, you are taller than the palace.”"
+              "text": "“Welcome. From here, you’re taller than the palace.”"
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -7356,7 +7362,7 @@
               "id": "TAV-POST-X01",
               "speaker": "TAVRI",
               "expression": "ANNOYED",
-              "text": "“Then I’ll let you down instead. It’s quicker.”"
+              "text": "“Wonderful. A review, and I didn’t even go on.”"
             },
             {
               "id": "TAV-POST-X02",
@@ -7490,7 +7496,7 @@
           "id": "TAV-PRE-012",
           "speaker": "TAVRI",
           "expression": "NEUTRAL",
-          "text": "“Badly. So I suppose you get to decide whether I need a joke. Or a friend. I’m not fussy.”"
+          "text": "“Badly. I’m out of napkin material. Your move.”"
         }
       ],
       "choicePointId": "TAV-PRE-C1",
@@ -7764,7 +7770,7 @@
               "id": "TAV-FIN-S07",
               "speaker": "TAVRI",
               "expression": "NEUTRAL",
-              "text": "“Yes, {PLAYER}. I want this.”"
+              "text": "“Yes, {PLAYER}. I choose you too.”"
             },
             {
               "id": "TAV-FIN-S09",
@@ -8304,7 +8310,7 @@
         {
           "choiceId": "TAV-MR-C1-ADVISE",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Honestly? Stop caring what people think. Problem solved.”",
+          "labelText": "“Easy fix: stop caring what people think. Problem solved.”",
           "outcomeId": "TAV-MID-O-MISUNDERSTOOD",
           "outcomeClass": "wrong",
           "netHalfHearts": 0,
@@ -8350,7 +8356,7 @@
           "id": "TAV-ORD-POST-F01-L01",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Tavri presents you with a blank scrap of paper, with tremendous ceremony."
+          "text": "Tavri hands you a blank scrap of paper. There is tremendous ceremony."
         },
         {
           "id": "TAV-ORD-POST-F01-L02",
@@ -8570,31 +8576,31 @@
           "id": "TAV-ORD-POST-F03-L05",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Tavri opens her mouth. Her ears go up. Then she closes it again."
+          "text": "Tavri’s ears go up. She opens her mouth, glances at you, and closes it again."
         },
         {
           "id": "TAV-ORD-POST-F03-L02",
           "speaker": "TAVRI",
           "expression": "NEUTRAL",
-          "text": "“I had a joke about that. A good one.”"
+          "text": "“I have a joke about that sign. A good one.”"
         },
         {
           "id": "TAV-ORD-POST-F03-L06",
           "speaker": "TAVRI",
           "expression": "PLAYFUL",
-          "text": "“I’m going to look at the sign instead. Just look at it. Like a tourist.”"
+          "text": "“I’ve been holding it for a full minute. It’s getting heavy.”"
         },
         {
           "id": "TAV-ORD-POST-F03-L03",
           "speaker": "PLAYER",
           "expression": null,
-          "text": "“Take your time.”"
+          "text": "“Why are you holding it?”"
         },
         {
           "id": "TAV-ORD-POST-F03-L04",
           "speaker": "TAVRI",
-          "expression": "PLAYFUL",
-          "text": "“You say that as if leisure were legal.”"
+          "expression": "NEUTRAL",
+          "text": "“I’m practicing being a princess who can walk past a typo. It’s agony.”"
         }
       ],
       "choicePointId": "TAV-ORD-POST-F03-C1",
@@ -8602,7 +8608,7 @@
         {
           "choiceId": "TAV-ORD-POST-F03-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“I’ll look at it with you. Carefully. No tuoching.”",
+          "labelText": "“Walking past it is optional. Tell me the joke.”",
           "outcomeId": "TAV-ORD-POST-F03-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -8610,14 +8616,20 @@
             {
               "id": "TAV-ORD-POST-F03-R-YES-01",
               "speaker": "TAVRI",
-              "expression": "PLAYFUL",
-              "text": "“Look at us. Two grown adults, not tuoching.”"
+              "expression": "SURPRISED",
+              "text": "“Really?”"
             },
             {
               "id": "TAV-ORD-POST-F03-R-YES-02",
+              "speaker": "TAVRI",
+              "expression": "PLAYFUL",
+              "text": "“Right. Whoever wrote this sign has clearly never been tuoched by greatness.”"
+            },
+            {
+              "id": "TAV-ORD-POST-F03-R-YES-03",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "You look at it together until someone comes along and fixes the spelling."
+              "text": "It’s terrible. You laugh anyway, properly, and she looks as if she has won something."
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -8625,7 +8637,7 @@
         {
           "choiceId": "TAV-ORD-POST-F03-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Aw, go on. What was the joke?”",
+          "labelText": "“You don’t have to be funny with me, you know.”",
           "outcomeId": "TAV-ORD-POST-F03-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -8634,13 +8646,13 @@
               "id": "TAV-ORD-POST-F03-R-NO-01",
               "speaker": "TAVRI",
               "expression": "NEUTRAL",
-              "text": "“Fine.”"
+              "text": "“I know. I wanted to be.”"
             },
             {
               "id": "TAV-ORD-POST-F03-R-NO-02",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She tells it. It’s very good, and you laugh. When she looks back, it’s only a sign again."
+              "text": "She walks past the sign. The joke stays where it is, unspent."
             }
           ],
           "internalLabel": "Ordinary incorrect, net +1 half-heart"
@@ -8686,7 +8698,7 @@
           "id": "TAV-ORD-POST-U01-L04",
           "speaker": "TAVRI",
           "expression": "PLAYFUL",
-          "text": "“Only if you brought an emergency trumpet.”"
+          "text": "“Only if you brought an emergency lute.”"
         },
         {
           "id": "TAV-ORD-POST-U01-L05",
@@ -8721,7 +8733,7 @@
               "id": "TAV-ORD-POST-U01-R-YES-02",
               "speaker": "TAVRI",
               "expression": "PLAYFUL",
-              "text": "“Palace record. We tell no one.”"
+              "text": "“Three minutes. Palace record. I’ll have it engraved somewhere small.”"
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -8918,7 +8930,7 @@
           "id": "TAV-ORD-POST-U03-L07",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "She seems very satisfied with act three."
+          "text": "She underlines act three. Twice."
         }
       ],
       "choicePointId": "TAV-ORD-POST-U03-C1",
@@ -8957,8 +8969,8 @@
             {
               "id": "TAV-ORD-POST-U03-R-NO-01",
               "speaker": "TAVRI",
-              "expression": "NEUTRAL",
-              "text": "“A greatest hits. Of course.”"
+              "expression": "PLAYFUL",
+              "text": "“Greatest hits. Naturally. Track one: the napkin.”"
             },
             {
               "id": "TAV-ORD-POST-U03-R-NO-02",
@@ -8972,7 +8984,7 @@
         {
           "choiceId": "TAV-ORD-POST-U03-C1-OFF",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Honestly, you’re only worth the time when you’re being funny.”",
+          "labelText": "“You’re only worth the time when you’re being funny.”",
           "outcomeId": "TAV-ORD-POST-U03-O-OFF",
           "outcomeClass": "offensive",
           "netHalfHearts": -1,
@@ -9091,13 +9103,19 @@
               "id": "TAV-ORD-POST-U04-R-NO-01",
               "speaker": "TAVRI",
               "expression": "NEUTRAL",
-              "text": "“Bakery. Fine.”"
+              "text": "“Bakery.”"
             },
             {
               "id": "TAV-ORD-POST-U04-R-NO-02",
+              "speaker": "TAVRI",
+              "expression": "PLAYFUL",
+              "text": "“A fox princess walks into a bakery and asks for a scone with no expectations. They’re out.”"
+            },
+            {
+              "id": "TAV-ORD-POST-U04-R-NO-03",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She finishes the joke. It’s a good ending. She checks your face to see if it was good enough."
+              "text": "She watches your face until you laugh."
             }
           ],
           "internalLabel": "Ordinary incorrect, net +1 half-heart"
@@ -9125,7 +9143,7 @@
           "id": "TAV-ORD-POST-U05-L01",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "A breeze picks up. Tavri lifts her chin, ready to say something grand about it."
+          "text": "A breeze comes through an open window. Tavri lifts her chin, ready to say something grand about it."
         },
         {
           "id": "TAV-ORD-POST-U05-L02",
@@ -9143,7 +9161,7 @@
           "id": "TAV-ORD-POST-U05-L05",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "She looks delighted with herself. Her tail is enjoying the wind enormously."
+          "text": "Her ears tip back to catch more of it."
         },
         {
           "id": "TAV-ORD-POST-U05-L03",
@@ -9155,7 +9173,7 @@
           "id": "TAV-ORD-POST-U05-L06",
           "speaker": "TAVRI",
           "expression": "PLAYFUL",
-          "text": "“The kings can get their own wind.”"
+          "text": "“The kings can find their own breeze.”"
         }
       ],
       "choicePointId": "TAV-ORD-POST-U05-C1",
@@ -9178,7 +9196,7 @@
               "id": "TAV-ORD-POST-U05-R-YES-02",
               "speaker": "TAVRI",
               "expression": "PLAYFUL",
-              "text": "“Don’t tell the kings.”"
+              "text": "“Look at us. Two people, one window, no subtext.”"
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -9186,7 +9204,7 @@
         {
           "choiceId": "TAV-ORD-POST-U05-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“No, finish it! ‘Restless and’ what? That was going somewhere.”",
+          "labelText": "“Ooh, my turn. The wind is like the job market: it never tells you which way it’s going.”",
           "outcomeId": "TAV-ORD-POST-U05-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -9195,13 +9213,13 @@
               "id": "TAV-ORD-POST-U05-R-NO-01",
               "speaker": "TAVRI",
               "expression": "NEUTRAL",
-              "text": "“Restless and… fine.”"
+              "text": "“Mm. Very good.”"
             },
             {
               "id": "TAV-ORD-POST-U05-R-NO-02",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She finishes the metaphor. It’s lovely. By then, the wind has moved on."
+              "text": "She nods at your metaphor the way she nods at ambassadors. The breeze moves on without either of you."
             }
           ],
           "internalLabel": "Ordinary incorrect, net +1 half-heart"
@@ -9299,7 +9317,7 @@
               "id": "TAV-ORD-POST-U06-R-NO-01",
               "speaker": "TAVRI",
               "expression": "NEUTRAL",
-              "text": "“A quieter one. Of course.”"
+              "text": "“Quieter. Noted.”"
             },
             {
               "id": "TAV-ORD-POST-U06-R-NO-02",
@@ -9490,7 +9508,7 @@
               "id": "TAV-ORD-PRE-F02-R-YES-02",
               "speaker": "TAVRI",
               "expression": "PLAYFUL",
-              "text": "“The ribbon’s had four compliments. You’re the first to ask about the bread.”"
+              "text": "“Come on, we’re taking the bread’s side. Bring the ribbon. It can finally do something.”"
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -9573,7 +9591,7 @@
         {
           "choiceId": "TAV-ORD-PRE-F03-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Or just print ‘Tavri’ and let them find out the rest.”",
+          "labelText": "“Print draft one. The typo’s the most honest word on it.”",
           "outcomeId": "TAV-ORD-PRE-F03-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -9581,14 +9599,20 @@
             {
               "id": "TAV-ORD-PRE-F03-R-YES-01",
               "speaker": "TAVRI",
-              "expression": "PLAYFUL",
-              "text": "“No adjectives. No warranty. I love it.”"
+              "expression": "SURPRISED",
+              "text": "“Effortlessly delighful.”"
             },
             {
               "id": "TAV-ORD-PRE-F03-R-YES-02",
+              "speaker": "TAVRI",
+              "expression": "PLAYFUL",
+              "text": "“A flaw, in print, on purpose. The clerk will faint.”"
+            },
+            {
+              "id": "TAV-ORD-PRE-F03-R-YES-03",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She crosses out *effortlessly delightful.* It takes her one draft."
+              "text": "She circles the missing *t* and initials it."
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -9596,7 +9620,7 @@
         {
           "choiceId": "TAV-ORD-PRE-F03-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Honestly, keep it. People like knowing what they’re getting.”",
+          "labelText": "“Keep it. People like knowing what they’re getting.”",
           "outcomeId": "TAV-ORD-PRE-F03-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -9639,7 +9663,7 @@
           "id": "TAV-ORD-PRE-U01-L01",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "A courtier carrying a tureen of soup bows to Tavri anyway. His hat keeps going."
+          "text": "A courtier carrying a tureen of soup bows to Tavri. His hat keeps going. The soup, narrowly, does not."
         },
         {
           "id": "TAV-ORD-PRE-U01-L02",
@@ -9671,7 +9695,7 @@
         {
           "choiceId": "TAV-ORD-PRE-U01-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Or it could just be a door. Nobody needs a second act.”",
+          "labelText": "“Or you could let the door retire. It’s had a big day.”",
           "outcomeId": "TAV-ORD-PRE-U01-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -9680,7 +9704,7 @@
               "id": "TAV-ORD-PRE-U01-R-YES-01",
               "speaker": "TAVRI",
               "expression": "SURPRISED",
-              "text": "“Just a door.”"
+              "text": "“Retire the door.”"
             },
             {
               "id": "TAV-ORD-PRE-U01-R-YES-02",
@@ -9798,7 +9822,7 @@
         {
           "choiceId": "TAV-ORD-PRE-U02-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Forget the quill. Has anyone asked the servants which day they want?”",
+          "labelText": "“Has anyone asked the servants which day they want?”",
           "outcomeId": "TAV-ORD-PRE-U02-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -10250,7 +10274,7 @@
         {
           "choiceId": "TAV-ORD-PRE-U06-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Let’s stay right here and find out if it’s the goat.”",
+          "labelText": "“Honestly? Let’s stay right here and find out if it’s the goat.”",
           "outcomeId": "TAV-ORD-PRE-U06-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,

@@ -68,12 +68,18 @@
           "id": "TAV-ORD-POST-U04-R-NO-01",
           "speaker": "TAVRI",
           "expression": "NEUTRAL",
-          "text": "“Bakery. Fine.”"
+          "text": "“Bakery.”"
         },
         {
           "id": "TAV-ORD-POST-U04-R-NO-02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“A fox princess walks into a bakery and asks for a scone with no expectations. They’re out.”"
+        },
+        {
+          "id": "TAV-ORD-POST-U04-R-NO-03",
           "speaker": "NARRATOR",
-          "text": "She finishes the joke. It’s a good ending. She checks your face to see if it was good enough."
+          "text": "She watches your face until you laugh."
         }
       ]
     }

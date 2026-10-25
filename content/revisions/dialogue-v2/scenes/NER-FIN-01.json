@@ -2,65 +2,253 @@
   "sceneId": "NER-FIN-01",
   "title": "A Future She Chooses (first full final proposal)",
   "intro": [
-    { "id": "NER-FIN-001", "speaker": "NARRATOR", "text": "The conversation is over, and Nerelle has not swum away. She rests one hand on the waterside stone." },
-    { "id": "NER-FIN-002", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“You have become good company, for a surface traveler. I do not award that lightly.”" },
-    { "id": "NER-FIN-017", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“My standards include knowing which end of a boat goes in the water.”" },
-    { "id": "NER-FIN-003", "speaker": "PLAYER", "text": "“Both ends, ideally.”" },
-    { "id": "NER-FIN-004", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“You are improving.”" },
-    { "id": "NER-FIN-005", "speaker": "NARRATOR", "text": "She laughs. Then her fin settles against the current, the way it does when she means to stay." },
-    { "id": "NER-FIN-006", "speaker": "NERELLE", "expression": "WORRIED", "text": "“I need to say something before you say whatever you have been rehearsing.”" },
-    { "id": "NER-FIN-007", "speaker": "PLAYER", "text": "“What if I haven’t rehearsed anything?”" },
-    { "id": "NER-FIN-008", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Then this will be our most efficient conversation yet.”" },
-    { "id": "NER-FIN-009", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I have spoken with the people responsible for my duties. Some of the work, I will share.”" },
-    { "id": "NER-FIN-018", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“The duties that are mine, I will keep. And I will go on exploring the surface waterways whenever I wish.”" },
-    { "id": "NER-FIN-010", "speaker": "PLAYER", "text": "“How did that go?”" },
-    { "id": "NER-FIN-011", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“There were many documents. Three council members went noticeably grayer. I counted.”" },
-    { "id": "NER-FIN-012", "speaker": "NERELLE", "expression": "WORRIED", "text": "“We will disagree, sometimes. Some days my people will need me. Some days I will need quiet.”" },
-    { "id": "NER-FIN-019", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“None of that makes me want a life with you any less.”" },
-    { "id": "NER-FIN-013", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I will not leave the ocean to become someone’s idea of a proper bride.”" },
-    { "id": "NER-FIN-020", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“And I will not ask you to give up your life and call it devotion.”" },
-    { "id": "NER-FIN-014", "speaker": "PLAYER", "text": "“Then what do you want?”" },
-    { "id": "NER-FIN-015", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“A partnership. Honest plans. Places to meet where the water reaches the shore. Room to keep learning.”" },
-    { "id": "NER-FIN-016", "speaker": "NARRATOR", "text": "She reaches up from the water and offers her hand, the way one head of state offers it to another." }
+    {
+      "id": "NER-FIN-001",
+      "speaker": "NARRATOR",
+      "text": "The conversation is over, and Nerelle has not swum away. She rests one hand on the waterside stone."
+    },
+    {
+      "id": "NER-FIN-002",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“You have become good company, for a surface traveler. I do not award that lightly.”"
+    },
+    {
+      "id": "NER-FIN-017",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“My standards include knowing which end of a boat goes in the water.”"
+    },
+    {
+      "id": "NER-FIN-003",
+      "speaker": "PLAYER",
+      "text": "“Both ends, ideally.”"
+    },
+    {
+      "id": "NER-FIN-004",
+      "speaker": "NERELLE",
+      "expression": "SURPRISED",
+      "text": "“You are improving.”"
+    },
+    {
+      "id": "NER-FIN-005",
+      "speaker": "NARRATOR",
+      "text": "She laughs. Then her fin settles against the current, the way it does when she means to stay."
+    },
+    {
+      "id": "NER-FIN-006",
+      "speaker": "NERELLE",
+      "expression": "WORRIED",
+      "text": "“I need to say something before you say whatever you have been rehearsing.”"
+    },
+    {
+      "id": "NER-FIN-007",
+      "speaker": "PLAYER",
+      "text": "“What if I haven’t rehearsed anything?”"
+    },
+    {
+      "id": "NER-FIN-008",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“Then this will be our most efficient conversation yet.”"
+    },
+    {
+      "id": "NER-FIN-009",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“I have spoken with the people responsible for my duties. Some of the work, I will share.”"
+    },
+    {
+      "id": "NER-FIN-018",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“The duties that are mine, I will keep. And I will go on exploring the surface waterways whenever I wish.”"
+    },
+    {
+      "id": "NER-FIN-010",
+      "speaker": "PLAYER",
+      "text": "“How did that go?”"
+    },
+    {
+      "id": "NER-FIN-011",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“There were many documents. Three council members went noticeably grayer. I counted.”"
+    },
+    {
+      "id": "NER-FIN-012",
+      "speaker": "NERELLE",
+      "expression": "WORRIED",
+      "text": "“We will disagree, sometimes. Some days my people will need me. Some days I will need quiet.”"
+    },
+    {
+      "id": "NER-FIN-019",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“None of that makes me want a life with you any less.”"
+    },
+    {
+      "id": "NER-FIN-013",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“I will not leave the ocean to become someone’s idea of a proper bride.”"
+    },
+    {
+      "id": "NER-FIN-020",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“And I will not ask you to give up your life and call it devotion.”"
+    },
+    {
+      "id": "NER-FIN-014",
+      "speaker": "PLAYER",
+      "text": "“Then what do you want?”"
+    },
+    {
+      "id": "NER-FIN-015",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“A partnership. Honest plans. Places to meet where the water reaches the shore. Room to keep learning.”"
+    },
+    {
+      "id": "NER-FIN-016",
+      "speaker": "NARRATOR",
+      "text": "She reaches up from the water and offers her hand, the way one head of state offers it to another."
+    }
   ],
   "options": [
     {
       "choiceId": "NER-FIN-C1-EQUAL",
-      "labelText": "“I love your curiosity and how you look after people. You know what matters to you, and I won’t pick your future. Marry me, and we’ll build it together?”",
+      "labelText": "“I love your curiosity, your care for people, and that you know your own mind. Your future’s yours. Marry me, and we’ll build it together?”",
       "branch": [
-        { "id": "NER-FIN-S01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“You really heard every word.”" },
-        { "id": "NER-FIN-S02", "speaker": "PLAYER", "text": "“I tried. I’ll probably need reminders.”" },
-        { "id": "NER-FIN-S03", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Good. I have already prepared several. They are in alphabetical order.”" },
-        { "id": "NER-FIN-S04", "speaker": "NARRATOR", "text": "She looks out at the tide for a moment. It keeps moving. Then she turns back to you." },
-        { "id": "NER-FIN-S05", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Yes, {PLAYER}.”" },
-        { "id": "NER-FIN-S11", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“The ocean is still my home. My duties are still real. And there is room for us, if we keep making it.”" },
-        { "id": "NER-FIN-S06", "speaker": "PLAYER", "text": "“I don’t know every part of what comes next.”" },
-        { "id": "NER-FIN-S07", "speaker": "NERELLE", "expression": "WORRIED", "text": "“Neither do I. I used to think that meant I had failed to plan.”" },
-        { "id": "NER-FIN-S08", "speaker": "PLAYER", "text": "“And now?”" },
-        { "id": "NER-FIN-S09", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Now I think it means we write a few pages together. In waterproof ink.”" },
-        { "id": "NER-FIN-S10", "speaker": "NARRATOR", "text": "She takes your hand across the waterside stone. Hers is cold from the water, and does not let go." }
+        {
+          "id": "NER-FIN-S01",
+          "speaker": "NERELLE",
+          "expression": "SURPRISED",
+          "text": "“You really heard every word.”"
+        },
+        {
+          "id": "NER-FIN-S02",
+          "speaker": "PLAYER",
+          "text": "“I tried. I’ll probably need reminders.”"
+        },
+        {
+          "id": "NER-FIN-S03",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“Good. I have already prepared several. They are in alphabetical order.”"
+        },
+        {
+          "id": "NER-FIN-S04",
+          "speaker": "NARRATOR",
+          "text": "She looks out at the tide for a moment. It keeps moving. Then she turns back to you."
+        },
+        {
+          "id": "NER-FIN-S05",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Yes, {PLAYER}.”"
+        },
+        {
+          "id": "NER-FIN-S11",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“The ocean is still my home. My duties are still real. And there is room for us, if we keep making it.”"
+        },
+        {
+          "id": "NER-FIN-S06",
+          "speaker": "PLAYER",
+          "text": "“I don’t know every part of what comes next.”"
+        },
+        {
+          "id": "NER-FIN-S07",
+          "speaker": "NERELLE",
+          "expression": "WORRIED",
+          "text": "“Neither do I. I used to think that meant I had failed to plan.”"
+        },
+        {
+          "id": "NER-FIN-S08",
+          "speaker": "PLAYER",
+          "text": "“And now?”"
+        },
+        {
+          "id": "NER-FIN-S09",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“Now I think it means we write a few pages together. In waterproof ink.”"
+        },
+        {
+          "id": "NER-FIN-S10",
+          "speaker": "NARRATOR",
+          "text": "She takes your hand across the waterside stone. Hers is cold from the water, and does not let go."
+        }
       ]
     },
     {
       "choiceId": "NER-FIN-C1-TRANSFORM",
       "labelText": "“Marry me, and I’ll find a spell to give you legs. Then none of this has to be complicated.”",
       "branch": [
-        { "id": "NER-FIN-W01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Legs?”" },
-        { "id": "NER-FIN-W02", "speaker": "PLAYER", "text": "“So we could live together on land.”" },
-        { "id": "NER-FIN-W03", "speaker": "NERELLE", "expression": "ANNOYED", "text": "“You heard me tell you who I am. Then you answered with a plan to change it.”" },
-        { "id": "NER-FIN-W04", "speaker": "PLAYER", "text": "“I thought it would make things easier.”" },
-        { "id": "NER-FIN-W05", "speaker": "NERELLE", "expression": "WORRIED", "text": "“Easier for whom?”" },
-        { "id": "NER-FIN-W06", "speaker": "NARRATOR", "text": "She does not say yes. Her hand goes back under the water, though she does not swim away." }
+        {
+          "id": "NER-FIN-W01",
+          "speaker": "NERELLE",
+          "expression": "SURPRISED",
+          "text": "“Legs?”"
+        },
+        {
+          "id": "NER-FIN-W02",
+          "speaker": "PLAYER",
+          "text": "“So we could live together on land.”"
+        },
+        {
+          "id": "NER-FIN-W03",
+          "speaker": "NERELLE",
+          "expression": "ANNOYED",
+          "text": "“You heard me tell you who I am. Then you answered with a plan to change it.”"
+        },
+        {
+          "id": "NER-FIN-W04",
+          "speaker": "PLAYER",
+          "text": "“I thought it would make things easier.”"
+        },
+        {
+          "id": "NER-FIN-W05",
+          "speaker": "NERELLE",
+          "expression": "WORRIED",
+          "text": "“Easier for whom?”"
+        },
+        {
+          "id": "NER-FIN-W06",
+          "speaker": "NARRATOR",
+          "text": "She does not say yes. Her hand goes back under the water, though she does not swim away."
+        }
       ]
     },
     {
       "choiceId": "NER-FIN-C1-SACRIFICE",
       "labelText": "“I’ll give up everything above the water for you. We’ll never have to think about the surface again.”",
       "branch": [
-        { "id": "NER-FIN-P01", "speaker": "NERELLE", "expression": "WORRIED", "text": "“You would give up your whole life because you think I need you to?”" },
-        { "id": "NER-FIN-P02", "speaker": "PLAYER", "text": "“Isn’t that what devotion is?”" },
-        { "id": "NER-FIN-P03", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Not to me. I do not want a love that only works if one of us disappears.”" },
-        { "id": "NER-FIN-P04", "speaker": "NARRATOR", "text": "The tide moves between the quay stones. She says no, and leaves room for you to ask again." }
+        {
+          "id": "NER-FIN-P01",
+          "speaker": "NERELLE",
+          "expression": "WORRIED",
+          "text": "“You would give up your whole life because you think I need you to?”"
+        },
+        {
+          "id": "NER-FIN-P02",
+          "speaker": "PLAYER",
+          "text": "“Isn’t that what devotion is?”"
+        },
+        {
+          "id": "NER-FIN-P03",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Not to me. I do not want a love that only works if one of us disappears.”"
+        },
+        {
+          "id": "NER-FIN-P04",
+          "speaker": "NARRATOR",
+          "text": "The tide moves between the quay stones. She says no, and leaves room for you to ask again."
+        }
       ]
     }
   ]

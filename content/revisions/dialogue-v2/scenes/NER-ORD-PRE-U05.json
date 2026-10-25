@@ -2,27 +2,68 @@
   "sceneId": "NER-ORD-PRE-U05",
   "title": "Wave Notation",
   "intro": [
-    { "id": "NER-ORD-PRE-U05-L01", "speaker": "NARRATOR", "text": "Nerelle draws a long curve on the wet stone with one finger, then adds three short ticks." },
-    { "id": "NER-ORD-PRE-U05-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Current strength, in court notation. What did your world use?”" },
-    { "id": "NER-ORD-PRE-U05-L03", "speaker": "PLAYER", "text": "“Graphs. And arguments about the graphs.”" },
-    { "id": "NER-ORD-PRE-U05-L04", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Ah. The argument. The one scientific instrument found in every civilization.”" },
-    { "id": "NER-ORD-PRE-U05-L05", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Three ticks means a strong current. Four means strong, and *in a mood*.”" }
+    {
+      "id": "NER-ORD-PRE-U05-L01",
+      "speaker": "NARRATOR",
+      "text": "Nerelle draws a long curve on the wet stone with one finger, then adds three short ticks."
+    },
+    {
+      "id": "NER-ORD-PRE-U05-L02",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Current strength, in court notation. What did your world use?”"
+    },
+    {
+      "id": "NER-ORD-PRE-U05-L03",
+      "speaker": "PLAYER",
+      "text": "“Graphs. And arguments about the graphs.”"
+    },
+    {
+      "id": "NER-ORD-PRE-U05-L04",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“Ah. The argument. The one scientific instrument found in every civilization.”"
+    },
+    {
+      "id": "NER-ORD-PRE-U05-L05",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Three ticks means strong. *In a mood* has its own mark.”"
+    }
   ],
   "options": [
     {
       "choiceId": "NER-ORD-PRE-U05-C1-YES",
       "labelText": "“What’s the mark for ‘in a mood’?”",
       "branch": [
-        { "id": "NER-ORD-PRE-U05-R-YES-01", "speaker": "NARRATOR", "text": "She draws a tight, irritable little spiral." },
-        { "id": "NER-ORD-PRE-U05-R-YES-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“That one. We also use it for the treasury minister.”" }
+        {
+          "id": "NER-ORD-PRE-U05-R-YES-01",
+          "speaker": "NARRATOR",
+          "text": "She draws a tight, irritable little spiral."
+        },
+        {
+          "id": "NER-ORD-PRE-U05-R-YES-02",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“That one. We also use it for the treasury minister.”"
+        }
       ]
     },
     {
       "choiceId": "NER-ORD-PRE-U05-C1-NO",
       "labelText": "“I could turn these into a proper graph for you. Axes, labels, the works.”",
       "branch": [
-        { "id": "NER-ORD-PRE-U05-R-NO-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“How generous. Which axis is the mood on?”" },
-        { "id": "NER-ORD-PRE-U05-R-NO-02", "speaker": "NARRATOR", "text": "You do not have an axis for the mood. While you think about it, the curve dries off the stone." }
+        {
+          "id": "NER-ORD-PRE-U05-R-NO-01",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“How generous. Which axis is the mood on?”"
+        },
+        {
+          "id": "NER-ORD-PRE-U05-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "You do not have an axis for the mood. While you think about it, the curve dries off the stone."
+        }
       ]
     }
   ]

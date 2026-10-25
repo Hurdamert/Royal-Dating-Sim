@@ -2,27 +2,68 @@
   "sceneId": "NER-ORD-POST-F02",
   "title": "Festival Ribbon",
   "intro": [
-    { "id": "NER-ORD-POST-F02-L01", "speaker": "NARRATOR", "text": "A loose festival ribbon bobs against a post, trailing a long gold streamer into the water." },
-    { "id": "NER-ORD-POST-F02-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Every festival, the surface ties ribbons to everything. Every festival, the ribbons try to escape.”" },
-    { "id": "NER-ORD-POST-F02-L03", "speaker": "PLAYER", "text": "“Should we rescue it?”" },
-    { "id": "NER-ORD-POST-F02-L04", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“That depends. Is it likely to tangle a boat?”" },
-    { "id": "NER-ORD-POST-F02-L05", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Last year one caught a rowing boat by the oar. The rower spent an hour going festively in circles.”" }
+    {
+      "id": "NER-ORD-POST-F02-L01",
+      "speaker": "NARRATOR",
+      "text": "A loose festival ribbon bobs against a post, trailing a long gold streamer into the water."
+    },
+    {
+      "id": "NER-ORD-POST-F02-L02",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Every festival, the surface ties ribbons to everything. Every festival, the ribbons try to escape.”"
+    },
+    {
+      "id": "NER-ORD-POST-F02-L03",
+      "speaker": "PLAYER",
+      "text": "“Should we rescue it?”"
+    },
+    {
+      "id": "NER-ORD-POST-F02-L04",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“That depends. Is it likely to tangle a boat?”"
+    },
+    {
+      "id": "NER-ORD-POST-F02-L05",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“Last year one caught a rowing boat by the oar. The rower spent an hour going festively in circles.”"
+    }
   ],
   "options": [
     {
       "choiceId": "NER-ORD-POST-F02-C1-YES",
       "labelText": "“Then it comes out. That rower has suffered enough.”",
       "branch": [
-        { "id": "NER-ORD-POST-F02-R-YES-01", "speaker": "NARRATOR", "text": "She hooks the ribbon with one fin and flips it up onto the stones at your feet." },
-        { "id": "NER-ORD-POST-F02-R-YES-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“There. The celebrating is yours. Please do it somewhere dry.”" }
+        {
+          "id": "NER-ORD-POST-F02-R-YES-01",
+          "speaker": "NARRATOR",
+          "text": "She hooks the ribbon with one fin and flips it up onto the stones at your feet."
+        },
+        {
+          "id": "NER-ORD-POST-F02-R-YES-02",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“There. The celebrating is yours. Please do it somewhere dry.”"
+        }
       ]
     },
     {
       "choiceId": "NER-ORD-POST-F02-C1-NO",
-      "labelText": "“Leave it, it’s pretty. Honestly, the water could use a few more.”",
+      "labelText": "“Leave it, it’s pretty. The water could use a few more.”",
       "branch": [
-        { "id": "NER-ORD-POST-F02-R-NO-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“The sea already has a rather successful decorating department.”" },
-        { "id": "NER-ORD-POST-F02-R-NO-02", "speaker": "NARRATOR", "text": "Out on the water, a small boat begins to turn in a slow, festive circle." }
+        {
+          "id": "NER-ORD-POST-F02-R-NO-01",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“The sea already has a rather successful decorating department.”"
+        },
+        {
+          "id": "NER-ORD-POST-F02-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "Out on the water, a small boat begins to turn in a slow, festive circle."
+        }
       ]
     }
   ]

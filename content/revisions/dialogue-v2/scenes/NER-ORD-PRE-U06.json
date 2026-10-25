@@ -2,28 +2,74 @@
   "sceneId": "NER-ORD-PRE-U06",
   "title": "The Upside-Down City",
   "intro": [
-    { "id": "NER-ORD-PRE-U06-L01", "speaker": "NARRATOR", "text": "The towers above the water hang upside down in it, wobbling slightly." },
-    { "id": "NER-ORD-PRE-U06-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“From down here, your city appears to be built underneath mine. Everyone is walking on the ceiling.”" },
-    { "id": "NER-ORD-PRE-U06-L03", "speaker": "PLAYER", "text": "“Does it look strange?”" },
-    { "id": "NER-ORD-PRE-U06-L04", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“It looks very well run. Nobody in that one has ever asked me to sign anything.”" },
-    { "id": "NER-ORD-PRE-U06-L05", "speaker": "NARRATOR", "text": "A ripple passes through. The towers shiver apart and slowly reassemble." },
-    { "id": "NER-ORD-PRE-U06-L06", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Ah. Renovations.”" }
+    {
+      "id": "NER-ORD-PRE-U06-L01",
+      "speaker": "NARRATOR",
+      "text": "The towers above the water hang upside down in it, wobbling slightly."
+    },
+    {
+      "id": "NER-ORD-PRE-U06-L02",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“From down here, your city appears to be built underneath mine. Everyone is walking on the ceiling.”"
+    },
+    {
+      "id": "NER-ORD-PRE-U06-L03",
+      "speaker": "PLAYER",
+      "text": "“Does it look strange?”"
+    },
+    {
+      "id": "NER-ORD-PRE-U06-L04",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“It looks very well run. Nobody in that one has ever asked me to sign anything.”"
+    },
+    {
+      "id": "NER-ORD-PRE-U06-L05",
+      "speaker": "NARRATOR",
+      "text": "A ripple passes through. The towers shiver apart and slowly reassemble."
+    },
+    {
+      "id": "NER-ORD-PRE-U06-L06",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Ah. Renovations.”"
+    }
   ],
   "options": [
     {
       "choiceId": "NER-ORD-PRE-U06-C1-YES",
       "labelText": "“Hold on. Let me look from your height.”",
       "branch": [
-        { "id": "NER-ORD-PRE-U06-R-YES-01", "speaker": "NARRATOR", "text": "You kneel at the edge until your chin is nearly touching the water. The upside-down towers sway in front of you." },
-        { "id": "NER-ORD-PRE-U06-R-YES-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Welcome. From here, you are taller than the palace.”" }
+        {
+          "id": "NER-ORD-PRE-U06-R-YES-01",
+          "speaker": "NARRATOR",
+          "text": "You kneel at the edge until your chin is nearly touching the water. The upside-down towers sway in front of you."
+        },
+        {
+          "id": "NER-ORD-PRE-U06-R-YES-02",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“Welcome. From here, you’re taller than the palace.”"
+        }
       ]
     },
     {
       "choiceId": "NER-ORD-PRE-U06-C1-NO",
       "labelText": "“Technically the real city’s up here. That’s just light bouncing.”",
       "branch": [
-        { "id": "NER-ORD-PRE-U06-R-NO-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Thank you. We have light under the sea as well. It is how we see boats coming.”" },
-        { "id": "NER-ORD-PRE-U06-R-NO-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“I preferred the upside-down city. It never explains things.”" }
+        {
+          "id": "NER-ORD-PRE-U06-R-NO-01",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Thank you. We have light under the sea as well. It is how we see boats coming.”"
+        },
+        {
+          "id": "NER-ORD-PRE-U06-R-NO-02",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“I preferred the upside-down city. It never explains things.”"
+        }
       ]
     }
   ]

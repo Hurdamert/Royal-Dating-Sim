@@ -2,27 +2,68 @@
   "sceneId": "KAE-ORD-PRE-F03",
   "title": "Room for Wings",
   "intro": [
-    { "id": "KAE-ORD-PRE-F03-L01", "speaker": "NARRATOR", "text": "Kaedra settles beside a railing. Her folded wings fit with one finger’s width to spare. She checks this with one finger." },
-    { "id": "KAE-ORD-PRE-F03-L02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Furniture designers continue to act surprised by the existence of wings.”" },
-    { "id": "KAE-ORD-PRE-F03-L03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I spent one entire banquet with a wing caught in the arm of a chair. I was praised for my stillness.”" },
-    { "id": "KAE-ORD-PRE-F03-L04", "speaker": "PLAYER", "text": "“Want me to find somewhere with more room?”" },
-    { "id": "KAE-ORD-PRE-F03-L05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Sometimes I will. I will tell you which times.”" }
+    {
+      "id": "KAE-ORD-PRE-F03-L01",
+      "speaker": "NARRATOR",
+      "text": "Kaedra settles beside a railing. Her folded wings fit with one finger’s width to spare. She checks this with one finger."
+    },
+    {
+      "id": "KAE-ORD-PRE-F03-L02",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“Furniture designers continue to act surprised by the existence of wings.”"
+    },
+    {
+      "id": "KAE-ORD-PRE-F03-L03",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“I spent one entire banquet with a wing caught in the arm of a chair. I was praised for my stillness.”"
+    },
+    {
+      "id": "KAE-ORD-PRE-F03-L04",
+      "speaker": "PLAYER",
+      "text": "“Want me to find somewhere with more room?”"
+    },
+    {
+      "id": "KAE-ORD-PRE-F03-L05",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“Sometimes. I will tell you which times.”"
+    }
   ],
   "options": [
     {
       "choiceId": "KAE-ORD-PRE-F03-C1-YES",
       "labelText": "“Deal. You call it. Does this railing pass?”",
       "branch": [
-        { "id": "KAE-ORD-PRE-F03-R-YES-01", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“It passes. One finger to spare.”" },
-        { "id": "KAE-ORD-PRE-F03-R-YES-02", "speaker": "NARRATOR", "text": "She leans back. The railing creaks once, then decides to cooperate." }
+        {
+          "id": "KAE-ORD-PRE-F03-R-YES-01",
+          "speaker": "KAEDRA",
+          "expression": "PLAYFUL",
+          "text": "“It passes. One finger to spare.”"
+        },
+        {
+          "id": "KAE-ORD-PRE-F03-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She leans back. The railing creaks once, then decides to cooperate."
+        }
       ]
     },
     {
       "choiceId": "KAE-ORD-PRE-F03-C1-NO",
       "labelText": "“Could you tuck them in a bit more? Might be comfier.”",
       "branch": [
-        { "id": "KAE-ORD-PRE-F03-R-NO-01", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“This is tucked.”" },
-        { "id": "KAE-ORD-PRE-F03-R-NO-02", "speaker": "NARRATOR", "text": "She sits forward, away from the railing, and stays that way." }
+        {
+          "id": "KAE-ORD-PRE-F03-R-NO-01",
+          "speaker": "KAEDRA",
+          "expression": "ANNOYED",
+          "text": "“This is tucked.”"
+        },
+        {
+          "id": "KAE-ORD-PRE-F03-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She sits forward, away from the railing, and stays that way."
+        }
       ]
     }
   ]

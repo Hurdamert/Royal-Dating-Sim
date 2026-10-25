@@ -44,7 +44,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NARRATOR:** Last night, you were a software engineer reading rejection email number forty-one.
 - **NARRATOR:** It began with *Unfortunately*. They always begin with *Unfortunately*.
 - **PLAYER:** “I’m starting to think the job market was balanced by a game designer who hates me personally.”
-- **NARRATOR:** Then the world folded like a badly tested menu, and you fell out of it into a kingdom with more castles than entry-level openings.
+- **NARRATOR:** Then the world folded like a badly tested dropdown, and you fell out of it into a kingdom with more castles than entry-level openings.
 - **NARRATOR:** The first thing you see is a royal notice nailed to a wall: *THE COURTSHIP SEASON IS OPEN. TWENTY-EIGHT DAYS. ONE PRINCESS. GENUINE AFFECTION ONLY. NO EXTENSIONS.*
 - **PLAYER:** “I was hoping for a recruiter, but sure.”
 - **NARRATOR:** Underneath, in smaller letters: *Improve yourself. Learn her weekly schedule. Remember that the princess is allowed to say no.*
@@ -164,12 +164,11 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **KAEDRA [NEUTRAL]:** “The story was foolish. The door was very real. I take that part seriously.”
 - **NARRATOR:** Down the shaded path, the creature trundles out of sight. Kaedra notices you are still standing beside her.
 
-**Option `KAE-POST-C1-COMPASSION` (correct):** PLAYER: “You calmed everyone down and got the little one home. I wish that was the story, instead of two monsters.”
+**Option `KAE-POST-C1-COMPASSION` (correct):** PLAYER: “You calmed everyone down and got the little one home. Instead they made monsters out of you both.”
   - **KAEDRA [SURPRISED]:** “That is more or less what I was trying to do.”
   - **PLAYER:** “The sandwiches may disagree.”
   - **KAEDRA [PLAYFUL]:** “Their concerns have been entered into the record.”
-  - **NARRATOR:** She smiles, and forgets to check who is watching.
-  - **KAEDRA [NEUTRAL]:** “I cannot control every story about me. I can control what I do in them.”
+  - **NARRATOR:** She smiles. The messenger sees it and starts revising the rumor on the spot.
   - **KAEDRA [NEUTRAL]:** “It helps that someone noticed.”
   - **NARRATOR:** Somewhere down the shaded path, a sandwich is left unattended for the last time.
 
@@ -250,7 +249,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **KAEDRA [PLAYFUL]:** “Correct. We must not confuse the two departments.”
   - **NARRATOR:** Kaedra explains the clasp in four calm sentences. The tailor has it fixed before the prince finishes posing.
   - **PRINCE:** “Reinforced collars! The latest thing at court! I have always said so!”
-  - **KAEDRA [NEUTRAL]:** “I can speak for myself.”
+  - **KAEDRA [NEUTRAL]:** “I could have done that alone.”
   - **KAEDRA [PLAYFUL]:** “It was easier with someone holding the door.”
 
 **Option `KAE-PRE-C1-JOKE` (wrong):** PLAYER: “Oh, wear it. Do your legendary terrifying pose. It’d be hilarious.”
@@ -332,7 +331,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **KAEDRA [PLAYFUL]:** “If this is a proposal, please do not begin with a list of my strengths. I have heard it. Usually with trumpets.”
 - **NARRATOR:** You leave the three pages in your pocket. One honest answer will have to do.
 
-**Option `KAE-FIN-C1-EQUAL` (correct):** PLAYER: “I love your strength, and the gentleness you choose when nobody’s watching. Your decisions stay yours. I want an ordinary life with you, and the extraordinary one. Marry me, as my equal?”
+**Option `KAE-FIN-C1-EQUAL` (correct):** PLAYER: “No list. I love you strong, tired, and gentle when no one’s looking. Your choices stay yours. Marry me, and share an ordinary life as equals?”
   - **KAEDRA [SURPRISED]:** “An ordinary life?”
   - **PLAYER:** “Ordinary by this kingdom’s standards. There’ll still be royal speeches.”
   - **KAEDRA [PLAYFUL]:** “Acceptable. If I may object to the page count.”
@@ -353,7 +352,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 **Option `KAE-FIN-C1-CARETAKER` (wrong):** PLAYER: “I’ll take over your duties and make sure you never make another mistake. Marry me, and you won’t have to be strong anymore.”
   - **KAEDRA [ANNOYED]:** “You have misunderstood me. I like being strong.”
   - **PLAYER:** “I wanted to make things easier.”
-  - **KAEDRA [WORRIED]:** “I asked for somewhere to rest. You are offering to take my life away and call it kindness.”
+  - **KAEDRA [WORRIED]:** “I asked for somewhere to rest. You are offering to take over my life.”
   - **NARRATOR:** Kaedra steps back and studies the offer like a badly fastened clasp. Then she declines it.
 
 </td></tr></table>
@@ -389,7 +388,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **KAEDRA [WORRIED]:** “I do not want to be a legend you kneel to. Or to have a guardian appointed to protect me from myself.”
 - **KAEDRA [WORRIED]:** “Can you see a life with the actual person standing here?”
 
-**Option `KAE-FR-C1-PARTNER` (correct):** PLAYER: “Yes. I was wrong to make you a symbol or a project. I love who you actually are: capable, kind, sometimes tired, free to choose. Marry me, and let’s both speak honestly?”
+**Option `KAE-FR-C1-PARTNER` (correct):** PLAYER: “Yes. I made you a symbol, then a project. Wrong both times. I love the real you: capable, kind, sometimes tired, your own boss. Marry me?”
   - **KAEDRA [SURPRISED]:** “You have learned to make a short speech.”
   - **PLAYER:** “I can make it longer.”
   - **KAEDRA [PLAYFUL]:** “Please do not.”
@@ -482,14 +481,13 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **NARRATOR:** Later, under an arch within the Palace Court, Kaedra stands with her arms folded hard, holding herself steady.
   - **KAEDRA [WORRIED]:** “When it went sideways, I knew how to stop it.”
   - **KAEDRA [WORRIED]:** “I also knew what they would think. That I had finally become the danger they were waiting for.”
-  - **PLAYER:** “It caught you by surprise. You stopped it anyway. Then you checked every face in the front row.”
-  - **PLAYER:** “And you owned it before anyone asked. So you’re shaken. That’s one bad minute out of a lot of good ones.”
+  - **PLAYER:** “You stopped it in a second, then counted the front row. I watched.”
   - **KAEDRA [NEUTRAL]:** “They ask me to be a shield. Nobody has written the regulations for a shield that gets frightened.”
   - **KAEDRA [WORRIED]:** “I thought you might come here to admire the spectacle.”
   - **KAEDRA [WORRIED]:** “Or to tell me I need protecting from myself.”
-  - **PLAYER:** “I came because I care how you feel. What happens next is up to you.”
+  - **PLAYER:** “I came for you, not the spectacle. What happens next is yours.”
   - **NARRATOR:** The line of her jaw loosens. She lets out a long, slow breath.
-  - **KAEDRA [PLAYFUL]:** “That is an alarmingly sensible answer. I may have to invite you to future ceremonies. As a precaution.”
+  - **KAEDRA [PLAYFUL]:** “That is an unreasonably sensible answer. I may have to invite you to future ceremonies. As a precaution.”
   - **PLAYER:** “Do they come with fewer speeches?”
   - **KAEDRA [NEUTRAL]:** “I do not make promises I cannot keep.”
   - **KAEDRA [NEUTRAL]:** “But stay a little longer?”
@@ -502,7 +500,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **KAEDRA [WORRIED]:** “I know. You meant the bigger one as a compliment.”
 
 **Option `KAE-MID-C1-MANAGE` (wrong):** PLAYER: “Stand down. I’ll decide when it’s safe for you to use magic again.”
-  - **KAEDRA [ANNOYED]:** “Declaring yourself in charge of me does not make you responsible for me.”
+  - **KAEDRA [ANNOYED]:** “You are not in charge of me. Help them.”
   - **NARRATOR:** She turns to the attendants. The aisle is clear in under a minute, and the sigil stays dark.
   - **KAEDRA [NEUTRAL]:** “I can account for what happened. You could have helped the people at the door.”
   - **PLAYER:** “You’re right. I spoke over you.”
@@ -542,14 +540,14 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **KAEDRA [WORRIED]:** “So have I. I needed help making space for people to leave.”
 - **KAEDRA [WORRIED]:** “And someone who could see I was frightened, without deciding what that made me.”
 
-**Option `KAE-MR-C1-RECOGNIZE` (correct):** PLAYER: “I missed what mattered. You kept everyone safe, and I should’ve helped make room. I’m sorry I put your feelings and choices second. I’d like to listen now.”
+**Option `KAE-MR-C1-RECOGNIZE` (correct):** PLAYER: “I missed it. You kept everyone safe, and I should have helped clear the room. I’m sorry I put your choices second. I’m listening now.”
   - **KAEDRA [SURPRISED]:** “You came back to say that without an audience.”
   - **PLAYER:** “I figured you’d want fewer witnesses.”
   - **KAEDRA [PLAYFUL]:** “A correct observation. Keep making them.”
   - **NARRATOR:** She rests her hand against yours. It is a strong hand, and she is being careful with it on purpose.
   - **KAEDRA [NEUTRAL]:** “I would like to talk again. As myself. The guardian can wait outside.”
 
-**Option `KAE-MR-C1-EXCUSE` (wrong):** PLAYER: “Honestly, everyone overreacted. It was one spark. Can we just forget it?”
+**Option `KAE-MR-C1-EXCUSE` (wrong):** PLAYER: “Everyone overreacted. It was one spark. Can we just forget it?”
   - **KAEDRA [NEUTRAL]:** “One spark. Yes. I was the one holding it.”
   - **PLAYER:** “I was trying to help.”
   - **KAEDRA [WORRIED]:** “Then let me tell you what hurt, before you decide that nothing did.”
@@ -581,8 +579,8 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **PLAYER:** “And?”
 - **KAEDRA [NEUTRAL]:** “Undecided. This is a good silence. The joke would have to be better.”
 
-**Option `KAE-ORD-POST-F01-C1-YES` (correct):** PLAYER: “No rush. It’s a good silence.”
-  - **KAEDRA [NEUTRAL]:** “It is.”
+**Option `KAE-ORD-POST-F01-C1-YES` (correct):** PLAYER: “Take your time. I’ll rate it when it lands.”
+  - **KAEDRA [NEUTRAL]:** “Out of ten. Agreed.”
   - **NARRATOR:** The silence goes on. A while later, out of nowhere, she snorts at her own joke. She does not explain it.
 
 **Option `KAE-ORD-POST-F01-C1-NO` (wrong):** PLAYER: “Go on, tell it. I could use a laugh.”
@@ -654,7 +652,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **NARRATOR:** She cuts the next sandwich straight across and hands you half. Then she cuts your half corner to corner.
 
 **Option `KAE-ORD-POST-F03-C1-NO` (wrong):** PLAYER: “You know what, you’re right. Straight across, then.”
-  - **KAEDRA [ANNOYED]:** “No. You were wrong with conviction. I was enjoying it.”
+  - **KAEDRA [ANNOYED]:** “No. Defend the diagonal. I was enjoying it.”
   - **NARRATOR:** She cuts the next sandwich corner to corner and waits for you to object.
 
 </td></tr></table>
@@ -681,14 +679,14 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **KAEDRA [NEUTRAL]:** “A logistical nightmare. Where would they all sleep?”
 - **KAEDRA [NEUTRAL]:** “Also the heart of a lion and the eyes of a hawk. I am becoming a menagerie.”
 - **PLAYER:** “Does it mention anyone else?”
-- **KAEDRA [NEUTRAL]:** “There were eleven of us. The lion got the credit.”
+- **KAEDRA [NEUTRAL]:** “There were seven of us. The lion got the credit.”
 
-**Option `KAE-ORD-POST-U01-C1-YES` (correct):** PLAYER: “Write back. Name the other ten. No lions.”
+**Option `KAE-ORD-POST-U01-C1-YES` (correct):** PLAYER: “Write back. Name the other six. No lions.”
   - **KAEDRA [PLAYFUL]:** “No lions. Agreed.”
-  - **NARRATOR:** She is already writing. The reply runs to two pages: ten names, and a sentence about each.
+  - **NARRATOR:** She is already writing. The reply runs to two pages: six names, and a sentence about each.
 
 **Option `KAE-ORD-POST-U01-C1-NO` (wrong):** PLAYER: “Frame it. Seriously. People should see this.”
-  - **KAEDRA [ANNOYED]:** “Framed. Above the ten people it forgot.”
+  - **KAEDRA [ANNOYED]:** “Framed. Above the six people it forgot.”
   - **NARRATOR:** She folds the letter around its enormous seal and puts it away.
 
 </td></tr></table>
@@ -751,7 +749,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 **Option `KAE-ORD-POST-U03-C1-YES` (correct):** PLAYER: “I saw that, though. Very smooth. He has no idea.”
   - **KAEDRA [SURPRISED]:** “You were watching my hands.”
-  - **KAEDRA [PLAYFUL]:** “A dangerously attentive companion. I will have to keep an eye on you.”
+  - **KAEDRA [PLAYFUL]:** “Noted. I will have to keep an eye on you.”
 
 **Option `KAE-ORD-POST-U03-C1-NO` (wrong):** PLAYER: “Next time, do it where he can see. You should get some credit.”
   - **KAEDRA [WORRIED]:** “Then he would know. And he would stop coming over to talk about nothing.”
@@ -789,7 +787,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **KAEDRA [NEUTRAL]:** “You are welcome.”
   - **KAEDRA [PLAYFUL]:** “That was easier. I could get used to it.”
 
-**Option `KAE-ORD-POST-U04-C1-NO` (wrong):** PLAYER: “Honestly, the old way was kind of cool. Nobody messed with you.”
+**Option `KAE-ORD-POST-U04-C1-NO` (wrong):** PLAYER: “The old way was kind of cool, though. Nobody messed with you.”
   - **KAEDRA [NEUTRAL]:** “Very cool. Nobody stopped to talk, either.”
 
 **Option `KAE-ORD-POST-U04-C1-OFF` (offensive):** PLAYER: “Enjoy it. Nobody thanks a monster twice.”
@@ -915,20 +913,20 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 </td><td>
 
-- **KAEDRA [NEUTRAL]:** “Four patrols. Eleven hours. Nothing happened.”
+- **KAEDRA [NEUTRAL]:** “Four patrols. Nine hours. Nothing happened.”
 - **NARRATOR:** She folds the security report into precise thirds, then unfolds it to read it again.
 - **KAEDRA [PLAYFUL]:** “It may be the finest document I have ever signed.”
 - **PLAYER:** “What’s the best part?”
-- **KAEDRA [NEUTRAL]:** “Page two. A suspicious noise was investigated. It was a goose.”
-- **KAEDRA [NEUTRAL]:** “The goose was released without charge.”
+- **KAEDRA [NEUTRAL]:** “Page two. A suspicious noise was investigated. It was a heron.”
+- **KAEDRA [NEUTRAL]:** “The heron was released without charge.”
 
-**Option `KAE-ORD-PRE-F02-C1-YES` (correct):** PLAYER: “That’s excellent work. Frame the goose part.”
-  - **KAEDRA [SURPRISED]:** “Nobody has ever asked about page two.”
+**Option `KAE-ORD-PRE-F02-C1-YES` (correct):** PLAYER: “That’s excellent work. Frame the heron part.”
+  - **KAEDRA [PLAYFUL]:** “Page two, framed. The heron will be insufferable.”
   - **NARRATOR:** She tucks the report inside her collar. It is not going back to the archive.
 
 **Option `KAE-ORD-PRE-F02-C1-NO` (wrong):** PLAYER: “Shame, though. A bit of action would’ve made a better story.”
   - **KAEDRA [NEUTRAL]:** “I am employed to prevent better stories.”
-  - **NARRATOR:** She files the report with the others. The goose goes unappreciated.
+  - **NARRATOR:** She files the report with the others. The heron goes unappreciated.
 
 </td></tr></table>
 
@@ -953,7 +951,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **KAEDRA [NEUTRAL]:** “Furniture designers continue to act surprised by the existence of wings.”
 - **KAEDRA [NEUTRAL]:** “I spent one entire banquet with a wing caught in the arm of a chair. I was praised for my stillness.”
 - **PLAYER:** “Want me to find somewhere with more room?”
-- **KAEDRA [NEUTRAL]:** “Sometimes I will. I will tell you which times.”
+- **KAEDRA [NEUTRAL]:** “Sometimes. I will tell you which times.”
 
 **Option `KAE-ORD-PRE-F03-C1-YES` (correct):** PLAYER: “Deal. You call it. Does this railing pass?”
   - **KAEDRA [PLAYFUL]:** “It passes. One finger to spare.”
@@ -1029,12 +1027,12 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **KAEDRA [NEUTRAL]:** “That it is ‘a matter of ongoing concern.’ There is an appendix.”
 - **KAEDRA [NEUTRAL]:** “Two members have since tripped on it. They have requested a fifth meeting.”
 
-**Option `KAE-ORD-PRE-U02-C1-YES` (correct):** PLAYER: “Skip the fifth meeting. Who actually has a hammer?”
+**Option `KAE-ORD-PRE-U02-C1-YES` (correct):** PLAYER: “Skip the fifth meeting. Who has a hammer?”
   - **KAEDRA [PLAYFUL]:** “The carpenters. They have been waiting since the second meeting.”
   - **KAEDRA [NEUTRAL]:** “I will tell them the committee approved it. The committee can find out afterward.”
 
-**Option `KAE-ORD-PRE-U02-C1-NO` (wrong):** PLAYER: “Honestly? That’s a beautifully bound report.”
-  - **KAEDRA [NEUTRAL]:** “It is. I will read it aloud to the stair.”
+**Option `KAE-ORD-PRE-U02-C1-NO` (wrong):** PLAYER: “Can we take a moment to admire the binding?”
+  - **KAEDRA [NEUTRAL]:** “The binding is excellent. I will read it aloud to the stair.”
 
 </td></tr></table>
 
@@ -1089,7 +1087,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 </td><td>
 
-- **NARRATOR:** Kaedra warms her hands near a lantern. A passer-by carrying a stack of papers takes the long way around her.
+- **NARRATOR:** Kaedra warms her hands near a lantern. A passer-by carrying a stack of papers swerves wide of her.
 - **KAEDRA [NEUTRAL]:** “There is a rumor that I set buildings alight by sneezing.”
 - **PLAYER:** “Is it true?”
 - **KAEDRA [NEUTRAL]:** “Only if the building is made of exceptionally nervous paper.”
@@ -1130,9 +1128,9 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **KAEDRA [NEUTRAL]:** “*A good bridge flexes.* I submitted it. They said it was not inspiring.”
 - **KAEDRA [PLAYFUL]:** “Neither is a bridge in a river.”
 
-**Option `KAE-ORD-PRE-U05-C1-YES` (correct):** PLAYER: “A bridge bends because people are walking on it.”
-  - **KAEDRA [SURPRISED]:** “Yours is better.”
-  - **KAEDRA [PLAYFUL]:** “I will submit it under your name. Then you can be told it is uninspiring.”
+**Option `KAE-ORD-PRE-U05-C1-YES` (correct):** PLAYER: “Carve the load rating. Nothing’s more inspiring than a number you can trust.”
+  - **KAEDRA [SURPRISED]:** “*Rated for four hundred people and one cart.*”
+  - **KAEDRA [PLAYFUL]:** “I would stand under that.”
 
 **Option `KAE-ORD-PRE-U05-C1-NO` (wrong):** PLAYER: “I kind of like it, though. Never bend. Very you.”
   - **KAEDRA [WORRIED]:** “Very me.”
@@ -1164,12 +1162,13 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **PLAYER:** “Who actually fixed the gate?”
 - **KAEDRA [NEUTRAL]:** “The hinge-oiler. He did most of it. Nobody has asked his name.”
 
-**Option `KAE-ORD-PRE-U06-C1-YES` (correct):** PLAYER: “Then announce it in a normal voice, and put the hinge-oiler in it.”
-  - **KAEDRA [PLAYFUL]:** “His name is Tobble. I asked.”
-  - **NARRATOR:** The announcement goes out in a normal voice, naming Tobble. One official looks physically pained by the absence of trumpets.
+**Option `KAE-ORD-PRE-U06-C1-YES` (correct):** PLAYER: “Just read it out the way you said it to me. ‘It opens. It closes. It passed.’”
+  - **KAEDRA [NEUTRAL]:** “Very well.”
+  - **NARRATOR:** She takes the sheet and reads it out in one breath, then adds: *“Hinges by Tobble.”*
+  - **NARRATOR:** One official looks physically pained by the absence of trumpets.
 
-**Option `KAE-ORD-PRE-U06-C1-NO` (wrong):** PLAYER: “You did the inspection. You should announce it. Take the credit.”
-  - **KAEDRA [PLAYFUL]:** “Then there would be three of us doing vocal exercises.”
+**Option `KAE-ORD-PRE-U06-C1-NO` (wrong):** PLAYER: “Let them have their trumpets. It’s a big moment for a gate.”
+  - **KAEDRA [NEUTRAL]:** “It is a medium moment for a gate.”
   - **NARRATOR:** The heroic announcement goes ahead, with trumpets. The hinge-oiler is not in it.
 
 </td></tr></table>
@@ -1206,7 +1205,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NARRATOR:** Someone has made a seating chart for a celebration where half the guests have no use for seats. It is on its ninth revision.
 - **PLAYER:** “I think the seating chart has declared war on geometry.”
 - **NERELLE [PLAYFUL]:** “Three times I have told them. Currents are not assigned tables.”
-- **NARRATOR:** Nerelle waits in the water, in the same high-collared, long-sleeved pearl-and-ocean-blue royal garment she always wears.
+- **NARRATOR:** Nerelle waits in the water at the head of the channel.
 - **NARRATOR:** Her tail keeps time under the surface. Nobody has brought a spell.
 - **NERELLE [NEUTRAL]:** “Before we begin, an announcement. I have arranged my duties with the council.”
 - **NERELLE [NEUTRAL]:** “I will go on serving the ocean court. I will also go on making journeys, whenever I see fit.”
@@ -1217,15 +1216,15 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NERELLE [SURPRISED]:** “You prepared a speech?”
 - **PLAYER:** “Only twelve pages. I cut the appendix.”
 - **NERELLE [PLAYFUL]:** “How merciful.”
-- **NARRATOR:** Then come the vows. You both promise to ask, and to listen, and to tell each other the truth.
-- **NARRATOR:** And to keep meeting where the land runs into the sea.
+- **NARRATOR:** Then come the vows.
+- **NERELLE [NEUTRAL]:** “I promise to ask before I decide for both of us. And to keep meeting you where the land runs into the sea.”
 - **NERELLE [NEUTRAL]:** “I choose you, {PLAYER}. And my people. And my home. And every question I have not asked yet.”
 - **PLAYER:** “I’m yours, Nerelle. Keep telling me when I’m wrong about a current.”
-- **NERELLE [PLAYFUL]:** “Then it will be a long marriage. You are wrong about currents quite often.”
+- **NERELLE [PLAYFUL]:** “Then it’ll be a long marriage. You’re wrong about currents quite often.”
 - **NARRATOR:** Later, beside the Gardens canal, Nerelle drifts in the water while you sit on the bank with your feet in it beside her.
 - **PLAYER:** “Do you think we planned enough?”
 - **NERELLE [NEUTRAL]:** “Enough to begin.”
-- **NERELLE [PLAYFUL]:** “Also, your foot is in the wrong current. It is about to visit the sea court without you.”
+- **NERELLE [PLAYFUL]:** “Also, your foot is in the wrong current. It’s about to visit the sea court without you.”
 
 </td></tr></table>
 
@@ -1277,7 +1276,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NERELLE [PLAYFUL]:** “Welcome to the Moonwater Festival. Officially, the lanterns honor those who guided us home.”
 - **NERELLE [NEUTRAL]:** “Unofficially, everyone enjoys making things float, and then we call it solemn.”
 - **PLAYER:** “Both can be true.”
-- **NERELLE [SURPRISED]:** “Exactly. You are becoming dangerously good at this.”
+- **NERELLE [SURPRISED]:** “Exactly. You’re getting good at this. It’s unsettling.”
 - **NARRATOR:** A cluster of young sea-dwellers steers a string of lanterns toward her. Nerelle greets every one of them by name.
 - **NARRATOR:** Then she listens to their concerns one at a time, including a long one about a crab.
 - **PLAYER:** “They’re glad you’re here.”
@@ -1298,7 +1297,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 **Option `NER-POST-C1-ROOM` (correct):** PLAYER: “Keep your people and keep exploring. You sort the piles, and I’ll listen to how they come out.”
   - **NERELLE [SURPRISED]:** “Oh, thank goodness. I had a twelve-page petition prepared.”
   - **PLAYER:** “I can still fill out a form, if it helps.”
-  - **NERELLE [PLAYFUL]:** “Do not tempt me. I know several excellent forms.”
+  - **NERELLE [PLAYFUL]:** “Don’t tempt me. I know several excellent forms.”
   - **NARRATOR:** She reaches the wayward lantern with a flick of her tail and nudges it back into the channel with the others.
   - **NERELLE [NEUTRAL]:** “The sea is my home. And there is a part of me I am still finding out about.”
   - **NERELLE [NEUTRAL]:** “I would like anyone close to me to love the whole of that.”
@@ -1311,7 +1310,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **NERELLE [WORRIED]:** “It would. The way a boat is lighter with half of it missing.”
   - **NARRATOR:** A young sea-dweller calls her name. She turns to answer, and the conversation ends there.
 
-**Option `NER-POST-C1-SHAME` (offensive):** PLAYER: “Honestly, this all seems pointless. They’d manage fine without you.”
+**Option `NER-POST-C1-SHAME` (offensive):** PLAYER: “This all seems pointless. They’d manage fine without you.”
   - **NERELLE [ANNOYED]:** “You have been here for one lantern. I have been here for all of them.”
   - **PLAYER:** “I didn’t mean it like that.”
   - **NERELLE [NEUTRAL]:** “You did. Now, if you will excuse me, I am going to be pointless with my people.”
@@ -1359,7 +1358,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 </td><td>
 
-- **NARRATOR:** A row of small waterproof parcels floats along the railing. Each is tied with a ribbon so precise that a court clerk would weep.
+- **NARRATOR:** A row of small waterproof parcels bobs below the railing. Each is tied with a ribbon so precise that a court clerk would weep.
 - **NERELLE [PLAYFUL]:** “Do you have a moment? I have been conducting an extremely unscientific study of surface souvenirs.”
 - **PLAYER:** “What did you find?”
 - **NERELLE [NEUTRAL]:** “You sell seashells. To people living next to the sea.”
@@ -1378,15 +1377,16 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NERELLE [PLAYFUL]:** “My current theory involves fewer official seals.”
 - **NARRATOR:** She holds out the sketch for your opinion, and watches your face instead of the paper.
 
-**Option `NER-PRE-C1-LISTEN` (correct):** PLAYER: “Ask what matters to them, and let them answer however they like. Want to start with the lanterns?”
-  - **NERELLE [SURPRISED]:** “Ask, and then let the answer be whatever it is. The council would faint.”
-  - **PLAYER:** “They don’t teach that in advertising either.”
-  - **NERELLE [PLAYFUL]:** “Their loss.”
-  - **NARRATOR:** She turns to the nearest lantern’s reflection on the water. Her fin moves beneath it, and the reflection breaks into a dozen small pieces.
+**Option `NER-PRE-C1-LISTEN` (correct):** PLAYER: “Practice on me. Ask what I see in the lantern. I’ll answer badly, and you’re not allowed to grade it.”
+  - **NERELLE [SURPRISED]:** “Ungraded. The council would faint.”
+  - **NERELLE [PLAYFUL]:** “Very well. What do you see?”
+  - **PLAYER:** “A worried turnip.”
+  - **NARRATOR:** She laughs, and turns to the real lantern’s reflection on the water.
+  - **NARRATOR:** Her fin moves beneath it, and the reflection breaks into a dozen small lights.
   - **NERELLE [SURPRISED]:** “Oh. This is her sky.”
   - **NERELLE [NEUTRAL]:** “She was telling me what home looks like from below.”
   - **PLAYER:** “Worth remembering.”
-  - **NERELLE [PLAYFUL]:** “I will remember it. I will not, however, commission a commemorative plaque.”
+  - **NERELLE [PLAYFUL]:** “I’ll remember it. I won’t, however, commission a commemorative plaque.”
 
 **Option `NER-PRE-C1-EXPLAIN` (wrong):** PLAYER: “Oh, I can explain this. Souvenirs are symbolic. There’s a whole economy of sentimental objects.”
   - **NARRATOR:** You explain the whole economy of sentimental objects. It has four sections and a summary.
@@ -1471,7 +1471,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NERELLE [NEUTRAL]:** “A partnership. Honest plans. Places to meet where the water reaches the shore. Room to keep learning.”
 - **NARRATOR:** She reaches up from the water and offers her hand, the way one head of state offers it to another.
 
-**Option `NER-FIN-C1-EQUAL` (correct):** PLAYER: “I love your curiosity and how you look after people. You know what matters to you, and I won’t pick your future. Marry me, and we’ll build it together?”
+**Option `NER-FIN-C1-EQUAL` (correct):** PLAYER: “I love your curiosity, your care for people, and that you know your own mind. Your future’s yours. Marry me, and we’ll build it together?”
   - **NERELLE [SURPRISED]:** “You really heard every word.”
   - **PLAYER:** “I tried. I’ll probably need reminders.”
   - **NERELLE [PLAYFUL]:** “Good. I have already prepared several. They are in alphabetical order.”
@@ -1532,7 +1532,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 **Option `NER-FR-C1-PARTNER` (correct):** PLAYER: “I love you as you are. Marry me, and we’ll plan a future with room for your home and your duties, and for mine?”
   - **NERELLE [SURPRISED]:** “That is the future I was trying to describe.”
   - **PLAYER:** “This time I actually listened.”
-  - **NERELLE [PLAYFUL]:** “I will make a note of this historic event.”
+  - **NERELLE [PLAYFUL]:** “I’ll mark it on the tide chart. High water: {PLAYER} listened.”
   - **NERELLE [NEUTRAL]:** “Yes, {PLAYER}. Let us plan it together.”
   - **NARRATOR:** She takes your hand across the waterline. With the other, she makes a note.
 
@@ -1713,11 +1713,11 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NERELLE [NEUTRAL]:** “A courtier asked whether I was thinking like a mermaid or a princess today.”
 - **PLAYER:** “What did you say?”
 - **NERELLE [NEUTRAL]:** “That the question was missing several options. He did not have time for the list.”
-- **NERELLE [PLAYFUL]:** “At present, I am thinking like someone who wants lunch and suspects the gulls of plotting.”
+- **NERELLE [PLAYFUL]:** “At present, I am thinking like someone who wants a snack and suspects the gulls of plotting.”
 
 **Option `NER-ORD-POST-F01-C1-YES` (correct):** PLAYER: “Next time, just answer ‘yes.’”
   - **NERELLE [SURPRISED]:** “Yes.”
-  - **NERELLE [PLAYFUL]:** “Oh, that is perfect. It is technically an answer, and he will hate it.”
+  - **NERELLE [PLAYFUL]:** “Oh, that’s perfect. It’s technically an answer, and he’ll hate it.”
 
 **Option `NER-ORD-POST-F01-C1-NO` (wrong):** PLAYER: “It’s a fair question, though. Which one do you feel like more?”
   - **NERELLE [PLAYFUL]:** “You and the courtier should meet. You could split the difference.”
@@ -1752,7 +1752,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **NARRATOR:** She hooks the ribbon with one fin and flips it up onto the stones at your feet.
   - **NERELLE [PLAYFUL]:** “There. The celebrating is yours. Please do it somewhere dry.”
 
-**Option `NER-ORD-POST-F02-C1-NO` (wrong):** PLAYER: “Leave it, it’s pretty. Honestly, the water could use a few more.”
+**Option `NER-ORD-POST-F02-C1-NO` (wrong):** PLAYER: “Leave it, it’s pretty. The water could use a few more.”
   - **NERELLE [NEUTRAL]:** “The sea already has a rather successful decorating department.”
   - **NARRATOR:** Out on the water, a small boat begins to turn in a slow, festive circle.
 
@@ -1786,7 +1786,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **NERELLE [NEUTRAL]:** “Agreed. I would like that very much.”
   - **NERELLE [PLAYFUL]:** “I will begin with the initials. You may want to sit down.”
 
-**Option `NER-ORD-POST-F03-C1-NO` (wrong):** PLAYER: “Honestly, the view’s better up here. I can describe it all for you.”
+**Option `NER-ORD-POST-F03-C1-NO` (wrong):** PLAYER: “The view’s better up here, though. I can describe it all for you.”
   - **NERELLE [NEUTRAL]:** “Wonderful. Describe the initials under the bridge.”
   - **NARRATOR:** You cannot. She does not tell you what they say.
 
@@ -1832,7 +1832,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 </td></tr></table>
 
-## NER-ORD-POST-U02 — Possibly Goats (was: The Map’s Edge)
+## NER-ORD-POST-U02 — Here Be Cows (was: The Map’s Edge)
 
 <table><tr><th>Before</th><th>After</th></tr><tr><td>
 
@@ -1849,19 +1849,20 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 </td><td>
 
-- **NARRATOR:** Two damp maps lie on the stones, pinned down with pebbles. They disagree about everything.
+- **NARRATOR:** Two damp maps lie on the stones at the water’s edge, pinned down with pebbles. They disagree about everything.
 - **NERELLE [NEUTRAL]:** “This is a surface map. The sea is a blue patch labeled ‘Sea.’”
-- **NERELLE [PLAYFUL]:** “Ours, meanwhile, shows the land as a blank patch labeled ‘Dry. Possibly goats.’”
+- **NERELLE [PLAYFUL]:** “Ours, meanwhile, shows the land as a blank patch labeled ‘Dry. Here be cows.’”
 - **PLAYER:** “So both sides gave up at the shoreline.”
 - **NERELLE [NEUTRAL]:** “Each mapmaker drew home in exquisite detail, and the other side as a rumor.”
+- **NARRATOR:** Her tail flicks a little water onto the blank land, as if to see what grows.
 
-**Option `NER-ORD-POST-U02-C1-YES` (correct):** PLAYER: “Swap? You fix my sea, I’ll fix your goats.”
-  - **NERELLE [PLAYFUL]:** “A fair treaty. Though fixing your sea will take considerably longer.”
-  - **NERELLE [NEUTRAL]:** “There are eleven currents where yours says ‘Sea.’ Bring more pebbles.”
+**Option `NER-ORD-POST-U02-C1-YES` (correct):** PLAYER: “Teach me one current. Just one. I’ll draw it in.”
+  - **NERELLE [PLAYFUL]:** “One. Very well. We start with the shy one.”
+  - **NARRATOR:** She guides your finger in a thin blue line across the empty sea. It is the first thing on that map that’s right.
 
-**Option `NER-ORD-POST-U02-C1-NO` (wrong):** PLAYER: “Just draw roads across the sea part. Then nobody gets lost.”
-  - **NERELLE [SURPRISED]:** “Roads. Across the sea.”
-  - **NARRATOR:** On the blank land of her map, she adds a small note: *Wants roads in the sea.*
+**Option `NER-ORD-POST-U02-C1-NO` (wrong):** PLAYER: “Let’s merge them into one proper map. I’m good at merges.”
+  - **NERELLE [SURPRISED]:** “Merge. The sea and the land.”
+  - **NARRATOR:** In the blank land of her map, she adds a small note: *Wants to merge the sea.*
 
 </td></tr></table>
 
@@ -1890,12 +1891,12 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NERELLE [NEUTRAL]:** “The current talks more when nobody interrupts it.”
 
 **Option `NER-ORD-POST-U03-C1-YES` (correct):** PLAYER: “Then I’m going for the record.”
-  - **NARRATOR:** You say nothing. The water says a good deal. After a while, Nerelle nods, as if the current has made a fair point.
-  - **NERELLE [PLAYFUL]:** “Forty-one seconds. I will have to tell the merchant.”
+  - **NARRATOR:** You say nothing. The water says a good deal. At thirty seconds, a gull lands between you and screams once.
+  - **NERELLE [PLAYFUL]:** “Forty-one seconds. The gull is disqualified.”
 
-**Option `NER-ORD-POST-U03-C1-NO` (wrong):** PLAYER: “Don’t overthink it. Go with your gut. They need an answer.”
-  - **NERELLE [NEUTRAL]:** “My gut does not sit on the council.”
-  - **NERELLE [PLAYFUL]:** “Also, you only lasted four seconds that time.”
+**Option `NER-ORD-POST-U03-C1-NO` (wrong):** PLAYER: “Want me to fill the quiet? I’ve got a story about my knees.”
+  - **NERELLE [NEUTRAL]:** “The merchant said that too.”
+  - **NERELLE [PLAYFUL]:** “Four seconds. He managed seven.”
 
 </td></tr></table>
 
@@ -1916,18 +1917,18 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 </td><td>
 
-- **NARRATOR:** A clerk on the path is writing very fast. Nerelle is watching his pen with alarm.
+- **NARRATOR:** A clerk on the path is writing very fast. Nerelle, chin resting on the edge of the water, watches his pen with alarm.
 - **NERELLE [NEUTRAL]:** “I asked whether the lanterns were safe. He has written it down as a decree.”
 - **CLERK:** “‘The lanterns shall be safe.’ By order of Her Highness.”
 - **NERELLE [SURPRISED]:** “Oh dear.”
 - **CLERK:** “‘Oh dear.’ Second decree. Noted.”
-- **NERELLE [PLAYFUL]:** “I am now afraid to sneeze.”
+- **NERELLE [PLAYFUL]:** “I’m now afraid to hiccup. He’d declare a holiday.”
 
-**Option `NER-ORD-POST-U04-C1-YES` (correct):** PLAYER: “She was asking a question. Nerelle, what did you actually want to know?”
+**Option `NER-ORD-POST-U04-C1-YES` (correct):** PLAYER: “She was asking a question. Nerelle, what did you want to know?”
   - **NERELLE [NEUTRAL]:** “Thank you. Whether the third lantern is leaking. It is leaning to the left.”
   - **NARRATOR:** The clerk crosses out both decrees. After some thought, he underlines the crossing-out.
 
-**Option `NER-ORD-POST-U04-C1-NO` (wrong):** PLAYER: “Honestly? ‘The lanterns shall be safe’ is a pretty good law.”
+**Option `NER-ORD-POST-U04-C1-NO` (wrong):** PLAYER: “Keep it! ‘The lanterns shall be safe’ is a pretty good law.”
   - **CLERK:** “‘A pretty good law.’ Endorsed by Her Highness’s companion. Noted.”
   - **NERELLE [NEUTRAL]:** “Well. Now we are both in the law.”
 
@@ -1990,7 +1991,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NERELLE [PLAYFUL]:** “It means I get a new place twice a day without the trouble of moving house.”
 - **NERELLE [NEUTRAL]:** “Surface people move once a decade and complain about it for a year.”
 
-**Option `NER-ORD-POST-U06-C1-YES` (correct):** PLAYER: “So where’s the good current now? Quiz me.”
+**Option `NER-ORD-POST-U06-C1-YES` (correct):** PLAYER: “Honestly, where’s the good current now? Quiz me.”
   - **NERELLE [PLAYFUL]:** “Very well. Point to where you would swim.”
   - **NARRATOR:** You point at the calmest patch of water. She points, with great patience, at the patch beside it.
   - **NERELLE [NEUTRAL]:** “Close. Yours would have taken you very politely out to sea.”
@@ -2052,19 +2053,19 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 </td><td>
 
 - **NARRATOR:** A leaf is turning slow circles beside Nerelle. It shows no sign of leaving.
-- **NERELLE [NEUTRAL]:** “This leaf has been waiting beside me for several minutes. I suspect it has an appointment.”
+- **NERELLE [NEUTRAL]:** “It has been waiting there for several minutes. I suspect an appointment.”
 - **PLAYER:** “Does it need your signature?”
-- **NERELLE [PLAYFUL]:** “I do not recall issuing permits to leaves.”
-- **NERELLE [NEUTRAL]:** “Still, it has waited more patiently than most ambassadors. I feel I owe it an audience.”
+- **NERELLE [PLAYFUL]:** “I don’t recall issuing permits to leaves.”
+- **NARRATOR:** A second leaf drifts up and settles in behind the first. Then a third.
+- **NERELLE [SURPRISED]:** “Oh no. It’s a queue.”
 
-**Option `NER-ORD-PRE-F02-C1-YES` (correct):** PLAYER: “Maybe it’s off duty. It just likes your company.”
-  - **NERELLE [SURPRISED]:** “No petition? No grievance?”
-  - **NARRATOR:** She looks at the leaf, and then, for slightly too long, at you.
-  - **NERELLE [PLAYFUL]:** “I will log it as an unofficial visit. Unofficially.”
+**Option `NER-ORD-PRE-F02-C1-YES` (correct):** PLAYER: “Put up a sign: *Back after the tide.* You’re off duty.”
+  - **NERELLE [PLAYFUL]:** “Back after the tide. The council would never.”
+  - **NARRATOR:** She tells the leaves. They drift off politely, one at a time, in order.
 
-**Option `NER-ORD-PRE-F02-C1-NO` (wrong):** PLAYER: “Keep it! Press it and frame it. First official leaf of your reign.”
-  - **NERELLE [NEUTRAL]:** “Drafted into office. It came here to drift.”
-  - **NARRATOR:** The leaf, sensing responsibility, drifts away.
+**Option `NER-ORD-PRE-F02-C1-NO` (wrong):** PLAYER: “Keep the first one! Press it and frame it. First official leaf of your reign.”
+  - **NERELLE [NEUTRAL]:** “Then the other two will want frames.”
+  - **NARRATOR:** The queue grows by a twig.
 
 </td></tr></table>
 
@@ -2097,7 +2098,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 **Option `NER-ORD-PRE-F03-C1-NO` (wrong):** PLAYER: “Let’s settle it. Someone must have written down who tied it first.”
   - **NERELLE [SURPRISED]:** “You would take on seven grandmothers?”
-  - **NERELLE [NEUTRAL]:** “Brave. I will tie something nice for your memorial.”
+  - **NERELLE [NEUTRAL]:** “Brave. I’ll tie something nice for your memorial.”
 
 </td></tr></table>
 
@@ -2125,12 +2126,12 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NERELLE [PLAYFUL]:** “At home, we ask the moon what time it is. In emergencies, a very old crab.”
 
 **Option `NER-ORD-PRE-U01-C1-YES` (correct):** PLAYER: “Keep the crab. The tower can have the meetings.”
-  - **NERELLE [NEUTRAL]:** “A sensible treaty. I will inform the crab.”
+  - **NERELLE [NEUTRAL]:** “Agreed. I’ll inform the crab.”
   - **NERELLE [PLAYFUL]:** “He has been anxious about his position.”
 
 **Option `NER-ORD-PRE-U01-C1-NO` (wrong):** PLAYER: “We could merge them. One clock, with the tides as a recurring event.”
   - **NERELLE [NEUTRAL]:** “Splendid. Please inform the moon before the council.”
-  - **NARRATOR:** The marker bumps the stone again. By the tower’s reckoning, it is late.
+  - **NARRATOR:** The marker bumps the stone again. By the tower’s reckoning, the tide is four minutes behind.
 
 </td></tr></table>
 
@@ -2168,8 +2169,8 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **NERELLE [NEUTRAL]:** “I could. Then the barge would win.”
   - **NARRATOR:** She does not move a fin’s width. Somewhere upstream, a rudder squeaks, and her eyes narrow.
 
-**Option `NER-ORD-PRE-U02-C1-OFF` (offensive):** PLAYER: “Maybe they’d listen if you weren’t such an odd fish.”
-  - **NERELLE [ANNOYED]:** “I am not a fish. My hearing, however, is excellent.”
+**Option `NER-ORD-PRE-U02-C1-OFF` (offensive):** PLAYER: “Maybe they’d listen if you weren’t so strange.”
+  - **NERELLE [ANNOYED]:** “I can hear you perfectly. That is the problem.”
   - **NARRATOR:** She sinks out of sight. She hears the next bell without you.
 
 </td></tr></table>
@@ -2191,16 +2192,16 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 </td><td>
 
-- **NARRATOR:** Two visitors have stopped on the path to greet Nerelle. One bows. The other waves.
+- **NARRATOR:** Two visitors have stopped on the path to greet Nerelle in the water. One bows. The other waves.
 - **NARRATOR:** Each notices the other and adds the missing gesture. Now both are bowing and waving at once.
 - **NERELLE [NEUTRAL]:** “Etiquette has reached an impasse. The gestures are becoming competitive.”
 - **PLAYER:** “Is there an official rule?”
 - **NERELLE [NEUTRAL]:** “Three ceremonial committees have studied the question. Their report is in its fourth volume.”
-- **NARRATOR:** The taller visitor adds a curtsy. Part of it lands on a passing duck.
+- **NARRATOR:** The taller visitor adds a curtsy. A passing duck receives most of it.
 
-**Option `NER-ORD-PRE-U03-C1-YES` (correct):** PLAYER: “Skip the committees. How do you actually like to be greeted?”
-  - **NERELLE [SURPRISED]:** “You asked me. You have just outperformed three ceremonial committees.”
-  - **NERELLE [PLAYFUL]:** “Hello is perfect. Waving is lovely. Bowing to ducks is discouraged.”
+**Option `NER-ORD-PRE-U03-C1-YES` (correct):** PLAYER: “What do you like? A hello? A wave?”
+  - **NERELLE [SURPRISED]:** “Three committees, and nobody thought to ask me.”
+  - **NERELLE [PLAYFUL]:** “Hello is perfect. A wave is lovely. Bowing to ducks is discouraged.”
 
 **Option `NER-ORD-PRE-U03-C1-NO` (wrong):** PLAYER: “Bow, obviously. You can’t go wrong bowing to royalty.”
   - **NARRATOR:** The visitors overhear and bow low. Sea protocol says a bow must be returned, so Nerelle bows back. They bow again.
@@ -2237,7 +2238,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **NARRATOR:** The gull looks at your pocket, then at your face, and appears to memorize it.
 
 **Option `NER-ORD-PRE-U04-C1-NO` (wrong):** PLAYER: “Aw, one crumb won’t hurt. It’s only one gull.”
-  - **NARRATOR:** You toss one crumb. Eleven more gulls arrive.
+  - **NARRATOR:** You toss one crumb. Nine more gulls arrive.
   - **NERELLE [NEUTRAL]:** “Congratulations. You have formally recognized their government.”
 
 </td></tr></table>
@@ -2263,7 +2264,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NERELLE [NEUTRAL]:** “Current strength, in court notation. What did your world use?”
 - **PLAYER:** “Graphs. And arguments about the graphs.”
 - **NERELLE [PLAYFUL]:** “Ah. The argument. The one scientific instrument found in every civilization.”
-- **NERELLE [NEUTRAL]:** “Three ticks means a strong current. Four means strong, and *in a mood*.”
+- **NERELLE [NEUTRAL]:** “Three ticks means strong. *In a mood* has its own mark.”
 
 **Option `NER-ORD-PRE-U05-C1-YES` (correct):** PLAYER: “What’s the mark for ‘in a mood’?”
   - **NARRATOR:** She draws a tight, irritable little spiral.
@@ -2301,7 +2302,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 **Option `NER-ORD-PRE-U06-C1-YES` (correct):** PLAYER: “Hold on. Let me look from your height.”
   - **NARRATOR:** You kneel at the edge until your chin is nearly touching the water. The upside-down towers sway in front of you.
-  - **NERELLE [PLAYFUL]:** “Welcome. From here, you are taller than the palace.”
+  - **NERELLE [PLAYFUL]:** “Welcome. From here, you’re taller than the palace.”
 
 **Option `NER-ORD-PRE-U06-C1-NO` (wrong):** PLAYER: “Technically the real city’s up here. That’s just light bouncing.”
   - **NERELLE [NEUTRAL]:** “Thank you. We have light under the sea as well. It is how we see boats coming.”
@@ -2412,7 +2413,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **NARRATOR:** Coming back down, she thanks everyone. Her smile lasts almost to the bottom step.
 
 **Option `TAV-POST-C1-SHAME` (offensive):** PLAYER: “Backing out makes you look weak. A real princess wouldn’t let her public down.”
-  - **TAVRI [ANNOYED]:** “Then I’ll let you down instead. It’s quicker.”
+  - **TAVRI [ANNOYED]:** “Wonderful. A review, and I didn’t even go on.”
   - **NARRATOR:** She walks off into the crowd and doesn’t look back for you.
 
 </td></tr></table>
@@ -2469,7 +2470,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NARRATOR:** She stops reading. Her tail has wrapped itself tight around her ankles.
 - **TAVRI [WORRIED]:** “If I joke about it first, nobody notices it bothered me. That’s the usual plan.”
 - **PLAYER:** “How’s the plan going?”
-- **TAVRI [NEUTRAL]:** “Badly. So I suppose you get to decide whether I need a joke. Or a friend. I’m not fussy.”
+- **TAVRI [NEUTRAL]:** “Badly. I’m out of napkin material. Your move.”
 
 **Option `TAV-PRE-C1-SUPPORT` (correct):** PLAYER: “Skip the joke. It’s a rotten scroll. Want to tell people the gravy story, or ignore it with me?”
   - **TAVRI [SURPRISED]:** “You’d let me pick? Even if it’s profoundly unprincesslike?”
@@ -2553,7 +2554,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **PLAYER:** “I couldn’t promise that honestly.”
   - **TAVRI [PLAYFUL]:** “Good. I’d have asked for references.”
   - **NARRATOR:** She takes your hand.
-  - **TAVRI [NEUTRAL]:** “Yes, {PLAYER}. I want this.”
+  - **TAVRI [NEUTRAL]:** “Yes, {PLAYER}. I choose you too.”
   - **TAVRI [PLAYFUL]:** “That’s my whole speech. One point. No conclusion.”
   - **NARRATOR:** Your prepared speech slips off the edge of the fountain. Nobody fishes it out.
 
@@ -2717,7 +2718,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **TAVRI [PLAYFUL]:** “And you said it without a presentation. Not one diagram.”
   - **NARRATOR:** She takes your hand. Briefly. Then a little longer than briefly.
 
-**Option `TAV-MR-C1-ADVISE` (wrong):** PLAYER: “Honestly? Stop caring what people think. Problem solved.”
+**Option `TAV-MR-C1-ADVISE` (wrong):** PLAYER: “Easy fix: stop caring what people think. Problem solved.”
   - **TAVRI [ANNOYED]:** “Problem solved. Marvelous. I’ll stop at once.”
   - **TAVRI [NEUTRAL]:** “Try me again another day. Bring fewer solutions.”
 
@@ -2740,7 +2741,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 </td><td>
 
-- **NARRATOR:** Tavri presents you with a blank scrap of paper, with tremendous ceremony.
+- **NARRATOR:** Tavri hands you a blank scrap of paper. There is tremendous ceremony.
 - **TAVRI [PLAYFUL]:** “You are cordially invited to a conversation. There is no itinerary.”
 - **PLAYER:** “What’s the dress code?”
 - **TAVRI [PLAYFUL]:** “Whatever you’re wearing. Theme: none. Refreshments: also none.”
@@ -2810,19 +2811,20 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 </td><td>
 
 - **NARRATOR:** Someone has pinned up a hand-lettered notice: *PLEASE DO NOT TUOCH.*
-- **NARRATOR:** Tavri opens her mouth. Her ears go up. Then she closes it again.
-- **TAVRI [NEUTRAL]:** “I had a joke about that. A good one.”
-- **TAVRI [PLAYFUL]:** “I’m going to look at the sign instead. Just look at it. Like a tourist.”
-- **PLAYER:** “Take your time.”
-- **TAVRI [PLAYFUL]:** “You say that as if leisure were legal.”
+- **NARRATOR:** Tavri’s ears go up. She opens her mouth, glances at you, and closes it again.
+- **TAVRI [NEUTRAL]:** “I have a joke about that sign. A good one.”
+- **TAVRI [PLAYFUL]:** “I’ve been holding it for a full minute. It’s getting heavy.”
+- **PLAYER:** “Why are you holding it?”
+- **TAVRI [NEUTRAL]:** “I’m practicing being a princess who can walk past a typo. It’s agony.”
 
-**Option `TAV-ORD-POST-F03-C1-YES` (correct):** PLAYER: “I’ll look at it with you. Carefully. No tuoching.”
-  - **TAVRI [PLAYFUL]:** “Look at us. Two grown adults, not tuoching.”
-  - **NARRATOR:** You look at it together until someone comes along and fixes the spelling.
+**Option `TAV-ORD-POST-F03-C1-YES` (correct):** PLAYER: “Walking past it is optional. Tell me the joke.”
+  - **TAVRI [SURPRISED]:** “Really?”
+  - **TAVRI [PLAYFUL]:** “Right. Whoever wrote this sign has clearly never been tuoched by greatness.”
+  - **NARRATOR:** It’s terrible. You laugh anyway, properly, and she looks as if she has won something.
 
-**Option `TAV-ORD-POST-F03-C1-NO` (wrong):** PLAYER: “Aw, go on. What was the joke?”
-  - **TAVRI [NEUTRAL]:** “Fine.”
-  - **NARRATOR:** She tells it. It’s very good, and you laugh. When she looks back, it’s only a sign again.
+**Option `TAV-ORD-POST-F03-C1-NO` (wrong):** PLAYER: “You don’t have to be funny with me, you know.”
+  - **TAVRI [NEUTRAL]:** “I know. I wanted to be.”
+  - **NARRATOR:** She walks past the sign. The joke stays where it is, unspent.
 
 </td></tr></table>
 
@@ -2846,13 +2848,13 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **NARRATOR:** The conversation runs out. Tavri lets it.
 - **TAVRI [PLAYFUL]:** “Do you realize neither of us has said anything clever for a full minute?”
 - **PLAYER:** “Should I panic?”
-- **TAVRI [PLAYFUL]:** “Only if you brought an emergency trumpet.”
+- **TAVRI [PLAYFUL]:** “Only if you brought an emergency lute.”
 - **TAVRI [NEUTRAL]:** “I’m going for two minutes. That one didn’t count. It was commentary.”
 - **NARRATOR:** Her tail twitches toward a joke, then settles.
 
 **Option `TAV-ORD-POST-U01-C1-YES` (correct):** PLAYER: “Go for three. I’ve got nowhere better to be.”
   - **NARRATOR:** You make it to three. Somewhere in the second minute, her shoulder bumps against yours and stays.
-  - **TAVRI [PLAYFUL]:** “Palace record. We tell no one.”
+  - **TAVRI [PLAYFUL]:** “Three minutes. Palace record. I’ll have it engraved somewhere small.”
 
 **Option `TAV-ORD-POST-U01-C1-NO` (wrong):** PLAYER: “Don’t worry, I’ve got a joke ready if it gets slow.”
   - **TAVRI [NEUTRAL]:** “Oh. Go on, then.”
@@ -2921,17 +2923,17 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **TAVRI [PLAYFUL]:** “Act one, a princess says something clever. Act two, something cleverer. Act three—”
 - **NARRATOR:** She stops.
 - **TAVRI [NEUTRAL]:** “Act three, two people sit somewhere, and nobody leaves at the interval.”
-- **NARRATOR:** She seems very satisfied with act three.
+- **NARRATOR:** She underlines act three. Twice.
 
 **Option `TAV-ORD-POST-U03-C1-YES` (correct):** PLAYER: “Call it *A Day with No Auditions.* Short run. Very exclusive.”
   - **TAVRI [PLAYFUL]:** “Dreadful title. Nobody will buy a ticket.”
   - **NARRATOR:** She writes it across the top anyway, in her best handwriting.
 
 **Option `TAV-ORD-POST-U03-C1-NO` (wrong):** PLAYER: “Put your best lines in. Everyone loves a greatest hits.”
-  - **TAVRI [NEUTRAL]:** “A greatest hits. Of course.”
+  - **TAVRI [PLAYFUL]:** “Greatest hits. Naturally. Track one: the napkin.”
   - **NARRATOR:** She fills it in under a minute. Every line is a good one. Act three doesn’t make the cut.
 
-**Option `TAV-ORD-POST-U03-C1-OFF` (offensive):** PLAYER: “Honestly, you’re only worth the time when you’re being funny.”
+**Option `TAV-ORD-POST-U03-C1-OFF` (offensive):** PLAYER: “You’re only worth the time when you’re being funny.”
   - **TAVRI [ANNOYED]:** “Then I’ll save you the dull part.”
   - **NARRATOR:** She leaves the playbill blank and goes.
 
@@ -2967,8 +2969,9 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **NARRATOR:** You laugh. Her tail does a smug little loop.
 
 **Option `TAV-ORD-POST-U04-C1-NO` (wrong):** PLAYER: “That setup needs an ending, though. Bakery? Library? Duck pond?”
-  - **TAVRI [NEUTRAL]:** “Bakery. Fine.”
-  - **NARRATOR:** She finishes the joke. It’s a good ending. She checks your face to see if it was good enough.
+  - **TAVRI [NEUTRAL]:** “Bakery.”
+  - **TAVRI [PLAYFUL]:** “A fox princess walks into a bakery and asks for a scone with no expectations. They’re out.”
+  - **NARRATOR:** She watches your face until you laugh.
 
 </td></tr></table>
 
@@ -2989,20 +2992,20 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 </td><td>
 
-- **NARRATOR:** A breeze picks up. Tavri lifts her chin, ready to say something grand about it.
+- **NARRATOR:** A breeze comes through an open window. Tavri lifts her chin, ready to say something grand about it.
 - **TAVRI [PLAYFUL]:** “The wind, like the ambitions of kings, is restless and—”
 - **TAVRI [NEUTRAL]:** “No. It’s wind. It’s nice.”
-- **NARRATOR:** She looks delighted with herself. Her tail is enjoying the wind enormously.
+- **NARRATOR:** Her ears tip back to catch more of it.
 - **PLAYER:** “What about the kings?”
-- **TAVRI [PLAYFUL]:** “The kings can get their own wind.”
+- **TAVRI [PLAYFUL]:** “The kings can find their own breeze.”
 
 **Option `TAV-ORD-POST-U05-C1-YES` (correct):** PLAYER: “It *is* nice. Let’s stand in it for a bit.”
   - **NARRATOR:** You stand in it. It is, as reported, nice.
-  - **TAVRI [PLAYFUL]:** “Don’t tell the kings.”
+  - **TAVRI [PLAYFUL]:** “Look at us. Two people, one window, no subtext.”
 
-**Option `TAV-ORD-POST-U05-C1-NO` (wrong):** PLAYER: “No, finish it! ‘Restless and’ what? That was going somewhere.”
-  - **TAVRI [NEUTRAL]:** “Restless and… fine.”
-  - **NARRATOR:** She finishes the metaphor. It’s lovely. By then, the wind has moved on.
+**Option `TAV-ORD-POST-U05-C1-NO` (wrong):** PLAYER: “Ooh, my turn. The wind is like the job market: it never tells you which way it’s going.”
+  - **TAVRI [NEUTRAL]:** “Mm. Very good.”
+  - **NARRATOR:** She nods at your metaphor the way she nods at ambassadors. The breeze moves on without either of you.
 
 </td></tr></table>
 
@@ -3035,7 +3038,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
   - **TAVRI [NEUTRAL]:** “Also, you have my button.”
 
 **Option `TAV-ORD-POST-U06-C1-NO` (wrong):** PLAYER: “Ha! Maybe practice a quieter one for court, though?”
-  - **TAVRI [NEUTRAL]:** “A quieter one. Of course.”
+  - **TAVRI [NEUTRAL]:** “Quieter. Noted.”
   - **NARRATOR:** She demonstrates. It’s a lovely laugh, with no goose in it anywhere.
 
 </td></tr></table>
@@ -3100,7 +3103,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 **Option `TAV-ORD-PRE-F02-C1-YES` (correct):** PLAYER: “Lovely ribbon. Who wrote all that?”
   - **TAVRI [SURPRISED]:** “It’s from the baker. A petition. Their roof leaks onto the bread.”
-  - **TAVRI [PLAYFUL]:** “The ribbon’s had four compliments. You’re the first to ask about the bread.”
+  - **TAVRI [PLAYFUL]:** “Come on, we’re taking the bread’s side. Bring the ribbon. It can finally do something.”
 
 **Option `TAV-ORD-PRE-F02-C1-NO` (wrong):** PLAYER: “Next time go for velvet. If they love the ribbon, give them more ribbon.”
   - **TAVRI [PLAYFUL]:** “Velvet. Bold. The chronicles will need a second volume.”
@@ -3131,11 +3134,12 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **PLAYER:** “Want it changed?”
 - **TAVRI [NEUTRAL]:** “To something with room for a bad day? ‘Usually delightful.’ ‘Delightful, terms apply.’”
 
-**Option `TAV-ORD-PRE-F03-C1-YES` (correct):** PLAYER: “Or just print ‘Tavri’ and let them find out the rest.”
-  - **TAVRI [PLAYFUL]:** “No adjectives. No warranty. I love it.”
-  - **NARRATOR:** She crosses out *effortlessly delightful.* It takes her one draft.
+**Option `TAV-ORD-PRE-F03-C1-YES` (correct):** PLAYER: “Print draft one. The typo’s the most honest word on it.”
+  - **TAVRI [SURPRISED]:** “Effortlessly delighful.”
+  - **TAVRI [PLAYFUL]:** “A flaw, in print, on purpose. The clerk will faint.”
+  - **NARRATOR:** She circles the missing *t* and initials it.
 
-**Option `TAV-ORD-PRE-F03-C1-NO` (wrong):** PLAYER: “Honestly, keep it. People like knowing what they’re getting.”
+**Option `TAV-ORD-PRE-F03-C1-NO` (wrong):** PLAYER: “Keep it. People like knowing what they’re getting.”
   - **TAVRI [NEUTRAL]:** “Right. Effortlessly delightful.”
   - **TAVRI [PLAYFUL]:** “I’ll schedule my bad days for when the program’s out of print.”
 
@@ -3161,14 +3165,14 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 
 </td><td>
 
-- **NARRATOR:** A courtier carrying a tureen of soup bows to Tavri anyway. His hat keeps going.
+- **NARRATOR:** A courtier carrying a tureen of soup bows to Tavri. His hat keeps going. The soup, narrowly, does not.
 - **TAVRI [PLAYFUL]:** “I held a door for that man. That’s all. Three people clapped, and one asked for an encore.”
 - **PLAYER:** “An encore of the door?”
 - **TAVRI [NEUTRAL]:** “I could hold it again. Slower. Add a little flourish on the hinge.”
 - **NARRATOR:** Her tail is already rehearsing the flourish.
 
-**Option `TAV-ORD-PRE-U01-C1-YES` (correct):** PLAYER: “Or it could just be a door. Nobody needs a second act.”
-  - **TAVRI [SURPRISED]:** “Just a door.”
+**Option `TAV-ORD-PRE-U01-C1-YES` (correct):** PLAYER: “Or you could let the door retire. It’s had a big day.”
+  - **TAVRI [SURPRISED]:** “Retire the door.”
   - **TAVRI [PLAYFUL]:** “Radical. Don’t tell the hinge.”
 
 **Option `TAV-ORD-PRE-U01-C1-NO` (wrong):** PLAYER: “Do it. Big flourish. Give them their money’s worth.”
@@ -3205,7 +3209,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **TAVRI [NEUTRAL]:** “That the palace servants should get a day off. The quill found the topic ‘a little worthy.’”
 - **NARRATOR:** The quill adds a line: *Princess now glaring at reviewer. Two stars.*
 
-**Option `TAV-ORD-PRE-U02-C1-YES` (correct):** PLAYER: “Forget the quill. Has anyone asked the servants which day they want?”
+**Option `TAV-ORD-PRE-U02-C1-YES` (correct):** PLAYER: “Has anyone asked the servants which day they want?”
   - **TAVRI [SURPRISED]:** “No. We announced it *at* them. Beautifully, apparently.”
   - **TAVRI [PLAYFUL]:** “Come on, let’s go and ask. The quill can review the walk.”
   - **NARRATOR:** The quill writes *Unexpected. Three stars,* and hurries after you.
@@ -3347,7 +3351,7 @@ Each scene shows the frozen base text (archives + approved Tavri overlay) and th
 - **TAVRI [NEUTRAL]:** “No idea. Could be a christening. Could be a goat.”
 - **NARRATOR:** The clapping swells. Her tail sweeps once, politely, in its direction.
 
-**Option `TAV-ORD-PRE-U06-C1-YES` (correct):** PLAYER: “Let’s stay right here and find out if it’s the goat.”
+**Option `TAV-ORD-PRE-U06-C1-YES` (correct):** PLAYER: “Honestly? Let’s stay right here and find out if it’s the goat.”
   - **TAVRI [PLAYFUL]:** “Standing still while people clap. How wildly rebellious.”
   - **NARRATOR:** It is the goat. The goat doesn’t bow either.
 

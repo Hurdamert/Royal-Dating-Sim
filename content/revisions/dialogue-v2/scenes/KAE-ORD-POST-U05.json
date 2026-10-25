@@ -2,27 +2,68 @@
   "sceneId": "KAE-ORD-POST-U05",
   "title": "Half a Bench",
   "intro": [
-    { "id": "KAE-ORD-POST-U05-L01", "speaker": "NARRATOR", "text": "Kaedra finds a bench wide enough for her wings and sits on exactly one half of it." },
-    { "id": "KAE-ORD-POST-U05-L02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“A rare achievement. A bench not designed exclusively for narrow shoulders.”" },
-    { "id": "KAE-ORD-POST-U05-L03", "speaker": "NARRATOR", "text": "She looks at the empty half. Then at you. Then at the empty half." },
-    { "id": "KAE-ORD-POST-U05-L04", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“By royal decree, this half of the bench is available.”" },
-    { "id": "KAE-ORD-POST-U05-L05", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“If you would like it.”" }
+    {
+      "id": "KAE-ORD-POST-U05-L01",
+      "speaker": "NARRATOR",
+      "text": "Kaedra finds a bench wide enough for her wings and sits on exactly one half of it."
+    },
+    {
+      "id": "KAE-ORD-POST-U05-L02",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“A rare achievement. A bench not designed exclusively for narrow shoulders.”"
+    },
+    {
+      "id": "KAE-ORD-POST-U05-L03",
+      "speaker": "NARRATOR",
+      "text": "She looks at the empty half. Then at you. Then at the empty half."
+    },
+    {
+      "id": "KAE-ORD-POST-U05-L04",
+      "speaker": "KAEDRA",
+      "expression": "NEUTRAL",
+      "text": "“By royal decree, this half of the bench is available.”"
+    },
+    {
+      "id": "KAE-ORD-POST-U05-L05",
+      "speaker": "KAEDRA",
+      "expression": "WORRIED",
+      "text": "“If you would like it.”"
+    }
   ],
   "options": [
     {
       "choiceId": "KAE-ORD-POST-U05-C1-YES",
       "labelText": "“I accept the terms of the decree.”",
       "branch": [
-        { "id": "KAE-ORD-POST-U05-R-YES-01", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Good. I had no plan for enforcing it.”" },
-        { "id": "KAE-ORD-POST-U05-R-YES-02", "speaker": "NARRATOR", "text": "You sit. Her tail curls out of your way, a little further than it needs to." }
+        {
+          "id": "KAE-ORD-POST-U05-R-YES-01",
+          "speaker": "KAEDRA",
+          "expression": "PLAYFUL",
+          "text": "“Good. I had no plan for enforcing it.”"
+        },
+        {
+          "id": "KAE-ORD-POST-U05-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "You sit. Her tail curls out of your way, a little further than it needs to."
+        }
       ]
     },
     {
       "choiceId": "KAE-ORD-POST-U05-C1-NO",
       "labelText": "“Sure! Budge up a bit, though?”",
       "branch": [
-        { "id": "KAE-ORD-POST-U05-R-NO-01", "speaker": "NARRATOR", "text": "She budges up. There was already room. Now there is a great deal of room, most of it between you." },
-        { "id": "KAE-ORD-POST-U05-R-NO-02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Decree amended.”" }
+        {
+          "id": "KAE-ORD-POST-U05-R-NO-01",
+          "speaker": "NARRATOR",
+          "text": "She budges up. There was already room. Now there is a great deal of room, most of it between you."
+        },
+        {
+          "id": "KAE-ORD-POST-U05-R-NO-02",
+          "speaker": "KAEDRA",
+          "expression": "NEUTRAL",
+          "text": "“Decree amended.”"
+        }
       ]
     }
   ]

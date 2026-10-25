@@ -2,57 +2,213 @@
   "sceneId": "NER-EVT-PRE-01",
   "title": "Surface Souvenir Swap",
   "intro": [
-    { "id": "NER-PRE-001", "speaker": "NARRATOR", "text": "A row of small waterproof parcels floats along the railing. Each is tied with a ribbon so precise that a court clerk would weep." },
-    { "id": "NER-PRE-002", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Do you have a moment? I have been conducting an extremely unscientific study of surface souvenirs.”" },
-    { "id": "NER-PRE-003", "speaker": "PLAYER", "text": "“What did you find?”" },
-    { "id": "NER-PRE-004", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“You sell seashells. To people living next to the sea.”" },
-    { "id": "NER-PRE-014", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“They cost more if someone has written *Authentic Ocean* on them. I checked with the ocean. It denies writing that.”" },
-    { "id": "NER-PRE-005", "speaker": "PLAYER", "text": "“That’s advertising. Where I come from, it’s far more advanced.”" },
-    { "id": "NER-PRE-006", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“More advanced? Could it convince a fish to buy water?”" },
-    { "id": "NER-PRE-007", "speaker": "PLAYER", "text": "“Give it a few fiscal quarters.”" },
-    { "id": "NER-PRE-008", "speaker": "NARRATOR", "text": "She laughs and nudges one parcel to the edge of the stone." },
-    { "id": "NER-PRE-018", "speaker": "NARRATOR", "text": "Inside are a piece of sea glass and a folded sketch of a harbor lantern." },
-    { "id": "NER-PRE-009", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“A child in the tide villages gave me the glass. She said it looks like the surface lights when the water is calm.”" },
-    { "id": "NER-PRE-015", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“The sketch is my attempt to see what she meant. The lantern came out looking like a worried turnip.”" },
-    { "id": "NER-PRE-010", "speaker": "PLAYER", "text": "“Did you ask her what she meant?”" },
-    { "id": "NER-PRE-011", "speaker": "NERELLE", "expression": "WORRIED", "text": "“I tried. She recognized me halfway through and started answering as if she were being graded.”" },
-    { "id": "NER-PRE-016", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“It is the crown. It turns ‘what do you mean?’ into an examination.”" },
-    { "id": "NER-PRE-012", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I would like to be curious about people without making them a royal research project.”" },
-    { "id": "NER-PRE-017", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“My current theory involves fewer official seals.”" },
-    { "id": "NER-PRE-013", "speaker": "NARRATOR", "text": "She holds out the sketch for your opinion, and watches your face instead of the paper." }
+    {
+      "id": "NER-PRE-001",
+      "speaker": "NARRATOR",
+      "text": "A row of small waterproof parcels bobs below the railing. Each is tied with a ribbon so precise that a court clerk would weep."
+    },
+    {
+      "id": "NER-PRE-002",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“Do you have a moment? I have been conducting an extremely unscientific study of surface souvenirs.”"
+    },
+    {
+      "id": "NER-PRE-003",
+      "speaker": "PLAYER",
+      "text": "“What did you find?”"
+    },
+    {
+      "id": "NER-PRE-004",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“You sell seashells. To people living next to the sea.”"
+    },
+    {
+      "id": "NER-PRE-014",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“They cost more if someone has written *Authentic Ocean* on them. I checked with the ocean. It denies writing that.”"
+    },
+    {
+      "id": "NER-PRE-005",
+      "speaker": "PLAYER",
+      "text": "“That’s advertising. Where I come from, it’s far more advanced.”"
+    },
+    {
+      "id": "NER-PRE-006",
+      "speaker": "NERELLE",
+      "expression": "SURPRISED",
+      "text": "“More advanced? Could it convince a fish to buy water?”"
+    },
+    {
+      "id": "NER-PRE-007",
+      "speaker": "PLAYER",
+      "text": "“Give it a few fiscal quarters.”"
+    },
+    {
+      "id": "NER-PRE-008",
+      "speaker": "NARRATOR",
+      "text": "She laughs and nudges one parcel to the edge of the stone."
+    },
+    {
+      "id": "NER-PRE-018",
+      "speaker": "NARRATOR",
+      "text": "Inside are a piece of sea glass and a folded sketch of a harbor lantern."
+    },
+    {
+      "id": "NER-PRE-009",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“A child in the tide villages gave me the glass. She said it looks like the surface lights when the water is calm.”"
+    },
+    {
+      "id": "NER-PRE-015",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“The sketch is my attempt to see what she meant. The lantern came out looking like a worried turnip.”"
+    },
+    {
+      "id": "NER-PRE-010",
+      "speaker": "PLAYER",
+      "text": "“Did you ask her what she meant?”"
+    },
+    {
+      "id": "NER-PRE-011",
+      "speaker": "NERELLE",
+      "expression": "WORRIED",
+      "text": "“I tried. She recognized me halfway through and started answering as if she were being graded.”"
+    },
+    {
+      "id": "NER-PRE-016",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“It is the crown. It turns ‘what do you mean?’ into an examination.”"
+    },
+    {
+      "id": "NER-PRE-012",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“I would like to be curious about people without making them a royal research project.”"
+    },
+    {
+      "id": "NER-PRE-017",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“My current theory involves fewer official seals.”"
+    },
+    {
+      "id": "NER-PRE-013",
+      "speaker": "NARRATOR",
+      "text": "She holds out the sketch for your opinion, and watches your face instead of the paper."
+    }
   ],
   "options": [
     {
       "choiceId": "NER-PRE-C1-LISTEN",
-      "labelText": "“Ask what matters to them, and let them answer however they like. Want to start with the lanterns?”",
+      "labelText": "“Practice on me. Ask what I see in the lantern. I’ll answer badly, and you’re not allowed to grade it.”",
       "branch": [
-        { "id": "NER-PRE-S01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Ask, and then let the answer be whatever it is. The council would faint.”" },
-        { "id": "NER-PRE-S02", "speaker": "PLAYER", "text": "“They don’t teach that in advertising either.”" },
-        { "id": "NER-PRE-S03", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Their loss.”" },
-        { "id": "NER-PRE-S04", "speaker": "NARRATOR", "text": "She turns to the nearest lantern’s reflection on the water. Her fin moves beneath it, and the reflection breaks into a dozen small pieces." },
-        { "id": "NER-PRE-S05", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Oh. This is her sky.”" },
-        { "id": "NER-PRE-S08", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“She was telling me what home looks like from below.”" },
-        { "id": "NER-PRE-S06", "speaker": "PLAYER", "text": "“Worth remembering.”" },
-        { "id": "NER-PRE-S07", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“I will remember it. I will not, however, commission a commemorative plaque.”" }
+        {
+          "id": "NER-PRE-S01",
+          "speaker": "NERELLE",
+          "expression": "SURPRISED",
+          "text": "“Ungraded. The council would faint.”"
+        },
+        {
+          "id": "NER-PRE-S02",
+          "speaker": "NERELLE",
+          "text": "“Very well. What do you see?”",
+          "expression": "PLAYFUL"
+        },
+        {
+          "id": "NER-PRE-S03",
+          "speaker": "PLAYER",
+          "text": "“A worried turnip.”"
+        },
+        {
+          "id": "NER-PRE-S09",
+          "speaker": "NARRATOR",
+          "text": "She laughs, and turns to the real lantern’s reflection on the water."
+        },
+        {
+          "id": "NER-PRE-S04",
+          "speaker": "NARRATOR",
+          "text": "Her fin moves beneath it, and the reflection breaks into a dozen small lights."
+        },
+        {
+          "id": "NER-PRE-S05",
+          "speaker": "NERELLE",
+          "expression": "SURPRISED",
+          "text": "“Oh. This is her sky.”"
+        },
+        {
+          "id": "NER-PRE-S08",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“She was telling me what home looks like from below.”"
+        },
+        {
+          "id": "NER-PRE-S06",
+          "speaker": "PLAYER",
+          "text": "“Worth remembering.”"
+        },
+        {
+          "id": "NER-PRE-S07",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“I’ll remember it. I won’t, however, commission a commemorative plaque.”"
+        }
       ]
     },
     {
       "choiceId": "NER-PRE-C1-EXPLAIN",
       "labelText": "“Oh, I can explain this. Souvenirs are symbolic. There’s a whole economy of sentimental objects.”",
       "branch": [
-        { "id": "NER-PRE-W05", "speaker": "NARRATOR", "text": "You explain the whole economy of sentimental objects. It has four sections and a summary." },
-        { "id": "NER-PRE-W01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Very thorough. I was asking about one girl and one lantern.”" },
-        { "id": "NER-PRE-W03", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“If I had wanted a lecture, I would have invited the royal tax assessor.”" },
-        { "id": "NER-PRE-W04", "speaker": "NARRATOR", "text": "She tucks the sketch back into its parcel and reties the ribbon, just as precisely as before." }
+        {
+          "id": "NER-PRE-W05",
+          "speaker": "NARRATOR",
+          "text": "You explain the whole economy of sentimental objects. It has four sections and a summary."
+        },
+        {
+          "id": "NER-PRE-W01",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“Very thorough. I was asking about one girl and one lantern.”"
+        },
+        {
+          "id": "NER-PRE-W03",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“If I had wanted a lecture, I would have invited the royal tax assessor.”"
+        },
+        {
+          "id": "NER-PRE-W04",
+          "speaker": "NARRATOR",
+          "text": "She tucks the sketch back into its parcel and reties the ribbon, just as precisely as before."
+        }
       ]
     },
     {
       "choiceId": "NER-PRE-C1-MOCK",
       "labelText": "“How are you a princess and still need surface stuff explained?”",
       "branch": [
-        { "id": "NER-PRE-X01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“I am a princess of the *sea*. I had assumed the tail made that clear.”" },
-        { "id": "NER-PRE-X02", "speaker": "NERELLE", "expression": "ANNOYED", "text": "“There are nine currents within a mile of here. I can name all of them. Shall I explain them to you, slowly?”" },
-        { "id": "NER-PRE-X03", "speaker": "NARRATOR", "text": "She closes the parcel herself. Her goodbye is polite, and very short." }
+        {
+          "id": "NER-PRE-X01",
+          "speaker": "NERELLE",
+          "expression": "SURPRISED",
+          "text": "“I am a princess of the *sea*. I had assumed the tail made that clear.”"
+        },
+        {
+          "id": "NER-PRE-X02",
+          "speaker": "NERELLE",
+          "expression": "ANNOYED",
+          "text": "“There are nine currents within a mile of here. I can name all of them. Shall I explain them to you, slowly?”"
+        },
+        {
+          "id": "NER-PRE-X03",
+          "speaker": "NARRATOR",
+          "text": "She closes the parcel herself. Her goodbye is polite, and very short."
+        }
       ]
     }
   ]

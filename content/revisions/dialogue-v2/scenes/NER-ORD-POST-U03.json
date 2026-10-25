@@ -2,28 +2,74 @@
   "sceneId": "NER-ORD-POST-U03",
   "title": "Eleven Seconds",
   "intro": [
-    { "id": "NER-ORD-POST-U03-L01", "speaker": "NARRATOR", "text": "Nerelle folds her arms on the edge and listens to the water against the stone. She says nothing." },
-    { "id": "NER-ORD-POST-U03-L02", "speaker": "NARRATOR", "text": "You say nothing too. It gets very quiet." },
-    { "id": "NER-ORD-POST-U03-L03", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Eleven seconds. You are doing very well.”" },
-    { "id": "NER-ORD-POST-U03-L04", "speaker": "PLAYER", "text": "“Were you timing me?”" },
-    { "id": "NER-ORD-POST-U03-L05", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Surface people seem to fear pauses. The best a merchant has managed is seven seconds. Then he told me about his knees.”" },
-    { "id": "NER-ORD-POST-U03-L06", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“The current talks more when nobody interrupts it.”" }
+    {
+      "id": "NER-ORD-POST-U03-L01",
+      "speaker": "NARRATOR",
+      "text": "Nerelle folds her arms on the edge and listens to the water against the stone. She says nothing."
+    },
+    {
+      "id": "NER-ORD-POST-U03-L02",
+      "speaker": "NARRATOR",
+      "text": "You say nothing too. It gets very quiet."
+    },
+    {
+      "id": "NER-ORD-POST-U03-L03",
+      "speaker": "NERELLE",
+      "expression": "PLAYFUL",
+      "text": "“Eleven seconds. You are doing very well.”"
+    },
+    {
+      "id": "NER-ORD-POST-U03-L04",
+      "speaker": "PLAYER",
+      "text": "“Were you timing me?”"
+    },
+    {
+      "id": "NER-ORD-POST-U03-L05",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“Surface people seem to fear pauses. The best a merchant has managed is seven seconds. Then he told me about his knees.”"
+    },
+    {
+      "id": "NER-ORD-POST-U03-L06",
+      "speaker": "NERELLE",
+      "expression": "NEUTRAL",
+      "text": "“The current talks more when nobody interrupts it.”"
+    }
   ],
   "options": [
     {
       "choiceId": "NER-ORD-POST-U03-C1-YES",
       "labelText": "“Then I’m going for the record.”",
       "branch": [
-        { "id": "NER-ORD-POST-U03-R-YES-01", "speaker": "NARRATOR", "text": "You say nothing. The water says a good deal. After a while, Nerelle nods, as if the current has made a fair point." },
-        { "id": "NER-ORD-POST-U03-R-YES-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Forty-one seconds. I will have to tell the merchant.”" }
+        {
+          "id": "NER-ORD-POST-U03-R-YES-01",
+          "speaker": "NARRATOR",
+          "text": "You say nothing. The water says a good deal. At thirty seconds, a gull lands between you and screams once."
+        },
+        {
+          "id": "NER-ORD-POST-U03-R-YES-02",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“Forty-one seconds. The gull is disqualified.”"
+        }
       ]
     },
     {
       "choiceId": "NER-ORD-POST-U03-C1-NO",
-      "labelText": "“Don’t overthink it. Go with your gut. They need an answer.”",
+      "labelText": "“Want me to fill the quiet? I’ve got a story about my knees.”",
       "branch": [
-        { "id": "NER-ORD-POST-U03-R-NO-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“My gut does not sit on the council.”" },
-        { "id": "NER-ORD-POST-U03-R-NO-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Also, you only lasted four seconds that time.”" }
+        {
+          "id": "NER-ORD-POST-U03-R-NO-01",
+          "speaker": "NERELLE",
+          "expression": "NEUTRAL",
+          "text": "“The merchant said that too.”"
+        },
+        {
+          "id": "NER-ORD-POST-U03-R-NO-02",
+          "speaker": "NERELLE",
+          "expression": "PLAYFUL",
+          "text": "“Four seconds. He managed seven.”"
+        }
       ]
     }
   ]

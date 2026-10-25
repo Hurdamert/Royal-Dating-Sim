@@ -1,11 +1,35 @@
 {
   "sceneId": "CORE-FAIL-01",
   "intro": [
-    { "id": "CORE-FAIL-001", "speaker": "NARRATOR", "text": "The twenty-eight days are over. There will be no royal wedding this season." },
-    { "id": "CORE-FAIL-002", "speaker": "NARRATOR", "text": "No clever message, extra training session or well-timed browser refresh can bring the last day back." },
-    { "id": "CORE-FAIL-003", "speaker": "PLAYER", "text": "“I’d like to appeal the deadline.”" },
-    { "id": "CORE-FAIL-004", "speaker": "NARRATOR", "text": "A clerk stamps your appeal *RECEIVED*, then stamps a second page *DENIED* without reading the first." },
-    { "id": "CORE-FAIL-005", "speaker": "NARRATOR", "text": "The clerk hands back your journal. Every choice you made is still in it, and it stays yours until you restart or begin a new route." },
-    { "id": "CORE-FAIL-006", "speaker": "NARRATOR", "text": "**Ending: The Courtship Window Closes.**" }
+    {
+      "id": "CORE-FAIL-001",
+      "speaker": "NARRATOR",
+      "text": "The twenty-eight days are over. There will be no royal wedding this season."
+    },
+    {
+      "id": "CORE-FAIL-002",
+      "speaker": "NARRATOR",
+      "text": "No clever message, extra training session or well-timed browser refresh can bring the last day back."
+    },
+    {
+      "id": "CORE-FAIL-003",
+      "speaker": "PLAYER",
+      "text": "“I’d like to appeal the deadline.”"
+    },
+    {
+      "id": "CORE-FAIL-004",
+      "speaker": "NARRATOR",
+      "text": "A clerk stamps your appeal *RECEIVED*, then stamps a second page *DENIED* without reading the first."
+    },
+    {
+      "id": "CORE-FAIL-005",
+      "speaker": "NARRATOR",
+      "text": "The clerk hands back your journal. Every choice you made is still in it, and it stays yours until you restart or begin a new route."
+    },
+    {
+      "id": "CORE-FAIL-006",
+      "speaker": "NARRATOR",
+      "text": "**Ending: The Courtship Window Closes.**"
+    }
   ]
 }
