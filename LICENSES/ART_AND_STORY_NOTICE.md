@@ -26,6 +26,9 @@ and art originals with recorded SHA-256 hashes).
   "for any purpose (including for commercial purposes)"; §4(a)(i) is worded more
   narrowly, so review the license before any commercial release.
   https://bfl.ai/legal/non-commercial-license-terms
+- Music (`public/audio/`: the start-screen opening and loop, and "Enter the
+  Town") was supplied by the project owner on 2026-10-25 and is shipped byte
+  for byte; `src/audio/tracks.generated.ts` records each file's SHA-256.
 - The shipped dialogue is the owner-requested revision in
   `content/revisions/dialogue-v2/`, layered on the frozen text.
 - Rights are held by the project owner. No license to reuse the art or story is

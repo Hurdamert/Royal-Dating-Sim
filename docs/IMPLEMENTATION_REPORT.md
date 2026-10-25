@@ -6,7 +6,7 @@ Built from `handoff/` (Implementation Agent Handoff v1.0, archive SHA-256 `15c72
 
 - **Playable game, feature-complete against COMPLETE_GAME_SPEC.md** — 3 routes, 28 days × 3 slots, 7 locations, 8 training activities, Rest/Pass, 54 ordinary conversations, 6 optional events, midpoints and short retries, linked same-encounter proposal, proposal retries, 3 epilogues, shared prologue and failure, journal, calendar, help, gallery, backup export/import, recovery, read-only second tab.
 - **No BLOCKER.** No contradiction between preserved canonical sources and the v1.0 defaults was found (§6).
-- **149 automated tests pass** (120 unit + 29 browser), run on real code paths. Outputs: [`docs/test-results/`](test-results/).
+- **158 automated tests pass** (128 unit + 30 browser), run on real code paths. Outputs: [`docs/test-results/`](test-results/).
 - **Owner revision (§9) applied as layers on top of the frozen sources**, each one reversible: dialogue from `content/revisions/dialogue-v2/` (`CONTENT_REVISION=none` restores the frozen text), character art from `art-src/edited/` (derived from the hash-checked originals by `scripts/art/modest.py`).
 
 ## 2. Source integrity (executed)
@@ -33,9 +33,9 @@ Built from `handoff/` (Implementation Agent Handoff v1.0, archive SHA-256 `15c72
 
 | Suite | Runner | Result |
 |---|---|---|
-| Unit: engine, witnesses, validation, backups, drafts, content (incl. revision mechanics and an independent canon parse), staging geometry and water pixels, art policy, schema migrations, colour contrast | `npm test` (node:test via tsx) | **120/120 pass** |
+| Unit: engine, witnesses, validation, backups, drafts, content (incl. revision mechanics and an independent canon parse), staging geometry and water pixels, art policy, schema migrations, music, colour contrast | `npm test` (node:test via tsx) | **128/128 pass** |
 | Browser persistence (real Chromium IndexedDB + Web Locks + BroadcastChannel) | `node --test tests/browser/persistence.test.mjs` | **15/15 pass** |
-| Browser end-to-end on the built site (esbuild build) | `node --test tests/browser/e2e.test.mjs` | **14/14 pass** |
+| Browser end-to-end on the built site (esbuild build) | `node --test tests/browser/e2e.test.mjs` | **15/15 pass** |
 | GitHub Actions CI on `main` at `599eaa8`: fonts fetched, sources, content, art, strict type-check with the real `@types/react`, ESLint, unit tests, **Vite build**, browser tests against Vite's `dist/` | [run 40185353778](https://github.com/Hurdamert/Royal-Dating-Sim/actions/runs/40185353778) | **All steps pass** |
 
 Highlights: keyboard-only play from title through the tutorial to choice to reload to replacement confirmation; a perfect Tavri route played entirely through the UI wins on Day 15 with the midpoint CG and epilogue; Day 28 deadline failure through the UI; draft resume after reload with no award; forced IndexedDB aborts (abort, exception, quota) leave all records untouched; triple-click of the same action awards once; second tab read-only and takeover loads the newest revision; export → import into a fresh browser preserves the run exactly; no external network requests and continued play offline after load; no horizontal overflow at 320 px and at 200 % zoom on every main screen; dialogue ≥ 16 px; choices ≥ 44 px; every text colour pair ≥ 4.5:1.
@@ -118,6 +118,24 @@ The project owner asked, in the implementation chat, to "make the dialogue funni
 - The two midpoint illustrations whose originals show the princess lying down (Tavri's *Private Confession*, Nerelle's *Forbidden Journey*) were **redrawn in seated/upright poses** at the owner's request ("redraw the art to make them seated"). The redraws were made with FLUX.1 Kontext [dev] (Black Forest Labs) on Hugging Face, using the all-ages edit of each approved original as the reference. Faces, hair, outfits and the night settings carry over, and the backgrounds were partly repainted by the editor. Two editor mistakes were corrected by `scripts/art/redraw.py` (a second fox tail on Tavri; shell-cup shapes showing through Nerelle's blouse). The reference, the editor's raw output, the prompt, seed and settings, and the corrected result are recorded with hashes in `scripts/art/redraw/`, and a unit test checks the whole chain down to the shipped file. The FLUX [dev] license permits commercial use of outputs in §2(d) but is worded more narrowly in §4(a)(i); this needs owner review before any commercial release (`LICENSES/ART_AND_STORY_NOTICE.md`).
 
 Horns, wings, tails, ears and fins are unchanged. The tool (`scripts/art/modest.py`) reads the original, checks its hash, applies the per-image spec in `scripts/art/modest/` and writes `art-src/edited/`. `EDITS.json` and the deployed manifest record the original and edited hashes, and `art:check` verifies both. The character reference sheets are no longer deployed.
+
+**Music.** The owner supplied three tracks (made in GarageBand) and asked that the start-screen opening play on the title screen, followed by the start-screen loop "until character selection", and that "Enter the Town" play in the prologue. This overrides the v1.0 default of no sound.
+
+- **Title music.** It plays on the title screen and the menus reached from it: character selection, the gallery, credits, and "How to play". The opening plays once, then the loop repeats seamlessly. "Until character selection" was read as "until a princess is chosen": the music continues through the character selection screen and hands over to the prologue music when the run begins.
+- **Enter the Town.** It plays during the prologue, both at the start of a run and when replayed from the gallery, and repeats with its own ending.
+- **Everywhere else is silent**, including the town, conversations, endings and the first-run tutorial.
+
+How it works:
+
+- The player is Web Audio (`src/audio/music.ts`), because only it can start the loop on the exact sample the opening ends.
+- MP3 files hide a little silence at each end, and browsers remove it differently. `scripts/audio/prepare-music.py` records each track's exact sample count and its first 2048 samples, and the game finds that fingerprint in whatever the browser decoded (`src/audio/align.ts`). Chromium finds it 1057 samples in, with a match score of 0.99999.
+- The loop's last 32 samples are eased toward its first, so the repeat has no click.
+- Browsers keep sound off until the first click or key press. Until then a hint says so, and the music starts from its beginning on that first interaction.
+- Only the visible tab plays.
+- A "Music" toggle button (aria-pressed) appears wherever music plays, and Options has the same setting. The choice is remembered in this browser.
+- Decoded audio is released while the game is quiet.
+- The files are the owner's, byte for byte, named by content hash (`public/audio/`) and cached long-term. They add 2.9 MB, fetched only when their screen is reached.
+- Tests: `tests/unit/music.test.ts` (which screen plays what, locating the music, trimming, file integrity) and an end-to-end test that emulates the browser's click-to-start rule.
 
 **Kaedra's look.** She now has the alternate ash-silver hair and violet eyes from her bible. Her red cape and wings are recoloured to match, and her route colour moves from red to violet. Her eyebrows were left red-brown (one line in her specs to change). Face structure is unchanged (see §7). The commissioning brief for new art is `docs/art/CHARACTER_REDESIGN_BRIEF.md`.
 

@@ -12,6 +12,9 @@ import { Presentation } from './ui/screens/Presentation';
 import { AccessBanner, Credits, Gallery, NewRun, StorageUnavailable, Title } from './ui/screens/Menus';
 import { CalendarPanel, Ended, HelpPanel, JournalPanel, OptionsPanel, Recovery, SavePanel, exportBackupFile } from './ui/screens/Panels';
 import { Tutorial, tutorialSeen } from './ui/screens/Tutorial';
+import { MusicToggle } from './ui/components/MusicToggle';
+import { music } from './audio/music';
+import { musicCueFor } from './audio/cue';
 
 type Screen =
   | { k: 'title' }
@@ -61,6 +64,10 @@ export function App({ session }: { session: GameSession }) {
     if (!run && (screen.k === 'hub' || screen.k === 'ended' || screen.k === 'encounter')) setScreen({ k: 'title' });
     if (run && run.outcome !== 'active' && screen.k === 'hub') setScreen({ k: 'ended' });
   }, [run, screen.k]);
+
+  // Background music follows the screen (see src/audio/cue.ts).
+  const musicCue = musicCueFor(screen, snap.phase, sceneIds.prologue);
+  useEffect(() => music.setCue(musicCue), [musicCue]);
 
   useEffect(() => {
     const t = screen.k === 'encounter' || screen.k === 'present' ? '' : screen.k === 'hub' ? ' — Town' : '';
@@ -309,6 +316,11 @@ export function App({ session }: { session: GameSession }) {
         </div>
       )}
       {noticeBar}
+      {musicCue && (
+        <div className="music-bar">
+          <MusicToggle hint />
+        </div>
+      )}
       <div id="main-content" tabIndex={-1} className="content">
         {body}
       </div>

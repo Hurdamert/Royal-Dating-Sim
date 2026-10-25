@@ -1,6 +1,7 @@
 // Free, read-only panels (calendar, journal, help) plus backup, options,
 // recovery and end-of-run screens.
-import { useRef, useState } from 'react';
+import { useRef, useState, useSyncExternalStore } from 'react';
+import { music } from '../../audio/music';
 import { CONTENT, getScene } from '../../core/content';
 import { SLOTS, type JournalRecord, type Route, type RunState } from '../../core/model';
 import { meetingLocation, weekdayOf, timeIndex } from '../../core/schedule';
@@ -309,12 +310,16 @@ export function OptionsPanel({
   onClose: () => void;
 }) {
   const [ask, setAsk] = useState<'run' | 'all' | null>(null);
+  const musicOn = useSyncExternalStore(music.subscribe, music.getState).enabled;
   const writable = snap.access === 'writer';
   return (
     <Modal title="Options" onClose={onClose}>
       <div className="stack">
         <label className="check">
           <input type="checkbox" checked={reducedMotion} onChange={(e) => setReducedMotion(e.target.checked)} /> Reduce motion (also follows your system setting)
+        </label>
+        <label className="check">
+          <input type="checkbox" checked={musicOn} onChange={(e) => music.setEnabled(e.target.checked)} data-testid="music-option" /> Music on the title screens and in the prologue
         </label>
         <section>
           <h3>Saved data</h3>

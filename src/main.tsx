@@ -3,13 +3,17 @@ import { createRoot } from 'react-dom/client';
 import { App } from './App';
 import { ErrorBoundary } from './ui/components/ErrorBoundary';
 import { GameSession } from './persistence/session';
+import { music } from './audio/music';
 import './fonts.generated.css';
 import './styles.css';
 
 const session = new GameSession();
 // Read-only snapshot access for diagnostics and end-to-end tests. Nothing that
 // can write to storage is exposed; the game never reads this.
-(window as unknown as { __royalExceptions?: Pick<GameSession, 'getSnapshot'> }).__royalExceptions = { getSnapshot: session.getSnapshot };
+(window as unknown as { __royalExceptions?: { getSnapshot: GameSession['getSnapshot']; getMusic: typeof music.getState } }).__royalExceptions = {
+  getSnapshot: session.getSnapshot,
+  getMusic: music.getState,
+};
 void session.init();
 window.addEventListener('pagehide', () => session.dispose());
 // A page restored from the back-forward cache has a closed database and no

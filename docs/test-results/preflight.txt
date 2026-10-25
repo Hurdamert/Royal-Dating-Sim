@@ -9,4 +9,4 @@ OK
 == typecheck: UI (strict; LOCAL minimal React shim, NOT the real @types/react — see report)
 OK
 == build (esbuild fallback; Vite not installable here)
-Built dist-esbuild/: app-5ZZNI2PO.js, app-S4DHCYXX.css (2405 KiB of JS/CSS incl. source maps)
+Built dist-esbuild/: app-7TONHUA3.js, app-7QKVMKNJ.css (2471 KiB of JS/CSS incl. source maps)

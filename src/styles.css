@@ -237,6 +237,38 @@ img {
   font-size: 0.9375rem;
 }
 
+/* Music on/off (title screens and the prologue) ------------------------- */
+.music-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px 10px;
+  padding: 8px 16px 0;
+}
+.music-hint {
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+.music-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.music-toggle__icon {
+  font-size: 1.1em;
+  line-height: 1;
+}
+.music-toggle__state {
+  font-weight: 400;
+  color: var(--ink-soft);
+  min-width: 2ch;
+}
+.music-toggle[aria-pressed='false'] .music-toggle__icon {
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+
 /* HUD --------------------------------------------------------------------- */
 .hud {
   position: sticky;

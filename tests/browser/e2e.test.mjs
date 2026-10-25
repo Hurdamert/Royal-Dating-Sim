@@ -322,6 +322,87 @@ describe('End-to-end (built site, Chromium)', () => {
     await ctx.close();
   });
 
+  test('Music: title opening then loop through character selection, Enter the Town in the prologue, silence in town; waits for a click; on/off remembered', async () => {
+    const ctx = await browser.newContext({ viewport: DESKTOP });
+    // Headless Chromium lets audio start without a click. Real browsers do not:
+    // emulate that rule so the "waits for the first click" path is exercised.
+    await ctx.addInitScript(() => {
+      let activated = false;
+      for (const t of ['pointerdown', 'keydown']) addEventListener(t, () => (activated = true), { capture: true });
+      const Real = window.AudioContext;
+      window.AudioContext = class extends Real {
+        constructor(...a) {
+          super(...a);
+          void super.suspend();
+        }
+        resume() {
+          return activated ? super.resume() : Promise.resolve();
+        }
+      };
+    });
+    const page = await ctx.newPage();
+    const errors = [];
+    page.on('pageerror', (e) => errors.push(e.message));
+    await page.goto(server.url);
+    await page.getByTestId('title').waitFor();
+    const music = () => page.evaluate(() => window.__royalExceptions.getMusic());
+    const until = (pred, arg) => page.waitForFunction(pred, arg, { timeout: 20000 });
+
+    // Title: both title tracks decoded, music located exactly, waiting for a click.
+    await until(() => window.__royalExceptions.getMusic().status === 'waiting');
+    let m = await music();
+    assert.deepEqual(m.tracks, ['titleOpening', 'titleLoop']);
+    for (const id of ['titleOpening', 'titleLoop']) assert.ok(m.leads[id].score > 0.99, `${id} located (score ${m.leads[id].score})`);
+    assert.equal(await page.getByTestId('music-hint').count(), 1, 'the player is told why it is quiet');
+    await page.locator('h1').first().click();
+    await until(() => window.__royalExceptions.getMusic().status === 'playing');
+    assert.equal(await page.getByTestId('music-hint').count(), 0);
+    const titleStarts = (await music()).starts;
+
+    // Character selection keeps the same music running (no restart).
+    await page.getByTestId('new-run').click();
+    await page.getByTestId('begin').waitFor();
+    m = await music();
+    assert.deepEqual([m.cue, m.status, m.starts], ['title', 'playing', titleStarts]);
+
+    // Prologue: Enter the Town.
+    await page.locator('input[data-route="NER"]').check({ force: true });
+    await page.getByTestId('begin').click();
+    await page.getByTestId('presentation').waitFor();
+    await until(() => window.__royalExceptions.getMusic().tracks.join() === 'town' && window.__royalExceptions.getMusic().status === 'playing');
+    assert.ok((await music()).leads.town.score > 0.99);
+    assert.equal(await page.getByTestId('music-toggle').count(), 1, 'music can be switched off during the prologue');
+
+    // The game itself is quiet, and there is no music button there.
+    while (!(await page.getByTestId('hub').count())) {
+      if (await page.getByTestId('tutorial-skip').count()) await page.getByTestId('tutorial-skip').click();
+      else await page.getByTestId('continue').click();
+    }
+    m = await music();
+    assert.deepEqual([m.cue, m.status, m.tracks], [null, 'idle', []]);
+    assert.equal(await page.getByTestId('music-toggle').count(), 0);
+
+    // Back to the title screen: the title music starts again from its opening.
+    await page.getByRole('button', { name: 'Title' }).click();
+    await until((n) => window.__royalExceptions.getMusic().starts > n && window.__royalExceptions.getMusic().status === 'playing', titleStarts + 1);
+
+    // Off is remembered across reloads, and Options shows the same setting.
+    await page.getByTestId('music-toggle').click();
+    assert.equal((await music()).status, 'off');
+    await page.reload();
+    await page.getByTestId('title').waitFor();
+    assert.equal(await page.getByTestId('music-toggle').getAttribute('aria-pressed'), 'false');
+    m = await music();
+    assert.deepEqual([m.status, m.tracks], ['off', []]);
+    await page.getByRole('button', { name: 'Options' }).click();
+    assert.equal(await page.getByTestId('music-option').isChecked(), false);
+    await page.getByTestId('music-option').check();
+    await until(() => window.__royalExceptions.getMusic().status === 'playing');
+    assert.equal(await page.getByTestId('music-toggle').getAttribute('aria-pressed'), 'true');
+    assert.deepEqual(errors, []);
+    await ctx.close();
+  });
+
   test('E05 (UI) a second tab is read-only with actions disabled', async () => {
     const { ctx, page } = await open();
     await startRun(page, 'TAV');

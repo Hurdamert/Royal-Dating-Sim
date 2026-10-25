@@ -275,8 +275,13 @@ export function Credits({ onBack }: { onBack: () => void }) {
         Built with React and React DOM (MIT License, © Meta Platforms, Inc. and affiliates) and the Scheduler package (MIT). Full notices:{' '}
         <a href="/licenses/THIRD_PARTY_NOTICES.txt">third-party notices</a>.
       </p>
+      <h2>Music</h2>
+      <p>
+        Title music (opening and loop) and <em>Enter the Town</em> were supplied by the project owner. Music plays on the title screens and during the prologue; switch it
+        off with the Music button or in Options.
+      </p>
       <h2>Privacy</h2>
-      <p>The game makes no network requests after loading, has no accounts, no sound, no analytics, and stores progress only in this browser.</p>
+      <p>The game talks to no other website, has no accounts and no analytics, and stores progress only in this browser.</p>
       <button type="button" className="btn" onClick={onBack}>
         Back
       </button>
