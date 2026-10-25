@@ -251,7 +251,7 @@ export class GameSession {
     const v = raw.active === null ? null : validateRun(raw.active);
     const run = v && v.ok ? v.value : null;
     const g = raw.gallery === null ? null : validateGalleryRecord(raw.gallery);
-    return buildBackup(run, g && g.ok ? g.value.completed : []);
+    return buildBackup(run, g && g.ok ? g.value.completed : [], now);
   }
 
   previewImport(text: string): Promise<ParsedBackup> {
