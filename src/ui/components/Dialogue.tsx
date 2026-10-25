@@ -103,7 +103,7 @@ export function Choices({
               className="btn choice"
               disabled={busy}
               onClick={() => onChoose(o)}
-              data-choice-id={o.choiceId}
+              data-choice-index={options.indexOf(o)}
             >
               <span className="choice__num" aria-hidden="true">
                 {i + 1}

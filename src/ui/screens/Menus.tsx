@@ -5,8 +5,8 @@ import { normalizePlayerName, graphemeCount } from '../../core/engine';
 import { CONTENT, getScene, sceneIds, supportString } from '../../core/content';
 import type { SessionSnapshot } from '../../persistence/session';
 import { ERROR_TEXT } from '../../persistence/errors';
-import { Confirm, Modal } from '../components/Modal';
-import { art, displayTitle, heartsText, ROUTE_NAME, SLOT_NAME } from '../labels';
+import { Confirm } from '../components/Modal';
+import { art, displayTitle, heartsText, ROUTE_NAME, ROUTE_TAGLINE, SLOT_NAME } from '../labels';
 
 export function Title({
   snap,
@@ -91,11 +91,14 @@ export function AccessBanner({ snap, onTakeover }: { snap: SessionSnapshot; onTa
 
 export function NewRun({
   existing,
+  replacingDamaged,
   onStart,
   onCancel,
   onExport,
 }: {
   existing: RunState | null;
+  /** Set when starting from the recovery screen: the damaged save will be replaced. */
+  replacingDamaged?: { previousGood: RunState | null };
   onStart: (route: Route, name: string) => void;
   onCancel: () => void;
   onExport: () => void;
@@ -103,12 +106,11 @@ export function NewRun({
   const [route, setRoute] = useState<Route | null>(null);
   const [name, setName] = useState('');
   const [confirm, setConfirm] = useState(false);
-  const [sheet, setSheet] = useState<Route | null>(null);
   const norm = normalizePlayerName(name);
   const count = graphemeCount(name.normalize('NFC').trim());
   const start = () => {
     if (!route || !norm.ok) return;
-    if (existing) setConfirm(true);
+    if (existing || replacingDamaged) setConfirm(true);
     else onStart(route, norm.name);
   };
   return (
@@ -120,13 +122,15 @@ export function NewRun({
         {ROUTES.map((r) => (
           <div key={r} className={`route-card route-card--${r.toLowerCase()}${route === r ? ' is-selected' : ''}`}>
             <label>
-              <input type="radio" name="route" value={r} checked={route === r} onChange={() => setRoute(r)} data-route={r} />
-              <img src={art.sprite(r, 'NEUTRAL')} alt="" className="route-card__img" loading="lazy" />
-              <span className="route-card__name">{ROUTE_NAME[r]}</span>
+              <input type="radio" name="route" value={r} checked={route === r} onChange={() => setRoute(r)} data-route={r} aria-describedby={`tagline-${r}`} />
+              <img src={art.sprite(r, 'NEUTRAL')} alt="" className={`route-card__img portrait portrait--${r.toLowerCase()}`} loading="lazy" />
+              <span className="route-card__text">
+                <span className="route-card__name">{ROUTE_NAME[r]}</span>
+                <span className="route-card__tagline" id={`tagline-${r}`}>
+                  {ROUTE_TAGLINE[r]}
+                </span>
+              </span>
             </label>
-            <button type="button" className="btn btn--quiet btn--small" onClick={() => setSheet(r)}>
-              View {ROUTE_NAME[r]}’s character sheet
-            </button>
           </div>
         ))}
       </fieldset>
@@ -161,22 +165,43 @@ export function NewRun({
         </button>
       </div>
       {confirm && route && norm.ok && (
-        <Confirm title="Replace the current run?" confirmLabel="Replace and begin" danger onCancel={() => setConfirm(false)} onConfirm={() => onStart(route, norm.name)}>
-          <p>{supportString('UI-CONFIRM-01')}</p>
-          {existing && (
-            <p className="muted">
-              Current run: {ROUTE_NAME[existing.route]}, Day {existing.day}, {heartsText(existing.heartsHalf)} hearts ({existing.outcome}). Your endings gallery is kept.
-            </p>
+        <Confirm
+          title={replacingDamaged ? 'Replace the damaged save?' : 'Replace the current run?'}
+          confirmLabel="Replace and begin"
+          danger
+          onCancel={() => setConfirm(false)}
+          onConfirm={() => onStart(route, norm.name)}
+        >
+          {replacingDamaged ? (
+            <>
+              <p>The damaged save will be replaced by a new run. Your endings gallery is kept.</p>
+              {replacingDamaged.previousGood ? (
+                <p className="muted">
+                  The earlier snapshot ({ROUTE_NAME[replacingDamaged.previousGood.route]}, Day {replacingDamaged.previousGood.day}) stays as the rollback snapshot until your first action in the new run. To keep it for good, download it first.
+                </p>
+              ) : (
+                <p className="muted">There is no usable earlier snapshot to keep.</p>
+              )}
+              {replacingDamaged.previousGood && (
+                <button type="button" className="btn btn--small" onClick={onExport}>
+                  Download the earlier snapshot first
+                </button>
+              )}
+            </>
+          ) : (
+            <>
+              <p>{supportString('UI-CONFIRM-01')}</p>
+              {existing && (
+                <p className="muted">
+                  Current run: {ROUTE_NAME[existing.route]}, Day {existing.day}, {heartsText(existing.heartsHalf)} hearts ({existing.outcome}). Your endings gallery is kept.
+                </p>
+              )}
+              <button type="button" className="btn btn--small" onClick={onExport}>
+                {supportString('UI-SAVE-02')} first
+              </button>
+            </>
           )}
-          <button type="button" className="btn btn--small" onClick={onExport}>
-            {supportString('UI-SAVE-02')} first
-          </button>
         </Confirm>
-      )}
-      {sheet && (
-        <Modal title={`${ROUTE_NAME[sheet]} — character sheet`} onClose={() => setSheet(null)} wide>
-          <img src={art.sheet(sheet)} alt={`Approved character reference sheet for ${ROUTE_NAME[sheet]}.`} className="sheet-img" />
-        </Modal>
       )}
     </main>
   );
@@ -193,7 +218,7 @@ export function Gallery({ gallery, onReplay, onBack }: { gallery: Route[]; onRep
           const epi = getScene(sceneIds.epilogue(r))!;
           return (
             <li key={r} className={`gallery__item${unlocked ? '' : ' is-locked'}`} data-route={r} data-unlocked={unlocked}>
-              <img src={art.sprite(r, unlocked ? 'PLAYFUL' : 'NEUTRAL')} alt="" className="gallery__img" loading="lazy" />
+              <img src={art.sprite(r, unlocked ? 'PLAYFUL' : 'NEUTRAL')} alt="" className={`gallery__img portrait portrait--${r.toLowerCase()}`} loading="lazy" />
               <div>
                 <h2>{ROUTE_NAME[r]}</h2>
                 {unlocked ? (

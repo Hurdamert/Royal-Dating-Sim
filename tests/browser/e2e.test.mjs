@@ -63,9 +63,16 @@ describe('End-to-end (built site, Chromium)', () => {
     await page.keyboard.type('Kay');
     await tabTo(() => document.activeElement?.getAttribute('data-testid') === 'begin');
     await page.keyboard.press('Enter');
-    // Prologue: Continue has focus; Enter advances
+    // Prologue: Continue has focus; Enter advances until the first-run tutorial
     await page.getByTestId('presentation').waitFor();
-    for (let i = 0; i < 8; i++) await page.keyboard.press('Enter');
+    for (let i = 0; i < 20 && !(await page.getByTestId('tutorial').count()); i++) await page.keyboard.press('Enter');
+    // Tutorial: six cards, all keyboard-operable (arrow keys or Tab + Enter)
+    await page.getByTestId('tutorial').waitFor();
+    assert.equal(await page.getByTestId('tutorial').getAttribute('data-step'), 'goal');
+    for (let i = 0; i < 5; i++) await page.keyboard.press('ArrowRight');
+    assert.equal(await page.getByTestId('tutorial').getAttribute('data-step'), 'save');
+    await tabTo(() => document.activeElement?.getAttribute('data-testid') === 'tutorial-done');
+    await page.keyboard.press('Enter');
     await page.getByTestId('hub').waitFor();
     // Train at Home (Read Rizz Tactics 101) with the keyboard
     await tabTo(() => document.activeElement?.getAttribute('data-activity') === 'ACT-CHA-READ');

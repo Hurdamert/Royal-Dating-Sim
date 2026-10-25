@@ -2,7 +2,8 @@
 // with keys active / previous_good / gallery / draft / meta. Every committed
 // change is ONE readwrite transaction; on abort nothing changes.
 import { applyAction, newRun } from '../core/engine';
-import { SCHEMA_VERSION, type GalleryRecord, type PlayerAction, type RefusalCode, type Route, type RunState, type JournalRecord } from '../core/model';
+import { ROUTES, SCHEMA_VERSION, type GalleryRecord, type PlayerAction, type RefusalCode, type Route, type RunState, type JournalRecord } from '../core/model';
+import { validateGalleryRecord, validateRun } from '../core/validate';
 import { unionGallery } from './backup';
 import type { EncounterDraft } from './draft';
 import { SaveError, type SaveErrorCode } from './errors';
@@ -29,6 +30,24 @@ export type CommitResult =
 export interface DbHooks {
   /** Called inside the commit transaction after computing, before writes; may throw or abort. */
   beforeCommitWrites?: (tx: IDBTransaction) => void;
+}
+
+/**
+ * Unlocked endings from a stored gallery record. A damaged record is never
+ * copied forward as-is: only entries that are real route IDs survive, so a
+ * later write rebuilds a valid record from what can still be trusted (the UI
+ * tells the player when this happens; see SessionSnapshot.galleryWarning).
+ */
+export function readGallery(raw: unknown): Route[] {
+  const v = validateGalleryRecord(raw);
+  if (v.ok) return v.value.completed;
+  const list = (raw as { completed?: unknown } | null)?.completed;
+  return Array.isArray(list) ? ROUTES.filter((r) => list.includes(r)) : [];
+}
+
+/** Only a run that passes full validation may become the rollback snapshot. */
+function usableSnapshot(run: unknown): run is RunState {
+  return run !== null && run !== undefined && validateRun(run).ok;
 }
 
 function errorCodeFor(err: unknown): SaveErrorCode {
@@ -161,7 +180,7 @@ export class SaveDb {
     try {
       const { result } = await this.rmw<CommitResult>(['active', 'gallery'], (cur, tx) => {
         const active = cur.active as RunState | null;
-        const gallery = ((cur.gallery as GalleryRecord | null)?.completed ?? []) as Route[];
+        const gallery = readGallery(cur.gallery);
         if (!active) return { abort: true, result: { ok: false, code: 'no_active_run' } };
         if (active.journal.some((j) => j.actionId === action.actionId)) {
           // Already committed: a retried UI event must not award twice.
@@ -182,14 +201,18 @@ export class SaveDb {
     }
   }
 
-  /** Start a new run, replacing any active run (caller has confirmed). */
+  /**
+   * Start a new run, replacing any active run (caller has confirmed). The
+   * replaced run becomes the rollback snapshot only if it is valid; a damaged
+   * active run never overwrites a good previous_good.
+   */
   async startNewRun(route: Route, playerName: string, runId: string): Promise<RunState> {
     const { result } = await this.rmw<RunState>(['active'], (cur) => {
       const old = cur.active as RunState | null;
-      const rev = old && typeof old.saveRevision === 'number' ? old.saveRevision + 1 : 0;
-      const run = newRun(route, playerName, runId, rev);
+      const oldRev = old && typeof old.saveRevision === 'number' && Number.isInteger(old.saveRevision) && old.saveRevision >= 0 ? old.saveRevision : -1;
+      const run = newRun(route, playerName, runId, oldRev + 1);
       const writes: Partial<Record<Key, unknown>> = { active: run, draft: undefined };
-      if (old) writes.previous_good = old;
+      if (usableSnapshot(old)) writes.previous_good = old;
       return { writes, result: run };
     });
     return result;
@@ -199,17 +222,22 @@ export class SaveDb {
   async importReplace(run: RunState | null, gallery: Route[], mode: 'union' | 'replace', replaceRun: boolean): Promise<{ run: RunState | null; gallery: Route[] }> {
     const { result } = await this.rmw<{ run: RunState | null; gallery: Route[] }>(['active', 'gallery'], (cur) => {
       const old = cur.active as RunState | null;
-      const oldGallery = ((cur.gallery as GalleryRecord | null)?.completed ?? []) as Route[];
-      const newGallery = mode === 'union' ? unionGallery(oldGallery, gallery) : unionGallery([], gallery);
-      const writes: Partial<Record<Key, unknown>> = { gallery: { schemaVersion: SCHEMA_VERSION, completed: newGallery } satisfies GalleryRecord };
-      let nextRun = old;
+      const oldGallery = readGallery(cur.gallery);
+      const writes: Partial<Record<Key, unknown>> = {};
+      let nextRun = usableSnapshot(old) ? old : null;
       if (replaceRun && run) {
-        const base = old && typeof old.saveRevision === 'number' ? old.saveRevision : -1;
+        const base = old && typeof old.saveRevision === 'number' && Number.isInteger(old.saveRevision) ? old.saveRevision : -1;
         nextRun = { ...structuredClone(run), saveRevision: Math.max(base, run.saveRevision) + 1 };
         writes.active = nextRun;
         writes.draft = undefined;
-        if (old) writes.previous_good = old;
+        if (usableSnapshot(old)) writes.previous_good = old;
       }
+      // "Replace my endings" can never drop the ending of the run that stays active:
+      // a won run must keep its route in the gallery (otherwise its own backup
+      // would fail import with ERR_IMPORT_STATE).
+      const keep: Route[] = nextRun && nextRun.outcome === 'won' && nextRun.winnerRoute ? [nextRun.winnerRoute] : [];
+      const newGallery = mode === 'union' ? unionGallery(unionGallery(oldGallery, gallery), keep) : unionGallery(gallery, keep);
+      writes.gallery = { schemaVersion: SCHEMA_VERSION, completed: newGallery } satisfies GalleryRecord;
       return { writes, result: { run: nextRun, gallery: newGallery } };
     });
     return result;

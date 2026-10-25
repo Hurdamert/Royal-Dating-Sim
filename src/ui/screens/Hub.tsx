@@ -22,6 +22,7 @@ export function Hub({
   location,
   setLocation,
   onEncounter,
+  onResume,
 }: {
   session: GameSession;
   snap: SessionSnapshot;
@@ -29,6 +30,7 @@ export function Hub({
   location: LocationId;
   setLocation: (l: LocationId) => void;
   onEncounter: (offer: EncounterOffer) => void;
+  onResume: () => void;
 }) {
   const [result, setResult] = useState<JournalRecord | null>(null);
   const [refusal, setRefusal] = useState<string | null>(null);
@@ -36,6 +38,9 @@ export function Hub({
   const busy = useRef(false);
   const [busyUi, setBusyUi] = useState(false);
   const writable = snap.access === 'writer' && run.outcome === 'active';
+  // An unfinished conversation has to be resumed or left before anything else
+  // uses time (SPEC §3: no cost-bearing action while an encounter is unresolved).
+  const pending = !!snap.draft;
   const avail = encounterAvailability(run, location);
   const training = trainingAvailability(run, location);
   const princess = ROUTE_NAME[run.route];
@@ -43,7 +48,7 @@ export function Hub({
   const here = avail.princessLocationNow === location;
 
   const commit = async (action: PlayerAction) => {
-    if (busy.current || !writable) return;
+    if (busy.current || !writable || pending) return;
     busy.current = true;
     setBusyUi(true);
     setRefusal(null);
@@ -112,11 +117,21 @@ export function Hub({
             {refusal}
           </p>
         )}
-        {snap.draft && (
-          <p className="notice">You have an unfinished conversation. Use “Resume conversation” on the title screen or below.</p>
+        {pending && (
+          <div className="notice" role="status" data-testid="pending-encounter">
+            <p>You have an unfinished conversation with {princess}. Finish it or leave it before doing anything else here.</p>
+            <div className="row">
+              <button type="button" className="btn btn--primary btn--small" onClick={onResume} disabled={snap.access !== 'writer'}>
+                Resume conversation
+              </button>
+              <button type="button" className="btn btn--small" onClick={() => void session.discardDraft()} disabled={snap.access !== 'writer'}>
+                Leave it (no time passes)
+              </button>
+            </div>
+          </div>
         )}
 
-        {avail.offers.length > 0 && (
+        {!pending && avail.offers.length > 0 && (
           <div className="actions" role="group" aria-label={`Meet ${princess}`}>
             {avail.offers.map((o) => {
               const l = offerLabel(o);
@@ -152,7 +167,7 @@ export function Hub({
                   key={t.activity.id}
                   type="button"
                   className="btn action"
-                  disabled={!writable || busyUi || !t.available}
+                  disabled={!writable || busyUi || pending || !t.available}
                   onClick={() => commit({ type: 'train', actionId: crypto.randomUUID(), location, activityId: t.activity.id })}
                   data-activity={t.activity.id}
                 >
@@ -189,7 +204,7 @@ export function Hub({
         )}
 
         <div className="actions actions--rest">
-          <button type="button" className="btn action" disabled={!writable || busyUi || !canRest(run)} onClick={() => commit({ type: 'rest', actionId: crypto.randomUUID(), location })} data-testid="rest">
+          <button type="button" className="btn action" disabled={!writable || busyUi || pending || !canRest(run)} onClick={() => commit({ type: 'rest', actionId: crypto.randomUUID(), location })} data-testid="rest">
             <span className="action__title">Rest / Pass this slot</span>
             <span className="action__desc">Uses this time slot with no reward.</span>
           </button>

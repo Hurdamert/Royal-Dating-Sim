@@ -8,3 +8,6 @@ dist-esbuild/
 # authoritative OFL publishers; they are not committed.
 public/fonts/*.ttf
 public/fonts/*.woff2
+
+# Before/after review sheets from scripts/art/modest.py --preview (contain the unedited originals)
+art-src/preview/

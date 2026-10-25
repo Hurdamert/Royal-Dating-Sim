@@ -4,11 +4,11 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { BG_H, BG_W, compositionFor, spriteWidth, type Composition, type Rect } from '../../src/ui/staging.ts';
+import sharp from 'sharp';
+import { BG_H, BG_W, compositionFor, NERELLE_SPRITE_CUT, NERELLE_WATERLINE, spriteWidth, type Composition, type Rect } from '../../src/ui/staging.ts';
 import { LOCATIONS, ROUTES } from '../../src/core/model.ts';
 import { ROUTE_SPECS } from '../../src/core/schedule.ts';
 
-const WAIST = 0.56; // fraction of sprite height where Nerelle's tail begins in the approved sprites
 
 /** Water-line y of a polygon at a given x (top edge), by scanning its edges. */
 function topEdgeAt(poly: [number, number][], x: number): number {
@@ -49,18 +49,42 @@ describe('Stage compositions', () => {
     }
   });
 
-  test('Nerelle: below-waist sprite is covered by the background-pixel occluder; head stays in frame', () => {
+  test('Nerelle: everything below the waterline is covered by the background-pixel occluder; head stays in frame', () => {
+    assert.ok(NERELLE_SPRITE_CUT > NERELLE_WATERLINE, 'the transparent cut in her sprites lies under the water');
     for (const l of ['royal_gardens', 'moonwater_quay'] as const) {
       const c = compositionFor('NER', l)!;
       const s = c.sprite;
       const w = spriteWidth(s);
-      const waist = s.top + WAIST * s.height;
+      const waist = s.top + NERELLE_WATERLINE * s.height;
       for (const x of [s.cx - w * 0.25, s.cx, s.cx + w * 0.25]) {
         const xx = Math.min(BG_W - 1, x);
         const line = topEdgeAt(c.occluder!, xx);
-        assert.ok(line <= waist + 12, `${l}: water line ${line.toFixed(0)} at x=${xx.toFixed(0)} must be at/above the waist ${waist.toFixed(0)}`);
+        assert.ok(line <= waist + 12, `${l}: water line ${line.toFixed(0)} at x=${xx.toFixed(0)} must be at/above her collarbone ${waist.toFixed(0)}`);
       }
       for (const [name, k] of crops(c)) assert.ok(s.top >= k.y - 2, `${l} ${name}: head (top ${s.top}) inside crop (y ${k.y})`);
+    }
+  });
+
+  test('Nerelle: the waterline sits on water pixels of the approved background, not stone or paving', async () => {
+    for (const [l, file] of [['royal_gardens', 'bg_royal_gardens.webp'], ['moonwater_quay', 'bg_moonwater_quay.webp']] as const) {
+      const c = compositionFor('NER', l)!;
+      const { data, info } = await sharp(`public/art/${file}`).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+      assert.equal(info.width, BG_W);
+      const w = spriteWidth(c.sprite);
+      let water = 0;
+      let total = 0;
+      // A 14px band just under the waterline across her torso (centre 40% of the sprite).
+      // (The previous Gardens placement, waterline on the wall coping, scores 0%; the Quay scores ~84% because of sun glints.)
+      for (let x = Math.round(c.sprite.cx - w * 0.2); x <= Math.min(BG_W - 1, c.sprite.cx + w * 0.2); x += 4) {
+        const top = Math.ceil(topEdgeAt(c.occluder!, x));
+        for (let y = top + 2; y < top + 16; y += 2) {
+          const i = (y * info.width + x) * 3;
+          const [r, g, b] = [data[i]!, data[i + 1]!, data[i + 2]!];
+          total++;
+          if (b > r + 25 && b >= g) water++;
+        }
+      }
+      assert.ok(water / total > 0.75, `${l}: ${((water / total) * 100).toFixed(0)}% of the waterline band is water-coloured`);
     }
   });
 

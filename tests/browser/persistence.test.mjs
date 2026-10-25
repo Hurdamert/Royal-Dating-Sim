@@ -301,6 +301,57 @@ describe('E. Persistence in a real browser', () => {
     await c.close();
   });
 
+  test('E10 (review fix) a new run started from recovery never replaces the good snapshot with the damaged save', async () => {
+    const c = await ctx();
+    const p = await sessionPage(c);
+    const out = await p.evaluate(async () => {
+      await window.S.startNewRun('TAV', 'Ivy');
+      await window.S.commit(window.RE.restAction());
+      await window.S.commit(window.RE.restAction());
+      const r = await window.S.database.readAll();
+      await window.S.database.writeRawForTest('active', { ...r.active, heartsHalf: 9 });
+      await window.S.reload();
+      const phase = window.S.getSnapshot().phase;
+      await window.S.startNewRun('NER', 'Ivy');
+      const after = await window.S.database.readAll();
+      return { phase, prevRevision: after.previousGood.saveRevision, prevRoute: after.previousGood.route, prevHearts: after.previousGood.heartsHalf, activeRoute: after.active.route };
+    });
+    assert.equal(out.phase, 'recovery');
+    assert.equal(out.activeRoute, 'NER');
+    assert.equal(out.prevRoute, 'TAV', 'the valid earlier snapshot is still the rollback snapshot');
+    assert.equal(out.prevRevision, 1);
+    assert.equal(out.prevHearts, 0, 'not the damaged copy');
+    await c.close();
+  });
+
+  test('E09 (review fix) "replace my endings" keeps the ending of a won run that stays active, so its backup still imports', async () => {
+    const c = await ctx();
+    const p = await sessionPage(c);
+    const out = await p.evaluate(async () => {
+      const S = window.S;
+      await S.startNewRun('TAV', 'Kit');
+      let guard = 0;
+      while (S.getSnapshot().run.outcome === 'active' && guard++ < 84) {
+        const s = S.getSnapshot().run;
+        const meet = window.RE.meetAction(s, 'correct', 'correct');
+        if (meet && !s.dailyEncounterUsed && (await S.commit(meet)).ok) continue;
+        if (s.stats.charisma < 6) await S.commit(window.RE.trainAction('charisma'));
+        else if (s.stats.intelligence < 4) await S.commit(window.RE.trainAction('intelligence'));
+        else await S.commit(window.RE.restAction());
+      }
+      // A gallery-only backup that knows only Nerelle's ending.
+      const other = await S.previewImport(await window.RE.buildBackup(null, ['NER']));
+      await S.confirmImport(other, { replaceRun: false, galleryMode: 'replace' });
+      const gallery = S.getSnapshot().gallery;
+      const own = await S.previewImport(await S.exportBackup());
+      return { outcome: S.getSnapshot().run.outcome, gallery, ownOk: own.ok, ownCode: own.ok ? null : own.code };
+    });
+    assert.equal(out.outcome, 'won');
+    assert.deepEqual(out.gallery, ['TAV', 'NER']);
+    assert.equal(out.ownOk, true, `own backup imports (${out.ownCode})`);
+    await c.close();
+  });
+
   test('E11/D07 failed run stays readable until a new run is explicitly started; gallery persists across new runs', async () => {
     const c = await ctx();
     const p = await sessionPage(c);

@@ -3,7 +3,7 @@
 import type { PlayerAction, RefusalCode, Route, RunState } from '../core/model';
 import { validateGalleryRecord, validateRun } from '../core/validate';
 import { buildBackup, parseBackup, type ParsedBackup } from './backup';
-import { openDatabase, type SaveDb, type CommitResult } from './db';
+import { openDatabase, readGallery, type SaveDb, type CommitResult } from './db';
 import { checkDraft, type EncounterDraft } from './draft';
 import { SaveError, type SaveErrorCode } from './errors';
 import { acquireWriter, locksSupported, type WriterHandle } from './lock';
@@ -132,7 +132,10 @@ export class GameSession {
     if (raw.gallery !== null) {
       const g = validateGalleryRecord(raw.gallery);
       if (g.ok) gallery = g.value.completed;
-      else galleryWarning = g.errors;
+      else {
+        galleryWarning = g.errors;
+        gallery = readGallery(raw.gallery);
+      }
     }
     let run: RunState | null = null;
     if (raw.active !== null) {
@@ -181,13 +184,18 @@ export class GameSession {
   }
 
   // ---- gameplay ----------------------------------------------------------
-  async commit(action: PlayerAction): Promise<ActionOutcome> {
+  /**
+   * Commit one action. `expectedRevision` is the revision the player was looking
+   * at when the action began — for an encounter, the draft's startRevision — so a
+   * restore or import that landed mid-conversation is caught as ERR_DRAFT_CONFLICT.
+   */
+  async commit(action: PlayerAction, expectedRevision?: number): Promise<ActionOutcome> {
     const db = this.requireWriter();
     const run = this.snap.run;
     if (!db || this.snap.phase !== 'ready') return { ok: false, code: 'not_writer' };
     if (!run) return { ok: false, code: 'no_active_run' };
     this.set({ saveStatus: 'saving', lastError: null });
-    const r: CommitResult = await db.commitAction(action, run.saveRevision);
+    const r: CommitResult = await db.commitAction(action, expectedRevision ?? run.saveRevision);
     if (r.ok) {
       this.set({ run: r.state, gallery: r.gallery, draft: null, saveStatus: 'saved' });
       this.announce();
@@ -245,13 +253,16 @@ export class GameSession {
 
   // ---- backup ------------------------------------------------------------
   /** Export only fully committed data, read back from storage. */
-  async exportBackup(now = new Date()): Promise<string> {
+  async exportBackup(now = new Date(), source: 'active' | 'previous_good' = 'active'): Promise<string> {
     if (!this.db) throw new SaveError('ERR_STORAGE_UNAVAILABLE');
     const raw = await this.db.readAll();
-    const v = raw.active === null ? null : validateRun(raw.active);
+    const pick = source === 'active' ? raw.active : raw.previousGood;
+    const v = pick === null ? null : validateRun(pick);
     const run = v && v.ok ? v.value : null;
-    const g = raw.gallery === null ? null : validateGalleryRecord(raw.gallery);
-    return buildBackup(run, g && g.ok ? g.value.completed : [], now);
+    const gallery = readGallery(raw.gallery);
+    // A won run always travels with its own ending, so the file stays importable.
+    const g = run && run.outcome === 'won' && run.winnerRoute && !gallery.includes(run.winnerRoute) ? [...gallery, run.winnerRoute] : gallery;
+    return buildBackup(run, g, now);
   }
 
   previewImport(text: string): Promise<ParsedBackup> {

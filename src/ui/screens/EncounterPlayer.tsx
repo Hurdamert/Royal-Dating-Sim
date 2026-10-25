@@ -119,7 +119,7 @@ export function EncounterPlayer({
       choiceId: originOpt.choiceId,
       linkedProposalChoiceId: propOpt?.choiceId ?? null,
     };
-    const r = await session.commit(action);
+    const r = await session.commit(action, draftRef.current.startRevision);
     busy.current = false;
     if (r.ok) {
       const record = r.state.journal.find((j) => j.actionId === action.actionId)!;
@@ -129,6 +129,13 @@ export function EncounterPlayer({
       onExit({ committed: false, notice: 'ERR_DRAFT_CONFLICT' });
     } else setPhase({ k: 'commitError', code: r.code });
   };
+
+  // The draft exists from the moment the encounter starts (SAVE_RECOVERY: draft
+  // checkpoint), so a reload at the very first line resumes the same encounter
+  // and the hub refuses other actions until it is finished or left.
+  useEffect(() => {
+    if (!resume && scene && !readOnly) void session.saveDraft(draftRef.current);
+  }, []);
 
   // Resumed at ready_to_commit: finish that same commit once (same actionId, so
   // a commit that had already landed is recognised as a duplicate, not re-awarded).

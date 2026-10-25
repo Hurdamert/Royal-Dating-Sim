@@ -10,6 +10,15 @@ export const BG_W = 1672;
 export const BG_H = 941;
 const SPRITE_ASPECT = 1024 / 1536;
 
+/**
+ * Nerelle stands in the water up to her collarbone: the waterline sits at this
+ * fraction of her sprite's height. Her shipped sprites are transparent from
+ * NERELLE_SPRITE_CUT down (scripts/art/modest.py, all-ages edit), so nothing
+ * below the waterline exists to be shown.
+ */
+export const NERELLE_WATERLINE = 0.375;
+export const NERELLE_SPRITE_CUT = 0.4;
+
 export interface Rect {
   x: number;
   y: number;
@@ -47,29 +56,33 @@ const STANDARD: Composition = {
   waterborne: false,
 };
 
-/** Nerelle in the Royal Gardens canal at screen-right, waist-deep behind the embankment. */
+/**
+ * Nerelle in the Royal Gardens canal at screen-right: shoulder-deep in the near
+ * water channel between the walkway curb and the canal wall. The occluder
+ * redraws the background's own water (and the curb in front of her) over the
+ * sprite below the waterline, so water visibly meets her at the collarbone.
+ */
 const NERELLE_GARDENS: Composition = {
   crop: { x: 672, y: 379, w: 1000, h: 562 },
-  cropPhone: { x: 992, y: 385, w: 680, h: 382 },
-  sprite: { height: 420, cx: 1572, top: 640 - 0.56 * 420 },
+  cropPhone: { x: 1000, y: 470, w: 672, h: 378 },
+  sprite: { height: 520, cx: 1548, top: 795 - NERELLE_WATERLINE * 520 },
   occluder: [
-    [1300, 470],
-    [1452, 470],
-    [1452, 628],
-    [1560, 640],
-    [1672, 655],
+    [1250, 722],
+    [1340, 757],
+    [1420, 790],
+    [1672, 795],
     [1672, 941],
-    [1300, 941],
+    [1250, 941],
   ],
   label: 'Royal Gardens — Canal',
   waterborne: true,
 };
 
-/** Nerelle in open water at Moonwater Quay, waist-deep. */
+/** Nerelle in open water at Moonwater Quay, shoulder-deep. */
 const NERELLE_QUAY: Composition = {
   crop: { x: 572, y: 322, w: 1100, h: 619 },
   cropPhone: { x: 780, y: 330, w: 640, h: 360 },
-  sprite: { height: 480, cx: 1110, top: 640 - 0.56 * 480 },
+  sprite: { height: 560, cx: 1110, top: 640 - NERELLE_WATERLINE * 560 },
   occluder: [
     [700, 640],
     [1672, 640],

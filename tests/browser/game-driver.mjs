@@ -10,10 +10,6 @@ const content = JSON.parse(readFileSync(join(ROOT, 'src/content/generated/conten
 const schedule = JSON.parse(readFileSync(join(ROOT, 'handoff/03_IMPLEMENTATION_BLUEPRINT/route_schedules_and_training.json'), 'utf8'));
 const WD = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
-export const optionClass = (choiceId) => {
-  for (const s of Object.values(content.scenes)) for (const o of s.options) if (o.choiceId === choiceId) return o.outcomeClass;
-  return null;
-};
 export const meetingLocation = (route, day, slot) => schedule.routes[route].meeting[WD[(day - 1) % 7]]?.[slot] ?? null;
 export const activityFor = (stat) => schedule.activities.find((a) => a.stat === stat);
 
@@ -33,7 +29,11 @@ export async function startRun(page, route, name = 'Robin') {
   const confirm = page.getByRole('alertdialog');
   if (await confirm.count()) await confirm.getByRole('button', { name: /Replace and begin/ }).click();
   await page.getByTestId('presentation').waitFor();
-  while (!(await page.getByTestId('hub').count())) await page.getByTestId('continue').click();
+  while (!(await page.getByTestId('hub').count())) {
+    if (await page.getByTestId('tutorial-skip').count()) await page.getByTestId('tutorial-skip').click();
+    else if (await page.getByTestId('tutorial-done').count()) await page.getByTestId('tutorial-done').click();
+    else await page.getByTestId('continue').click();
+  }
 }
 
 export async function goto(page, location) {
@@ -70,12 +70,15 @@ export async function playEncounter(page, cls = 'correct', proposalCls = 'correc
     if (hooks.onStep) await hooks.onStep(await enc.getAttribute('data-phase'), await enc.getAttribute('data-scene-id'));
     if (await page.getByTestId('choices').count()) {
       const want = choicesSeen === 0 ? cls : proposalCls;
-      const buttons = page.locator('[data-choice-id]');
+      // The DOM carries only the authored option index; outcome classes are looked
+      // up in the content table so nothing in the page reveals the right answer.
+      const sceneId = await enc.getAttribute('data-scene-id');
+      const buttons = page.locator('[data-choice-index]');
       const n = await buttons.count();
       let picked = null;
       for (let i = 0; i < n; i++) {
-        const id = await buttons.nth(i).getAttribute('data-choice-id');
-        if (optionClass(id) === want) picked = buttons.nth(i);
+        const idx = Number(await buttons.nth(i).getAttribute('data-choice-index'));
+        if (content.scenes[sceneId]?.options[idx]?.outcomeClass === want) picked = buttons.nth(i);
       }
       await (picked ?? buttons.first()).click();
       choicesSeen++;

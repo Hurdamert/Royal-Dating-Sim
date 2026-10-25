@@ -4,6 +4,7 @@
 import { useState, type CSSProperties } from 'react';
 import type { Expression } from '../../content/types';
 import type { LocationId, Route } from '../../core/model';
+import { ERROR_TEXT } from '../../persistence/errors';
 import { art, CG_ALT, LOCATION_ALT, LOCATION_NAME, spriteAlt, ROUTE_NAME } from '../labels';
 import { backgroundOnly, compositionFor, cropVars, polygonClip, spriteStyle } from '../staging';
 
@@ -21,8 +22,11 @@ function Img({ src, alt, className, style }: { src: string; alt: string; classNa
   const [failed, setFailed] = useState(false);
   if (failed)
     return (
-      <div className={`${className} img-fallback`} style={style} role="img" aria-label={alt}>
+      <div className={`${className} img-fallback`} style={style} role="img" aria-label={alt} data-error-code="ERR_ASSET_LOAD">
         <span>Image unavailable: {alt}</span>
+        <span className="visually-hidden" role="alert">
+          {ERROR_TEXT.ERR_ASSET_LOAD.title}.
+        </span>
       </div>
     );
   return <img src={src} alt={alt} className={className} style={style} onError={() => setFailed(true)} draggable={false} />;

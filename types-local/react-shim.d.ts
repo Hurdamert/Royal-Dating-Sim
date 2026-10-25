@@ -24,6 +24,17 @@ declare module 'react' {
   export const Fragment: (props: { children?: ReactNode }) => ReactElement;
   export const StrictMode: (props: { children?: ReactNode }) => ReactElement;
   export type CSSProperties = Record<string, string | number | undefined>;
+  export interface ErrorInfo {
+    componentStack?: string | null;
+  }
+  export class Component<P = object, S = object> {
+    constructor(props: P);
+    readonly props: Readonly<P>;
+    state: Readonly<S>;
+    setState(state: Partial<S> | ((prev: Readonly<S>) => Partial<S>)): void;
+    render(): ReactNode;
+    componentDidCatch?(error: Error, info: ErrorInfo): void;
+  }
   export interface SyntheticEvent<T = Element> {
     target: EventTarget;
     currentTarget: T;

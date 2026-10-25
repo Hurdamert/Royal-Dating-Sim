@@ -112,13 +112,20 @@ export function JournalPanel({ run, onClose }: { run: RunState; onClose: () => v
   );
 }
 
-export function HelpPanel({ run, snap, onClose }: { run: RunState | null; snap: SessionSnapshot; onClose: () => void }) {
+export function HelpPanel({ run, snap, onClose, onTutorial }: { run: RunState | null; snap: SessionSnapshot; onClose: () => void; onTutorial?: () => void }) {
   const ctx = relevantHelp(run, snap);
   const help = CONTENT.support.help;
   const ordered = [...help.filter((h) => ctx.includes(h.id)), ...help.filter((h) => !ctx.includes(h.id))];
   return (
     <Modal title="Help from Humpty Dumpty" onClose={onClose} wide>
       <div className="help" data-testid="help">
+        {onTutorial && (
+          <p>
+            <button type="button" className="btn btn--small" onClick={onTutorial} data-testid="replay-tutorial">
+              Replay the “How it works” tutorial
+            </button>
+          </p>
+        )}
         {ordered.map((h) => (
           <section key={h.id} className={`help__item${ctx.includes(h.id) ? ' is-relevant' : ''}`}>
             <h3>
@@ -145,9 +152,9 @@ function download(text: string, filename: string) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-export async function exportBackupFile(session: GameSession) {
-  const text = await session.exportBackup();
-  download(text, `royal-exceptions-backup-${new Date().toISOString().slice(0, 10)}.json`);
+export async function exportBackupFile(session: GameSession, source: 'active' | 'previous_good' = 'active') {
+  const text = await session.exportBackup(new Date(), source);
+  download(text, `royal-exceptions-backup-${source === 'previous_good' ? 'earlier-snapshot-' : ''}${new Date().toISOString().slice(0, 10)}.json`);
 }
 
 export function SavePanel({ session, snap, onClose }: { session: GameSession; snap: SessionSnapshot; onClose: () => void }) {
@@ -269,15 +276,19 @@ export function SavePanel({ session, snap, onClose }: { session: GameSession; sn
             setConfirm(false);
             const r = await session.confirmImport(ok, { replaceRun: !!ok.activeRun && replaceRun, galleryMode });
             setPreview(null);
-            setDone(r ? 'Backup imported. Your previous run is kept as the recovery snapshot.' : 'Import failed. Nothing was changed.');
+            setDone(r ? (snap.phase === 'recovery' ? 'Backup imported. The damaged save was replaced; your earlier snapshot is still the rollback snapshot.' : 'Backup imported. Your previous run is kept as the recovery snapshot.') : 'Import failed. Nothing was changed.');
           }}
         >
           <p>
             {ok.activeRun && replaceRun
-              ? `Your current run${snap.run ? ` (${ROUTE_NAME[snap.run.route]}, Day ${snap.run.day})` : ''} will be replaced by the backup’s ${ROUTE_NAME[ok.activeRun.route]} run. The replaced run is kept as a one-step recovery snapshot.`
+              ? snap.phase === 'recovery'
+                ? `The damaged save will be replaced by the backup’s ${ROUTE_NAME[ok.activeRun.route]} run. A damaged save is never kept as a snapshot; your earlier snapshot${snap.recovery?.previousGood ? ` (Day ${snap.recovery.previousGood.day})` : ''} stays as the rollback snapshot.`
+                : `Your current run${snap.run ? ` (${ROUTE_NAME[snap.run.route]}, Day ${snap.run.day})` : ''} will be replaced by the backup’s ${ROUTE_NAME[ok.activeRun.route]} run. The replaced run is kept as a one-step recovery snapshot.`
               : 'Endings from the backup will be added to your gallery.'}
           </p>
-          {galleryMode === 'replace' && <p className="error">You chose to replace your endings gallery: endings not in the backup will be removed.</p>}
+          {galleryMode === 'replace' && (
+            <p className="error">You chose to replace your endings gallery: endings not in the backup will be removed (the ending of a finished run you keep playing is always kept).</p>
+          )}
         </Confirm>
       )}
     </Modal>
@@ -384,7 +395,27 @@ export function Recovery({ session, snap, onImport, onNew }: { session: GameSess
   );
 }
 
-export function Ended({ run, snap, onJournal, onRestart, onNewRoute, onGallery, onTitle }: { run: RunState; snap: SessionSnapshot; onJournal: () => void; onRestart: () => void; onNewRoute: () => void; onGallery: () => void; onTitle: () => void }) {
+export function Ended({
+  run,
+  snap,
+  onJournal,
+  onRestart,
+  onNewRoute,
+  onGallery,
+  onTitle,
+  onWatchEnding,
+  onExport,
+}: {
+  run: RunState;
+  snap: SessionSnapshot;
+  onJournal: () => void;
+  onRestart: () => void;
+  onNewRoute: () => void;
+  onGallery: () => void;
+  onTitle: () => void;
+  onWatchEnding: () => void;
+  onExport: () => void;
+}) {
   const won = run.outcome === 'won';
   const [ask, setAsk] = useState<'restart' | null>(null);
   return (
@@ -392,6 +423,9 @@ export function Ended({ run, snap, onJournal, onRestart, onNewRoute, onGallery, 
       <h1>{won ? `You married ${ROUTE_NAME[run.route]}` : CONTENT.support.strings['UI-FAIL-01']}</h1>
       <p>{won ? `Your ending is now in the gallery. Day ${run.day} of 28.` : CONTENT.support.strings['UI-FAIL-02']}</p>
       <div className="row">
+        <button type="button" className="btn" onClick={onWatchEnding} data-testid="watch-ending">
+          {won ? 'Watch the wedding again' : 'Watch the ending again'}
+        </button>
         <button type="button" className="btn" onClick={onJournal}>
           Read the journal
         </button>
@@ -411,6 +445,10 @@ export function Ended({ run, snap, onJournal, onRestart, onNewRoute, onGallery, 
       {ask && (
         <Confirm title={`Restart ${ROUTE_NAME[run.route]}’s route?`} confirmLabel="Restart" danger onCancel={() => setAsk(null)} onConfirm={onRestart}>
           <p>{CONTENT.support.strings['UI-CONFIRM-01']}</p>
+          <p className="muted">This run’s journal will no longer be readable here. Your endings gallery is kept.</p>
+          <button type="button" className="btn btn--small" onClick={onExport}>
+            {CONTENT.support.strings['UI-SAVE-02']} first
+          </button>
         </Confirm>
       )}
     </main>

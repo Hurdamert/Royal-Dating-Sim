@@ -13,7 +13,7 @@
   --focus: #217a89;
   --tav: #b46b47;
   --ner: #287e88;
-  --kae: #9f4b4b;
+  --kae: #6a5a8c; /* ash-silver and violet: Kaedra’s revised look (2026-10-25) */
   --accent: var(--burgundy);
   --radius: 6px;
   --serif: 'Cormorant Garamond', 'Cormorant', Garamond, 'EB Garamond', 'Times New Roman', serif;
@@ -761,16 +761,32 @@ img {
 }
 .route-card__img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: top;
+}
+/* Portrait crops show head and shoulders. Nerelle's portraits end at her
+   waterline (her art is shipped shoulder-deep), so a band of water fills the
+   rest of the frame. */
+.portrait {
   background: #e8dfd1;
+}
+.portrait--ner {
+  background: linear-gradient(to bottom, #e8dfd1 0 79%, #bfe3e6 79% 80.5%, #6fb3c2 80.5%, #2f7f97 100%);
+}
+.route-card__text {
+  display: grid;
+  gap: 2px;
+  padding: 6px 12px 10px;
 }
 .route-card__name {
   font-family: var(--serif);
   font-size: 1.5rem;
   font-weight: 700;
-  padding: 6px 12px 0;
+}
+.route-card__tagline {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
 }
 .route-card--tav .route-card__name {
   color: #8f4f2f;
@@ -779,7 +795,7 @@ img {
   color: #1d6670;
 }
 .route-card--kae .route-card__name {
-  color: #8a3b3b;
+  color: #5b4a7d;
 }
 .field {
   display: grid;
@@ -843,15 +859,10 @@ img {
 }
 .gallery__img {
   width: 96px;
-  height: 120px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: top;
   border-radius: 4px;
-  background: #e8dfd1;
-}
-.sheet-img {
-  width: 100%;
-  height: auto;
 }
 
 /* Modals ------------------------------------------------------------------ */
@@ -1057,7 +1068,7 @@ img {
     align-items: center;
   }
   .route-card__img {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 4 / 3;
   }
   .calendar,
   .calendar tbody,
@@ -1095,7 +1106,6 @@ img {
   }
   .gallery__img {
     width: 72px;
-    height: 96px;
   }
 }
 
@@ -1129,5 +1139,92 @@ html[data-reduced-motion='true'] *::after {
   }
   .btn--primary {
     forced-color-adjust: auto;
+  }
+}
+
+/* Tutorial ------------------------------------------------------------------ */
+.tutorial {
+  max-width: 640px;
+  margin: clamp(12px, 6vh, 64px) auto;
+  display: grid;
+  gap: 14px;
+}
+.tutorial__kicker {
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.tutorial__card {
+  display: grid;
+  gap: 8px;
+}
+.tutorial__card h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 2rem;
+}
+.tutorial__card h1:focus {
+  outline: none;
+}
+.tutorial__card p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.tutorial__glyph {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  color: var(--paper);
+  background: var(--burgundy);
+}
+.tutorial__aside {
+  margin-top: 4px !important;
+  padding: 10px 12px;
+  border-left: 3px solid var(--gold);
+  background: var(--parchment);
+  font-style: italic;
+}
+.tutorial__aside .line__speaker {
+  font-style: normal;
+  margin-right: 6px;
+}
+.tutorial__dots {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+}
+.tutorial__dots li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--ink-soft);
+}
+.tutorial__dots li.is-done {
+  background: var(--ink-soft);
+}
+.tutorial__dots li.is-current {
+  background: var(--burgundy);
+  border-color: var(--burgundy);
+}
+.tutorial__nav {
+  flex-wrap: wrap;
+}
+@media (max-width: 520px) {
+  .tutorial {
+    margin: 12px auto;
+  }
+  .tutorial__card h1 {
+    font-size: 1.6rem;
+  }
+  .tutorial__card p {
+    font-size: 1rem;
   }
 }

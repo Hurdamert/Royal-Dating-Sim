@@ -215,10 +215,14 @@ describe('C. Hearts and ordinary text', () => {
       s = meet(s, 'ordinary', cls);
       assert.equal(s.heartsHalf, delta);
     }
-    // an ordinary with an offensive option: find one in the PRE pool
-    const off = ['U01', 'U02', 'U03', 'U04', 'U05', 'U06'].map((u) => `TAV-ORD-PRE-${u}`).find((id) => getScene(id)!.options.length === 3);
-    assert.ok(off, 'TAV PRE pool has an offensive option');
-    assert.equal(getScene(off)!.options[2]!.netHalfHearts, -1);
+    // Play an actual offensive answer: TAV PRE U01 (first in the pool) has one.
+    const start = rest(freshRun('TAV'));
+    assert.equal(getScene('TAV-ORD-PRE-U01')!.options.some((o) => o.outcomeClass === 'offensive'), true);
+    const s = meet({ ...start, heartsHalf: 4 }, 'ordinary', 'offensive');
+    assert.equal(s.heartsHalf, 3, 'offensive nets exactly −1 half-heart');
+    assert.equal(s.journal.at(-1)!.heartsBeforeHalf - s.journal.at(-1)!.heartsAfterHalf, 1);
+    // …and clamps at zero rather than going negative
+    assert.equal(meet(start, 'ordinary', 'offensive').heartsHalf, 0);
   });
 
   test('C02 clamp at 0, at 10 before midpoint, at 20 after; no carry', () => {
@@ -233,9 +237,18 @@ describe('C. Hearts and ordinary text', () => {
     let s = freshRun('TAV');
     while (s.heartsHalf < 10) s = meet(restUntilEligible(s), 'ordinary', 'correct');
     assert.equal(s.midpointStatus, 'pending');
-    assert.equal(s.dailyEncounterUsed || s.slot === 'morning', true);
-    const where = meetingLocation('TAV', s.day, s.slot);
-    if (where) assert.notEqual(encounterAvailability(s, where).offers[0]?.encounter, 'midpoint');
+    assert.equal(s.dailyEncounterUsed, true);
+    // Even with the stats in place, nothing offers the midpoint for the rest of that day…
+    const ready = (x: RunState): RunState => ({ ...x, stats: { ...x.stats, charisma: 6, intelligence: 4 } });
+    const day = s.day;
+    while (s.day === day) {
+      for (const l of LOCATIONS) assert.ok(!encounterAvailability(ready(s), l).offers.some((o) => o.encounter === 'midpoint'), `no midpoint on day ${day} ${s.slot} at ${l}`);
+      s = rest(s);
+    }
+    // …and the next eligible encounter is the midpoint.
+    s = restUntilEligible(s);
+    assert.notEqual(s.day, day);
+    assert.deepEqual(encounterAvailability(ready(s), meetingLocation('TAV', s.day, s.slot)!).offers, [{ encounter: 'midpoint', sceneId: sceneIds.midpoint('TAV') }]);
   });
 
   test('C04 midpoint blocked at no cost when primary < 6 or secondary < 4', () => {
@@ -264,8 +277,9 @@ describe('C. Hearts and ordinary text', () => {
       assert.equal(s.heartsHalf, 10);
       assert.equal(s.midpointStatus, 'retry_pending');
       assert.equal(s.midpointFirstSeen, true);
-      const where = meetingLocation(route, s.day, s.slot);
-      if (s.day === day && where) assert.equal(encounterAvailability(s, where).blocked?.code, 'used_today');
+      // The failed attempt used today's encounter: nowhere offers anything else today.
+      assert.equal(s.dailyEncounterUsed, true);
+      for (const l of LOCATIONS) assert.deepEqual(encounterAvailability(s, l).offers, [], `${route}: no second encounter on day ${day}`);
       s = restUntilEligible(s);
       assert.notEqual(s.day, day);
       const av = encounterAvailability(s, meetingLocation(route, s.day, s.slot)!);
@@ -282,22 +296,18 @@ describe('C. Hearts and ordinary text', () => {
   test('C06/C08 completed midpoint is permanent despite later heart loss; POST U01 is next', () => {
     let s = restUntilEligible(toPost('TAV'));
     assert.equal(encounterAvailability(s, meetingLocation('TAV', s.day, s.slot)!).offers[0]!.sceneId, 'TAV-ORD-POST-U01');
-    // drop hearts with offensive answers wherever an offensive option exists in POST
-    let dropped = false;
-    for (let i = 0; i < 30 && !dropped && s.outcome === 'active'; i++) {
-      s = restUntilEligible(s);
-      const sceneId = encounterAvailability(s, meetingLocation('TAV', s.day, s.slot)!).offers[0]!.sceneId;
-      const hasOff = getScene(sceneId)!.options.some((o) => o.outcomeClass === 'offensive');
-      if (hasOff) {
-        const h = s.heartsHalf;
-        s = meet(s, 'ordinary', 'offensive');
-        assert.equal(s.heartsHalf, h - 1);
-        dropped = true;
-      } else s = meet(s, 'ordinary', 'wrong');
-    }
-    assert.ok(dropped, 'found an offensive POST option');
-    assert.ok(s.heartsHalf < 10 || s.heartsHalf >= 0);
+    // C08: an offensive POST answer at exactly five hearts drops below five without undoing the milestone.
+    const u03 = 'TAV-ORD-POST-U03';
+    assert.ok(getScene(u03)!.options.some((o) => o.outcomeClass === 'offensive'));
+    s = { ...s, heartsHalf: 10, ordinaryNext: { ...s.ordinaryNext, TAV: { ...s.ordinaryNext.TAV, POST: 2 } } };
+    assert.equal(encounterAvailability(s, meetingLocation('TAV', s.day, s.slot)!).offers[0]!.sceneId, u03);
+    s = meet(s, 'ordinary', 'offensive');
+    assert.equal(s.heartsHalf, 9, 'below five hearts');
     assert.equal(s.midpointStatus, 'completed');
+    // The next encounter is the next POST ordinary, never a repeat of the midpoint.
+    s = restUntilEligible(s);
+    const next = encounterAvailability(s, meetingLocation('TAV', s.day, s.slot)!).offers;
+    assert.deepEqual(next, [{ encounter: 'ordinary', sceneId: 'TAV-ORD-POST-U04' }]);
   });
 
   test('C07 ordinary order U01..U06 then F01,F02,F03 cycling, per route/stage; cursor moves only on commit', () => {

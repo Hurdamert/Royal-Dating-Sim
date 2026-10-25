@@ -1,6 +1,7 @@
 // JSON backup export/import (SAVE_RECOVERY_AND_FAILURES.md "Export"/"Import").
 import { SCHEMA_VERSION, type Route, type RunState } from '../core/model';
 import { runGalleryConsistent, sortRoutes, validateGallery, validateRun } from '../core/validate';
+import { migrateToCurrent } from './migrations';
 import { canonicalJson, sha256Hex } from './canonical';
 import type { SaveErrorCode } from './errors';
 
@@ -79,7 +80,10 @@ export async function parseBackup(text: string): Promise<ParsedBackup> {
   if (unknown.length) return { ok: false, code: 'ERR_IMPORT_FORMAT', details: [`unknown top-level field(s): ${unknown.join(', ')}`] };
   if (d.format !== BACKUP_FORMAT) return { ok: false, code: 'ERR_IMPORT_FORMAT', details: ['format is not royal-exceptions-save'] };
   if (typeof d.schemaVersion !== 'number' || !Number.isInteger(d.schemaVersion)) return { ok: false, code: 'ERR_IMPORT_FORMAT', details: ['schemaVersion missing'] };
-  if (d.schemaVersion !== SCHEMA_VERSION) return { ok: false, code: 'ERR_IMPORT_VERSION', details: [`schemaVersion ${d.schemaVersion} is not supported (expected 1)`] };
+  // Older documents are upgraded through the pure migration registry; newer ones are refused.
+  const migrated = migrateToCurrent(d);
+  if (!migrated.ok)
+    return { ok: false, code: 'ERR_IMPORT_VERSION', details: [`schemaVersion ${String(d.schemaVersion)} is not supported (this version reads ${SCHEMA_VERSION}${migrated.reason === 'future' ? '; the backup is from a newer version of the game' : ''})`] };
   if (d.exportedAt !== undefined && (typeof d.exportedAt !== 'string' || Number.isNaN(Date.parse(d.exportedAt))))
     return { ok: false, code: 'ERR_IMPORT_FORMAT', details: ['exportedAt is not a timestamp'] };
   if (!('activeRun' in d) || !('completedGallery' in d)) return { ok: false, code: 'ERR_IMPORT_FORMAT', details: ['activeRun and completedGallery are required'] };
@@ -94,11 +98,13 @@ export async function parseBackup(text: string): Promise<ParsedBackup> {
   }
   if (digest !== integ.digest) return { ok: false, code: 'ERR_IMPORT_DIGEST', details: ['SHA-256 digest does not match'] };
 
-  const g = validateGallery(d.completedGallery);
+  // The digest covers the document as exported; validation applies to the migrated form.
+  const cur = migrated.doc;
+  const g = validateGallery(cur.completedGallery);
   if (!g.ok) return { ok: false, code: 'ERR_IMPORT_STATE', details: g.errors };
   let run: RunState | null = null;
-  if (d.activeRun !== null) {
-    const r = validateRun(d.activeRun);
+  if (cur.activeRun !== null) {
+    const r = validateRun(cur.activeRun);
     if (!r.ok) return { ok: false, code: 'ERR_IMPORT_STATE', details: r.errors };
     run = r.value;
   }

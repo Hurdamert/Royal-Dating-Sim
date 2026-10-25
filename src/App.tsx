@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, useSyncExternalStore, type ReactNode } from 'react';
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from 'react';
 import type { EncounterKind, LocationId, Route } from './core/model';
 import { sceneIds } from './core/content';
 import type { EncounterOffer } from './core/engine';
@@ -11,6 +11,7 @@ import { EncounterPlayer, type EncounterExit } from './ui/screens/EncounterPlaye
 import { Presentation } from './ui/screens/Presentation';
 import { AccessBanner, Credits, Gallery, NewRun, StorageUnavailable, Title } from './ui/screens/Menus';
 import { CalendarPanel, Ended, HelpPanel, JournalPanel, OptionsPanel, Recovery, SavePanel, exportBackupFile } from './ui/screens/Panels';
+import { Tutorial, tutorialSeen } from './ui/screens/Tutorial';
 
 type Screen =
   | { k: 'title' }
@@ -20,7 +21,8 @@ type Screen =
   | { k: 'present'; sceneId: string; route: Route | null; location: LocationId; replay: boolean; then: Screen; doneLabel: string }
   | { k: 'ended' }
   | { k: 'gallery' }
-  | { k: 'credits' };
+  | { k: 'credits' }
+  | { k: 'tutorial'; then: Screen; doneLabel: string };
 type Panel = 'calendar' | 'journal' | 'help' | 'save' | 'options' | null;
 
 const MOTION_KEY = 'royal-exceptions:reduced-motion';
@@ -71,7 +73,17 @@ export function App({ session }: { session: GameSession }) {
     const r = await session.startNewRun(route, name);
     if (!r) return;
     setLocation('home');
-    setScreen({ k: 'present', sceneId: sceneIds.prologue, route: null, location: 'town_square', replay: false, then: { k: 'hub' }, doneLabel: 'Begin Day 1' });
+    // First run in this browser: the short "How it works" tutorial follows the prologue.
+    const first = !tutorialSeen();
+    setScreen({
+      k: 'present',
+      sceneId: sceneIds.prologue,
+      route: null,
+      location: 'town_square',
+      replay: false,
+      then: first ? { k: 'tutorial', then: { k: 'hub' }, doneLabel: 'Start Day 1' } : { k: 'hub' },
+      doneLabel: first ? 'Continue' : 'Begin Day 1',
+    });
   };
 
   const onEncounterExit = (e: EncounterExit) => {
@@ -88,17 +100,33 @@ export function App({ session }: { session: GameSession }) {
     setScreen({ k: 'hub' });
   };
 
-  // A hub action (rest/training) can also end the run on Day 28 evening.
-  const [shownFailureFor, setShownFailureFor] = useState<string | null>(null);
+  // A hub action (rest/training) can also end the run on Day 28 evening. Play the
+  // failure scene only for a transition this tab watched happen (not again on
+  // every app start); the Ended screen offers to watch the ending at any time.
+  const lastOutcome = useRef<{ runId: string; outcome: string } | null>(null);
   useEffect(() => {
-    if (run && run.outcome === 'failed' && screen.k === 'ended' && shownFailureFor !== run.runId && run.journal.at(-1)?.outcomeAfter === 'failed') {
+    const prev = lastOutcome.current;
+    lastOutcome.current = run ? { runId: run.runId, outcome: run.outcome } : null;
+    if (!run || !prev || prev.runId !== run.runId || snap.access !== 'writer') return;
+    if (prev.outcome === 'active' && run.outcome === 'failed') {
       const lastKind = run.journal.at(-1)?.kind;
-      if (lastKind === 'rest' || lastKind === 'train') {
-        setShownFailureFor(run.runId);
+      if (lastKind === 'rest' || lastKind === 'train')
         setScreen({ k: 'present', sceneId: sceneIds.failure, route: null, location: 'palace_court', replay: false, then: { k: 'ended' }, doneLabel: 'Finish' });
-      } else setShownFailureFor(run.runId);
     }
-  }, [run, screen.k, shownFailureFor]);
+  }, [run, snap.access]);
+
+  const resumeDraft = () => {
+    const d = snap.draft;
+    if (d) setScreen({ k: 'encounter', encounter: d.originKind, sceneId: d.sceneId, location: d.location, resume: d, nonce: d.actionId });
+  };
+
+  const watchEnding = () => {
+    if (!run) return;
+    if (run.outcome === 'won')
+      setScreen({ k: 'present', sceneId: sceneIds.epilogue(run.route), route: run.route, location: 'palace_court', replay: true, then: { k: 'ended' }, doneLabel: 'Back' });
+    else if (run.outcome === 'failed')
+      setScreen({ k: 'present', sceneId: sceneIds.failure, route: null, location: 'palace_court', replay: true, then: { k: 'ended' }, doneLabel: 'Back' });
+  };
 
   if (snap.phase === 'booting')
     return (
@@ -122,7 +150,21 @@ export function App({ session }: { session: GameSession }) {
     <>
       {panel === 'calendar' && run && <CalendarPanel run={run} onClose={() => setPanel(null)} />}
       {panel === 'journal' && run && <JournalPanel run={run} onClose={() => setPanel(null)} />}
-      {panel === 'help' && <HelpPanel run={run} snap={snap} onClose={() => setPanel(null)} />}
+      {panel === 'help' && (
+        <HelpPanel
+          run={run}
+          snap={snap}
+          onClose={() => setPanel(null)}
+          onTutorial={
+            screen.k === 'encounter' || screen.k === 'present' || screen.k === 'tutorial'
+              ? undefined
+              : () => {
+                  setPanel(null);
+                  setScreen({ k: 'tutorial', then: screen, doneLabel: 'Done' });
+                }
+          }
+        />
+      )}
       {panel === 'save' && <SavePanel session={session} snap={snap} onClose={() => setPanel(null)} />}
       {panel === 'options' && <OptionsPanel session={session} snap={snap} reducedMotion={reducedMotion} setReducedMotion={setReducedMotion} onClose={() => setPanel(null)} />}
     </>
@@ -134,7 +176,13 @@ export function App({ session }: { session: GameSession }) {
         {noticeBar}
         <Recovery session={session} snap={snap} onImport={() => setPanel('save')} onNew={() => setScreen({ k: 'newRun' })} />
         {screen.k === 'newRun' && (
-          <NewRun existing={null} onCancel={() => setScreen({ k: 'title' })} onStart={(r, n) => void startRun(r, n)} onExport={() => void exportBackupFile(session)} />
+          <NewRun
+            existing={null}
+            replacingDamaged={{ previousGood: snap.recovery?.previousGood ?? null }}
+            onCancel={() => setScreen({ k: 'title' })}
+            onStart={(r, n) => void startRun(r, n)}
+            onExport={() => void exportBackupFile(session, 'previous_good')}
+          />
         )}
         {panels}
       </div>
@@ -152,12 +200,12 @@ export function App({ session }: { session: GameSession }) {
           snap={snap}
           onNew={() => setScreen({ k: 'newRun' })}
           onContinue={goHub}
-          onResume={() => snap.draft && setScreen({ k: 'encounter', encounter: snap.draft.originKind, sceneId: snap.draft.sceneId, location: snap.draft.location, resume: snap.draft, nonce: snap.draft.actionId })}
+          onResume={resumeDraft}
           onGallery={() => setScreen({ k: 'gallery' })}
           onImport={() => setPanel('save')}
           onOptions={() => setPanel('options')}
           onCredits={() => setScreen({ k: 'credits' })}
-          onHelp={() => setPanel('help')}
+          onHelp={() => setScreen({ k: 'tutorial', then: { k: 'title' }, doneLabel: 'Back to title' })}
         />
       );
       break;
@@ -175,6 +223,7 @@ export function App({ session }: { session: GameSession }) {
           onEncounter={(o: EncounterOffer) =>
             setScreen({ k: 'encounter', encounter: o.encounter, sceneId: o.sceneId, location, resume: snap.draft && snap.draft.sceneId === o.sceneId && snap.draft.location === location ? snap.draft : null, nonce: crypto.randomUUID() })
           }
+          onResume={resumeDraft}
         />
       ) : null;
       break;
@@ -217,6 +266,8 @@ export function App({ session }: { session: GameSession }) {
           onTitle={() => setScreen({ k: 'title' })}
           onNewRoute={() => setScreen({ k: 'newRun' })}
           onRestart={() => void startRun(run.route, run.playerName)}
+          onWatchEnding={watchEnding}
+          onExport={() => void exportBackupFile(session)}
         />
       ) : null;
       break;
@@ -237,6 +288,9 @@ export function App({ session }: { session: GameSession }) {
       break;
     case 'credits':
       body = <Credits onBack={() => setScreen({ k: 'title' })} />;
+      break;
+    case 'tutorial':
+      body = <Tutorial route={run && run.outcome === 'active' ? run.route : null} doneLabel={screen.doneLabel} onDone={() => setScreen(screen.then)} />;
       break;
   }
 

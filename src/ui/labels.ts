@@ -3,6 +3,12 @@ import type { Expression } from '../content/types';
 import type { LocationId, Route, Slot, Stat } from '../core/model';
 
 export const ROUTE_NAME: Record<Route, string> = { TAV: 'Tavri', NER: 'Nerelle', KAE: 'Kaedra' };
+/** One-line route pitches on the New Run screen. */
+export const ROUTE_TAGLINE: Record<Route, string> = {
+  TAV: 'The fox princess. Has a joke ready for everything, especially the things that bother her.',
+  NER: 'The mermaid princess. Studying the surface world, one baffling custom at a time.',
+  KAE: 'The dragon princess. The court is a little afraid of her. She is mostly reading safety reports.',
+};
 export const ROUTE_FILE: Record<Route, string> = { TAV: 'tavri', NER: 'nerelle', KAE: 'kaedra' };
 export const LOCATION_NAME: Record<LocationId, string> = {
   home: 'Home',
@@ -47,16 +53,15 @@ export const art = {
   background: (l: LocationId) => `/art/bg_${l}.webp`,
   sprite: (r: Route, e: Expression) => `/art/${ROUTE_FILE[r]}_${ROUTE_FILE[r]}_${EXPRESSION_FILE[e]}.webp`,
   cg: (r: Route) => `/art/${{ TAV: 'tavri_tavri_private_confession', NER: 'nerelle_nerelle_forbidden_journey', KAE: 'kaedra_kaedra_royal_trial' }[r]}.webp`,
-  sheet: (r: Route) => `/art/${ROUTE_FILE[r]}_character_sheet.webp`,
 };
 
 export function spriteAlt(r: Route, e: Expression): string {
   return `${ROUTE_NAME[r]} ${EXPRESSION_ALT[e]}.`;
 }
 export const CG_ALT: Record<Route, string> = {
-  TAV: 'Illustration: Tavri in the Royal Gardens at night.',
-  NER: 'Illustration: Nerelle at the water’s edge under a full moon.',
-  KAE: 'Illustration: Kaedra at a palace ceremony, light at her hand.',
+  TAV: 'Illustration: Tavri by the fountain in the Royal Gardens at night, one hand at her collar.',
+  NER: 'Illustration: Nerelle resting at the water’s edge under a full moon, the city lit behind her.',
+  KAE: 'Illustration: Kaedra, silver-haired, at a palace ceremony with a small spark of light at her hand.',
 };
 
 /** Hearts are stored as half-units; display 0.0–10.0. */
