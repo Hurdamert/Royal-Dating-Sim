@@ -61,13 +61,13 @@ export async function playEncounter(page, cls = 'correct', proposalCls = 'correc
   let choicesSeen = 0;
   for (let guard = 0; guard < 200; guard++) {
     if (await page.getByTestId('outcome').count()) {
-      hooks.onOutcome && (await hooks.onOutcome());
+      if (hooks.onOutcome) await hooks.onOutcome();
       await page.getByTestId('outcome').getByRole('button').click();
       return;
     }
     const enc = page.getByTestId('encounter');
     if (!(await enc.count())) return;
-    hooks.onStep && (await hooks.onStep(await enc.getAttribute('data-phase'), await enc.getAttribute('data-scene-id')));
+    if (hooks.onStep) await hooks.onStep(await enc.getAttribute('data-phase'), await enc.getAttribute('data-scene-id'));
     if (await page.getByTestId('choices').count()) {
       const want = choicesSeen === 0 ? cls : proposalCls;
       const buttons = page.locator('[data-choice-id]');
@@ -109,7 +109,7 @@ export async function playRoute(page, route, { answer = 'correct', proposal = 'c
       const btn = page.locator('[data-encounter]').first();
       const kind = await btn.getAttribute('data-encounter');
       await btn.click();
-      onEncounter && (await onEncounter(kind, page));
+      if (onEncounter) await onEncounter(kind, page);
       await playEncounter(page, answer, proposal);
       const after = await snapshot(page);
       if (after.run.outcome !== 'active') return after.run;

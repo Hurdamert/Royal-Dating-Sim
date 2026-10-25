@@ -256,7 +256,7 @@ function parseScene(raw: RawScene, source: Scene['source']): Scene {
     if ((m = OPTION_RE.exec(line))) {
       if (!choicePointId) err(`${ctx}: option before choice point`);
       const label = m[3]!.replace(/[.:]$/, '');
-      let rest = m[4]!.replace(/^[.:]/, '').trim();
+      const rest = m[4]!.replace(/^[.:]/, '').trim();
       let labelText = '';
       if (rest.startsWith('PLAYER: ')) labelText = rest.slice('PLAYER: '.length);
       else if (rest !== '') err(`${ctx}: unexpected text after option label: "${rest}"`);
