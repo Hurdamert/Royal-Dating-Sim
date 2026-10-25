@@ -1,0 +1,28 @@
+{
+  "sceneId": "KAE-ORD-PRE-U02",
+  "title": "The Safety Manual",
+  "intro": [
+    { "id": "KAE-ORD-PRE-U02-L01", "speaker": "NARRATOR", "text": "Kaedra is reading a maintenance report bound in red leather. It has a ribbon bookmark." },
+    { "id": "KAE-ORD-PRE-U02-L02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Four meetings to decide whether a loose stair is an emergency.”" },
+    { "id": "KAE-ORD-PRE-U02-L03", "speaker": "PLAYER", "text": "“What did they decide?”" },
+    { "id": "KAE-ORD-PRE-U02-L04", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“That it is ‘a matter of ongoing concern.’ There is an appendix.”" },
+    { "id": "KAE-ORD-PRE-U02-L05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Two members have since tripped on it. They have requested a fifth meeting.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-ORD-PRE-U02-C1-YES",
+      "labelText": "“Skip the fifth meeting. Who actually has a hammer?”",
+      "branch": [
+        { "id": "KAE-ORD-PRE-U02-R-YES-01", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“The carpenters. They have been waiting since the second meeting.”" },
+        { "id": "KAE-ORD-PRE-U02-R-YES-02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I will tell them the committee approved it. The committee can find out afterward.”" }
+      ]
+    },
+    {
+      "choiceId": "KAE-ORD-PRE-U02-C1-NO",
+      "labelText": "“Honestly? That’s a beautifully bound report.”",
+      "branch": [
+        { "id": "KAE-ORD-PRE-U02-R-NO-01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“It is. I will read it aloud to the stair.”" }
+      ]
+    }
+  ]
+}

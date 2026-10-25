@@ -17,6 +17,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 // @ts-expect-error -- plain ESM helper without type declarations
 import { openZip } from './lib/zip.mjs';
+import { applyRevision } from './lib/revision.ts';
 import type {
   ContentBundle,
   Scene,
@@ -39,6 +40,11 @@ const CANON = join(H, '01_APPROVED_CANON');
 const OUT_DIR = join(root, 'src/content/generated');
 const OUT = join(OUT_DIR, 'content.json');
 const REPORT = join(OUT_DIR, 'content-report.json');
+// Owner-requested dialogue revision applied on top of the frozen base text.
+// CONTENT_REVISION=none compiles the frozen base only (rollback / comparison).
+const REVISION_ID = process.env.CONTENT_REVISION ?? 'dialogue-v2';
+const REVISION_DIR = join(root, 'content/revisions', REVISION_ID);
+const COMPARISON = join(root, 'docs/writing/DIALOGUE_REVISION_COMPARISON.md');
 
 const errors: string[] = [];
 const err = (m: string) => errors.push(m);
@@ -574,9 +580,37 @@ for (const a of schedule.activities) {
 if (errors.length) fail();
 
 // ---------------------------------------------------------------------------
-// 7. Emit.
+// 7. Apply the owner-requested revision (words only) and re-check the result.
+let finalScenes: Record<string, Scene> = scenes;
+let finalSupport: SupportCopy = support;
+let revision: ReturnType<typeof applyRevision> = null;
+if (REVISION_ID !== 'none') {
+  revision = applyRevision(scenes, support, REVISION_DIR, errors);
+  if (!revision && !errors.length) err(`revision directory not found: content/revisions/${REVISION_ID}`);
+  if (revision) {
+    finalScenes = revision.scenes;
+    finalSupport = revision.support;
+    const seen = new Set<string>();
+    for (const sc of Object.values(finalScenes))
+      for (const l of [...sc.introLines, ...sc.options.flatMap((o) => o.branchLines)]) {
+        if (seen.has(l.id)) err(`revision: line ID ${l.id} is not globally unique`);
+        seen.add(l.id);
+        if (sc.choicePointId === l.id || sc.options.some((o) => o.choiceId === l.id)) err(`revision: line ID ${l.id} collides with a choice ID`);
+      }
+    // Mechanics must be untouched.
+    for (const [id, b] of Object.entries(scenes)) {
+      const a = finalScenes[id]!;
+      const mech = (x: Scene) => JSON.stringify([x.sceneId, x.kind, x.route, x.stage, x.choicePointId, x.displayOnly, x.costOneSlot, x.options.map((o) => [o.choiceId, o.outcomeId, o.outcomeClass, o.netHalfHearts])]);
+      if (mech(a) !== mech(b)) err(`revision changed mechanics of ${id}`);
+    }
+  }
+}
+if (errors.length) fail();
+
+// ---------------------------------------------------------------------------
+// 8. Emit.
 const sortedScenes: Record<string, Scene> = {};
-for (const id of Object.keys(scenes).sort()) sortedScenes[id] = scenes[id]!;
+for (const id of Object.keys(finalScenes).sort()) sortedScenes[id] = finalScenes[id]!;
 const bundle: ContentBundle = {
   generatedFrom: {
     archives: Object.fromEntries(
@@ -588,9 +622,10 @@ const bundle: ContentBundle = {
     ),
     tavriOverlaySha256: sha(overlayBuf),
     effectiveTavriSha256: sha(tavriEffective),
+    revision: revision ? { ...revision.meta, filesSha256: revision.stats.filesSha256 } : null,
   },
   scenes: sortedScenes,
-  support,
+  support: finalSupport,
 };
 const json = JSON.stringify(bundle, null, 2) + '\n';
 const report = {
@@ -599,18 +634,27 @@ const report = {
   linesRoundTripped: roundTripped,
   extractsCrossChecked: extractsCompared,
   tavriOverlayDifferences: 4,
+  revision: revision ? { ...revision.stats, removedLineIds: revision.removedLineIds } : null,
   helpPassages: support.help.length,
   squareQuips: support.squareQuips.length,
   activities: support.activities.length,
   strings: Object.keys(support.strings).length,
   contentSha256: sha(json),
 };
+if (process.argv.includes('--print-base')) {
+  // For tests and audits: write the base (un-revised) scenes to the given file.
+  writeFileSync(process.argv[process.argv.indexOf('--print-base') + 1]!, JSON.stringify(scenes));
+  process.exit(0);
+}
 const reportJson = JSON.stringify(report, null, 2) + '\n';
 
 if (process.argv.includes('--check')) {
   let stale = false;
   try {
-    stale = readFileSync(OUT, 'utf8') !== json || readFileSync(REPORT, 'utf8') !== reportJson;
+    stale =
+      readFileSync(OUT, 'utf8') !== json ||
+      readFileSync(REPORT, 'utf8') !== reportJson ||
+      (revision !== null && readFileSync(COMPARISON, 'utf8') !== revision.comparison);
   } catch {
     stale = true;
   }
@@ -623,6 +667,10 @@ if (process.argv.includes('--check')) {
   mkdirSync(OUT_DIR, { recursive: true });
   writeFileSync(OUT, json);
   writeFileSync(REPORT, reportJson);
+  if (revision) {
+    mkdirSync(dirname(COMPARISON), { recursive: true });
+    writeFileSync(COMPARISON, revision.comparison);
+  }
   console.log('Wrote', OUT);
   console.log(reportJson);
 }

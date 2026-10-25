@@ -1,0 +1,75 @@
+{
+  "sceneId": "TAV-ORD-POST-F03",
+  "title": "The Space Between Jokes",
+  "intro": [
+    {
+      "id": "TAV-ORD-POST-F03-L01",
+      "speaker": "NARRATOR",
+      "text": "Someone has pinned up a hand-lettered notice: *PLEASE DO NOT TUOCH.*"
+    },
+    {
+      "id": "TAV-ORD-POST-F03-L05",
+      "speaker": "NARRATOR",
+      "text": "Tavri opens her mouth. Her ears go up. Then she closes it again."
+    },
+    {
+      "id": "TAV-ORD-POST-F03-L02",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“I had a joke about that. A good one.”"
+    },
+    {
+      "id": "TAV-ORD-POST-F03-L06",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“I’m going to look at the sign instead. Just look at it. Like a tourist.”"
+    },
+    {
+      "id": "TAV-ORD-POST-F03-L03",
+      "speaker": "PLAYER",
+      "text": "“Take your time.”"
+    },
+    {
+      "id": "TAV-ORD-POST-F03-L04",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“You say that as if leisure were legal.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-POST-F03-C1-YES",
+      "labelText": "“I’ll look at it with you. Carefully. No tuoching.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-F03-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Look at us. Two grown adults, not tuoching.”"
+        },
+        {
+          "id": "TAV-ORD-POST-F03-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "You look at it together until someone comes along and fixes the spelling."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-POST-F03-C1-NO",
+      "labelText": "“Aw, go on. What was the joke?”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-F03-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Fine.”"
+        },
+        {
+          "id": "TAV-ORD-POST-F03-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She tells it. It’s very good, and you laugh. When she looks back, it’s only a sign again."
+        }
+      ]
+    }
+  ]
+}

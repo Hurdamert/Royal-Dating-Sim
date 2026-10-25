@@ -1,0 +1,7 @@
+{
+  "id": "dialogue-v2",
+  "authority": "Project owner request in the implementation chat, 2026-10-25",
+  "requested": "make the dialogue funnier and less AI generated (do extensive research on how to write it)",
+  "date": "2026-10-25",
+  "scope": "All story text: 77 scenes (prologue, failure, ordinary conversations, special events, midpoints, proposals, epilogues), 12 Town Square quips and 16 training flavor lines. Words only: scene IDs, choice IDs, outcomes, heart values, stats, schedules and art are unchanged. Frozen source archives are untouched; set CONTENT_REVISION=none to build from the frozen text."
+}

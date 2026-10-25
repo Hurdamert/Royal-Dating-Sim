@@ -1,0 +1,76 @@
+{
+  "sceneId": "TAV-ORD-PRE-F02",
+  "title": "The Ribbon Question",
+  "intro": [
+    {
+      "id": "TAV-ORD-PRE-F02-L01",
+      "speaker": "NARRATOR",
+      "text": "Tavri is holding a stack of papers tied with a plain blue ribbon."
+    },
+    {
+      "id": "TAV-ORD-PRE-F02-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“A countess just called this ribbon ‘a daring statement of royal taste.’”"
+    },
+    {
+      "id": "TAV-ORD-PRE-F02-L05",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“It was the only ribbon in the drawer. The alternative was string.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-F02-L03",
+      "speaker": "PLAYER",
+      "text": "“A heroic decision under pressure.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-F02-L04",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“The chronicles will be unbearable. *She chose blue, and the kingdom wept.*”"
+    },
+    {
+      "id": "TAV-ORD-PRE-F02-L06",
+      "speaker": "NARRATOR",
+      "text": "Underneath, the papers are covered in small, anxious handwriting."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-PRE-F02-C1-YES",
+      "labelText": "“Lovely ribbon. Who wrote all that?”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-F02-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“It’s from the baker. A petition. Their roof leaks onto the bread.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-F02-R-YES-02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“The ribbon’s had four compliments. You’re the first to ask about the bread.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-PRE-F02-C1-NO",
+      "labelText": "“Next time go for velvet. If they love the ribbon, give them more ribbon.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-F02-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Velvet. Bold. The chronicles will need a second volume.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-F02-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She makes a note about velvet on the back of the petition."
+        }
+      ]
+    }
+  ]
+}

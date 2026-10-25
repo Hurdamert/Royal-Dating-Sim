@@ -1,0 +1,29 @@
+{
+  "sceneId": "KAE-EPI-01",
+  "title": "Marriage epilogue: Private Vow",
+  "intro": [
+    { "id": "KAE-EPI-001", "speaker": "NARRATOR", "text": "The Palace Court has prepared a wedding with thirteen banners and nine trumpets that nobody will sound today." },
+    { "id": "KAE-EPI-021", "speaker": "NARRATOR", "text": "There is also a document stating that both parties agree of their own free will. Kaedra has read all of it." },
+    { "id": "KAE-EPI-002", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“The document is excellent. I propose we apply the trumpet policy to all future events.”" },
+    { "id": "KAE-EPI-003", "speaker": "PLAYER", "text": "“They seem proud of the trumpets, though.”" },
+    { "id": "KAE-EPI-004", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“The court is welcome to marry the trumpets.”" },
+    { "id": "KAE-EPI-005", "speaker": "NARRATOR", "text": "A few guests laugh. The rest stare. They have spent years edging toward pillars around this princess. Nobody warned them she was funny." },
+    { "id": "KAE-EPI-006", "speaker": "HERALD", "text": "“Do you, Princess Kaedra, enter this partnership of your own free will?”" },
+    { "id": "KAE-EPI-007", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I do. I remain guardian of the people I serve, and I choose {PLAYER} as my partner.”" },
+    { "id": "KAE-EPI-022", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Neither my subject nor my keeper.”" },
+    { "id": "KAE-EPI-008", "speaker": "HERALD", "text": "“And do you, {PLAYER}, choose Princess Kaedra of your own free will?”" },
+    { "id": "KAE-EPI-009", "speaker": "PLAYER", "text": "“I do. Including the days she comes home from saving the kingdom and wants five minutes of silence.”" },
+    { "id": "KAE-EPI-010", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Ten minutes. I have negotiated the terms.”" },
+    { "id": "KAE-EPI-011", "speaker": "NARRATOR", "text": "The court records the vows. Nine trumpeters go home without playing a note." },
+    { "id": "KAE-EPI-012", "speaker": "NARRATOR", "text": "Later, in the Royal Gardens, she sits close enough for your shoulders to touch. Nobody asks her to stand guard over anything." },
+    { "id": "KAE-EPI-013", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“There will still be frightening days. And days when I get things wrong.”" },
+    { "id": "KAE-EPI-014", "speaker": "PLAYER", "text": "“Then we tell each other when we need help.”" },
+    { "id": "KAE-EPI-015", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Agreed. No document required.”" },
+    { "id": "KAE-EPI-016", "speaker": "NARRATOR", "text": "She rests her forehead against yours. There is nobody here to see it." },
+    { "id": "KAE-EPI-017", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“For the record, our children will not study ceremonial speechwriting until they are old enough to refuse.”" },
+    { "id": "KAE-EPI-018", "speaker": "PLAYER", "text": "“How many children is this policy for?”" },
+    { "id": "KAE-EPI-019", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“I will not approve a figure before the relevant committee has met.”" },
+    { "id": "KAE-EPI-020", "speaker": "PLAYER", "text": "“Who’s on the committee?”" },
+    { "id": "KAE-EPI-023", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“You and I. The minutes will be brief.”" }
+  ]
+}

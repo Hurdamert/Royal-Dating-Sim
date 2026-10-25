@@ -1,0 +1,29 @@
+{
+  "sceneId": "NER-ORD-POST-F01",
+  "title": "Mermaid or Princess",
+  "intro": [
+    { "id": "NER-ORD-POST-F01-L01", "speaker": "NARRATOR", "text": "Nerelle is floating on her back, frowning at the sky." },
+    { "id": "NER-ORD-POST-F01-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“A courtier asked whether I was thinking like a mermaid or a princess today.”" },
+    { "id": "NER-ORD-POST-F01-L03", "speaker": "PLAYER", "text": "“What did you say?”" },
+    { "id": "NER-ORD-POST-F01-L04", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“That the question was missing several options. He did not have time for the list.”" },
+    { "id": "NER-ORD-POST-F01-L05", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“At present, I am thinking like someone who wants lunch and suspects the gulls of plotting.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "NER-ORD-POST-F01-C1-YES",
+      "labelText": "“Next time, just answer ‘yes.’”",
+      "branch": [
+        { "id": "NER-ORD-POST-F01-R-YES-01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Yes.”" },
+        { "id": "NER-ORD-POST-F01-R-YES-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Oh, that is perfect. It is technically an answer, and he will hate it.”" }
+      ]
+    },
+    {
+      "choiceId": "NER-ORD-POST-F01-C1-NO",
+      "labelText": "“It’s a fair question, though. Which one do you feel like more?”",
+      "branch": [
+        { "id": "NER-ORD-POST-F01-R-NO-01", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“You and the courtier should meet. You could split the difference.”" },
+        { "id": "NER-ORD-POST-F01-R-NO-02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I have never once been improved by being halved.”" }
+      ]
+    }
+  ]
+}

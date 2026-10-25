@@ -1,0 +1,57 @@
+{
+  "sceneId": "KAE-EVT-PRE-01",
+  "title": "Prince's Fashion Challenge",
+  "intro": [
+    { "id": "KAE-PRE-001", "speaker": "NARRATOR", "text": "A prince has brought a traveling display of ceremonial cloaks. He is explaining, loudly, why a cape counts as an emergency public service." },
+    { "id": "KAE-PRE-002", "speaker": "PRINCE", "text": "“Every garment makes a statement. Mine says *behold my significance*.”" },
+    { "id": "KAE-PRE-003", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Mine says *someone forgot to account for door handles*.”" },
+    { "id": "KAE-PRE-004", "speaker": "PLAYER", "text": "“That sounds like experience talking.”" },
+    { "id": "KAE-PRE-005", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“I once turned around too quickly at a banquet. The curtains came down.”" },
+    { "id": "KAE-PRE-015", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Three ministers took it as a declaration of war. One of them surrendered.”" },
+    { "id": "KAE-PRE-006", "speaker": "NARRATOR", "text": "The prince looks thrilled. Behind him, a guard begins inching toward a pillar." },
+    { "id": "KAE-PRE-007", "speaker": "PRINCE", "text": "“Princess Kaedra! Our most formidable guest! Will you model the silver mantle? And look *terrifying* in it?”" },
+    { "id": "KAE-PRE-008", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“Is that a requirement of the mantle, or of me?”" },
+    { "id": "KAE-PRE-009", "speaker": "PRINCE", "text": "“Whichever photographs better.”" },
+    { "id": "KAE-PRE-010", "speaker": "NARRATOR", "text": "Several spectators wait for her to explode. She does not. A tailor drops a pin, and three of them flinch." },
+    { "id": "KAE-PRE-011", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I was invited to assess whether the fasteners are safe. They are not.”" },
+    { "id": "KAE-PRE-016", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“The mantle weighs about as much as a small door. All of it hangs from the collar.”" },
+    { "id": "KAE-PRE-012", "speaker": "PLAYER", "text": "“And he wants you to model it anyway?”" },
+    { "id": "KAE-PRE-013", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“He believes my face could frighten the stitching into cooperation.”" },
+    { "id": "KAE-PRE-014", "speaker": "NARRATOR", "text": "She glances at you. The prince is already miming where the dramatic lighting would go." }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-PRE-C1-RESPECT",
+      "labelText": "“You’re here to inspect it, not haunt it. Want help making sure they hear about the collar?”",
+      "branch": [
+        { "id": "KAE-PRE-S01", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“You heard the part about the collar.”" },
+        { "id": "KAE-PRE-S02", "speaker": "PLAYER", "text": "“And the curtains. But that’s a separate safety issue.”" },
+        { "id": "KAE-PRE-S03", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Correct. We must not confuse the two departments.”" },
+        { "id": "KAE-PRE-S04", "speaker": "NARRATOR", "text": "Kaedra explains the clasp in four calm sentences. The tailor has it fixed before the prince finishes posing." },
+        { "id": "KAE-PRE-S05", "speaker": "PRINCE", "text": "“Reinforced collars! The latest thing at court! I have always said so!”" },
+        { "id": "KAE-PRE-S06", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I can speak for myself.”" },
+        { "id": "KAE-PRE-S07", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“It was easier with someone holding the door.”" }
+      ]
+    },
+    {
+      "choiceId": "KAE-PRE-C1-JOKE",
+      "labelText": "“Oh, wear it. Do your legendary terrifying pose. It’d be hilarious.”",
+      "branch": [
+        { "id": "KAE-PRE-W01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Hilarious for you.”" },
+        { "id": "KAE-PRE-W02", "speaker": "PLAYER", "text": "“I thought you liked jokes.”" },
+        { "id": "KAE-PRE-W03", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“I do. I like to be in on them.”" },
+        { "id": "KAE-PRE-W04", "speaker": "NARRATOR", "text": "She takes the loose clasp to the tailor herself. The prince photographs the mantle on its stand, looking formidable without her." }
+      ]
+    },
+    {
+      "choiceId": "KAE-PRE-C1-FEAR",
+      "labelText": "“Just threaten him. Scaring people is what you’re good at.”",
+      "branch": [
+        { "id": "KAE-PRE-X01", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“No. I am good at making sure nobody has to be scared.”" },
+        { "id": "KAE-PRE-X02", "speaker": "PLAYER", "text": "“That’s not what I meant.”" },
+        { "id": "KAE-PRE-X03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“It is what you said.”" },
+        { "id": "KAE-PRE-X04", "speaker": "NARRATOR", "text": "She turns back to the tailor. By the pillar, the guard stays exactly where he is." }
+      ]
+    }
+  ]
+}

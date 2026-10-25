@@ -92,6 +92,8 @@ export interface ContentBundle {
     archives: Record<string, string>;
     tavriOverlaySha256: string;
     effectiveTavriSha256: string;
+    /** Owner-requested dialogue revision applied on top of the frozen base, if any. */
+    revision: null | { id: string; authority: string; requested: string; date: string; scope: string; filesSha256: string };
   };
   scenes: Record<string, Scene>;
   support: SupportCopy;

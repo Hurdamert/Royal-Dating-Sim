@@ -1,0 +1,197 @@
+{
+  "sceneId": "TAV-EVT-PRE-01",
+  "title": "Fantasygram Catastrophe",
+  "intro": [
+    {
+      "id": "TAV-PRE-001",
+      "speaker": "NARRATOR",
+      "text": "A folded paper owl lands beside Tavri and hoots once. Then it unfolds itself into a glowing scroll."
+    },
+    {
+      "id": "TAV-PRE-002",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Ah. Fantasygram. This week’s public humiliation, delivered by express owl.”"
+    },
+    {
+      "id": "TAV-PRE-003",
+      "speaker": "PLAYER",
+      "text": "“You’re on Fantasygram?”"
+    },
+    {
+      "id": "TAV-PRE-004",
+      "speaker": "TAVRI",
+      "expression": "ANNOYED",
+      "text": "“The palace has an account. I’m its public-relations emergency.”"
+    },
+    {
+      "id": "TAV-PRE-005",
+      "speaker": "NARRATOR",
+      "text": "On the scroll, Tavri hurries away from a banquet table."
+    },
+    {
+      "id": "TAV-PRE-017",
+      "speaker": "NARRATOR",
+      "text": "The caption reads *Princess Flees Dinner After Losing Fight with Napkin.*"
+    },
+    {
+      "id": "TAV-PRE-006",
+      "speaker": "TAVRI",
+      "expression": "SURPRISED",
+      "text": "“I was helping a servant with a spilled tray! There was gravy on the ceiling!”"
+    },
+    {
+      "id": "TAV-PRE-013",
+      "speaker": "TAVRI",
+      "expression": "ANNOYED",
+      "text": "“They cropped out the servant. They cropped out the tray. They kept the napkin.”"
+    },
+    {
+      "id": "TAV-PRE-007",
+      "speaker": "PLAYER",
+      "text": "“The crop tool. Most dangerous spell in the kingdom.”"
+    },
+    {
+      "id": "TAV-PRE-008",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Finally, a scholar who understands modern sorcery. Point to you.”"
+    },
+    {
+      "id": "TAV-PRE-009",
+      "speaker": "NARRATOR",
+      "text": "A second paper owl lands. Its scroll is titled *Ten Reasons the Princess Is Secretly Unfit for Polite Society.*"
+    },
+    {
+      "id": "TAV-PRE-014",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Ten! Busy week. Number one’s the napkin, I assume. Number two, also the napkin.”"
+    },
+    {
+      "id": "TAV-PRE-015",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Number three, ‘laughs like a goose.’ Fair. Number four—”"
+    },
+    {
+      "id": "TAV-PRE-016",
+      "speaker": "NARRATOR",
+      "text": "She stops reading. Her tail has wrapped itself tight around her ankles."
+    },
+    {
+      "id": "TAV-PRE-010",
+      "speaker": "TAVRI",
+      "expression": "WORRIED",
+      "text": "“If I joke about it first, nobody notices it bothered me. That’s the usual plan.”"
+    },
+    {
+      "id": "TAV-PRE-011",
+      "speaker": "PLAYER",
+      "text": "“How’s the plan going?”"
+    },
+    {
+      "id": "TAV-PRE-012",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“Badly. So I suppose you get to decide whether I need a joke. Or a friend. I’m not fussy.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-PRE-C1-SUPPORT",
+      "labelText": "“Skip the joke. It’s a rotten scroll. Want to tell people the gravy story, or ignore it with me?”",
+      "branch": [
+        {
+          "id": "TAV-PRE-S01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“You’d let me pick? Even if it’s profoundly unprincesslike?”"
+        },
+        {
+          "id": "TAV-PRE-S02",
+          "speaker": "PLAYER",
+          "text": "“Especially then.”"
+        },
+        {
+          "id": "TAV-PRE-S03",
+          "speaker": "TAVRI",
+          "expression": "WORRIED",
+          "text": "“Then I’d like to put the scroll away and be upset for one minute.”"
+        },
+        {
+          "id": "TAV-PRE-S05",
+          "speaker": "NARRATOR",
+          "text": "She puts it away. You wait out the minute with her. Nobody says anything clever."
+        },
+        {
+          "id": "TAV-PRE-S04",
+          "speaker": "NARRATOR",
+          "text": "Then the paper owl folds itself into a napkin. A visibly judgmental napkin."
+        },
+        {
+          "id": "TAV-PRE-S06",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Oh, don’t *you* start.”"
+        },
+        {
+          "id": "TAV-PRE-S07",
+          "speaker": "NARRATOR",
+          "text": "She laughs at a napkin. Loudly. She doesn’t check who heard."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-PRE-C1-DISMISS",
+      "labelText": "“It’s just gossip. Hit back with something funnier and everyone will forget it.”",
+      "branch": [
+        {
+          "id": "TAV-PRE-W01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Something funnier. Yes. That’s what I normally do.”"
+        },
+        {
+          "id": "TAV-PRE-W02",
+          "speaker": "PLAYER",
+          "text": "“I was trying to help.”"
+        },
+        {
+          "id": "TAV-PRE-W03",
+          "speaker": "TAVRI",
+          "expression": "WORRIED",
+          "text": "“Of course you were. I was hoping for the other one.”"
+        },
+        {
+          "id": "TAV-PRE-W04",
+          "speaker": "NARRATOR",
+          "text": "She pockets the scroll. The joke she makes about it later is excellent."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-PRE-C1-CRUEL",
+      "labelText": "“Maybe they’ve got a point. A competent princess wouldn’t give them material.”",
+      "branch": [
+        {
+          "id": "TAV-PRE-X01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“Oh.”"
+        },
+        {
+          "id": "TAV-PRE-X02",
+          "speaker": "TAVRI",
+          "expression": "ANNOYED",
+          "text": "“Number eleven. Thank you. That saves them an owl.”"
+        },
+        {
+          "id": "TAV-PRE-X03",
+          "speaker": "NARRATOR",
+          "text": "She rolls up both scrolls and goes."
+        }
+      ]
+    }
+  ]
+}

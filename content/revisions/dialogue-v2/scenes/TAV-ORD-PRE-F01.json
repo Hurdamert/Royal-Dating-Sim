@@ -1,0 +1,76 @@
+{
+  "sceneId": "TAV-ORD-PRE-F01",
+  "title": "A Speech for One Cloud",
+  "intro": [
+    {
+      "id": "TAV-ORD-PRE-F01-L01",
+      "speaker": "NARRATOR",
+      "text": "Tavri is tapping two fingers on her sleeve, in time with music nobody is playing."
+    },
+    {
+      "id": "TAV-ORD-PRE-F01-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“I nearly gave a speech just now. About the weather. To one cloud.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-F01-L03",
+      "speaker": "PLAYER",
+      "text": "“How did it go?”"
+    },
+    {
+      "id": "TAV-ORD-PRE-F01-L04",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“It drifted off during the introduction.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-F01-L05",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Shame. I had a whole section on drizzle.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-PRE-F01-C1-YES",
+      "labelText": "“Clouds don’t want speeches. They want someone to point and say it looks like a rabbit.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-F01-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“It does look like a rabbit.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-F01-R-YES-02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“A smug one. It definitely heard the drizzle section.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-F01-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "You watch it together until it stops looking like anything."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-PRE-F01-C1-NO",
+      "labelText": "“Give me the speech instead. I’ll score it out of ten.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-F01-R-NO-01",
+          "speaker": "NARRATOR",
+          "text": "She gives you the whole speech, including the drizzle section. It’s excellent."
+        },
+        {
+          "id": "TAV-ORD-PRE-F01-R-NO-02",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Well? What’s my score?”"
+        }
+      ]
+    }
+  ]
+}

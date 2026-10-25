@@ -1,0 +1,29 @@
+{
+  "sceneId": "KAE-ORD-PRE-F01",
+  "title": "Polishing the Horns",
+  "intro": [
+    { "id": "KAE-ORD-PRE-F01-L01", "speaker": "NARRATOR", "text": "Kaedra catches her reflection in her own bronze bracer and tilts her head. The horns tilt with it." },
+    { "id": "KAE-ORD-PRE-F01-L02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“A stylist once recommended gold caps for my horns. For formal occasions.”" },
+    { "id": "KAE-ORD-PRE-F01-L03", "speaker": "PLAYER", "text": "“Did you want them?”" },
+    { "id": "KAE-ORD-PRE-F01-L04", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I wanted him to stop measuring my head.”" },
+    { "id": "KAE-ORD-PRE-F01-L05", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“He used calipers. Then he asked whether they come off for cleaning.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-ORD-PRE-F01-C1-YES",
+      "labelText": "“Your horns, your call. No calipers.”",
+      "branch": [
+        { "id": "KAE-ORD-PRE-F01-R-YES-01", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“I will record that as the first sensible consultation.”" },
+        { "id": "KAE-ORD-PRE-F01-R-YES-02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Your fee is waived.”" }
+      ]
+    },
+    {
+      "choiceId": "KAE-ORD-PRE-F01-C1-NO",
+      "labelText": "“Gold caps, though? Very imposing. Very *keep your distance*.”",
+      "branch": [
+        { "id": "KAE-ORD-PRE-F01-R-NO-01", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“That was his pitch. Nearly word for word.”" },
+        { "id": "KAE-ORD-PRE-F01-R-NO-02", "speaker": "NARRATOR", "text": "She lowers her arm and takes one polite step back, out of measuring range." }
+      ]
+    }
+  ]
+}

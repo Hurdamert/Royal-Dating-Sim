@@ -1,0 +1,81 @@
+{
+  "sceneId": "TAV-ORD-POST-F01",
+  "title": "Invitation Without a Script",
+  "intro": [
+    {
+      "id": "TAV-ORD-POST-F01-L01",
+      "speaker": "NARRATOR",
+      "text": "Tavri presents you with a blank scrap of paper, with tremendous ceremony."
+    },
+    {
+      "id": "TAV-ORD-POST-F01-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“You are cordially invited to a conversation. There is no itinerary.”"
+    },
+    {
+      "id": "TAV-ORD-POST-F01-L03",
+      "speaker": "PLAYER",
+      "text": "“What’s the dress code?”"
+    },
+    {
+      "id": "TAV-ORD-POST-F01-L04",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Whatever you’re wearing. Theme: none. Refreshments: also none.”"
+    },
+    {
+      "id": "TAV-ORD-POST-F01-L05",
+      "speaker": "NARRATOR",
+      "text": "You check the back for an agenda. There isn’t one."
+    },
+    {
+      "id": "TAV-ORD-POST-F01-L06",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“I saw that.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-POST-F01-C1-YES",
+      "labelText": "“I accept. I’ll try very hard not to bring a list.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-F01-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“You’ve already got one, haven’t you.”"
+        },
+        {
+          "id": "TAV-ORD-POST-F01-R-YES-02",
+          "speaker": "PLAYER",
+          "text": "“It’s short.”"
+        },
+        {
+          "id": "TAV-ORD-POST-F01-R-YES-03",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Fine. Item one: no items.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-POST-F01-C1-NO",
+      "labelText": "“Sure. Want to jot down a few jokes first, so it doesn’t drag?”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-F01-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“A few jokes. For the conversation with no itinerary.”"
+        },
+        {
+          "id": "TAV-ORD-POST-F01-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She writes some on the back of the invitation. It isn’t blank anymore."
+        }
+      ]
+    }
+  ]
+}

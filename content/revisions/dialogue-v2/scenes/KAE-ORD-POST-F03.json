@@ -1,0 +1,30 @@
+{
+  "sceneId": "KAE-ORD-POST-F03",
+  "title": "Structural Merit",
+  "intro": [
+    { "id": "KAE-ORD-POST-F03-L01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“The diagonal cut has no structural merit.”" },
+    { "id": "KAE-ORD-POST-F03-L02", "speaker": "NARRATOR", "text": "You and Kaedra are disagreeing about sandwiches. She cuts straight across. You cut corner to corner." },
+    { "id": "KAE-ORD-POST-F03-L03", "speaker": "PLAYER", "text": "“It gives you a point to start from. It’s better design.”" },
+    { "id": "KAE-ORD-POST-F03-L04", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“We disagree about something inconsequential. Shall I alert the heralds?”" },
+    { "id": "KAE-ORD-POST-F03-L05", "speaker": "PLAYER", "text": "“Only if they’ve got nothing better to announce.”" },
+    { "id": "KAE-ORD-POST-F03-L06", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“I have never seen a royal bulletin titled *Two People Remain Fond of Each Other*.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-ORD-POST-F03-C1-YES",
+      "labelText": "“Run it. Subheading: *Diagonal Still Correct*.”",
+      "branch": [
+        { "id": "KAE-ORD-POST-F03-R-YES-01", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“The subheading will be contested.”" },
+        { "id": "KAE-ORD-POST-F03-R-YES-02", "speaker": "NARRATOR", "text": "She cuts the next sandwich straight across and hands you half. Then she cuts your half corner to corner." }
+      ]
+    },
+    {
+      "choiceId": "KAE-ORD-POST-F03-C1-NO",
+      "labelText": "“You know what, you’re right. Straight across, then.”",
+      "branch": [
+        { "id": "KAE-ORD-POST-F03-R-NO-01", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“No. You were wrong with conviction. I was enjoying it.”" },
+        { "id": "KAE-ORD-POST-F03-R-NO-02", "speaker": "NARRATOR", "text": "She cuts the next sandwich corner to corner and waits for you to object." }
+      ]
+    }
+  ]
+}

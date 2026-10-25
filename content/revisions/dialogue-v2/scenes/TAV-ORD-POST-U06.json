@@ -1,0 +1,76 @@
+{
+  "sceneId": "TAV-ORD-POST-U06",
+  "title": "An Ordinary Laugh",
+  "intro": [
+    {
+      "id": "TAV-ORD-POST-U06-L01",
+      "speaker": "NARRATOR",
+      "text": "A button pops off Tavri’s cuff, bounces off your nose, and lands in your pocket."
+    },
+    {
+      "id": "TAV-ORD-POST-U06-L05",
+      "speaker": "NARRATOR",
+      "text": "Tavri laughs. It’s a loud, startled honk, nothing like her court laugh."
+    },
+    {
+      "id": "TAV-ORD-POST-U06-L02",
+      "speaker": "TAVRI",
+      "expression": "SURPRISED",
+      "text": "“Oh no. That was awful. That was a goose.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U06-L06",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“My reputation’s finished. Tell the chroniclers I honked.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U06-L03",
+      "speaker": "PLAYER",
+      "text": "“You sounded like you were having fun.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U06-L04",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Outrageous accusation.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-POST-U06-C1-YES",
+      "labelText": "“Keep the polished one for court. I’ll take the goose.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U06-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“You’ll get it whether you like it or not. It keeps escaping around you.”"
+        },
+        {
+          "id": "TAV-ORD-POST-U06-R-YES-02",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Also, you have my button.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-POST-U06-C1-NO",
+      "labelText": "“Ha! Maybe practice a quieter one for court, though?”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U06-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“A quieter one. Of course.”"
+        },
+        {
+          "id": "TAV-ORD-POST-U06-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She demonstrates. It’s a lovely laugh, with no goose in it anywhere."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "sceneId": "KAE-ORD-PRE-F02",
+  "title": "Nothing Happened",
+  "intro": [
+    { "id": "KAE-ORD-PRE-F02-L01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Four patrols. Eleven hours. Nothing happened.”" },
+    { "id": "KAE-ORD-PRE-F02-L02", "speaker": "NARRATOR", "text": "She folds the security report into precise thirds, then unfolds it to read it again." },
+    { "id": "KAE-ORD-PRE-F02-L03", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“It may be the finest document I have ever signed.”" },
+    { "id": "KAE-ORD-PRE-F02-L04", "speaker": "PLAYER", "text": "“What’s the best part?”" },
+    { "id": "KAE-ORD-PRE-F02-L05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Page two. A suspicious noise was investigated. It was a goose.”" },
+    { "id": "KAE-ORD-PRE-F02-L06", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“The goose was released without charge.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-ORD-PRE-F02-C1-YES",
+      "labelText": "“That’s excellent work. Frame the goose part.”",
+      "branch": [
+        { "id": "KAE-ORD-PRE-F02-R-YES-01", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“Nobody has ever asked about page two.”" },
+        { "id": "KAE-ORD-PRE-F02-R-YES-02", "speaker": "NARRATOR", "text": "She tucks the report inside her collar. It is not going back to the archive." }
+      ]
+    },
+    {
+      "choiceId": "KAE-ORD-PRE-F02-C1-NO",
+      "labelText": "“Shame, though. A bit of action would’ve made a better story.”",
+      "branch": [
+        { "id": "KAE-ORD-PRE-F02-R-NO-01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I am employed to prevent better stories.”" },
+        { "id": "KAE-ORD-PRE-F02-R-NO-02", "speaker": "NARRATOR", "text": "She files the report with the others. The goose goes unappreciated." }
+      ]
+    }
+  ]
+}

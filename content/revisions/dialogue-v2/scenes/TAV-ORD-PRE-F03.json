@@ -1,0 +1,71 @@
+{
+  "sceneId": "TAV-ORD-PRE-F03",
+  "title": "The Revised Program",
+  "intro": [
+    {
+      "id": "TAV-ORD-PRE-F03-L01",
+      "speaker": "NARRATOR",
+      "text": "Tavri holds up an official program. Under her name, it says *effortlessly delightful.*"
+    },
+    {
+      "id": "TAV-ORD-PRE-F03-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Effortlessly. Adorable. It took the clerk three drafts to spell it.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-F03-L05",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Draft one said *effortlessly delighful.* I liked that one. It had a flaw in it.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-F03-L03",
+      "speaker": "PLAYER",
+      "text": "“Want it changed?”"
+    },
+    {
+      "id": "TAV-ORD-PRE-F03-L04",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“To something with room for a bad day? ‘Usually delightful.’ ‘Delightful, terms apply.’”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-PRE-F03-C1-YES",
+      "labelText": "“Or just print ‘Tavri’ and let them find out the rest.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-F03-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“No adjectives. No warranty. I love it.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-F03-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She crosses out *effortlessly delightful.* It takes her one draft."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-PRE-F03-C1-NO",
+      "labelText": "“Honestly, keep it. People like knowing what they’re getting.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-F03-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Right. Effortlessly delightful.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-F03-R-NO-02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“I’ll schedule my bad days for when the program’s out of print.”"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "sceneId": "NER-EPI-01",
+  "title": "Marriage epilogue: A Future She Chooses",
+  "intro": [
+    { "id": "NER-EPI-001", "speaker": "NARRATOR", "text": "Moonwater Quay has never looked so dignified. Pearl ribbons hang over the water, and floating lanterns mark a clear channel for the ocean guests." },
+    { "id": "NER-EPI-021", "speaker": "NARRATOR", "text": "The land guests line the stone railings, leaning over as far as manners allow." },
+    { "id": "NER-EPI-002", "speaker": "NARRATOR", "text": "Someone has made a seating chart for a celebration where half the guests have no use for seats. It is on its ninth revision." },
+    { "id": "NER-EPI-003", "speaker": "PLAYER", "text": "“I think the seating chart has declared war on geometry.”" },
+    { "id": "NER-EPI-004", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Three times I have told them. Currents are not assigned tables.”" },
+    { "id": "NER-EPI-005", "speaker": "NARRATOR", "text": "Nerelle waits in the water, in the same high-collared, long-sleeved pearl-and-ocean-blue royal garment she always wears." },
+    { "id": "NER-EPI-024", "speaker": "NARRATOR", "text": "Her tail keeps time under the surface. Nobody has brought a spell." },
+    { "id": "NER-EPI-006", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Before we begin, an announcement. I have arranged my duties with the council.”" },
+    { "id": "NER-EPI-022", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I will go on serving the ocean court. I will also go on making journeys, whenever I see fit.”" },
+    { "id": "NER-EPI-007", "speaker": "NARRATOR", "text": "A murmur runs through the sea guests. A stern court official consults a list, hesitates, then adds a new heading." },
+    { "id": "NER-EPI-023", "speaker": "NARRATOR", "text": "*Arrangements Actually Discussed With the Princess.*" },
+    { "id": "NER-EPI-008", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Look at that. Reform is spreading.”" },
+    { "id": "NER-EPI-009", "speaker": "PLAYER", "text": "“Should I give a speech about our unprecedented cross-cultural scheduling achievements?”" },
+    { "id": "NER-EPI-010", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“You prepared a speech?”" },
+    { "id": "NER-EPI-011", "speaker": "PLAYER", "text": "“Only twelve pages. I cut the appendix.”" },
+    { "id": "NER-EPI-012", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“How merciful.”" },
+    { "id": "NER-EPI-013", "speaker": "NARRATOR", "text": "Then come the vows. You both promise to ask, and to listen, and to tell each other the truth." },
+    { "id": "NER-EPI-025", "speaker": "NARRATOR", "text": "And to keep meeting where the land runs into the sea." },
+    { "id": "NER-EPI-014", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I choose you, {PLAYER}. And my people. And my home. And every question I have not asked yet.”" },
+    { "id": "NER-EPI-015", "speaker": "PLAYER", "text": "“I’m yours, Nerelle. Keep telling me when I’m wrong about a current.”" },
+    { "id": "NER-EPI-016", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Then it will be a long marriage. You are wrong about currents quite often.”" },
+    { "id": "NER-EPI-017", "speaker": "NARRATOR", "text": "Later, beside the Gardens canal, Nerelle drifts in the water while you sit on the bank with your feet in it beside her." },
+    { "id": "NER-EPI-018", "speaker": "PLAYER", "text": "“Do you think we planned enough?”" },
+    { "id": "NER-EPI-019", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Enough to begin.”" },
+    { "id": "NER-EPI-020", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Also, your foot is in the wrong current. It is about to visit the sea court without you.”" }
+  ]
+}

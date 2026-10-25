@@ -1,0 +1,76 @@
+{
+  "sceneId": "TAV-MID-RETRY-01",
+  "title": "Private Confession follow-up (midpoint retry)",
+  "intro": [
+    {
+      "id": "TAV-MR-001",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“About the fountain. I don’t need a speech. I need to know if you heard me.”"
+    },
+    {
+      "id": "TAV-MR-002",
+      "speaker": "PLAYER",
+      "text": "“I did. It took me a while.”"
+    },
+    {
+      "id": "TAV-MR-003",
+      "speaker": "TAVRI",
+      "expression": "WORRIED",
+      "text": "“Then tell me what you heard. No flourish.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-MR-C1-LISTEN",
+      "labelText": "“You think that when the jokes stop, people stop choosing you.”",
+      "branch": [
+        {
+          "id": "TAV-MR-S04",
+          "speaker": "PLAYER",
+          "text": "“And I hide behind being useful. I’ve done it my whole life.”"
+        },
+        {
+          "id": "TAV-MR-S05",
+          "speaker": "PLAYER",
+          "text": "“I don’t want you to earn my company.”"
+        },
+        {
+          "id": "TAV-MR-S01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“That’s… exactly it.”"
+        },
+        {
+          "id": "TAV-MR-S02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“And you said it without a presentation. Not one diagram.”"
+        },
+        {
+          "id": "TAV-MR-S03",
+          "speaker": "NARRATOR",
+          "text": "She takes your hand. Briefly. Then a little longer than briefly."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-MR-C1-ADVISE",
+      "labelText": "“Honestly? Stop caring what people think. Problem solved.”",
+      "branch": [
+        {
+          "id": "TAV-MR-W01",
+          "speaker": "TAVRI",
+          "expression": "ANNOYED",
+          "text": "“Problem solved. Marvelous. I’ll stop at once.”"
+        },
+        {
+          "id": "TAV-MR-W02",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Try me again another day. Bring fewer solutions.”"
+        }
+      ]
+    }
+  ]
+}

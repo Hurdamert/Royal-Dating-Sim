@@ -1,0 +1,30 @@
+{
+  "sceneId": "NER-ORD-PRE-U03",
+  "title": "Bow or Wave",
+  "intro": [
+    { "id": "NER-ORD-PRE-U03-L01", "speaker": "NARRATOR", "text": "Two visitors have stopped on the path to greet Nerelle. One bows. The other waves." },
+    { "id": "NER-ORD-PRE-U03-L02", "speaker": "NARRATOR", "text": "Each notices the other and adds the missing gesture. Now both are bowing and waving at once." },
+    { "id": "NER-ORD-PRE-U03-L03", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Etiquette has reached an impasse. The gestures are becoming competitive.”" },
+    { "id": "NER-ORD-PRE-U03-L04", "speaker": "PLAYER", "text": "“Is there an official rule?”" },
+    { "id": "NER-ORD-PRE-U03-L05", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Three ceremonial committees have studied the question. Their report is in its fourth volume.”" },
+    { "id": "NER-ORD-PRE-U03-L06", "speaker": "NARRATOR", "text": "The taller visitor adds a curtsy. Part of it lands on a passing duck." }
+  ],
+  "options": [
+    {
+      "choiceId": "NER-ORD-PRE-U03-C1-YES",
+      "labelText": "“Skip the committees. How do you actually like to be greeted?”",
+      "branch": [
+        { "id": "NER-ORD-PRE-U03-R-YES-01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“You asked me. You have just outperformed three ceremonial committees.”" },
+        { "id": "NER-ORD-PRE-U03-R-YES-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Hello is perfect. Waving is lovely. Bowing to ducks is discouraged.”" }
+      ]
+    },
+    {
+      "choiceId": "NER-ORD-PRE-U03-C1-NO",
+      "labelText": "“Bow, obviously. You can’t go wrong bowing to royalty.”",
+      "branch": [
+        { "id": "NER-ORD-PRE-U03-R-NO-01", "speaker": "NARRATOR", "text": "The visitors overhear and bow low. Sea protocol says a bow must be returned, so Nerelle bows back. They bow again." },
+        { "id": "NER-ORD-PRE-U03-R-NO-02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“This is how the last treaty signing took nine days.”" }
+      ]
+    }
+  ]
+}

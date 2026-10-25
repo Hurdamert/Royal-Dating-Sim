@@ -1,0 +1,34 @@
+{
+  "squareQuips": {
+    "HD-SQUARE-TS01": "“I once sat on a wall to admire the view. Lovely view. I do not recommend the wall.”",
+    "HD-SQUARE-TS02": "“Romance in this kingdom has a deadline. Paperwork does not. I have been waiting on a wall permit for six years.”",
+    "HD-SQUARE-TS03": "“Every princess keeps a schedule. Learn it. Nothing says ‘devoted’ like waiting at an empty quay, chatting to a gull.”",
+    "HD-SQUARE-TS04": "“All the king’s horses came to help me once. Lovely animals. Hopeless with glue.”",
+    "HD-SQUARE-TS05": "“If the court asks whether you know what you are doing, test that theory first. I said yes once. Then I was on a wall.”",
+    "HD-SQUARE-TS06": "“People call me difficult to put back together. The glue merchants call me a valued long-term customer.”",
+    "HD-SQUARE-TS07": "“A locked milestone is not an angry princess. The milestone is a number. The princess will tell you exactly what you did.”",
+    "HD-SQUARE-TS08": "“In an important conversation, the cleverest thing you can say is often a question. I have many questions. Most of them are about walls.”",
+    "HD-SQUARE-TS09": "“My advice is free. The premium package is the same advice, delivered from a lower wall.”",
+    "HD-SQUARE-TS10": "“The palace believes every problem needs a committee. I believe every problem needs a chair. Low to the ground. With arms.”",
+    "HD-SQUARE-TS11": "“When a mermaid tells you the water is where she belongs, believe the expert. I feel the same way about the ground.”",
+    "HD-SQUARE-TS12": "“A dragon princess can open her own doors, and most walls. You may still ask whether she would like company.”"
+  },
+  "activities": {
+    "ACT-CHA-READ-L01": "You read a chapter called “Openers for Royalty.” Opener four is just winking. You close the book before it can suggest opener five.",
+    "ACT-CHA-READ-L02": "You practice a line on the mirror. The mirror loves it. The mirror is not a princess.",
+    "ACT-CHA-TALK-L01": "You chat with the townsfolk. One question to a baker earns you twenty minutes on sourdough and a free roll.",
+    "ACT-CHA-TALK-L02": "Nobody grades you. Several people ask your name. Progress.",
+    "ACT-INT-BOOK-L01": "You read two histories of the same obscure custom. They disagree about everything, including the custom.",
+    "ACT-INT-BOOK-L02": "You leave with one answer and three better questions. The librarian calls this a good day.",
+    "ACT-INT-ORACLE-L01": "The oracle answers instantly, with great confidence and three footnotes. Two of the footnotes cite the oracle. You check the sources.",
+    "ACT-INT-ORACLE-L02": "Asked to show its work, the oracle concedes that “probably” was doing most of it.",
+    "ACT-STR-CAL-L01": "You work through a careful set of push-ups and squats. Form over noise. Mostly.",
+    "ACT-STR-CAL-L02": "The floor survives another session. So, narrowly, do you.",
+    "ACT-STR-GUILD-L01": "You run drills on the guild’s ordinary equipment. A veteran watches, says “Hm,” and leaves. You decide that was praise.",
+    "ACT-STR-GUILD-L02": "The training dummy remains intact. The guild counts this as a win for everyone, including the dummy.",
+    "ACT-KIN-DOG-L01": "You refill the water bowls and find the garden dogs some shade. One of them sits on your foot so you can’t leave.",
+    "ACT-KIN-DOG-L02": "The reviews are in: one wagging tail, one sneeze, no numbers.",
+    "ACT-KIN-LITTER-L01": "You pick up litter around the square. The flowerbeds look better. A pigeon looks betrayed.",
+    "ACT-KIN-LITTER-L02": "Nobody throws you a parade. Given what parades leave behind, that’s for the best."
+  }
+}

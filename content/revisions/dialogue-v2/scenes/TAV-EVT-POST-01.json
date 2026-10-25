@@ -1,0 +1,157 @@
+{
+  "sceneId": "TAV-EVT-POST-01",
+  "title": "Unscripted Comedy",
+  "intro": [
+    {
+      "id": "TAV-POST-001",
+      "speaker": "NARRATOR",
+      "text": "Someone in the Town Square has built a very small stage. A hand-painted sign reads *Royal Comedy Showcase: Participation Voluntary, Embarrassment Inevitable.*"
+    },
+    {
+      "id": "TAV-POST-002",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Finally, some honest advertising.”"
+    },
+    {
+      "id": "TAV-POST-003",
+      "speaker": "PLAYER",
+      "text": "“Are you going up?”"
+    },
+    {
+      "id": "TAV-POST-004",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“I put my name down earlier. Now I’d rather be in the crowd, heckling.”"
+    },
+    {
+      "id": "TAV-POST-005",
+      "speaker": "NARRATOR",
+      "text": "Up front, a wizard pulls a rabbit from a hat."
+    },
+    {
+      "id": "TAV-POST-013",
+      "speaker": "NARRATOR",
+      "text": "The rabbit takes one look at the audience and pulls the wizard back inside."
+    },
+    {
+      "id": "TAV-POST-006",
+      "speaker": "PLAYER",
+      "text": "“Tough act to follow.”"
+    },
+    {
+      "id": "TAV-POST-010",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“That rabbit has better instincts than I do.”"
+    },
+    {
+      "id": "TAV-POST-007",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“The court expects me to be brilliant on command. Like a lamp.”"
+    },
+    {
+      "id": "TAV-POST-011",
+      "speaker": "TAVRI",
+      "expression": "WORRIED",
+      "text": "“I don’t want to be a lamp. I don’t want to disappoint everyone, either.”"
+    },
+    {
+      "id": "TAV-POST-008",
+      "speaker": "PLAYER",
+      "text": "“What do you actually want?”"
+    },
+    {
+      "id": "TAV-POST-009",
+      "speaker": "TAVRI",
+      "expression": "SURPRISED",
+      "text": "“That’s becoming a dangerous question around you.”"
+    },
+    {
+      "id": "TAV-POST-012",
+      "speaker": "NARRATOR",
+      "text": "Her tail points at the stage, then at the crowd, then at you."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-POST-C1-CHOICE",
+      "labelText": "“Go up and I’ll cheer, badly. Stay and we’ll watch terrible jokes together. I’m here either way.”",
+      "branch": [
+        {
+          "id": "TAV-POST-S01",
+          "speaker": "TAVRI",
+          "expression": "WORRIED",
+          "text": "“I think I’d like to stay. Just stay.”"
+        },
+        {
+          "id": "TAV-POST-S02",
+          "speaker": "NARRATOR",
+          "text": "The next comedian announces that his act is entirely improvised."
+        },
+        {
+          "id": "TAV-POST-S06",
+          "speaker": "NARRATOR",
+          "text": "He unrolls a scroll labeled *Entirely Improvised Act* and starts reading."
+        },
+        {
+          "id": "TAV-POST-S03",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Look. Someone even less spontaneous than you.”"
+        },
+        {
+          "id": "TAV-POST-S04",
+          "speaker": "PLAYER",
+          "text": "“That was spontaneous and hurtful.”"
+        },
+        {
+          "id": "TAV-POST-S05",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“And I didn’t even need the stage.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-POST-C1-PUSH",
+      "labelText": "“You’re brilliant at this. You’ll feel better the second you’re up there.”",
+      "branch": [
+        {
+          "id": "TAV-POST-W01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Maybe. I’d have liked to decide that myself.”"
+        },
+        {
+          "id": "TAV-POST-W02",
+          "speaker": "NARRATOR",
+          "text": "She goes up and does ten tidy minutes. The crowd loves it."
+        },
+        {
+          "id": "TAV-POST-W03",
+          "speaker": "NARRATOR",
+          "text": "Coming back down, she thanks everyone. Her smile lasts almost to the bottom step."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-POST-C1-SHAME",
+      "labelText": "“Backing out makes you look weak. A real princess wouldn’t let her public down.”",
+      "branch": [
+        {
+          "id": "TAV-POST-X01",
+          "speaker": "TAVRI",
+          "expression": "ANNOYED",
+          "text": "“Then I’ll let you down instead. It’s quicker.”"
+        },
+        {
+          "id": "TAV-POST-X02",
+          "speaker": "NARRATOR",
+          "text": "She walks off into the crowd and doesn’t look back for you."
+        }
+      ]
+    }
+  ]
+}

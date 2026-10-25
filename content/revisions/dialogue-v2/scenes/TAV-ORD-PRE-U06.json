@@ -1,0 +1,74 @@
+{
+  "sceneId": "TAV-ORD-PRE-U06",
+  "title": "A Bow by Reflex",
+  "intro": [
+    {
+      "id": "TAV-ORD-PRE-U06-L01",
+      "speaker": "NARRATOR",
+      "text": "Somewhere nearby, a crowd bursts into clapping. Tavri is halfway into a bow before she stops."
+    },
+    {
+      "id": "TAV-ORD-PRE-U06-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Ignore that. My spine bows on its own. Beautifully trained, no idea what for.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U06-L03",
+      "speaker": "PLAYER",
+      "text": "“What are they clapping for?”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U06-L04",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“No idea. Could be a christening. Could be a goat.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U06-L05",
+      "speaker": "NARRATOR",
+      "text": "The clapping swells. Her tail sweeps once, politely, in its direction."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-PRE-U06-C1-YES",
+      "labelText": "“Let’s stay right here and find out if it’s the goat.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-U06-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Standing still while people clap. How wildly rebellious.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U06-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "It is the goat. The goat doesn’t bow either."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-PRE-U06-C1-NO",
+      "labelText": "“Go on, take a bow. Maybe it’s for you.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-U06-R-NO-01",
+          "speaker": "NARRATOR",
+          "text": "She sweeps into a full court bow. The clapping falters. Someone holds up a goat."
+        },
+        {
+          "id": "TAV-ORD-PRE-U06-R-NO-02",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“It was the goat.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U06-R-NO-03",
+          "speaker": "NARRATOR",
+          "text": "Her ears stay flat for some time afterward."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "sceneId": "KAE-ORD-PRE-U03",
+  "title": "Siege Doctrine, Volume Two",
+  "intro": [
+    { "id": "KAE-ORD-PRE-U03-L01", "speaker": "NARRATOR", "text": "A display stand is leaning to one side. Kaedra kneels and wedges a folded pamphlet under its short leg." },
+    { "id": "KAE-ORD-PRE-U03-L02", "speaker": "NARRATOR", "text": "The pamphlet is *Siege Doctrine, Volume Two*. It is exactly the right thickness." },
+    { "id": "KAE-ORD-PRE-U03-L03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Someone suggested I smash it to save time.”" },
+    { "id": "KAE-ORD-PRE-U03-L04", "speaker": "PLAYER", "text": "“Would it?”" },
+    { "id": "KAE-ORD-PRE-U03-L05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“It would make a very satisfying noise. And a procurement request.”" },
+    { "id": "KAE-ORD-PRE-U03-L06", "speaker": "NARRATOR", "text": "She presses on the stand. It holds. She presses again, for the record." }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-ORD-PRE-U03-C1-YES",
+      "labelText": "“Volume Two has finally found its calling.”",
+      "branch": [
+        { "id": "KAE-ORD-PRE-U03-R-YES-01", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Volume One has been under my wardrobe for three years.”" },
+        { "id": "KAE-ORD-PRE-U03-R-YES-02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“It has never been more useful.”" }
+      ]
+    },
+    {
+      "choiceId": "KAE-ORD-PRE-U03-C1-NO",
+      "labelText": "“Go on, smash it. Show them what you can do.”",
+      "branch": [
+        { "id": "KAE-ORD-PRE-U03-R-NO-01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“They know what I can do. That is why they keep suggesting it.”" },
+        { "id": "KAE-ORD-PRE-U03-R-NO-02", "speaker": "NARRATOR", "text": "A passing guard hears the word *smash* and edges toward a pillar." }
+      ]
+    }
+  ]
+}

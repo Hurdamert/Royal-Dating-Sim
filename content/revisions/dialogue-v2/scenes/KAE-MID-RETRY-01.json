@@ -1,0 +1,35 @@
+{
+  "sceneId": "KAE-MID-RETRY-01",
+  "title": "The Royal Trial follow-up (midpoint retry)",
+  "intro": [
+    { "id": "KAE-MR-001", "speaker": "NARRATOR", "text": "Kaedra sees you before you speak. She nods once, then waits. She is not going to write your answer for you." },
+    { "id": "KAE-MR-002", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“The court has repaired the sigil.”" },
+    { "id": "KAE-MR-006", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Also, the herald has proposed banning speeches over forty pages. The debate is expected to take several speeches.”" },
+    { "id": "KAE-MR-003", "speaker": "PLAYER", "text": "“I’ve been thinking about the trial.”" },
+    { "id": "KAE-MR-004", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“So have I. I needed help making space for people to leave.”" },
+    { "id": "KAE-MR-007", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“And someone who could see I was frightened, without deciding what that made me.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-MR-C1-RECOGNIZE",
+      "labelText": "“I missed what mattered. You kept everyone safe, and I should’ve helped make room. I’m sorry I put your feelings and choices second. I’d like to listen now.”",
+      "branch": [
+        { "id": "KAE-MR-S01", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“You came back to say that without an audience.”" },
+        { "id": "KAE-MR-S02", "speaker": "PLAYER", "text": "“I figured you’d want fewer witnesses.”" },
+        { "id": "KAE-MR-S03", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“A correct observation. Keep making them.”" },
+        { "id": "KAE-MR-S04", "speaker": "NARRATOR", "text": "She rests her hand against yours. It is a strong hand, and she is being careful with it on purpose." },
+        { "id": "KAE-MR-S05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I would like to talk again. As myself. The guardian can wait outside.”" }
+      ]
+    },
+    {
+      "choiceId": "KAE-MR-C1-EXCUSE",
+      "labelText": "“Honestly, everyone overreacted. It was one spark. Can we just forget it?”",
+      "branch": [
+        { "id": "KAE-MR-W01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“One spark. Yes. I was the one holding it.”" },
+        { "id": "KAE-MR-W02", "speaker": "PLAYER", "text": "“I was trying to help.”" },
+        { "id": "KAE-MR-W03", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“Then let me tell you what hurt, before you decide that nothing did.”" },
+        { "id": "KAE-MR-W04", "speaker": "NARRATOR", "text": "She says goodbye politely. Whatever she came to hear, she is still waiting for it." }
+      ]
+    }
+  ]
+}

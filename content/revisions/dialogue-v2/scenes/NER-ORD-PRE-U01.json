@@ -1,0 +1,29 @@
+{
+  "sceneId": "NER-ORD-PRE-U01",
+  "title": "The Tide Clock",
+  "intro": [
+    { "id": "NER-ORD-PRE-U01-L01", "speaker": "NARRATOR", "text": "A floating marker keeps bumping the waterside stone. Nerelle is counting the bumps." },
+    { "id": "NER-ORD-PRE-U01-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Your clock tower claims every hour is the same length. I have been checking.”" },
+    { "id": "NER-ORD-PRE-U01-L03", "speaker": "PLAYER", "text": "“How’s the claim holding up?”" },
+    { "id": "NER-ORD-PRE-U01-L04", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Poorly. The tide has filed a dissent.”" },
+    { "id": "NER-ORD-PRE-U01-L05", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“At home, we ask the moon what time it is. In emergencies, a very old crab.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "NER-ORD-PRE-U01-C1-YES",
+      "labelText": "“Keep the crab. The tower can have the meetings.”",
+      "branch": [
+        { "id": "NER-ORD-PRE-U01-R-YES-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“A sensible treaty. I will inform the crab.”" },
+        { "id": "NER-ORD-PRE-U01-R-YES-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“He has been anxious about his position.”" }
+      ]
+    },
+    {
+      "choiceId": "NER-ORD-PRE-U01-C1-NO",
+      "labelText": "“We could merge them. One clock, with the tides as a recurring event.”",
+      "branch": [
+        { "id": "NER-ORD-PRE-U01-R-NO-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Splendid. Please inform the moon before the council.”" },
+        { "id": "NER-ORD-PRE-U01-R-NO-02", "speaker": "NARRATOR", "text": "The marker bumps the stone again. By the tower’s reckoning, it is late." }
+      ]
+    }
+  ]
+}

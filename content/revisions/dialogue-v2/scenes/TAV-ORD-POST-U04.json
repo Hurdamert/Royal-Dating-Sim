@@ -1,0 +1,81 @@
+{
+  "sceneId": "TAV-ORD-POST-U04",
+  "title": "The Unfinished Joke",
+  "intro": [
+    {
+      "id": "TAV-ORD-POST-U04-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“A fox princess walks into a—”"
+    },
+    {
+      "id": "TAV-ORD-POST-U04-L01",
+      "speaker": "NARRATOR",
+      "text": "Her ears swivel, as if the ending might be lying around nearby."
+    },
+    {
+      "id": "TAV-ORD-POST-U04-L05",
+      "speaker": "TAVRI",
+      "expression": "SURPRISED",
+      "text": "“I’ve forgotten the end.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U04-L03",
+      "speaker": "PLAYER",
+      "text": "“Want help remembering?”"
+    },
+    {
+      "id": "TAV-ORD-POST-U04-L04",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“No. I want to see if anything terrible happens.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U04-L06",
+      "speaker": "NARRATOR",
+      "text": "Nothing terrible happens. Somewhere, a door closes. That’s all."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-POST-U04-C1-YES",
+      "labelText": "“Leave it. ‘A fox princess walks into a.’ That’s the whole joke.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U04-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Experimental. Ahead of its time.”"
+        },
+        {
+          "id": "TAV-ORD-POST-U04-R-YES-02",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“A fox princess walks into a.”"
+        },
+        {
+          "id": "TAV-ORD-POST-U04-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "You laugh. Her tail does a smug little loop."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-POST-U04-C1-NO",
+      "labelText": "“That setup needs an ending, though. Bakery? Library? Duck pond?”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U04-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Bakery. Fine.”"
+        },
+        {
+          "id": "TAV-ORD-POST-U04-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She finishes the joke. It’s a good ending. She checks your face to see if it was good enough."
+        }
+      ]
+    }
+  ]
+}

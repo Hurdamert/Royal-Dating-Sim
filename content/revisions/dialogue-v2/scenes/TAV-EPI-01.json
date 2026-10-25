@@ -1,0 +1,98 @@
+{
+  "sceneId": "TAV-EPI-01",
+  "title": "Marriage epilogue",
+  "intro": [
+    {
+      "id": "TAV-EPI-001",
+      "speaker": "NARRATOR",
+      "text": "The Palace Court hosts a wedding for two people separately accused, with evidence, of talking too much."
+    },
+    {
+      "id": "TAV-EPI-002",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“I’m told the guests expect a speech from the bride. As if they could stop one.”"
+    },
+    {
+      "id": "TAV-EPI-003",
+      "speaker": "PLAYER",
+      "text": "“I brought a spare, in case.”"
+    },
+    {
+      "id": "TAV-EPI-004",
+      "speaker": "TAVRI",
+      "expression": "SURPRISED",
+      "text": "“Not the one with three key points?”"
+    },
+    {
+      "id": "TAV-EPI-005",
+      "speaker": "PLAYER",
+      "text": "“New one. It’s called *In Case of Awkwardness, Break Glass.*”"
+    },
+    {
+      "id": "TAV-EPI-006",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“A bestseller.”"
+    },
+    {
+      "id": "TAV-EPI-007",
+      "speaker": "NARRATOR",
+      "text": "When the guests settle, Tavri steps forward. Her tail gives one nervous swish."
+    },
+    {
+      "id": "TAV-EPI-008",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“I had jokes ready. They were excellent. One of them had a goat in it.”"
+    },
+    {
+      "id": "TAV-EPI-009",
+      "speaker": "NARRATOR",
+      "text": "She looks at the guests, then at you, and puts her notes away."
+    },
+    {
+      "id": "TAV-EPI-010",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“I’m happy to be here, with the person I chose.”"
+    },
+    {
+      "id": "TAV-EPI-011",
+      "speaker": "NARRATOR",
+      "text": "That’s the whole speech. She sits down looking extremely pleased with herself."
+    },
+    {
+      "id": "TAV-EPI-012",
+      "speaker": "NARRATOR",
+      "text": "Later, in the gardens, a gossip scroll flutters down. It claims the newlyweds plan to have fifty children."
+    },
+    {
+      "id": "TAV-EPI-013",
+      "speaker": "PLAYER",
+      "text": "“That’s a very specific rumor.”"
+    },
+    {
+      "id": "TAV-EPI-014",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Let’s start smaller. One houseplant. See if it survives us.”"
+    },
+    {
+      "id": "TAV-EPI-015",
+      "speaker": "PLAYER",
+      "text": "“Leave it with me. I’ll draw up a maintenance schedule.”"
+    },
+    {
+      "id": "TAV-EPI-016",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“I said yes to you without one. Look how well that’s going.”"
+    },
+    {
+      "id": "TAV-EPI-017",
+      "speaker": "NARRATOR",
+      "text": "You buy a fern. It survives. The maintenance schedule does not."
+    }
+  ]
+}

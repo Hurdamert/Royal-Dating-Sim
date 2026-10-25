@@ -1,0 +1,37 @@
+{
+  "sceneId": "NER-ORD-POST-U01",
+  "title": "The Same Buoys",
+  "intro": [
+    { "id": "NER-ORD-POST-U01-L01", "speaker": "NARRATOR", "text": "Nerelle holds a waterproof letter in each hand, just above the waterline." },
+    { "id": "NER-ORD-POST-U01-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“The shore families want the marker buoys moved further out. The offshore families want them moved further in.”" },
+    { "id": "NER-ORD-POST-U01-L03", "speaker": "PLAYER", "text": "“Same buoys?”" },
+    { "id": "NER-ORD-POST-U01-L04", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“The same buoys. Both letters end, ‘as the princess will surely agree.’”" },
+    { "id": "NER-ORD-POST-U01-L05", "speaker": "NERELLE", "expression": "WORRIED", "text": "“Inconveniently, I agree with half of each.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "NER-ORD-POST-U01-C1-YES",
+      "labelText": "“Talk me through it. I’ll be the wall you bounce it off.”",
+      "branch": [
+        { "id": "NER-ORD-POST-U01-R-YES-01", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“A wall. How refreshing. Everyone else offers to be a second sovereign.”" },
+        { "id": "NER-ORD-POST-U01-R-YES-02", "speaker": "NARRATOR", "text": "She starts reading aloud. By the third paragraph, she is arguing with both letters, and winning." }
+      ]
+    },
+    {
+      "choiceId": "NER-ORD-POST-U01-C1-NO",
+      "labelText": "“Do the shore one first. The offshore lot are further out, so they’ll complain slower.”",
+      "branch": [
+        { "id": "NER-ORD-POST-U01-R-NO-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“They complain at exactly the same speed. It arrives wetter.”" },
+        { "id": "NER-ORD-POST-U01-R-NO-02", "speaker": "NARRATOR", "text": "She moves the offshore letter to the top." }
+      ]
+    },
+    {
+      "choiceId": "NER-ORD-POST-U01-C1-OFF",
+      "labelText": "“Ditch the ocean court. I’m a better use of your time.”",
+      "branch": [
+        { "id": "NER-ORD-POST-U01-R-OFF-01", "speaker": "NERELLE", "expression": "ANNOYED", "text": "“Those are families, {PLAYER}. Not a hobby I can put down.”" },
+        { "id": "NER-ORD-POST-U01-R-OFF-02", "speaker": "NARRATOR", "text": "She turns her back to answer them. Both letters get a reply before you get another word." }
+      ]
+    }
+  ]
+}

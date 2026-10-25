@@ -1,0 +1,81 @@
+{
+  "sceneId": "TAV-ORD-PRE-U02",
+  "title": "The Quill Critic",
+  "intro": [
+    {
+      "id": "TAV-ORD-PRE-U02-L01",
+      "speaker": "NARRATOR",
+      "text": "A self-writing quill is reviewing the announcement Tavri just made. It has opinions."
+    },
+    {
+      "id": "TAV-ORD-PRE-U02-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Five stars for my pronunciation. One star for the actual message.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U02-L05",
+      "speaker": "TAVRI",
+      "expression": "ANNOYED",
+      "text": "“Savaged by stationery. There’s a footnote about my vowels.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U02-L03",
+      "speaker": "PLAYER",
+      "text": "“What was the message?”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U02-L04",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“That the palace servants should get a day off. The quill found the topic ‘a little worthy.’”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U02-L06",
+      "speaker": "NARRATOR",
+      "text": "The quill adds a line: *Princess now glaring at reviewer. Two stars.*"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-PRE-U02-C1-YES",
+      "labelText": "“Forget the quill. Has anyone asked the servants which day they want?”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-U02-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“No. We announced it *at* them. Beautifully, apparently.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U02-R-YES-02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Come on, let’s go and ask. The quill can review the walk.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U02-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "The quill writes *Unexpected. Three stars,* and hurries after you."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-PRE-U02-C1-NO",
+      "labelText": "“Easy fix. Next time, make the announcement more dazzling.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-U02-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“More dazzling. A harp, perhaps. Some doves.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U02-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "The quill gives the doves five stars. Tavri doesn’t read it."
+        }
+      ]
+    }
+  ]
+}

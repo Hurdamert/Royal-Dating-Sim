@@ -1,0 +1,29 @@
+{
+  "sceneId": "NER-ORD-POST-U02",
+  "title": "Possibly Goats",
+  "intro": [
+    { "id": "NER-ORD-POST-U02-L01", "speaker": "NARRATOR", "text": "Two damp maps lie on the stones, pinned down with pebbles. They disagree about everything." },
+    { "id": "NER-ORD-POST-U02-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“This is a surface map. The sea is a blue patch labeled ‘Sea.’”" },
+    { "id": "NER-ORD-POST-U02-L03", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Ours, meanwhile, shows the land as a blank patch labeled ‘Dry. Possibly goats.’”" },
+    { "id": "NER-ORD-POST-U02-L04", "speaker": "PLAYER", "text": "“So both sides gave up at the shoreline.”" },
+    { "id": "NER-ORD-POST-U02-L05", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Each mapmaker drew home in exquisite detail, and the other side as a rumor.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "NER-ORD-POST-U02-C1-YES",
+      "labelText": "“Swap? You fix my sea, I’ll fix your goats.”",
+      "branch": [
+        { "id": "NER-ORD-POST-U02-R-YES-01", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“A fair treaty. Though fixing your sea will take considerably longer.”" },
+        { "id": "NER-ORD-POST-U02-R-YES-02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“There are eleven currents where yours says ‘Sea.’ Bring more pebbles.”" }
+      ]
+    },
+    {
+      "choiceId": "NER-ORD-POST-U02-C1-NO",
+      "labelText": "“Just draw roads across the sea part. Then nobody gets lost.”",
+      "branch": [
+        { "id": "NER-ORD-POST-U02-R-NO-01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Roads. Across the sea.”" },
+        { "id": "NER-ORD-POST-U02-R-NO-02", "speaker": "NARRATOR", "text": "On the blank land of her map, she adds a small note: *Wants roads in the sea.*" }
+      ]
+    }
+  ]
+}

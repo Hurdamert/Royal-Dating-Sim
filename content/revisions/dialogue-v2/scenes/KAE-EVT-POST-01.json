@@ -1,0 +1,58 @@
+{
+  "sceneId": "KAE-EVT-POST-01",
+  "title": "Monster Reputation Rumor",
+  "intro": [
+    { "id": "KAE-POST-001", "speaker": "NARRATOR", "text": "A young messenger is whispering urgently to an attendant. By the third listener, the story has grown two extra horns." },
+    { "id": "KAE-POST-002", "speaker": "MESSENGER", "text": "“A monster near the royal paths! Great armored back! Enormous claws! An impossible stare! And the princess was *nearby*!”" },
+    { "id": "KAE-POST-003", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I have the usual number of horns. Please keep that part accurate.”" },
+    { "id": "KAE-POST-004", "speaker": "PLAYER", "text": "“So what did people actually see?”" },
+    { "id": "KAE-POST-005", "speaker": "NARRATOR", "text": "A small, moss-backed creature trundles out from behind a step. A fallen blossom sits on its head like a crown." },
+    { "id": "KAE-POST-015", "speaker": "NARRATOR", "text": "It is unarmed. It appears to be looking for shade." },
+    { "id": "KAE-POST-006", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“Oh. There you are.”" },
+    { "id": "KAE-POST-007", "speaker": "MESSENGER", "text": "“You *know* it?”" },
+    { "id": "KAE-POST-008", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“It once stole a judge’s lunch and left the plate very clean.”" },
+    { "id": "KAE-POST-016", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“The court considers this political commentary.”" },
+    { "id": "KAE-POST-009", "speaker": "PLAYER", "text": "“Does it bite?”" },
+    { "id": "KAE-POST-010", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Only unattended sandwiches.”" },
+    { "id": "KAE-POST-011", "speaker": "NARRATOR", "text": "The creature wanders toward a busy walkway. Kaedra asks people to give it room, then points it down the shaded route home. Nobody draws a weapon." },
+    { "id": "KAE-POST-012", "speaker": "MESSENGER", "text": "“So… there was no monster attack?”" },
+    { "id": "KAE-POST-013", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“There was a rumor. Several people believed it enough to run. One of them ran into a door.”" },
+    { "id": "KAE-POST-017", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“The story was foolish. The door was very real. I take that part seriously.”" },
+    { "id": "KAE-POST-014", "speaker": "NARRATOR", "text": "Down the shaded path, the creature trundles out of sight. Kaedra notices you are still standing beside her." }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-POST-C1-COMPASSION",
+      "labelText": "“You calmed everyone down and got the little one home. I wish that was the story, instead of two monsters.”",
+      "branch": [
+        { "id": "KAE-POST-S01", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“That is more or less what I was trying to do.”" },
+        { "id": "KAE-POST-S02", "speaker": "PLAYER", "text": "“The sandwiches may disagree.”" },
+        { "id": "KAE-POST-S03", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Their concerns have been entered into the record.”" },
+        { "id": "KAE-POST-S04", "speaker": "NARRATOR", "text": "She smiles, and forgets to check who is watching." },
+        { "id": "KAE-POST-S05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I cannot control every story about me. I can control what I do in them.”" },
+        { "id": "KAE-POST-S06", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“It helps that someone noticed.”" },
+        { "id": "KAE-POST-S07", "speaker": "NARRATOR", "text": "Somewhere down the shaded path, a sandwich is left unattended for the last time." }
+      ]
+    },
+    {
+      "choiceId": "KAE-POST-C1-DISMISS",
+      "labelText": "“It’s a ridiculous rumor. Ignore it and it’ll blow over.”",
+      "branch": [
+        { "id": "KAE-POST-W01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“It may. The bruise from the door will take longer.”" },
+        { "id": "KAE-POST-W02", "speaker": "PLAYER", "text": "“I was trying to make it sound less serious.”" },
+        { "id": "KAE-POST-W03", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“Please take me seriously. Just without turning me into a tragedy.”" },
+        { "id": "KAE-POST-W04", "speaker": "NARRATOR", "text": "She goes to help the messenger straighten out the story. She does not ask you to come." }
+      ]
+    },
+    {
+      "choiceId": "KAE-POST-C1-CRUEL",
+      "labelText": "“Why reassure anyone? You’re frightening. So is that thing. Let them be scared.”",
+      "branch": [
+        { "id": "KAE-POST-X01", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“Fear is not a service I provide.”" },
+        { "id": "KAE-POST-X02", "speaker": "PLAYER", "text": "“I didn’t think you’d take it personally.”" },
+        { "id": "KAE-POST-X03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Then you have not been paying attention.”" },
+        { "id": "KAE-POST-X04", "speaker": "NARRATOR", "text": "She walks the creature the rest of the way into the shade and does not come back." }
+      ]
+    }
+  ]
+}

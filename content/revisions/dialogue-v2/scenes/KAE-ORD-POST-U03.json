@@ -1,0 +1,28 @@
+{
+  "sceneId": "KAE-ORD-POST-U03",
+  "title": "The Unremarkable Clasp",
+  "intro": [
+    { "id": "KAE-ORD-POST-U03-L01", "speaker": "NARRATOR", "text": "A courtier stops to tell Kaedra about nothing in particular. While he talks, she refastens the loose clasp on his cloak." },
+    { "id": "KAE-ORD-POST-U03-L02", "speaker": "NARRATOR", "text": "He does not notice. He bows and leaves, securely fastened." },
+    { "id": "KAE-ORD-POST-U03-L03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“That is the fourth time. He believes he is very good at clasps.”" },
+    { "id": "KAE-ORD-POST-U03-L04", "speaker": "PLAYER", "text": "“You’re never going to tell him?”" },
+    { "id": "KAE-ORD-POST-U03-L05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“If I tell him, it becomes an incident. Incidents have forms.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-ORD-POST-U03-C1-YES",
+      "labelText": "“I saw that, though. Very smooth. He has no idea.”",
+      "branch": [
+        { "id": "KAE-ORD-POST-U03-R-YES-01", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“You were watching my hands.”" },
+        { "id": "KAE-ORD-POST-U03-R-YES-02", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“A dangerously attentive companion. I will have to keep an eye on you.”" }
+      ]
+    },
+    {
+      "choiceId": "KAE-ORD-POST-U03-C1-NO",
+      "labelText": "“Next time, do it where he can see. You should get some credit.”",
+      "branch": [
+        { "id": "KAE-ORD-POST-U03-R-NO-01", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“Then he would know. And he would stop coming over to talk about nothing.”" }
+      ]
+    }
+  ]
+}

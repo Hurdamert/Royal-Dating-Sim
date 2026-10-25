@@ -1,0 +1,77 @@
+{
+  "sceneId": "NER-MID-01",
+  "title": "The Forbidden Journey (first full midpoint attempt)",
+  "intro": [
+    { "id": "NER-MID-001", "speaker": "NARRATOR", "text": "Nerelle is waiting in the water below the quay." },
+    { "id": "NER-MID-024", "speaker": "NARRATOR", "text": "A folded chart sits on a dry ledge within her reach, weighted down with a smooth stone." },
+    { "id": "NER-MID-002", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Before you ask: yes, this map is mine. No, I did not steal it.”" },
+    { "id": "NER-MID-016", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“The court has ruled that it is an inconvenient thing for me to own.”" },
+    { "id": "NER-MID-003", "speaker": "PLAYER", "text": "“Is this the part where the warning says ‘forbidden journey’?”" },
+    { "id": "NER-MID-004", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“It says ‘unsanctioned surface observation.’ Written large enough, that sounds almost respectable.”" },
+    { "id": "NER-MID-005", "speaker": "NARRATOR", "text": "She unfolds the chart. Spots near the quay and along the gardens canal are circled in neat ink." },
+    { "id": "NER-MID-025", "speaker": "NARRATOR", "text": "From each one, you could hear a market without leaving the water." },
+    { "id": "NER-MID-017", "speaker": "NARRATOR", "text": "One circle is labeled *bakery (smell only)*." },
+    { "id": "NER-MID-006", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I know these tides. I have guided emergency supplies through these channels.”" },
+    { "id": "NER-MID-018", "speaker": "NERELLE", "expression": "WORRIED", "text": "“But when I ask to come here because I want to, the answer changes.”" },
+    { "id": "NER-MID-007", "speaker": "PLAYER", "text": "“Your court doesn’t want you to go?”" },
+    { "id": "NER-MID-008", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“They want me safe. They also want me available whenever a council member discovers another urgent meeting.”" },
+    { "id": "NER-MID-019", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Both are reasonable. Added together, they come to every hour I have.”" },
+    { "id": "NER-MID-009", "speaker": "NARRATOR", "text": "Overhead, a courier crosses a bridge under a stack of documents taller than his head. The top sheet escapes and drops toward the canal." },
+    { "id": "NER-MID-020", "speaker": "NARRATOR", "text": "Nerelle catches it before it sinks." },
+    { "id": "NER-MID-010", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Marked *urgent*. So the surface defends itself with paperwork too. I feel at home already.”" },
+    { "id": "NER-MID-011", "speaker": "PLAYER", "text": "“Why tell me about this now?”" },
+    { "id": "NER-MID-012", "speaker": "NERELLE", "expression": "WORRIED", "text": "“Because I trust you. That makes it harder.”" },
+    { "id": "NER-MID-021", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Everyone has an opinion about what I should do. I wanted to hear yours.”" },
+    { "id": "NER-MID-022", "speaker": "NERELLE", "expression": "WORRIED", "text": "“And I am afraid it will be one more order, dressed up as kindness.”" },
+    { "id": "NER-MID-013", "speaker": "PLAYER", "text": "“What do you want?”" },
+    { "id": "NER-MID-014", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“To learn how people live above the water. To stay answerable to everyone below it who relies on me.”" },
+    { "id": "NER-MID-023", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“And for the choice to be mine.”" },
+    { "id": "NER-MID-015", "speaker": "NARRATOR", "text": "She waits in the current with the chart between you. There is a pencil on top of it." }
+  ],
+  "options": [
+    {
+      "choiceId": "NER-MID-C1-PLAN",
+      "labelText": "“Then let’s plan it. Your route, your timing. We find a safe stop, agree what to tell the court, and reschedule if the tide or council objects.”",
+      "branch": [
+        { "id": "NER-MID-S01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“You did not start with what I am allowed to do.”" },
+        { "id": "NER-MID-S02", "speaker": "PLAYER", "text": "“Well, you know this water better than I ever will. I can do the surface bits, if you want them.”" },
+        { "id": "NER-MID-S03", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Then here is my proposal. First, I finish my scheduled hearings.”" },
+        { "id": "NER-MID-S11", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Second, I tell the appropriate attendants where I will be.”" },
+        { "id": "NER-MID-S12", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Third, I explore the garden canal. For no reason at all, except that I want to.”" },
+        { "id": "NER-MID-S04", "speaker": "PLAYER", "text": "“And if somebody calls a private outing scandalous?”" },
+        { "id": "NER-MID-S05", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“I will ask whether they prefer their scandals alphabetized.”" },
+        { "id": "NER-MID-S06", "speaker": "NARRATOR", "text": "She traces the canal on the chart. You point out where a walkway runs along the bank." },
+        { "id": "NER-MID-S13", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Not there. The current is too swift by that bridge. You would spend the visit waving at me as I went past.”" },
+        { "id": "NER-MID-S14", "speaker": "NARRATOR", "text": "She moves your finger two bridges down, to where the water slows." },
+        { "id": "NER-MID-S07", "speaker": "NERELLE", "expression": "WORRIED", "text": "“I was afraid you would turn this into a daring rescue.”" },
+        { "id": "NER-MID-S15", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Nobody needs to carry me away from my life. I would like room to live in it.”" },
+        { "id": "NER-MID-S08", "speaker": "PLAYER", "text": "“No daring rescue. I’ll cancel the horse.”" },
+        { "id": "NER-MID-S09", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“You do not have a horse.”" },
+        { "id": "NER-MID-S16", "speaker": "PLAYER", "text": "“I was going to borrow one.”" },
+        { "id": "NER-MID-S10", "speaker": "NARRATOR", "text": "You follow the canal together, you on the path and she in the water beside you." },
+        { "id": "NER-MID-S17", "speaker": "NARRATOR", "text": "She points out which bridges echo, and which only pretend to." }
+      ]
+    },
+    {
+      "choiceId": "NER-MID-C1-RESCUE",
+      "labelText": "“You shouldn’t have to deal with any of this. I’ll get you away from the court before anyone can object.”",
+      "branch": [
+        { "id": "NER-MID-W01", "speaker": "NERELLE", "expression": "ANNOYED", "text": "“Away from the court? Those are my people.”" },
+        { "id": "NER-MID-W02", "speaker": "PLAYER", "text": "“I just meant I’d get you free.”" },
+        { "id": "NER-MID-W03", "speaker": "NERELLE", "expression": "WORRIED", "text": "“Free to follow your plan instead of theirs?”" },
+        { "id": "NER-MID-W04", "speaker": "NARRATOR", "text": "She folds the chart, slides it back under its stone, and does not unfold it again." }
+      ]
+    },
+    {
+      "choiceId": "NER-MID-C1-PROHIBIT",
+      "labelText": "“Your court has a point. It’s risky up here. Maybe stop asking to visit.”",
+      "branch": [
+        { "id": "NER-MID-P01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I know the risks. I listed them on the back.”" },
+        { "id": "NER-MID-P05", "speaker": "NARRATOR", "text": "She turns the chart over. The list is longer than the route." },
+        { "id": "NER-MID-P02", "speaker": "PLAYER", "text": "“I just don’t want you to get hurt.”" },
+        { "id": "NER-MID-P03", "speaker": "NERELLE", "expression": "ANNOYED", "text": "“Your worry is welcome. It does not outrank me.”" },
+        { "id": "NER-MID-P04", "speaker": "NARRATOR", "text": "She lets the chart drift back against the stone and leaves for her hearings. Every circle stays where it is." }
+      ]
+    }
+  ]
+}

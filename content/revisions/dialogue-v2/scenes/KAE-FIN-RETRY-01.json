@@ -1,0 +1,34 @@
+{
+  "sceneId": "KAE-FIN-RETRY-01",
+  "title": "Private Vow follow-up (marriage retry)",
+  "intro": [
+    { "id": "KAE-FR-001", "speaker": "NARRATOR", "text": "Kaedra greets you without a bow. It is friendlier than a bow. It is also a question." },
+    { "id": "KAE-FR-002", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I have thought about your proposal. It matters too much to pretend we understood each other.”" },
+    { "id": "KAE-FR-003", "speaker": "PLAYER", "text": "“So have I.”" },
+    { "id": "KAE-FR-004", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“I do not want to be a legend you kneel to. Or to have a guardian appointed to protect me from myself.”" },
+    { "id": "KAE-FR-006", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“Can you see a life with the actual person standing here?”" }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-FR-C1-PARTNER",
+      "labelText": "“Yes. I was wrong to make you a symbol or a project. I love who you actually are: capable, kind, sometimes tired, free to choose. Marry me, and let’s both speak honestly?”",
+      "branch": [
+        { "id": "KAE-FR-S01", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“You have learned to make a short speech.”" },
+        { "id": "KAE-FR-S02", "speaker": "PLAYER", "text": "“I can make it longer.”" },
+        { "id": "KAE-FR-S03", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Please do not.”" },
+        { "id": "KAE-FR-S04", "speaker": "NARRATOR", "text": "She takes your hand. Her smile has none of the court in it." },
+        { "id": "KAE-FR-S05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Yes, {PLAYER}. I choose you. As your equal, and as myself.”" }
+      ]
+    },
+    {
+      "choiceId": "KAE-FR-C1-REPEAT",
+      "labelText": "“I can promise never to disagree with you. Or I can make all the decisions. Which would you prefer?”",
+      "branch": [
+        { "id": "KAE-FR-W01", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“Neither.”" },
+        { "id": "KAE-FR-W02", "speaker": "PLAYER", "text": "“I guess I still don’t get it.”" },
+        { "id": "KAE-FR-W03", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“Then I would rather wait than marry a misunderstanding.”" },
+        { "id": "KAE-FR-W04", "speaker": "NARRATOR", "text": "She says goodbye kindly. The proposal stays where it is, unanswered." }
+      ]
+    }
+  ]
+}

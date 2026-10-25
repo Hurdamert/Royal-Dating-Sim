@@ -1,0 +1,30 @@
+{
+  "sceneId": "KAE-ORD-POST-F02",
+  "title": "The Long Ladder",
+  "intro": [
+    { "id": "KAE-ORD-POST-F02-L01", "speaker": "NARRATOR", "text": "A banner hangs crooked overhead. Kaedra could straighten it without standing on her toes." },
+    { "id": "KAE-ORD-POST-F02-L02", "speaker": "NARRATOR", "text": "Some way off, a custodian is approaching with a ladder. Slowly. It is a very long ladder." },
+    { "id": "KAE-ORD-POST-F02-L03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“I could fix it. He has been carrying that ladder since before we arrived.”" },
+    { "id": "KAE-ORD-POST-F02-L04", "speaker": "PLAYER", "text": "“So what’s the plan?”" },
+    { "id": "KAE-ORD-POST-F02-L05", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Stand here. Very still. Looking at something else.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-ORD-POST-F02-C1-YES",
+      "labelText": "“I’ll look at something else with you.”",
+      "branch": [
+        { "id": "KAE-ORD-POST-F02-R-YES-01", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“Thank you. I recommend that wall. It has been very well built.”" },
+        { "id": "KAE-ORD-POST-F02-R-YES-02", "speaker": "NARRATOR", "text": "The custodian climbs up and straightens the banner. He climbs down looking like a man who has won something." }
+      ]
+    },
+    {
+      "choiceId": "KAE-ORD-POST-F02-C1-NO",
+      "labelText": "“You’re right there, though. Two seconds and it’s done.”",
+      "branch": [
+        { "id": "KAE-ORD-POST-F02-R-NO-01", "speaker": "NARRATOR", "text": "She reaches up. The banner is straight in two seconds." },
+        { "id": "KAE-ORD-POST-F02-R-NO-02", "speaker": "NARRATOR", "text": "The custodian arrives. He looks up at the banner, then lowers his ladder very slowly." },
+        { "id": "KAE-ORD-POST-F02-R-NO-03", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“He was so close.”" }
+      ]
+    }
+  ]
+}

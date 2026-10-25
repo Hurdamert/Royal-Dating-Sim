@@ -1,0 +1,72 @@
+{
+  "sceneId": "TAV-FIN-RETRY-01",
+  "title": "Shared Confession follow-up (marriage retry)",
+  "intro": [
+    {
+      "id": "TAV-FR-001",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“I haven’t forgotten what you asked me. Or why I couldn’t say yes.”"
+    },
+    {
+      "id": "TAV-FR-002",
+      "speaker": "PLAYER",
+      "text": "“You want to be a person beside me. Not a role I protect, or show off.”"
+    },
+    {
+      "id": "TAV-FR-003",
+      "speaker": "TAVRI",
+      "expression": "WORRIED",
+      "text": "“Yes. And I still need you to mean it.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-FR-C1-EQUAL",
+      "labelText": "“I want to marry the person you are when nobody’s watching. We choose our future together. Would you still want that?”",
+      "branch": [
+        {
+          "id": "TAV-FR-S01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“That’s what I hoped you meant.”"
+        },
+        {
+          "id": "TAV-FR-S02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“And not one numbered point. Who are you?”"
+        },
+        {
+          "id": "TAV-FR-S03",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Yes, {PLAYER}. Let’s choose it together.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-FR-C1-PROMISE",
+      "labelText": "“Marry me, and I promise you’ll never have another bad day.”",
+      "branch": [
+        {
+          "id": "TAV-FR-W01",
+          "speaker": "TAVRI",
+          "expression": "WORRIED",
+          "text": "“Never? That’s a promise nobody can keep.”"
+        },
+        {
+          "id": "TAV-FR-W03",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“I’ve met days, {PLAYER}. They don’t take orders.”"
+        },
+        {
+          "id": "TAV-FR-W02",
+          "speaker": "NARRATOR",
+          "text": "She waits to see whether you’ll try again."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "sceneId": "TAV-ORD-POST-U01",
+  "title": "A Comfortable Silence",
+  "intro": [
+    {
+      "id": "TAV-ORD-POST-U01-L01",
+      "speaker": "NARRATOR",
+      "text": "The conversation runs out. Tavri lets it."
+    },
+    {
+      "id": "TAV-ORD-POST-U01-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Do you realize neither of us has said anything clever for a full minute?”"
+    },
+    {
+      "id": "TAV-ORD-POST-U01-L03",
+      "speaker": "PLAYER",
+      "text": "“Should I panic?”"
+    },
+    {
+      "id": "TAV-ORD-POST-U01-L04",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Only if you brought an emergency trumpet.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U01-L05",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“I’m going for two minutes. That one didn’t count. It was commentary.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U01-L06",
+      "speaker": "NARRATOR",
+      "text": "Her tail twitches toward a joke, then settles."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-POST-U01-C1-YES",
+      "labelText": "“Go for three. I’ve got nowhere better to be.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U01-R-YES-01",
+          "speaker": "NARRATOR",
+          "text": "You make it to three. Somewhere in the second minute, her shoulder bumps against yours and stays."
+        },
+        {
+          "id": "TAV-ORD-POST-U01-R-YES-02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Palace record. We tell no one.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-POST-U01-C1-NO",
+      "labelText": "“Don’t worry, I’ve got a joke ready if it gets slow.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U01-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Oh. Go on, then.”"
+        },
+        {
+          "id": "TAV-ORD-POST-U01-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "You tell it. She laughs at exactly the right moment, the way she does at court."
+        }
+      ]
+    }
+  ]
+}

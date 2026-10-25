@@ -1,0 +1,87 @@
+{
+  "sceneId": "TAV-ORD-PRE-U05",
+  "title": "A Riddle with No Prize",
+  "intro": [
+    {
+      "id": "TAV-ORD-PRE-U05-L01",
+      "speaker": "NARRATOR",
+      "text": "Tavri has found a riddle card tucked inside an invitation. She reads it out with great ceremony."
+    },
+    {
+      "id": "TAV-ORD-PRE-U05-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“‘What enters court with no title and leaves with more expectations than it came with?’”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U05-L03",
+      "speaker": "PLAYER",
+      "text": "“A visiting duke?”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U05-L05",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“No, a duke leaves with a cold and our second-best spoons.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U05-L04",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“The answer’s on the back. ‘Anyone who said one clever thing, once.’”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U05-L06",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Grim, for a party game! Who writes these? Is it a duke? Is it the spoons?”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U05-L07",
+      "speaker": "NARRATOR",
+      "text": "She turns the card over again. Her tail is moving faster than the jokes."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-PRE-U05-C1-YES",
+      "labelText": "“New rule: one clever thing a day. You’ve used yours. You’re off duty.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-U05-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“I’ve used it? Which one?”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U05-R-YES-02",
+          "speaker": "PLAYER",
+          "text": "“The spoons.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U05-R-YES-03",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Oh, good. That’s a decent one to retire on.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-PRE-U05-C1-NO",
+      "labelText": "“Ha! Do another one. I’ll get the next one, I swear.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-U05-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Another! Yes. Excellent.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U05-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She reads three more very fast and doesn’t turn a single one over."
+        }
+      ]
+    }
+  ]
+}

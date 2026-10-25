@@ -1,0 +1,81 @@
+{
+  "sceneId": "TAV-ORD-POST-U02",
+  "title": "The Badly Drawn Map",
+  "intro": [
+    {
+      "id": "TAV-ORD-POST-U02-L01",
+      "speaker": "NARRATOR",
+      "text": "Tavri unrolls a hand-drawn map of the palace. Every corridor has a joke written beside it."
+    },
+    {
+      "id": "TAV-ORD-POST-U02-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“This corridor is labeled *certain doom.* It leads to a linen cupboard.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U02-L03",
+      "speaker": "PLAYER",
+      "text": "“Did you make this?”"
+    },
+    {
+      "id": "TAV-ORD-POST-U02-L04",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“Anonymously. With my name on the back, in case it got popular.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U02-L05",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Here’s the stair that ate a duke’s dignity. And here’s where the laundry staff nap.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U02-L06",
+      "speaker": "NARRATOR",
+      "text": "The nap spot is marked with a tiny, very accurate drawing of three people asleep on folded towels."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-POST-U02-C1-YES",
+      "labelText": "“It’s great. Maybe ask the laundry before you publish their nap spot?”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U02-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“Oh. That’s their one hiding place, isn’t it?”"
+        },
+        {
+          "id": "TAV-ORD-POST-U02-R-YES-02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Private edition for the laundry, then. *Certain doom* stays.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-POST-U02-C1-NO",
+      "labelText": "“This is brilliant. Copy it and hang one in every corridor.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U02-R-NO-01",
+          "speaker": "NARRATOR",
+          "text": "She looks delighted for exactly as long as it takes to find the nap spot."
+        },
+        {
+          "id": "TAV-ORD-POST-U02-R-NO-02",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Maybe not every corridor.”"
+        },
+        {
+          "id": "TAV-ORD-POST-U02-R-NO-03",
+          "speaker": "NARRATOR",
+          "text": "She rolls the map up tight and tucks it away."
+        }
+      ]
+    }
+  ]
+}

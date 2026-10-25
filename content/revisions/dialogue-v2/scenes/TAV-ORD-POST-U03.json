@@ -1,0 +1,97 @@
+{
+  "sceneId": "TAV-ORD-POST-U03",
+  "title": "A Blank Playbill",
+  "intro": [
+    {
+      "id": "TAV-ORD-POST-U03-L01",
+      "speaker": "NARRATOR",
+      "text": "Someone has left a blank playbill lying around. Tavri picks it up like it might bite."
+    },
+    {
+      "id": "TAV-ORD-POST-U03-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“No title. No cast list. Not even a warning about the interval.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U03-L03",
+      "speaker": "PLAYER",
+      "text": "“What would you put on it?”"
+    },
+    {
+      "id": "TAV-ORD-POST-U03-L04",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Act one, a princess says something clever. Act two, something cleverer. Act three—”"
+    },
+    {
+      "id": "TAV-ORD-POST-U03-L05",
+      "speaker": "NARRATOR",
+      "text": "She stops."
+    },
+    {
+      "id": "TAV-ORD-POST-U03-L06",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“Act three, two people sit somewhere, and nobody leaves at the interval.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U03-L07",
+      "speaker": "NARRATOR",
+      "text": "She seems very satisfied with act three."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-POST-U03-C1-YES",
+      "labelText": "“Call it *A Day with No Auditions.* Short run. Very exclusive.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U03-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Dreadful title. Nobody will buy a ticket.”"
+        },
+        {
+          "id": "TAV-ORD-POST-U03-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She writes it across the top anyway, in her best handwriting."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-POST-U03-C1-NO",
+      "labelText": "“Put your best lines in. Everyone loves a greatest hits.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U03-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“A greatest hits. Of course.”"
+        },
+        {
+          "id": "TAV-ORD-POST-U03-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She fills it in under a minute. Every line is a good one. Act three doesn’t make the cut."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-POST-U03-C1-OFF",
+      "labelText": "“Honestly, you’re only worth the time when you’re being funny.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U03-R-OFF-01",
+          "speaker": "TAVRI",
+          "expression": "ANNOYED",
+          "text": "“Then I’ll save you the dull part.”"
+        },
+        {
+          "id": "TAV-ORD-POST-U03-R-OFF-02",
+          "speaker": "NARRATOR",
+          "text": "She leaves the playbill blank and goes."
+        }
+      ]
+    }
+  ]
+}

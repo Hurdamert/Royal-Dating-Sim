@@ -1,0 +1,81 @@
+{
+  "sceneId": "TAV-ORD-PRE-U04",
+  "title": "The Smile Rehearsal",
+  "intro": [
+    {
+      "id": "TAV-ORD-PRE-U04-L01",
+      "speaker": "NARRATOR",
+      "text": "Tavri is rehearsing smiles in the back of a spoon. She has three."
+    },
+    {
+      "id": "TAV-ORD-PRE-U04-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“This one’s for ministers. This one’s for visiting nobles.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U04-L05",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“And this one’s for when someone asks why I’m not smiling.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U04-L03",
+      "speaker": "PLAYER",
+      "text": "“Is there one you actually like?”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U04-L04",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“I haven’t scheduled a meeting with that one.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U04-L06",
+      "speaker": "NARRATOR",
+      "text": "Upside down in the spoon, all three smiles look equally tired."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-PRE-U04-C1-YES",
+      "labelText": "“Try none of them. If anyone asks, you’re thinking very hard about soup.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-U04-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“No smile at all? In public?”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U04-R-YES-02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Imagine the headlines. *Princess’s Face Found Relaxed. Court in Uproar.*”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U04-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "She pockets the spoon. Her face settles into something she didn’t rehearse."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-PRE-U04-C1-NO",
+      "labelText": "“The third one’s the most convincing. Use it on everyone.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-U04-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Efficient. One smile, whole kingdom, no refunds.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U04-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She puts it on and leaves it there. It’s still there when she says goodbye."
+        }
+      ]
+    }
+  ]
+}

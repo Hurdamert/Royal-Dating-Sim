@@ -1,0 +1,223 @@
+{
+  "sceneId": "TAV-MID-01",
+  "title": "The Private Confession (first full midpoint attempt)",
+  "intro": [
+    {
+      "id": "TAV-MID-001",
+      "speaker": "NARRATOR",
+      "text": "Tavri walks with you until the noise of the court is behind a hedge."
+    },
+    {
+      "id": "TAV-MID-011",
+      "speaker": "NARRATOR",
+      "text": "The Royal Gardens are so quiet you can hear the fountain hiccup."
+    },
+    {
+      "id": "TAV-MID-002",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Congratulations. You’ve been granted my exclusive, invitation-only silence. Reviews are mixed.”"
+    },
+    {
+      "id": "TAV-MID-003",
+      "speaker": "PLAYER",
+      "text": "“Should I clap?”"
+    },
+    {
+      "id": "TAV-MID-004",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Please don’t. I’ve been clapped at enough for one lifetime.”"
+    },
+    {
+      "id": "TAV-MID-005",
+      "speaker": "NARRATOR",
+      "text": "She sits on the edge of the fountain. Her tail, which never stops, stops."
+    },
+    {
+      "id": "TAV-MID-006",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“Do you know what happens when you’re the funny princess?”"
+    },
+    {
+      "id": "TAV-MID-012",
+      "speaker": "TAVRI",
+      "expression": "WORRIED",
+      "text": "“Nobody asks if you’re all right. They ask when you’ll be funny again.”"
+    },
+    {
+      "id": "TAV-MID-007",
+      "speaker": "PLAYER",
+      "text": "“That sounds lonely.”"
+    },
+    {
+      "id": "TAV-MID-008",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“It’s comfortable, as long as you never stop.”"
+    },
+    {
+      "id": "TAV-MID-013",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“I can make a whole court laugh. I once made a tax collector laugh. During an audit.”"
+    },
+    {
+      "id": "TAV-MID-009",
+      "speaker": "TAVRI",
+      "expression": "WORRIED",
+      "text": "“And I don’t know if anyone would stay if I ran out of clever things to say.”"
+    },
+    {
+      "id": "TAV-MID-010",
+      "speaker": "NARRATOR",
+      "text": "She waits for the joke that usually comes next. It doesn’t come."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-MID-C1-MUTUAL",
+      "labelText": "“Can I tell you something? I hide behind being useful.”",
+      "branch": [
+        {
+          "id": "TAV-MID-S10",
+          "speaker": "PLAYER",
+          "text": "“Before I came here, I got turned down for job after job. I kept thinking that if I was useful enough, I’d finally earn a place.”"
+        },
+        {
+          "id": "TAV-MID-S11",
+          "speaker": "PLAYER",
+          "text": "“When I’m not succeeding at something, I don’t know who I am.”"
+        },
+        {
+          "id": "TAV-MID-S12",
+          "speaker": "PLAYER",
+          "text": "“But I’d sit here with you even if neither of us said anything clever.”"
+        },
+        {
+          "id": "TAV-MID-S01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“You? You explain disasters as tidy little lists.”"
+        },
+        {
+          "id": "TAV-MID-S02",
+          "speaker": "PLAYER",
+          "text": "“The lists are how you know I’m panicking.”"
+        },
+        {
+          "id": "TAV-MID-S03",
+          "speaker": "TAVRI",
+          "expression": "WORRIED",
+          "text": "“That’s an alarming amount of honesty for one fountain.”"
+        },
+        {
+          "id": "TAV-MID-S04",
+          "speaker": "PLAYER",
+          "text": "“We can stop.”"
+        },
+        {
+          "id": "TAV-MID-S05",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“No. I want to try something.”"
+        },
+        {
+          "id": "TAV-MID-S06",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“I had a miserable day.”"
+        },
+        {
+          "id": "TAV-MID-S13",
+          "speaker": "NARRATOR",
+          "text": "Nothing sparkles after it. She looks startled that she let the sentence out unsupervised."
+        },
+        {
+          "id": "TAV-MID-S07",
+          "speaker": "PLAYER",
+          "text": "“I’m sorry. Want to tell me about it?”"
+        },
+        {
+          "id": "TAV-MID-S08",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Only if you promise not to file a quarterly report on my feelings.”"
+        },
+        {
+          "id": "TAV-MID-S09",
+          "speaker": "NARRATOR",
+          "text": "She tells you about it. None of it is funny."
+        },
+        {
+          "id": "TAV-MID-S14",
+          "speaker": "NARRATOR",
+          "text": "Somewhere around the part with the soup, her tail starts moving again."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-MID-C1-REASSURE",
+      "labelText": "“That’s ridiculous. Everyone adores you. You’re the funniest person in the kingdom.”",
+      "branch": [
+        {
+          "id": "TAV-MID-W01",
+          "speaker": "TAVRI",
+          "expression": "WORRIED",
+          "text": "“Yes. That’s the part I’m worried about.”"
+        },
+        {
+          "id": "TAV-MID-W02",
+          "speaker": "PLAYER",
+          "text": "“I meant it kindly.”"
+        },
+        {
+          "id": "TAV-MID-W03",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Oh, I know you did.”"
+        },
+        {
+          "id": "TAV-MID-W04",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Anyway! Have I told you about the duke and the soup?”"
+        },
+        {
+          "id": "TAV-MID-W05",
+          "speaker": "NARRATOR",
+          "text": "Her tail is moving again, a little too fast."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-MID-C1-PERFORM",
+      "labelText": "“Then we make sure you never run out. I’ll help you write new material.”",
+      "branch": [
+        {
+          "id": "TAV-MID-P01",
+          "speaker": "TAVRI",
+          "expression": "ANNOYED",
+          "text": "“I asked if you’d stay when the jokes run out. You offered to improve the show.”"
+        },
+        {
+          "id": "TAV-MID-P02",
+          "speaker": "PLAYER",
+          "text": "“That wasn’t what you were asking.”"
+        },
+        {
+          "id": "TAV-MID-P03",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“No.”"
+        },
+        {
+          "id": "TAV-MID-P04",
+          "speaker": "NARRATOR",
+          "text": "She stands, brushes herself off, and is charming all the way back past the hedge."
+        }
+      ]
+    }
+  ]
+}

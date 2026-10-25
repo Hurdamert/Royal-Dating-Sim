@@ -1,0 +1,33 @@
+{
+  "sceneId": "NER-FIN-RETRY-01",
+  "title": "A Future She Chooses follow-up (marriage retry)",
+  "intro": [
+    { "id": "NER-FR-001", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I have thought about what you asked. I would not like you to mistake my answer for a puzzle with a secret password.”" },
+    { "id": "NER-FR-002", "speaker": "PLAYER", "text": "“You want a life together where neither of us has to turn into someone else.”" },
+    { "id": "NER-FR-003", "speaker": "NERELLE", "expression": "WORRIED", "text": "“Yes. I can make room for love. I cannot promise that my work and my home will vanish to make it.”" },
+    { "id": "NER-FR-005", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Or my opinions.”" },
+    { "id": "NER-FR-004", "speaker": "NARRATOR", "text": "The water laps at the quay. She is patient about it. She is also not going to answer the wrong question." }
+  ],
+  "options": [
+    {
+      "choiceId": "NER-FR-C1-PARTNER",
+      "labelText": "“I love you as you are. Marry me, and we’ll plan a future with room for your home and your duties, and for mine?”",
+      "branch": [
+        { "id": "NER-FR-S01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“That is the future I was trying to describe.”" },
+        { "id": "NER-FR-S02", "speaker": "PLAYER", "text": "“This time I actually listened.”" },
+        { "id": "NER-FR-S03", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“I will make a note of this historic event.”" },
+        { "id": "NER-FR-S04", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Yes, {PLAYER}. Let us plan it together.”" },
+        { "id": "NER-FR-S05", "speaker": "NARRATOR", "text": "She takes your hand across the waterline. With the other, she makes a note." }
+      ]
+    },
+    {
+      "choiceId": "NER-FR-C1-CONTROL",
+      "labelText": "“If we marry, I’ll take care of all the planning. You won’t have to make decisions anymore.”",
+      "branch": [
+        { "id": "NER-FR-W01", "speaker": "NERELLE", "expression": "ANNOYED", "text": "“I appreciate help. I have no intention of retiring from having a will of my own.”" },
+        { "id": "NER-FR-W02", "speaker": "PLAYER", "text": "“Trying to spare you the stress, that’s all.”" },
+        { "id": "NER-FR-W03", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Then trust me to tell you when I need help. Ask again when you mean that.”" }
+      ]
+    }
+  ]
+}

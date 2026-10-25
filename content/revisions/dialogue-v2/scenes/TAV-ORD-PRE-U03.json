@@ -1,0 +1,91 @@
+{
+  "sceneId": "TAV-ORD-PRE-U03",
+  "title": "A Herald’s Breathing Exercise",
+  "intro": [
+    {
+      "id": "TAV-ORD-PRE-U03-L01",
+      "speaker": "NARRATOR",
+      "text": "A herald is rehearsing Tavri’s introduction nearby, gulping air between adjectives."
+    },
+    {
+      "id": "TAV-ORD-PRE-U03-L05",
+      "speaker": "HERALD",
+      "text": "“Presenting the illustrious! The indomitable! The magnificent! The incandescent…”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U03-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“He’s been at it for a while. He hasn’t reached my name yet.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U03-L03",
+      "speaker": "PLAYER",
+      "text": "“How long is your name?”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U03-L06",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“Five letters. He’s on adjective thirty-one.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U03-L04",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“Now I’ll have to be indomitable enough to justify the paperwork.”"
+    },
+    {
+      "id": "TAV-ORD-PRE-U03-L07",
+      "speaker": "NARRATOR",
+      "text": "The herald pauses to breathe into a paper bag."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-PRE-U03-C1-YES",
+      "labelText": "“Want me to ask him to just say ‘Tavri’? Save the man a lung.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-U03-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“Just ‘Tavri.’ No adjectives.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U03-R-YES-02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Plain. Terrifying. Go, before he finds a thesaurus.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U03-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "When you ask, the herald sits down on the spot, weak with relief."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-PRE-U03-C1-NO",
+      "labelText": "“He’s missing ‘majestic.’ There’s room before his next breath.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-PRE-U03-R-NO-02",
+          "speaker": "HERALD",
+          "text": "“Majestic! Of course! From the top!”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U03-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Lovely. I’ll be over here, practicing majestic.”"
+        },
+        {
+          "id": "TAV-ORD-PRE-U03-R-NO-03",
+          "speaker": "NARRATOR",
+          "text": "The herald starts again. He still doesn’t reach her name."
+        }
+      ]
+    }
+  ]
+}

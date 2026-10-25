@@ -1,0 +1,37 @@
+{
+  "sceneId": "NER-ORD-PRE-U02",
+  "title": "Bells Underwater",
+  "intro": [
+    { "id": "NER-ORD-PRE-U02-L01", "speaker": "NARRATOR", "text": "A bell rings somewhere above the water. Nerelle ducks under to listen, then surfaces." },
+    { "id": "NER-ORD-PRE-U02-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Underwater, that bell is lower and lasts longer. It sounds as if it means it.”" },
+    { "id": "NER-ORD-PRE-U02-L03", "speaker": "PLAYER", "text": "“What else can you hear down there?”" },
+    { "id": "NER-ORD-PRE-U02-L04", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Mostly boats. Their owners assume that if I am underwater, I cannot complain.”" },
+    { "id": "NER-ORD-PRE-U02-L05", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I can. There is a barge with a squeaking rudder that I have written to three times.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "NER-ORD-PRE-U02-C1-YES",
+      "labelText": "“What does the squeaky barge sound like from down there?”",
+      "branch": [
+        { "id": "NER-ORD-PRE-U02-R-YES-01", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Like a gull being disappointed very slowly.”" },
+        { "id": "NER-ORD-PRE-U02-R-YES-02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Put your ear to the water when it passes. I will provide commentary.”" }
+      ]
+    },
+    {
+      "choiceId": "NER-ORD-PRE-U02-C1-NO",
+      "labelText": "“Couldn’t you swim further out, away from the noise?”",
+      "branch": [
+        { "id": "NER-ORD-PRE-U02-R-NO-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“I could. Then the barge would win.”" },
+        { "id": "NER-ORD-PRE-U02-R-NO-02", "speaker": "NARRATOR", "text": "She does not move a fin’s width. Somewhere upstream, a rudder squeaks, and her eyes narrow." }
+      ]
+    },
+    {
+      "choiceId": "NER-ORD-PRE-U02-C1-OFF",
+      "labelText": "“Maybe they’d listen if you weren’t such an odd fish.”",
+      "branch": [
+        { "id": "NER-ORD-PRE-U02-R-OFF-01", "speaker": "NERELLE", "expression": "ANNOYED", "text": "“I am not a fish. My hearing, however, is excellent.”" },
+        { "id": "NER-ORD-PRE-U02-R-OFF-02", "speaker": "NARRATOR", "text": "She sinks out of sight. She hears the next bell without you." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "sceneId": "TAV-FIN-01",
+  "title": "Shared Confession (first full final marriage scene)",
+  "intro": [
+    {
+      "id": "TAV-FIN-001",
+      "speaker": "NARRATOR",
+      "text": "The conversation winds down to the sound of the fountain. Nobody rushes to fill the quiet."
+    },
+    {
+      "id": "TAV-FIN-002",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Careful. That’s your speech face.”"
+    },
+    {
+      "id": "TAV-FIN-003",
+      "speaker": "PLAYER",
+      "text": "“I did prepare one. It might be a mistake.”"
+    },
+    {
+      "id": "TAV-FIN-004",
+      "speaker": "TAVRI",
+      "expression": "SURPRISED",
+      "text": "“A speech? For me? Is there a handout?”"
+    },
+    {
+      "id": "TAV-FIN-005",
+      "speaker": "PLAYER",
+      "text": "“It has a beginning, three key points and a conclusion.”"
+    },
+    {
+      "id": "TAV-FIN-006",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“My heart trembles before your formatting.”"
+    },
+    {
+      "id": "TAV-FIN-007",
+      "speaker": "NARRATOR",
+      "text": "You unfold the paper. Every tidy sentence on it looks like somewhere to hide."
+    },
+    {
+      "id": "TAV-FIN-008",
+      "speaker": "PLAYER",
+      "text": "“Actually… I don’t want to read it.”"
+    },
+    {
+      "id": "TAV-FIN-009",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“Take your time. Skip the clever bits. I’ve got plenty coming out of my ears.”"
+    },
+    {
+      "id": "TAV-FIN-010",
+      "speaker": "PLAYER",
+      "text": "“I came here trying to become someone who could win a princess.”"
+    },
+    {
+      "id": "TAV-FIN-013",
+      "speaker": "PLAYER",
+      "text": "“You kept showing me I didn’t need a perfect line to care about someone.”"
+    },
+    {
+      "id": "TAV-FIN-011",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“And you showed me someone can stay after the last joke.”"
+    },
+    {
+      "id": "TAV-FIN-012",
+      "speaker": "NARRATOR",
+      "text": "Her tail flicks once. Then she waits."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-FIN-C1-PARTNERS",
+      "labelText": "“I love your clever lines, and the moments you run out of them. Will you marry me, and work out the rest as equals?”",
+      "branch": [
+        {
+          "id": "TAV-FIN-S01",
+          "speaker": "TAVRI",
+          "expression": "SURPRISED",
+          "text": "“That was disastrously unscripted.”"
+        },
+        {
+          "id": "TAV-FIN-S02",
+          "speaker": "PLAYER",
+          "text": "“I know.”"
+        },
+        {
+          "id": "TAV-FIN-S03",
+          "speaker": "TAVRI",
+          "expression": "WORRIED",
+          "text": "“You didn’t promise I’d never be frightened again.”"
+        },
+        {
+          "id": "TAV-FIN-S04",
+          "speaker": "PLAYER",
+          "text": "“I couldn’t promise that honestly.”"
+        },
+        {
+          "id": "TAV-FIN-S05",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Good. I’d have asked for references.”"
+        },
+        {
+          "id": "TAV-FIN-S06",
+          "speaker": "NARRATOR",
+          "text": "She takes your hand."
+        },
+        {
+          "id": "TAV-FIN-S07",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Yes, {PLAYER}. I want this.”"
+        },
+        {
+          "id": "TAV-FIN-S09",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“That’s my whole speech. One point. No conclusion.”"
+        },
+        {
+          "id": "TAV-FIN-S08",
+          "speaker": "NARRATOR",
+          "text": "Your prepared speech slips off the edge of the fountain. Nobody fishes it out."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-FIN-C1-ROLE",
+      "labelText": "“Marry me, and I’ll make sure you’re always everyone’s favorite princess. Nobody will ever be disappointed in you.”",
+      "branch": [
+        {
+          "id": "TAV-FIN-W01",
+          "speaker": "TAVRI",
+          "expression": "WORRIED",
+          "text": "“That’s a lovely-sounding cage.”"
+        },
+        {
+          "id": "TAV-FIN-W02",
+          "speaker": "PLAYER",
+          "text": "“I wanted to make you happy.”"
+        },
+        {
+          "id": "TAV-FIN-W03",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Then listen. I don’t want to be a flawless princess in your care. I want to be a person beside you.”"
+        },
+        {
+          "id": "TAV-FIN-W04",
+          "speaker": "NARRATOR",
+          "text": "She doesn’t walk away. She doesn’t say yes, either."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-FIN-C1-PERFORM",
+      "labelText": "“Say yes and we’ll be the funniest royal couple in history. Imagine the applause.”",
+      "branch": [
+        {
+          "id": "TAV-FIN-P01",
+          "speaker": "TAVRI",
+          "expression": "ANNOYED",
+          "text": "“I can imagine it. I can also imagine us as strangers the minute the curtain falls.”"
+        },
+        {
+          "id": "TAV-FIN-P02",
+          "speaker": "TAVRI",
+          "expression": "WORRIED",
+          "text": "“Ask me because you want a life with me. Not a double act.”"
+        }
+      ]
+    }
+  ]
+}

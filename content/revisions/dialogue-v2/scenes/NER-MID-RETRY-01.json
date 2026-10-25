@@ -1,0 +1,33 @@
+{
+  "sceneId": "NER-MID-RETRY-01",
+  "title": "The Forbidden Journey follow-up (midpoint retry)",
+  "intro": [
+    { "id": "NER-MR-001", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“The route is still on my mind. So is our last conversation about it.”" },
+    { "id": "NER-MR-002", "speaker": "PLAYER", "text": "“Last time, I answered a different question from the one you asked.”" },
+    { "id": "NER-MR-003", "speaker": "NERELLE", "expression": "WORRIED", "text": "“I did not need saving or forbidding.”" },
+    { "id": "NER-MR-005", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“What I need is to know we can make hard decisions together, without one of us vanishing into the other’s plans.”" },
+    { "id": "NER-MR-004", "speaker": "NARRATOR", "text": "The chart is back on its ledge. Every circle is still there." }
+  ],
+  "options": [
+    {
+      "choiceId": "NER-MR-C1-COAUTHOR",
+      "labelText": "“You pick where and when. I’ll help find safe meeting spots, we’re honest about duties and risks, and I won’t decide for you.”",
+      "branch": [
+        { "id": "NER-MR-S01", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Yes. That.”" },
+        { "id": "NER-MR-S02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“You may yet become a capable navigator of discussions. Your knowledge of actual water remains a separate matter.”" },
+        { "id": "NER-MR-S03", "speaker": "PLAYER", "text": "“I know what a boat is.”" },
+        { "id": "NER-MR-S04", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“A promising start.”" },
+        { "id": "NER-MR-S05", "speaker": "NARRATOR", "text": "She picks up the pencil and starts revising the route. You are trusted with holding the stone." }
+      ]
+    },
+    {
+      "choiceId": "NER-MR-C1-DECIDE",
+      "labelText": "“I thought it over. Let me arrange all of it. One less thing for you to worry about.”",
+      "branch": [
+        { "id": "NER-MR-W01", "speaker": "NERELLE", "expression": "ANNOYED", "text": "“You listened with remarkable care and somehow missed the middle of every sentence.”" },
+        { "id": "NER-MR-W02", "speaker": "PLAYER", "text": "“That’s fair.”" },
+        { "id": "NER-MR-W03", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Then next time, start with the middle.”" }
+      ]
+    }
+  ]
+}

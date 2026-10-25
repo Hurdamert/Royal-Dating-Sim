@@ -13,9 +13,24 @@
   "linesRoundTripped": 973,
   "extractsCrossChecked": 77,
   "tavriOverlayDifferences": 4,
+  "revision": {
+    "id": "dialogue-v2",
+    "scenesRevised": 77,
+    "linesBase": 811,
+    "linesRevised": 1125,
+    "lineIdsAdded": 317,
+    "lineIdsRemoved": 3,
+    "supportLinesRevised": 28,
+    "filesSha256": "062b1c2438f054e6fa24d50dc872976f3847037083917109a302c3ebda2c2534",
+    "removedLineIds": [
+      "KAE-FR-005",
+      "KAE-MR-005",
+      "NER-PRE-W02"
+    ]
+  },
   "helpPassages": 14,
   "squareQuips": 12,
   "activities": 8,
   "strings": 26,
-  "contentSha256": "0f6c9fd42ae6d6870ec7cfb2f1b4030bf359ed085b3f773975088a9ed3422a62"
+  "contentSha256": "cc6fb86ce7f8e261383ad314bb4e8e0286551829bab5c913281afc05faffc02f"
 }

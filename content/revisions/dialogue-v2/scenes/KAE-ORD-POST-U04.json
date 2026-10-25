@@ -1,0 +1,37 @@
+{
+  "sceneId": "KAE-ORD-POST-U04",
+  "title": "Acknowledged",
+  "intro": [
+    { "id": "KAE-ORD-POST-U04-L01", "speaker": "NARRATOR", "text": "A passer-by says *thank you, Your Highness* on the way past. Nobody edges toward a pillar." },
+    { "id": "KAE-ORD-POST-U04-L02", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“They said *thank you*. Usually it is *please do not incinerate me*.”" },
+    { "id": "KAE-ORD-POST-U04-L03", "speaker": "PLAYER", "text": "“What did you say back?”" },
+    { "id": "KAE-ORD-POST-U04-L04", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“*Acknowledged.*”" },
+    { "id": "KAE-ORD-POST-U04-L05", "speaker": "KAEDRA", "expression": "WORRIED", "text": "“I panicked.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-ORD-POST-U04-C1-YES",
+      "labelText": "“*Acknowledged* is a start. Want to practice on me?”",
+      "branch": [
+        { "id": "KAE-ORD-POST-U04-R-YES-01", "speaker": "PLAYER", "text": "“Thank you, Your Highness.”" },
+        { "id": "KAE-ORD-POST-U04-R-YES-02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“You are welcome.”" },
+        { "id": "KAE-ORD-POST-U04-R-YES-03", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“That was easier. I could get used to it.”" }
+      ]
+    },
+    {
+      "choiceId": "KAE-ORD-POST-U04-C1-NO",
+      "labelText": "“Honestly, the old way was kind of cool. Nobody messed with you.”",
+      "branch": [
+        { "id": "KAE-ORD-POST-U04-R-NO-01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Very cool. Nobody stopped to talk, either.”" }
+      ]
+    },
+    {
+      "choiceId": "KAE-ORD-POST-U04-C1-OFF",
+      "labelText": "“Enjoy it. Nobody thanks a monster twice.”",
+      "branch": [
+        { "id": "KAE-ORD-POST-U04-R-OFF-01", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“*Acknowledged.*”" },
+        { "id": "KAE-ORD-POST-U04-R-OFF-02", "speaker": "NARRATOR", "text": "She leaves the way the passer-by went." }
+      ]
+    }
+  ]
+}

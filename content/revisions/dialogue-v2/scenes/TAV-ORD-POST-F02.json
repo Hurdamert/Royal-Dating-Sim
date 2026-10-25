@@ -1,0 +1,75 @@
+{
+  "sceneId": "TAV-ORD-POST-F02",
+  "title": "Sensible Shoes",
+  "intro": [
+    {
+      "id": "TAV-ORD-POST-F02-L01",
+      "speaker": "NARRATOR",
+      "text": "Tavri lifts one foot and glares at her shoe."
+    },
+    {
+      "id": "TAV-ORD-POST-F02-L06",
+      "speaker": "NARRATOR",
+      "text": "It has a heel like a nail and a bow the size of a cabbage."
+    },
+    {
+      "id": "TAV-ORD-POST-F02-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“These are marvelous for entrances. Everyone hears me coming.”"
+    },
+    {
+      "id": "TAV-ORD-POST-F02-L05",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“They’re useless for exits. Everyone hears me going.”"
+    },
+    {
+      "id": "TAV-ORD-POST-F02-L03",
+      "speaker": "PLAYER",
+      "text": "“What would you rather wear?”"
+    },
+    {
+      "id": "TAV-ORD-POST-F02-L04",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“Something that can slip out of a dull party. Slippers. Socks. A small cart.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-POST-F02-C1-YES",
+      "labelText": "“Get the slippers. I’ll walk loudly next to you as a decoy.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-F02-R-YES-01",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“A decoy! You’re hired. Royal adviser for practical footwear.”"
+        },
+        {
+          "id": "TAV-ORD-POST-F02-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She’s already untying the cabbage."
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-POST-F02-C1-NO",
+      "labelText": "“But they’re fantastic shoes. Isn’t that worth a bit of hobbling?”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-F02-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“A bit. Yes.”"
+        },
+        {
+          "id": "TAV-ORD-POST-F02-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She sets her foot down with a click. All the way out, everyone hears her going."
+        }
+      ]
+    }
+  ]
+}

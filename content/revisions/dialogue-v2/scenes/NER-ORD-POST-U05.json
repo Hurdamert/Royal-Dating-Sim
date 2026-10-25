@@ -1,0 +1,30 @@
+{
+  "sceneId": "NER-ORD-POST-U05",
+  "title": "A Weather Permit",
+  "intro": [
+    { "id": "NER-ORD-POST-U05-L01", "speaker": "NARRATOR", "text": "An official-looking sheet drifts by. Nerelle fishes it out and reads it, dripping." },
+    { "id": "NER-ORD-POST-U05-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“A surface office has issued a permit for pleasant weather. It has a seal.”" },
+    { "id": "NER-ORD-POST-U05-L03", "speaker": "PLAYER", "text": "“Does the sea council do anything like that?”" },
+    { "id": "NER-ORD-POST-U05-L04", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“We issue warnings, not commands to clouds. It saves embarrassment.”" },
+    { "id": "NER-ORD-POST-U05-L05", "speaker": "NARRATOR", "text": "A single fat raindrop lands on the seal." },
+    { "id": "NER-ORD-POST-U05-L06", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“The clouds have replied.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "NER-ORD-POST-U05-C1-YES",
+      "labelText": "“Want to stamp it ‘Declined by the clouds’ and send it back?”",
+      "branch": [
+        { "id": "NER-ORD-POST-U05-R-YES-01", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Yes. I carry waterproof ink for exactly this.”" },
+        { "id": "NER-ORD-POST-U05-R-YES-02", "speaker": "NARRATOR", "text": "She writes *Declined by the clouds* across the seal, in a hand much neater than the office’s." }
+      ]
+    },
+    {
+      "choiceId": "NER-ORD-POST-U05-C1-NO",
+      "labelText": "“Your council should try one. A permit for one nice day can’t hurt.”",
+      "branch": [
+        { "id": "NER-ORD-POST-U05-R-NO-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“And when the permitted day rains, whom do they blame?”" },
+        { "id": "NER-ORD-POST-U05-R-NO-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“I have no wish to become personally responsible for thunder.”" }
+      ]
+    }
+  ]
+}

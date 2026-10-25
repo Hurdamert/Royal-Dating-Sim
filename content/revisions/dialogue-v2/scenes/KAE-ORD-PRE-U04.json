@@ -1,0 +1,30 @@
+{
+  "sceneId": "KAE-ORD-PRE-U04",
+  "title": "Warm Hands, Cold Rumors",
+  "intro": [
+    { "id": "KAE-ORD-PRE-U04-L01", "speaker": "NARRATOR", "text": "Kaedra warms her hands near a lantern. A passer-by carrying a stack of papers takes the long way around her." },
+    { "id": "KAE-ORD-PRE-U04-L02", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“There is a rumor that I set buildings alight by sneezing.”" },
+    { "id": "KAE-ORD-PRE-U04-L03", "speaker": "PLAYER", "text": "“Is it true?”" },
+    { "id": "KAE-ORD-PRE-U04-L04", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Only if the building is made of exceptionally nervous paper.”" },
+    { "id": "KAE-ORD-PRE-U04-L05", "speaker": "NARRATOR", "text": "Her nose twitches. The man with the papers breaks into a jog." },
+    { "id": "KAE-ORD-PRE-U04-L06", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Dust. I did not even sneeze.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-ORD-PRE-U04-C1-YES",
+      "labelText": "“So what do you want to do about it? I could bring pepper.”",
+      "branch": [
+        { "id": "KAE-ORD-PRE-U04-R-YES-01", "speaker": "KAEDRA", "expression": "SURPRISED", "text": "“Pepper.”" },
+        { "id": "KAE-ORD-PRE-U04-R-YES-02", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“A controlled demonstration. I will draft the procedure. You will keep anyone holding paper well back.”" }
+      ]
+    },
+    {
+      "choiceId": "KAE-ORD-PRE-U04-C1-NO",
+      "labelText": "“Lean into it. Puff a little smoke and nobody will bother you again.”",
+      "branch": [
+        { "id": "KAE-ORD-PRE-U04-R-NO-01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Then the rumor would be accurate, and I would have to sign it.”" },
+        { "id": "KAE-ORD-PRE-U04-R-NO-02", "speaker": "NARRATOR", "text": "She tucks her hands into her sleeves and moves away from the lantern." }
+      ]
+    }
+  ]
+}

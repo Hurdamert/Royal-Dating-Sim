@@ -1,0 +1,30 @@
+{
+  "sceneId": "NER-ORD-POST-F03",
+  "title": "Bridges and Rooftops",
+  "intro": [
+    { "id": "NER-ORD-POST-F03-L01", "speaker": "NARRATOR", "text": "Nerelle rests her chin on her folded arms at the water’s edge and looks across at the far bank." },
+    { "id": "NER-ORD-POST-F03-L02", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“From down here, I can see under every bridge in the kingdom. Someone has carved initials into most of them.”" },
+    { "id": "NER-ORD-POST-F03-L03", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“Several have been crossed out. Surface romance is very well documented from below.”" },
+    { "id": "NER-ORD-POST-F03-L04", "speaker": "PLAYER", "text": "“I can see the rooftops from up here. There’s a cat on one.”" },
+    { "id": "NER-ORD-POST-F03-L05", "speaker": "NERELLE", "expression": "SURPRISED", "text": "“Doing what?”" },
+    { "id": "NER-ORD-POST-F03-L06", "speaker": "PLAYER", "text": "“Supervising.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "NER-ORD-POST-F03-C1-YES",
+      "labelText": "“Trade? Your bridges for my rooftops, every time we meet.”",
+      "branch": [
+        { "id": "NER-ORD-POST-F03-R-YES-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Agreed. I would like that very much.”" },
+        { "id": "NER-ORD-POST-F03-R-YES-02", "speaker": "NERELLE", "expression": "PLAYFUL", "text": "“I will begin with the initials. You may want to sit down.”" }
+      ]
+    },
+    {
+      "choiceId": "NER-ORD-POST-F03-C1-NO",
+      "labelText": "“Honestly, the view’s better up here. I can describe it all for you.”",
+      "branch": [
+        { "id": "NER-ORD-POST-F03-R-NO-01", "speaker": "NERELLE", "expression": "NEUTRAL", "text": "“Wonderful. Describe the initials under the bridge.”" },
+        { "id": "NER-ORD-POST-F03-R-NO-02", "speaker": "NARRATOR", "text": "You cannot. She does not tell you what they say." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "sceneId": "KAE-ORD-POST-U01",
+  "title": "A Letter of Praise",
+  "intro": [
+    { "id": "KAE-ORD-POST-U01-L01", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Apparently I have the courage of a thousand soldiers.”" },
+    { "id": "KAE-ORD-POST-U01-L02", "speaker": "NARRATOR", "text": "She is holding a letter of commendation. Its wax seal is the size of a saucer." },
+    { "id": "KAE-ORD-POST-U01-L03", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“A logistical nightmare. Where would they all sleep?”" },
+    { "id": "KAE-ORD-POST-U01-L04", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“Also the heart of a lion and the eyes of a hawk. I am becoming a menagerie.”" },
+    { "id": "KAE-ORD-POST-U01-L05", "speaker": "PLAYER", "text": "“Does it mention anyone else?”" },
+    { "id": "KAE-ORD-POST-U01-L06", "speaker": "KAEDRA", "expression": "NEUTRAL", "text": "“There were eleven of us. The lion got the credit.”" }
+  ],
+  "options": [
+    {
+      "choiceId": "KAE-ORD-POST-U01-C1-YES",
+      "labelText": "“Write back. Name the other ten. No lions.”",
+      "branch": [
+        { "id": "KAE-ORD-POST-U01-R-YES-01", "speaker": "KAEDRA", "expression": "PLAYFUL", "text": "“No lions. Agreed.”" },
+        { "id": "KAE-ORD-POST-U01-R-YES-02", "speaker": "NARRATOR", "text": "She is already writing. The reply runs to two pages: ten names, and a sentence about each." }
+      ]
+    },
+    {
+      "choiceId": "KAE-ORD-POST-U01-C1-NO",
+      "labelText": "“Frame it. Seriously. People should see this.”",
+      "branch": [
+        { "id": "KAE-ORD-POST-U01-R-NO-01", "speaker": "KAEDRA", "expression": "ANNOYED", "text": "“Framed. Above the ten people it forgot.”" },
+        { "id": "KAE-ORD-POST-U01-R-NO-02", "speaker": "NARRATOR", "text": "She folds the letter around its enormous seal and puts it away." }
+      ]
+    }
+  ]
+}

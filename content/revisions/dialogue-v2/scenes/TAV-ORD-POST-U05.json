@@ -1,0 +1,75 @@
+{
+  "sceneId": "TAV-ORD-POST-U05",
+  "title": "Weather Without Metaphors",
+  "intro": [
+    {
+      "id": "TAV-ORD-POST-U05-L01",
+      "speaker": "NARRATOR",
+      "text": "A breeze picks up. Tavri lifts her chin, ready to say something grand about it."
+    },
+    {
+      "id": "TAV-ORD-POST-U05-L02",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“The wind, like the ambitions of kings, is restless and—”"
+    },
+    {
+      "id": "TAV-ORD-POST-U05-L04",
+      "speaker": "TAVRI",
+      "expression": "NEUTRAL",
+      "text": "“No. It’s wind. It’s nice.”"
+    },
+    {
+      "id": "TAV-ORD-POST-U05-L05",
+      "speaker": "NARRATOR",
+      "text": "She looks delighted with herself. Her tail is enjoying the wind enormously."
+    },
+    {
+      "id": "TAV-ORD-POST-U05-L03",
+      "speaker": "PLAYER",
+      "text": "“What about the kings?”"
+    },
+    {
+      "id": "TAV-ORD-POST-U05-L06",
+      "speaker": "TAVRI",
+      "expression": "PLAYFUL",
+      "text": "“The kings can get their own wind.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "TAV-ORD-POST-U05-C1-YES",
+      "labelText": "“It *is* nice. Let’s stand in it for a bit.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U05-R-YES-01",
+          "speaker": "NARRATOR",
+          "text": "You stand in it. It is, as reported, nice."
+        },
+        {
+          "id": "TAV-ORD-POST-U05-R-YES-02",
+          "speaker": "TAVRI",
+          "expression": "PLAYFUL",
+          "text": "“Don’t tell the kings.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "TAV-ORD-POST-U05-C1-NO",
+      "labelText": "“No, finish it! ‘Restless and’ what? That was going somewhere.”",
+      "branch": [
+        {
+          "id": "TAV-ORD-POST-U05-R-NO-01",
+          "speaker": "TAVRI",
+          "expression": "NEUTRAL",
+          "text": "“Restless and… fine.”"
+        },
+        {
+          "id": "TAV-ORD-POST-U05-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She finishes the metaphor. It’s lovely. By then, the wind has moved on."
+        }
+      ]
+    }
+  ]
+}
