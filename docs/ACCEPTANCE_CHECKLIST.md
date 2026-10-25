@@ -38,15 +38,15 @@ Legend: **Auto ✔** = automated test executed and passing in the authoring envi
 | ID | Evidence | Status |
 |---|---|---|
 | F01 | `content.test.ts` (28 hashes, kinds); `art:check` | Auto ✔ |
-| F02 | `content.test.ts`; `content:check` (compiler round trip from frozen archives) | Auto ✔ |
+| F02 | `content.test.ts`; `content:check` (compiler round trip from frozen archives; independent parse of all 77 readable extracts). Runtime text is the owner's 2026-10-25 revision; the compiler and a unit test hold every ID, choice order, outcome and heart value to the base | Auto ✔ · **Owner** review of revised text |
 | F03 | `content.test.ts` (exactly four approved replacements) | Auto ✔ |
-| F04 | `presentation.test.ts` (geometry) + E2E at 1280×850 and 320×740 + screenshots | Auto ✔ · **Owner** visual sign-off |
-| F05 | Approved sprites only, one per expression; no protagonist sprite; CG male figure appears only inside the approved CG | **Owner** |
+| F04 | `presentation.test.ts` (geometry, water pixels under the waterline, sprite transparent below the cut) + E2E at 1280×850 and 320×740, including a slowed background load + screenshots | Auto ✔ · **Owner** visual sign-off |
+| F05 | One portrait per expression, each an all-ages edit of the approved sprite (owner revision): clothing repainted, Kaedra recoloured; horns, wings, tails, ears and fins unchanged (`presentation.test.ts` art policy; `art:check` hashes). No protagonist sprite; CG male figure appears only inside the approved CG | **Owner** |
 | F06 | E2E at 320×740 and 640×425 (200 % zoom of 1280×850): no horizontal overflow on title, new run, all 7 hub locations, dialogue, choices, calendar, journal, help, save | Auto ✔ |
 | F07 | E2E keyboard-only flow (Tab/Enter/Space/Arrow/Escape, focus return); modal focus trap; live region for dialogue lines | Auto ✔ · **Owner** screen-reader pass |
 | F08 | E2E: no external requests; play continues offline after load | Auto ✔ |
 | F09 | Font fetch script + OFL notices; fallbacks used until fetched; gold never used as body text (contrast test) | CI (fonts) · **Owner** once fonts render |
-| F10 | E2E: every image has alt or is decorative; buttons named; landmarks | Auto ✔ |
+| F10 | E2E: every image has alt or is decorative; buttons named; landmarks. Character art is the owner-requested edit of the approved originals, recorded with both hashes | Auto ✔ |
 
 ## G. Witnesses
 All six reproduced exactly through the real engine (`witnesses.test.ts`); see the report's §5. | Auto ✔
@@ -61,3 +61,13 @@ All six reproduced exactly through the real engine (`witnesses.test.ts`); see th
 | Source hashes, licenses, offline assumptions | ✔ |
 | Cloudflare Pages static deploy smoke test | **Owner**, after approval ([DEPLOY.md](DEPLOY.md)) |
 | Release build, source repo, lockfile | build ✔ (esbuild here, Vite in CI) · lockfile **after first `npm install`** |
+
+## Owner revision (2026-10-25)
+| Item | Evidence | Status |
+|---|---|---|
+| Dialogue rewrite: words only, mechanics unchanged | `content:check`; `content.test.ts` "owner revision changes words only…"; `docs/writing/DIALOGUE_REVISION_COMPARISON.md` | Auto ✔ · **Owner** read-through |
+| First-run tutorial: goal, time, finding her, talking, training, saving | E2E keyboard flow and tutorial test (desktop and 320 px, route-specific places and stats); `docs/screenshots/*tutorial*` | Auto ✔ · **Owner** |
+| All-ages art; Kaedra ash-silver hair, violet eyes | art policy unit test; `art:check`; screenshots | Auto ✔ · **Owner** visual sign-off |
+| Distinct face structures | Needs new artwork: `docs/art/CHARACTER_REDESIGN_BRIEF.md` | **Owner** (commission) |
+| Choice order (correct answer listed first in all 72 menus) | report §7 | **Owner decision** |
+

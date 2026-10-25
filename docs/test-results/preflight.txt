@@ -1,12 +1,12 @@
 == verify-sources
 Source integrity OK: 8/8 archives and 28/28 art originals match recorded SHA-256.
 == content:check
-Content check OK: {"scenes":77,"byKind":{"shared":2,"ordinary":54,"optional":6,"midpoint":3,"midpoint_retry":3,"marriage":3,"marriage_retry":3,"epilogue":3},"linesRoundTripped":973,"extractsCrossChecked":77,"tavriOverlayDifferences":4,"helpPassages":14,"squareQuips":12,"activities":8,"strings":26,"contentSha256":"0f6c9fd42ae6d6870ec7cfb2f1b4030bf359ed085b3f773975088a9ed3422a62"}
+Content check OK: {"scenes":77,"byKind":{"shared":2,"ordinary":54,"optional":6,"midpoint":3,"midpoint_retry":3,"marriage":3,"marriage_retry":3,"epilogue":3},"linesRoundTripped":973,"extractsCrossChecked":77,"tavriOverlayDifferences":4,"revision":{"id":"dialogue-v2","scenesRevised":77,"linesBase":811,"linesRevised":1129,"lineIdsAdded":323,"lineIdsRemoved":5,"supportLinesRevised":28,"filesSha256":"d1330d3a27f10d174762284a49e53f4aed9f48dca244ed7734e08f529d54576e","removedLineIds":["KAE-FR-005","KAE-MID-S09","KAE-MR-005","KAE-POST-S05","NER-PRE-W02"]},"helpPassages":14,"squareQuips":12,"activities":8,"strings":26,"contentSha256":"dde36a8c94275d1a3f968875e9fed69f612bb893fa98f1ce17f784fbc0284cae"}
 == art:check
-Art check OK: 28/28 derived copies verified against originals.
+Art check OK: 25 shipped copies verified against their originals (and all-ages edits); reference sheets not shipped.
 == typecheck: scripts, tests, core, content, persistence (strict; real @types/node)
 OK
 == typecheck: UI (strict; LOCAL minimal React shim, NOT the real @types/react — see report)
 OK
 == build (esbuild fallback; Vite not installable here)
-Built dist-esbuild/: app-YOHFRQ5R.js, app-2N4XCMWT.css (2240 KiB of JS/CSS incl. source maps)
+Built dist-esbuild/: app-2OQJVYJO.js, app-S4DHCYXX.css (2404 KiB of JS/CSS incl. source maps)

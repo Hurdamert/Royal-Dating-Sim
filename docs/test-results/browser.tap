@@ -1,163 +1,203 @@
+
+> royal-exceptions@1.0.0 test:browser
+> node --test --test-concurrency=1 tests/browser/*.test.mjs
+
 TAP version 13
-# Built site/: app-ZWNX6IVH.js, app-RINEU3GT.css (2240 KiB of JS/CSS incl. source maps)
+# Built site/: app-JGUSAFVQ.js, app-EGYJBPCB.css (2404 KiB of JS/CSS incl. source maps)
 # Subtest: End-to-end (built site, Chromium)
     # Subtest: F07 keyboard only: new game → train → meet → choose → saved → reload → restart
     ok 1 - F07 keyboard only: new game → train → meet → choose → saved → reload → restart
       ---
-      duration_ms: 1195.583627
+      duration_ms: 1478.151869
       type: 'test'
       ...
     # Subtest: F04 Nerelle is waterborne at screen-right in the Gardens canal and at the Quay (1280×850 and 320×740)
     ok 2 - F04 Nerelle is waterborne at screen-right in the Gardens canal and at the Quay (1280×850 and 320×740)
       ---
-      duration_ms: 5672.330554
+      duration_ms: 6610.03833
+      type: 'test'
+      ...
+    # Subtest: Tutorial: six cards fit at 320px and on desktop, and every card names the route's own details
+    ok 3 - Tutorial: six cards fit at 320px and on desktop, and every card names the route's own details
+      ---
+      duration_ms: 3042.007921
       type: 'test'
       ...
     # Subtest: F06 320px and 200% zoom: no horizontal overflow, ≥16px dialogue, ≥44px choices, on every main screen
-    ok 3 - F06 320px and 200% zoom: no horizontal overflow, ≥16px dialogue, ≥44px choices, on every main screen
+    ok 4 - F06 320px and 200% zoom: no horizontal overflow, ≥16px dialogue, ≥44px choices, on every main screen
       ---
-      duration_ms: 4855.056937
+      duration_ms: 5504.050703
       type: 'test'
       ...
     # Subtest: E03 (UI) refresh mid-conversation offers to resume the same conversation, with nothing awarded
-    ok 4 - E03 (UI) refresh mid-conversation offers to resume the same conversation, with nothing awarded
+    ok 5 - E03 (UI) refresh mid-conversation offers to resume the same conversation, with nothing awarded
       ---
-      duration_ms: 1910.537872
+      duration_ms: 2180.724474
+      type: 'test'
+      ...
+    # Subtest: (review fix) an unfinished conversation blocks other actions until it is resumed or left; leaving costs nothing
+    ok 6 - (review fix) an unfinished conversation blocks other actions until it is resumed or left; leaving costs nothing
+      ---
+      duration_ms: 1899.135923
+      type: 'test'
+      ...
+    # Subtest: (review fix) a picture that fails to load shows a labelled placeholder with ERR_ASSET_LOAD, and play continues
+    ok 7 - (review fix) a picture that fails to load shows a labelled placeholder with ERR_ASSET_LOAD, and play continues
+      ---
+      duration_ms: 1173.247485
       type: 'test'
       ...
     # Subtest: E05 (UI) a second tab is read-only with actions disabled
-    ok 5 - E05 (UI) a second tab is read-only with actions disabled
+    ok 8 - E05 (UI) a second tab is read-only with actions disabled
       ---
-      duration_ms: 1450.531652
+      duration_ms: 1780.47965
       type: 'test'
       ...
     # Subtest: C/D (UI) a perfect Tavri route wins, the midpoint shows its CG, the epilogue plays and the gallery unlocks
-    ok 6 - C/D (UI) a perfect Tavri route wins, the midpoint shows its CG, the epilogue plays and the gallery unlocks
+    ok 9 - C/D (UI) a perfect Tavri route wins, the midpoint shows its CG, the epilogue plays and the gallery unlocks
       ---
-      duration_ms: 12557.980852
+      duration_ms: 15844.20484
       type: 'test'
       ...
     # Subtest: D06/E11 (UI) Day 28 evening ends the run with CORE-FAIL-01; journal stays readable; restart needs confirmation
-    ok 7 - D06/E11 (UI) Day 28 evening ends the run with CORE-FAIL-01; journal stays readable; restart needs confirmation
+    ok 10 - D06/E11 (UI) Day 28 evening ends the run with CORE-FAIL-01; journal stays readable; restart needs confirmation
       ---
-      duration_ms: 7233.777176
+      duration_ms: 7896.080358
       type: 'test'
       ...
     # Subtest: E07/E09 (UI) export a backup, import it in a fresh browser with preview and explicit confirmation
-    ok 8 - E07/E09 (UI) export a backup, import it in a fresh browser with preview and explicit confirmation
+    ok 11 - E07/E09 (UI) export a backup, import it in a fresh browser with preview and explicit confirmation
       ---
-      duration_ms: 1616.862179
+      duration_ms: 1883.670933
       type: 'test'
       ...
     # Subtest: F08 runtime makes no external network requests and keeps playing offline after load
-    ok 9 - F08 runtime makes no external network requests and keeps playing offline after load
+    ok 12 - F08 runtime makes no external network requests and keeps playing offline after load
       ---
-      duration_ms: 1380.512288
+      duration_ms: 1769.291073
       type: 'test'
       ...
     # Subtest: F10 accessibility basics: every image has alt (or is decorative), buttons are named, landmarks exist, focus is visible
-    ok 10 - F10 accessibility basics: every image has alt (or is decorative), buttons are named, landmarks exist, focus is visible
+    ok 13 - F10 accessibility basics: every image has alt (or is decorative), buttons are named, landmarks exist, focus is visible
       ---
-      duration_ms: 1447.399384
+      duration_ms: 1530.386517
       type: 'test'
       ...
     # Subtest: screenshots for owner review: title, new run, hub, Tavri and Kaedra scenes on desktop and 320px
-    ok 11 - screenshots for owner review: title, new run, hub, Tavri and Kaedra scenes on desktop and 320px
+    ok 14 - screenshots for owner review: title, new run, hub, Tavri and Kaedra scenes on desktop and 320px
       ---
-      duration_ms: 6309.520778
+      duration_ms: 7483.860595
       type: 'test'
       ...
-    1..11
+    1..14
 ok 1 - End-to-end (built site, Chromium)
   ---
-  duration_ms: 45715.832912
+  duration_ms: 60177.292823
   type: 'suite'
   ...
 # Subtest: E. Persistence in a real browser
     # Subtest: E01 every action is one transaction: revision+1, one journal record, previous_good = prior state
     ok 1 - E01 every action is one transaction: revision+1, one journal record, previous_good = prior state
       ---
-      duration_ms: 209.068266
+      duration_ms: 272.097929
       type: 'test'
       ...
     # Subtest: E02 forced abort mid-commit leaves active, previous_good, gallery, revision untouched; user sees error
     ok 2 - E02 forced abort mid-commit leaves active, previous_good, gallery, revision untouched; user sees error
       ---
-      duration_ms: 172.110005
+      duration_ms: 224.119543
       type: 'test'
       ...
     # Subtest: E03 refresh at intro/choice/branch/linked stage resumes the same draft; after commit there is no draft and no double award
     ok 3 - E03 refresh at intro/choice/branch/linked stage resumes the same draft; after commit there is no draft and no double award
       ---
-      duration_ms: 964.831147
+      duration_ms: 1186.732428
       type: 'test'
       ...
     # Subtest: E03 a draft from an older revision is discarded with ERR_DRAFT_CONFLICT, at no cost
     ok 4 - E03 a draft from an older revision is discarded with ERR_DRAFT_CONFLICT, at no cost
       ---
-      duration_ms: 184.727006
+      duration_ms: 223.355129
       type: 'test'
       ...
     # Subtest: E04 double-click / rapid retry of the same actionId awards once
     ok 5 - E04 double-click / rapid retry of the same actionId awards once
       ---
-      duration_ms: 150.320361
+      duration_ms: 186.150104
       type: 'test'
       ...
     # Subtest: E05 second tab is read-only; it cannot commit; takeover after writer closes reloads newest revision
     ok 6 - E05 second tab is read-only; it cannot commit; takeover after writer closes reloads newest revision
       ---
-      duration_ms: 320.103244
+      duration_ms: 367.575736
       type: 'test'
       ...
     # Subtest: E06 Web Locks unsupported → read-only; IndexedDB unavailable → no writable play
     ok 7 - E06 Web Locks unsupported → read-only; IndexedDB unavailable → no writable play
       ---
-      duration_ms: 246.647808
+      duration_ms: 321.264754
       type: 'test'
       ...
     # Subtest: E07/E09/D07 export → import round trip; preview/cancel changes nothing; confirm keeps previous_good and unions gallery
     ok 8 - E07/E09/D07 export → import round trip; preview/cancel changes nothing; confirm keeps previous_good and unions gallery
       ---
-      duration_ms: 319.826858
+      duration_ms: 443.689656
       type: 'test'
       ...
     # Subtest: E08 invalid imports are rejected without touching a healthy run
     ok 9 - E08 invalid imports are rejected without touching a healthy run
       ---
-      duration_ms: 169.022286
+      duration_ms: 220.52631
       type: 'test'
       ...
     # Subtest: E10 corrupt active + valid previous_good → recovery view; restore needs explicit call; gallery survives
     ok 10 - E10 corrupt active + valid previous_good → recovery view; restore needs explicit call; gallery survives
       ---
-      duration_ms: 181.761764
+      duration_ms: 210.610192
+      type: 'test'
+      ...
+    # Subtest: E10 (review fix) a new run started from recovery never replaces the good snapshot with the damaged save
+    ok 11 - E10 (review fix) a new run started from recovery never replaces the good snapshot with the damaged save
+      ---
+      duration_ms: 194.752724
+      type: 'test'
+      ...
+    # Subtest: E09 (review fix) "replace my endings" keeps the ending of a won run that stays active, so its backup still imports
+    ok 12 - E09 (review fix) "replace my endings" keeps the ending of a won run that stays active, so its backup still imports
+      ---
+      duration_ms: 341.571745
+      type: 'test'
+      ...
+    # Subtest: D07 (review fix) a damaged gallery record keeps its valid endings and warns; play continues
+    ok 13 - D07 (review fix) a damaged gallery record keeps its valid endings and warns; play continues
+      ---
+      duration_ms: 188.667805
       type: 'test'
       ...
     # Subtest: E11/D07 failed run stays readable until a new run is explicitly started; gallery persists across new runs
-    ok 11 - E11/D07 failed run stays readable until a new run is explicitly started; gallery persists across new runs
+    ok 14 - E11/D07 failed run stays readable until a new run is explicitly started; gallery persists across new runs
       ---
-      duration_ms: 303.136482
+      duration_ms: 399.926183
       type: 'test'
       ...
     # Subtest: D02/D07 a won run unlocks its gallery entry in the same transaction
-    ok 12 - D02/D07 a won run unlocks its gallery entry in the same transaction
+    ok 15 - D02/D07 a won run unlocks its gallery entry in the same transaction
       ---
-      duration_ms: 195.550657
+      duration_ms: 241.946082
       type: 'test'
       ...
-    1..12
+    1..15
 ok 2 - E. Persistence in a real browser
   ---
-  duration_ms: 3552.765274
+  duration_ms: 5173.527087
   type: 'suite'
   ...
 1..2
-# tests 23
+# tests 29
 # suites 2
-# pass 23
+# pass 29
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 50549.413273
+# duration_ms 66815.845065

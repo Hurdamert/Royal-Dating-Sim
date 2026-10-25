@@ -4,6 +4,8 @@ import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
 import { buildBackup, parseBackup, backupDigest, MAX_IMPORT_BYTES } from '../../src/persistence/backup.ts';
 import { canonicalJson } from '../../src/persistence/canonical.ts';
+import { MIGRATIONS, migrateToCurrent, type Migration } from '../../src/persistence/migrations.ts';
+import { SCHEMA_VERSION } from '../../src/core/model.ts';
 import { checkDraft, type EncounterDraft } from '../../src/persistence/draft.ts';
 import { encounterAvailability } from '../../src/core/engine.ts';
 import { meetingLocation } from '../../src/core/schedule.ts';
@@ -142,5 +144,33 @@ describe('E03 draft staleness rules', () => {
     assert.deepEqual(checkDraft({ ...d, stage: 'nonsense' }, s), { status: 'stale', reason: 'malformed' });
     const after = meet(s, 'ordinary', 'correct');
     assert.equal(checkDraft(d, after).status, 'stale');
+  });
+});
+
+describe('Schema migrations (review fix: imports go through a migration registry)', () => {
+  test('a current-version document passes through unchanged; newer or malformed versions are refused, never coerced', () => {
+    const doc = { schemaVersion: SCHEMA_VERSION, x: 1 };
+    assert.deepEqual(migrateToCurrent(doc), { ok: true, doc, from: SCHEMA_VERSION });
+    const future = migrateToCurrent({ schemaVersion: SCHEMA_VERSION + 1 });
+    assert.equal(future.ok, false);
+    assert.equal(!future.ok && future.reason, 'future');
+    for (const bad of [0, -1, 1.5, '1', null, undefined]) assert.equal(migrateToCurrent({ schemaVersion: bad }).ok, false, String(bad));
+  });
+
+  test('an older document is upgraded one step at a time; a missing or faulty step refuses the import', () => {
+    const reg: Record<number, Migration> = {
+      1: (d) => ({ ...d, schemaVersion: 2, a: true }),
+      2: (d) => ({ ...d, schemaVersion: 3, b: true }),
+    };
+    assert.deepEqual(migrateToCurrent({ schemaVersion: 1 }, reg, 3), { ok: true, doc: { schemaVersion: 3, a: true, b: true }, from: 1 });
+    const input = { schemaVersion: 1 };
+    migrateToCurrent(input, reg, 3);
+    assert.deepEqual(input, { schemaVersion: 1 }, 'the caller’s document is not mutated');
+    const missing = migrateToCurrent({ schemaVersion: 1 }, { 2: reg[2]! }, 3);
+    assert.equal(!missing.ok && missing.reason, 'unsupported');
+    const noBump = migrateToCurrent({ schemaVersion: 1 }, { 1: (d) => ({ ...d }), 2: reg[2]! }, 3);
+    assert.equal(!noBump.ok && noBump.reason, 'invalid');
+    assert.equal(Object.keys(MIGRATIONS).length, 0, 'only schema version 1 exists today');
+    assert.ok(Object.isFrozen(MIGRATIONS));
   });
 });

@@ -14,7 +14,7 @@ export const MIGRATIONS: Readonly<Record<number, Migration>> = Object.freeze({})
 
 export type MigrationResult = { ok: true; doc: Record<string, unknown>; from: number } | { ok: false; reason: 'future' | 'unsupported' | 'invalid'; version: unknown };
 
-export function migrateToCurrent(doc: Record<string, unknown>, registry: Readonly<Record<number, Migration>> = MIGRATIONS, current = SCHEMA_VERSION): MigrationResult {
+export function migrateToCurrent(doc: Record<string, unknown>, registry: Readonly<Record<number, Migration>> = MIGRATIONS, current: number = SCHEMA_VERSION): MigrationResult {
   const v = doc.schemaVersion;
   if (typeof v !== 'number' || !Number.isInteger(v) || v < 1) return { ok: false, reason: 'invalid', version: v };
   if (v > current) return { ok: false, reason: 'future', version: v };

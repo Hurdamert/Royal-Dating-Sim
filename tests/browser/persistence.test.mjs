@@ -352,6 +352,26 @@ describe('E. Persistence in a real browser', () => {
     await c.close();
   });
 
+  test('D07 (review fix) a damaged gallery record keeps its valid endings and warns; play continues', async () => {
+    const c = await ctx();
+    const p = await sessionPage(c);
+    const out = await p.evaluate(async () => {
+      await window.S.startNewRun('KAE', 'Lee');
+      // Unknown entries and a wrong schema version make the record invalid as a whole.
+      await window.S.database.writeRawForTest('gallery', { schemaVersion: 99, completed: ['TAV', 'XXX', 7, 'NER'] });
+      await window.S.reload();
+      const s = window.S.getSnapshot();
+      const rest = await window.S.commit(window.RE.restAction());
+      return { phase: s.phase, gallery: s.gallery, warned: Array.isArray(s.galleryWarning) && s.galleryWarning.length > 0, restOk: rest.ok, after: window.S.getSnapshot().gallery };
+    });
+    assert.equal(out.phase, 'ready', 'the run itself is unaffected');
+    assert.deepEqual(out.gallery, ['TAV', 'NER'], 'valid endings salvaged, junk dropped');
+    assert.equal(out.warned, true);
+    assert.equal(out.restOk, true);
+    assert.deepEqual(out.after, ['TAV', 'NER']);
+    await c.close();
+  });
+
   test('E11/D07 failed run stays readable until a new run is explicitly started; gallery persists across new runs', async () => {
     const c = await ctx();
     const p = await sessionPage(c);

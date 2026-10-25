@@ -3,706 +3,761 @@ TAP version 13
     # Subtest: canonical JSON sorts keys recursively and keeps array order
     ok 1 - canonical JSON sorts keys recursively and keeps array order
       ---
-      duration_ms: 1.303947
+      duration_ms: 1.780184
       type: 'test'
       ...
     # Subtest: digest excludes exportedAt/integrity and is reproducible
     ok 2 - digest excludes exportedAt/integrity and is reproducible
       ---
-      duration_ms: 35.908757
+      duration_ms: 34.394111
       type: 'test'
       ...
     # Subtest: E07 round-trip preserves run, hearts, partial stats, cursors, flags, gallery, journal
     ok 3 - E07 round-trip preserves run, hearts, partial stats, cursors, flags, gallery, journal
       ---
-      duration_ms: 84.505333
+      duration_ms: 63.507403
       type: 'test'
       ...
     # Subtest: E08 rejects not JSON with ERR_IMPORT_FORMAT
     ok 4 - E08 rejects not JSON with ERR_IMPORT_FORMAT
       ---
-      duration_ms: 0.538625
+      duration_ms: 0.460851
       type: 'test'
       ...
     # Subtest: E08 rejects oversize with ERR_IMPORT_FORMAT
     ok 5 - E08 rejects oversize with ERR_IMPORT_FORMAT
       ---
-      duration_ms: 10.646012
+      duration_ms: 9.379135
       type: 'test'
       ...
     # Subtest: E08 rejects array top level with ERR_IMPORT_FORMAT
     ok 6 - E08 rejects array top level with ERR_IMPORT_FORMAT
       ---
-      duration_ms: 0.391726
+      duration_ms: 1.098195
       type: 'test'
       ...
     # Subtest: E08 rejects unknown top-level field with ERR_IMPORT_FORMAT
     ok 7 - E08 rejects unknown top-level field with ERR_IMPORT_FORMAT
       ---
-      duration_ms: 3.244061
+      duration_ms: 2.879865
       type: 'test'
       ...
     # Subtest: E08 rejects wrong format with ERR_IMPORT_FORMAT
     ok 8 - E08 rejects wrong format with ERR_IMPORT_FORMAT
       ---
-      duration_ms: 9.680217
+      duration_ms: 1.243956
       type: 'test'
       ...
     # Subtest: E08 rejects future schema with ERR_IMPORT_VERSION
     ok 9 - E08 rejects future schema with ERR_IMPORT_VERSION
       ---
-      duration_ms: 10.579263
+      duration_ms: 1.062651
       type: 'test'
       ...
     # Subtest: E08 rejects schema 0 with ERR_IMPORT_VERSION
     ok 10 - E08 rejects schema 0 with ERR_IMPORT_VERSION
       ---
-      duration_ms: 2.231374
+      duration_ms: 1.200233
       type: 'test'
       ...
     # Subtest: E08 rejects __proto__ key with ERR_IMPORT_FORMAT
     ok 11 - E08 rejects __proto__ key with ERR_IMPORT_FORMAT
       ---
-      duration_ms: 1.880904
+      duration_ms: 2.550489
       type: 'test'
       ...
     # Subtest: E08 rejects constructor key nested with ERR_IMPORT_FORMAT
     ok 12 - E08 rejects constructor key nested with ERR_IMPORT_FORMAT
       ---
-      duration_ms: 1.272726
+      duration_ms: 0.91007
       type: 'test'
       ...
     # Subtest: E08 rejects too deep with ERR_IMPORT_FORMAT
     ok 13 - E08 rejects too deep with ERR_IMPORT_FORMAT
       ---
-      duration_ms: 1.218246
+      duration_ms: 0.905439
       type: 'test'
       ...
     # Subtest: E08 rejects infinite number with ERR_IMPORT_FORMAT
     ok 14 - E08 rejects infinite number with ERR_IMPORT_FORMAT
       ---
-      duration_ms: 1.612123
+      duration_ms: 1.090463
       type: 'test'
       ...
     # Subtest: E08 rejects digest tampered with ERR_IMPORT_DIGEST
     ok 15 - E08 rejects digest tampered with ERR_IMPORT_DIGEST
       ---
-      duration_ms: 1.330336
+      duration_ms: 3.366128
       type: 'test'
       ...
     # Subtest: E08 rejects content edited after export with ERR_IMPORT_DIGEST
     ok 16 - E08 rejects content edited after export with ERR_IMPORT_DIGEST
       ---
-      duration_ms: 3.833121
+      duration_ms: 2.249289
       type: 'test'
       ...
     # Subtest: E08 rejects impossible state resealed with ERR_IMPORT_STATE
     ok 17 - E08 rejects impossible state resealed with ERR_IMPORT_STATE
       ---
-      duration_ms: 1.869889
+      duration_ms: 3.316993
       type: 'test'
       ...
     # Subtest: E08 rejects journal too long with ERR_IMPORT_STATE
     ok 18 - E08 rejects journal too long with ERR_IMPORT_STATE
       ---
-      duration_ms: 6.444986
+      duration_ms: 10.771449
       type: 'test'
       ...
     # Subtest: E08 rejects invalid gallery with ERR_IMPORT_STATE
     ok 19 - E08 rejects invalid gallery with ERR_IMPORT_STATE
       ---
-      duration_ms: 8.752651
+      duration_ms: 3.956481
       type: 'test'
       ...
     # Subtest: E08 rejects won run missing from gallery with ERR_IMPORT_STATE
     ok 20 - E08 rejects won run missing from gallery with ERR_IMPORT_STATE
       ---
-      duration_ms: 26.765704
+      duration_ms: 21.521897
       type: 'test'
       ...
     1..20
 ok 1 - E. Backup format
   ---
-  duration_ms: 218.650625
+  duration_ms: 170.953315
   type: 'suite'
   ...
 # Subtest: E03 draft staleness rules
     # Subtest: draft is resumable only at its own revision/slot and while still offered
     ok 1 - draft is resumable only at its own revision/slot and while still offered
       ---
-      duration_ms: 0.957906
+      duration_ms: 0.869927
       type: 'test'
       ...
     1..1
 ok 2 - E03 draft staleness rules
   ---
-  duration_ms: 1.1573
+  duration_ms: 1.215093
+  type: 'suite'
+  ...
+# Subtest: Schema migrations (review fix: imports go through a migration registry)
+    # Subtest: a current-version document passes through unchanged; newer or malformed versions are refused, never coerced
+    ok 1 - a current-version document passes through unchanged; newer or malformed versions are refused, never coerced
+      ---
+      duration_ms: 0.611762
+      type: 'test'
+      ...
+    # Subtest: an older document is upgraded one step at a time; a missing or faulty step refuses the import
+    ok 2 - an older document is upgraded one step at a time; a missing or faulty step refuses the import
+      ---
+      duration_ms: 0.415035
+      type: 'test'
+      ...
+    1..2
+ok 3 - Schema migrations (review fix: imports go through a migration registry)
+  ---
+  duration_ms: 1.189056
   type: 'suite'
   ...
 # Subtest: F. Content and sources
     # Subtest: F01 28 art originals match manifest hashes (7 BG, 15 sprites, 3 CG, 3 sheets); 7 locations, no canal node
     ok 1 - F01 28 art originals match manifest hashes (7 BG, 15 sprites, 3 CG, 3 sheets); 7 locations, no canal node
       ---
-      duration_ms: 266.302342
+      duration_ms: 314.615799
       type: 'test'
       ...
     # Subtest: F02 77 scenes: 21 pivotal, 2 shared, 54 ordinary; IDs globally unique
     ok 2 - F02 77 scenes: 21 pivotal, 2 shared, 54 ordinary; IDs globally unique
       ---
-      duration_ms: 4.435152
+      duration_ms: 3.950243
       type: 'test'
       ...
     # Subtest: F02 checked-in content table is exactly what the compiler produces from the frozen archives
     ok 3 - F02 checked-in content table is exactly what the compiler produces from the frozen archives
       ---
-      duration_ms: 499.822594
+      duration_ms: 541.429853
       type: 'test'
       ...
-    # Subtest: F03 Tavri effective comedy scene has exactly the four approved replacements
-    ok 4 - F03 Tavri effective comedy scene has exactly the four approved replacements
+    # Subtest: F02 independent parse: the readable canon scene sections match the compiled base text line for line
+    ok 4 - F02 independent parse: the readable canon scene sections match the compiled base text line for line
       ---
-      duration_ms: 0.389997
+      duration_ms: 6.301879
+      type: 'test'
+      ...
+    # Subtest: F03 Tavri effective base text has exactly the four approved replacements
+    ok 5 - F03 Tavri effective base text has exactly the four approved replacements
+      ---
+      duration_ms: 0.456305
+      type: 'test'
+      ...
+    # Subtest: owner revision changes words only: scenes, choice points, options, outcomes and heart values equal the frozen base
+    ok 6 - owner revision changes words only: scenes, choice points, options, outcomes and heart values equal the frozen base
+      ---
+      duration_ms: 1.408938
+      type: 'test'
+      ...
+    # Subtest: every scene line ID is globally unique and princess lines use only the route princess
+    ok 7 - every scene line ID is globally unique and princess lines use only the route princess
+      ---
+      duration_ms: 1.51849
+      type: 'test'
+      ...
+    # Subtest: epilogue location cue lines still exist (staging switches to the Royal Gardens at these IDs)
+    ok 8 - epilogue location cue lines still exist (staging switches to the Royal Gardens at these IDs)
+      ---
+      duration_ms: 0.348084
       type: 'test'
       ...
     # Subtest: display-only scenes have no choices; every choice scene has a correct option and PLAYER lines
-    ok 5 - display-only scenes have no choices; every choice scene has a correct option and PLAYER lines
+    ok 9 - display-only scenes have no choices; every choice scene has a correct option and PLAYER lines
       ---
-      duration_ms: 0.466446
+      duration_ms: 0.403013
       type: 'test'
       ...
     # Subtest: support copy: 14 help, 12 quips, 8 activities, 12 TXT + 14 UI strings
-    ok 6 - support copy: 14 help, 12 quips, 8 activities, 12 TXT + 14 UI strings
+    ok 10 - support copy: 14 help, 12 quips, 8 activities, 12 TXT + 14 UI strings
       ---
-      duration_ms: 0.170007
+      duration_ms: 0.60905
       type: 'test'
       ...
     # Subtest: {PLAYER} is the only substitution token in authored text
-    ok 7 - {PLAYER} is the only substitution token in authored text
+    ok 11 - {PLAYER} is the only substitution token in authored text
       ---
-      duration_ms: 0.734554
+      duration_ms: 0.795402
       type: 'test'
       ...
-    1..7
-ok 3 - F. Content and sources
+    1..11
+ok 4 - F. Content and sources
   ---
-  duration_ms: 773.688182
+  duration_ms: 873.944651
   type: 'suite'
   ...
 # Subtest: A. Start, schedule and transitions
     # Subtest: A01 fresh run starts Day 1 Monday morning with zero stats/hearts and no milestones
     ok 1 - A01 fresh run starts Day 1 Monday morning with zero stats/hearts and no milestones
       ---
-      duration_ms: 1.6725
+      duration_ms: 1.750184
       type: 'test'
       ...
     # Subtest: A03 exactly 28 days × 3 slots; Sun D7→Mon D8, Sun D21→Mon D22; no Day 29
     ok 2 - A03 exactly 28 days × 3 slots; Sun D7→Mon D8, Sun D21→Mon D22; no Day 29
       ---
-      duration_ms: 31.727278
+      duration_ms: 19.224686
       type: 'test'
       ...
     # Subtest: A04 Rest consumes one slot, one journal record, no heart change
     ok 3 - A04 Rest consumes one slot, one journal record, no heart change
       ---
-      duration_ms: 0.366701
+      duration_ms: 0.269269
       type: 'test'
       ...
     # Subtest: A05 schedule is exhaustive and exactly matches the spec table for every day/slot/route
     ok 4 - A05 schedule is exhaustive and exactly matches the spec table for every day/slot/route
       ---
-      duration_ms: 1.024842
+      duration_ms: 0.699799
       type: 'test'
       ...
     # Subtest: A06 wrong location / wrong slot / already met: refused with no mutation
     ok 5 - A06 wrong location / wrong slot / already met: refused with no mutation
       ---
-      duration_ms: 1.45621
+      duration_ms: 1.103138
       type: 'test'
       ...
     # Subtest: A07 second scheduled slot same day is blocked; next day first slot allowed
     ok 6 - A07 second scheduled slot same day is blocked; next day first slot allowed
       ---
-      duration_ms: 0.609488
+      duration_ms: 0.379035
       type: 'test'
       ...
     # Subtest: A08 only the selected princess can be met; other routes never scheduled into this run
     ok 7 - A08 only the selected princess can be met; other routes never scheduled into this run
       ---
-      duration_ms: 0.479338
+      duration_ms: 0.295526
       type: 'test'
       ...
     # Subtest: A01 player name: trimmed, ≤24 graphemes, fallback Traveler
     ok 8 - A01 player name: trimmed, ≤24 graphemes, fallback Traveler
       ---
-      duration_ms: 20.492467
+      duration_ms: 11.043224
       type: 'test'
       ...
     1..8
-ok 4 - A. Start, schedule and transitions
+ok 5 - A. Start, schedule and transitions
   ---
-  duration_ms: 59.427488
+  duration_ms: 36.283316
   type: 'suite'
   ...
 # Subtest: B. Training
     # Subtest: B01/B02 training math for every stat and level
     ok 1 - B01/B02 training math for every stat and level
       ---
-      duration_ms: 0.712008
+      duration_ms: 0.645517
       type: 'test'
       ...
     # Subtest: B03 seven sessions to reach 6, four to reach 4, eleven total; alternating activities share progress
     ok 2 - B03 seven sessions to reach 6, four to reach 4, eleven total; alternating activities share progress
       ---
-      duration_ms: 2.91911
+      duration_ms: 2.09004
       type: 'test'
       ...
     # Subtest: B04 each activity only at its location; exactly two per stat
     ok 3 - B04 each activity only at its location; exactly two per stat
       ---
-      duration_ms: 1.638443
+      duration_ms: 1.02017
       type: 'test'
       ...
     # Subtest: B05 training at level 10 is refused at no cost; partial survives other training
     ok 4 - B05 training at level 10 is refused at no cost; partial survives other training
       ---
-      duration_ms: 0.795332
+      duration_ms: 0.532361
       type: 'test'
       ...
     1..4
-ok 5 - B. Training
+ok 6 - B. Training
   ---
-  duration_ms: 6.528984
+  duration_ms: 4.583047
   type: 'suite'
   ...
 # Subtest: C. Hearts and ordinary text
     # Subtest: C01 ordinary nets: correct +2, wrong +1, offensive −1, no extra meeting bonus
     ok 1 - C01 ordinary nets: correct +2, wrong +1, offensive −1, no extra meeting bonus
       ---
-      duration_ms: 0.702822
+      duration_ms: 0.611776
       type: 'test'
       ...
     # Subtest: C02 clamp at 0, at 10 before midpoint, at 20 after; no carry
     ok 2 - C02 clamp at 0, at 10 before midpoint, at 20 after; no carry
       ---
-      duration_ms: 0.219718
+      duration_ms: 0.131133
       type: 'test'
       ...
     # Subtest: C03 reaching ten half-hearts makes the next eligible encounter the midpoint, not the same day
     ok 3 - C03 reaching ten half-hearts makes the next eligible encounter the midpoint, not the same day
       ---
-      duration_ms: 2.12033
+      duration_ms: 1.826626
       type: 'test'
       ...
     # Subtest: C04 midpoint blocked at no cost when primary < 6 or secondary < 4
     ok 4 - C04 midpoint blocked at no cost when primary < 6 or secondary < 4
       ---
-      duration_ms: 7.495861
+      duration_ms: 4.887941
       type: 'test'
       ...
     # Subtest: C05 midpoint failure: one slot, no hearts change, later-day short retry; full scene never replays
     ok 5 - C05 midpoint failure: one slot, no hearts change, later-day short retry; full scene never replays
       ---
-      duration_ms: 22.938363
+      duration_ms: 12.934151
       type: 'test'
       ...
     # Subtest: C06/C08 completed midpoint is permanent despite later heart loss; POST U01 is next
     ok 6 - C06/C08 completed midpoint is permanent despite later heart loss; POST U01 is next
       ---
-      duration_ms: 7.797282
+      duration_ms: 4.432627
       type: 'test'
       ...
     # Subtest: C07 ordinary order U01..U06 then F01,F02,F03 cycling, per route/stage; cursor moves only on commit
     ok 7 - C07 ordinary order U01..U06 then F01,F02,F03 cycling, per route/stage; cursor moves only on commit
       ---
-      duration_ms: 6.371074
+      duration_ms: 3.88305
       type: 'test'
       ...
     # Subtest: C09/C10 optional: threshold 3 on the stage stat, explicit choice, marked seen even on wrong, never replays
     ok 8 - C09/C10 optional: threshold 3 on the stage stat, explicit choice, marked seen even on wrong, never replays
       ---
-      duration_ms: 3.905728
+      duration_ms: 2.234192
       type: 'test'
       ...
     # Subtest: C11 optionals are never required: perfect route wins without any optional
     ok 9 - C11 optionals are never required: perfect route wins without any optional
       ---
-      duration_ms: 20.607331
+      duration_ms: 19.131964
       type: 'test'
       ...
     # Subtest: C12 every ordinary offers correct + ordinary wrong, offensive only when authored
     ok 10 - C12 every ordinary offers correct + ordinary wrong, offensive only when authored
       ---
-      duration_ms: 0.411242
+      duration_ms: 0.519849
       type: 'test'
       ...
     1..10
-ok 6 - C. Hearts and ordinary text
+ok 7 - C. Hearts and ordinary text
   ---
-  duration_ms: 73.214111
+  duration_ms: 51.13418
   type: 'suite'
   ...
 # Subtest: D. Marriage, end, deadline
     # Subtest: D01 at 19, ordinary wrong +1 links the full proposal in the same action (no extra slot/journal)
     ok 1 - D01 at 19, ordinary wrong +1 links the full proposal in the same action (no extra slot/journal)
       ---
-      duration_ms: 7.26924
+      duration_ms: 8.876163
       type: 'test'
       ...
     # Subtest: D01 at 18, correct +2 also links; linked choice required and validated
     ok 2 - D01 at 18, correct +2 also links; linked choice required and validated
       ---
-      duration_ms: 7.196732
+      duration_ms: 7.59415
       type: 'test'
       ...
     # Subtest: D02/D03/D04 wrong first proposal keeps 20, retry later day; wrong retry stays; correct retry wins
     ok 3 - D02/D03/D04 wrong first proposal keeps 20, retry later day; wrong retry stays; correct retry wins
       ---
-      duration_ms: 8.923479
+      duration_ms: 9.567135
       type: 'test'
       ...
     # Subtest: D05 Day 28 evening: correct linked proposal wins before deadline; wrong one fails
     ok 4 - D05 Day 28 evening: correct linked proposal wins before deadline; wrong one fails
       ---
-      duration_ms: 28.560465
+      duration_ms: 28.710279
       type: 'test'
       ...
     # Subtest: D06 Day 28 evening Rest/training ends in failure
     ok 5 - D06 Day 28 evening Rest/training ends in failure
       ---
-      duration_ms: 26.708624
+      duration_ms: 32.8709
       type: 'test'
       ...
     # Subtest: E04 (engine) the same actionId cannot be applied twice
     ok 6 - E04 (engine) the same actionId cannot be applied twice
       ---
-      duration_ms: 0.225696
+      duration_ms: 0.366087
       type: 'test'
       ...
     1..6
-ok 7 - D. Marriage, end, deadline
+ok 8 - D. Marriage, end, deadline
   ---
-  duration_ms: 79.242131
+  duration_ms: 88.370912
   type: 'suite'
   ...
 # Subtest: Stage compositions
     # Subtest: every crop is 16:9 and inside the 1672×941 background
     ok 1 - every crop is 16:9 and inside the 1672×941 background
       ---
-      duration_ms: 0.951208
+      duration_ms: 1.382719
       type: 'test'
       ...
     # Subtest: Nerelle only has compositions where she is scheduled (water), never an upright land placement
     ok 2 - Nerelle only has compositions where she is scheduled (water), never an upright land placement
       ---
-      duration_ms: 0.806447
+      duration_ms: 1.163379
       type: 'test'
       ...
-    # Subtest: Nerelle: below-waist sprite is covered by the background-pixel occluder; head stays in frame
-    ok 3 - Nerelle: below-waist sprite is covered by the background-pixel occluder; head stays in frame
+    # Subtest: Nerelle: everything below the waterline is covered by the background-pixel occluder; head stays in frame
+    ok 3 - Nerelle: everything below the waterline is covered by the background-pixel occluder; head stays in frame
       ---
-      duration_ms: 0.411434
+      duration_ms: 0.545708
+      type: 'test'
+      ...
+    # Subtest: Nerelle: the waterline sits on water pixels of the approved background, not stone or paving
+    ok 4 - Nerelle: the waterline sits on water pixels of the approved background, not stone or paving
+      ---
+      duration_ms: 140.107072
+      type: 'test'
+      ...
+    # Subtest: All-ages art: every shipped character image comes from its edit; reference sheets are not shipped; Nerelle ends at the waterline
+    ok 5 - All-ages art: every shipped character image comes from its edit; reference sheets are not shipped; Nerelle ends at the waterline
+      ---
+      duration_ms: 212.997075
       type: 'test'
       ...
     # Subtest: Gardens: Nerelle is at screen-right beside the canal in both desktop and 320px crops; label names the canal
-    ok 4 - Gardens: Nerelle is at screen-right beside the canal in both desktop and 320px crops; label names the canal
+    ok 6 - Gardens: Nerelle is at screen-right beside the canal in both desktop and 320px crops; label names the canal
       ---
-      duration_ms: 0.162309
+      duration_ms: 0.70548
       type: 'test'
       ...
-    1..4
-ok 8 - Stage compositions
+    1..6
+ok 9 - Stage compositions
   ---
-  duration_ms: 3.443595
+  duration_ms: 358.980792
   type: 'suite'
   ...
 # Subtest: WCAG 2.2 AA colour contrast
     # Subtest: text ≥ 4.5:1 — ink on parchment
     ok 1 - text ≥ 4.5:1 — ink on parchment
       ---
-      duration_ms: 0.614659
+      duration_ms: 0.894619
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — ink on paper
     ok 2 - text ≥ 4.5:1 — ink on paper
       ---
-      duration_ms: 0.157503
+      duration_ms: 0.519047
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — soft ink on parchment
     ok 3 - text ≥ 4.5:1 — soft ink on parchment
       ---
-      duration_ms: 0.127909
+      duration_ms: 0.321713
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — soft ink on paper
     ok 4 - text ≥ 4.5:1 — soft ink on paper
       ---
-      duration_ms: 0.216017
+      duration_ms: 0.421759
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — paper on dialogue glass
     ok 5 - text ≥ 4.5:1 — paper on dialogue glass
       ---
-      duration_ms: 0.216991
+      duration_ms: 0.139288
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — gold speaker label on dialogue glass
     ok 6 - text ≥ 4.5:1 — gold speaker label on dialogue glass
       ---
-      duration_ms: 0.400675
+      duration_ms: 0.08432
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — paper on burgundy button
     ok 7 - text ≥ 4.5:1 — paper on burgundy button
       ---
-      duration_ms: 0.143015
+      duration_ms: 0.07848
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — paper on burgundy hover
     ok 8 - text ≥ 4.5:1 — paper on burgundy hover
       ---
-      duration_ms: 0.082237
+      duration_ms: 0.069462
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — burgundy text on paper
     ok 9 - text ≥ 4.5:1 — burgundy text on paper
       ---
-      duration_ms: 0.066215
+      duration_ms: 0.136203
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — focus-teal link on paper
     ok 10 - text ≥ 4.5:1 — focus-teal link on paper
       ---
-      duration_ms: 1.398982
+      duration_ms: 0.090432
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — error red on paper
     ok 11 - text ≥ 4.5:1 — error red on paper
       ---
-      duration_ms: 0.073924
+      duration_ms: 0.103449
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — saved green on paper
     ok 12 - text ≥ 4.5:1 — saved green on paper
       ---
-      duration_ms: 0.049767
+      duration_ms: 0.182709
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — warning brown on paper
     ok 13 - text ≥ 4.5:1 — warning brown on paper
       ---
-      duration_ms: 0.046605
+      duration_ms: 0.084795
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — ink on warning banner
     ok 14 - text ≥ 4.5:1 — ink on warning banner
       ---
-      duration_ms: 0.178295
+      duration_ms: 0.095169
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — ink on info banner
     ok 15 - text ≥ 4.5:1 — ink on info banner
       ---
-      duration_ms: 0.058016
+      duration_ms: 0.074483
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — paper on stage label
     ok 16 - text ≥ 4.5:1 — paper on stage label
       ---
-      duration_ms: 0.048263
+      duration_ms: 0.070577
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — white on danger button
     ok 17 - text ≥ 4.5:1 — white on danger button
       ---
-      duration_ms: 0.050387
+      duration_ms: 0.071378
       type: 'test'
       ...
     # Subtest: text ≥ 4.5:1 — soft ink on past calendar day
     ok 18 - text ≥ 4.5:1 — soft ink on past calendar day
       ---
-      duration_ms: 0.104643
+      duration_ms: 0.153579
       type: 'test'
       ...
     # Subtest: non-text: focus ring ≥ 3:1 against parchment, paper and dialogue glass
     ok 19 - non-text: focus ring ≥ 3:1 against parchment, paper and dialogue glass
       ---
-      duration_ms: 0.173478
+      duration_ms: 0.188086
       type: 'test'
       ...
     # Subtest: gold is never used as ordinary text on parchment (known contrast failure)
     ok 20 - gold is never used as ordinary text on parchment (known contrast failure)
       ---
-      duration_ms: 3.854141
+      duration_ms: 7.209457
       type: 'test'
       ...
     1..20
-ok 9 - WCAG 2.2 AA colour contrast
+ok 10 - WCAG 2.2 AA colour contrast
   ---
-  duration_ms: 8.692991
+  duration_ms: 11.941437
   type: 'suite'
   ...
 # Subtest: State validation by journal replay
     # Subtest: fresh, mid-run, terminal-failed and every witness end state are valid
     ok 1 - fresh, mid-run, terminal-failed and every witness end state are valid
       ---
-      duration_ms: 113.170062
+      duration_ms: 186.841816
       type: 'test'
       ...
     # Subtest: a saveRevision bumped by import/new-run is accepted when not older than the journal
     ok 2 - a saveRevision bumped by import/new-run is accepted when not older than the journal
       ---
-      duration_ms: 0.624922
+      duration_ms: 0.828279
       type: 'test'
       ...
     # Subtest: rejects: hearts edited
     ok 3 - rejects: hearts edited
       ---
-      duration_ms: 0.658546
+      duration_ms: 0.920311
       type: 'test'
       ...
     # Subtest: rejects: hearts negative
     ok 4 - rejects: hearts negative
       ---
-      duration_ms: 0.417753
+      duration_ms: 0.517791
       type: 'test'
       ...
     # Subtest: rejects: hearts above cap
     ok 5 - rejects: hearts above cap
       ---
-      duration_ms: 0.301358
+      duration_ms: 0.480663
       type: 'test'
       ...
     # Subtest: rejects: stat edited
     ok 6 - rejects: stat edited
       ---
-      duration_ms: 0.530134
+      duration_ms: 0.72489
       type: 'test'
       ...
     # Subtest: rejects: stat non-integer
     ok 7 - rejects: stat non-integer
       ---
-      duration_ms: 0.416981
+      duration_ms: 0.514589
       type: 'test'
       ...
     # Subtest: rejects: partial at level 0
     ok 8 - rejects: partial at level 0
       ---
-      duration_ms: 0.590162
+      duration_ms: 0.835761
       type: 'test'
       ...
     # Subtest: rejects: midpoint faked complete
     ok 9 - rejects: midpoint faked complete
       ---
-      duration_ms: 0.553227
+      duration_ms: 0.80569
       type: 'test'
       ...
     # Subtest: rejects: won without proposal
     ok 10 - rejects: won without proposal
       ---
-      duration_ms: 0.66633
+      duration_ms: 1.038824
       type: 'test'
       ...
     # Subtest: rejects: cursor advanced
     ok 11 - rejects: cursor advanced
       ---
-      duration_ms: 0.419953
+      duration_ms: 0.722309
       type: 'test'
       ...
     # Subtest: rejects: optional marked seen
     ok 12 - rejects: optional marked seen
       ---
-      duration_ms: 0.358193
+      duration_ms: 0.601248
       type: 'test'
       ...
     # Subtest: rejects: day jumped
     ok 13 - rejects: day jumped
       ---
-      duration_ms: 0.368407
+      duration_ms: 0.531729
       type: 'test'
       ...
     # Subtest: rejects: daily flag cleared
     ok 14 - rejects: daily flag cleared
       ---
-      duration_ms: 0.384288
+      duration_ms: 0.586724
       type: 'test'
       ...
     # Subtest: rejects: journal record hearts edited
     ok 15 - rejects: journal record hearts edited
       ---
-      duration_ms: 0.285489
+      duration_ms: 0.431313
       type: 'test'
       ...
     # Subtest: rejects: journal record removed
     ok 16 - rejects: journal record removed
       ---
-      duration_ms: 0.707505
+      duration_ms: 0.535949
       type: 'test'
       ...
     # Subtest: rejects: journal duplicated id
     ok 17 - rejects: journal duplicated id
       ---
-      duration_ms: 1.22395
+      duration_ms: 0.373459
       type: 'test'
       ...
     # Subtest: rejects: unknown choice id
     ok 18 - rejects: unknown choice id
       ---
-      duration_ms: 1.409892
+      duration_ms: 0.713836
       type: 'test'
       ...
     # Subtest: rejects: extra field
     ok 19 - rejects: extra field
       ---
-      duration_ms: 0.354283
+      duration_ms: 0.521229
       type: 'test'
       ...
     # Subtest: rejects: missing field
     ok 20 - rejects: missing field
       ---
-      duration_ms: 0.293963
+      duration_ms: 0.401019
       type: 'test'
       ...
     # Subtest: rejects: bad route
     ok 21 - rejects: bad route
       ---
-      duration_ms: 0.354492
+      duration_ms: 0.454941
       type: 'test'
       ...
     # Subtest: rejects: bad runId
     ok 22 - rejects: bad runId
       ---
-      duration_ms: 0.249922
+      duration_ms: 0.390086
       type: 'test'
       ...
     # Subtest: rejects: day 29
     ok 23 - rejects: day 29
       ---
-      duration_ms: 0.268235
+      duration_ms: 0.323572
       type: 'test'
       ...
     # Subtest: rejects: player name with control char
     ok 24 - rejects: player name with control char
       ---
-      duration_ms: 0.233775
+      duration_ms: 0.372766
       type: 'test'
       ...
     # Subtest: rejects: schema version 2
     ok 25 - rejects: schema version 2
       ---
-      duration_ms: 0.438119
+      duration_ms: 0.329176
       type: 'test'
       ...
     # Subtest: gallery validation and consistency
     ok 26 - gallery validation and consistency
       ---
-      duration_ms: 5.679042
+      duration_ms: 9.411123
       type: 'test'
       ...
     1..26
-ok 10 - State validation by journal replay
+ok 11 - State validation by journal replay
   ---
-  duration_ms: 133.100089
+  duration_ms: 212.958317
   type: 'suite'
   ...
 #   {"fixture":"TAV_PERFECT","winDay":15,"winSlot":"afternoon","actions":44,"trainingSessions":11,"rests":22,"encounters":11}
@@ -715,51 +770,51 @@ ok 10 - State validation by journal replay
     # Subtest: TAV_PERFECT wins on Day 15
     ok 1 - TAV_PERFECT wins on Day 15
       ---
-      duration_ms: 9.118158
+      duration_ms: 9.033494
       type: 'test'
       ...
     # Subtest: NER_PERFECT wins on Day 15
     ok 2 - NER_PERFECT wins on Day 15
       ---
-      duration_ms: 5.70656
+      duration_ms: 5.828432
       type: 'test'
       ...
     # Subtest: KAE_PERFECT wins on Day 16
     ok 3 - KAE_PERFECT wins on Day 16
       ---
-      duration_ms: 6.977024
+      duration_ms: 6.898718
       type: 'test'
       ...
     # Subtest: TAV_RECOVERY wins on Day 27
     ok 4 - TAV_RECOVERY wins on Day 27
       ---
-      duration_ms: 15.393327
+      duration_ms: 15.672043
       type: 'test'
       ...
     # Subtest: NER_RECOVERY wins on Day 27
     ok 5 - NER_RECOVERY wins on Day 27
       ---
-      duration_ms: 13.645552
+      duration_ms: 13.951074
       type: 'test'
       ...
     # Subtest: KAE_RECOVERY wins on Day 27
     ok 6 - KAE_RECOVERY wins on Day 27
       ---
-      duration_ms: 13.900426
+      duration_ms: 14.468076
       type: 'test'
       ...
     1..6
-ok 11 - G. Witness streams through the real engine
+ok 12 - G. Witness streams through the real engine
   ---
-  duration_ms: 66.185281
+  duration_ms: 67.391841
   type: 'suite'
   ...
-1..11
-# tests 112
-# suites 11
-# pass 112
+1..12
+# tests 120
+# suites 12
+# pass 120
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 2555.603087
+# duration_ms 3944.667934

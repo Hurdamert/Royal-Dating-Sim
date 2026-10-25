@@ -283,6 +283,45 @@ describe('End-to-end (built site, Chromium)', () => {
     await ctx.close();
   });
 
+  test('(review fix) an unfinished conversation blocks other actions until it is resumed or left; leaving costs nothing', async () => {
+    const { ctx, page } = await open();
+    await startRun(page, 'KAE');
+    for (let i = 0; i < 3; i++) await rest(page); // Tue morning
+    await goto(page, 'adventurers_guild');
+    await page.locator('[data-encounter="ordinary"]').click();
+    await page.getByTestId('continue').click();
+    await page.waitForFunction(() => window.__royalExceptions.getSnapshot().draft !== null);
+    await page.reload();
+    await page.getByTestId('continue-run').click();
+    await goto(page, 'adventurers_guild');
+    await page.getByTestId('pending-encounter').waitFor();
+    assert.equal(await page.getByTestId('rest').isDisabled(), true, 'rest blocked');
+    assert.equal(await page.locator('[data-activity]:not([disabled])').count(), 0, 'training blocked');
+    assert.equal(await page.locator('[data-encounter]').count(), 0, 'no second conversation offered');
+    const before = (await snapshot(page)).run;
+    await page.getByRole('button', { name: 'Leave it (no time passes)' }).click();
+    await page.waitForFunction(() => window.__royalExceptions.getSnapshot().draft === null);
+    assert.equal(await page.getByTestId('pending-encounter').count(), 0);
+    assert.equal(await page.getByTestId('rest').isDisabled(), false);
+    const after = (await snapshot(page)).run;
+    assert.deepEqual({ rev: after.saveRevision, day: after.day, slot: after.slot, hearts: after.heartsHalf }, { rev: before.saveRevision, day: before.day, slot: before.slot, hearts: before.heartsHalf });
+    assert.equal(await page.locator('[data-encounter="ordinary"]').count(), 1, 'the meeting is still available');
+    await ctx.close();
+  });
+
+  test('(review fix) a picture that fails to load shows a labelled placeholder with ERR_ASSET_LOAD, and play continues', async () => {
+    const { ctx, page } = await open();
+    await page.route('**/bg_royal_library.webp', (r) => r.fulfill({ status: 404, body: '' }));
+    await startRun(page, 'TAV');
+    await goto(page, 'royal_library');
+    const ph = page.locator('[data-error-code="ERR_ASSET_LOAD"]');
+    await ph.waitFor();
+    assert.match(await ph.getAttribute('aria-label'), /library/i);
+    assert.equal(await ph.locator('[role="alert"]').count(), 1);
+    await rest(page);
+    await ctx.close();
+  });
+
   test('E05 (UI) a second tab is read-only with actions disabled', async () => {
     const { ctx, page } = await open();
     await startRun(page, 'TAV');
@@ -340,6 +379,14 @@ describe('End-to-end (built site, Chromium)', () => {
     assert.equal(await page.getByRole('alertdialog').count(), 1);
     await page.getByRole('alertdialog').getByRole('button', { name: 'Cancel' }).click();
     assert.equal((await snapshot(page)).run.outcome, 'failed');
+    // Review fix: the failure scene plays once, on the live transition only. Coming
+    // back to a failed run goes straight to the end screen; replay is on request.
+    await page.reload();
+    await page.getByTestId('continue-run').click();
+    await page.getByTestId('ended').waitFor();
+    assert.equal(await page.getByTestId('presentation').count(), 0);
+    await page.getByRole('button', { name: 'Watch the ending again' }).click();
+    assert.equal(await page.getByTestId('presentation').getAttribute('data-scene-id'), 'CORE-FAIL-01');
     await ctx.close();
   });
 
