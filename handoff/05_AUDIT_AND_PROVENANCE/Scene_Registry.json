@@ -1,0 +1,749 @@
+[
+  {
+    "scene_id": "TAV-EVT-PRE-01",
+    "kind": "pivotal",
+    "route": "tavri",
+    "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Tavri_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "TAV-MID-01",
+    "kind": "pivotal",
+    "route": "tavri",
+    "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Tavri_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "TAV-MID-RETRY-01",
+    "kind": "pivotal",
+    "route": "tavri",
+    "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Tavri_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "TAV-EVT-POST-01",
+    "kind": "pivotal",
+    "route": "tavri",
+    "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Tavri_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": true
+  },
+  {
+    "scene_id": "TAV-FIN-01",
+    "kind": "pivotal",
+    "route": "tavri",
+    "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Tavri_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "TAV-FIN-RETRY-01",
+    "kind": "pivotal",
+    "route": "tavri",
+    "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Tavri_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "TAV-EPI-01",
+    "kind": "pivotal",
+    "route": "tavri",
+    "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Tavri_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "CORE-PRO-01",
+    "kind": "shared",
+    "route": null,
+    "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Tavri_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "CORE-FAIL-01",
+    "kind": "shared",
+    "route": null,
+    "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Tavri_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "NER-EVT-PRE-01",
+    "kind": "pivotal",
+    "route": "nerelle",
+    "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Nerelle_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "NER-MID-01",
+    "kind": "pivotal",
+    "route": "nerelle",
+    "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Nerelle_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "NER-MID-RETRY-01",
+    "kind": "pivotal",
+    "route": "nerelle",
+    "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Nerelle_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "NER-EVT-POST-01",
+    "kind": "pivotal",
+    "route": "nerelle",
+    "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Nerelle_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "NER-FIN-01",
+    "kind": "pivotal",
+    "route": "nerelle",
+    "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Nerelle_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "NER-FIN-RETRY-01",
+    "kind": "pivotal",
+    "route": "nerelle",
+    "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Nerelle_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "NER-EPI-01",
+    "kind": "pivotal",
+    "route": "nerelle",
+    "source_archive": "Nerelle_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "narrative/Nerelle_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "KAE-EVT-PRE-01",
+    "kind": "pivotal",
+    "route": "kaedra",
+    "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/narrative/Kaedra_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "KAE-MID-01",
+    "kind": "pivotal",
+    "route": "kaedra",
+    "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/narrative/Kaedra_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "KAE-MID-RETRY-01",
+    "kind": "pivotal",
+    "route": "kaedra",
+    "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/narrative/Kaedra_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "KAE-EVT-POST-01",
+    "kind": "pivotal",
+    "route": "kaedra",
+    "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/narrative/Kaedra_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "KAE-FIN-01",
+    "kind": "pivotal",
+    "route": "kaedra",
+    "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/narrative/Kaedra_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "KAE-FIN-RETRY-01",
+    "kind": "pivotal",
+    "route": "kaedra",
+    "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/narrative/Kaedra_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "KAE-EPI-01",
+    "kind": "pivotal",
+    "route": "kaedra",
+    "source_archive": "Kaedra_Gate2_Review_Candidate_v1.0.zip",
+    "source_member": "Kaedra_Gate2_Review_Candidate_v1.0/narrative/Kaedra_Gate2_Narrative_Package_v0.1.md",
+    "approval_basis": "Frozen character specific or explicitly approved shared scene; see approval ledger",
+    "effective_overlay": false
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-U01",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-U02",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-U03",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-U04",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-U05",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-U06",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-F01",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "PRE",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-F02",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "PRE",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-F03",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "PRE",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-POST-U01",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-POST-U02",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-POST-U03",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-POST-U04",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-POST-U05",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-POST-U06",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-POST-F01",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "POST",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-POST-F02",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "POST",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "TAV-ORD-POST-F03",
+    "kind": "ordinary",
+    "route": "tavri",
+    "stage": "POST",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-PRE-U01",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-PRE-U02",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-PRE-U03",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-PRE-U04",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-PRE-U05",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-PRE-U06",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-PRE-F01",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "PRE",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-PRE-F02",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "PRE",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-PRE-F03",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "PRE",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-POST-U01",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-POST-U02",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-POST-U03",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-POST-U04",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-POST-U05",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-POST-U06",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-POST-F01",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "POST",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-POST-F02",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "POST",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "NER-ORD-POST-F03",
+    "kind": "ordinary",
+    "route": "nerelle",
+    "stage": "POST",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-U01",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-U02",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-U03",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-U04",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-U05",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-U06",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "PRE",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-F01",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "PRE",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-F02",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "PRE",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-F03",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "PRE",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-POST-U01",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-POST-U02",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-POST-U03",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-POST-U04",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-POST-U05",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-POST-U06",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "POST",
+    "pool": "unique",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-POST-F01",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "POST",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-POST-F02",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "POST",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  },
+  {
+    "scene_id": "KAE-ORD-POST-F03",
+    "kind": "ordinary",
+    "route": "kaedra",
+    "stage": "POST",
+    "pool": "fallback",
+    "source_archive": "Gate2_Routine_Content_Editorial_Candidate_v0.1.zip",
+    "source_member": "Ordinary_Conversations_54_CANDIDATE_v0.1.md",
+    "approval_basis": "2026-10-25 user approved both routine editorial groups"
+  }
+]

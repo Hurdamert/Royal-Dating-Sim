@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-esbuild/
+.test-artifacts/
+*.log
+.DS_Store
+# Font binaries are fetched at build time by scripts/fetch-fonts.mjs from their
+# authoritative OFL publishers; they are not committed.
+public/fonts/*.ttf
+public/fonts/*.woff2

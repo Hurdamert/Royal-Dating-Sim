@@ -1,0 +1,21 @@
+{
+  "scenes": 77,
+  "byKind": {
+    "shared": 2,
+    "ordinary": 54,
+    "optional": 6,
+    "midpoint": 3,
+    "midpoint_retry": 3,
+    "marriage": 3,
+    "marriage_retry": 3,
+    "epilogue": 3
+  },
+  "linesRoundTripped": 973,
+  "extractsCrossChecked": 77,
+  "tavriOverlayDifferences": 4,
+  "helpPassages": 14,
+  "squareQuips": 12,
+  "activities": 8,
+  "strings": 26,
+  "contentSha256": "0f6c9fd42ae6d6870ec7cfb2f1b4030bf359ed085b3f773975088a9ed3422a62"
+}

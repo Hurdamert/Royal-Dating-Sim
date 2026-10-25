@@ -1,0 +1,464 @@
+[
+  {
+    "scene_id": "CORE-FAIL-01",
+    "source_file": "shared.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/CORE-FAIL-01.md",
+    "choice_points": 0
+  },
+  {
+    "scene_id": "CORE-PRO-01",
+    "source_file": "shared.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/CORE-PRO-01.md",
+    "choice_points": 0
+  },
+  {
+    "scene_id": "KAE-EPI-01",
+    "source_file": "kaedra.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-EPI-01.md",
+    "choice_points": 0
+  },
+  {
+    "scene_id": "KAE-EVT-POST-01",
+    "source_file": "kaedra.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-EVT-POST-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-EVT-PRE-01",
+    "source_file": "kaedra.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-EVT-PRE-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-FIN-01",
+    "source_file": "kaedra.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-FIN-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-FIN-RETRY-01",
+    "source_file": "kaedra.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-FIN-RETRY-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-MID-01",
+    "source_file": "kaedra.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-MID-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-MID-RETRY-01",
+    "source_file": "kaedra.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-MID-RETRY-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-POST-F01",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-POST-F01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-POST-F02",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-POST-F02.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-POST-F03",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-POST-F03.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-POST-U01",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-POST-U01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-POST-U02",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-POST-U02.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-POST-U03",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-POST-U03.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-POST-U04",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-POST-U04.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-POST-U05",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-POST-U05.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-POST-U06",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-POST-U06.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-F01",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-PRE-F01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-F02",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-PRE-F02.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-F03",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-PRE-F03.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-U01",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-PRE-U01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-U02",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-PRE-U02.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-U03",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-PRE-U03.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-U04",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-PRE-U04.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-U05",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-PRE-U05.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "KAE-ORD-PRE-U06",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/KAE-ORD-PRE-U06.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-EPI-01",
+    "source_file": "nerelle.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-EPI-01.md",
+    "choice_points": 0
+  },
+  {
+    "scene_id": "NER-EVT-POST-01",
+    "source_file": "nerelle.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-EVT-POST-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-EVT-PRE-01",
+    "source_file": "nerelle.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-EVT-PRE-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-FIN-01",
+    "source_file": "nerelle.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-FIN-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-FIN-RETRY-01",
+    "source_file": "nerelle.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-FIN-RETRY-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-MID-01",
+    "source_file": "nerelle.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-MID-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-MID-RETRY-01",
+    "source_file": "nerelle.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-MID-RETRY-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-POST-F01",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-POST-F01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-POST-F02",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-POST-F02.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-POST-F03",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-POST-F03.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-POST-U01",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-POST-U01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-POST-U02",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-POST-U02.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-POST-U03",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-POST-U03.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-POST-U04",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-POST-U04.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-POST-U05",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-POST-U05.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-POST-U06",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-POST-U06.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-PRE-F01",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-PRE-F01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-PRE-F02",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-PRE-F02.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-PRE-F03",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-PRE-F03.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-PRE-U01",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-PRE-U01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-PRE-U02",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-PRE-U02.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-PRE-U03",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-PRE-U03.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-PRE-U04",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-PRE-U04.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-PRE-U05",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-PRE-U05.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "NER-ORD-PRE-U06",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/NER-ORD-PRE-U06.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-EPI-01",
+    "source_file": "tavri_EFFECTIVE_overlay_applied.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-EPI-01.md",
+    "choice_points": 0
+  },
+  {
+    "scene_id": "TAV-EVT-POST-01",
+    "source_file": "tavri_EFFECTIVE_overlay_applied.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-EVT-POST-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-EVT-PRE-01",
+    "source_file": "tavri_EFFECTIVE_overlay_applied.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-EVT-PRE-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-FIN-01",
+    "source_file": "tavri_EFFECTIVE_overlay_applied.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-FIN-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-FIN-RETRY-01",
+    "source_file": "tavri_EFFECTIVE_overlay_applied.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-FIN-RETRY-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-MID-01",
+    "source_file": "tavri_EFFECTIVE_overlay_applied.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-MID-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-MID-RETRY-01",
+    "source_file": "tavri_EFFECTIVE_overlay_applied.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-MID-RETRY-01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-POST-F01",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-POST-F01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-POST-F02",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-POST-F02.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-POST-F03",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-POST-F03.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-POST-U01",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-POST-U01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-POST-U02",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-POST-U02.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-POST-U03",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-POST-U03.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-POST-U04",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-POST-U04.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-POST-U05",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-POST-U05.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-POST-U06",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-POST-U06.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-F01",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-PRE-F01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-F02",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-PRE-F02.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-F03",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-PRE-F03.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-U01",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-PRE-U01.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-U02",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-PRE-U02.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-U03",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-PRE-U03.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-U04",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-PRE-U04.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-U05",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-PRE-U05.md",
+    "choice_points": 1
+  },
+  {
+    "scene_id": "TAV-ORD-PRE-U06",
+    "source_file": "routine.md",
+    "content_path": "01_APPROVED_CANON/scene_sections/TAV-ORD-PRE-U06.md",
+    "choice_points": 1
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "kind": "approved_external_text_overlay",
+  "approval_status": "approved_verbatim_user_2026-10-25",
+  "source_archive": "Tavri_Gate2_Review_Candidate_v1.0.zip",
+  "source_archive_sha256": "2b6c67e71f079dbfcaa4bf67b4ef2e3285fa767805d6b6d523edaf2ecb67aad5",
+  "source_relative_path": "narrative/Tavri_Gate2_Narrative_Package_v0.1.md",
+  "source_file_sha256": "ef413e6f4af4a0dcd8cbc56daf72c1ae47d91c85873767732e659a48c8fecd09",
+  "effective_source_sha256_after_overlay": "dbe9b93f785d48f357318e14d53d8b6a06a2fb677842f342e7cfeb24e6441383",
+  "target_scene_id": "TAV-EVT-POST-01",
+  "replacements": [
+    {
+      "target": "scene_title",
+      "old": "## E. Scene 4 — Unscripted Comedy Night",
+      "new": "## E. Scene 4 — Unscripted Comedy",
+      "line_id": null
+    },
+    {
+      "target": "TAV-POST-001",
+      "old": "*Royal Comedy Evening: Participation Voluntary, Embarrassment Inevitable.*",
+      "new": "*Royal Comedy Showcase: Participation Voluntary, Embarrassment Inevitable.*",
+      "line_id": "TAV-POST-001"
+    },
+    {
+      "target": "TAV-POST-007",
+      "old": "I don't want to be brilliant tonight.",
+      "new": "I don't want to be brilliant on command.",
+      "line_id": "TAV-POST-007"
+    },
+    {
+      "target": "TAV-POST-X01",
+      "old": "I was hoping I could be myself for an evening.",
+      "new": "I was hoping I could be myself for once.",
+      "line_id": "TAV-POST-X01"
+    }
+  ],
+  "assertions": {
+    "replacement_count": 4,
+    "stable_identifiers_unchanged": true,
+    "no_frozen_source_rewrite": true,
+    "archive_bytes_unchanged": true
+  }
+}

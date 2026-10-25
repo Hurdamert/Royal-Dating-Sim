@@ -1,0 +1,177 @@
+{
+  "weekdays": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+  ],
+  "time_slots": [
+    "morning",
+    "afternoon",
+    "evening"
+  ],
+  "routes": {
+    "TAV": {
+      "primary": "charisma",
+      "secondary": "intelligence",
+      "meeting": {
+        "Mon": {
+          "afternoon": "royal_gardens",
+          "evening": "royal_gardens"
+        },
+        "Tue": {
+          "morning": "town_square",
+          "afternoon": "town_square"
+        },
+        "Thu": {
+          "afternoon": "palace_court",
+          "evening": "palace_court"
+        },
+        "Sat": {
+          "morning": "royal_library",
+          "afternoon": "royal_library"
+        },
+        "Sun": {
+          "afternoon": "royal_gardens",
+          "evening": "royal_gardens"
+        }
+      },
+      "optional_pre": {
+        "scene_id": "TAV-EVT-PRE-01",
+        "stat": "charisma",
+        "at_least": 3
+      },
+      "optional_post": {
+        "scene_id": "TAV-EVT-POST-01",
+        "stat": "kindness",
+        "at_least": 3
+      }
+    },
+    "NER": {
+      "primary": "kindness",
+      "secondary": "charisma",
+      "meeting": {
+        "Mon": {
+          "afternoon": "moonwater_quay",
+          "evening": "moonwater_quay"
+        },
+        "Wed": {
+          "morning": "royal_gardens",
+          "afternoon": "royal_gardens"
+        },
+        "Fri": {
+          "afternoon": "moonwater_quay",
+          "evening": "moonwater_quay"
+        },
+        "Sat": {
+          "morning": "royal_gardens",
+          "afternoon": "royal_gardens"
+        },
+        "Sun": {
+          "afternoon": "moonwater_quay",
+          "evening": "moonwater_quay"
+        }
+      },
+      "optional_pre": {
+        "scene_id": "NER-EVT-PRE-01",
+        "stat": "kindness",
+        "at_least": 3
+      },
+      "optional_post": {
+        "scene_id": "NER-EVT-POST-01",
+        "stat": "intelligence",
+        "at_least": 3
+      }
+    },
+    "KAE": {
+      "primary": "strength",
+      "secondary": "intelligence",
+      "meeting": {
+        "Tue": {
+          "morning": "adventurers_guild",
+          "afternoon": "adventurers_guild"
+        },
+        "Wed": {
+          "afternoon": "palace_court",
+          "evening": "palace_court"
+        },
+        "Thu": {
+          "morning": "adventurers_guild",
+          "afternoon": "adventurers_guild"
+        },
+        "Sat": {
+          "afternoon": "royal_gardens",
+          "evening": "royal_gardens"
+        },
+        "Sun": {
+          "afternoon": "palace_court",
+          "evening": "palace_court"
+        }
+      },
+      "optional_pre": {
+        "scene_id": "KAE-EVT-PRE-01",
+        "stat": "strength",
+        "at_least": 3
+      },
+      "optional_post": {
+        "scene_id": "KAE-EVT-POST-01",
+        "stat": "kindness",
+        "at_least": 3
+      }
+    }
+  },
+  "activities": [
+    {
+      "id": "ACT-CHA-READ",
+      "location": "home",
+      "stat": "charisma"
+    },
+    {
+      "id": "ACT-CHA-TALK",
+      "location": "town_square",
+      "stat": "charisma"
+    },
+    {
+      "id": "ACT-INT-BOOK",
+      "location": "royal_library",
+      "stat": "intelligence"
+    },
+    {
+      "id": "ACT-INT-ORACLE",
+      "location": "royal_library",
+      "stat": "intelligence"
+    },
+    {
+      "id": "ACT-STR-CAL",
+      "location": "home",
+      "stat": "strength"
+    },
+    {
+      "id": "ACT-STR-GUILD",
+      "location": "adventurers_guild",
+      "stat": "strength"
+    },
+    {
+      "id": "ACT-KIN-DOG",
+      "location": "royal_gardens",
+      "stat": "kindness"
+    },
+    {
+      "id": "ACT-KIN-LITTER",
+      "location": "town_square",
+      "stat": "kindness"
+    }
+  ],
+  "locations": [
+    "home",
+    "town_square",
+    "royal_library",
+    "adventurers_guild",
+    "palace_court",
+    "royal_gardens",
+    "moonwater_quay"
+  ]
+}
