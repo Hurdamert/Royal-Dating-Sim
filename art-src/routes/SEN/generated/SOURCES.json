@@ -1,0 +1,67 @@
+{
+  "route": "SEN",
+  "requested": "Use Hugging Face for this (owner, 2026-10-25): make Senna's art with the Hugging Face image tools and replace the placeholders.",
+  "note": "Raw outputs of the image tools, kept unchanged. scripts/art/senna.py turns them into the game images in art-src/routes/SEN/. The neutral portrait is generated from text; the other four expressions and the illustration are edits of it, so her face, hair and clothes stay the same.",
+  "images": {
+    "neutral": {
+      "file": "neutral.generated.webp",
+      "sha256": "598d1d568857f86f3ac53b017ef8de763bc318fdc2f6ad9225cfd9bcc7e89cff",
+      "made": "2026-10-25",
+      "model": "Qwen/Qwen-Image",
+      "model_license": "Apache-2.0",
+      "space": "mcp-tools/Qwen-Image",
+      "tool": "Qwen_Image_generate_image",
+      "prompt": "Highly detailed anime fantasy light-novel character illustration, vibrant colors, soft painterly shading, glossy hair highlights, sparkling detailed eyes, delicate line art. Waist-up portrait, facing the viewer, plain pale cream background. An elegant young adult princess who works as an apothecary: narrow oval face, straight eyebrows, clear smooth skin, hazel-grey eyes, calm composed expression with a hint of dry amusement. Honey-blonde hair in a loose low bun with a wooden pencil and a sprig of rosemary pushed through it, a few loose strands framing her face; round gold wire spectacles resting on top of her head. High-collared long-sleeved plum velvet gown with small gold buttons and gold leaf embroidery, under a canvas apothecary apron with pockets holding small glass vials, a coil of twine and a leather notebook. Fully clothed, high neckline, long sleeves.",
+      "negative_prompt": "freckles, mole, dot on forehead, bindi, flower, rose, text, letters, label text, watermark, signature, bare shoulders, cleavage, low neckline, exposed skin, extra fingers, deformed hands, blurry, low resolution, flat colors, chibi",
+      "settings": {
+        "aspect_ratio": "2:3",
+        "seed": 7731,
+        "guidance_scale": 4.5,
+        "num_inference_steps": 16
+      },
+      "review": "Kept. The model added a small red rose to her hair despite the negative prompt; it reads as part of her look and is kept on every image."
+    },
+    "playful": {
+      "file": "playful.generated.webp",
+      "sha256": "a1adf365a0a9b0a2c91839e9769c6532035d7225234a42679064da526b650508",
+      "made": "2026-10-25",
+      "model": "black-forest-labs/FLUX.1-Kontext-dev",
+      "model_license": "FLUX.1 [dev] Non-Commercial License (outputs may be used for any purpose, including commercial)",
+      "tool": "FLUX.1 Kontext [dev] image editor on Hugging Face Spaces",
+      "input": "neutral.generated.webp",
+      "prompt": null,
+      "prompt_summary": "Change only her expression to a subtle, closed-mouth, dryly amused smirk; keep everything else the same.",
+      "settings": {
+        "seed": 12
+      },
+      "review": "Kept. Seed 11 gave a wide toothy grin that did not fit her and was discarded. The exact prompt wording and Space name were not preserved when the session was summarised; the summary above is what it asked for.",
+      "unrecorded": [
+        "prompt",
+        "space",
+        "guidance_scale",
+        "steps"
+      ]
+    },
+    "worried": {
+      "file": "worried.generated.webp",
+      "sha256": "c74e407f869b427cbea9eda5d99b9a73eaf3a3686f7ec7d6abc77a998a4d4d38",
+      "made": "2026-10-25",
+      "model": "black-forest-labs/FLUX.1-Kontext-dev",
+      "model_license": "FLUX.1 [dev] Non-Commercial License (outputs may be used for any purpose, including commercial)",
+      "tool": "FLUX.1 Kontext [dev] image editor on Hugging Face Spaces",
+      "input": "neutral.generated.webp",
+      "prompt": null,
+      "prompt_summary": "Change only her expression to worried: brows drawn together, a concerned look; keep everything else the same.",
+      "settings": {
+        "seed": 13
+      },
+      "review": "Kept. The exact prompt wording and Space name were not preserved when the session was summarised; the summary above is what it asked for.",
+      "unrecorded": [
+        "prompt",
+        "space",
+        "guidance_scale",
+        "steps"
+      ]
+    }
+  }
+}
