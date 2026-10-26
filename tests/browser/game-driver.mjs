@@ -8,6 +8,8 @@ import { ROOT } from './support.mjs';
 
 const content = JSON.parse(readFileSync(join(ROOT, 'src/content/generated/content.json'), 'utf8'));
 const schedule = JSON.parse(readFileSync(join(ROOT, 'handoff/03_IMPLEMENTATION_BLUEPRINT/route_schedules_and_training.json'), 'utf8'));
+// Owner-requested route (content/routes/SEN), merged exactly as src/core/schedule.ts does.
+schedule.routes.SEN = JSON.parse(readFileSync(join(ROOT, 'content/routes/SEN/ROUTE.json'), 'utf8'));
 const WD = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 export const meetingLocation = (route, day, slot) => schedule.routes[route].meeting[WD[(day - 1) % 7]]?.[slot] ?? null;

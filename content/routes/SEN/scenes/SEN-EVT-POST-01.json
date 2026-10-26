@@ -1,0 +1,205 @@
+{
+  "sceneId": "SEN-EVT-POST-01",
+  "title": "A Day With Nothing Wrong",
+  "objective": "Plan her a day around something she enjoys for its own sake, with nothing in it to fix.",
+  "intro": [
+    {
+      "id": "SEN-POST-001",
+      "speaker": "NARRATOR",
+      "text": "Senna is standing with both hands in her apron pockets. Every pocket is empty."
+    },
+    {
+      "id": "SEN-POST-002",
+      "speaker": "SENNA",
+      "expression": "ANNOYED",
+      "text": "“I’ve been given a day off. By force.”"
+    },
+    {
+      "id": "SEN-POST-003",
+      "speaker": "PLAYER",
+      "text": "“Who forced you?”"
+    },
+    {
+      "id": "SEN-POST-004",
+      "speaker": "SENNA",
+      "expression": "ANNOYED",
+      "text": "“Pim took my twine. Dorrance took my notebook. He’s reading it right now. I can feel it.”"
+    },
+    {
+      "id": "SEN-POST-005",
+      "speaker": "NARRATOR",
+      "text": "Pim skids up beside you, out of breath."
+    },
+    {
+      "id": "SEN-POST-006",
+      "speaker": "PIM",
+      "text": "“Miss Senna! Doctor Dorrance says if you come back early, he’ll treat everyone himself! He’s got the leech jar out!”"
+    },
+    {
+      "id": "SEN-POST-007",
+      "speaker": "SENNA",
+      "expression": "WORRIED",
+      "text": "“He would, too. He’s been waiting years for this.”"
+    },
+    {
+      "id": "SEN-POST-008",
+      "speaker": "NARRATOR",
+      "text": "Pim runs off again, holding her bag of boiled sweets over his head like a trophy."
+    },
+    {
+      "id": "SEN-POST-009",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Nobody has so much as a splinter. I asked around.”"
+    },
+    {
+      "id": "SEN-POST-010",
+      "speaker": "SENNA",
+      "expression": "WORRIED",
+      "text": "“What do people do with a day that has nothing wrong in it?”"
+    },
+    {
+      "id": "SEN-POST-011",
+      "speaker": "PLAYER",
+      "text": "“So what do you like? Not for work. Just because.”"
+    },
+    {
+      "id": "SEN-POST-012",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Mushrooms. Finding where they’ve come up. Looking at them without picking any.”"
+    },
+    {
+      "id": "SEN-POST-013",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Pastries, too. But I can’t eat one without inspecting it, so that’s work again.”"
+    },
+    {
+      "id": "SEN-POST-014",
+      "speaker": "NARRATOR",
+      "text": "She takes her hands out of her empty pockets, then can’t seem to decide where to put them."
+    }
+  ],
+  "choicePointId": "SEN-POST-C1",
+  "options": [
+    {
+      "choiceId": "SEN-POST-C1-TIDY",
+      "outcomeId": "SEN-POST-O-TIDY",
+      "outcomeClass": "wrong",
+      "labelText": "“Why not sort the jars? No patients, nobody rushing you. Just you and the labels.”",
+      "branch": [
+        {
+          "id": "SEN-POST-W01",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“The jars. I’ve been meaning to redo the jars for weeks.”"
+        },
+        {
+          "id": "SEN-POST-W02",
+          "speaker": "NARRATOR",
+          "text": "She spends her day off sorting them by name, then by how ill each could make you, then by name again."
+        },
+        {
+          "id": "SEN-POST-W03",
+          "speaker": "PIM",
+          "text": "“Miss Senna! You’re not supposed to be here!”"
+        },
+        {
+          "id": "SEN-POST-W04",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I’m not working. I’m resting. Alphabetically.”"
+        },
+        {
+          "id": "SEN-POST-W05",
+          "speaker": "NARRATOR",
+          "text": "She seems happy. She also looks exactly the way she does every other day."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-POST-C1-ENJOY",
+      "outcomeId": "SEN-POST-O-ENJOY",
+      "outcomeClass": "correct",
+      "labelText": "“Mushroom walk. Slow, no picking. Then pastries, and I’ll do the inspecting.”",
+      "branch": [
+        {
+          "id": "SEN-POST-S01",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“A walk. With no patient at the end of it.”"
+        },
+        {
+          "id": "SEN-POST-S02",
+          "speaker": "NARRATOR",
+          "text": "You walk slowly and look down a lot. Mushrooms turn out to be everywhere, once someone points."
+        },
+        {
+          "id": "SEN-POST-S03",
+          "speaker": "NARRATOR",
+          "text": "She keeps her gloved hands clasped behind her back, so they can’t pick anything."
+        },
+        {
+          "id": "SEN-POST-S04",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“*Amanita.* Gorgeous. Don’t touch it. Don’t even breathe on it rudely.”"
+        },
+        {
+          "id": "SEN-POST-S05",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“That’s a puffball. A raindrop hits it and it sighs out a tiny cloud. Completely harmless. Shameless show-off.”"
+        },
+        {
+          "id": "SEN-POST-S06",
+          "speaker": "NARRATOR",
+          "text": "Afterward you buy two pastries. You hand her one and tell her you’ve already inspected it. Personally."
+        },
+        {
+          "id": "SEN-POST-S07",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Personally.”"
+        },
+        {
+          "id": "SEN-POST-S08",
+          "speaker": "NARRATOR",
+          "text": "She inspects it again anyway. You let her. She hums through most of it."
+        },
+        {
+          "id": "SEN-POST-S09",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Nothing went wrong all day. I kept checking.”"
+        },
+        {
+          "id": "SEN-POST-S10",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Same again next time they confiscate my pockets.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-POST-C1-DULL",
+      "outcomeId": "SEN-POST-O-DULL",
+      "outcomeClass": "offensive",
+      "labelText": "“So you’re no fun unless someone’s ill. Good to know.”",
+      "branch": [
+        {
+          "id": "SEN-POST-X01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Someone’s always ill. I’ll go and find them.”"
+        },
+        {
+          "id": "SEN-POST-X02",
+          "speaker": "NARRATOR",
+          "text": "She leaves to find someone with a splinter. It doesn’t take her long."
+        }
+      ]
+    }
+  ]
+}

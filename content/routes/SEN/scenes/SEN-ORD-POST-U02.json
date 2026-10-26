@@ -1,0 +1,86 @@
+{
+  "sceneId": "SEN-ORD-POST-U02",
+  "title": "Deficiency",
+  "intro": [
+    {
+      "id": "SEN-ORD-POST-U02-L01",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“I’ve been experiencing a deficiency.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U02-L02",
+      "speaker": "PLAYER",
+      "text": "“Iron?”"
+    },
+    {
+      "id": "SEN-ORD-POST-U02-L03",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“You. Onset was the moment you left last time.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U02-L04",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Symptoms. I look up whenever anyone walks toward me. Fourteen times so far. Twelve were Pim.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U02-L05",
+      "speaker": "SENNA",
+      "expression": "ANNOYED",
+      "text": "“One was a goose. I don’t want to discuss the goose.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U02-L06",
+      "speaker": "NARRATOR",
+      "text": "She opens her notebook to a page headed *Treatment* and waits, pencil ready."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-POST-U02-C1-YES",
+      "outcomeId": "SEN-ORD-POST-U02-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“Same here. I kept turning to tell you things, and you weren’t there.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U02-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“Mutual.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U02-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "Under *Treatment* she writes *Frequent doses.* She looks at it, crosses out *Frequent*, and writes *Daily.*"
+        },
+        {
+          "id": "SEN-ORD-POST-U02-R-YES-03",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Now tell me the things. Oldest first.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-U02-C1-NO",
+      "outcomeId": "SEN-ORD-POST-U02-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“Have you tried leeches? I hear Doctor Leeches swears by them.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U02-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“He’d prescribe six and a brisk walk.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U02-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She closes the notebook. The *Treatment* page stays blank."
+        }
+      ]
+    }
+  ]
+}

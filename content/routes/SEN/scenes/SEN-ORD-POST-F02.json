@@ -1,0 +1,79 @@
+{
+  "sceneId": "SEN-ORD-POST-F02",
+  "title": "Quiet",
+  "intro": [
+    {
+      "id": "SEN-ORD-POST-F02-L01",
+      "speaker": "NARRATOR",
+      "text": "Senna sits down beside you and folds her hands in her lap. They stay there for almost a minute."
+    },
+    {
+      "id": "SEN-ORD-POST-F02-L02",
+      "speaker": "NARRATOR",
+      "text": "Then the left one drifts toward the pocket labeled *twine*. She puts it back."
+    },
+    {
+      "id": "SEN-ORD-POST-F02-L03",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“I’m practicing sitting. Without sorting anything.”"
+    },
+    {
+      "id": "SEN-ORD-POST-F02-L04",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“So far it’s harder than getting Pim to take his cough syrup.”"
+    },
+    {
+      "id": "SEN-ORD-POST-F02-L05",
+      "speaker": "SENNA",
+      "expression": "PLAYFUL",
+      "text": "“Stay if you like. No talking. That’s the whole prescription.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-POST-F02-C1-NO",
+      "outcomeId": "SEN-ORD-POST-F02-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“Want a distraction? I could tell you how I once fixed a printer by yelling at it.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-F02-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“What’s a printer?”"
+        },
+        {
+          "id": "SEN-ORD-POST-F02-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "You explain. It takes a while. By the end, all her twine is sorted by length."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-F02-C1-YES",
+      "outcomeId": "SEN-ORD-POST-F02-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“Give me the hand that keeps wandering. I’ll keep it out of the twine.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-F02-R-YES-01",
+          "speaker": "NARRATOR",
+          "text": "She studies your hand like a sample of unknown origin. Then she puts hers in it."
+        },
+        {
+          "id": "SEN-ORD-POST-F02-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "Nothing else happens for a good while. The twine stays in its pocket."
+        },
+        {
+          "id": "SEN-ORD-POST-F02-R-YES-03",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Pulse elevated. Mine. That’s not going in the notes.”"
+        }
+      ]
+    }
+  ]
+}

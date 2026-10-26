@@ -1,0 +1,92 @@
+{
+  "sceneId": "SEN-ORD-POST-F03",
+  "title": "Spectacles, Again",
+  "intro": [
+    {
+      "id": "SEN-ORD-POST-F03-L01",
+      "speaker": "NARRATOR",
+      "text": "Senna is searching her apron one labeled pocket at a time. She reaches *sweets, for patients* and stops."
+    },
+    {
+      "id": "SEN-ORD-POST-F03-L02",
+      "speaker": "SENNA",
+      "expression": "ANNOYED",
+      "text": "“My spectacles. I put them somewhere safe. I remember being very pleased with myself.”"
+    },
+    {
+      "id": "SEN-ORD-POST-F03-L03",
+      "speaker": "NARRATOR",
+      "text": "Something small and wire-framed is perched on top of your head."
+    },
+    {
+      "id": "SEN-ORD-POST-F03-L04",
+      "speaker": "PLAYER",
+      "text": "“Senna. Look up.”"
+    },
+    {
+      "id": "SEN-ORD-POST-F03-L05",
+      "speaker": "SENNA",
+      "expression": "SURPRISED",
+      "text": "“Oh. Yes. I put them on you. You were the only thing nearby that wasn’t going anywhere.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-POST-F03-C1-OFF",
+      "outcomeId": "SEN-ORD-POST-F03-O-OFF",
+      "outcomeClass": "offensive",
+      "labelText": "“How do you lose things on your own head? Or, apparently, mine?”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-F03-R-OFF-01",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“Practice.”"
+        },
+        {
+          "id": "SEN-ORD-POST-F03-R-OFF-02",
+          "speaker": "NARRATOR",
+          "text": "She lifts them off your head and leaves. Your head feels noticeably colder."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-F03-C1-NO",
+      "outcomeId": "SEN-ORD-POST-F03-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“Here. Maybe pick one place for them and always use it?”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-F03-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“One place. Yes. I did pick one.”"
+        },
+        {
+          "id": "SEN-ORD-POST-F03-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She pushes them up onto her own head, where she’ll lose them again before you’ve finished talking."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-F03-C1-YES",
+      "outcomeId": "SEN-ORD-POST-F03-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“Leave them with me. I’ll guard them.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-F03-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Good. Don’t lean forward.”"
+        },
+        {
+          "id": "SEN-ORD-POST-F03-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She goes back to her notes. Every so often she borrows them to read one line, then puts them back on your head."
+        }
+      ]
+    }
+  ]
+}

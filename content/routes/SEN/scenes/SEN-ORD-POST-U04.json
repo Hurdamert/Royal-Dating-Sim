@@ -1,0 +1,98 @@
+{
+  "sceneId": "SEN-ORD-POST-U04",
+  "title": "The Apprentice",
+  "intro": [
+    {
+      "id": "SEN-ORD-POST-U04-L01",
+      "speaker": "NARRATOR",
+      "text": "Pim arrives at a run, waving a list. The handwriting gets bigger toward the bottom."
+    },
+    {
+      "id": "SEN-ORD-POST-U04-L02",
+      "speaker": "PIM",
+      "text": "“Miss Senna, I want to learn medicine! Which plants are poison? Can I hold the foxglove? Are there needles?”"
+    },
+    {
+      "id": "SEN-ORD-POST-U04-L03",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“All of them, in the right amount. No. And there are no needles, Pim. There have never been needles.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U04-L04",
+      "speaker": "NARRATOR",
+      "text": "She takes the list and folds it very small, the way she puts away anything with an edge."
+    },
+    {
+      "id": "SEN-ORD-POST-U04-L05",
+      "speaker": "SENNA",
+      "expression": "WORRIED",
+      "text": "“He touches everything. Last week he licked a doorknob to find out what brass tastes like.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-POST-U04-C1-NO",
+      "outcomeId": "SEN-ORD-POST-U04-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“Maybe he’s a bit young for this? The stables might be safer for now.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U04-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“The stables. Where the horses kick.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U04-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "Pim goes back anyway. Senna watches him the whole way, as if he might trip over the air."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-U04-C1-YES",
+      "outcomeId": "SEN-ORD-POST-U04-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“Start him somewhere safe. Who’s in charge of counting the boiled sweets?”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U04-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“The sweets. Nothing in that bag can hurt him except the arithmetic.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U04-R-YES-02",
+          "speaker": "PIM",
+          "text": "“Forty-one! Is that right? Is it a test? Did I pass?”"
+        },
+        {
+          "id": "SEN-ORD-POST-U04-R-YES-03",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“It’s forty. You’ve got one in your cheek. Write *forty*.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-U04-C1-OFF",
+      "outcomeId": "SEN-ORD-POST-U04-O-OFF",
+      "outcomeClass": "offensive",
+      "labelText": "“Why bother? He’s just a stable boy.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U04-R-OFF-01",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“He can name six plants you shouldn’t eat. You’ve tried to eat two of them.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U04-R-OFF-02",
+          "speaker": "NARRATOR",
+          "text": "She takes Pim by the sleeve and walks off, already explaining the first one."
+        }
+      ]
+    }
+  ]
+}

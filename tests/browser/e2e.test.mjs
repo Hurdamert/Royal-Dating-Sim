@@ -444,6 +444,45 @@ describe('End-to-end (built site, Chromium)', () => {
     await ctx.close();
   });
 
+  test('C/D (UI) Senna’s route: chosen from four princesses, perfect play wins on Day 15, her milestone shows its illustration, the epilogue moves to the Royal Gardens', async () => {
+    const { ctx, page } = await open();
+    await page.getByTestId('new-run').click();
+    assert.equal(await page.locator('input[data-route]').count(), 4, 'four princesses to choose from');
+    assert.match(await page.getByTestId('new-run-screen').innerText(), /Four princesses/);
+    await shot(page, 'desktop-1280x850-new-run-four');
+    await page.getByRole('button', { name: 'Back' }).click();
+    await startRun(page, 'SEN');
+    let sawCg = false;
+    let firstTalk = true;
+    const run = await playRoute(page, 'SEN', {
+      onEncounter: async (kind) => {
+        await page.getByTestId('encounter').waitFor();
+        if (kind === 'midpoint') {
+          sawCg = (await page.getByTestId('stage').getAttribute('data-stage')) === 'cg';
+          assert.equal(await page.getByTestId('stage').getAttribute('data-route'), 'SEN');
+          await shot(page, 'desktop-1280x850-senna-midpoint-cg');
+        } else if (firstTalk) {
+          firstTalk = false;
+          await page.getByTestId('continue').click();
+          await shot(page, 'desktop-1280x850-senna-dialogue');
+        }
+      },
+    });
+    assert.equal(run.outcome, 'won');
+    assert.equal(run.route, 'SEN');
+    assert.equal(run.journal.at(-1).dayBefore, 15, 'perfect Senna route through the UI wins on Day 15');
+    assert.ok(sawCg, 'her milestone shows its illustration');
+    await page.getByTestId('presentation').waitFor();
+    assert.equal(await page.getByTestId('presentation').getAttribute('data-scene-id'), 'SEN-EPI-01');
+    assert.equal(await page.getByTestId('stage').getAttribute('data-location'), 'palace_court');
+    for (let i = 0; i < 60 && (await page.getByTestId('stage').getAttribute('data-location')) !== 'royal_gardens'; i++) await page.getByTestId('continue').click();
+    assert.equal(await page.getByTestId('stage').getAttribute('data-location'), 'royal_gardens', 'epilogue moves to the gardens at SEN-EPI-LATER');
+    while (!(await page.getByTestId('ended').count())) await page.getByTestId('continue').click();
+    await page.getByRole('button', { name: 'Endings gallery' }).click();
+    assert.equal(await page.locator('[data-route="SEN"][data-unlocked="true"]').count(), 1);
+    await ctx.close();
+  });
+
   test('D06/E11 (UI) Day 28 evening ends the run with CORE-FAIL-01; journal stays readable; restart needs confirmation', async () => {
     const { ctx, page } = await open(PHONE);
     await startRun(page, 'NER');

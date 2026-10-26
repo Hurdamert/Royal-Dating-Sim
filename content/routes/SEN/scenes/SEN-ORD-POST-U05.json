@@ -1,0 +1,85 @@
+{
+  "sceneId": "SEN-ORD-POST-U05",
+  "title": "The Rota",
+  "intro": [
+    {
+      "id": "SEN-ORD-POST-U05-L01",
+      "speaker": "NARRATOR",
+      "text": "Senna unfolds a rota from her apron. Every hour is filled in, in very small handwriting."
+    },
+    {
+      "id": "SEN-ORD-POST-U05-L02",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“I’ve made a change. Bottom line.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U05-L03",
+      "speaker": "NARRATOR",
+      "text": "Under *Pim: sweets, bandages, no needles* is your name. Beside it: *Moral support.*"
+    },
+    {
+      "id": "SEN-ORD-POST-U05-L04",
+      "speaker": "PLAYER",
+      "text": "“I don’t know any medicine.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U05-L05",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Correct. That’s why you’re not on bandages.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U05-L06",
+      "speaker": "SENNA",
+      "expression": "PLAYFUL",
+      "text": "“It’s a real post. Dorrance has one too. His says *Leeches (supervised).*”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-POST-U05-C1-YES",
+      "outcomeId": "SEN-ORD-POST-U05-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“I accept. First job offer I’ve ever had. What are the duties?”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U05-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Sit within reach. Hand me things when I point. Sit within reach some more.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U05-R-YES-02",
+          "speaker": "PLAYER",
+          "text": "“What’s the pay?”"
+        },
+        {
+          "id": "SEN-ORD-POST-U05-R-YES-03",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“One boiled sweet per shift. Don’t tell Pim. He’s on half.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-U05-C1-NO",
+      "outcomeId": "SEN-ORD-POST-U05-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“Couldn’t we do something fun instead? You’re always working.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U05-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Something fun. Instead.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U05-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She folds the rota back into her apron. Your name ends up on the inside of the fold."
+        }
+      ]
+    }
+  ]
+}

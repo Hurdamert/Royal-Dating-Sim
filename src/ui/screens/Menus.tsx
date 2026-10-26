@@ -6,7 +6,7 @@ import { CONTENT, getScene, sceneIds, supportString } from '../../core/content';
 import type { SessionSnapshot } from '../../persistence/session';
 import { ERROR_TEXT } from '../../persistence/errors';
 import { Confirm } from '../components/Modal';
-import { art, displayTitle, heartsText, ROUTE_NAME, ROUTE_TAGLINE, SLOT_NAME } from '../labels';
+import { art, displayTitle, heartsText, ROUTE_NAME, ROUTE_TAGLINE, SLOT_NAME, ART_PLACEHOLDER } from '../labels';
 
 export function Title({
   snap,
@@ -258,7 +258,8 @@ export function Credits({ onBack }: { onBack: () => void }) {
         All story text, characters and illustrations are original project content for <em>Royal Exceptions</em>, approved by the project owner. At the owner’s request
         the character art ships in an all-ages edit of the approved originals, and two pivotal-moment illustrations (Tavri’s <em>Private Confession</em>, Nerelle’s{' '}
         <em>Forbidden Journey</em>) were redrawn in seated poses with an AI image editor (FLUX.1 Kontext [dev], Black Forest Labs), using the approved art as the
-        reference. No stock imagery or generated runtime text is used.
+        reference. Senna’s route was added at the owner’s request
+        {ART_PLACEHOLDER.SEN ? '; her portraits and illustration are placeholders until her artwork is finished' : ''}. No stock imagery or generated runtime text is used.
         {` ${CONTENT.scenes ? Object.keys(CONTENT.scenes).length : 0} authored scenes are included.`}
       </p>
       <h2>Fonts</h2>

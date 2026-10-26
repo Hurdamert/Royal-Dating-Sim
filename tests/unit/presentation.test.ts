@@ -90,10 +90,16 @@ describe('Stage compositions', () => {
   });
 
   test('All-ages art: every shipped character image comes from its edit; reference sheets are not shipped; Nerelle ends at the waterline', async () => {
-    const derived = JSON.parse(readFileSync('public/art/derived_manifest.json', 'utf8')) as { assets: { asset_id: string; kind: string; file: string; edited_from?: string }[] };
-    const chars = derived.assets.filter((a) => a.kind === 'expression_sprite' || a.kind === 'midpoint_CG');
+    const derived = JSON.parse(readFileSync('public/art/derived_manifest.json', 'utf8')) as {
+      assets: { asset_id: string; kind: string; file: string; edited_from?: string; route?: string; route_status?: string }[];
+    };
+    const chars = derived.assets.filter((a) => (a.kind === 'expression_sprite' || a.kind === 'midpoint_CG') && !a.route);
     assert.equal(chars.length, 18);
     for (const a of chars) assert.ok(a.edited_from, `${a.asset_id} ships from its all-ages edit`);
+    // Owner-requested routes ship their own recorded art: five portraits and one illustration each.
+    const sen = derived.assets.filter((a) => a.route === 'SEN');
+    assert.deepEqual(sen.map((a) => a.asset_id).sort(), ['senna_senna_annoyed', 'senna_senna_lamplight', 'senna_senna_neutral', 'senna_senna_playful', 'senna_senna_surprised', 'senna_senna_worried']);
+    for (const a of sen) assert.ok(a.route_status === 'placeholder' || a.route_status === 'generated', a.asset_id);
     assert.equal(derived.assets.filter((a) => a.kind === 'character_sheet').length, 0, 'reference sheets are not shipped');
     // Owner request: no illustration shows a princess lying down. The two whose
     // originals do ship as recorded seated redraws: reference → editor output →

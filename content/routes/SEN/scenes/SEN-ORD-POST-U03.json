@@ -1,0 +1,96 @@
+{
+  "sceneId": "SEN-ORD-POST-U03",
+  "title": "Doctor Leeches Asks for Help",
+  "intro": [
+    {
+      "id": "SEN-ORD-POST-U03-L01",
+      "speaker": "NARRATOR",
+      "text": "Royal Physician Dorrance approaches with his hat held humbly in both hands. It doesn’t suit him."
+    },
+    {
+      "id": "SEN-ORD-POST-U03-L02",
+      "speaker": "PHYSICIAN",
+      "text": "“Your Highness. A purely academic question. A stable hand has a rash that four rounds of leeches have failed to improve.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U03-L03",
+      "speaker": "PHYSICIAN",
+      "text": "“If anything, it has become offended.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U03-L04",
+      "speaker": "NARRATOR",
+      "text": "Senna goes very still, like a cat that has just been handed the ribbon."
+    },
+    {
+      "id": "SEN-ORD-POST-U03-L05",
+      "speaker": "SENNA",
+      "expression": "PLAYFUL",
+      "text": "“Doctor Leeches is asking me for help. Out loud. With witnesses.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-POST-U03-C1-NO",
+      "outcomeId": "SEN-ORD-POST-U03-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“Make him ask again in front of the whole court. He’s earned it.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U03-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Nine seconds of satisfaction. Then he leeches the stable hand again, out of spite.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U03-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She gives Dorrance the answer in one flat sentence. He’s gone before she can enjoy any of it."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-U03-C1-NO2",
+      "outcomeId": "SEN-ORD-POST-U03-O-NO2",
+      "outcomeClass": "wrong",
+      "labelText": "“You don’t owe him anything. Let him work it out himself.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U03-R-NO2-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“The stable hand would like him to work it out faster.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U03-R-NO2-02",
+          "speaker": "NARRATOR",
+          "text": "She tells Dorrance briskly, the way she’d hand back a glove he dropped."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-U03-C1-YES",
+      "outcomeId": "SEN-ORD-POST-U03-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“Help him. Then gloat to me afterward. In detail.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U03-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“New saddle soap. Change it. Stop the leeches. Mostly stop the leeches.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U03-R-YES-02",
+          "speaker": "PHYSICIAN",
+          "text": "“The saddle soap. Of course. I was coming to that.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U03-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "When he’s gone, she opens her notebook to a fresh page and writes *Gloating* across the top."
+        }
+      ]
+    }
+  ]
+}

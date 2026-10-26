@@ -1,0 +1,98 @@
+{
+  "sceneId": "SEN-ORD-POST-F01",
+  "title": "Pastry Analysis",
+  "intro": [
+    {
+      "id": "SEN-ORD-POST-F01-L01",
+      "speaker": "NARRATOR",
+      "text": "A grateful patient has given Senna a pastry. She breaks it in half and holds both halves up to the light."
+    },
+    {
+      "id": "SEN-ORD-POST-F01-L02",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Don’t eat that.”"
+    },
+    {
+      "id": "SEN-ORD-POST-F01-L03",
+      "speaker": "PLAYER",
+      "text": "“You haven’t given it to me.”"
+    },
+    {
+      "id": "SEN-ORD-POST-F01-L04",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Preemptively. Don’t.”"
+    },
+    {
+      "id": "SEN-ORD-POST-F01-L05",
+      "speaker": "NARRATOR",
+      "text": "Out comes the magnifying lens. She questions a single currant until it has nothing left to say."
+    },
+    {
+      "id": "SEN-ORD-POST-F01-L06",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Butter. Currants. Something the baker is calling cinnamon.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-POST-F01-C1-YES",
+      "outcomeId": "SEN-ORD-POST-F01-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“What’s he calling cinnamon, then? I’ll wait for the full report.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-F01-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Nutmeg. A big enough dose makes you very ill. This is a festive dose.”"
+        },
+        {
+          "id": "SEN-ORD-POST-F01-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She hands you the bigger half. You can tell she checked that too."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-F01-C1-NO",
+      "outcomeId": "SEN-ORD-POST-F01-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“I’ll try mine first. If I’m fine, you’re fine.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-F01-R-NO-01",
+          "speaker": "NARRATOR",
+          "text": "You eat your half before she can stop you."
+        },
+        {
+          "id": "SEN-ORD-POST-F01-R-NO-02",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“A study with one participant. Terrible science. I’m not telling you the result.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-F01-C1-NO2",
+      "outcomeId": "SEN-ORD-POST-F01-O-NO2",
+      "outcomeClass": "wrong",
+      "labelText": "“That’s cinnamon. I can smell it from here.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-F01-R-NO2-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“It’s nutmeg. The cinnamon is a rumor.”"
+        },
+        {
+          "id": "SEN-ORD-POST-F01-R-NO2-02",
+          "speaker": "NARRATOR",
+          "text": "She hands you the smaller half."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "sceneId": "SEN-ORD-POST-U06",
+  "title": "Three Years",
+  "intro": [
+    {
+      "id": "SEN-ORD-POST-U06-L01",
+      "speaker": "NARRATOR",
+      "text": "Senna presses a small paper packet into your hand. On the front, in her handwriting: *3 years.*"
+    },
+    {
+      "id": "SEN-ORD-POST-U06-L02",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Seeds. It takes three years to flower. After that it flowers every year, if it likes you.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U06-L03",
+      "speaker": "PLAYER",
+      "text": "“What is it?”"
+    },
+    {
+      "id": "SEN-ORD-POST-U06-L04",
+      "speaker": "SENNA",
+      "expression": "PLAYFUL",
+      "text": "“You’ll find out in three years.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U06-L05",
+      "speaker": "NARRATOR",
+      "text": "She labels her own gloves *left* and *right*. This packet says *3 years* and nothing else."
+    },
+    {
+      "id": "SEN-ORD-POST-U06-L06",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“I kept a packet for myself. That’s not relevant.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-POST-U06-C1-NO",
+      "outcomeId": "SEN-ORD-POST-U06-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“Three years? Have you got anything faster? I’m terrible at waiting.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U06-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Cress. Four days.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U06-R-NO-02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Very good in sandwiches.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U06-R-NO-03",
+          "speaker": "NARRATOR",
+          "text": "She takes the packet back and tucks it into the pocket labeled *later*."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-U06-C1-YES",
+      "outcomeId": "SEN-ORD-POST-U06-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“How do I keep it alive for three years? Start from the beginning.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U06-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“From the beginning.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U06-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She talks for a long time. Frost. Slugs. Which slugs are friends. How to apologize to an overwatered seedling."
+        },
+        {
+          "id": "SEN-ORD-POST-U06-R-YES-03",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Year three is mostly waiting. I’ll check on it. On you. On it.”"
+        }
+      ]
+    }
+  ]
+}

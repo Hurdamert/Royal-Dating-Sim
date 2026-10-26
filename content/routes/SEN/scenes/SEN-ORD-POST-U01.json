@@ -1,0 +1,85 @@
+{
+  "sceneId": "SEN-ORD-POST-U01",
+  "title": "Pulse",
+  "intro": [
+    {
+      "id": "SEN-ORD-POST-U01-L01",
+      "speaker": "NARRATOR",
+      "text": "Mid-sentence, Senna takes your wrist and starts counting under her breath."
+    },
+    {
+      "id": "SEN-ORD-POST-U01-L02",
+      "speaker": "PLAYER",
+      "text": "“Am I dying?”"
+    },
+    {
+      "id": "SEN-ORD-POST-U01-L03",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Not of this. Don’t talk. You’ll skew it.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U01-L04",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Elevated. Either you like me or you took the stairs.”"
+    },
+    {
+      "id": "SEN-ORD-POST-U01-L05",
+      "speaker": "NARRATOR",
+      "text": "She waits with her pencil out, as if each answer goes in a different column."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-POST-U01-C1-NO",
+      "outcomeId": "SEN-ORD-POST-U01-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“The stairs. Definitely the stairs. They were very steep.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U01-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“You haven’t moved in ten minutes.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U01-R-NO-02",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“Hm. Disappointing.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U01-R-NO-03",
+          "speaker": "NARRATOR",
+          "text": "She writes *stairs* in her notebook, followed by a small, pointed question mark."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-POST-U01-C1-YES",
+      "outcomeId": "SEN-ORD-POST-U01-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“Both. Mostly the first.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-POST-U01-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“Mostly the first.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U01-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She lets go of your wrist and takes her own pulse instead. She doesn’t tell you the number."
+        },
+        {
+          "id": "SEN-ORD-POST-U01-R-YES-03",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“It’s fine. It’s the stairs.”"
+        }
+      ]
+    }
+  ]
+}
