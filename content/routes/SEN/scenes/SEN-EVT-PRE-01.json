@@ -11,7 +11,7 @@
     {
       "id": "SEN-PRE-002",
       "speaker": "PIM",
-      "text": "“Senna! Gran bought this! *Grandmother’s Sleep Tea!* It’s got grandmother on it, so it’s safe, isn’t it? Can I have some?”"
+      "text": "“Miss Senna! Gran bought this! *Grandmother’s Sleep Tea!* It’s got grandmother on it, so it’s safe, isn’t it? Can I have some?”"
     },
     {
       "id": "SEN-PRE-003",
@@ -22,7 +22,7 @@
       "id": "SEN-PRE-004",
       "speaker": "SENNA",
       "expression": "WORRIED",
-      "text": "“Pim. Where did your gran buy this?”"
+      "text": "“Pim. Tell your gran not to drink this. Where did she buy it?”"
     },
     {
       "id": "SEN-PRE-005",
@@ -170,15 +170,9 @@
           "text": "“Anyone could’ve! Right! Sleep Tea’s off, everyone! Refunds at the front, and a free honey cake each!”"
         },
         {
-          "id": "SEN-PRE-S08",
-          "speaker": "SENNA",
-          "expression": "NEUTRAL",
-          "text": "“Nobody eat the honey cake until I’ve looked at it.”"
-        },
-        {
           "id": "SEN-PRE-S09",
           "speaker": "NARRATOR",
-          "text": "She relabels the jar *EVIDENCE*. Then she inspects a honey cake. It passes, and Pim gets the first one."
+          "text": "She relabels the jar *EVIDENCE*. Then she wraps up a honey cake for Pim’s gran."
         }
       ]
     },

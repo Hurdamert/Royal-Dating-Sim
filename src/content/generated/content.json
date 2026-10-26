@@ -25,7 +25,7 @@
         "requested": "can you implement a character route who is like mao mao from the apothecary diaries?",
         "date": "2026-10-25",
         "scenes": 25,
-        "filesSha256": "c9f3b6320c2e07970f28e69adee799c56f6c81c8f85d8cef828babff20e68b4e"
+        "filesSha256": "96caa1261269a417b6e378a058c15a8a931b0dc8c76c07326969ab84950c35c8"
       }
     }
   },
@@ -7080,7 +7080,7 @@
           "id": "SEN-EPI-001",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "The Palace Court is dressed for a wedding. Nearly every dish wears a little label in the bride’s capitals: *SAFE*."
+          "text": "The Palace Court is dressed for a wedding. Every centerpiece wears a little label in the bride’s capitals: *NOT FOOD*."
         },
         {
           "id": "SEN-EPI-002",
@@ -7110,7 +7110,7 @@
           "id": "SEN-EPI-006",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Doctor Dorrance rises to give a toast. His cup of tea has been checked."
+          "text": "Doctor Dorrance rises to give a toast. He has written it on four cards and drops two of them."
         },
         {
           "id": "SEN-EPI-007",
@@ -7140,13 +7140,13 @@
           "id": "SEN-EPI-011",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Then come the vows. Senna’s are numbered. You have never been so proud of anyone in your life."
+          "text": "Then come the vows. Senna’s are numbered. You recognize the format."
         },
         {
           "id": "SEN-EPI-012",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“One. I’ll check your tea. Two. I’ll tell you when you’re wrong about plants. That’ll be often.”"
+          "text": "“One. Some days I’ll sit down without sorting anything. Two. I’ll tell you when you’re wrong about plants. That’ll be often.”"
         },
         {
           "id": "SEN-EPI-013",
@@ -7200,13 +7200,13 @@
           "id": "SEN-EPI-020",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“Don’t be sentimental about a hellebore. It’s poisonous from root to petal.”"
+          "text": "“Don’t be sentimental about a hellebore. It isn’t.”"
         },
         {
           "id": "SEN-EPI-021",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“I don’t need anything. I want you here. That’s different. I checked.”"
+          "text": "“Nothing out here is sprained. I came anyway. I want you here. That’s different. I checked.”"
         },
         {
           "id": "SEN-EPI-022",
@@ -7232,7 +7232,7 @@
       "meta": {
         "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
         "Type": "Senna terminal-success epilogue; no extra action or encounter cost.",
-        "Location": "Opens where Senna is scheduled; presented at the Palace Court within the same encounter (not a new map location).",
+        "Location": "Opens where Senna is scheduled; presented at the Palace Court, then the Royal Gardens within the same encounter (not a new map location).",
         "Objective": "",
         "END": "Display only; must not change any state."
       }
@@ -7284,7 +7284,7 @@
           "id": "SEN-POST-007",
           "speaker": "SENNA",
           "expression": "WORRIED",
-          "text": "“He would, too. He’s been waiting years for this.”"
+          "text": "“He would, too. He’s been waiting all season for this.”"
         },
         {
           "id": "SEN-POST-008",
@@ -7305,22 +7305,10 @@
           "text": "“What do people do with a day that has nothing wrong in it?”"
         },
         {
-          "id": "SEN-POST-011",
-          "speaker": "PLAYER",
-          "expression": null,
-          "text": "“So what do you like? Not for work. Just because.”"
-        },
-        {
           "id": "SEN-POST-012",
-          "speaker": "SENNA",
-          "expression": "NEUTRAL",
-          "text": "“Mushrooms. Finding where they’ve come up. Looking at them without picking any.”"
-        },
-        {
-          "id": "SEN-POST-013",
-          "speaker": "SENNA",
-          "expression": "NEUTRAL",
-          "text": "“Pastries, too. But I can’t eat one without inspecting it, so that’s work again.”"
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Her eyes keep drifting to a small brown mushroom by your boot. She looks away from it on purpose."
         },
         {
           "id": "SEN-POST-014",
@@ -7499,7 +7487,7 @@
           "id": "SEN-PRE-002",
           "speaker": "PIM",
           "expression": null,
-          "text": "“Senna! Gran bought this! *Grandmother’s Sleep Tea!* It’s got grandmother on it, so it’s safe, isn’t it? Can I have some?”"
+          "text": "“Miss Senna! Gran bought this! *Grandmother’s Sleep Tea!* It’s got grandmother on it, so it’s safe, isn’t it? Can I have some?”"
         },
         {
           "id": "SEN-PRE-003",
@@ -7511,7 +7499,7 @@
           "id": "SEN-PRE-004",
           "speaker": "SENNA",
           "expression": "WORRIED",
-          "text": "“Pim. Where did your gran buy this?”"
+          "text": "“Pim. Tell your gran not to drink this. Where did she buy it?”"
         },
         {
           "id": "SEN-PRE-005",
@@ -7680,16 +7668,10 @@
               "text": "“Anyone could’ve! Right! Sleep Tea’s off, everyone! Refunds at the front, and a free honey cake each!”"
             },
             {
-              "id": "SEN-PRE-S08",
-              "speaker": "SENNA",
-              "expression": "NEUTRAL",
-              "text": "“Nobody eat the honey cake until I’ve looked at it.”"
-            },
-            {
               "id": "SEN-PRE-S09",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She relabels the jar *EVIDENCE*. Then she inspects a honey cake. It passes, and Pim gets the first one."
+              "text": "She relabels the jar *EVIDENCE*. Then she wraps up a honey cake for Pim’s gran."
             }
           ],
           "internalLabel": "Correct; net +2 half-hearts"
@@ -7762,7 +7744,7 @@
           "id": "SEN-FIN-004",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“The packet I kept for myself. It turned out to be relevant.”"
+          "text": "“I’ve been saving this one.”"
         },
         {
           "id": "SEN-FIN-005",
@@ -7786,7 +7768,7 @@
           "id": "SEN-FIN-008",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“You were going to find out in three years. I moved it up.”"
+          "text": "“Three years to flower. Then every year after, if it likes you.”"
         },
         {
           "id": "SEN-FIN-009",
@@ -7804,13 +7786,13 @@
           "id": "SEN-FIN-011",
           "speaker": "SENNA",
           "expression": "WORRIED",
-          "text": "“I don’t know what goes in it. I’ve rubbed it out twice.”"
+          "text": "“I don’t know what goes in it. I’ve rubbed it out so often the wood’s gone thin.”"
         },
         {
           "id": "SEN-FIN-012",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“Pulse, fast. Hands, unreliable. Face, warm. I’d blame the sun, but there isn’t any.”"
+          "text": "“Pulse, fast. Hands, unreliable. Face, warm. I’d blame the digging. I’ve dug one hole.”"
         },
         {
           "id": "SEN-FIN-013",
@@ -7842,7 +7824,7 @@
         {
           "choiceId": "SEN-FIN-C1-SPEECH",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Senna, ever since you swatted a tart out of my hand, I’ve known. You’re the rarest thing in this garden. Marry me?”",
+          "labelText": "“Senna. Since the day you swatted a tart from my hand, my heart has been your most devoted patient. Marry me?”",
           "outcomeId": "SEN-FIN-O-SPEECH",
           "outcomeClass": "wrong",
           "netHalfHearts": 0,
@@ -7857,7 +7839,7 @@
               "id": "SEN-FIN-W02",
               "speaker": "SENNA",
               "expression": "NEUTRAL",
-              "text": "“You rehearsed it. You did a hand gesture on *rarest*.”"
+              "text": "“You rehearsed it. You did a hand gesture on *devoted*.”"
             },
             {
               "id": "SEN-FIN-W03",
@@ -8024,7 +8006,7 @@
           "id": "SEN-FR-002",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“The seed hasn’t come up. It’s a three-year seed. I check it anyway.”"
+          "text": "“The seed hasn’t come up. The literature says four months. I check it anyway.”"
         },
         {
           "id": "SEN-FR-003",
@@ -8065,7 +8047,7 @@
               "id": "SEN-FR-S02",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She writes your name in the space, spelled right on the first try. She checks it twice anyway."
+              "text": "She writes your name in the space, spelled right on the first try. She reads it back to herself under her breath."
             },
             {
               "id": "SEN-FR-S03",
@@ -8185,13 +8167,13 @@
           "id": "SEN-MID-009",
           "speaker": "SENNA",
           "expression": "PLAYFUL",
-          "text": "“*Aconitum napellus.* Monkshood. The root looks like horseradish. Every so often a cook grates it over the beef, and the whole table’s mouth goes numb.”"
+          "text": "“*Aconitum napellus.* Monkshood. The root looks just like horseradish. That’s the whole problem.”"
         },
         {
           "id": "SEN-MID-010",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“I took a basket of it out of the palace kitchens. The cook thanked me, then asked me never to come back.”"
+          "text": "“I took a basket of it out of the palace kitchens before anyone found a grater. The cook thanked me, then asked me never to come back.”"
         },
         {
           "id": "SEN-MID-011",
@@ -8275,7 +8257,7 @@
           "id": "SEN-MID-024",
           "speaker": "SENNA",
           "expression": "WORRIED",
-          "text": "“Without one, I’m a princess who skipped every ball and sniffs people’s tea. That takes some putting up with.”"
+          "text": "“Without one, I’m a princess who skipped every ball and talks to roots. That takes some putting up with.”"
         },
         {
           "id": "SEN-MID-025",
@@ -8310,7 +8292,7 @@
               "id": "SEN-MID-W03",
               "speaker": "SENNA",
               "expression": "NEUTRAL",
-              "text": "“It’s kind. It’s also what I tell myself while I sweep.”"
+              "text": "“It’s kind. Hand me the feverfew.”"
             },
             {
               "id": "SEN-MID-W04",
@@ -8466,13 +8448,13 @@
           "id": "SEN-MR-001",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Senna sniffs a cup of something hot and holds it up to the light. Then she hands it to you."
+          "text": "Senna hands you a cup of something hot."
         },
         {
           "id": "SEN-MR-002",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“Mint. Only mint. I checked twice.”"
+          "text": "“Mint. I grew it.”"
         },
         {
           "id": "SEN-MR-003",
@@ -8490,7 +8472,7 @@
           "id": "SEN-MR-005",
           "speaker": "SENNA",
           "expression": "WORRIED",
-          "text": "“You said something kind. I’ve tried it in three jars. It doesn’t fit any of them.”"
+          "text": "“You said something kind. I’ve been turning it over. It answered a question I didn’t ask.”"
         }
       ],
       "choicePointId": "SEN-MR-C1",
@@ -8519,7 +8501,7 @@
               "id": "SEN-MR-W03",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She takes the cup back and rinses it, though it was clean. Then she says goodbye."
+              "text": "She takes the cup back and drinks the mint herself. Then she says goodbye."
             }
           ],
           "internalLabel": "Wrong; milestone remains pending, no hearts changed"
@@ -8554,7 +8536,7 @@
               "id": "SEN-MR-S04",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "She opens her notebook to a clean page and writes a heading: *Visitors*. Under it goes one name, underlined twice."
+              "text": "She writes your name on a label and ties it to the chair nearest the stove."
             }
           ],
           "internalLabel": "Correct; complete milestone, no hearts gained"
@@ -8646,7 +8628,7 @@
         {
           "choiceId": "SEN-ORD-POST-F01-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“I’ll try mine first. If I’m fine, you’re fine.”",
+          "labelText": "“Looks perfect. I’m eating mine while you finish.”",
           "outcomeId": "SEN-ORD-POST-F01-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -8661,7 +8643,7 @@
               "id": "SEN-ORD-POST-F01-R-NO-02",
               "speaker": "SENNA",
               "expression": "ANNOYED",
-              "text": "“A study with one participant. Terrible science. I’m not telling you the result.”"
+              "text": "“You ate it before the verdict. Now you’ll never know the verdict.”"
             }
           ],
           "internalLabel": "Ordinary incorrect, net +1 half-heart"
@@ -8737,7 +8719,7 @@
           "id": "SEN-ORD-POST-F02-L05",
           "speaker": "SENNA",
           "expression": "PLAYFUL",
-          "text": "“Stay if you like. No talking. That’s the whole prescription.”"
+          "text": "“Stay if you like. That’s the whole prescription.”"
         }
       ],
       "choicePointId": "SEN-ORD-POST-F02-C1",
@@ -8745,7 +8727,7 @@
         {
           "choiceId": "SEN-ORD-POST-F02-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Want a distraction? I could tell you how I once fixed a printer by yelling at it.”",
+          "labelText": "“Want a distraction? I could tell you about the time I lost an argument with a goat.”",
           "outcomeId": "SEN-ORD-POST-F02-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -8754,7 +8736,7 @@
               "id": "SEN-ORD-POST-F02-R-NO-01",
               "speaker": "SENNA",
               "expression": "NEUTRAL",
-              "text": "“What’s a printer?”"
+              "text": "“How badly?”"
             },
             {
               "id": "SEN-ORD-POST-F02-R-NO-02",
@@ -8789,7 +8771,7 @@
               "id": "SEN-ORD-POST-F02-R-YES-03",
               "speaker": "SENNA",
               "expression": "PLAYFUL",
-              "text": "“Pulse elevated. Mine. That’s not going in the notes.”"
+              "text": "“Four minutes without sorting anything. Don’t move.”"
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -8850,7 +8832,7 @@
         {
           "choiceId": "SEN-ORD-POST-F03-C1-OFF",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“How do you lose things on your own head? Or, apparently, mine?”",
+          "labelText": "“How does someone this scatterbrained run an infirmary?”",
           "outcomeId": "SEN-ORD-POST-F03-O-OFF",
           "outcomeClass": "offensive",
           "netHalfHearts": -1,
@@ -8859,7 +8841,7 @@
               "id": "SEN-ORD-POST-F03-R-OFF-01",
               "speaker": "SENNA",
               "expression": "ANNOYED",
-              "text": "“Practice.”"
+              "text": "“Very well. Ask anyone with a splinter.”"
             },
             {
               "id": "SEN-ORD-POST-F03-R-OFF-02",
@@ -9180,7 +9162,7 @@
           "id": "SEN-ORD-POST-U03-L04",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Senna goes very still, like a cat that has just been handed the ribbon."
+          "text": "Senna goes very still, like a cat that has just been handed the whole fish."
         },
         {
           "id": "SEN-ORD-POST-U03-L05",
@@ -9261,7 +9243,7 @@
               "id": "SEN-ORD-POST-U03-R-YES-03",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "When he’s gone, she opens her notebook to a fresh page and writes *Gloating* across the top."
+              "text": "When he’s gone, she turns to you. ‘Saddle soap,’ she says, and starts at the beginning."
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -9308,7 +9290,7 @@
           "id": "SEN-ORD-POST-U04-L04",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "She takes the list and folds it very small, the way she puts away anything with an edge."
+          "text": "She takes the list and folds it very small, as if it might go off."
         },
         {
           "id": "SEN-ORD-POST-U04-L05",
@@ -9640,25 +9622,25 @@
       "kind": "ordinary",
       "route": "SEN",
       "stage": "PRE",
-      "title": "Tea Inspection",
+      "title": "Four Sugars",
       "introLines": [
         {
           "id": "SEN-ORD-PRE-F01-L01",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "Someone has handed you a cup of tea. You lift it to drink, and Senna takes it out of your hands."
+          "text": "Someone has handed you a cup of tea. Before you can drink it, Senna leans over and breathes in the steam."
         },
         {
           "id": "SEN-ORD-PRE-F01-L02",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“One moment.”"
+          "text": "“Don’t mind me.”"
         },
         {
           "id": "SEN-ORD-PRE-F01-L03",
           "speaker": "NARRATOR",
           "expression": null,
-          "text": "She sniffs it. Then she dips a paper strip from her apron into it and squints at the strip."
+          "text": "She breathes in again, longer, with her eyes shut."
         },
         {
           "id": "SEN-ORD-PRE-F01-L04",
@@ -9670,13 +9652,13 @@
           "id": "SEN-ORD-PRE-F01-L05",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“It’s safe. It’s also bad.”"
+          "text": "“Drink it if you like. It’s only bad.”"
         },
         {
           "id": "SEN-ORD-PRE-F01-L06",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“I’ve smelled about four hundred cups of tea at this court. I’ve drunk none of them.”"
+          "text": "“I know every teapot at this court by smell. Nobody’s ever poured me one.”"
         }
       ],
       "choicePointId": "SEN-ORD-PRE-F01-C1",
@@ -9684,7 +9666,7 @@
         {
           "choiceId": "SEN-ORD-PRE-F01-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Thanks, but I can check my own tea.”",
+          "labelText": "“Thanks, but I like my tea the way it comes.”",
           "outcomeId": "SEN-ORD-PRE-F01-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -9707,7 +9689,7 @@
         {
           "choiceId": "SEN-ORD-PRE-F01-C1-YES",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“Want your own? You can smell it first. Twice, if you like.”",
+          "labelText": "“Want your own? I’ll pour. Smell it for as long as you like.”",
           "outcomeId": "SEN-ORD-PRE-F01-O-YES",
           "outcomeClass": "correct",
           "netHalfHearts": 2,
@@ -9722,13 +9704,13 @@
               "id": "SEN-ORD-PRE-F01-R-YES-02",
               "speaker": "NARRATOR",
               "expression": null,
-              "text": "You find her a cup. She inspects it for twice as long as yours, then drinks it."
+              "text": "You pour her a cup. She breathes it in for a long time before she drinks."
             },
             {
               "id": "SEN-ORD-PRE-F01-R-YES-03",
               "speaker": "SENNA",
               "expression": "PLAYFUL",
-              "text": "“Still bad. My face has gone warm. I’m blaming the tea.”"
+              "text": "“Still bad. I’ll have another.”"
             }
           ],
           "internalLabel": "Correct, net +2 half-hearts"
@@ -9775,7 +9757,7 @@
           "id": "SEN-ORD-PRE-F02-L04",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“I’ve retraced my steps. I’ve checked inside the herbal. Twice.”"
+          "text": "“I’ve retraced my steps. I’ve checked inside the herbal. And under it.”"
         },
         {
           "id": "SEN-ORD-PRE-F02-L05",
@@ -9874,19 +9856,13 @@
           "id": "SEN-ORD-PRE-F03-L03",
           "speaker": "PLAYER",
           "expression": null,
-          "text": "“Your label’s missing a verb.”"
+          "text": "“Your label stops halfway.”"
         },
         {
           "id": "SEN-ORD-PRE-F03-L04",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“It’s missing all of them. On purpose.”"
-        },
-        {
-          "id": "SEN-ORD-PRE-F03-L05",
-          "speaker": "SENNA",
-          "expression": "NEUTRAL",
-          "text": "“Whatever you were about to do with it, don’t.”"
+          "text": "“It stops where you should.”"
         }
       ],
       "choicePointId": "SEN-ORD-PRE-F03-C1",
@@ -9894,7 +9870,7 @@
         {
           "choiceId": "SEN-ORD-PRE-F03-C1-NO",
           "labelLineSpeaker": "PLAYER",
-          "labelText": "“I bet it’s the good sweets. Let me just have a peek.”",
+          "labelText": "“Should that really live in your apron? I’ll find it a safe shelf.”",
           "outcomeId": "SEN-ORD-PRE-F03-O-NO",
           "outcomeClass": "wrong",
           "netHalfHearts": 1,
@@ -9903,7 +9879,7 @@
               "id": "SEN-ORD-PRE-F03-R-NO-01",
               "speaker": "SENNA",
               "expression": "ANNOYED",
-              "text": "“Don’t.”"
+              "text": "“It lives in the apron because the apron is always with me.”"
             },
             {
               "id": "SEN-ORD-PRE-F03-R-NO-02",

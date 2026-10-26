@@ -15,19 +15,13 @@
     {
       "id": "SEN-ORD-PRE-F03-L03",
       "speaker": "PLAYER",
-      "text": "“Your label’s missing a verb.”"
+      "text": "“Your label stops halfway.”"
     },
     {
       "id": "SEN-ORD-PRE-F03-L04",
       "speaker": "SENNA",
       "expression": "NEUTRAL",
-      "text": "“It’s missing all of them. On purpose.”"
-    },
-    {
-      "id": "SEN-ORD-PRE-F03-L05",
-      "speaker": "SENNA",
-      "expression": "NEUTRAL",
-      "text": "“Whatever you were about to do with it, don’t.”"
+      "text": "“It stops where you should.”"
     }
   ],
   "options": [
@@ -35,13 +29,13 @@
       "choiceId": "SEN-ORD-PRE-F03-C1-NO",
       "outcomeId": "SEN-ORD-PRE-F03-O-NO",
       "outcomeClass": "wrong",
-      "labelText": "“I bet it’s the good sweets. Let me just have a peek.”",
+      "labelText": "“Should that really live in your apron? I’ll find it a safe shelf.”",
       "branch": [
         {
           "id": "SEN-ORD-PRE-F03-R-NO-01",
           "speaker": "SENNA",
           "expression": "ANNOYED",
-          "text": "“Don’t.”"
+          "text": "“It lives in the apron because the apron is always with me.”"
         },
         {
           "id": "SEN-ORD-PRE-F03-R-NO-02",

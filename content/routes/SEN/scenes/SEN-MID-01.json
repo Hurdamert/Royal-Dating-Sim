@@ -3,31 +3,146 @@
   "title": "Lamplight in the Infirmary",
   "objective": "See her as wanted, not only needed: you would keep her company even if nobody were ever ill again.",
   "intro": [
-    { "id": "SEN-MID-001", "speaker": "NARRATOR", "text": "Senna meets you with a lamp in one hand and a basket of herb bundles in the other. She gives you both." },
-    { "id": "SEN-MID-002", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Infirmary. The last patient’s gone home, so you can carry.”" },
-    { "id": "SEN-MID-003", "speaker": "NARRATOR", "text": "The infirmary is a narrow wing off the Palace Court. It smells of rosemary and clean linen, with a third smell you decide not to ask about." },
-    { "id": "SEN-MID-004", "speaker": "NARRATOR", "text": "Pim is asleep on a cot by the stove, still holding half a rolled bandage." },
-    { "id": "SEN-MID-005", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“He rolled forty bandages, then himself. I’m counting him as forty-one.”" },
-    { "id": "SEN-MID-006", "speaker": "NARRATOR", "text": "She sits at the long worktable and pulls the lamp close. A row of empty jars is waiting for labels." },
-    { "id": "SEN-MID-007", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Hold the twine. Tighter. It’s twine, not a sparrow.”" },
-    { "id": "SEN-MID-008", "speaker": "NARRATOR", "text": "She sorts dried leaves into the jars by smell. One pale root gets held up to the lamp and frowned at." },
-    { "id": "SEN-MID-009", "speaker": "SENNA", "expression": "PLAYFUL", "text": "“*Aconitum napellus.* Monkshood. The root looks like horseradish. Every so often a cook grates it over the beef, and the whole table’s mouth goes numb.”" },
-    { "id": "SEN-MID-010", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“I took a basket of it out of the palace kitchens. The cook thanked me, then asked me never to come back.”" },
-    { "id": "SEN-MID-011", "speaker": "NARRATOR", "text": "She labels the jar in square capitals: MONKSHOOD. NOT HORSERADISH. DO NOT GRATE. DO NOT, PIM." },
-    { "id": "SEN-MID-012", "speaker": "PLAYER", "text": "“Does Pim try to eat the stock?”" },
-    { "id": "SEN-MID-013", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Once. Lavender soap. In his defense, it was shaped like a cake.”" },
-    { "id": "SEN-MID-014", "speaker": "NARRATOR", "text": "From under her notebook she slides out a letter. It’s been folded and unfolded so often the paper has gone soft." },
-    { "id": "SEN-MID-015", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“My mother. Hollowmere post. It always arrives damp.”" },
-    { "id": "SEN-MID-016", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“‘Dearest Senna. The rain continues. Have you attended a ball? Any ball?’”" },
-    { "id": "SEN-MID-017", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“‘Have you found someone who will put up with you?’”" },
-    { "id": "SEN-MID-018", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“She’s underlined *put up with*. Three times. She’s escalating.”" },
-    { "id": "SEN-MID-019", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“I’ll send her sixty-two sprains and a bee sting. That usually ends the correspondence for a month.”" },
-    { "id": "SEN-MID-020", "speaker": "NARRATOR", "text": "She picks up the next label. She doesn’t write anything on it." },
-    { "id": "SEN-MID-021", "speaker": "SENNA", "expression": "WORRIED", "text": "“Nobody sends home the person who knows where the burn salve is.”" },
-    { "id": "SEN-MID-022", "speaker": "SENNA", "expression": "WORRIED", "text": "“So I always know where the burn salve is.”" },
-    { "id": "SEN-MID-023", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“An infirmary never runs out of sprains. There’s always a reason for me to be in the room.”" },
-    { "id": "SEN-MID-024", "speaker": "SENNA", "expression": "WORRIED", "text": "“Without one, I’m a princess who skipped every ball and sniffs people’s tea. That takes some putting up with.”" },
-    { "id": "SEN-MID-025", "speaker": "NARRATOR", "text": "She ties off a jar with a knot that could moor a ship. She still hasn’t looked up." }
+    {
+      "id": "SEN-MID-001",
+      "speaker": "NARRATOR",
+      "text": "Senna meets you with a lamp in one hand and a basket of herb bundles in the other. She gives you both."
+    },
+    {
+      "id": "SEN-MID-002",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Infirmary. The last patient’s gone home, so you can carry.”"
+    },
+    {
+      "id": "SEN-MID-003",
+      "speaker": "NARRATOR",
+      "text": "The infirmary is a narrow wing off the Palace Court. It smells of rosemary and clean linen, with a third smell you decide not to ask about."
+    },
+    {
+      "id": "SEN-MID-004",
+      "speaker": "NARRATOR",
+      "text": "Pim is asleep on a cot by the stove, still holding half a rolled bandage."
+    },
+    {
+      "id": "SEN-MID-005",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“He rolled forty bandages, then himself. I’m counting him as forty-one.”"
+    },
+    {
+      "id": "SEN-MID-006",
+      "speaker": "NARRATOR",
+      "text": "She sits at the long worktable and pulls the lamp close. A row of empty jars is waiting for labels."
+    },
+    {
+      "id": "SEN-MID-007",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Hold the twine. Tighter. It’s twine, not a sparrow.”"
+    },
+    {
+      "id": "SEN-MID-008",
+      "speaker": "NARRATOR",
+      "text": "She sorts dried leaves into the jars by smell. One pale root gets held up to the lamp and frowned at."
+    },
+    {
+      "id": "SEN-MID-009",
+      "speaker": "SENNA",
+      "expression": "PLAYFUL",
+      "text": "“*Aconitum napellus.* Monkshood. The root looks just like horseradish. That’s the whole problem.”"
+    },
+    {
+      "id": "SEN-MID-010",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“I took a basket of it out of the palace kitchens before anyone found a grater. The cook thanked me, then asked me never to come back.”"
+    },
+    {
+      "id": "SEN-MID-011",
+      "speaker": "NARRATOR",
+      "text": "She labels the jar in square capitals: MONKSHOOD. NOT HORSERADISH. DO NOT GRATE. DO NOT, PIM."
+    },
+    {
+      "id": "SEN-MID-012",
+      "speaker": "PLAYER",
+      "text": "“Does Pim try to eat the stock?”"
+    },
+    {
+      "id": "SEN-MID-013",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Once. Lavender soap. In his defense, it was shaped like a cake.”"
+    },
+    {
+      "id": "SEN-MID-014",
+      "speaker": "NARRATOR",
+      "text": "From under her notebook she slides out a letter. It’s been folded and unfolded so often the paper has gone soft."
+    },
+    {
+      "id": "SEN-MID-015",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“My mother. Hollowmere post. It always arrives damp.”"
+    },
+    {
+      "id": "SEN-MID-016",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“‘Dearest Senna. The rain continues. Have you attended a ball? Any ball?’”"
+    },
+    {
+      "id": "SEN-MID-017",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“‘Have you found someone who will put up with you?’”"
+    },
+    {
+      "id": "SEN-MID-018",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“She’s underlined *put up with*. Three times. She’s escalating.”"
+    },
+    {
+      "id": "SEN-MID-019",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“I’ll send her sixty-two sprains and a bee sting. That usually ends the correspondence for a month.”"
+    },
+    {
+      "id": "SEN-MID-020",
+      "speaker": "NARRATOR",
+      "text": "She picks up the next label. She doesn’t write anything on it."
+    },
+    {
+      "id": "SEN-MID-021",
+      "speaker": "SENNA",
+      "expression": "WORRIED",
+      "text": "“Nobody sends home the person who knows where the burn salve is.”"
+    },
+    {
+      "id": "SEN-MID-022",
+      "speaker": "SENNA",
+      "expression": "WORRIED",
+      "text": "“So I always know where the burn salve is.”"
+    },
+    {
+      "id": "SEN-MID-023",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“An infirmary never runs out of sprains. There’s always a reason for me to be in the room.”"
+    },
+    {
+      "id": "SEN-MID-024",
+      "speaker": "SENNA",
+      "expression": "WORRIED",
+      "text": "“Without one, I’m a princess who skipped every ball and talks to roots. That takes some putting up with.”"
+    },
+    {
+      "id": "SEN-MID-025",
+      "speaker": "NARRATOR",
+      "text": "She ties off a jar with a knot that could moor a ship. She still hasn’t looked up."
+    }
   ],
   "choicePointId": "SEN-MID-C1",
   "options": [
@@ -37,10 +152,28 @@
       "outcomeClass": "wrong",
       "labelText": "“Sixty-two sprains? This palace would fall apart without you. Nobody’s sending you home.”",
       "branch": [
-        { "id": "SEN-MID-W01", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Yes. That’s the arrangement.”" },
-        { "id": "SEN-MID-W02", "speaker": "NARRATOR", "text": "She hands you another bundle to sort, then a second before you’ve finished the first." },
-        { "id": "SEN-MID-W03", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“It’s kind. It’s also what I tell myself while I sweep.”" },
-        { "id": "SEN-MID-W04", "speaker": "NARRATOR", "text": "When you leave, she’s sweeping a floor that was clean when you arrived." }
+        {
+          "id": "SEN-MID-W01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Yes. That’s the arrangement.”"
+        },
+        {
+          "id": "SEN-MID-W02",
+          "speaker": "NARRATOR",
+          "text": "She hands you another bundle to sort, then a second before you’ve finished the first."
+        },
+        {
+          "id": "SEN-MID-W03",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“It’s kind. Hand me the feverfew.”"
+        },
+        {
+          "id": "SEN-MID-W04",
+          "speaker": "NARRATOR",
+          "text": "When you leave, she’s sweeping a floor that was clean when you arrived."
+        }
       ]
     },
     {
@@ -49,17 +182,66 @@
       "outcomeClass": "correct",
       "labelText": "“If nobody in the palace ever sprained anything again, I’d still come and sit with you. Holding the twine badly.”",
       "branch": [
-        { "id": "SEN-MID-S01", "speaker": "NARRATOR", "text": "Senna’s pencil stops in the middle of a word." },
-        { "id": "SEN-MID-S02", "speaker": "SENNA", "expression": "SURPRISED", "text": "“Badly.”" },
-        { "id": "SEN-MID-S03", "speaker": "PLAYER", "text": "“Very badly. You’ve seen me with twine.”" },
-        { "id": "SEN-MID-S04", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“I have. I nearly prescribed something.”" },
-        { "id": "SEN-MID-S05", "speaker": "NARRATOR", "text": "She finishes the label and puts the jar on the shelf. Then she reads what she wrote." },
-        { "id": "SEN-MID-S06", "speaker": "SENNA", "expression": "ANNOYED", "text": "“I just labeled feverfew *feelings*. That’s your fault.”" },
-        { "id": "SEN-MID-S07", "speaker": "PLAYER", "text": "“I can hold the lamp while you fix it.”" },
-        { "id": "SEN-MID-S08", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“No. Leave it. I know what’s in it.”" },
-        { "id": "SEN-MID-S09", "speaker": "NARRATOR", "text": "She reaches into the basket to find you something to do. Then she pushes the basket away." },
-        { "id": "SEN-MID-S10", "speaker": "SENNA", "expression": "PLAYFUL", "text": "“Sit. Don’t hold anything. Don’t eat the soap.”" },
-        { "id": "SEN-MID-S11", "speaker": "NARRATOR", "text": "You sit. She labels four more jars, all of them correctly. Pim snores through every one." }
+        {
+          "id": "SEN-MID-S01",
+          "speaker": "NARRATOR",
+          "text": "Senna’s pencil stops in the middle of a word."
+        },
+        {
+          "id": "SEN-MID-S02",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“Badly.”"
+        },
+        {
+          "id": "SEN-MID-S03",
+          "speaker": "PLAYER",
+          "text": "“Very badly. You’ve seen me with twine.”"
+        },
+        {
+          "id": "SEN-MID-S04",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I have. I nearly prescribed something.”"
+        },
+        {
+          "id": "SEN-MID-S05",
+          "speaker": "NARRATOR",
+          "text": "She finishes the label and puts the jar on the shelf. Then she reads what she wrote."
+        },
+        {
+          "id": "SEN-MID-S06",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“I just labeled feverfew *feelings*. That’s your fault.”"
+        },
+        {
+          "id": "SEN-MID-S07",
+          "speaker": "PLAYER",
+          "text": "“I can hold the lamp while you fix it.”"
+        },
+        {
+          "id": "SEN-MID-S08",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“No. Leave it. I know what’s in it.”"
+        },
+        {
+          "id": "SEN-MID-S09",
+          "speaker": "NARRATOR",
+          "text": "She reaches into the basket to find you something to do. Then she pushes the basket away."
+        },
+        {
+          "id": "SEN-MID-S10",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Sit. Don’t hold anything. Don’t eat the soap.”"
+        },
+        {
+          "id": "SEN-MID-S11",
+          "speaker": "NARRATOR",
+          "text": "You sit. She labels four more jars, all of them correctly. Pim snores through every one."
+        }
       ]
     },
     {
@@ -68,11 +250,34 @@
       "outcomeClass": "wrong",
       "labelText": "“Give me her address. I’ll write and tell her exactly how much this court relies on you.”",
       "branch": [
-        { "id": "SEN-MID-X01", "speaker": "SENNA", "expression": "SURPRISED", "text": "“You’d write to my mother.”" },
-        { "id": "SEN-MID-X02", "speaker": "PLAYER", "text": "“Someone should tell her what you do here.”" },
-        { "id": "SEN-MID-X03", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“She’ll write back. To you. With a list of every ball I’ve missed.”" },
-        { "id": "SEN-MID-X04", "speaker": "SENNA", "expression": "ANNOYED", "text": "“I read you the letter. I didn’t ask anyone to answer it.”" },
-        { "id": "SEN-MID-X05", "speaker": "NARRATOR", "text": "She takes the twine back and ties off the last jar herself. The knot is very tight." }
+        {
+          "id": "SEN-MID-X01",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“You’d write to my mother.”"
+        },
+        {
+          "id": "SEN-MID-X02",
+          "speaker": "PLAYER",
+          "text": "“Someone should tell her what you do here.”"
+        },
+        {
+          "id": "SEN-MID-X03",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“She’ll write back. To you. With a list of every ball I’ve missed.”"
+        },
+        {
+          "id": "SEN-MID-X04",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“I read you the letter. I didn’t ask anyone to answer it.”"
+        },
+        {
+          "id": "SEN-MID-X05",
+          "speaker": "NARRATOR",
+          "text": "She takes the twine back and ties off the last jar herself. The knot is very tight."
+        }
       ]
     }
   ]

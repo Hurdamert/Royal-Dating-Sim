@@ -6,7 +6,7 @@ Built from `handoff/` (Implementation Agent Handoff v1.0, archive SHA-256 `15c72
 
 - **Playable game, feature-complete against COMPLETE_GAME_SPEC.md** — 3 routes, 28 days × 3 slots, 7 locations, 8 training activities, Rest/Pass, 54 ordinary conversations, 6 optional events, midpoints and short retries, linked same-encounter proposal, proposal retries, 3 epilogues, shared prologue and failure, journal, calendar, help, gallery, backup export/import, recovery, read-only second tab.
 - **No BLOCKER.** No contradiction between preserved canonical sources and the v1.0 defaults was found (§6).
-- **158 automated tests pass** (128 unit + 30 browser), run on real code paths. Outputs: [`docs/test-results/`](test-results/).
+- **173 automated tests pass** (142 unit + 31 browser), run on real code paths. Outputs: [`docs/test-results/`](test-results/).
 - **Owner revision (§9) applied as layers on top of the frozen sources**, each one reversible: dialogue from `content/revisions/dialogue-v2/` (`CONTENT_REVISION=none` restores the frozen text), character art from `art-src/edited/` (derived from the hash-checked originals by `scripts/art/modest.py`).
 
 ## 2. Source integrity (executed)
@@ -33,9 +33,9 @@ Built from `handoff/` (Implementation Agent Handoff v1.0, archive SHA-256 `15c72
 
 | Suite | Runner | Result |
 |---|---|---|
-| Unit: engine, witnesses, validation, backups, drafts, content (incl. revision mechanics and an independent canon parse), staging geometry and water pixels, art policy, schema migrations, music, colour contrast | `npm test` (node:test via tsx) | **128/128 pass** |
+| Unit: engine, witnesses, validation, backups, drafts, content (incl. revision mechanics and an independent canon parse), staging geometry and water pixels, art policy, schema migrations, music, new-route consistency, colour contrast; witnesses for all four routes | `npm test` (node:test via tsx) | **142/142 pass** |
 | Browser persistence (real Chromium IndexedDB + Web Locks + BroadcastChannel) | `node --test tests/browser/persistence.test.mjs` | **15/15 pass** |
-| Browser end-to-end on the built site (esbuild build) | `node --test tests/browser/e2e.test.mjs` | **15/15 pass** |
+| Browser end-to-end on the built site (esbuild build) | `node --test tests/browser/e2e.test.mjs` | **16/16 pass** |
 | GitHub Actions CI on `main` at `599eaa8`: fonts fetched, sources, content, art, strict type-check with the real `@types/react`, ESLint, unit tests, **Vite build**, browser tests against Vite's `dist/` | [run 40185353778](https://github.com/Hurdamert/Royal-Dating-Sim/actions/runs/40185353778) | **All steps pass** |
 
 Highlights: keyboard-only play from title through the tutorial to choice to reload to replacement confirmation; a perfect Tavri route played entirely through the UI wins on Day 15 with the midpoint CG and epilogue; Day 28 deadline failure through the UI; draft resume after reload with no award; forced IndexedDB aborts (abort, exception, quota) leave all records untouched; triple-click of the same action awards once; second tab read-only and takeover loads the newest revision; export → import into a fresh browser preserves the run exactly; no external network requests and continued play offline after load; no horizontal overflow at 320 px and at 200 % zoom on every main screen; dialogue ≥ 16 px; choices ≥ 44 px; every text colour pair ≥ 4.5:1.
@@ -144,7 +144,7 @@ How it works:
   - `BIBLE.md` and `OUTLINE.md`;
   - 25 scenes in the same shape as each frozen route: 18 ordinary, 2 optional, milestone and retry, proposal and retry, epilogue.
 - **Validation.** The compiler loads the folder after the dialogue revision (`scripts/lib/routes.ts`). It validates the exact scene set, ID patterns, speakers, expressions, quoting, option rules and global ID uniqueness. Heart values and costs are derived from the scene kind and the option class, never typed by hand.
-- **How it was written.** Three writers drafted the scenes from the bible and outline. An independent editor then reviewed them, and the notes were applied. The house-style audit flags none of Senna's 456 lines.
+- **How it was written.** Three writers drafted the scenes from the bible and outline. An independent editor then reviewed them, and the notes were applied. The house-style audit flags none of Senna's 452 lines. The editor's main notes were: drop routine food-checking, which read too close to the source's food-taster role; make the proposal stand alone, because a perfect player never sees the seed scene; and make a too-sincere wrong answer sound rehearsed.
 - **Answer order.** Her scenes vary where the right answer sits; the frozen routes keep their documented order (see §7).
 - **Schedule.** Intelligence and Kindness, the one stat pair no other princess uses. She meets the player five days a week:
 

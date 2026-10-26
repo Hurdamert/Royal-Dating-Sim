@@ -35,13 +35,13 @@
       "choiceId": "SEN-ORD-POST-F03-C1-OFF",
       "outcomeId": "SEN-ORD-POST-F03-O-OFF",
       "outcomeClass": "offensive",
-      "labelText": "“How do you lose things on your own head? Or, apparently, mine?”",
+      "labelText": "“How does someone this scatterbrained run an infirmary?”",
       "branch": [
         {
           "id": "SEN-ORD-POST-F03-R-OFF-01",
           "speaker": "SENNA",
           "expression": "ANNOYED",
-          "text": "“Practice.”"
+          "text": "“Very well. Ask anyone with a splinter.”"
         },
         {
           "id": "SEN-ORD-POST-F03-R-OFF-02",

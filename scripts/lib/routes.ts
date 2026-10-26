@@ -91,7 +91,9 @@ const LOC_NAME: Record<string, string> = {
 
 function metaFor(spec: RouteFile, id: string, kind: SceneKind, objective: string | undefined): Record<string, string> {
   const n = spec.name;
-  const where = spec.staging[id] ? `Opens where ${n} is scheduled; presented at the ${LOC_NAME[spec.staging[id]!.start]} within the same encounter (not a new map location).` : `${n}'s scheduled location.`;
+  const cue = spec.staging[id];
+  const shown = cue ? [cue.start, ...(cue.switches ?? []).map((s) => s.location)].filter((l) => l !== 'scheduled').map((l) => LOC_NAME[l]) : [];
+  const where = shown.length ? `Opens where ${n} is scheduled; presented at the ${shown.join(', then the ')} within the same encounter (not a new map location).` : `${n}'s scheduled location.`;
   const base: Record<string, string> = { Source: `Owner-approved new route (${spec.date}): content/routes/${spec.route}/` };
   switch (kind) {
     case 'ordinary':
@@ -327,7 +329,7 @@ export function loadRoute(dir: string, existing: Record<string, Scene>, errors: 
   // Staging cues must point at real lines.
   for (const [sid, cue] of Object.entries(spec.staging ?? {})) {
     if (!wanted.includes(sid)) err(`staging for unknown scene ${sid}`);
-    if (!LOCATIONS.includes(cue.start)) err(`staging ${sid} start ${cue.start}`);
+    if (cue.start !== 'scheduled' && !LOCATIONS.includes(cue.start)) err(`staging ${sid} start ${cue.start}`);
     for (const s of cue.switches ?? []) {
       if (!LOCATIONS.includes(s.location)) err(`staging ${sid} switch location ${s.location}`);
       const sc = scenes[sid];

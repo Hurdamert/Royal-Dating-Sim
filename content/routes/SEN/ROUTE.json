@@ -54,7 +54,13 @@
   },
   "staging": {
     "SEN-EVT-PRE-01": {
-      "start": "town_square"
+      "start": "scheduled",
+      "switches": [
+        {
+          "fromLineId": "SEN-PRE-007",
+          "location": "town_square"
+        }
+      ]
     },
     "SEN-MID-01": {
       "start": "palace_court"

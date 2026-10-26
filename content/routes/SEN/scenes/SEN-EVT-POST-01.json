@@ -39,7 +39,7 @@
       "id": "SEN-POST-007",
       "speaker": "SENNA",
       "expression": "WORRIED",
-      "text": "“He would, too. He’s been waiting years for this.”"
+      "text": "“He would, too. He’s been waiting all season for this.”"
     },
     {
       "id": "SEN-POST-008",
@@ -59,21 +59,9 @@
       "text": "“What do people do with a day that has nothing wrong in it?”"
     },
     {
-      "id": "SEN-POST-011",
-      "speaker": "PLAYER",
-      "text": "“So what do you like? Not for work. Just because.”"
-    },
-    {
       "id": "SEN-POST-012",
-      "speaker": "SENNA",
-      "expression": "NEUTRAL",
-      "text": "“Mushrooms. Finding where they’ve come up. Looking at them without picking any.”"
-    },
-    {
-      "id": "SEN-POST-013",
-      "speaker": "SENNA",
-      "expression": "NEUTRAL",
-      "text": "“Pastries, too. But I can’t eat one without inspecting it, so that’s work again.”"
+      "speaker": "NARRATOR",
+      "text": "Her eyes keep drifting to a small brown mushroom by your boot. She looks away from it on purpose."
     },
     {
       "id": "SEN-POST-014",

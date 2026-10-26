@@ -28,7 +28,7 @@
       "id": "SEN-ORD-POST-F02-L05",
       "speaker": "SENNA",
       "expression": "PLAYFUL",
-      "text": "“Stay if you like. No talking. That’s the whole prescription.”"
+      "text": "“Stay if you like. That’s the whole prescription.”"
     }
   ],
   "options": [
@@ -36,13 +36,13 @@
       "choiceId": "SEN-ORD-POST-F02-C1-NO",
       "outcomeId": "SEN-ORD-POST-F02-O-NO",
       "outcomeClass": "wrong",
-      "labelText": "“Want a distraction? I could tell you how I once fixed a printer by yelling at it.”",
+      "labelText": "“Want a distraction? I could tell you about the time I lost an argument with a goat.”",
       "branch": [
         {
           "id": "SEN-ORD-POST-F02-R-NO-01",
           "speaker": "SENNA",
           "expression": "NEUTRAL",
-          "text": "“What’s a printer?”"
+          "text": "“How badly?”"
         },
         {
           "id": "SEN-ORD-POST-F02-R-NO-02",
@@ -71,7 +71,7 @@
           "id": "SEN-ORD-POST-F02-R-YES-03",
           "speaker": "SENNA",
           "expression": "PLAYFUL",
-          "text": "“Pulse elevated. Mine. That’s not going in the notes.”"
+          "text": "“Four minutes without sorting anything. Don’t move.”"
         }
       ]
     }

@@ -1,22 +1,22 @@
 {
   "sceneId": "SEN-ORD-PRE-F01",
-  "title": "Tea Inspection",
+  "title": "Four Sugars",
   "intro": [
     {
       "id": "SEN-ORD-PRE-F01-L01",
       "speaker": "NARRATOR",
-      "text": "Someone has handed you a cup of tea. You lift it to drink, and Senna takes it out of your hands."
+      "text": "Someone has handed you a cup of tea. Before you can drink it, Senna leans over and breathes in the steam."
     },
     {
       "id": "SEN-ORD-PRE-F01-L02",
       "speaker": "SENNA",
       "expression": "NEUTRAL",
-      "text": "“One moment.”"
+      "text": "“Don’t mind me.”"
     },
     {
       "id": "SEN-ORD-PRE-F01-L03",
       "speaker": "NARRATOR",
-      "text": "She sniffs it. Then she dips a paper strip from her apron into it and squints at the strip."
+      "text": "She breathes in again, longer, with her eyes shut."
     },
     {
       "id": "SEN-ORD-PRE-F01-L04",
@@ -28,13 +28,13 @@
       "id": "SEN-ORD-PRE-F01-L05",
       "speaker": "SENNA",
       "expression": "NEUTRAL",
-      "text": "“It’s safe. It’s also bad.”"
+      "text": "“Drink it if you like. It’s only bad.”"
     },
     {
       "id": "SEN-ORD-PRE-F01-L06",
       "speaker": "SENNA",
       "expression": "NEUTRAL",
-      "text": "“I’ve smelled about four hundred cups of tea at this court. I’ve drunk none of them.”"
+      "text": "“I know every teapot at this court by smell. Nobody’s ever poured me one.”"
     }
   ],
   "options": [
@@ -42,7 +42,7 @@
       "choiceId": "SEN-ORD-PRE-F01-C1-NO",
       "outcomeId": "SEN-ORD-PRE-F01-O-NO",
       "outcomeClass": "wrong",
-      "labelText": "“Thanks, but I can check my own tea.”",
+      "labelText": "“Thanks, but I like my tea the way it comes.”",
       "branch": [
         {
           "id": "SEN-ORD-PRE-F01-R-NO-01",
@@ -61,7 +61,7 @@
       "choiceId": "SEN-ORD-PRE-F01-C1-YES",
       "outcomeId": "SEN-ORD-PRE-F01-O-YES",
       "outcomeClass": "correct",
-      "labelText": "“Want your own? You can smell it first. Twice, if you like.”",
+      "labelText": "“Want your own? I’ll pour. Smell it for as long as you like.”",
       "branch": [
         {
           "id": "SEN-ORD-PRE-F01-R-YES-01",
@@ -72,13 +72,13 @@
         {
           "id": "SEN-ORD-PRE-F01-R-YES-02",
           "speaker": "NARRATOR",
-          "text": "You find her a cup. She inspects it for twice as long as yours, then drinks it."
+          "text": "You pour her a cup. She breathes it in for a long time before she drinks."
         },
         {
           "id": "SEN-ORD-PRE-F01-R-YES-03",
           "speaker": "SENNA",
           "expression": "PLAYFUL",
-          "text": "“Still bad. My face has gone warm. I’m blaming the tea.”"
+          "text": "“Still bad. I’ll have another.”"
         }
       ]
     }

@@ -60,7 +60,7 @@
       "choiceId": "SEN-ORD-POST-F01-C1-NO",
       "outcomeId": "SEN-ORD-POST-F01-O-NO",
       "outcomeClass": "wrong",
-      "labelText": "“I’ll try mine first. If I’m fine, you’re fine.”",
+      "labelText": "“Looks perfect. I’m eating mine while you finish.”",
       "branch": [
         {
           "id": "SEN-ORD-POST-F01-R-NO-01",
@@ -71,7 +71,7 @@
           "id": "SEN-ORD-POST-F01-R-NO-02",
           "speaker": "SENNA",
           "expression": "ANNOYED",
-          "text": "“A study with one participant. Terrible science. I’m not telling you the result.”"
+          "text": "“You ate it before the verdict. Now you’ll never know the verdict.”"
         }
       ]
     },

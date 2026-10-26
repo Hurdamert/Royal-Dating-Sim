@@ -3,11 +3,34 @@
   "title": "About the Other Day",
   "objective": "Say it plainly this time: you like her company, with or without anything to treat.",
   "intro": [
-    { "id": "SEN-MR-001", "speaker": "NARRATOR", "text": "Senna sniffs a cup of something hot and holds it up to the light. Then she hands it to you." },
-    { "id": "SEN-MR-002", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Mint. Only mint. I checked twice.”" },
-    { "id": "SEN-MR-003", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“About the other day.”" },
-    { "id": "SEN-MR-004", "speaker": "NARRATOR", "text": "She finds her spectacles on her head on the first try. It seems to unsettle her." },
-    { "id": "SEN-MR-005", "speaker": "SENNA", "expression": "WORRIED", "text": "“You said something kind. I’ve tried it in three jars. It doesn’t fit any of them.”" }
+    {
+      "id": "SEN-MR-001",
+      "speaker": "NARRATOR",
+      "text": "Senna hands you a cup of something hot."
+    },
+    {
+      "id": "SEN-MR-002",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Mint. I grew it.”"
+    },
+    {
+      "id": "SEN-MR-003",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“About the other day.”"
+    },
+    {
+      "id": "SEN-MR-004",
+      "speaker": "NARRATOR",
+      "text": "She finds her spectacles on her head on the first try. It seems to unsettle her."
+    },
+    {
+      "id": "SEN-MR-005",
+      "speaker": "SENNA",
+      "expression": "WORRIED",
+      "text": "“You said something kind. I’ve been turning it over. It answered a question I didn’t ask.”"
+    }
   ],
   "choicePointId": "SEN-MR-C1",
   "options": [
@@ -17,9 +40,23 @@
       "outcomeClass": "wrong",
       "labelText": "“You work too hard. Take a day off and let someone else mind the infirmary for a while.”",
       "branch": [
-        { "id": "SEN-MR-W01", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“A day off.”" },
-        { "id": "SEN-MR-W02", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Doctor Leeches says that too. He also says leeches.”" },
-        { "id": "SEN-MR-W03", "speaker": "NARRATOR", "text": "She takes the cup back and rinses it, though it was clean. Then she says goodbye." }
+        {
+          "id": "SEN-MR-W01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“A day off.”"
+        },
+        {
+          "id": "SEN-MR-W02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Doctor Leeches says that too. He also says leeches.”"
+        },
+        {
+          "id": "SEN-MR-W03",
+          "speaker": "NARRATOR",
+          "text": "She takes the cup back and drinks the mint herself. Then she says goodbye."
+        }
       ]
     },
     {
@@ -28,10 +65,28 @@
       "outcomeClass": "correct",
       "labelText": "“I said it wrong. I like your company. Sprains optional.”",
       "branch": [
-        { "id": "SEN-MR-S01", "speaker": "SENNA", "expression": "SURPRISED", "text": "“Sprains optional.”" },
-        { "id": "SEN-MR-S02", "speaker": "PLAYER", "text": "“Discouraged, even.”" },
-        { "id": "SEN-MR-S03", "speaker": "SENNA", "expression": "PLAYFUL", "text": "“Good. I’m low on arnica.”" },
-        { "id": "SEN-MR-S04", "speaker": "NARRATOR", "text": "She opens her notebook to a clean page and writes a heading: *Visitors*. Under it goes one name, underlined twice." }
+        {
+          "id": "SEN-MR-S01",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“Sprains optional.”"
+        },
+        {
+          "id": "SEN-MR-S02",
+          "speaker": "PLAYER",
+          "text": "“Discouraged, even.”"
+        },
+        {
+          "id": "SEN-MR-S03",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Good. I’m low on arnica.”"
+        },
+        {
+          "id": "SEN-MR-S04",
+          "speaker": "NARRATOR",
+          "text": "She writes your name on a label and ties it to the chair nearest the stove."
+        }
       ]
     }
   ]

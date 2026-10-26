@@ -3,11 +3,34 @@
   "title": "Plainly",
   "objective": "Fill in the label plainly: your name and a shared future, with no conditions and no speech.",
   "intro": [
-    { "id": "SEN-FR-001", "speaker": "NARRATOR", "text": "Senna has the wooden label out before you reach her. Its corners have gone round from living in her apron." },
-    { "id": "SEN-FR-002", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“The seed hasn’t come up. It’s a three-year seed. I check it anyway.”" },
-    { "id": "SEN-FR-003", "speaker": "NARRATOR", "text": "She holds out the label and the pencil from her bun." },
-    { "id": "SEN-FR-004", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Try again. Plainly.”" },
-    { "id": "SEN-FR-005", "speaker": "SENNA", "expression": "WORRIED", "text": "“It has to fit on the label.”" }
+    {
+      "id": "SEN-FR-001",
+      "speaker": "NARRATOR",
+      "text": "Senna has the wooden label out before you reach her. Its corners have gone round from living in her apron."
+    },
+    {
+      "id": "SEN-FR-002",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“The seed hasn’t come up. The literature says four months. I check it anyway.”"
+    },
+    {
+      "id": "SEN-FR-003",
+      "speaker": "NARRATOR",
+      "text": "She holds out the label and the pencil from her bun."
+    },
+    {
+      "id": "SEN-FR-004",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Try again. Plainly.”"
+    },
+    {
+      "id": "SEN-FR-005",
+      "speaker": "SENNA",
+      "expression": "WORRIED",
+      "text": "“It has to fit on the label.”"
+    }
   ],
   "choicePointId": "SEN-FR-C1",
   "options": [
@@ -17,10 +40,28 @@
       "outcomeClass": "correct",
       "labelText": "“My name goes in the space. Marry me, and we’ll both be there when it flowers.”",
       "branch": [
-        { "id": "SEN-FR-S01", "speaker": "SENNA", "expression": "SURPRISED", "text": "“That fits.”" },
-        { "id": "SEN-FR-S02", "speaker": "NARRATOR", "text": "She writes your name in the space, spelled right on the first try. She checks it twice anyway." },
-        { "id": "SEN-FR-S03", "speaker": "SENNA", "expression": "PLAYFUL", "text": "“Yes. Obviously. You only had to say it at label size.”" },
-        { "id": "SEN-FR-S04", "speaker": "NARRATOR", "text": "She tucks the label into the apron pocket nearest her heart. She has measured which one that is." }
+        {
+          "id": "SEN-FR-S01",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“That fits.”"
+        },
+        {
+          "id": "SEN-FR-S02",
+          "speaker": "NARRATOR",
+          "text": "She writes your name in the space, spelled right on the first try. She reads it back to herself under her breath."
+        },
+        {
+          "id": "SEN-FR-S03",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Yes. Obviously. You only had to say it at label size.”"
+        },
+        {
+          "id": "SEN-FR-S04",
+          "speaker": "NARRATOR",
+          "text": "She tucks the label into the apron pocket nearest her heart. She has measured which one that is."
+        }
       ]
     },
     {
@@ -29,9 +70,23 @@
       "outcomeClass": "wrong",
       "labelText": "“Marry me once the infirmary can spare you. I don’t mind waiting until things calm down.”",
       "branch": [
-        { "id": "SEN-FR-W01", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“When the infirmary can spare me.”" },
-        { "id": "SEN-FR-W02", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“It won’t. Someone sprains something every day. I keep a chart.”" },
-        { "id": "SEN-FR-W03", "speaker": "NARRATOR", "text": "The label goes back in her apron. On the way, she checks the space, in case your name has turned up by itself." }
+        {
+          "id": "SEN-FR-W01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“When the infirmary can spare me.”"
+        },
+        {
+          "id": "SEN-FR-W02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“It won’t. Someone sprains something every day. I keep a chart.”"
+        },
+        {
+          "id": "SEN-FR-W03",
+          "speaker": "NARRATOR",
+          "text": "The label goes back in her apron. On the way, she checks the space, in case your name has turned up by itself."
+        }
       ]
     }
   ]

@@ -33,7 +33,7 @@
   "routesAdded": {
     "SEN": {
       "scenes": 25,
-      "lines": 397
+      "lines": 393
     }
   },
   "scenesShipped": 102,
@@ -41,5 +41,5 @@
   "squareQuips": 12,
   "activities": 8,
   "strings": 26,
-  "contentSha256": "3ed61a1545e2bdb229410a6fa4c294b848c2b40eab54c5b28a41c144c18c9e1f"
+  "contentSha256": "28be83b6d3e99556fdbc218bcbcc8fab43a80d97788c6b4c4d8a4834f5aba186"
 }
