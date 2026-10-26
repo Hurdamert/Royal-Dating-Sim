@@ -1,6 +1,6 @@
 // Shared witness runner (see witnesses.test.ts for the TEST_MATRIX G description).
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { encounterAvailability } from '../../src/core/engine.ts';
 import { meetingLocation, fromTimeIndex } from '../../src/core/schedule.ts';
 import type { Route, RunState, Stat, Slot } from '../../src/core/model.ts';
@@ -28,8 +28,17 @@ function parseCsv(path: string): Record<string, string>[] {
   return lines.slice(1).map((l) => Object.fromEntries(split(l).map((v, i) => [head[i]!, v])));
 }
 
-export const schedRows = parseCsv(`${FIX}/Abstract_Route_Schedules.csv`);
-const trainRows = parseCsv(`${FIX}/Abstract_Training_Witnesses.csv`);
+// Owner-requested new routes carry their own witnesses in the same format
+// (content/routes/<ROUTE>/fixtures), designed against this engine.
+const routeFix = existsSync('content/routes') ? readdirSync('content/routes').filter((r) => existsSync(`content/routes/${r}/fixtures`)).sort() : [];
+export const schedRows = [
+  ...parseCsv(`${FIX}/Abstract_Route_Schedules.csv`),
+  ...routeFix.flatMap((r) => parseCsv(`content/routes/${r}/fixtures/Route_Schedules.csv`)),
+];
+const trainRows = [
+  ...parseCsv(`${FIX}/Abstract_Training_Witnesses.csv`),
+  ...routeFix.flatMap((r) => parseCsv(`content/routes/${r}/fixtures/Training_Witnesses.csv`)),
+];
 export const EXPECTED_WIN_DAY: Record<string, number> = {
   TAV_PERFECT: 15,
   NER_PERFECT: 15,
@@ -37,6 +46,7 @@ export const EXPECTED_WIN_DAY: Record<string, number> = {
   TAV_RECOVERY: 27,
   NER_RECOVERY: 27,
   KAE_RECOVERY: 27,
+  ...Object.assign({}, ...routeFix.map((r) => JSON.parse(readFileSync(`content/routes/${r}/fixtures/expected.json`, 'utf8')) as Record<string, number>)),
 };
 
 export interface WitnessResult {

@@ -185,6 +185,10 @@ describe('WCAG 2.2 AA colour contrast', () => {
     ['paper on stage label', T.paper, '#222631'],
     ['white on danger button', '#ffffff', '#8a1f1f'],
     ['soft ink on past calendar day', T.inkSoft, '#ece6dc'],
+    ['Tavri name on paper', '#8f4f2f', T.paper],
+    ['Nerelle name on paper', '#1d6670', T.paper],
+    ['Kaedra name on paper', '#5b4a7d', T.paper],
+    ['Senna name on paper', '#35603d', T.paper],
   ];
   for (const [name, fg, bg] of text) {
     test(`text ≥ 4.5:1 — ${name}`, () => {

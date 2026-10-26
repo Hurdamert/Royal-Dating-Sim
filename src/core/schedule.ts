@@ -1,6 +1,8 @@
 // Weekly schedules, stat requirements and training activities, read from the
-// handoff's machine-readable route_schedules_and_training.json.
+// handoff's machine-readable route_schedules_and_training.json, plus owner-approved
+// new routes (content/routes/<ROUTE>/ROUTE.json, validated by the content compiler).
 import scheduleJson from '../../handoff/03_IMPLEMENTATION_BLUEPRINT/route_schedules_and_training.json';
+import sennaRoute from '../../content/routes/SEN/ROUTE.json';
 import {
   LOCATIONS,
   ROUTES,
@@ -31,7 +33,8 @@ interface RawSchedule {
   locations: string[];
 }
 
-const raw = scheduleJson as RawSchedule;
+const raw: RawSchedule = { ...(scheduleJson as RawSchedule) };
+raw.routes = { ...raw.routes, SEN: sennaRoute as RawRoute };
 
 function asStat(v: string): Stat {
   if (!(STATS as readonly string[]).includes(v)) throw new Error(`Unknown stat in schedule: ${v}`);

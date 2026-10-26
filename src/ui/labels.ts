@@ -2,14 +2,21 @@
 import type { Expression } from '../content/types';
 import type { LocationId, Route, Slot, Stat } from '../core/model';
 
-export const ROUTE_NAME: Record<Route, string> = { TAV: 'Tavri', NER: 'Nerelle', KAE: 'Kaedra' };
+export const ROUTE_NAME: Record<Route, string> = { TAV: 'Tavri', NER: 'Nerelle', KAE: 'Kaedra', SEN: 'Senna' };
 /** One-line route pitches on the New Run screen. */
 export const ROUTE_TAGLINE: Record<Route, string> = {
   TAV: 'The fox princess. Has a joke ready for everything, especially the things that bother her.',
   NER: 'The mermaid princess. Studying the surface world, one baffling custom at a time.',
   KAE: 'The dragon princess. The court is a little afraid of her. She is mostly reading safety reports.',
+  SEN: 'The apothecary princess. Came for the courtship season, opened an infirmary instead. Don’t eat the garnish.',
 };
-export const ROUTE_FILE: Record<Route, string> = { TAV: 'tavri', NER: 'nerelle', KAE: 'kaedra' };
+export const ROUTE_FILE: Record<Route, string> = { TAV: 'tavri', NER: 'nerelle', KAE: 'kaedra', SEN: 'senna' };
+/**
+ * Senna's portraits and illustration are placeholders until her generated art is
+ * approved (content/routes/SEN); alt text says so rather than describe art that
+ * is not on screen yet.
+ */
+export const ART_PLACEHOLDER: Partial<Record<Route, true>> = { SEN: true };
 export const LOCATION_NAME: Record<LocationId, string> = {
   home: 'Home',
   town_square: 'Town Square',
@@ -52,16 +59,18 @@ const EXPRESSION_ALT: Record<Expression, string> = {
 export const art = {
   background: (l: LocationId) => `/art/bg_${l}.webp`,
   sprite: (r: Route, e: Expression) => `/art/${ROUTE_FILE[r]}_${ROUTE_FILE[r]}_${EXPRESSION_FILE[e]}.webp`,
-  cg: (r: Route) => `/art/${{ TAV: 'tavri_tavri_private_confession', NER: 'nerelle_nerelle_forbidden_journey', KAE: 'kaedra_kaedra_royal_trial' }[r]}.webp`,
+  cg: (r: Route) => `/art/${{ TAV: 'tavri_tavri_private_confession', NER: 'nerelle_nerelle_forbidden_journey', KAE: 'kaedra_kaedra_royal_trial', SEN: 'senna_senna_lamplight' }[r]}.webp`,
 };
 
 export function spriteAlt(r: Route, e: Expression): string {
+  if (ART_PLACEHOLDER[r]) return `${ROUTE_NAME[r]} (placeholder portrait), ${EXPRESSION_ALT[e]}.`;
   return `${ROUTE_NAME[r]} ${EXPRESSION_ALT[e]}.`;
 }
 export const CG_ALT: Record<Route, string> = {
   TAV: 'Illustration: Tavri sitting on the rim of a garden fountain at night, one hand at her collar, her tail curled beside her.',
   NER: 'Illustration: Nerelle upright in the canal at night, her arms folded on the stone edge, her tail in the water and the lit city behind her.',
   KAE: 'Illustration: Kaedra, silver-haired, at a palace ceremony with a small spark of light at her hand.',
+  SEN: 'Illustration (placeholder): Senna seated at the infirmary worktable in lamplight, sorting dried herbs into labelled jars.',
 };
 
 /** Hearts are stored as half-units; display 0.0–10.0. */

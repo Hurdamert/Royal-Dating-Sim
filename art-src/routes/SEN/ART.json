@@ -1,0 +1,55 @@
+{
+  "route": "SEN",
+  "status": "placeholder",
+  "note": "Temporary silhouettes drawn by scripts/art/senna_placeholder.py until Senna's generated art is approved. The game labels them \"placeholder\" in alt text.",
+  "assets": [
+    {
+      "asset_id": "senna_senna_neutral",
+      "kind": "expression_sprite",
+      "file": "senna_senna_neutral.png",
+      "sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "asset_id": "senna_senna_playful",
+      "kind": "expression_sprite",
+      "file": "senna_senna_playful.png",
+      "sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "asset_id": "senna_senna_worried",
+      "kind": "expression_sprite",
+      "file": "senna_senna_worried.png",
+      "sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "asset_id": "senna_senna_annoyed",
+      "kind": "expression_sprite",
+      "file": "senna_senna_annoyed.png",
+      "sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "asset_id": "senna_senna_surprised",
+      "kind": "expression_sprite",
+      "file": "senna_senna_surprised.png",
+      "sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "asset_id": "senna_senna_lamplight",
+      "kind": "midpoint_CG",
+      "file": "senna_senna_lamplight.png",
+      "sha256": "db14d2a6abca4a9af652029b4dab993e6ebf7881339830f9991bb0bb1f8b020a",
+      "width": 1448,
+      "height": 1086
+    }
+  ]
+}

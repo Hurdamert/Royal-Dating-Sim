@@ -23,12 +23,19 @@ describe('F. Content and sources', () => {
     assert.ok(!LOCATIONS.some((l) => l.includes('canal')));
   });
 
-  test('F02 77 scenes: 21 pivotal, 2 shared, 54 ordinary; IDs globally unique', () => {
-    const scenes = Object.values(CONTENT.scenes);
+  test('F02 77 frozen scenes (21 pivotal, 2 shared, 54 ordinary) plus 25 per owner-requested route; IDs globally unique', () => {
+    const all = Object.values(CONTENT.scenes);
+    const scenes = all.filter((s) => s.route !== 'SEN');
     assert.equal(scenes.length, 77);
     assert.equal(scenes.filter((s) => s.kind === 'shared').length, 2);
     assert.equal(scenes.filter((s) => s.kind === 'ordinary').length, 54);
     assert.equal(scenes.filter((s) => s.kind !== 'shared' && s.kind !== 'ordinary').length, 21);
+    // Senna (content/routes/SEN): the same 25-scene shape as each frozen route.
+    const sen = all.filter((s) => s.route === 'SEN');
+    assert.equal(sen.length, 25);
+    assert.equal(sen.filter((s) => s.kind === 'ordinary').length, 18);
+    assert.equal(sen.filter((s) => s.kind !== 'ordinary').length, 7);
+    assert.ok(CONTENT.generatedFrom.routes.SEN && /owner/i.test(CONTENT.generatedFrom.routes.SEN.authority));
     const ids: string[] = [];
     for (const s of scenes) {
       ids.push(s.sceneId);
@@ -117,7 +124,12 @@ describe('F. Content and sources', () => {
   });
 
   test('owner revision changes words only: scenes, choice points, options, outcomes and heart values equal the frozen base', () => {
-    assert.deepEqual(Object.keys(CONTENT.scenes).sort(), Object.keys(BASE).sort());
+    assert.deepEqual(
+      Object.keys(CONTENT.scenes)
+        .filter((id) => CONTENT.scenes[id]!.route !== 'SEN')
+        .sort(),
+      Object.keys(BASE).sort(),
+    );
     for (const [id, b] of Object.entries(BASE)) {
       const a = CONTENT.scenes[id]!;
       const mech = (x: typeof a) => [x.sceneId, x.kind, x.route, x.stage, x.choicePointId, x.displayOnly, x.options.map((o) => [o.choiceId, o.outcomeId, o.outcomeClass, o.netHalfHearts])];
@@ -132,7 +144,7 @@ describe('F. Content and sources', () => {
 
   test('every scene line ID is globally unique and princess lines use only the route princess', () => {
     const seen = new Set<string>();
-    const princess = { TAV: 'TAVRI', NER: 'NERELLE', KAE: 'KAEDRA' } as const;
+    const princess = { TAV: 'TAVRI', NER: 'NERELLE', KAE: 'KAEDRA', SEN: 'SENNA' } as const;
     for (const s of Object.values(CONTENT.scenes))
       for (const l of [...s.introLines, ...s.options.flatMap((o) => o.branchLines)]) {
         assert.ok(!seen.has(l.id), `duplicate ${l.id}`);
@@ -142,7 +154,7 @@ describe('F. Content and sources', () => {
   });
 
   test('epilogue location cue lines still exist (staging switches to the Royal Gardens at these IDs)', () => {
-    for (const [scene, line] of [['TAV-EPI-01', 'TAV-EPI-012'], ['NER-EPI-01', 'NER-EPI-017'], ['KAE-EPI-01', 'KAE-EPI-012']] as const) {
+    for (const [scene, line] of [['TAV-EPI-01', 'TAV-EPI-012'], ['NER-EPI-01', 'NER-EPI-017'], ['KAE-EPI-01', 'KAE-EPI-012'], ['SEN-EPI-01', 'SEN-EPI-LATER']] as const) {
       const s = CONTENT.scenes[scene]!;
       assert.ok(s.introLines.some((l) => l.id === line), `${scene} keeps ${line}`);
     }

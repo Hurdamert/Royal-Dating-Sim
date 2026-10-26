@@ -261,7 +261,7 @@ describe('E. Persistence in a real browser', () => {
       const good = JSON.parse(await window.S.exportBackup());
       const bad = [
         '{',
-        JSON.stringify({ ...good, schemaVersion: 2 }),
+        JSON.stringify({ ...good, schemaVersion: 99 }),
         JSON.stringify({ ...good, integrity: { algorithm: 'SHA-256', digest: '0'.repeat(64) } }),
         JSON.stringify({ ...good, extra: true }),
       ];

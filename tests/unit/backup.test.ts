@@ -1,10 +1,12 @@
 // TEST_MATRIX E07/E08 (pure parts): canonical digest, round-trip, and every
 // rejection class. Storage-touching cases run in the browser suite.
 import { test, describe } from 'node:test';
+import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import { buildBackup, parseBackup, backupDigest, MAX_IMPORT_BYTES } from '../../src/persistence/backup.ts';
 import { canonicalJson } from '../../src/persistence/canonical.ts';
-import { MIGRATIONS, migrateToCurrent, type Migration } from '../../src/persistence/migrations.ts';
+import { GALLERY_MIGRATIONS, MIGRATIONS, RUN_MIGRATIONS, migrateStored, migrateToCurrent, type Migration } from '../../src/persistence/migrations.ts';
+import type { RunState } from '../../src/core/model.ts';
 import { SCHEMA_VERSION } from '../../src/core/model.ts';
 import { checkDraft, type EncounterDraft } from '../../src/persistence/draft.ts';
 import { encounterAvailability } from '../../src/core/engine.ts';
@@ -25,7 +27,7 @@ describe('E. Backup format', () => {
     assert.equal(a.integrity.digest, b.integrity.digest);
     assert.equal(a.integrity.digest, await backupDigest(run, ['KAE']));
     assert.equal(a.format, 'royal-exceptions-save');
-    assert.equal(a.schemaVersion, 1);
+    assert.equal(a.schemaVersion, SCHEMA_VERSION);
   });
 
   test('E07 round-trip preserves run, hearts, partial stats, cursors, flags, gallery, journal', async () => {
@@ -56,7 +58,7 @@ describe('E. Backup format', () => {
     ['array top level', async () => '[]', 'ERR_IMPORT_FORMAT'],
     ['unknown top-level field', async () => JSON.stringify({ ...(await good()), extra: 1 }), 'ERR_IMPORT_FORMAT'],
     ['wrong format', async () => JSON.stringify({ ...(await good()), format: 'other' }), 'ERR_IMPORT_FORMAT'],
-    ['future schema', async () => JSON.stringify({ ...(await good()), schemaVersion: 2 }), 'ERR_IMPORT_VERSION'],
+    ['future schema', async () => JSON.stringify({ ...(await good()), schemaVersion: SCHEMA_VERSION + 1 }), 'ERR_IMPORT_VERSION'],
     ['schema 0', async () => JSON.stringify({ ...(await good()), schemaVersion: 0 }), 'ERR_IMPORT_VERSION'],
     ['__proto__ key', async () => (await reseal(await good())).replace('"activeRun":', '"__proto__":{"x":1},"activeRun":'), 'ERR_IMPORT_FORMAT'],
     ['constructor key nested', async () => {
@@ -170,7 +172,49 @@ describe('Schema migrations (review fix: imports go through a migration registry
     assert.equal(!missing.ok && missing.reason, 'unsupported');
     const noBump = migrateToCurrent({ schemaVersion: 1 }, { 1: (d) => ({ ...d }), 2: reg[2]! }, 3);
     assert.equal(!noBump.ok && noBump.reason, 'invalid');
-    assert.equal(Object.keys(MIGRATIONS).length, 0, 'only schema version 1 exists today');
-    assert.ok(Object.isFrozen(MIGRATIONS));
+    assert.deepEqual(Object.keys(MIGRATIONS), ['1'], 'version 1 → 2 (Senna) is the only step so far');
+    assert.ok(Object.isFrozen(MIGRATIONS) && Object.isFrozen(RUN_MIGRATIONS) && Object.isFrozen(GALLERY_MIGRATIONS));
+  });
+
+  /** A current backup rewritten exactly as the game wrote them before Senna existed (schema 1). */
+  const asVersion1 = (run: RunState) => {
+    const v1 = structuredClone(run) as unknown as Record<string, unknown>;
+    v1.schemaVersion = 1;
+    const { SEN: _sen, ...cursors } = run.ordinaryNext;
+    v1.ordinaryNext = cursors;
+    v1.optionalsExperienced = Object.fromEntries(Object.entries(run.optionalsExperienced).filter(([k]) => !k.startsWith('SEN-')));
+    return v1;
+  };
+  const v1Backup = (activeRun: Record<string, unknown> | null, completedGallery: string[]) => {
+    const body = { format: 'royal-exceptions-save', schemaVersion: 1, activeRun, completedGallery };
+    return JSON.stringify({ ...body, exportedAt: '2026-10-24T12:00:00.000Z', integrity: { algorithm: 'SHA-256', digest: createHash('sha256').update(canonicalJson(body)).digest('hex') } });
+  };
+
+  test('a backup exported before Senna existed (schema 1) imports: same run, same journal, Senna’s cursors start at zero', async () => {
+    for (const run of [runWitness('TAV_RECOVERY').state, runWitness('NER_PERFECT').state, rest(freshRun('KAE'))]) {
+      const p = await parseBackup(v1Backup(asVersion1(run), run.outcome === 'won' ? [run.route] : []));
+      assert.ok(p.ok, JSON.stringify(p));
+      assert.deepEqual(p.activeRun, run, 'the upgraded run is exactly what this version would have recorded');
+      assert.deepEqual(p.activeRun!.ordinaryNext.SEN, { PRE: 0, POST: 0 });
+    }
+    const galleryOnly = await parseBackup(v1Backup(null, ['TAV', 'KAE']));
+    assert.ok(galleryOnly.ok && galleryOnly.activeRun === null && galleryOnly.completedGallery.join() === 'TAV,KAE');
+  });
+
+  test('a tampered schema 1 backup is still rejected before any upgrade', async () => {
+    const text = v1Backup(asVersion1(rest(freshRun('TAV'))), []);
+    const doc = JSON.parse(text);
+    doc.activeRun.heartsHalf = 6;
+    const p = await parseBackup(JSON.stringify(doc));
+    assert.equal(!p.ok && p.code, 'ERR_IMPORT_DIGEST');
+  });
+
+  test('stored records from schema 1 are upgraded on read; unknown or newer shapes are left for validation to reject', () => {
+    const run = rest(freshRun('NER'));
+    assert.deepEqual(migrateStored(asVersion1(run), RUN_MIGRATIONS), run);
+    assert.deepEqual(migrateStored({ schemaVersion: 1, completed: ['TAV'] }, GALLERY_MIGRATIONS), { schemaVersion: SCHEMA_VERSION, completed: ['TAV'] });
+    const future = { ...run, schemaVersion: SCHEMA_VERSION + 1 };
+    assert.equal(migrateStored(future, RUN_MIGRATIONS), future);
+    assert.equal(migrateStored('junk', RUN_MIGRATIONS), 'junk');
   });
 });

@@ -3,6 +3,7 @@
 // change is ONE readwrite transaction; on abort nothing changes.
 import { applyAction, newRun } from '../core/engine';
 import { ROUTES, SCHEMA_VERSION, type GalleryRecord, type PlayerAction, type RefusalCode, type Route, type RunState, type JournalRecord } from '../core/model';
+import { GALLERY_MIGRATIONS, RUN_MIGRATIONS, migrateStored } from './migrations';
 import { validateGalleryRecord, validateRun } from '../core/validate';
 import { unionGallery } from './backup';
 import type { EncounterDraft } from './draft';
@@ -48,6 +49,16 @@ export function readGallery(raw: unknown): Route[] {
 /** Only a run that passes full validation may become the rollback snapshot. */
 function usableSnapshot(run: unknown): run is RunState {
   return run !== null && run !== undefined && validateRun(run).ok;
+}
+
+/**
+ * Records written by an older version of the game are upgraded as they are read,
+ * so every caller sees the current format; the next write stores it that way.
+ */
+function upgrade(key: Key, value: unknown): unknown {
+  if (key === 'active' || key === 'previous_good') return migrateStored(value, RUN_MIGRATIONS);
+  if (key === 'gallery') return migrateStored(value, GALLERY_MIGRATIONS);
+  return value;
 }
 
 function errorCodeFor(err: unknown): SaveErrorCode {
@@ -102,9 +113,9 @@ export class SaveDb {
       const reqs = keys.map((k) => s.get(k));
       tx.oncomplete = () =>
         resolve({
-          active: reqs[0]!.result ?? null,
-          previousGood: reqs[1]!.result ?? null,
-          gallery: reqs[2]!.result ?? null,
+          active: upgrade('active', reqs[0]!.result ?? null),
+          previousGood: upgrade('previous_good', reqs[1]!.result ?? null),
+          gallery: upgrade('gallery', reqs[2]!.result ?? null),
           draft: reqs[3]!.result ?? null,
           meta: reqs[4]!.result ?? null,
         });
@@ -159,7 +170,7 @@ export class SaveDb {
       for (const k of keys) {
         const req = store.get(k);
         req.onsuccess = () => {
-          current[k] = req.result ?? null;
+          current[k] = upgrade(k, req.result ?? null);
           if (--remaining === 0) run();
         };
       }

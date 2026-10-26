@@ -5,7 +5,7 @@
 // intermediate heart value. Any divergence fails with the first divergent state.
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
-import type { Stat } from '../../src/core/model.ts';
+import { ROUTE_SPECS } from '../../src/core/schedule.ts';
 import { runWitness, schedRows, EXPECTED_WIN_DAY } from './witness-runner.ts';
 import { getScene } from '../../src/core/content.ts';
 
@@ -18,7 +18,7 @@ describe('G. Witness streams through the real engine', () => {
       assert.equal(state.outcome, 'won', `${fixture} outcome`);
       assert.equal(result.winDay, EXPECTED_WIN_DAY[fixture]);
       assert.equal(result.trainingSessions, 11, 'eleven training sessions');
-      assert.equal(state.stats[{ TAV: 'charisma', NER: 'kindness', KAE: 'strength' }[state.route] as Stat], 6);
+      assert.equal(state.stats[ROUTE_SPECS[state.route].primary], 6);
       // Counted from what the engine actually recorded, not from the input fixture.
       const wrongOrdinary = state.journal.filter((j) => j.kind === 'ordinary' && classOf(j.sceneIdOrActivityId, j.selectedChoiceId) === 'wrong').length;
       if (fixture.endsWith('RECOVERY')) {

@@ -10,6 +10,8 @@ const THEME = {
   TAV: /\b(?:perform\w*|audience|applau\w+|on ?stage|offstage|the show|spectacle|entertain\w*|curtain call)\b/i,
   NER: /\b(?:autonomy|my own (?:choice|future|life|terms)|(?:you|I) (?:get to |can )?(?:choose|decide)|choices? (?:of my own|are mine|is mine)|permission|your call)\b/i,
   KAE: /\b(?:monster\w*|fear\w*|afraid|frighten\w*|terrif\w*|strength|weapon|dangerous)\b/i,
+  // Senna (owner-requested route, 2026-10-25): being wanted versus being useful.
+  SEN: /\b(?:useful\w*|usefulness|needed|need(?:s)? me|earn(?:ed|ing)? (?:a|my|your) (?:place|chair|keep)|wanted)\b/i,
 };
 
 export const RULES = [
@@ -46,13 +48,13 @@ export const RULES = [
   },
   {
     id: 'theme-word',
-    desc: 'route theme named outright (performance / choice / fear words)',
+    desc: 'route theme named outright (performance / choice / fear / usefulness words)',
     test: (t, ctx) => !!(ctx.route && THEME[ctx.route] && THEME[ctx.route].test(t)),
   },
   {
     id: 'formal-no-contraction',
-    desc: 'uncontracted phrasing in player/Tavri speech (Kaedra and Nerelle are exempt by voice)',
-    test: (t, ctx) => (ctx.speaker === 'PLAYER' || ctx.speaker === 'TAVRI') && /\b(?:I am|I will|I would|do not|does not|did not|cannot|it is|that is|you are|I have not|we are|is not|are not)\b/i.test(t),
+    desc: 'uncontracted phrasing in player/Tavri/Senna speech (Kaedra and Nerelle are exempt by voice)',
+    test: (t, ctx) => (ctx.speaker === 'PLAYER' || ctx.speaker === 'TAVRI' || ctx.speaker === 'SENNA') && /\b(?:I am|I will|I would|do not|does not|did not|cannot|it is|that is|you are|I have not|we are|is not|are not)\b/i.test(t),
   },
   { id: 'long-line', desc: 'over 32 words in one text box', test: (t) => t.split(/\s+/).length > 32 },
 ];

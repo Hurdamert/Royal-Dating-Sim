@@ -14,6 +14,7 @@
   --tav: #b46b47;
   --ner: #287e88;
   --kae: #6a5a8c; /* ash-silver and violet: Kaedra’s revised look (2026-10-25) */
+  --sen: #4c7553; /* herb green: Senna, the apothecary princess (2026-10-25) */
   --accent: var(--burgundy);
   --radius: 6px;
   --serif: 'Cormorant Garamond', 'Cormorant', Garamond, 'EB Garamond', 'Times New Roman', serif;
@@ -124,6 +125,9 @@ img {
 }
 .route-ner {
   --accent: var(--ner);
+}
+.route-sen {
+  --accent: var(--sen);
 }
 .route-kae {
   --accent: var(--kae);
@@ -761,8 +765,13 @@ img {
   padding: 0;
   margin: 0 0 16px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
+}
+@media (max-width: 900px) {
+  .routes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 .routes legend {
   font-weight: 700;
@@ -828,6 +837,9 @@ img {
 }
 .route-card--kae .route-card__name {
   color: #5b4a7d;
+}
+.route-card--sen .route-card__name {
+  color: #35603d;
 }
 .field {
   display: grid;

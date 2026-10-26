@@ -2,7 +2,8 @@
 // produced only by scripts/compile-content.ts from the frozen source archives.
 // Nothing in this module is authored story text.
 
-export type Route = 'TAV' | 'NER' | 'KAE';
+/** TAV, NER, KAE: the frozen routes. SEN: Senna, an owner-requested route (2026-10-25, content/routes/SEN). */
+export type Route = 'TAV' | 'NER' | 'KAE' | 'SEN';
 export type Stage = 'PRE' | 'POST';
 export type Expression = 'NEUTRAL' | 'PLAYFUL' | 'WORRIED' | 'ANNOYED' | 'SURPRISED';
 export type SceneKind =
@@ -94,6 +95,8 @@ export interface ContentBundle {
     effectiveTavriSha256: string;
     /** Owner-requested dialogue revision applied on top of the frozen base, if any. */
     revision: null | { id: string; authority: string; requested: string; date: string; scope: string; filesSha256: string };
+    /** Owner-requested new routes (content/routes/<ROUTE>), not in the frozen archives. */
+    routes: Record<string, { name: string; authority: string; requested: string; date: string; scenes: number; filesSha256: string }>;
   };
   scenes: Record<string, Scene>;
   support: SupportCopy;

@@ -13,6 +13,8 @@ const SPEC_TABLE: Record<Route, string> = {
   TAV: 'Mon A/E royal_gardens; Tue M/A town_square; Thu A/E palace_court; Sat M/A royal_library; Sun A/E royal_gardens',
   NER: 'Mon A/E moonwater_quay; Wed M/A royal_gardens; Fri A/E moonwater_quay; Sat M/A royal_gardens; Sun A/E moonwater_quay',
   KAE: 'Tue M/A adventurers_guild; Wed A/E palace_court; Thu M/A adventurers_guild; Sat A/E royal_gardens; Sun A/E palace_court',
+  // Senna: owner-requested route (content/routes/SEN/ROUTE.json), transcribed from her bible.
+  SEN: 'Mon M/A adventurers_guild; Tue A/E royal_library; Thu M/A town_square; Fri A/E moonwater_quay; Sat M/A royal_gardens',
 };
 const SLOT_LETTER = { morning: 'M', afternoon: 'A', evening: 'E' } as const;
 

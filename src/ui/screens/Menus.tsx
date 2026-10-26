@@ -51,7 +51,7 @@ export function Title({
             New run
           </button>
           <button type="button" className="btn" onClick={onGallery}>
-            Endings gallery ({snap.gallery.length}/3)
+            Endings gallery ({snap.gallery.length}/{ROUTES.length})
           </button>
           <button type="button" className="btn" onClick={onImport}>
             Import / export backup

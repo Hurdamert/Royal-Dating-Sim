@@ -7,10 +7,14 @@
 // art-src/edited/EDITS.json). The three character reference sheets are design
 // documents, not game screens, and are no longer shipped to players.
 //
+// Owner-requested new routes (content/routes/<ROUTE>) bring their own art in
+// art-src/routes/<ROUTE>/, listed with hashes and status (placeholder or
+// generated, with provenance) in that folder's ART.json.
+//
 //   node scripts/optimize-art.mjs          # (re)generate public/art + manifest
 //   node scripts/optimize-art.mjs --check  # verify derived copies match the manifest
 import { createHash } from 'node:crypto';
-import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -24,6 +28,22 @@ const source = JSON.parse(readFileSync(join(H, '02_ART_ASSETS/asset_manifest.jso
 const EDITED = join(root, 'art-src/edited');
 const edits = existsSync(join(EDITED, 'EDITS.json')) ? JSON.parse(readFileSync(join(EDITED, 'EDITS.json'), 'utf8')) : {};
 const MUST_EDIT = new Set(['expression_sprite', 'midpoint_CG']);
+const ROUTE_ART = join(root, 'art-src/routes');
+/** Art for owner-requested new routes: [{ route, status, asset }] with the file verified against ART.json. */
+const routeArt = (existsSync(ROUTE_ART) ? readdirSync(ROUTE_ART) : [])
+  .filter((d) => existsSync(join(ROUTE_ART, d, 'ART.json')))
+  .sort()
+  .flatMap((d) => {
+    const rec = JSON.parse(readFileSync(join(ROUTE_ART, d, 'ART.json'), 'utf8'));
+    if (rec.route !== d) fail(`art-src/routes/${d}/ART.json names route ${rec.route}`);
+    if (!['placeholder', 'generated'].includes(rec.status)) fail(`art-src/routes/${d}: status must be placeholder or generated`);
+    return rec.assets.map((a) => {
+      const path = `art-src/routes/${d}/${a.file}`;
+      const buf = readFileSync(join(root, path));
+      if (sha(buf) !== a.sha256) fail(`${path} does not match ART.json`);
+      return { route: d, status: rec.status, asset: a, path, buf };
+    });
+  });
 const NOT_SHIPPED = new Set(['character_sheet']);
 
 /** The bytes a shipped file is derived from: the edited derivative where policy requires one. */
@@ -67,7 +87,14 @@ if (process.argv.includes('--check')) {
     if (sha(readFileSync(p)) !== d.sha256) fail(`derived file changed: ${d.file}`);
     n++;
   }
-  console.log(`Art check OK: ${n} shipped copies verified against their originals (and all-ages edits); reference sheets not shipped.`);
+  for (const r of routeArt) {
+    const d = derived.assets.find((x) => x.asset_id === r.asset.asset_id);
+    if (!d) fail(`no derived copy for ${r.asset.asset_id}`);
+    if (d.source_sha256 !== r.asset.sha256 || d.route_status !== r.status) fail(`derived ${r.asset.asset_id} is out of date with ${r.path}`);
+    if (!existsSync(join(OUT, d.file)) || sha(readFileSync(join(OUT, d.file))) !== d.sha256) fail(`derived file changed: ${d.file}`);
+    n++;
+  }
+  console.log(`Art check OK: ${n} shipped copies verified against their originals (and all-ages edits, and new-route art); reference sheets not shipped.`);
   process.exit(0);
 }
 
@@ -105,6 +132,32 @@ for (const a of source) {
     ...(edit ? { edited_from: edit.file, edited_sha256: edit.sha256, edit_spec: edit.spec } : {}),
   });
   console.log(`${file}  ${out.info.width}x${out.info.height}  ${(out.data.length / 1024).toFixed(0)} KiB`);
+}
+for (const r of routeArt) {
+  const plan = PLAN[r.asset.kind];
+  if (!plan) fail(`unknown asset kind ${r.asset.kind}`);
+  const file = `${r.asset.asset_id}.webp`;
+  const img = sharp(r.buf, { failOn: 'error' });
+  const meta = await img.metadata();
+  const out = await img
+    .resize({ width: Math.min(plan.width, meta.width), withoutEnlargement: true })
+    .webp({ quality: plan.quality, alphaQuality: 90, effort: 5, smartSubsample: true })
+    .toBuffer({ resolveWithObject: true });
+  writeFileSync(join(OUT, file), out.data);
+  assets.push({
+    asset_id: r.asset.asset_id,
+    kind: r.asset.kind,
+    file,
+    width: out.info.width,
+    height: out.info.height,
+    bytes: out.data.length,
+    sha256: sha(out.data),
+    source_path: r.path,
+    source_sha256: r.asset.sha256,
+    route: r.route,
+    route_status: r.status,
+  });
+  console.log(`${file}  ${out.info.width}x${out.info.height}  ${(out.data.length / 1024).toFixed(0)} KiB  (${r.route} ${r.status})`);
 }
 writeFileSync(
   MANIFEST,

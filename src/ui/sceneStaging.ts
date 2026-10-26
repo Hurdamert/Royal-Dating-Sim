@@ -3,6 +3,7 @@
 // "Optional and milestone story locations"). Everything else stays at the
 // encounter's scheduled location. Midpoint first attempts show their approved CG.
 import type { LocationId, Route } from '../core/model';
+import sennaRoute from '../../content/routes/SEN/ROUTE.json';
 
 interface Cue {
   start: LocationId | 'scheduled';
@@ -19,6 +20,8 @@ const CUES: Record<string, Cue> = {
   'NER-EPI-01': { start: 'moonwater_quay', switches: [{ fromLineId: 'NER-EPI-017', location: 'royal_gardens' }] },
   // "Location: Existing Palace Court, with a quieter final moment beside the Royal Gardens" — KAE-EPI-012 "Later, in the Royal Gardens…"
   'KAE-EPI-01': { start: 'palace_court', switches: [{ fromLineId: 'KAE-EPI-012', location: 'royal_gardens' }] },
+  // Senna (owner-requested route): her scenes' locations are set in content/routes/SEN/ROUTE.json.
+  ...(sennaRoute.staging as Record<string, Cue>),
 };
 
 export function sceneLocation(sceneId: string, scheduled: LocationId, seenLineIds: readonly string[]): LocationId {
@@ -30,8 +33,8 @@ export function sceneLocation(sceneId: string, scheduled: LocationId, seenLineId
 }
 
 export function sceneShowsCg(sceneId: string): Route | null {
-  const m = /^(TAV|NER|KAE)-MID-01$/.exec(sceneId);
+  const m = /^(TAV|NER|KAE|SEN)-MID-01$/.exec(sceneId);
   return m ? (m[1] as Route) : null;
 }
 
-export const PRINCESS_SPEAKER: Record<Route, string> = { TAV: 'TAVRI', NER: 'NERELLE', KAE: 'KAEDRA' };
+export const PRINCESS_SPEAKER: Record<Route, string> = { TAV: 'TAVRI', NER: 'NERELLE', KAE: 'KAEDRA', SEN: 'SENNA' };

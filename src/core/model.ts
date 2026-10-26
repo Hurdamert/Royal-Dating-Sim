@@ -3,7 +3,7 @@
 import type { Route, Stage } from '../content/types';
 export type { Route, Stage } from '../content/types';
 
-export const ROUTES = ['TAV', 'NER', 'KAE'] as const satisfies readonly Route[];
+export const ROUTES = ['TAV', 'NER', 'KAE', 'SEN'] as const satisfies readonly Route[];
 export const SLOTS = ['morning', 'afternoon', 'evening'] as const;
 export const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] as const;
 export const STATS = ['charisma', 'intelligence', 'strength', 'kindness'] as const;
@@ -23,6 +23,8 @@ export const OPTIONAL_SCENES = [
   'NER-EVT-POST-01',
   'KAE-EVT-PRE-01',
   'KAE-EVT-POST-01',
+  'SEN-EVT-PRE-01',
+  'SEN-EVT-POST-01',
 ] as const;
 
 export const TOTAL_DAYS = 28;
@@ -32,7 +34,12 @@ export const PRE_CAP_HALF = 10; // five hearts
 export const POST_CAP_HALF = 20; // ten hearts
 export const OPTIONAL_THRESHOLD = 3;
 export const NAME_MAX_GRAPHEMES = 24;
-export const SCHEMA_VERSION = 1 as const;
+/**
+ * Save format version. 2 (2026-10-25) adds Senna's route: ordinaryNext.SEN and her
+ * two optional events. Version 1 saves and backups are upgraded on read
+ * (src/persistence/migrations.ts).
+ */
+export const SCHEMA_VERSION = 2 as const;
 
 export type Slot = (typeof SLOTS)[number];
 export type Weekday = (typeof WEEKDAYS)[number];
@@ -132,7 +139,7 @@ export type RefusalCode =
   | 'duplicate_action';
 
 export function isRoute(v: unknown): v is Route {
-  return v === 'TAV' || v === 'NER' || v === 'KAE';
+  return typeof v === 'string' && (ROUTES as readonly string[]).includes(v);
 }
 export function isLocation(v: unknown): v is LocationId {
   return typeof v === 'string' && (LOCATIONS as readonly string[]).includes(v);

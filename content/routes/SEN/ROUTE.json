@@ -1,0 +1,78 @@
+{
+  "route": "SEN",
+  "name": "Senna",
+  "speaker": "SENNA",
+  "cast": [
+    "PHYSICIAN",
+    "PIM",
+    "MERCHANT",
+    "SAILOR",
+    "ADVENTURER"
+  ],
+  "authority": "Project owner request in the implementation chat, 2026-10-25",
+  "requested": "can you implement a character route who is like mao mao from the apothecary diaries?",
+  "decisions": {
+    "role": "Princess-apothecary: a visiting princess who ignored the courtship season and set up shop in the palace infirmary (owner's choice)",
+    "name": "Senna (owner's choice)",
+    "originality": "An original character in the deadpan-apothecary mould the owner referenced. Her name, look, homeland, family, supporting cast and story are new; nothing is copied from that work.",
+    "allAges": "Poisons and remedies are knowledge and safety only: she identifies harm to prevent it, never poisons anyone and never tests anything on herself."
+  },
+  "date": "2026-10-25",
+  "primary": "intelligence",
+  "secondary": "kindness",
+  "meeting": {
+    "Mon": {
+      "morning": "adventurers_guild",
+      "afternoon": "adventurers_guild"
+    },
+    "Tue": {
+      "afternoon": "royal_library",
+      "evening": "royal_library"
+    },
+    "Thu": {
+      "morning": "town_square",
+      "afternoon": "town_square"
+    },
+    "Fri": {
+      "afternoon": "moonwater_quay",
+      "evening": "moonwater_quay"
+    },
+    "Sat": {
+      "morning": "royal_gardens",
+      "afternoon": "royal_gardens"
+    }
+  },
+  "optional_pre": {
+    "scene_id": "SEN-EVT-PRE-01",
+    "stat": "intelligence",
+    "at_least": 3
+  },
+  "optional_post": {
+    "scene_id": "SEN-EVT-POST-01",
+    "stat": "charisma",
+    "at_least": 3
+  },
+  "staging": {
+    "SEN-EVT-PRE-01": {
+      "start": "town_square"
+    },
+    "SEN-MID-01": {
+      "start": "palace_court"
+    },
+    "SEN-FIN-01": {
+      "start": "royal_gardens"
+    },
+    "SEN-EPI-01": {
+      "start": "palace_court",
+      "switches": [
+        {
+          "fromLineId": "SEN-EPI-LATER",
+          "location": "royal_gardens"
+        }
+      ]
+    }
+  },
+  "strings": {
+    "UI-INTRO-02": "Four princesses, four different stories. Choose one route for this run."
+  }
+}

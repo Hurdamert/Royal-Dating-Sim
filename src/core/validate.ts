@@ -121,7 +121,7 @@ export function checkRunShape(v: unknown): ValidationResult<RunState> {
   const errs: string[] = [];
   if (!isObj(v)) return { ok: false, errors: ['activeRun must be an object or null'] };
   exactKeys(v, RUN_KEYS, 'activeRun', errs);
-  if (v.schemaVersion !== SCHEMA_VERSION) errs.push('activeRun.schemaVersion must be 1');
+  if (v.schemaVersion !== SCHEMA_VERSION) errs.push(`activeRun.schemaVersion must be ${SCHEMA_VERSION}`);
   if (!isInt(v.saveRevision, 0, Number.MAX_SAFE_INTEGER)) errs.push('saveRevision invalid');
   if (typeof v.runId !== 'string' || !UUID_RE.test(v.runId)) errs.push('runId must be a UUID');
   if (!isRoute(v.route)) errs.push('route invalid');
@@ -293,7 +293,7 @@ export function validateGalleryRecord(v: unknown): ValidationResult<GalleryRecor
   if (!isObj(v)) return { ok: false, errors: ['gallery record must be an object'] };
   const errs: string[] = [];
   exactKeys(v, ['schemaVersion', 'completed'], 'gallery', errs);
-  if (v.schemaVersion !== SCHEMA_VERSION) errs.push('gallery.schemaVersion must be 1');
+  if (v.schemaVersion !== SCHEMA_VERSION) errs.push(`gallery.schemaVersion must be ${SCHEMA_VERSION}`);
   const g = validateGallery(v.completed);
   if (!g.ok) errs.push(...g.errors);
   return errs.length ? { ok: false, errors: errs } : { ok: true, value: { schemaVersion: SCHEMA_VERSION, completed: (g as { ok: true; value: Route[] }).value } };

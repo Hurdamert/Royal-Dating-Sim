@@ -380,6 +380,84 @@
       "edited_from": "art-src/edited/kaedra_kaedra_worried.png",
       "edited_sha256": "62d648a8a921e2ddfe145209d8fea87d16df1827e85f9170a50cfdc65bf266f6",
       "edit_spec": "scripts/art/modest/kaedra_kaedra_worried.json"
+    },
+    {
+      "asset_id": "senna_senna_neutral",
+      "kind": "expression_sprite",
+      "file": "senna_senna_neutral.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 21780,
+      "sha256": "50ece5e0fe2de74309d2c574b57029c593e11a1c198f8baac70086b55dd38e86",
+      "source_path": "art-src/routes/SEN/senna_senna_neutral.png",
+      "source_sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
+      "route": "SEN",
+      "route_status": "placeholder"
+    },
+    {
+      "asset_id": "senna_senna_playful",
+      "kind": "expression_sprite",
+      "file": "senna_senna_playful.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 21780,
+      "sha256": "50ece5e0fe2de74309d2c574b57029c593e11a1c198f8baac70086b55dd38e86",
+      "source_path": "art-src/routes/SEN/senna_senna_playful.png",
+      "source_sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
+      "route": "SEN",
+      "route_status": "placeholder"
+    },
+    {
+      "asset_id": "senna_senna_worried",
+      "kind": "expression_sprite",
+      "file": "senna_senna_worried.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 21780,
+      "sha256": "50ece5e0fe2de74309d2c574b57029c593e11a1c198f8baac70086b55dd38e86",
+      "source_path": "art-src/routes/SEN/senna_senna_worried.png",
+      "source_sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
+      "route": "SEN",
+      "route_status": "placeholder"
+    },
+    {
+      "asset_id": "senna_senna_annoyed",
+      "kind": "expression_sprite",
+      "file": "senna_senna_annoyed.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 21780,
+      "sha256": "50ece5e0fe2de74309d2c574b57029c593e11a1c198f8baac70086b55dd38e86",
+      "source_path": "art-src/routes/SEN/senna_senna_annoyed.png",
+      "source_sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
+      "route": "SEN",
+      "route_status": "placeholder"
+    },
+    {
+      "asset_id": "senna_senna_surprised",
+      "kind": "expression_sprite",
+      "file": "senna_senna_surprised.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 21780,
+      "sha256": "50ece5e0fe2de74309d2c574b57029c593e11a1c198f8baac70086b55dd38e86",
+      "source_path": "art-src/routes/SEN/senna_senna_surprised.png",
+      "source_sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
+      "route": "SEN",
+      "route_status": "placeholder"
+    },
+    {
+      "asset_id": "senna_senna_lamplight",
+      "kind": "midpoint_CG",
+      "file": "senna_senna_lamplight.webp",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 22226,
+      "sha256": "76884815645f7d23ff679b668d1378a00208f9aebbc1c91351e73a4f3d3ce110",
+      "source_path": "art-src/routes/SEN/senna_senna_lamplight.png",
+      "source_sha256": "db14d2a6abca4a9af652029b4dab993e6ebf7881339830f9991bb0bb1f8b020a",
+      "route": "SEN",
+      "route_status": "placeholder"
     }
   ]
 }

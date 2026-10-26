@@ -18,6 +18,7 @@ import { fileURLToPath } from 'node:url';
 // @ts-expect-error -- plain ESM helper without type declarations
 import { openZip } from './lib/zip.mjs';
 import { applyRevision } from './lib/revision.ts';
+import { loadRoute, routeDirs, type LoadedRoute } from './lib/routes.ts';
 import type {
   ContentBundle,
   Scene,
@@ -608,6 +609,24 @@ if (REVISION_ID !== 'none') {
 if (errors.length) fail();
 
 // ---------------------------------------------------------------------------
+// 7b. Owner-requested new routes (content/routes/<ROUTE>): full scenes, validated
+// structurally like the frozen routes; added after the revision, never altering it.
+const addedRoutes: LoadedRoute[] = [];
+for (const dir of routeDirs(root)) {
+  const r = loadRoute(dir, finalScenes, errors);
+  if (!r) continue;
+  for (const id of Object.keys(r.scenes)) if (finalScenes[id]) err(`route ${r.spec.route}: scene ${id} already exists`);
+  finalScenes = { ...finalScenes, ...r.scenes };
+  for (const [id, text] of Object.entries(r.spec.strings ?? {})) {
+    if (!(id in finalSupport.strings)) err(`route ${r.spec.route}: unknown support string ${id}`);
+    else if (!text.trim()) err(`route ${r.spec.route}: empty support string ${id}`);
+    else finalSupport = { ...finalSupport, strings: { ...finalSupport.strings, [id]: text } };
+  }
+  addedRoutes.push(r);
+}
+if (errors.length) fail();
+
+// ---------------------------------------------------------------------------
 // 8. Emit.
 const sortedScenes: Record<string, Scene> = {};
 for (const id of Object.keys(finalScenes).sort()) sortedScenes[id] = finalScenes[id]!;
@@ -623,6 +642,9 @@ const bundle: ContentBundle = {
     tavriOverlaySha256: sha(overlayBuf),
     effectiveTavriSha256: sha(tavriEffective),
     revision: revision ? { ...revision.meta, filesSha256: revision.stats.filesSha256 } : null,
+    routes: Object.fromEntries(
+      addedRoutes.map((r) => [r.spec.route, { name: r.spec.name, authority: r.spec.authority, requested: r.spec.requested, date: r.spec.date, scenes: Object.keys(r.scenes).length, filesSha256: r.filesSha256 }]),
+    ),
   },
   scenes: sortedScenes,
   support: finalSupport,
@@ -635,6 +657,8 @@ const report = {
   extractsCrossChecked: extractsCompared,
   tavriOverlayDifferences: 4,
   revision: revision ? { ...revision.stats, removedLineIds: revision.removedLineIds } : null,
+  routesAdded: Object.fromEntries(addedRoutes.map((r) => [r.spec.route, { scenes: Object.keys(r.scenes).length, lines: r.lines }])),
+  scenesShipped: Object.keys(finalScenes).length,
   helpPassages: support.help.length,
   squareQuips: support.squareQuips.length,
   activities: support.activities.length,
