@@ -1,0 +1,31 @@
+{
+  "sceneId": "SEN-EPI-01",
+  "title": "Married, With Labels",
+  "intro": [
+    { "id": "SEN-EPI-001", "speaker": "NARRATOR", "text": "The Palace Court is dressed for a wedding. Nearly every dish wears a little label in the bride’s capitals: *SAFE*." },
+    { "id": "SEN-EPI-002", "speaker": "NARRATOR", "text": "The bride herself is inspecting her bouquet, stem by stem." },
+    { "id": "SEN-EPI-003", "speaker": "SENNA", "expression": "PLAYFUL", "text": "“Lily of the valley. Beautiful. Nobody let the palace cat near it.”" },
+    { "id": "SEN-EPI-004", "speaker": "PLAYER", "text": "“Is the palace cat invited?”" },
+    { "id": "SEN-EPI-005", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“The palace cat attends everything. It has never once been invited.”" },
+    { "id": "SEN-EPI-006", "speaker": "NARRATOR", "text": "Doctor Dorrance rises to give a toast. His cup of tea has been checked." },
+    { "id": "SEN-EPI-007", "speaker": "PHYSICIAN", "text": "“When Her Highness arrived with four trunks of what I took to be weeds, I gave her a week.”" },
+    { "id": "SEN-EPI-008", "speaker": "PHYSICIAN", "text": "“She has since corrected my herbal in forty-three places. In pencil. I have kept every…”" },
+    { "id": "SEN-EPI-009", "speaker": "NARRATOR", "text": "He doesn’t finish. He sits down and cries into a napkin, and then into Pim’s sleeve." },
+    { "id": "SEN-EPI-010", "speaker": "SENNA", "expression": "SURPRISED", "text": "“He kept them. That’s why he stopped putting leeches on burnt thumbs.”" },
+    { "id": "SEN-EPI-011", "speaker": "NARRATOR", "text": "Then come the vows. Senna’s are numbered. You have never been so proud of anyone in your life." },
+    { "id": "SEN-EPI-012", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“One. I’ll check your tea. Two. I’ll tell you when you’re wrong about plants. That’ll be often.”" },
+    { "id": "SEN-EPI-013", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Three. I’ll always tell you when you’re about to eat something you shouldn’t.”" },
+    { "id": "SEN-EPI-014", "speaker": "SENNA", "expression": "ANNOYED", "text": "“Don’t eat that.”" },
+    { "id": "SEN-EPI-015", "speaker": "NARRATOR", "text": "You put down the canapé. It has a sprig of holly on top. Its label says *NOT FOOD*." },
+    { "id": "SEN-EPI-016", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Four. There were nine. I cut five for being sentimental. One of them rhymed.”" },
+    { "id": "SEN-EPI-LATER", "speaker": "NARRATOR", "text": "Later, in the Royal Gardens, Senna kneels at the physic beds in her wedding dress, with her gardening gloves on over the sleeves." },
+    { "id": "SEN-EPI-017", "speaker": "NARRATOR", "text": "Beside the label with both your names on it, one small green leaf has come up through the soil." },
+    { "id": "SEN-EPI-018", "speaker": "SENNA", "expression": "SURPRISED", "text": "“That’s early. The literature says four months. It’s been six weeks.”" },
+    { "id": "SEN-EPI-019", "speaker": "PLAYER", "text": "“Maybe it likes us.”" },
+    { "id": "SEN-EPI-020", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Don’t be sentimental about a hellebore. It’s poisonous from root to petal.”" },
+    { "id": "SEN-EPI-021", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“I don’t need anything. I want you here. That’s different. I checked.”" },
+    { "id": "SEN-EPI-022", "speaker": "NARRATOR", "text": "She leans over and rests her forehead against yours. Then she goes back to watching the leaf." },
+    { "id": "SEN-EPI-023", "speaker": "SENNA", "expression": "PLAYFUL", "text": "“Vow three. Don’t eat it.”" }
+  ],
+  "options": []
+}

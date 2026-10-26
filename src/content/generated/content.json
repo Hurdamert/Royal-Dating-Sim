@@ -17,6 +17,16 @@
       "date": "2026-10-25",
       "scope": "All story text: 77 scenes (prologue, failure, ordinary conversations, special events, midpoints, proposals, epilogues), 12 Town Square quips and 16 training flavor lines. Words only: scene IDs, choice IDs, outcomes, heart values, stats, schedules and art are unchanged. Frozen source archives are untouched; set CONTENT_REVISION=none to build from the frozen text.",
       "filesSha256": "d1330d3a27f10d174762284a49e53f4aed9f48dca244ed7734e08f529d54576e"
+    },
+    "routes": {
+      "SEN": {
+        "name": "Senna",
+        "authority": "Project owner request in the implementation chat, 2026-10-25",
+        "requested": "can you implement a character route who is like mao mao from the apothecary diaries?",
+        "date": "2026-10-25",
+        "scenes": 25,
+        "filesSha256": "c9f3b6320c2e07970f28e69adee799c56f6c81c8f85d8cef828babff20e68b4e"
+      }
     }
   },
   "scenes": {
@@ -7059,6 +7069,3628 @@
         "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart outcome (clamped by current stage), one used-daily-princess-interaction marker, one consumed slot and one journal entry. If projected post-midpoint hearts reach 20 half-units, hand off inside the **same** transaction to `NER-FIN-01` instead of independently committing the conversation; never insert another choice or second journal action."
       }
     },
+    "SEN-EPI-01": {
+      "sceneId": "SEN-EPI-01",
+      "kind": "epilogue",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "Married, With Labels",
+      "introLines": [
+        {
+          "id": "SEN-EPI-001",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "The Palace Court is dressed for a wedding. Nearly every dish wears a little label in the bride’s capitals: *SAFE*."
+        },
+        {
+          "id": "SEN-EPI-002",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "The bride herself is inspecting her bouquet, stem by stem."
+        },
+        {
+          "id": "SEN-EPI-003",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Lily of the valley. Beautiful. Nobody let the palace cat near it.”"
+        },
+        {
+          "id": "SEN-EPI-004",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“Is the palace cat invited?”"
+        },
+        {
+          "id": "SEN-EPI-005",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“The palace cat attends everything. It has never once been invited.”"
+        },
+        {
+          "id": "SEN-EPI-006",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Doctor Dorrance rises to give a toast. His cup of tea has been checked."
+        },
+        {
+          "id": "SEN-EPI-007",
+          "speaker": "PHYSICIAN",
+          "expression": null,
+          "text": "“When Her Highness arrived with four trunks of what I took to be weeds, I gave her a week.”"
+        },
+        {
+          "id": "SEN-EPI-008",
+          "speaker": "PHYSICIAN",
+          "expression": null,
+          "text": "“She has since corrected my herbal in forty-three places. In pencil. I have kept every…”"
+        },
+        {
+          "id": "SEN-EPI-009",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "He doesn’t finish. He sits down and cries into a napkin, and then into Pim’s sleeve."
+        },
+        {
+          "id": "SEN-EPI-010",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“He kept them. That’s why he stopped putting leeches on burnt thumbs.”"
+        },
+        {
+          "id": "SEN-EPI-011",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Then come the vows. Senna’s are numbered. You have never been so proud of anyone in your life."
+        },
+        {
+          "id": "SEN-EPI-012",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“One. I’ll check your tea. Two. I’ll tell you when you’re wrong about plants. That’ll be often.”"
+        },
+        {
+          "id": "SEN-EPI-013",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Three. I’ll always tell you when you’re about to eat something you shouldn’t.”"
+        },
+        {
+          "id": "SEN-EPI-014",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“Don’t eat that.”"
+        },
+        {
+          "id": "SEN-EPI-015",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "You put down the canapé. It has a sprig of holly on top. Its label says *NOT FOOD*."
+        },
+        {
+          "id": "SEN-EPI-016",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Four. There were nine. I cut five for being sentimental. One of them rhymed.”"
+        },
+        {
+          "id": "SEN-EPI-LATER",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Later, in the Royal Gardens, Senna kneels at the physic beds in her wedding dress, with her gardening gloves on over the sleeves."
+        },
+        {
+          "id": "SEN-EPI-017",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Beside the label with both your names on it, one small green leaf has come up through the soil."
+        },
+        {
+          "id": "SEN-EPI-018",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“That’s early. The literature says four months. It’s been six weeks.”"
+        },
+        {
+          "id": "SEN-EPI-019",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“Maybe it likes us.”"
+        },
+        {
+          "id": "SEN-EPI-020",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Don’t be sentimental about a hellebore. It’s poisonous from root to petal.”"
+        },
+        {
+          "id": "SEN-EPI-021",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I don’t need anything. I want you here. That’s different. I checked.”"
+        },
+        {
+          "id": "SEN-EPI-022",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She leans over and rests her forehead against yours. Then she goes back to watching the leaf."
+        },
+        {
+          "id": "SEN-EPI-023",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Vow three. Don’t eat it.”"
+        }
+      ],
+      "choicePointId": null,
+      "options": [],
+      "displayOnly": true,
+      "costOneSlot": false,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-EPI-01.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Type": "Senna terminal-success epilogue; no extra action or encounter cost.",
+        "Location": "Opens where Senna is scheduled; presented at the Palace Court within the same encounter (not a new map location).",
+        "Objective": "",
+        "END": "Display only; must not change any state."
+      }
+    },
+    "SEN-EVT-POST-01": {
+      "sceneId": "SEN-EVT-POST-01",
+      "kind": "optional",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "A Day With Nothing Wrong",
+      "introLines": [
+        {
+          "id": "SEN-POST-001",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna is standing with both hands in her apron pockets. Every pocket is empty."
+        },
+        {
+          "id": "SEN-POST-002",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“I’ve been given a day off. By force.”"
+        },
+        {
+          "id": "SEN-POST-003",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“Who forced you?”"
+        },
+        {
+          "id": "SEN-POST-004",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“Pim took my twine. Dorrance took my notebook. He’s reading it right now. I can feel it.”"
+        },
+        {
+          "id": "SEN-POST-005",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Pim skids up beside you, out of breath."
+        },
+        {
+          "id": "SEN-POST-006",
+          "speaker": "PIM",
+          "expression": null,
+          "text": "“Miss Senna! Doctor Dorrance says if you come back early, he’ll treat everyone himself! He’s got the leech jar out!”"
+        },
+        {
+          "id": "SEN-POST-007",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“He would, too. He’s been waiting years for this.”"
+        },
+        {
+          "id": "SEN-POST-008",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Pim runs off again, holding her bag of boiled sweets over his head like a trophy."
+        },
+        {
+          "id": "SEN-POST-009",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Nobody has so much as a splinter. I asked around.”"
+        },
+        {
+          "id": "SEN-POST-010",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“What do people do with a day that has nothing wrong in it?”"
+        },
+        {
+          "id": "SEN-POST-011",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“So what do you like? Not for work. Just because.”"
+        },
+        {
+          "id": "SEN-POST-012",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Mushrooms. Finding where they’ve come up. Looking at them without picking any.”"
+        },
+        {
+          "id": "SEN-POST-013",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Pastries, too. But I can’t eat one without inspecting it, so that’s work again.”"
+        },
+        {
+          "id": "SEN-POST-014",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She takes her hands out of her empty pockets, then can’t seem to decide where to put them."
+        }
+      ],
+      "choicePointId": "SEN-POST-C1",
+      "options": [
+        {
+          "choiceId": "SEN-POST-C1-TIDY",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Why not sort the jars? No patients, nobody rushing you. Just you and the labels.”",
+          "outcomeId": "SEN-POST-O-TIDY",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-POST-W01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“The jars. I’ve been meaning to redo the jars for weeks.”"
+            },
+            {
+              "id": "SEN-POST-W02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She spends her day off sorting them by name, then by how ill each could make you, then by name again."
+            },
+            {
+              "id": "SEN-POST-W03",
+              "speaker": "PIM",
+              "expression": null,
+              "text": "“Miss Senna! You’re not supposed to be here!”"
+            },
+            {
+              "id": "SEN-POST-W04",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“I’m not working. I’m resting. Alphabetically.”"
+            },
+            {
+              "id": "SEN-POST-W05",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She seems happy. She also looks exactly the way she does every other day."
+            }
+          ],
+          "internalLabel": "Ordinary wrong; net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-POST-C1-ENJOY",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Mushroom walk. Slow, no picking. Then pastries, and I’ll do the inspecting.”",
+          "outcomeId": "SEN-POST-O-ENJOY",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-POST-S01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“A walk. With no patient at the end of it.”"
+            },
+            {
+              "id": "SEN-POST-S02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "You walk slowly and look down a lot. Mushrooms turn out to be everywhere, once someone points."
+            },
+            {
+              "id": "SEN-POST-S03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She keeps her gloved hands clasped behind her back, so they can’t pick anything."
+            },
+            {
+              "id": "SEN-POST-S04",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“*Amanita.* Gorgeous. Don’t touch it. Don’t even breathe on it rudely.”"
+            },
+            {
+              "id": "SEN-POST-S05",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“That’s a puffball. A raindrop hits it and it sighs out a tiny cloud. Completely harmless. Shameless show-off.”"
+            },
+            {
+              "id": "SEN-POST-S06",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "Afterward you buy two pastries. You hand her one and tell her you’ve already inspected it. Personally."
+            },
+            {
+              "id": "SEN-POST-S07",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Personally.”"
+            },
+            {
+              "id": "SEN-POST-S08",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She inspects it again anyway. You let her. She hums through most of it."
+            },
+            {
+              "id": "SEN-POST-S09",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Nothing went wrong all day. I kept checking.”"
+            },
+            {
+              "id": "SEN-POST-S10",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Same again next time they confiscate my pockets.”"
+            }
+          ],
+          "internalLabel": "Correct; net +2 half-hearts"
+        },
+        {
+          "choiceId": "SEN-POST-C1-DULL",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“So you’re no fun unless someone’s ill. Good to know.”",
+          "outcomeId": "SEN-POST-O-DULL",
+          "outcomeClass": "offensive",
+          "netHalfHearts": -1,
+          "branchLines": [
+            {
+              "id": "SEN-POST-X01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Someone’s always ill. I’ll go and find them.”"
+            },
+            {
+              "id": "SEN-POST-X02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She leaves to find someone with a splinter. It doesn’t take her long."
+            }
+          ],
+          "internalLabel": "Explicitly offensive; net −1 half-heart"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-EVT-POST-01.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Type": "optional Senna event, post-midpoint, one-time.",
+        "Eligibility": "Current Senna route; charisma ≥ 3; correct stage; Senna's scheduled slot; unused daily encounter.",
+        "Location": "Senna's scheduled location.",
+        "Objective": "Plan her a day around something she enjoys for its own sake, with nothing in it to fix.",
+        "END": "Mark SEN-EVT-POST-01 experienced regardless of result; commit the one net heart result."
+      }
+    },
+    "SEN-EVT-PRE-01": {
+      "sceneId": "SEN-EVT-PRE-01",
+      "kind": "optional",
+      "route": "SEN",
+      "stage": "PRE",
+      "title": "The Mislabeled Jar",
+      "introLines": [
+        {
+          "id": "SEN-PRE-001",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Pim skids up, waving a paper packet. On the front, a beaming old woman in a nightcap promises sleep."
+        },
+        {
+          "id": "SEN-PRE-002",
+          "speaker": "PIM",
+          "expression": null,
+          "text": "“Senna! Gran bought this! *Grandmother’s Sleep Tea!* It’s got grandmother on it, so it’s safe, isn’t it? Can I have some?”"
+        },
+        {
+          "id": "SEN-PRE-003",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna takes the packet and tweezes one gray-green leaf out of it. Then she goes very still."
+        },
+        {
+          "id": "SEN-PRE-004",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“Pim. Where did your gran buy this?”"
+        },
+        {
+          "id": "SEN-PRE-005",
+          "speaker": "PIM",
+          "expression": null,
+          "text": "“The market! There’s a queue! The man says it’s outselling honey!”"
+        },
+        {
+          "id": "SEN-PRE-006",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna takes your sleeve and tows you, without explanation, to a market stall in the Town Square."
+        },
+        {
+          "id": "SEN-PRE-007",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "A queue of yawning customers leads up to the stall. The merchant is scooping tea from a big jar labeled *GRANDMOTHER’S SLEEP TEA*."
+        },
+        {
+          "id": "SEN-PRE-008",
+          "speaker": "MERCHANT",
+          "expression": null,
+          "text": "“One at a time, plenty for everyone! Princess! A big bag for you?”"
+        },
+        {
+          "id": "SEN-PRE-009",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“No. Stop selling it.”"
+        },
+        {
+          "id": "SEN-PRE-010",
+          "speaker": "MERCHANT",
+          "expression": null,
+          "text": "“Stop? It’s my own grandmother’s recipe! Chamomile, lime flower, mullein. She drank it for ninety years!”"
+        },
+        {
+          "id": "SEN-PRE-011",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“The chamomile’s fine. The lime flower’s fine. This isn’t mullein.”"
+        },
+        {
+          "id": "SEN-PRE-012",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“*Digitalis purpurea*. Foxglove. Before it flowers, the leaves pass for mullein, if you’re in a hurry and you squint. Somebody squinted.”"
+        },
+        {
+          "id": "SEN-PRE-013",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“In a teapot, it makes the heart trip over its own feet.”"
+        },
+        {
+          "id": "SEN-PRE-014",
+          "speaker": "MERCHANT",
+          "expression": null,
+          "text": "“Foxglove? I buy from a proper supplier! He has a cart! With his name painted on it!”"
+        },
+        {
+          "id": "SEN-PRE-015",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“A cart with his name on it. That’s basically a certification.”"
+        },
+        {
+          "id": "SEN-PRE-016",
+          "speaker": "MERCHANT",
+          "expression": null,
+          "text": "“With respect, Princess, you’ve looked at one leaf. One! I’ve got a living to make.”"
+        },
+        {
+          "id": "SEN-PRE-017",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna looks at you. Both her hands are full of evidence, and the queue is still moving."
+        }
+      ],
+      "choicePointId": "SEN-PRE-C1",
+      "options": [
+        {
+          "choiceId": "SEN-PRE-C1-LATER",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Let’s report it to the guard tomorrow. No need to make a scene in front of everyone.”",
+          "outcomeId": "SEN-PRE-O-LATER",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-PRE-W01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Tomorrow.”"
+            },
+            {
+              "id": "SEN-PRE-W02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "At the front of the queue, a woman buys two bags. One’s for her mother."
+            },
+            {
+              "id": "SEN-PRE-W03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "Senna climbs onto a crate and explains foxglove to the entire queue, loudly. The merchant hides behind his jar."
+            },
+            {
+              "id": "SEN-PRE-W04",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“There. A scene.”"
+            }
+          ],
+          "internalLabel": "Ordinary wrong; net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-PRE-C1-CHECK",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Let’s check it against your herbal, right here. Can the sale wait five minutes while we look?”",
+          "outcomeId": "SEN-PRE-O-CHECK",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-PRE-S01",
+              "speaker": "PLAYER",
+              "expression": null,
+              "text": "“If she’s wrong, I’ll buy the first ten bags myself.”"
+            },
+            {
+              "id": "SEN-PRE-S02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "You slide her herbal out from under her arm and find *Digitalis*. You hold the leaf against the drawing while she points."
+            },
+            {
+              "id": "SEN-PRE-S03",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Turn it over. The veins make a net, and the edge has little teeth. Mullein’s smooth at the edge and woolly as a sock.”"
+            },
+            {
+              "id": "SEN-PRE-S04",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "The merchant looks at the drawing, then at the leaf. His face goes the color of weak tea."
+            },
+            {
+              "id": "SEN-PRE-S05",
+              "speaker": "PLAYER",
+              "expression": null,
+              "text": "“Your supplier swapped the leaf. Anyone could’ve missed it.”"
+            },
+            {
+              "id": "SEN-PRE-S06",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“I didn’t.”"
+            },
+            {
+              "id": "SEN-PRE-S07",
+              "speaker": "MERCHANT",
+              "expression": null,
+              "text": "“Anyone could’ve! Right! Sleep Tea’s off, everyone! Refunds at the front, and a free honey cake each!”"
+            },
+            {
+              "id": "SEN-PRE-S08",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Nobody eat the honey cake until I’ve looked at it.”"
+            },
+            {
+              "id": "SEN-PRE-S09",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She relabels the jar *EVIDENCE*. Then she inspects a honey cake. It passes, and Pim gets the first one."
+            }
+          ],
+          "internalLabel": "Correct; net +2 half-hearts"
+        },
+        {
+          "choiceId": "SEN-PRE-C1-PARANOID",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Senna, come on. You think everything’s poison.”",
+          "outcomeId": "SEN-PRE-O-PARANOID",
+          "outcomeClass": "offensive",
+          "netHalfHearts": -1,
+          "branchLines": [
+            {
+              "id": "SEN-PRE-X01",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“I think this is foxglove. I think you’re standing in front of the queue.”"
+            },
+            {
+              "id": "SEN-PRE-X02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She steps around you and opens her herbal for the merchant. She doesn’t show it to you."
+            }
+          ],
+          "internalLabel": "Explicitly offensive; net −1 half-heart"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-EVT-PRE-01.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Type": "optional Senna event, pre-midpoint, one-time.",
+        "Eligibility": "Current Senna route; intelligence ≥ 3; correct stage; Senna's scheduled slot; unused daily encounter.",
+        "Location": "Opens where Senna is scheduled; presented at the Town Square within the same encounter (not a new map location).",
+        "Objective": "The right answer gets the tea off sale with care and evidence while the merchant saves face, treating Senna’s expertise as real.",
+        "END": "Mark SEN-EVT-PRE-01 experienced regardless of result; commit the one net heart result."
+      }
+    },
+    "SEN-FIN-01": {
+      "sceneId": "SEN-FIN-01",
+      "kind": "marriage",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "Planted By",
+      "introLines": [
+        {
+          "id": "SEN-FIN-001",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna takes you to the physic beds and hands you a trowel, handle first."
+        },
+        {
+          "id": "SEN-FIN-002",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Kneel there. Mind the comfrey. Don’t eat the comfrey.”"
+        },
+        {
+          "id": "SEN-FIN-003",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She kneels beside you with her gloves on and digs a hole exactly one knuckle deep. She checks it with the knuckle."
+        },
+        {
+          "id": "SEN-FIN-004",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“The packet I kept for myself. It turned out to be relevant.”"
+        },
+        {
+          "id": "SEN-FIN-005",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She drops in one seed and pats the soil over it. Then she takes a small wooden label from her apron, already written in her square capitals."
+        },
+        {
+          "id": "SEN-FIN-006",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "*HELLEBORUS NIGER. PLANTED BY: S. AND ________*"
+        },
+        {
+          "id": "SEN-FIN-007",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“*Helleborus niger.* Poisonous from root to petal. It flowers in the snow, when nothing else can be bothered.”"
+        },
+        {
+          "id": "SEN-FIN-008",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“You were going to find out in three years. I moved it up.”"
+        },
+        {
+          "id": "SEN-FIN-009",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“S. and…?”"
+        },
+        {
+          "id": "SEN-FIN-010",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“I left a space. I measured it. One name wide.”"
+        },
+        {
+          "id": "SEN-FIN-011",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“I don’t know what goes in it. I’ve rubbed it out twice.”"
+        },
+        {
+          "id": "SEN-FIN-012",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Pulse, fast. Hands, unreliable. Face, warm. I’d blame the sun, but there isn’t any.”"
+        },
+        {
+          "id": "SEN-FIN-013",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She holds out the pencil from her bun. The sprig of rosemary comes with it and drops onto the soil."
+        },
+        {
+          "id": "SEN-FIN-014",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“Rosemary. For remembrance. That wasn’t on purpose.”"
+        },
+        {
+          "id": "SEN-FIN-015",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“My mother sent me here to find someone who’d put up with me.”"
+        },
+        {
+          "id": "SEN-FIN-016",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“So. What do I write?”"
+        }
+      ],
+      "choicePointId": "SEN-FIN-C1",
+      "options": [
+        {
+          "choiceId": "SEN-FIN-C1-SPEECH",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Senna, ever since you swatted a tart out of my hand, I’ve known. You’re the rarest thing in this garden. Marry me?”",
+          "outcomeId": "SEN-FIN-O-SPEECH",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 0,
+          "branchLines": [
+            {
+              "id": "SEN-FIN-W01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“That was a speech. I asked you a question.”"
+            },
+            {
+              "id": "SEN-FIN-W02",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“You rehearsed it. You did a hand gesture on *rarest*.”"
+            },
+            {
+              "id": "SEN-FIN-W03",
+              "speaker": "PLAYER",
+              "expression": null,
+              "text": "“It sounded better in my head.”"
+            },
+            {
+              "id": "SEN-FIN-W04",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She slides the label back into her apron. The space on it stays blank."
+            }
+          ],
+          "internalLabel": "Wrong; no new heart penalty; marriage retry pending at ten hearts"
+        },
+        {
+          "choiceId": "SEN-FIN-C1-RESCUE",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Marry me, and you’ll never have to work in an infirmary again. I’ll look after you for a change.”",
+          "outcomeId": "SEN-FIN-O-RESCUE",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 0,
+          "branchLines": [
+            {
+              "id": "SEN-FIN-X01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“…Why would I want that?”"
+            },
+            {
+              "id": "SEN-FIN-X02",
+              "speaker": "PLAYER",
+              "expression": null,
+              "text": "“So you could rest. You never stop.”"
+            },
+            {
+              "id": "SEN-FIN-X03",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“I like the infirmary. I moved in with four trunks. Nobody made me.”"
+            },
+            {
+              "id": "SEN-FIN-X04",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She puts the label away in the pocket marked *sweets, for patients*. Then she goes back to weeding."
+            }
+          ],
+          "internalLabel": "Wrong; no new heart penalty; marriage retry pending at ten hearts"
+        },
+        {
+          "choiceId": "SEN-FIN-C1-PLAIN",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Write my name. Marry me. I want to be here when it flowers, and every year after.”",
+          "outcomeId": "SEN-FIN-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 0,
+          "branchLines": [
+            {
+              "id": "SEN-FIN-S01",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "Senna looks at the label. Then at you, for longer."
+            },
+            {
+              "id": "SEN-FIN-S02",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“Your name.”"
+            },
+            {
+              "id": "SEN-FIN-S03",
+              "speaker": "PLAYER",
+              "expression": null,
+              "text": "“Spelled right, ideally.”"
+            },
+            {
+              "id": "SEN-FIN-S04",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She writes your name in the space and gets a letter wrong. She rubs it out with her thumb and tries again."
+            },
+            {
+              "id": "SEN-FIN-S05",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“Don’t watch. My hands have stopped taking instructions.”"
+            },
+            {
+              "id": "SEN-FIN-S06",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "The second try is perfect. She pushes the label into the soil beside the seed, then straightens it. Twice."
+            },
+            {
+              "id": "SEN-FIN-S07",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Yes, {PLAYER}. Obviously.”"
+            },
+            {
+              "id": "SEN-FIN-S08",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“I’ve been diagnosing this for weeks.”"
+            },
+            {
+              "id": "SEN-FIN-S09",
+              "speaker": "PLAYER",
+              "expression": null,
+              "text": "“What’s the diagnosis?”"
+            },
+            {
+              "id": "SEN-FIN-S10",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Chronic. I looked for a cure. Then I stopped looking.”"
+            },
+            {
+              "id": "SEN-FIN-S11",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She takes your hand. Her glove leaves soil on your fingers, and she doesn’t apologize for it."
+            },
+            {
+              "id": "SEN-FIN-S12",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“I’ll write to my mother. One line. *Found someone. Stop underlining.*”"
+            }
+          ],
+          "internalLabel": "Correct; terminal success and gallery unlock"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-FIN-01.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Type": "mandatory first marriage proposal; full scene shown only once.",
+        "Location": "Opens where Senna is scheduled; presented at the Royal Gardens within the same encounter (not a new map location).",
+        "Objective": "Answer the label’s question plainly: write your name and ask to be there when it flowers, as a partner rather than a performer or a rescuer.",
+        "END": "Shares the originating action. Correct: terminal success and gallery unlock. Wrong: retry pending at ten hearts."
+      }
+    },
+    "SEN-FIN-RETRY-01": {
+      "sceneId": "SEN-FIN-RETRY-01",
+      "kind": "marriage_retry",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "Plainly",
+      "introLines": [
+        {
+          "id": "SEN-FR-001",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna has the wooden label out before you reach her. Its corners have gone round from living in her apron."
+        },
+        {
+          "id": "SEN-FR-002",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“The seed hasn’t come up. It’s a three-year seed. I check it anyway.”"
+        },
+        {
+          "id": "SEN-FR-003",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She holds out the label and the pencil from her bun."
+        },
+        {
+          "id": "SEN-FR-004",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Try again. Plainly.”"
+        },
+        {
+          "id": "SEN-FR-005",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“It has to fit on the label.”"
+        }
+      ],
+      "choicePointId": "SEN-FR-C1",
+      "options": [
+        {
+          "choiceId": "SEN-FR-C1-PLAIN",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“My name goes in the space. Marry me, and we’ll both be there when it flowers.”",
+          "outcomeId": "SEN-FR-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 0,
+          "branchLines": [
+            {
+              "id": "SEN-FR-S01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“That fits.”"
+            },
+            {
+              "id": "SEN-FR-S02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She writes your name in the space, spelled right on the first try. She checks it twice anyway."
+            },
+            {
+              "id": "SEN-FR-S03",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Yes. Obviously. You only had to say it at label size.”"
+            },
+            {
+              "id": "SEN-FR-S04",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She tucks the label into the apron pocket nearest her heart. She has measured which one that is."
+            }
+          ],
+          "internalLabel": "Correct; terminal success, gallery unlock, no hearts gained"
+        },
+        {
+          "choiceId": "SEN-FR-C1-WAIT",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Marry me once the infirmary can spare you. I don’t mind waiting until things calm down.”",
+          "outcomeId": "SEN-FR-O-STILL-PENDING",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 0,
+          "branchLines": [
+            {
+              "id": "SEN-FR-W01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“When the infirmary can spare me.”"
+            },
+            {
+              "id": "SEN-FR-W02",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“It won’t. Someone sprains something every day. I keep a chart.”"
+            },
+            {
+              "id": "SEN-FR-W03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "The label goes back in her apron. On the way, she checks the space, in case your name has turned up by itself."
+            }
+          ],
+          "internalLabel": "Wrong; keep ten hearts, retry pending"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-FIN-RETRY-01.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Type": "mandatory brief final retry; repeatable following a wrong final answer.",
+        "Location": "Senna's scheduled location.",
+        "Objective": "Fill in the label plainly: your name and a shared future, with no conditions and no speech.",
+        "END": "Every attempt consumes one slot and the daily encounter and creates one journal entry."
+      }
+    },
+    "SEN-MID-01": {
+      "sceneId": "SEN-MID-01",
+      "kind": "midpoint",
+      "route": "SEN",
+      "stage": "PRE",
+      "title": "Lamplight in the Infirmary",
+      "introLines": [
+        {
+          "id": "SEN-MID-001",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna meets you with a lamp in one hand and a basket of herb bundles in the other. She gives you both."
+        },
+        {
+          "id": "SEN-MID-002",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Infirmary. The last patient’s gone home, so you can carry.”"
+        },
+        {
+          "id": "SEN-MID-003",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "The infirmary is a narrow wing off the Palace Court. It smells of rosemary and clean linen, with a third smell you decide not to ask about."
+        },
+        {
+          "id": "SEN-MID-004",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Pim is asleep on a cot by the stove, still holding half a rolled bandage."
+        },
+        {
+          "id": "SEN-MID-005",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“He rolled forty bandages, then himself. I’m counting him as forty-one.”"
+        },
+        {
+          "id": "SEN-MID-006",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She sits at the long worktable and pulls the lamp close. A row of empty jars is waiting for labels."
+        },
+        {
+          "id": "SEN-MID-007",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Hold the twine. Tighter. It’s twine, not a sparrow.”"
+        },
+        {
+          "id": "SEN-MID-008",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She sorts dried leaves into the jars by smell. One pale root gets held up to the lamp and frowned at."
+        },
+        {
+          "id": "SEN-MID-009",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“*Aconitum napellus.* Monkshood. The root looks like horseradish. Every so often a cook grates it over the beef, and the whole table’s mouth goes numb.”"
+        },
+        {
+          "id": "SEN-MID-010",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I took a basket of it out of the palace kitchens. The cook thanked me, then asked me never to come back.”"
+        },
+        {
+          "id": "SEN-MID-011",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She labels the jar in square capitals: MONKSHOOD. NOT HORSERADISH. DO NOT GRATE. DO NOT, PIM."
+        },
+        {
+          "id": "SEN-MID-012",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“Does Pim try to eat the stock?”"
+        },
+        {
+          "id": "SEN-MID-013",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Once. Lavender soap. In his defense, it was shaped like a cake.”"
+        },
+        {
+          "id": "SEN-MID-014",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "From under her notebook she slides out a letter. It’s been folded and unfolded so often the paper has gone soft."
+        },
+        {
+          "id": "SEN-MID-015",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“My mother. Hollowmere post. It always arrives damp.”"
+        },
+        {
+          "id": "SEN-MID-016",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“‘Dearest Senna. The rain continues. Have you attended a ball? Any ball?’”"
+        },
+        {
+          "id": "SEN-MID-017",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“‘Have you found someone who will put up with you?’”"
+        },
+        {
+          "id": "SEN-MID-018",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“She’s underlined *put up with*. Three times. She’s escalating.”"
+        },
+        {
+          "id": "SEN-MID-019",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I’ll send her sixty-two sprains and a bee sting. That usually ends the correspondence for a month.”"
+        },
+        {
+          "id": "SEN-MID-020",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She picks up the next label. She doesn’t write anything on it."
+        },
+        {
+          "id": "SEN-MID-021",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“Nobody sends home the person who knows where the burn salve is.”"
+        },
+        {
+          "id": "SEN-MID-022",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“So I always know where the burn salve is.”"
+        },
+        {
+          "id": "SEN-MID-023",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“An infirmary never runs out of sprains. There’s always a reason for me to be in the room.”"
+        },
+        {
+          "id": "SEN-MID-024",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“Without one, I’m a princess who skipped every ball and sniffs people’s tea. That takes some putting up with.”"
+        },
+        {
+          "id": "SEN-MID-025",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She ties off a jar with a knot that could moor a ship. She still hasn’t looked up."
+        }
+      ],
+      "choicePointId": "SEN-MID-C1",
+      "options": [
+        {
+          "choiceId": "SEN-MID-C1-USEFUL",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Sixty-two sprains? This palace would fall apart without you. Nobody’s sending you home.”",
+          "outcomeId": "SEN-MID-O-USEFUL",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 0,
+          "branchLines": [
+            {
+              "id": "SEN-MID-W01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Yes. That’s the arrangement.”"
+            },
+            {
+              "id": "SEN-MID-W02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She hands you another bundle to sort, then a second before you’ve finished the first."
+            },
+            {
+              "id": "SEN-MID-W03",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“It’s kind. It’s also what I tell myself while I sweep.”"
+            },
+            {
+              "id": "SEN-MID-W04",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "When you leave, she’s sweeping a floor that was clean when you arrived."
+            }
+          ],
+          "internalLabel": "Wrong; midpoint incomplete, no hearts changed"
+        },
+        {
+          "choiceId": "SEN-MID-C1-WANTED",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“If nobody in the palace ever sprained anything again, I’d still come and sit with you. Holding the twine badly.”",
+          "outcomeId": "SEN-MID-O-TRUST",
+          "outcomeClass": "correct",
+          "netHalfHearts": 0,
+          "branchLines": [
+            {
+              "id": "SEN-MID-S01",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "Senna’s pencil stops in the middle of a word."
+            },
+            {
+              "id": "SEN-MID-S02",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“Badly.”"
+            },
+            {
+              "id": "SEN-MID-S03",
+              "speaker": "PLAYER",
+              "expression": null,
+              "text": "“Very badly. You’ve seen me with twine.”"
+            },
+            {
+              "id": "SEN-MID-S04",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“I have. I nearly prescribed something.”"
+            },
+            {
+              "id": "SEN-MID-S05",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She finishes the label and puts the jar on the shelf. Then she reads what she wrote."
+            },
+            {
+              "id": "SEN-MID-S06",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“I just labeled feverfew *feelings*. That’s your fault.”"
+            },
+            {
+              "id": "SEN-MID-S07",
+              "speaker": "PLAYER",
+              "expression": null,
+              "text": "“I can hold the lamp while you fix it.”"
+            },
+            {
+              "id": "SEN-MID-S08",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“No. Leave it. I know what’s in it.”"
+            },
+            {
+              "id": "SEN-MID-S09",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She reaches into the basket to find you something to do. Then she pushes the basket away."
+            },
+            {
+              "id": "SEN-MID-S10",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Sit. Don’t hold anything. Don’t eat the soap.”"
+            },
+            {
+              "id": "SEN-MID-S11",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "You sit. She labels four more jars, all of them correctly. Pim snores through every one."
+            }
+          ],
+          "internalLabel": "Correct; milestone completes, no hearts gained"
+        },
+        {
+          "choiceId": "SEN-MID-C1-FIX",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Give me her address. I’ll write and tell her exactly how much this court relies on you.”",
+          "outcomeId": "SEN-MID-O-FIX",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 0,
+          "branchLines": [
+            {
+              "id": "SEN-MID-X01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“You’d write to my mother.”"
+            },
+            {
+              "id": "SEN-MID-X02",
+              "speaker": "PLAYER",
+              "expression": null,
+              "text": "“Someone should tell her what you do here.”"
+            },
+            {
+              "id": "SEN-MID-X03",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“She’ll write back. To you. With a list of every ball I’ve missed.”"
+            },
+            {
+              "id": "SEN-MID-X04",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“I read you the letter. I didn’t ask anyone to answer it.”"
+            },
+            {
+              "id": "SEN-MID-X05",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She takes the twine back and ties off the last jar herself. The knot is very tight."
+            }
+          ],
+          "internalLabel": "Wrong; midpoint incomplete, no hearts changed"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-MID-01.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Type": "mandatory midpoint, first full attempt (shown once).",
+        "Eligibility": "Current Senna route; five committed hearts; midpoint incomplete; intelligence ≥ 6 and kindness ≥ 4.",
+        "Location": "Opens where Senna is scheduled; presented at the Palace Court within the same encounter (not a new map location).",
+        "Objective": "See her as wanted, not only needed: you would keep her company even if nobody were ever ill again.",
+        "END": "Always one slot, one daily encounter and one journal entry; no hearts change. Correct completes the midpoint; wrong sets a retry."
+      }
+    },
+    "SEN-MID-RETRY-01": {
+      "sceneId": "SEN-MID-RETRY-01",
+      "kind": "midpoint_retry",
+      "route": "SEN",
+      "stage": "PRE",
+      "title": "About the Other Day",
+      "introLines": [
+        {
+          "id": "SEN-MR-001",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna sniffs a cup of something hot and holds it up to the light. Then she hands it to you."
+        },
+        {
+          "id": "SEN-MR-002",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Mint. Only mint. I checked twice.”"
+        },
+        {
+          "id": "SEN-MR-003",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“About the other day.”"
+        },
+        {
+          "id": "SEN-MR-004",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She finds her spectacles on her head on the first try. It seems to unsettle her."
+        },
+        {
+          "id": "SEN-MR-005",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“You said something kind. I’ve tried it in three jars. It doesn’t fit any of them.”"
+        }
+      ],
+      "choicePointId": "SEN-MR-C1",
+      "options": [
+        {
+          "choiceId": "SEN-MR-C1-REST",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“You work too hard. Take a day off and let someone else mind the infirmary for a while.”",
+          "outcomeId": "SEN-MR-O-REST",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 0,
+          "branchLines": [
+            {
+              "id": "SEN-MR-W01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“A day off.”"
+            },
+            {
+              "id": "SEN-MR-W02",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Doctor Leeches says that too. He also says leeches.”"
+            },
+            {
+              "id": "SEN-MR-W03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She takes the cup back and rinses it, though it was clean. Then she says goodbye."
+            }
+          ],
+          "internalLabel": "Wrong; milestone remains pending, no hearts changed"
+        },
+        {
+          "choiceId": "SEN-MR-C1-WANTED",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“I said it wrong. I like your company. Sprains optional.”",
+          "outcomeId": "SEN-MR-O-TRUST",
+          "outcomeClass": "correct",
+          "netHalfHearts": 0,
+          "branchLines": [
+            {
+              "id": "SEN-MR-S01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“Sprains optional.”"
+            },
+            {
+              "id": "SEN-MR-S02",
+              "speaker": "PLAYER",
+              "expression": null,
+              "text": "“Discouraged, even.”"
+            },
+            {
+              "id": "SEN-MR-S03",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Good. I’m low on arnica.”"
+            },
+            {
+              "id": "SEN-MR-S04",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She opens her notebook to a clean page and writes a heading: *Visitors*. Under it goes one name, underlined twice."
+            }
+          ],
+          "internalLabel": "Correct; complete milestone, no hearts gained"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-MID-RETRY-01.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Type": "mandatory midpoint retry; repeatable after a failed first attempt.",
+        "Location": "Senna's scheduled location.",
+        "Objective": "Say it plainly this time: you like her company, with or without anything to treat.",
+        "END": "One slot and one daily encounter, one journal entry, zero heart change; never replay the full midpoint."
+      }
+    },
+    "SEN-ORD-POST-F01": {
+      "sceneId": "SEN-ORD-POST-F01",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "Pastry Analysis",
+      "introLines": [
+        {
+          "id": "SEN-ORD-POST-F01-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "A grateful patient has given Senna a pastry. She breaks it in half and holds both halves up to the light."
+        },
+        {
+          "id": "SEN-ORD-POST-F01-L02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Don’t eat that.”"
+        },
+        {
+          "id": "SEN-ORD-POST-F01-L03",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“You haven’t given it to me.”"
+        },
+        {
+          "id": "SEN-ORD-POST-F01-L04",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Preemptively. Don’t.”"
+        },
+        {
+          "id": "SEN-ORD-POST-F01-L05",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Out comes the magnifying lens. She questions a single currant until it has nothing left to say."
+        },
+        {
+          "id": "SEN-ORD-POST-F01-L06",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Butter. Currants. Something the baker is calling cinnamon.”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-POST-F01-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-POST-F01-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“What’s he calling cinnamon, then? I’ll wait for the full report.”",
+          "outcomeId": "SEN-ORD-POST-F01-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-F01-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Nutmeg. A big enough dose makes you very ill. This is a festive dose.”"
+            },
+            {
+              "id": "SEN-ORD-POST-F01-R-YES-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She hands you the bigger half. You can tell she checked that too."
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-F01-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“I’ll try mine first. If I’m fine, you’re fine.”",
+          "outcomeId": "SEN-ORD-POST-F01-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-F01-R-NO-01",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "You eat your half before she can stop you."
+            },
+            {
+              "id": "SEN-ORD-POST-F01-R-NO-02",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“A study with one participant. Terrible science. I’m not telling you the result.”"
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-F01-C1-NO2",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“That’s cinnamon. I can smell it from here.”",
+          "outcomeId": "SEN-ORD-POST-F01-O-NO2",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-F01-R-NO2-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“It’s nutmeg. The cinnamon is a rumor.”"
+            },
+            {
+              "id": "SEN-ORD-POST-F01-R-NO2-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She hands you the smaller half."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-POST-F01.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "cyclic fallback; **stage:** post; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-POST-F02": {
+      "sceneId": "SEN-ORD-POST-F02",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "Quiet",
+      "introLines": [
+        {
+          "id": "SEN-ORD-POST-F02-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna sits down beside you and folds her hands in her lap. They stay there for almost a minute."
+        },
+        {
+          "id": "SEN-ORD-POST-F02-L02",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Then the left one drifts toward the pocket labeled *twine*. She puts it back."
+        },
+        {
+          "id": "SEN-ORD-POST-F02-L03",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I’m practicing sitting. Without sorting anything.”"
+        },
+        {
+          "id": "SEN-ORD-POST-F02-L04",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“So far it’s harder than getting Pim to take his cough syrup.”"
+        },
+        {
+          "id": "SEN-ORD-POST-F02-L05",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Stay if you like. No talking. That’s the whole prescription.”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-POST-F02-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-POST-F02-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Want a distraction? I could tell you how I once fixed a printer by yelling at it.”",
+          "outcomeId": "SEN-ORD-POST-F02-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-F02-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“What’s a printer?”"
+            },
+            {
+              "id": "SEN-ORD-POST-F02-R-NO-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "You explain. It takes a while. By the end, all her twine is sorted by length."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-F02-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Give me the hand that keeps wandering. I’ll keep it out of the twine.”",
+          "outcomeId": "SEN-ORD-POST-F02-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-F02-R-YES-01",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She studies your hand like a sample of unknown origin. Then she puts hers in it."
+            },
+            {
+              "id": "SEN-ORD-POST-F02-R-YES-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "Nothing else happens for a good while. The twine stays in its pocket."
+            },
+            {
+              "id": "SEN-ORD-POST-F02-R-YES-03",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Pulse elevated. Mine. That’s not going in the notes.”"
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-POST-F02.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "cyclic fallback; **stage:** post; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-POST-F03": {
+      "sceneId": "SEN-ORD-POST-F03",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "Spectacles, Again",
+      "introLines": [
+        {
+          "id": "SEN-ORD-POST-F03-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna is searching her apron one labeled pocket at a time. She reaches *sweets, for patients* and stops."
+        },
+        {
+          "id": "SEN-ORD-POST-F03-L02",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“My spectacles. I put them somewhere safe. I remember being very pleased with myself.”"
+        },
+        {
+          "id": "SEN-ORD-POST-F03-L03",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Something small and wire-framed is perched on top of your head."
+        },
+        {
+          "id": "SEN-ORD-POST-F03-L04",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“Senna. Look up.”"
+        },
+        {
+          "id": "SEN-ORD-POST-F03-L05",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“Oh. Yes. I put them on you. You were the only thing nearby that wasn’t going anywhere.”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-POST-F03-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-POST-F03-C1-OFF",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“How do you lose things on your own head? Or, apparently, mine?”",
+          "outcomeId": "SEN-ORD-POST-F03-O-OFF",
+          "outcomeClass": "offensive",
+          "netHalfHearts": -1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-F03-R-OFF-01",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“Practice.”"
+            },
+            {
+              "id": "SEN-ORD-POST-F03-R-OFF-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She lifts them off your head and leaves. Your head feels noticeably colder."
+            }
+          ],
+          "internalLabel": "Explicitly offensive, net −1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-F03-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Here. Maybe pick one place for them and always use it?”",
+          "outcomeId": "SEN-ORD-POST-F03-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-F03-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“One place. Yes. I did pick one.”"
+            },
+            {
+              "id": "SEN-ORD-POST-F03-R-NO-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She pushes them up onto her own head, where she’ll lose them again before you’ve finished talking."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-F03-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Leave them with me. I’ll guard them.”",
+          "outcomeId": "SEN-ORD-POST-F03-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-F03-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Good. Don’t lean forward.”"
+            },
+            {
+              "id": "SEN-ORD-POST-F03-R-YES-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She goes back to her notes. Every so often she borrows them to read one line, then puts them back on your head."
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-POST-F03.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "cyclic fallback; **stage:** post; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-POST-U01": {
+      "sceneId": "SEN-ORD-POST-U01",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "Pulse",
+      "introLines": [
+        {
+          "id": "SEN-ORD-POST-U01-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Mid-sentence, Senna takes your wrist and starts counting under her breath."
+        },
+        {
+          "id": "SEN-ORD-POST-U01-L02",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“Am I dying?”"
+        },
+        {
+          "id": "SEN-ORD-POST-U01-L03",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Not of this. Don’t talk. You’ll skew it.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U01-L04",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Elevated. Either you like me or you took the stairs.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U01-L05",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She waits with her pencil out, as if each answer goes in a different column."
+        }
+      ],
+      "choicePointId": "SEN-ORD-POST-U01-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-POST-U01-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“The stairs. Definitely the stairs. They were very steep.”",
+          "outcomeId": "SEN-ORD-POST-U01-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U01-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“You haven’t moved in ten minutes.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U01-R-NO-02",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“Hm. Disappointing.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U01-R-NO-03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She writes *stairs* in her notebook, followed by a small, pointed question mark."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-U01-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Both. Mostly the first.”",
+          "outcomeId": "SEN-ORD-POST-U01-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U01-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“Mostly the first.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U01-R-YES-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She lets go of your wrist and takes her own pulse instead. She doesn’t tell you the number."
+            },
+            {
+              "id": "SEN-ORD-POST-U01-R-YES-03",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“It’s fine. It’s the stairs.”"
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-POST-U01.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "first-use fixed sequence; **stage:** post; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-POST-U02": {
+      "sceneId": "SEN-ORD-POST-U02",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "Deficiency",
+      "introLines": [
+        {
+          "id": "SEN-ORD-POST-U02-L01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I’ve been experiencing a deficiency.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U02-L02",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“Iron?”"
+        },
+        {
+          "id": "SEN-ORD-POST-U02-L03",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“You. Onset was the moment you left last time.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U02-L04",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Symptoms. I look up whenever anyone walks toward me. Fourteen times so far. Twelve were Pim.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U02-L05",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“One was a goose. I don’t want to discuss the goose.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U02-L06",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She opens her notebook to a page headed *Treatment* and waits, pencil ready."
+        }
+      ],
+      "choicePointId": "SEN-ORD-POST-U02-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-POST-U02-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Same here. I kept turning to tell you things, and you weren’t there.”",
+          "outcomeId": "SEN-ORD-POST-U02-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U02-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“Mutual.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U02-R-YES-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "Under *Treatment* she writes *Frequent doses.* She looks at it, crosses out *Frequent*, and writes *Daily.*"
+            },
+            {
+              "id": "SEN-ORD-POST-U02-R-YES-03",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Now tell me the things. Oldest first.”"
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-U02-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Have you tried leeches? I hear Doctor Leeches swears by them.”",
+          "outcomeId": "SEN-ORD-POST-U02-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U02-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“He’d prescribe six and a brisk walk.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U02-R-NO-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She closes the notebook. The *Treatment* page stays blank."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-POST-U02.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "first-use fixed sequence; **stage:** post; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-POST-U03": {
+      "sceneId": "SEN-ORD-POST-U03",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "Doctor Leeches Asks for Help",
+      "introLines": [
+        {
+          "id": "SEN-ORD-POST-U03-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Royal Physician Dorrance approaches with his hat held humbly in both hands. It doesn’t suit him."
+        },
+        {
+          "id": "SEN-ORD-POST-U03-L02",
+          "speaker": "PHYSICIAN",
+          "expression": null,
+          "text": "“Your Highness. A purely academic question. A stable hand has a rash that four rounds of leeches have failed to improve.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U03-L03",
+          "speaker": "PHYSICIAN",
+          "expression": null,
+          "text": "“If anything, it has become offended.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U03-L04",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna goes very still, like a cat that has just been handed the ribbon."
+        },
+        {
+          "id": "SEN-ORD-POST-U03-L05",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Doctor Leeches is asking me for help. Out loud. With witnesses.”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-POST-U03-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-POST-U03-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Make him ask again in front of the whole court. He’s earned it.”",
+          "outcomeId": "SEN-ORD-POST-U03-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U03-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Nine seconds of satisfaction. Then he leeches the stable hand again, out of spite.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U03-R-NO-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She gives Dorrance the answer in one flat sentence. He’s gone before she can enjoy any of it."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-U03-C1-NO2",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“You don’t owe him anything. Let him work it out himself.”",
+          "outcomeId": "SEN-ORD-POST-U03-O-NO2",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U03-R-NO2-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“The stable hand would like him to work it out faster.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U03-R-NO2-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She tells Dorrance briskly, the way she’d hand back a glove he dropped."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-U03-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Help him. Then gloat to me afterward. In detail.”",
+          "outcomeId": "SEN-ORD-POST-U03-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U03-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“New saddle soap. Change it. Stop the leeches. Mostly stop the leeches.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U03-R-YES-02",
+              "speaker": "PHYSICIAN",
+              "expression": null,
+              "text": "“The saddle soap. Of course. I was coming to that.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U03-R-YES-03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "When he’s gone, she opens her notebook to a fresh page and writes *Gloating* across the top."
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-POST-U03.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "first-use fixed sequence; **stage:** post; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-POST-U04": {
+      "sceneId": "SEN-ORD-POST-U04",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "The Apprentice",
+      "introLines": [
+        {
+          "id": "SEN-ORD-POST-U04-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Pim arrives at a run, waving a list. The handwriting gets bigger toward the bottom."
+        },
+        {
+          "id": "SEN-ORD-POST-U04-L02",
+          "speaker": "PIM",
+          "expression": null,
+          "text": "“Miss Senna, I want to learn medicine! Which plants are poison? Can I hold the foxglove? Are there needles?”"
+        },
+        {
+          "id": "SEN-ORD-POST-U04-L03",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“All of them, in the right amount. No. And there are no needles, Pim. There have never been needles.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U04-L04",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She takes the list and folds it very small, the way she puts away anything with an edge."
+        },
+        {
+          "id": "SEN-ORD-POST-U04-L05",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“He touches everything. Last week he licked a doorknob to find out what brass tastes like.”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-POST-U04-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-POST-U04-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Maybe he’s a bit young for this? The stables might be safer for now.”",
+          "outcomeId": "SEN-ORD-POST-U04-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U04-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“The stables. Where the horses kick.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U04-R-NO-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "Pim goes back anyway. Senna watches him the whole way, as if he might trip over the air."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-U04-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Start him somewhere safe. Who’s in charge of counting the boiled sweets?”",
+          "outcomeId": "SEN-ORD-POST-U04-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U04-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“The sweets. Nothing in that bag can hurt him except the arithmetic.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U04-R-YES-02",
+              "speaker": "PIM",
+              "expression": null,
+              "text": "“Forty-one! Is that right? Is it a test? Did I pass?”"
+            },
+            {
+              "id": "SEN-ORD-POST-U04-R-YES-03",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“It’s forty. You’ve got one in your cheek. Write *forty*.”"
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-U04-C1-OFF",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Why bother? He’s just a stable boy.”",
+          "outcomeId": "SEN-ORD-POST-U04-O-OFF",
+          "outcomeClass": "offensive",
+          "netHalfHearts": -1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U04-R-OFF-01",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“He can name six plants you shouldn’t eat. You’ve tried to eat two of them.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U04-R-OFF-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She takes Pim by the sleeve and walks off, already explaining the first one."
+            }
+          ],
+          "internalLabel": "Explicitly offensive, net −1 half-heart"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-POST-U04.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "first-use fixed sequence; **stage:** post; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-POST-U05": {
+      "sceneId": "SEN-ORD-POST-U05",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "The Rota",
+      "introLines": [
+        {
+          "id": "SEN-ORD-POST-U05-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna unfolds a rota from her apron. Every hour is filled in, in very small handwriting."
+        },
+        {
+          "id": "SEN-ORD-POST-U05-L02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I’ve made a change. Bottom line.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U05-L03",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Under *Pim: sweets, bandages, no needles* is your name. Beside it: *Moral support.*"
+        },
+        {
+          "id": "SEN-ORD-POST-U05-L04",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“I don’t know any medicine.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U05-L05",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Correct. That’s why you’re not on bandages.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U05-L06",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“It’s a real post. Dorrance has one too. His says *Leeches (supervised).*”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-POST-U05-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-POST-U05-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“I accept. First job offer I’ve ever had. What are the duties?”",
+          "outcomeId": "SEN-ORD-POST-U05-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U05-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Sit within reach. Hand me things when I point. Sit within reach some more.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U05-R-YES-02",
+              "speaker": "PLAYER",
+              "expression": null,
+              "text": "“What’s the pay?”"
+            },
+            {
+              "id": "SEN-ORD-POST-U05-R-YES-03",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“One boiled sweet per shift. Don’t tell Pim. He’s on half.”"
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-U05-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Couldn’t we do something fun instead? You’re always working.”",
+          "outcomeId": "SEN-ORD-POST-U05-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U05-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Something fun. Instead.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U05-R-NO-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She folds the rota back into her apron. Your name ends up on the inside of the fold."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-POST-U05.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "first-use fixed sequence; **stage:** post; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-POST-U06": {
+      "sceneId": "SEN-ORD-POST-U06",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "POST",
+      "title": "Three Years",
+      "introLines": [
+        {
+          "id": "SEN-ORD-POST-U06-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna presses a small paper packet into your hand. On the front, in her handwriting: *3 years.*"
+        },
+        {
+          "id": "SEN-ORD-POST-U06-L02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Seeds. It takes three years to flower. After that it flowers every year, if it likes you.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U06-L03",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“What is it?”"
+        },
+        {
+          "id": "SEN-ORD-POST-U06-L04",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“You’ll find out in three years.”"
+        },
+        {
+          "id": "SEN-ORD-POST-U06-L05",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She labels her own gloves *left* and *right*. This packet says *3 years* and nothing else."
+        },
+        {
+          "id": "SEN-ORD-POST-U06-L06",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I kept a packet for myself. That’s not relevant.”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-POST-U06-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-POST-U06-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Three years? Have you got anything faster? I’m terrible at waiting.”",
+          "outcomeId": "SEN-ORD-POST-U06-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U06-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Cress. Four days.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U06-R-NO-02",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Very good in sandwiches.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U06-R-NO-03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She takes the packet back and tucks it into the pocket labeled *later*."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-POST-U06-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“How do I keep it alive for three years? Start from the beginning.”",
+          "outcomeId": "SEN-ORD-POST-U06-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-POST-U06-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“From the beginning.”"
+            },
+            {
+              "id": "SEN-ORD-POST-U06-R-YES-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She talks for a long time. Frost. Slugs. Which slugs are friends. How to apologize to an overwatered seedling."
+            },
+            {
+              "id": "SEN-ORD-POST-U06-R-YES-03",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Year three is mostly waiting. I’ll check on it. On you. On it.”"
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-POST-U06.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "first-use fixed sequence; **stage:** post; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-PRE-F01": {
+      "sceneId": "SEN-ORD-PRE-F01",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "PRE",
+      "title": "Tea Inspection",
+      "introLines": [
+        {
+          "id": "SEN-ORD-PRE-F01-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Someone has handed you a cup of tea. You lift it to drink, and Senna takes it out of your hands."
+        },
+        {
+          "id": "SEN-ORD-PRE-F01-L02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“One moment.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F01-L03",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She sniffs it. Then she dips a paper strip from her apron into it and squints at the strip."
+        },
+        {
+          "id": "SEN-ORD-PRE-F01-L04",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“Stewed. Four sugars. Whoever made this hates teeth.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F01-L05",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“It’s safe. It’s also bad.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F01-L06",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I’ve smelled about four hundred cups of tea at this court. I’ve drunk none of them.”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-PRE-F01-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-PRE-F01-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Thanks, but I can check my own tea.”",
+          "outcomeId": "SEN-ORD-PRE-F01-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-F01-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Noted.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-F01-R-NO-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She hands it back. You drink it. Four sugars is a lot of sugars."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-PRE-F01-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Want your own? You can smell it first. Twice, if you like.”",
+          "outcomeId": "SEN-ORD-PRE-F01-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-F01-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“Mine?”"
+            },
+            {
+              "id": "SEN-ORD-PRE-F01-R-YES-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "You find her a cup. She inspects it for twice as long as yours, then drinks it."
+            },
+            {
+              "id": "SEN-ORD-PRE-F01-R-YES-03",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Still bad. My face has gone warm. I’m blaming the tea.”"
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-PRE-F01.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "cyclic fallback; **stage:** pre; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-PRE-F02": {
+      "sceneId": "SEN-ORD-PRE-F02",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "PRE",
+      "title": "Spectacles",
+      "introLines": [
+        {
+          "id": "SEN-ORD-PRE-F02-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna is patting down her apron pockets one at a time, in order."
+        },
+        {
+          "id": "SEN-ORD-PRE-F02-L02",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“Spectacles. I had them. I’m holding a seed the size of a comma, and I can’t see it.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F02-L03",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She tries her magnifying lens on the seed, then gives the lens a look of betrayal."
+        },
+        {
+          "id": "SEN-ORD-PRE-F02-L04",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I’ve retraced my steps. I’ve checked inside the herbal. Twice.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F02-L05",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "The spectacles are on top of her head, tucked in beside the pencil."
+        }
+      ],
+      "choicePointId": "SEN-ORD-PRE-F02-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-PRE-F02-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Senna. Top of your head. Next to the pencil.”",
+          "outcomeId": "SEN-ORD-PRE-F02-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-F02-R-YES-01",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She reaches up and finds them. She puts them on, and you come into focus."
+            },
+            {
+              "id": "SEN-ORD-PRE-F02-R-YES-02",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“Huh. I had you down as blurrier.”"
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        },
+        {
+          "choiceId": "SEN-ORD-PRE-F02-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“I’ll help. Where did you last have them? Let’s retrace.”",
+          "outcomeId": "SEN-ORD-PRE-F02-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-F02-R-NO-01",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "You help. Soon her entire apron is laid out in labeled rows."
+            },
+            {
+              "id": "SEN-ORD-PRE-F02-R-NO-02",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Gone. I’ll have to identify the seed by smell.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-F02-R-NO-03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "From the top of her head, the spectacles have an excellent view of all this."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-PRE-F02.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "cyclic fallback; **stage:** pre; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-PRE-F03": {
+      "sceneId": "SEN-ORD-PRE-F03",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "PRE",
+      "title": "The DO NOT Jar",
+      "introLines": [
+        {
+          "id": "SEN-ORD-PRE-F03-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna is restocking her apron. Every vial has a label. So does the ball of twine. It says *TWINE*."
+        },
+        {
+          "id": "SEN-ORD-PRE-F03-L02",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Then she takes out a small jar with a wax-sealed cork. Its label says *DO NOT*."
+        },
+        {
+          "id": "SEN-ORD-PRE-F03-L03",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“Your label’s missing a verb.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F03-L04",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“It’s missing all of them. On purpose.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F03-L05",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Whatever you were about to do with it, don’t.”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-PRE-F03-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-PRE-F03-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“I bet it’s the good sweets. Let me just have a peek.”",
+          "outcomeId": "SEN-ORD-PRE-F03-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-F03-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“Don’t.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-F03-R-NO-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "The jar goes into a pocket labeled *DEFINITELY DO NOT*. She buttons it."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-PRE-F03-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“What’s in it? I’ll stand over here while you tell me.”",
+          "outcomeId": "SEN-ORD-PRE-F03-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-F03-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Rosary peas. *Abrus precatorius*. Bright red, with one black dot, like a ladybug keeping a secret.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-F03-R-YES-02",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Someone was selling them strung as bracelets. Fine on a wrist. Chew one and you’d be very ill for a very long time.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-F03-R-YES-03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She tilts the jar to show you the bottom. There’s a second label. It says *REALLY*."
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-PRE-F03.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "cyclic fallback; **stage:** pre; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-PRE-U01": {
+      "sceneId": "SEN-ORD-PRE-U01",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "PRE",
+      "title": "Don’t Eat That",
+      "introLines": [
+        {
+          "id": "SEN-ORD-PRE-U01-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "A courtier hurrying past presses a little tart into your hand. Three glossy red berries sit on top, around a spiky leaf."
+        },
+        {
+          "id": "SEN-ORD-PRE-U01-L02",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "You get it halfway to your mouth. Then a gloved hand swats it out of your fingers."
+        },
+        {
+          "id": "SEN-ORD-PRE-U01-L03",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“Don’t eat that.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U01-L04",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She picks the tart up by its very edge and holds it at arm’s length, like a specimen."
+        },
+        {
+          "id": "SEN-ORD-PRE-U01-L05",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Holly. Lovely on a wreath. Terrible in a person.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U01-L06",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I’m Senna. Infirmary. You’d have met me in about an hour.”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-PRE-U01-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-PRE-U01-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“You saved my life! Thank you. Seriously, you’re incredible.”",
+          "outcomeId": "SEN-ORD-PRE-U01-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U01-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“I saved you two days in bed. Your life was never involved.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U01-R-NO-02",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“Calm down. Be grateful at the correct size.”"
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-PRE-U01-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“How could you tell from over there? It looked like a currant to me.”",
+          "outcomeId": "SEN-ORD-PRE-U01-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U01-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Currants hang in strings. Holly sits in tight clumps, and every berry has a tiny black dot at the tip.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U01-R-YES-02",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Also, yours came with a leaf. Someone garnished your tart with a wreath.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U01-R-YES-03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She drops the berries into a vial labeled *NOT FOOD*. The vial is already half full."
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        },
+        {
+          "choiceId": "SEN-ORD-PRE-U01-C1-NO2",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“I knew. I was just seeing if you’d notice.”",
+          "outcomeId": "SEN-ORD-PRE-U01-O-NO2",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U01-R-NO2-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Your mouth was open.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U01-R-NO2-02",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Next time, test me with your mouth shut.”"
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-PRE-U01.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "first-use fixed sequence; **stage:** pre; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-PRE-U02": {
+      "sceneId": "SEN-ORD-PRE-U02",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "PRE",
+      "title": "Margin Notes",
+      "introLines": [
+        {
+          "id": "SEN-ORD-PRE-U02-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna is writing in the margin of a thick herbal. The crest on its cover belongs to the Royal Physician."
+        },
+        {
+          "id": "SEN-ORD-PRE-U02-L02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Page ninety. ‘For a burnt thumb, apply three leeches.’”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U02-L03",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“Three. On a thumb. I’ve written *cold water* and *leave the leeches out of this*.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U02-L04",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "A large man in velvet robes stops at her elbow. He looks at her pencil the way you’d look at a wasp."
+        },
+        {
+          "id": "SEN-ORD-PRE-U02-L05",
+          "speaker": "PHYSICIAN",
+          "expression": null,
+          "text": "“Princess. That is *my* herbal. I have prescribed from that book for thirty years.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U02-L06",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I know, Doctor Leeches. I’ve met the thumbs.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U02-L07",
+          "speaker": "PHYSICIAN",
+          "expression": null,
+          "text": "“Dorrance. Doctor *Dorrance*.”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-PRE-U02-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-PRE-U02-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Cold water for a burn. How long do you keep it under?”",
+          "outcomeId": "SEN-ORD-PRE-U02-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U02-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Twenty minutes. Everyone stops at two and calls it twenty.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U02-R-YES-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "Dorrance sniffs. Then he takes out his own pencil and writes *twenty* beside her note."
+            },
+            {
+              "id": "SEN-ORD-PRE-U02-R-YES-03",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“By next week, that’ll have been his idea.”"
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        },
+        {
+          "choiceId": "SEN-ORD-PRE-U02-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“He’s the Royal Physician, though. Maybe go a little easier on him?”",
+          "outcomeId": "SEN-ORD-PRE-U02-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U02-R-NO-01",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "Senna rubs out *leave the leeches out of this*. She writes it again, smaller."
+            },
+            {
+              "id": "SEN-ORD-PRE-U02-R-NO-02",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“There. Easier.”"
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-PRE-U02.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "first-use fixed sequence; **stage:** pre; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-PRE-U03": {
+      "sceneId": "SEN-ORD-PRE-U03",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "PRE",
+      "title": "Small Talk",
+      "introLines": [
+        {
+          "id": "SEN-ORD-PRE-U03-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna is peering at a knobbly brown root through her magnifying lens. She sniffs it, then sniffs it again."
+        },
+        {
+          "id": "SEN-ORD-PRE-U03-L02",
+          "speaker": "PLAYER",
+          "expression": null,
+          "text": "“Lovely weather we’re having.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U03-L03",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Damp. Pressure dropping. By tomorrow, every knee over fifty will be forecasting rain.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U03-L04",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“In Hollowmere, nobody discusses the weather. We treat it.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U03-L05",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She sniffs the root a third time and writes something down."
+        }
+      ],
+      "choicePointId": "SEN-ORD-PRE-U03-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-PRE-U03-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Think it’ll clear up, though?”",
+          "outcomeId": "SEN-ORD-PRE-U03-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U03-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Prognosis: drizzle. Chronic.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U03-R-NO-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She goes back to the root. You appear to have been discharged."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-PRE-U03-C1-OFF",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Do you ever talk about anything normal?”",
+          "outcomeId": "SEN-ORD-PRE-U03-O-OFF",
+          "outcomeClass": "offensive",
+          "netHalfHearts": -1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U03-R-OFF-01",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“That was normal. You picked it.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U03-R-OFF-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She puts the root in a pocket and buttons the pocket shut."
+            }
+          ],
+          "internalLabel": "Explicitly offensive, net −1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-PRE-U03-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“What is that? You’ve smelled it three times.”",
+          "outcomeId": "SEN-ORD-PRE-U03-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U03-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“Four. One was before you got here.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U03-R-YES-02",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“*Valeriana officinalis*. Smells like a boot that’s been through something. Brew it and you sleep. Show it to a cat and the cat proposes.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U03-R-YES-03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She holds it out for you to sniff. It does smell like a boot."
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-PRE-U03.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "first-use fixed sequence; **stage:** pre; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-PRE-U04": {
+      "sceneId": "SEN-ORD-PRE-U04",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "PRE",
+      "title": "For Patients",
+      "introLines": [
+        {
+          "id": "SEN-ORD-PRE-U04-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Pim, the infirmary’s young helper, runs up holding one hand as far from his face as it will go."
+        },
+        {
+          "id": "SEN-ORD-PRE-U04-L02",
+          "speaker": "PIM",
+          "expression": null,
+          "text": "“A bee got me! The sting’s still in! Is a sting a needle? It’s a needle, isn’t it? Will you need a needle to get it out?”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U04-L03",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Hand. It needs a fingernail and ten seconds.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U04-L04",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "She takes his wrist. Pim makes a noise like a kettle."
+        },
+        {
+          "id": "SEN-ORD-PRE-U04-L05",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Look anywhere but your hand.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U04-L06",
+          "speaker": "PIM",
+          "expression": null,
+          "text": "“I can’t! It’s *my hand*!”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-PRE-U04-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-PRE-U04-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“It’s okay, Pim. You’re in very kind hands.”",
+          "outcomeId": "SEN-ORD-PRE-U04-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U04-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Gloved hands. The dose is one sweet per sting. Two if there’s screaming.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U04-R-NO-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She flicks the sting out. Pim, who watched every second of it, earns the second sweet."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-PRE-U04-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Pim, look at me. How big was this bee? Show me with your other hand.”",
+          "outcomeId": "SEN-ORD-PRE-U04-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U04-R-YES-01",
+              "speaker": "PIM",
+              "expression": null,
+              "text": "“This big! It had a *face*! It looked right at me, and then it…”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U04-R-YES-02",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Done. Here. For patients.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U04-R-YES-03",
+              "speaker": "PIM",
+              "expression": null,
+              "text": "“A sweet! Wait. Did I miss the needle part?”"
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-PRE-U04.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "first-use fixed sequence; **stage:** pre; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-PRE-U05": {
+      "sceneId": "SEN-ORD-PRE-U05",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "PRE",
+      "title": "Which One Is Parsley",
+      "introLines": [
+        {
+          "id": "SEN-ORD-PRE-U05-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna holds up two green sprigs, one in each gloved hand. They look like the same sprig, twice."
+        },
+        {
+          "id": "SEN-ORD-PRE-U05-L02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“One’s parsley. The other is fool’s parsley.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U05-L03",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“*Aethusa cynapium*. Named for its customers.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U05-L04",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Which one’s safe?”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U05-L05",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Neither sprig has a label. Everything else she carries has at least one."
+        }
+      ],
+      "choicePointId": "SEN-ORD-PRE-U05-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-PRE-U05-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“I have no idea. And I’m not eating either one.”",
+          "outcomeId": "SEN-ORD-PRE-U05-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U05-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“Correct.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U05-R-YES-02",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“Everyone else guesses. The confident ones end up in my infirmary.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U05-R-YES-03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She ties a paper tag to each stem, humming. One says *PARSLEY*. The other says *DON’T*."
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        },
+        {
+          "choiceId": "SEN-ORD-PRE-U05-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“That one. Flat leaves. That’s flat-leaf parsley, isn’t it?”",
+          "outcomeId": "SEN-ORD-PRE-U05-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U05-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“Fool’s parsley. Welcome, customer.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U05-R-NO-02",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“They both have flat leaves. That’s the whole trick.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U05-R-NO-03",
+              "speaker": "SENNA",
+              "expression": "PLAYFUL",
+              "text": "“You’d recover. I’d see to it. You wouldn’t enjoy how.”"
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-PRE-U05.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "first-use fixed sequence; **stage:** pre; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
+    "SEN-ORD-PRE-U06": {
+      "sceneId": "SEN-ORD-PRE-U06",
+      "kind": "ordinary",
+      "route": "SEN",
+      "stage": "PRE",
+      "title": "Presentable",
+      "introLines": [
+        {
+          "id": "SEN-ORD-PRE-U06-L01",
+          "speaker": "NARRATOR",
+          "expression": null,
+          "text": "Senna is reading a letter sealed with green wax. She holds it at arm’s length, like a mushroom she doesn’t trust."
+        },
+        {
+          "id": "SEN-ORD-PRE-U06-L02",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“My mother. ‘Have you attended a ball? Are you presentable yet?’”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U06-L03",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“She underlined *presentable*. Twice. The nib went through.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U06-L04",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I looked it up. ‘Fit to be seen.’ I’m seen all day, mostly by people holding their own ankle.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U06-L05",
+          "speaker": "SENNA",
+          "expression": "WORRIED",
+          "text": "“So what does she mean? Be specific.”"
+        }
+      ],
+      "choicePointId": "SEN-ORD-PRE-U06-C1",
+      "options": [
+        {
+          "choiceId": "SEN-ORD-PRE-U06-C1-YES",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Write back yes. Send her a sketch of you exactly like this. Apron and all.”",
+          "outcomeId": "SEN-ORD-PRE-U06-O-YES",
+          "outcomeClass": "correct",
+          "netHalfHearts": 2,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U06-R-YES-01",
+              "speaker": "SENNA",
+              "expression": "SURPRISED",
+              "text": "“Apron and all.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U06-R-YES-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She turns the letter over and writes: *Dear Mother. Yes. Sketch enclosed.*"
+            },
+            {
+              "id": "SEN-ORD-PRE-U06-R-YES-03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "Then she pulls the pencil from her bun to start the sketch. The bun comes down. She draws that too."
+            }
+          ],
+          "internalLabel": "Correct, net +2 half-hearts"
+        },
+        {
+          "choiceId": "SEN-ORD-PRE-U06-C1-OFF",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“A princess with soil on her gloves? Your mother has a point.”",
+          "outcomeId": "SEN-ORD-PRE-U06-O-OFF",
+          "outcomeClass": "offensive",
+          "netHalfHearts": -1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U06-R-OFF-01",
+              "speaker": "SENNA",
+              "expression": "ANNOYED",
+              "text": "“Then you two should write to each other.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U06-R-OFF-02",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She files the letter in an apron pocket labeled *IRRITANTS* and leaves."
+            }
+          ],
+          "internalLabel": "Explicitly offensive, net −1 half-heart"
+        },
+        {
+          "choiceId": "SEN-ORD-PRE-U06-C1-NO",
+          "labelLineSpeaker": "PLAYER",
+          "labelText": "“Maybe go to just one ball? It might make her happy.”",
+          "outcomeId": "SEN-ORD-PRE-U06-O-NO",
+          "outcomeClass": "wrong",
+          "netHalfHearts": 1,
+          "branchLines": [
+            {
+              "id": "SEN-ORD-PRE-U06-R-NO-01",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“One ball.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U06-R-NO-02",
+              "speaker": "SENNA",
+              "expression": "NEUTRAL",
+              "text": "“I could stand by the canapés and tell people which garnish to leave on the plate.”"
+            },
+            {
+              "id": "SEN-ORD-PRE-U06-R-NO-03",
+              "speaker": "NARRATOR",
+              "expression": null,
+              "text": "She writes *Considering it* on the back of the letter. She doesn’t underline anything."
+            }
+          ],
+          "internalLabel": "Ordinary incorrect, net +1 half-heart"
+        }
+      ],
+      "displayOnly": false,
+      "costOneSlot": true,
+      "source": {
+        "originalArchive": "content/routes/SEN",
+        "originalMember": "scenes/SEN-ORD-PRE-U06.json"
+      },
+      "meta": {
+        "Source": "Owner-approved new route (2026-10-25): content/routes/SEN/",
+        "Pool": "first-use fixed sequence; **stage:** pre; **locale:** scheduled location only; **cost:** one slot and the daily encounter",
+        "END": "Show exactly the selected branch, then resolve one encounter. Apply exactly one net heart change."
+      }
+    },
     "TAV-EPI-01": {
       "sceneId": "TAV-EPI-01",
       "kind": "epilogue",
@@ -10659,7 +14291,7 @@
       "TXT-SAVE-UNKNOWN": "Progress could not be confirmed as safely stored. Review recovery options before closing the game.",
       "TXT-NAME-FALLBACK": "Traveler",
       "UI-INTRO-01": "You have 28 days to build a sincere connection during the royal courtship season.",
-      "UI-INTRO-02": "Three princesses, three different stories. Choose one route for this run.",
+      "UI-INTRO-02": "Four princesses, four different stories. Choose one route for this run.",
       "UI-INTRO-03": "Each day has morning, afternoon, and evening. Planned actions use one slot.",
       "UI-INTRO-04": "Use the calendar to find your princess. A valid conversation uses one slot and the day’s one princess encounter.",
       "UI-INTRO-05": "Train Charisma, Intelligence, Strength, or Kindness as preparation. Check visible milestone requirements.",

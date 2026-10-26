@@ -1,0 +1,90 @@
+{
+  "sceneId": "SEN-ORD-PRE-U02",
+  "title": "Margin Notes",
+  "intro": [
+    {
+      "id": "SEN-ORD-PRE-U02-L01",
+      "speaker": "NARRATOR",
+      "text": "Senna is writing in the margin of a thick herbal. The crest on its cover belongs to the Royal Physician."
+    },
+    {
+      "id": "SEN-ORD-PRE-U02-L02",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Page ninety. ‘For a burnt thumb, apply three leeches.’”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U02-L03",
+      "speaker": "SENNA",
+      "expression": "ANNOYED",
+      "text": "“Three. On a thumb. I’ve written *cold water* and *leave the leeches out of this*.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U02-L04",
+      "speaker": "NARRATOR",
+      "text": "A large man in velvet robes stops at her elbow. He looks at her pencil the way you’d look at a wasp."
+    },
+    {
+      "id": "SEN-ORD-PRE-U02-L05",
+      "speaker": "PHYSICIAN",
+      "text": "“Princess. That is *my* herbal. I have prescribed from that book for thirty years.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U02-L06",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“I know, Doctor Leeches. I’ve met the thumbs.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U02-L07",
+      "speaker": "PHYSICIAN",
+      "text": "“Dorrance. Doctor *Dorrance*.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-PRE-U02-C1-YES",
+      "outcomeId": "SEN-ORD-PRE-U02-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“Cold water for a burn. How long do you keep it under?”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U02-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Twenty minutes. Everyone stops at two and calls it twenty.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U02-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "Dorrance sniffs. Then he takes out his own pencil and writes *twenty* beside her note."
+        },
+        {
+          "id": "SEN-ORD-PRE-U02-R-YES-03",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“By next week, that’ll have been his idea.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-PRE-U02-C1-NO",
+      "outcomeId": "SEN-ORD-PRE-U02-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“He’s the Royal Physician, though. Maybe go a little easier on him?”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U02-R-NO-01",
+          "speaker": "NARRATOR",
+          "text": "Senna rubs out *leave the leeches out of this*. She writes it again, smaller."
+        },
+        {
+          "id": "SEN-ORD-PRE-U02-R-NO-02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“There. Easier.”"
+        }
+      ]
+    }
+  ]
+}

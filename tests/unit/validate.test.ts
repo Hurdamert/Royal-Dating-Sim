@@ -3,7 +3,7 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
 import { validateRun, validateGallery, runGalleryConsistent } from '../../src/core/validate.ts';
-import type { RunState } from '../../src/core/model.ts';
+import { SCHEMA_VERSION, type RunState } from '../../src/core/model.ts';
 import { freshRun, rest, train, meet, restUntilEligible } from './helpers.ts';
 import { runWitness } from './witness-runner.ts';
 
@@ -54,7 +54,7 @@ describe('State validation by journal replay', () => {
     ['bad runId', (s) => void (s.runId = 'not-a-uuid')],
     ['day 29', (s) => void (s.day = 29)],
     ['player name with control char', (s) => void (s.playerName = 'a\u0001b')],
-    ['schema version 2', (s) => void ((s as unknown as Record<string, unknown>).schemaVersion = 2)],
+    ['a newer schema version', (s) => void ((s as unknown as Record<string, unknown>).schemaVersion = SCHEMA_VERSION + 1)],
   ];
   for (const [name, mut] of tamper) {
     test(`rejects: ${name}`, () => {

@@ -1,0 +1,205 @@
+{
+  "sceneId": "SEN-EVT-PRE-01",
+  "title": "The Mislabeled Jar",
+  "objective": "The right answer gets the tea off sale with care and evidence while the merchant saves face, treating Senna’s expertise as real.",
+  "intro": [
+    {
+      "id": "SEN-PRE-001",
+      "speaker": "NARRATOR",
+      "text": "Pim skids up, waving a paper packet. On the front, a beaming old woman in a nightcap promises sleep."
+    },
+    {
+      "id": "SEN-PRE-002",
+      "speaker": "PIM",
+      "text": "“Senna! Gran bought this! *Grandmother’s Sleep Tea!* It’s got grandmother on it, so it’s safe, isn’t it? Can I have some?”"
+    },
+    {
+      "id": "SEN-PRE-003",
+      "speaker": "NARRATOR",
+      "text": "Senna takes the packet and tweezes one gray-green leaf out of it. Then she goes very still."
+    },
+    {
+      "id": "SEN-PRE-004",
+      "speaker": "SENNA",
+      "expression": "WORRIED",
+      "text": "“Pim. Where did your gran buy this?”"
+    },
+    {
+      "id": "SEN-PRE-005",
+      "speaker": "PIM",
+      "text": "“The market! There’s a queue! The man says it’s outselling honey!”"
+    },
+    {
+      "id": "SEN-PRE-006",
+      "speaker": "NARRATOR",
+      "text": "Senna takes your sleeve and tows you, without explanation, to a market stall in the Town Square."
+    },
+    {
+      "id": "SEN-PRE-007",
+      "speaker": "NARRATOR",
+      "text": "A queue of yawning customers leads up to the stall. The merchant is scooping tea from a big jar labeled *GRANDMOTHER’S SLEEP TEA*."
+    },
+    {
+      "id": "SEN-PRE-008",
+      "speaker": "MERCHANT",
+      "text": "“One at a time, plenty for everyone! Princess! A big bag for you?”"
+    },
+    {
+      "id": "SEN-PRE-009",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“No. Stop selling it.”"
+    },
+    {
+      "id": "SEN-PRE-010",
+      "speaker": "MERCHANT",
+      "text": "“Stop? It’s my own grandmother’s recipe! Chamomile, lime flower, mullein. She drank it for ninety years!”"
+    },
+    {
+      "id": "SEN-PRE-011",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“The chamomile’s fine. The lime flower’s fine. This isn’t mullein.”"
+    },
+    {
+      "id": "SEN-PRE-012",
+      "speaker": "SENNA",
+      "expression": "PLAYFUL",
+      "text": "“*Digitalis purpurea*. Foxglove. Before it flowers, the leaves pass for mullein, if you’re in a hurry and you squint. Somebody squinted.”"
+    },
+    {
+      "id": "SEN-PRE-013",
+      "speaker": "SENNA",
+      "expression": "WORRIED",
+      "text": "“In a teapot, it makes the heart trip over its own feet.”"
+    },
+    {
+      "id": "SEN-PRE-014",
+      "speaker": "MERCHANT",
+      "text": "“Foxglove? I buy from a proper supplier! He has a cart! With his name painted on it!”"
+    },
+    {
+      "id": "SEN-PRE-015",
+      "speaker": "PLAYER",
+      "text": "“A cart with his name on it. That’s basically a certification.”"
+    },
+    {
+      "id": "SEN-PRE-016",
+      "speaker": "MERCHANT",
+      "text": "“With respect, Princess, you’ve looked at one leaf. One! I’ve got a living to make.”"
+    },
+    {
+      "id": "SEN-PRE-017",
+      "speaker": "NARRATOR",
+      "text": "Senna looks at you. Both her hands are full of evidence, and the queue is still moving."
+    }
+  ],
+  "choicePointId": "SEN-PRE-C1",
+  "options": [
+    {
+      "choiceId": "SEN-PRE-C1-LATER",
+      "outcomeId": "SEN-PRE-O-LATER",
+      "outcomeClass": "wrong",
+      "labelText": "“Let’s report it to the guard tomorrow. No need to make a scene in front of everyone.”",
+      "branch": [
+        {
+          "id": "SEN-PRE-W01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Tomorrow.”"
+        },
+        {
+          "id": "SEN-PRE-W02",
+          "speaker": "NARRATOR",
+          "text": "At the front of the queue, a woman buys two bags. One’s for her mother."
+        },
+        {
+          "id": "SEN-PRE-W03",
+          "speaker": "NARRATOR",
+          "text": "Senna climbs onto a crate and explains foxglove to the entire queue, loudly. The merchant hides behind his jar."
+        },
+        {
+          "id": "SEN-PRE-W04",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“There. A scene.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-PRE-C1-CHECK",
+      "outcomeId": "SEN-PRE-O-CHECK",
+      "outcomeClass": "correct",
+      "labelText": "“Let’s check it against your herbal, right here. Can the sale wait five minutes while we look?”",
+      "branch": [
+        {
+          "id": "SEN-PRE-S01",
+          "speaker": "PLAYER",
+          "text": "“If she’s wrong, I’ll buy the first ten bags myself.”"
+        },
+        {
+          "id": "SEN-PRE-S02",
+          "speaker": "NARRATOR",
+          "text": "You slide her herbal out from under her arm and find *Digitalis*. You hold the leaf against the drawing while she points."
+        },
+        {
+          "id": "SEN-PRE-S03",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Turn it over. The veins make a net, and the edge has little teeth. Mullein’s smooth at the edge and woolly as a sock.”"
+        },
+        {
+          "id": "SEN-PRE-S04",
+          "speaker": "NARRATOR",
+          "text": "The merchant looks at the drawing, then at the leaf. His face goes the color of weak tea."
+        },
+        {
+          "id": "SEN-PRE-S05",
+          "speaker": "PLAYER",
+          "text": "“Your supplier swapped the leaf. Anyone could’ve missed it.”"
+        },
+        {
+          "id": "SEN-PRE-S06",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I didn’t.”"
+        },
+        {
+          "id": "SEN-PRE-S07",
+          "speaker": "MERCHANT",
+          "text": "“Anyone could’ve! Right! Sleep Tea’s off, everyone! Refunds at the front, and a free honey cake each!”"
+        },
+        {
+          "id": "SEN-PRE-S08",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Nobody eat the honey cake until I’ve looked at it.”"
+        },
+        {
+          "id": "SEN-PRE-S09",
+          "speaker": "NARRATOR",
+          "text": "She relabels the jar *EVIDENCE*. Then she inspects a honey cake. It passes, and Pim gets the first one."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-PRE-C1-PARANOID",
+      "outcomeId": "SEN-PRE-O-PARANOID",
+      "outcomeClass": "offensive",
+      "labelText": "“Senna, come on. You think everything’s poison.”",
+      "branch": [
+        {
+          "id": "SEN-PRE-X01",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“I think this is foxglove. I think you’re standing in front of the queue.”"
+        },
+        {
+          "id": "SEN-PRE-X02",
+          "speaker": "NARRATOR",
+          "text": "She steps around you and opens her herbal for the merchant. She doesn’t show it to you."
+        }
+      ]
+    }
+  ]
+}

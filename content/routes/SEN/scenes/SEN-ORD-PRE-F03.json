@@ -1,0 +1,79 @@
+{
+  "sceneId": "SEN-ORD-PRE-F03",
+  "title": "The DO NOT Jar",
+  "intro": [
+    {
+      "id": "SEN-ORD-PRE-F03-L01",
+      "speaker": "NARRATOR",
+      "text": "Senna is restocking her apron. Every vial has a label. So does the ball of twine. It says *TWINE*."
+    },
+    {
+      "id": "SEN-ORD-PRE-F03-L02",
+      "speaker": "NARRATOR",
+      "text": "Then she takes out a small jar with a wax-sealed cork. Its label says *DO NOT*."
+    },
+    {
+      "id": "SEN-ORD-PRE-F03-L03",
+      "speaker": "PLAYER",
+      "text": "“Your label’s missing a verb.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-F03-L04",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“It’s missing all of them. On purpose.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-F03-L05",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Whatever you were about to do with it, don’t.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-PRE-F03-C1-NO",
+      "outcomeId": "SEN-ORD-PRE-F03-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“I bet it’s the good sweets. Let me just have a peek.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-F03-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“Don’t.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F03-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "The jar goes into a pocket labeled *DEFINITELY DO NOT*. She buttons it."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-PRE-F03-C1-YES",
+      "outcomeId": "SEN-ORD-PRE-F03-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“What’s in it? I’ll stand over here while you tell me.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-F03-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Rosary peas. *Abrus precatorius*. Bright red, with one black dot, like a ladybug keeping a secret.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F03-R-YES-02",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Someone was selling them strung as bracelets. Fine on a wrist. Chew one and you’d be very ill for a very long time.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F03-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "She tilts the jar to show you the bottom. There’s a second label. It says *REALLY*."
+        }
+      ]
+    }
+  ]
+}

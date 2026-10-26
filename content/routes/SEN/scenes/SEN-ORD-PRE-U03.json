@@ -1,0 +1,98 @@
+{
+  "sceneId": "SEN-ORD-PRE-U03",
+  "title": "Small Talk",
+  "intro": [
+    {
+      "id": "SEN-ORD-PRE-U03-L01",
+      "speaker": "NARRATOR",
+      "text": "Senna is peering at a knobbly brown root through her magnifying lens. She sniffs it, then sniffs it again."
+    },
+    {
+      "id": "SEN-ORD-PRE-U03-L02",
+      "speaker": "PLAYER",
+      "text": "“Lovely weather we’re having.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U03-L03",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Damp. Pressure dropping. By tomorrow, every knee over fifty will be forecasting rain.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U03-L04",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“In Hollowmere, nobody discusses the weather. We treat it.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U03-L05",
+      "speaker": "NARRATOR",
+      "text": "She sniffs the root a third time and writes something down."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-PRE-U03-C1-NO",
+      "outcomeId": "SEN-ORD-PRE-U03-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“Think it’ll clear up, though?”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U03-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Prognosis: drizzle. Chronic.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U03-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She goes back to the root. You appear to have been discharged."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-PRE-U03-C1-OFF",
+      "outcomeId": "SEN-ORD-PRE-U03-O-OFF",
+      "outcomeClass": "offensive",
+      "labelText": "“Do you ever talk about anything normal?”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U03-R-OFF-01",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“That was normal. You picked it.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U03-R-OFF-02",
+          "speaker": "NARRATOR",
+          "text": "She puts the root in a pocket and buttons the pocket shut."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-PRE-U03-C1-YES",
+      "outcomeId": "SEN-ORD-PRE-U03-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“What is that? You’ve smelled it three times.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U03-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“Four. One was before you got here.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U03-R-YES-02",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“*Valeriana officinalis*. Smells like a boot that’s been through something. Brew it and you sleep. Show it to a cat and the cat proposes.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U03-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "She holds it out for you to sniff. It does smell like a boot."
+        }
+      ]
+    }
+  ]
+}

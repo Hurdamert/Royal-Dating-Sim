@@ -1,0 +1,78 @@
+{
+  "sceneId": "SEN-ORD-PRE-F02",
+  "title": "Spectacles",
+  "intro": [
+    {
+      "id": "SEN-ORD-PRE-F02-L01",
+      "speaker": "NARRATOR",
+      "text": "Senna is patting down her apron pockets one at a time, in order."
+    },
+    {
+      "id": "SEN-ORD-PRE-F02-L02",
+      "speaker": "SENNA",
+      "expression": "ANNOYED",
+      "text": "“Spectacles. I had them. I’m holding a seed the size of a comma, and I can’t see it.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-F02-L03",
+      "speaker": "NARRATOR",
+      "text": "She tries her magnifying lens on the seed, then gives the lens a look of betrayal."
+    },
+    {
+      "id": "SEN-ORD-PRE-F02-L04",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“I’ve retraced my steps. I’ve checked inside the herbal. Twice.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-F02-L05",
+      "speaker": "NARRATOR",
+      "text": "The spectacles are on top of her head, tucked in beside the pencil."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-PRE-F02-C1-YES",
+      "outcomeId": "SEN-ORD-PRE-F02-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“Senna. Top of your head. Next to the pencil.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-F02-R-YES-01",
+          "speaker": "NARRATOR",
+          "text": "She reaches up and finds them. She puts them on, and you come into focus."
+        },
+        {
+          "id": "SEN-ORD-PRE-F02-R-YES-02",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“Huh. I had you down as blurrier.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-PRE-F02-C1-NO",
+      "outcomeId": "SEN-ORD-PRE-F02-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“I’ll help. Where did you last have them? Let’s retrace.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-F02-R-NO-01",
+          "speaker": "NARRATOR",
+          "text": "You help. Soon her entire apron is laid out in labeled rows."
+        },
+        {
+          "id": "SEN-ORD-PRE-F02-R-NO-02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Gone. I’ll have to identify the seed by smell.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F02-R-NO-03",
+          "speaker": "NARRATOR",
+          "text": "From the top of her head, the spectacles have an excellent view of all this."
+        }
+      ]
+    }
+  ]
+}

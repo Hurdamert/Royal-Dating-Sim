@@ -30,9 +30,16 @@
       "NER-PRE-W02"
     ]
   },
+  "routesAdded": {
+    "SEN": {
+      "scenes": 25,
+      "lines": 397
+    }
+  },
+  "scenesShipped": 102,
   "helpPassages": 14,
   "squareQuips": 12,
   "activities": 8,
   "strings": 26,
-  "contentSha256": "dde36a8c94275d1a3f968875e9fed69f612bb893fa98f1ce17f784fbc0284cae"
+  "contentSha256": "3ed61a1545e2bdb229410a6fa4c294b848c2b40eab54c5b28a41c144c18c9e1f"
 }

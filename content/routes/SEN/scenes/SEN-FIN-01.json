@@ -1,0 +1,70 @@
+{
+  "sceneId": "SEN-FIN-01",
+  "title": "Planted By",
+  "objective": "Answer the label’s question plainly: write your name and ask to be there when it flowers, as a partner rather than a performer or a rescuer.",
+  "intro": [
+    { "id": "SEN-FIN-001", "speaker": "NARRATOR", "text": "Senna takes you to the physic beds and hands you a trowel, handle first." },
+    { "id": "SEN-FIN-002", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Kneel there. Mind the comfrey. Don’t eat the comfrey.”" },
+    { "id": "SEN-FIN-003", "speaker": "NARRATOR", "text": "She kneels beside you with her gloves on and digs a hole exactly one knuckle deep. She checks it with the knuckle." },
+    { "id": "SEN-FIN-004", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“The packet I kept for myself. It turned out to be relevant.”" },
+    { "id": "SEN-FIN-005", "speaker": "NARRATOR", "text": "She drops in one seed and pats the soil over it. Then she takes a small wooden label from her apron, already written in her square capitals." },
+    { "id": "SEN-FIN-006", "speaker": "NARRATOR", "text": "*HELLEBORUS NIGER. PLANTED BY: S. AND ________*" },
+    { "id": "SEN-FIN-007", "speaker": "SENNA", "expression": "PLAYFUL", "text": "“*Helleborus niger.* Poisonous from root to petal. It flowers in the snow, when nothing else can be bothered.”" },
+    { "id": "SEN-FIN-008", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“You were going to find out in three years. I moved it up.”" },
+    { "id": "SEN-FIN-009", "speaker": "PLAYER", "text": "“S. and…?”" },
+    { "id": "SEN-FIN-010", "speaker": "SENNA", "expression": "WORRIED", "text": "“I left a space. I measured it. One name wide.”" },
+    { "id": "SEN-FIN-011", "speaker": "SENNA", "expression": "WORRIED", "text": "“I don’t know what goes in it. I’ve rubbed it out twice.”" },
+    { "id": "SEN-FIN-012", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Pulse, fast. Hands, unreliable. Face, warm. I’d blame the sun, but there isn’t any.”" },
+    { "id": "SEN-FIN-013", "speaker": "NARRATOR", "text": "She holds out the pencil from her bun. The sprig of rosemary comes with it and drops onto the soil." },
+    { "id": "SEN-FIN-014", "speaker": "SENNA", "expression": "ANNOYED", "text": "“Rosemary. For remembrance. That wasn’t on purpose.”" },
+    { "id": "SEN-FIN-015", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“My mother sent me here to find someone who’d put up with me.”" },
+    { "id": "SEN-FIN-016", "speaker": "SENNA", "expression": "WORRIED", "text": "“So. What do I write?”" }
+  ],
+  "choicePointId": "SEN-FIN-C1",
+  "options": [
+    {
+      "choiceId": "SEN-FIN-C1-SPEECH",
+      "outcomeId": "SEN-FIN-O-SPEECH",
+      "outcomeClass": "wrong",
+      "labelText": "“Senna, ever since you swatted a tart out of my hand, I’ve known. You’re the rarest thing in this garden. Marry me?”",
+      "branch": [
+        { "id": "SEN-FIN-W01", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“That was a speech. I asked you a question.”" },
+        { "id": "SEN-FIN-W02", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“You rehearsed it. You did a hand gesture on *rarest*.”" },
+        { "id": "SEN-FIN-W03", "speaker": "PLAYER", "text": "“It sounded better in my head.”" },
+        { "id": "SEN-FIN-W04", "speaker": "NARRATOR", "text": "She slides the label back into her apron. The space on it stays blank." }
+      ]
+    },
+    {
+      "choiceId": "SEN-FIN-C1-RESCUE",
+      "outcomeId": "SEN-FIN-O-RESCUE",
+      "outcomeClass": "wrong",
+      "labelText": "“Marry me, and you’ll never have to work in an infirmary again. I’ll look after you for a change.”",
+      "branch": [
+        { "id": "SEN-FIN-X01", "speaker": "SENNA", "expression": "SURPRISED", "text": "“…Why would I want that?”" },
+        { "id": "SEN-FIN-X02", "speaker": "PLAYER", "text": "“So you could rest. You never stop.”" },
+        { "id": "SEN-FIN-X03", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“I like the infirmary. I moved in with four trunks. Nobody made me.”" },
+        { "id": "SEN-FIN-X04", "speaker": "NARRATOR", "text": "She puts the label away in the pocket marked *sweets, for patients*. Then she goes back to weeding." }
+      ]
+    },
+    {
+      "choiceId": "SEN-FIN-C1-PLAIN",
+      "outcomeId": "SEN-FIN-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“Write my name. Marry me. I want to be here when it flowers, and every year after.”",
+      "branch": [
+        { "id": "SEN-FIN-S01", "speaker": "NARRATOR", "text": "Senna looks at the label. Then at you, for longer." },
+        { "id": "SEN-FIN-S02", "speaker": "SENNA", "expression": "SURPRISED", "text": "“Your name.”" },
+        { "id": "SEN-FIN-S03", "speaker": "PLAYER", "text": "“Spelled right, ideally.”" },
+        { "id": "SEN-FIN-S04", "speaker": "NARRATOR", "text": "She writes your name in the space and gets a letter wrong. She rubs it out with her thumb and tries again." },
+        { "id": "SEN-FIN-S05", "speaker": "SENNA", "expression": "ANNOYED", "text": "“Don’t watch. My hands have stopped taking instructions.”" },
+        { "id": "SEN-FIN-S06", "speaker": "NARRATOR", "text": "The second try is perfect. She pushes the label into the soil beside the seed, then straightens it. Twice." },
+        { "id": "SEN-FIN-S07", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Yes, {PLAYER}. Obviously.”" },
+        { "id": "SEN-FIN-S08", "speaker": "SENNA", "expression": "PLAYFUL", "text": "“I’ve been diagnosing this for weeks.”" },
+        { "id": "SEN-FIN-S09", "speaker": "PLAYER", "text": "“What’s the diagnosis?”" },
+        { "id": "SEN-FIN-S10", "speaker": "SENNA", "expression": "NEUTRAL", "text": "“Chronic. I looked for a cure. Then I stopped looking.”" },
+        { "id": "SEN-FIN-S11", "speaker": "NARRATOR", "text": "She takes your hand. Her glove leaves soil on your fingers, and she doesn’t apologize for it." },
+        { "id": "SEN-FIN-S12", "speaker": "SENNA", "expression": "PLAYFUL", "text": "“I’ll write to my mother. One line. *Found someone. Stop underlining.*”" }
+      ]
+    }
+  ]
+}

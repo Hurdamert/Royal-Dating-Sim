@@ -1,0 +1,87 @@
+{
+  "sceneId": "SEN-ORD-PRE-U05",
+  "title": "Which One Is Parsley",
+  "intro": [
+    {
+      "id": "SEN-ORD-PRE-U05-L01",
+      "speaker": "NARRATOR",
+      "text": "Senna holds up two green sprigs, one in each gloved hand. They look like the same sprig, twice."
+    },
+    {
+      "id": "SEN-ORD-PRE-U05-L02",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“One’s parsley. The other is fool’s parsley.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U05-L03",
+      "speaker": "SENNA",
+      "expression": "PLAYFUL",
+      "text": "“*Aethusa cynapium*. Named for its customers.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U05-L04",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Which one’s safe?”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U05-L05",
+      "speaker": "NARRATOR",
+      "text": "Neither sprig has a label. Everything else she carries has at least one."
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-PRE-U05-C1-YES",
+      "outcomeId": "SEN-ORD-PRE-U05-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“I have no idea. And I’m not eating either one.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U05-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“Correct.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U05-R-YES-02",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Everyone else guesses. The confident ones end up in my infirmary.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U05-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "She ties a paper tag to each stem, humming. One says *PARSLEY*. The other says *DON’T*."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-PRE-U05-C1-NO",
+      "outcomeId": "SEN-ORD-PRE-U05-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“That one. Flat leaves. That’s flat-leaf parsley, isn’t it?”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U05-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Fool’s parsley. Welcome, customer.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U05-R-NO-02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“They both have flat leaves. That’s the whole trick.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U05-R-NO-03",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“You’d recover. I’d see to it. You wouldn’t enjoy how.”"
+        }
+      ]
+    }
+  ]
+}

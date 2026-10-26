@@ -363,14 +363,26 @@ describe('C. Hearts and ordinary text', () => {
   });
 
   test('C12 every ordinary offers correct + ordinary wrong, offensive only when authored', () => {
+    const correctAt: number[] = [];
     for (const route of ROUTES)
       for (const stage of ['PRE', 'POST'] as const)
         for (let c = 0; c < 9; c++) {
           const sc = getScene(ordinarySceneId(route, stage, c))!;
+          const n = (k: string) => sc.options.filter((o) => o.outcomeClass === k).length;
+          assert.equal(n('correct'), 1, sc.sceneId);
+          assert.ok(n('wrong') >= 1, sc.sceneId);
+          assert.ok(n('offensive') <= 1, sc.sceneId);
+          if (route === 'SEN') {
+            correctAt.push(sc.options.findIndex((o) => o.outcomeClass === 'correct'));
+            continue;
+          }
+          // The frozen routes' documented order (an open owner decision; see the report §7).
           assert.equal(sc.options[0]!.outcomeClass, 'correct');
           assert.equal(sc.options[1]!.outcomeClass, 'wrong');
           if (sc.options[2]) assert.equal(sc.options[2].outcomeClass, 'offensive');
         }
+    // Senna's scenes vary where the right answer sits, so "always pick the first" stops working.
+    assert.ok(new Set(correctAt).size >= 2 && correctAt.filter((i) => i === 0).length < correctAt.length / 2, `Senna correct positions ${correctAt.join(',')}`);
   });
 });
 

@@ -1,0 +1,83 @@
+{
+  "sceneId": "SEN-ORD-PRE-U04",
+  "title": "For Patients",
+  "intro": [
+    {
+      "id": "SEN-ORD-PRE-U04-L01",
+      "speaker": "NARRATOR",
+      "text": "Pim, the infirmary’s young helper, runs up holding one hand as far from his face as it will go."
+    },
+    {
+      "id": "SEN-ORD-PRE-U04-L02",
+      "speaker": "PIM",
+      "text": "“A bee got me! The sting’s still in! Is a sting a needle? It’s a needle, isn’t it? Will you need a needle to get it out?”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U04-L03",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Hand. It needs a fingernail and ten seconds.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U04-L04",
+      "speaker": "NARRATOR",
+      "text": "She takes his wrist. Pim makes a noise like a kettle."
+    },
+    {
+      "id": "SEN-ORD-PRE-U04-L05",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Look anywhere but your hand.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U04-L06",
+      "speaker": "PIM",
+      "text": "“I can’t! It’s *my hand*!”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-PRE-U04-C1-NO",
+      "outcomeId": "SEN-ORD-PRE-U04-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“It’s okay, Pim. You’re in very kind hands.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U04-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Gloved hands. The dose is one sweet per sting. Two if there’s screaming.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U04-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She flicks the sting out. Pim, who watched every second of it, earns the second sweet."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-PRE-U04-C1-YES",
+      "outcomeId": "SEN-ORD-PRE-U04-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“Pim, look at me. How big was this bee? Show me with your other hand.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U04-R-YES-01",
+          "speaker": "PIM",
+          "text": "“This big! It had a *face*! It looked right at me, and then it…”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U04-R-YES-02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Done. Here. For patients.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U04-R-YES-03",
+          "speaker": "PIM",
+          "text": "“A sweet! Wait. Did I miss the needle part?”"
+        }
+      ]
+    }
+  ]
+}

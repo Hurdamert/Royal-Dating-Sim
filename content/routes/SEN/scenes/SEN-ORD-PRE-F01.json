@@ -1,0 +1,86 @@
+{
+  "sceneId": "SEN-ORD-PRE-F01",
+  "title": "Tea Inspection",
+  "intro": [
+    {
+      "id": "SEN-ORD-PRE-F01-L01",
+      "speaker": "NARRATOR",
+      "text": "Someone has handed you a cup of tea. You lift it to drink, and Senna takes it out of your hands."
+    },
+    {
+      "id": "SEN-ORD-PRE-F01-L02",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“One moment.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-F01-L03",
+      "speaker": "NARRATOR",
+      "text": "She sniffs it. Then she dips a paper strip from her apron into it and squints at the strip."
+    },
+    {
+      "id": "SEN-ORD-PRE-F01-L04",
+      "speaker": "SENNA",
+      "expression": "ANNOYED",
+      "text": "“Stewed. Four sugars. Whoever made this hates teeth.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-F01-L05",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“It’s safe. It’s also bad.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-F01-L06",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“I’ve smelled about four hundred cups of tea at this court. I’ve drunk none of them.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-PRE-F01-C1-NO",
+      "outcomeId": "SEN-ORD-PRE-F01-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“Thanks, but I can check my own tea.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-F01-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Noted.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F01-R-NO-02",
+          "speaker": "NARRATOR",
+          "text": "She hands it back. You drink it. Four sugars is a lot of sugars."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-PRE-F01-C1-YES",
+      "outcomeId": "SEN-ORD-PRE-F01-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“Want your own? You can smell it first. Twice, if you like.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-F01-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“Mine?”"
+        },
+        {
+          "id": "SEN-ORD-PRE-F01-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "You find her a cup. She inspects it for twice as long as yours, then drinks it."
+        },
+        {
+          "id": "SEN-ORD-PRE-F01-R-YES-03",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Still bad. My face has gone warm. I’m blaming the tea.”"
+        }
+      ]
+    }
+  ]
+}

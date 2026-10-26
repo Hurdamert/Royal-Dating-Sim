@@ -1,0 +1,106 @@
+{
+  "sceneId": "SEN-ORD-PRE-U01",
+  "title": "Don’t Eat That",
+  "intro": [
+    {
+      "id": "SEN-ORD-PRE-U01-L01",
+      "speaker": "NARRATOR",
+      "text": "A courtier hurrying past presses a little tart into your hand. Three glossy red berries sit on top, around a spiky leaf."
+    },
+    {
+      "id": "SEN-ORD-PRE-U01-L02",
+      "speaker": "NARRATOR",
+      "text": "You get it halfway to your mouth. Then a gloved hand swats it out of your fingers."
+    },
+    {
+      "id": "SEN-ORD-PRE-U01-L03",
+      "speaker": "SENNA",
+      "expression": "ANNOYED",
+      "text": "“Don’t eat that.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U01-L04",
+      "speaker": "NARRATOR",
+      "text": "She picks the tart up by its very edge and holds it at arm’s length, like a specimen."
+    },
+    {
+      "id": "SEN-ORD-PRE-U01-L05",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“Holly. Lovely on a wreath. Terrible in a person.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U01-L06",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“I’m Senna. Infirmary. You’d have met me in about an hour.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-PRE-U01-C1-NO",
+      "outcomeId": "SEN-ORD-PRE-U01-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“You saved my life! Thank you. Seriously, you’re incredible.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U01-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I saved you two days in bed. Your life was never involved.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U01-R-NO-02",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“Calm down. Be grateful at the correct size.”"
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-PRE-U01-C1-YES",
+      "outcomeId": "SEN-ORD-PRE-U01-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“How could you tell from over there? It looked like a currant to me.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U01-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "PLAYFUL",
+          "text": "“Currants hang in strings. Holly sits in tight clumps, and every berry has a tiny black dot at the tip.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U01-R-YES-02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Also, yours came with a leaf. Someone garnished your tart with a wreath.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U01-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "She drops the berries into a vial labeled *NOT FOOD*. The vial is already half full."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-PRE-U01-C1-NO2",
+      "outcomeId": "SEN-ORD-PRE-U01-O-NO2",
+      "outcomeClass": "wrong",
+      "labelText": "“I knew. I was just seeing if you’d notice.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U01-R-NO2-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Your mouth was open.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U01-R-NO2-02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“Next time, test me with your mouth shut.”"
+        }
+      ]
+    }
+  ]
+}

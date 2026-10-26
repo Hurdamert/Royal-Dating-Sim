@@ -1,0 +1,105 @@
+{
+  "sceneId": "SEN-ORD-PRE-U06",
+  "title": "Presentable",
+  "intro": [
+    {
+      "id": "SEN-ORD-PRE-U06-L01",
+      "speaker": "NARRATOR",
+      "text": "Senna is reading a letter sealed with green wax. She holds it at arm’s length, like a mushroom she doesn’t trust."
+    },
+    {
+      "id": "SEN-ORD-PRE-U06-L02",
+      "speaker": "SENNA",
+      "expression": "ANNOYED",
+      "text": "“My mother. ‘Have you attended a ball? Are you presentable yet?’”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U06-L03",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“She underlined *presentable*. Twice. The nib went through.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U06-L04",
+      "speaker": "SENNA",
+      "expression": "NEUTRAL",
+      "text": "“I looked it up. ‘Fit to be seen.’ I’m seen all day, mostly by people holding their own ankle.”"
+    },
+    {
+      "id": "SEN-ORD-PRE-U06-L05",
+      "speaker": "SENNA",
+      "expression": "WORRIED",
+      "text": "“So what does she mean? Be specific.”"
+    }
+  ],
+  "options": [
+    {
+      "choiceId": "SEN-ORD-PRE-U06-C1-YES",
+      "outcomeId": "SEN-ORD-PRE-U06-O-YES",
+      "outcomeClass": "correct",
+      "labelText": "“Write back yes. Send her a sketch of you exactly like this. Apron and all.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U06-R-YES-01",
+          "speaker": "SENNA",
+          "expression": "SURPRISED",
+          "text": "“Apron and all.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U06-R-YES-02",
+          "speaker": "NARRATOR",
+          "text": "She turns the letter over and writes: *Dear Mother. Yes. Sketch enclosed.*"
+        },
+        {
+          "id": "SEN-ORD-PRE-U06-R-YES-03",
+          "speaker": "NARRATOR",
+          "text": "Then she pulls the pencil from her bun to start the sketch. The bun comes down. She draws that too."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-PRE-U06-C1-OFF",
+      "outcomeId": "SEN-ORD-PRE-U06-O-OFF",
+      "outcomeClass": "offensive",
+      "labelText": "“A princess with soil on her gloves? Your mother has a point.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U06-R-OFF-01",
+          "speaker": "SENNA",
+          "expression": "ANNOYED",
+          "text": "“Then you two should write to each other.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U06-R-OFF-02",
+          "speaker": "NARRATOR",
+          "text": "She files the letter in an apron pocket labeled *IRRITANTS* and leaves."
+        }
+      ]
+    },
+    {
+      "choiceId": "SEN-ORD-PRE-U06-C1-NO",
+      "outcomeId": "SEN-ORD-PRE-U06-O-NO",
+      "outcomeClass": "wrong",
+      "labelText": "“Maybe go to just one ball? It might make her happy.”",
+      "branch": [
+        {
+          "id": "SEN-ORD-PRE-U06-R-NO-01",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“One ball.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U06-R-NO-02",
+          "speaker": "SENNA",
+          "expression": "NEUTRAL",
+          "text": "“I could stand by the canapés and tell people which garnish to leave on the plate.”"
+        },
+        {
+          "id": "SEN-ORD-PRE-U06-R-NO-03",
+          "speaker": "NARRATOR",
+          "text": "She writes *Considering it* on the back of the letter. She doesn’t underline anything."
+        }
+      ]
+    }
+  ]
+}
