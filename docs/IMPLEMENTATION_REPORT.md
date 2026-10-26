@@ -137,6 +137,34 @@ How it works:
 - The files are the owner's, byte for byte, named by content hash (`public/audio/`) and cached long-term. They add 2.9 MB, fetched only when their screen is reached.
 - Tests: `tests/unit/music.test.ts` (which screen plays what, locating the music, trimming, file integrity) and an end-to-end test that emulates the browser's click-to-start rule.
 
+**A fourth princess: Senna.** The owner asked for "a character route who is like mao mao from the apothecary diaries" and chose a princess-apothecary named Senna. She is an original character in that broad mould: a deadpan, precise herbalist who is unimpressed by royalty and quietly kind. Her name, look, homeland, cast and story are new, and she is all-ages (poisons are only ever identified to prevent harm).
+
+- **Content.** Everything is in `content/routes/SEN/`:
+  - `ROUTE.json`: authority, schedule, stats, optional-event thresholds, staging, minor cast, and the "Four princesses" intro string;
+  - `BIBLE.md` and `OUTLINE.md`;
+  - 25 scenes in the same shape as each frozen route: 18 ordinary, 2 optional, milestone and retry, proposal and retry, epilogue.
+- **Validation.** The compiler loads the folder after the dialogue revision (`scripts/lib/routes.ts`). It validates the exact scene set, ID patterns, speakers, expressions, quoting, option rules and global ID uniqueness. Heart values and costs are derived from the scene kind and the option class, never typed by hand.
+- **How it was written.** Three writers drafted the scenes from the bible and outline. An independent editor then reviewed them, and the notes were applied. The house-style audit flags none of Senna's 456 lines.
+- **Answer order.** Her scenes vary where the right answer sits; the frozen routes keep their documented order (see §7).
+- **Schedule.** Intelligence and Kindness, the one stat pair no other princess uses. She meets the player five days a week:
+
+  | Day | Slots | Location |
+  |---|---|---|
+  | Mon | morning, afternoon | Adventurers' Guild |
+  | Tue | afternoon, evening | Royal Library |
+  | Thu | morning, afternoon | Town Square |
+  | Fri | afternoon, evening | Moonwater Quay |
+  | Sat | morning, afternoon | Royal Gardens |
+
+  Her optional events need Intelligence ≥ 3 before the milestone and Charisma ≥ 3 after it.
+- **Winnable.** She has two witness playthroughs in the same format as the frozen ones (`content/routes/SEN/fixtures/`), and they replay through the real engine:
+  - the perfect run wins on Day 15;
+  - the impaired run wins on Day 26, with four missed meetings, four wrong answers, a failed milestone and a failed proposal.
+
+  A browser test also plays her route to a win through the UI.
+- **Saves.** The save format moves to version 2 (`ordinaryNext.SEN` and her two optional-event flags). Version 1 saves in the browser and version 1 backups are upgraded on read (`src/persistence/migrations.ts`), and an upgraded run replays its journal to the same state. Tests cover old backups, old stored records, and tampering with an old backup.
+- **Art.** Her five portraits and milestone illustration are clearly-labelled placeholders (`art-src/routes/SEN/ART.json`, status `placeholder`; alt text says so). Generating real art needs the Hugging Face connector's image tools, which were still switched off (`gradio=none`) for this session. The prompts are ready in `docs/art/SENNA_ART_PROMPTS.md`, and the art pipeline ships route art with its status and hashes.
+
 **Kaedra's look.** She now has the alternate ash-silver hair and violet eyes from her bible. Her red cape and wings are recoloured to match, and her route colour moves from red to violet. Her eyebrows were left red-brown (one line in her specs to change). Face structure is unchanged (see §7). The commissioning brief for new art is `docs/art/CHARACTER_REDESIGN_BRIEF.md`.
 
 **Fixes from an independent review of the original build, made alongside.** Each of these has a test:
