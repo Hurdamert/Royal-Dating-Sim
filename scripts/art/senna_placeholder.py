@@ -93,6 +93,9 @@ def illustration():
 
 
 def main():
+    rec = os.path.join(OUT, 'ART.json')
+    if os.path.exists(rec) and json.load(open(rec))['status'] != 'placeholder':
+        raise SystemExit('Senna has generated art now (scripts/art/senna.py); not overwriting it with placeholders.')
     os.makedirs(OUT, exist_ok=True)
     assets = []
     p = portrait()

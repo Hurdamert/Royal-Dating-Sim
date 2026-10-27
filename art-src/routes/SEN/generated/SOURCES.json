@@ -62,6 +62,44 @@
         "guidance_scale",
         "steps"
       ]
+    },
+    "annoyed": {
+      "file": "annoyed.generated.webp",
+      "sha256": "0553ea25704d04a8267993e18561e66c8552dece919044db2d490067e2739f7a",
+      "made": "2026-10-26",
+      "model": "black-forest-labs/FLUX.1-Kontext-dev",
+      "model_license": "FLUX.1 [dev] Non-Commercial License (outputs may be used for any purpose, including commercial)",
+      "space": "mcp-tools/FLUX.1-Kontext-Dev",
+      "tool": "FLUX_1_Kontext_Dev_infer",
+      "input": "neutral.generated.webp",
+      "input_url": "https://raw.githubusercontent.com/Hurdamert/Royal-Dating-Sim/main/art-src/routes/SEN/generated/neutral.generated.webp",
+      "prompt": "She is quietly irritated: she narrows her eyes into an unimpressed glare and her eyebrows furrow downward in a frown, while her mouth stays closed in a tight, displeased line. Keep her hair, rose, pencil, spectacles, clothes, pose, framing, background and art style the same.",
+      "settings": {
+        "seed": 21,
+        "randomize_seed": false,
+        "guidance_scale": 3.5,
+        "steps": 20
+      },
+      "review": "Kept. Rejected attempts: seed 14 at guidance 2.5 and 3.5 ('flat, unimpressed half-lidded stare...') barely changed her face; seed 21 at guidance 4 ('irritated and exasperated... displeased pout') opened her mouth in a shout, too loud for her."
+    },
+    "surprised": {
+      "file": "surprised.generated.webp",
+      "sha256": "5e299d8334f3162807b56323229b8485b9cb9b4d5ed8c0cf5503922cb3a52caa",
+      "made": "2026-10-26",
+      "model": "black-forest-labs/FLUX.1-Kontext-dev",
+      "model_license": "FLUX.1 [dev] Non-Commercial License (outputs may be used for any purpose, including commercial)",
+      "space": "mcp-tools/FLUX.1-Kontext-Dev",
+      "tool": "FLUX_1_Kontext_Dev_infer",
+      "input": "neutral.generated.webp",
+      "input_url": "https://raw.githubusercontent.com/Hurdamert/Royal-Dating-Sim/main/art-src/routes/SEN/generated/neutral.generated.webp",
+      "prompt": "Change only her facial expression to surprised: her eyes widen, her eyebrows lift high, and her lips part slightly in a small startled 'oh'. Keep her face shape, hair, rose, pencil, spectacles, clothes, pose, framing, background and art style exactly the same.",
+      "settings": {
+        "seed": 16,
+        "randomize_seed": false,
+        "guidance_scale": 2.5,
+        "steps": 20
+      },
+      "review": "Kept. Rejected attempts: seed 15 at guidance 3.5 and seed 16 at guidance 3 gave stronger expressions but zoomed the framing in and thickened the line art, so they no longer matched the other four portraits."
     }
   }
 }

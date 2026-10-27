@@ -42,9 +42,32 @@ describe('Senna (owner-requested route)', () => {
   });
 
   test('placeholder art is labelled as such, and only while it is a placeholder', () => {
-    assert.equal(!!ART_PLACEHOLDER.SEN, ART.status === 'placeholder');
-    assert.equal(/placeholder/i.test(CG_ALT.SEN), ART.status === 'placeholder');
-    assert.equal(/placeholder/i.test(spriteAlt('SEN', 'NEUTRAL')), ART.status === 'placeholder');
+    const status = (a: { status?: string }) => a.status ?? ART.status;
+    const sprites = ART.assets.filter((a: { kind: string }) => a.kind === 'expression_sprite');
+    const cg = ART.assets.find((a: { kind: string }) => a.kind === 'midpoint_CG');
+    assert.equal(sprites.length, 5);
+    // The five portraits change together, so the stage never mixes real portraits with silhouettes.
+    assert.equal(new Set(sprites.map(status)).size, 1);
+    const portraitsPlaceholder = status(sprites[0]) === 'placeholder';
+    const cgPlaceholder = status(cg) === 'placeholder';
+    assert.equal(!!ART_PLACEHOLDER.SEN?.portraits, portraitsPlaceholder);
+    assert.equal(!!ART_PLACEHOLDER.SEN?.illustration, cgPlaceholder);
+    assert.equal(/placeholder/i.test(spriteAlt('SEN', 'NEUTRAL')), portraitsPlaceholder);
+    assert.equal(/placeholder/i.test(CG_ALT.SEN), cgPlaceholder);
+    assert.equal(ART.status, portraitsPlaceholder === cgPlaceholder ? status(cg) : 'partial');
+  });
+
+  test('generated art records where each image came from', () => {
+    const sources = JSON.parse(readFileSync('art-src/routes/SEN/generated/SOURCES.json', 'utf8')).images;
+    for (const a of ART.assets.filter((x: { status?: string }) => (x.status ?? ART.status) === 'generated')) {
+      const key = a.asset_id.replace('senna_senna_', '');
+      const src = sources[key];
+      assert.ok(src, a.asset_id);
+      assert.equal(a.from, `generated/${src.file}`);
+      assert.equal(a.from_sha256, src.sha256);
+      assert.ok(src.model && src.settings && typeof src.settings.seed === 'number', a.asset_id);
+      assert.ok(src.prompt || (src.prompt_summary && src.unrecorded?.includes('prompt')), `${a.asset_id}: prompt or an honest note that it was not kept`);
+    }
   });
 
   test('her scenes record where they came from and why', () => {

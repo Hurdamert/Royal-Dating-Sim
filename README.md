@@ -4,7 +4,7 @@ A browser fantasy-romance visual novel. Choose one of three princesses — **Tav
 
 This repository implements `handoff/` — the **Royal Exceptions Implementation Agent Handoff v1.0**, kept byte-for-byte — as a playable game.
 
-- **Status:** feature-complete against the handoff, plus the owner's 2026-10-25 revision: rewritten dialogue, a first-run tutorial, all-ages art, Kaedra's new look, music, and a fourth princess: **Senna**, the apothecary princess (her art is a placeholder until generated). All automated tests pass (see [docs/IMPLEMENTATION_REPORT.md](docs/IMPLEMENTATION_REPORT.md) for what ran where, deviations and open items).
+- **Status:** feature-complete against the handoff, plus the owner's 2026-10-25 revision: rewritten dialogue, a first-run tutorial, all-ages art, Kaedra's new look, music, and a fourth princess: **Senna**, the apothecary princess (portraits generated with Hugging Face image tools; her milestone illustration is still a placeholder). All automated tests pass (see [docs/IMPLEMENTATION_REPORT.md](docs/IMPLEMENTATION_REPORT.md) for what ran where, deviations and open items).
 - **Writing:** [docs/writing/STYLE_GUIDE.md](docs/writing/STYLE_GUIDE.md) (how the game sounds, with research sources) and [docs/writing/DIALOGUE_REVISION_COMPARISON.md](docs/writing/DIALOGUE_REVISION_COMPARISON.md) (every scene, before and after).
 - **Screenshots:** [docs/screenshots/](docs/screenshots/) (desktop 1280×850 and phone 320×740).
 - **Owner checklist:** [docs/ACCEPTANCE_CHECKLIST.md](docs/ACCEPTANCE_CHECKLIST.md).
@@ -51,7 +51,7 @@ Deploying to Cloudflare Pages: [docs/DEPLOY.md](docs/DEPLOY.md).
 handoff/                 the v1.0 handoff, unchanged (source archives, canon, art, blueprint, fixtures, provenance)
 content/revisions/       owner-approved dialogue revision layered on the frozen text (words only; mechanics checked)
 content/routes/SEN/      Senna's route (owner request): ROUTE.json (schedule, stats, staging), BIBLE.md, OUTLINE.md, scenes/, fixtures/
-art-src/routes/SEN/      Senna's art and its status/provenance (ART.json); placeholders until generated (docs/art/SENNA_ART_PROMPTS.md)
+art-src/routes/SEN/      Senna's art, its status and provenance (ART.json, generated/SOURCES.json; docs/art/SENNA_ART_PROMPTS.md)
 art-src/edited/          all-ages edits of the character art, derived from the originals by scripts/art/modest.py
 public/audio/            the owner's music: title opening + loop, "Enter the Town" (prologue); played by src/audio/
 scripts/                 source verification, content compiler, revision checker, dialogue audit, art pipeline, font fetcher, fallback build

@@ -258,8 +258,9 @@ export function Credits({ onBack }: { onBack: () => void }) {
         All story text, characters and illustrations are original project content for <em>Royal Exceptions</em>, approved by the project owner. At the owner’s request
         the character art ships in an all-ages edit of the approved originals, and two pivotal-moment illustrations (Tavri’s <em>Private Confession</em>, Nerelle’s{' '}
         <em>Forbidden Journey</em>) were redrawn in seated poses with an AI image editor (FLUX.1 Kontext [dev], Black Forest Labs), using the approved art as the
-        reference. Senna’s route was added at the owner’s request
-        {ART_PLACEHOLDER.SEN ? '; her portraits and illustration are placeholders until her artwork is finished' : ''}. No stock imagery or generated runtime text is used.
+        reference. Senna’s route was added at the owner’s request, and her {ART_PLACEHOLDER.SEN?.illustration ? 'portraits were' : 'portraits and illustration were'} made
+        for it with AI image tools (Qwen-Image, Qwen team; FLUX.1 Kontext [dev], Black Forest Labs)
+        {ART_PLACEHOLDER.SEN?.illustration ? '; her illustration is a placeholder until it is finished' : ''}. No stock imagery or generated runtime text is used.
         {` ${CONTENT.scenes ? Object.keys(CONTENT.scenes).length : 0} authored scenes are included.`}
       </p>
       <h2>Fonts</h2>

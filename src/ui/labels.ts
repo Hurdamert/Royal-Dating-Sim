@@ -12,11 +12,12 @@ export const ROUTE_TAGLINE: Record<Route, string> = {
 };
 export const ROUTE_FILE: Record<Route, string> = { TAV: 'tavri', NER: 'nerelle', KAE: 'kaedra', SEN: 'senna' };
 /**
- * Senna's portraits and illustration are placeholders until her generated art is
- * approved (content/routes/SEN); alt text says so rather than describe art that
- * is not on screen yet.
+ * New-route art still on its placeholder (art-src/routes/<ROUTE>/ART.json, per
+ * image): alt text and credits say so rather than describe art that is not on
+ * screen yet. Senna's five portraits are generated; her midpoint illustration is
+ * still the placeholder silhouette until it is made.
  */
-export const ART_PLACEHOLDER: Partial<Record<Route, true>> = { SEN: true };
+export const ART_PLACEHOLDER: Partial<Record<Route, { portraits?: true; illustration?: true }>> = { SEN: { illustration: true } };
 export const LOCATION_NAME: Record<LocationId, string> = {
   home: 'Home',
   town_square: 'Town Square',
@@ -63,7 +64,7 @@ export const art = {
 };
 
 export function spriteAlt(r: Route, e: Expression): string {
-  if (ART_PLACEHOLDER[r]) return `${ROUTE_NAME[r]} (placeholder portrait), ${EXPRESSION_ALT[e]}.`;
+  if (ART_PLACEHOLDER[r]?.portraits) return `${ROUTE_NAME[r]} (placeholder portrait), ${EXPRESSION_ALT[e]}.`;
   return `${ROUTE_NAME[r]} ${EXPRESSION_ALT[e]}.`;
 }
 export const CG_ALT: Record<Route, string> = {

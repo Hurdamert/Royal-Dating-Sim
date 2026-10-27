@@ -26,6 +26,15 @@ and art originals with recorded SHA-256 hashes).
   "for any purpose (including for commercial purposes)"; §4(a)(i) is worded more
   narrowly, so review the license before any commercial release.
   https://bfl.ai/legal/non-commercial-license-terms
+- Senna, the fourth princess, was added at the owner's request (2026-10-25;
+  story in `content/routes/SEN/`). At the owner's request her five expression
+  portraits were generated with AI image tools on Hugging Face Spaces: the
+  neutral portrait with Qwen-Image (Qwen team, Apache-2.0), the other four as
+  edits of it with FLUX.1 Kontext [dev] (license as above). Raw outputs,
+  prompts, seeds and settings are kept in `art-src/routes/SEN/generated/`;
+  `scripts/art/senna.py` removes the background at build time with the
+  isnet-anime segmentation model. Her midpoint illustration is still a
+  placeholder silhouette (`scripts/art/senna_placeholder.py`), labelled as one in the game.
 - Music (`public/audio/`: the start-screen opening and loop, and "Enter the
   Town") was supplied by the project owner on 2026-10-25 and is shipped byte
   for byte; `src/audio/tracks.generated.ts` records each file's SHA-256.

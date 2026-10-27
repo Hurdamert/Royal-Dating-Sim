@@ -6,7 +6,7 @@ Built from `handoff/` (Implementation Agent Handoff v1.0, archive SHA-256 `15c72
 
 - **Playable game, feature-complete against COMPLETE_GAME_SPEC.md** — 3 routes, 28 days × 3 slots, 7 locations, 8 training activities, Rest/Pass, 54 ordinary conversations, 6 optional events, midpoints and short retries, linked same-encounter proposal, proposal retries, 3 epilogues, shared prologue and failure, journal, calendar, help, gallery, backup export/import, recovery, read-only second tab.
 - **No BLOCKER.** No contradiction between preserved canonical sources and the v1.0 defaults was found (§6).
-- **173 automated tests pass** (142 unit + 31 browser), run on real code paths. Outputs: [`docs/test-results/`](test-results/).
+- **174 automated tests pass** (143 unit + 31 browser), run on real code paths. Outputs: [`docs/test-results/`](test-results/).
 - **Owner revision (§9) applied as layers on top of the frozen sources**, each one reversible: dialogue from `content/revisions/dialogue-v2/` (`CONTENT_REVISION=none` restores the frozen text), character art from `art-src/edited/` (derived from the hash-checked originals by `scripts/art/modest.py`).
 
 ## 2. Source integrity (executed)
@@ -33,7 +33,7 @@ Built from `handoff/` (Implementation Agent Handoff v1.0, archive SHA-256 `15c72
 
 | Suite | Runner | Result |
 |---|---|---|
-| Unit: engine, witnesses, validation, backups, drafts, content (incl. revision mechanics and an independent canon parse), staging geometry and water pixels, art policy, schema migrations, music, new-route consistency, colour contrast; witnesses for all four routes | `npm test` (node:test via tsx) | **142/142 pass** |
+| Unit: engine, witnesses, validation, backups, drafts, content (incl. revision mechanics and an independent canon parse), staging geometry and water pixels, art policy, schema migrations, music, new-route consistency, colour contrast; witnesses for all four routes | `npm test` (node:test via tsx) | **143/143 pass** |
 | Browser persistence (real Chromium IndexedDB + Web Locks + BroadcastChannel) | `node --test tests/browser/persistence.test.mjs` | **15/15 pass** |
 | Browser end-to-end on the built site (esbuild build) | `node --test tests/browser/e2e.test.mjs` | **16/16 pass** |
 | GitHub Actions CI on `main` at `599eaa8`: fonts fetched, sources, content, art, strict type-check with the real `@types/react`, ESLint, unit tests, **Vite build**, browser tests against Vite's `dist/` | [run 40185353778](https://github.com/Hurdamert/Royal-Dating-Sim/actions/runs/40185353778) | **All steps pass** |
@@ -163,7 +163,9 @@ How it works:
 
   A browser test also plays her route to a win through the UI.
 - **Saves.** The save format moves to version 2 (`ordinaryNext.SEN` and her two optional-event flags). Version 1 saves in the browser and version 1 backups are upgraded on read (`src/persistence/migrations.ts`), and an upgraded run replays its journal to the same state. Tests cover old backups, old stored records, and tampering with an old backup.
-- **Art.** Her five portraits and milestone illustration are clearly-labelled placeholders (`art-src/routes/SEN/ART.json`, status `placeholder`; alt text says so). Generating real art needs the Hugging Face connector's image tools, which were still switched off (`gradio=none`) for this session. The prompts are ready in `docs/art/SENNA_ART_PROMPTS.md`, and the art pipeline ships route art with its status and hashes.
+- **Art.** Her five portraits were generated with the Hugging Face image tools at the owner's request: the neutral portrait with Qwen-Image, and the other four as FLUX.1 Kontext [dev] edits of it, so her face, hair and clothes match. `scripts/art/senna.py` cuts them out of their plain background (isnet-anime model, hash-pinned) at one size and frame. Raw outputs, prompts, seeds and the rejected attempts are recorded in `art-src/routes/SEN/generated/SOURCES.json` and `docs/art/SENNA_ART_PROMPTS.md`.
+
+  Her milestone illustration is still a labelled placeholder: the free daily GPU allowance ran out before it was made. `ART.json` records each image's status (`partial` overall), and a test keeps the alt text and credits in step with it.
 
 **Kaedra's look.** She now has the alternate ash-silver hair and violet eyes from her bible. Her red cape and wings are recoloured to match, and her route colour moves from red to violet. Her eyebrows were left red-brown (one line in her specs to change). Face structure is unchanged (see §7). The commissioning brief for new art is `docs/art/CHARACTER_REDESIGN_BRIEF.md`.
 

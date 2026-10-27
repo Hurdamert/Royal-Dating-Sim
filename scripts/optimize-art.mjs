@@ -9,7 +9,8 @@
 //
 // Owner-requested new routes (content/routes/<ROUTE>) bring their own art in
 // art-src/routes/<ROUTE>/, listed with hashes and status (placeholder or
-// generated, with provenance) in that folder's ART.json.
+// generated, with provenance; per image, "partial" for the route while some
+// images are still placeholders) in that folder's ART.json.
 //
 //   node scripts/optimize-art.mjs          # (re)generate public/art + manifest
 //   node scripts/optimize-art.mjs --check  # verify derived copies match the manifest
@@ -36,13 +37,18 @@ const routeArt = (existsSync(ROUTE_ART) ? readdirSync(ROUTE_ART) : [])
   .flatMap((d) => {
     const rec = JSON.parse(readFileSync(join(ROUTE_ART, d, 'ART.json'), 'utf8'));
     if (rec.route !== d) fail(`art-src/routes/${d}/ART.json names route ${rec.route}`);
-    if (!['placeholder', 'generated'].includes(rec.status)) fail(`art-src/routes/${d}: status must be placeholder or generated`);
-    return rec.assets.map((a) => {
+    if (!['placeholder', 'generated', 'partial'].includes(rec.status)) fail(`art-src/routes/${d}: status must be placeholder, generated or partial`);
+    const assets = rec.assets.map((a) => {
+      const status = a.status ?? rec.status;
+      if (!['placeholder', 'generated'].includes(status)) fail(`art-src/routes/${d}/${a.file}: status must be placeholder or generated`);
       const path = `art-src/routes/${d}/${a.file}`;
       const buf = readFileSync(join(root, path));
       if (sha(buf) !== a.sha256) fail(`${path} does not match ART.json`);
-      return { route: d, status: rec.status, asset: a, path, buf };
+      return { route: d, status, asset: a, path, buf };
     });
+    const mixed = new Set(assets.map((x) => x.status)).size > 1;
+    if (mixed !== (rec.status === 'partial')) fail(`art-src/routes/${d}: route status ${rec.status} does not match its images`);
+    return assets;
   });
 const NOT_SHIPPED = new Set(['character_sheet']);
 

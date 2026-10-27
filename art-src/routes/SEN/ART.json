@@ -1,47 +1,67 @@
 {
   "route": "SEN",
-  "status": "placeholder",
-  "note": "Temporary silhouettes drawn by scripts/art/senna_placeholder.py until Senna's generated art is approved. The game labels them \"placeholder\" in alt text.",
+  "status": "partial",
+  "note": "Generated with Hugging Face image tools at the owner's request (\"Use Hugging Face for this\", 2026-10-25). Raw outputs and their prompts, seeds and models are in generated/SOURCES.json; scripts/art/senna.py makes these files from them. The midpoint illustration is still the placeholder; each asset's status says which it is.",
   "assets": [
     {
       "asset_id": "senna_senna_neutral",
       "kind": "expression_sprite",
+      "status": "generated",
       "file": "senna_senna_neutral.png",
-      "sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
-      "width": 1024,
-      "height": 1536
+      "sha256": "5d6131468636454144290fdce739a2dc2ba2a3ed86bd1ccd32876a39197e4a7b",
+      "width": 832,
+      "height": 1248,
+      "from": "generated/neutral.generated.webp",
+      "from_sha256": "598d1d568857f86f3ac53b017ef8de763bc318fdc2f6ad9225cfd9bcc7e89cff",
+      "processing": "resized to 832x1248; background removed (isnet-anime, edge colours unmixed from background rgb(249, 241, 230))"
     },
     {
       "asset_id": "senna_senna_playful",
       "kind": "expression_sprite",
+      "status": "generated",
       "file": "senna_senna_playful.png",
-      "sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
-      "width": 1024,
-      "height": 1536
+      "sha256": "ead0f718428482b252f70a09335607d307ab4153d0ca5c6b4c3adc099770433b",
+      "width": 832,
+      "height": 1248,
+      "from": "generated/playful.generated.webp",
+      "from_sha256": "a1adf365a0a9b0a2c91839e9769c6532035d7225234a42679064da526b650508",
+      "processing": "resized to 832x1248; background removed (isnet-anime, edge colours unmixed from background rgb(247, 239, 230))"
     },
     {
       "asset_id": "senna_senna_worried",
       "kind": "expression_sprite",
+      "status": "generated",
       "file": "senna_senna_worried.png",
-      "sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
-      "width": 1024,
-      "height": 1536
+      "sha256": "03d49e4222e95d0421b4827412b6f406715787bcc212235ed7b7022a766038fb",
+      "width": 832,
+      "height": 1248,
+      "from": "generated/worried.generated.webp",
+      "from_sha256": "c74e407f869b427cbea9eda5d99b9a73eaf3a3686f7ec7d6abc77a998a4d4d38",
+      "processing": "resized to 832x1248; background removed (isnet-anime, edge colours unmixed from background rgb(248, 238, 228))"
     },
     {
       "asset_id": "senna_senna_annoyed",
       "kind": "expression_sprite",
+      "status": "generated",
       "file": "senna_senna_annoyed.png",
-      "sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
-      "width": 1024,
-      "height": 1536
+      "sha256": "29ebff092b9dceef4b138860582d7b3403326a3ee8b2108ecdc5b738d4b05c71",
+      "width": 832,
+      "height": 1248,
+      "from": "generated/annoyed.generated.webp",
+      "from_sha256": "0553ea25704d04a8267993e18561e66c8552dece919044db2d490067e2739f7a",
+      "processing": "resized to 832x1248; background removed (isnet-anime, edge colours unmixed from background rgb(255, 251, 239))"
     },
     {
       "asset_id": "senna_senna_surprised",
       "kind": "expression_sprite",
+      "status": "generated",
       "file": "senna_senna_surprised.png",
-      "sha256": "01719c98d54cd18e529e0fced4a5d12992cf76ec18efae1db9f91518fb56919b",
-      "width": 1024,
-      "height": 1536
+      "sha256": "a60b3d7ba5b994c3651d2f299f9f6474a732efe024175721d62d433fbb3eb5bf",
+      "width": 832,
+      "height": 1248,
+      "from": "generated/surprised.generated.webp",
+      "from_sha256": "5e299d8334f3162807b56323229b8485b9cb9b4d5ed8c0cf5503922cb3a52caa",
+      "processing": "resized to 832x1248; background removed (isnet-anime, edge colours unmixed from background rgb(247, 239, 230))"
     },
     {
       "asset_id": "senna_senna_lamplight",
@@ -49,7 +69,9 @@
       "file": "senna_senna_lamplight.png",
       "sha256": "db14d2a6abca4a9af652029b4dab993e6ebf7881339830f9991bb0bb1f8b020a",
       "width": 1448,
-      "height": 1086
+      "height": 1086,
+      "status": "placeholder",
+      "note": "Placeholder silhouette (scripts/art/senna_placeholder.py) until the generated illustration is made."
     }
   ]
 }

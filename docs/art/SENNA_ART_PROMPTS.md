@@ -1,48 +1,61 @@
-# Senna — art prompts
+# Senna — art record
 
-Senna's route ships with placeholder silhouettes (`art-src/routes/SEN/`, status `placeholder`) until her real art is made. These prompts produce the six images her slots need. Use them with the Hugging Face image tools once they're enabled for Claude, or with any image tool.
+The owner asked for Senna's art to be made with the Hugging Face image tools ("Use Hugging Face for this", 2026-10-25). This page records how it was made. The exact prompts, seeds, settings and hashes are in `art-src/routes/SEN/generated/SOURCES.json`; the raw outputs sit beside it, unchanged.
+
+| Image | State | Made with |
+|---|---|---|
+| Five expression portraits | **Generated** (in the game) | Qwen-Image, then FLUX.1 Kontext [dev] edits |
+| Milestone illustration "Lamplight in the Infirmary" | **Placeholder** silhouette, labelled as one in alt text and credits | Still to make (see the last section) |
 
 ## Her look
 
-- She must read as clearly different from Tavri, Nerelle and Kaedra. The owner noted the three faces look alike, so give her:
-  - a narrower face with straight brows;
-  - a small mole under her left eye;
-  - round spectacles.
+- She is meant to read as clearly different from Tavri, Nerelle and Kaedra:
+  - honey-blonde hair, swept back with no fringe, in a low bun;
+  - a pencil, a sprig of rosemary and a small red rose in the bun;
+  - round gold spectacles pushed up on her head;
+  - grey eyes and a narrow face with straight brows.
+- Her clothes: a plum velvet gown with a high collar, long puffed sleeves, gold buttons and gold leaf embroidery, under a canvas apron. The apron's pockets hold vials, twine and a notebook.
 - She is all-ages: fully clothed, high collar, long sleeves.
 - She must not resemble any existing franchise character. That rules out freckles and servant's clothes.
 
-## 1. Neutral portrait
+The rose was not asked for. Qwen-Image added it despite the negative prompt, and it is kept because it suits her.
 
-Generate from text first, so her face is her own.
+## How the portraits were made
 
-> Anime visual-novel character portrait, waist-up, facing the viewer, plain pale background. A young adult princess apothecary with a narrow face, straight brows and a small mole under her left eye; hazel-grey eyes; a calm, slightly unimpressed expression. Honey-blonde hair in a messy low bun with a pencil and a sprig of rosemary pushed through it; round wire spectacles pushed up on top of her head. She wears a high-collared, long-sleeved plum dress under a canvas apothecary's apron with many labelled pockets holding small glass vials, twine and a notebook. Fully clothed, high neckline, long sleeves, wholesome, suitable for all ages. Painterly anime style, soft lighting, clean line art.
+1. **Neutral, from text.** Qwen-Image (Space `mcp-tools/Qwen-Image`), seed 7731, 2:3. The full prompt and negative prompt are in `SOURCES.json`.
+2. **The other four, as edits of the neutral.** FLUX.1 Kontext [dev], prompted to change only her expression. This keeps her face, hair and clothes identical. The annoyed and surprised edits were made with Space `mcp-tools/FLUX.1-Kontext-Dev`, with the reference URL and exact prompts recorded. For playful (seed 12) and worried (seed 13), the exact prompt wording and Space name were lost when the working session was summarised; `SOURCES.json` says so rather than guess.
+3. **Rejected attempts, and why.** These are listed per image in `SOURCES.json`:
+   - A toothy grin for playful.
+   - Two near-neutral "annoyed" faces, and one shouting one.
+   - Two "surprised" edits that zoomed the framing and thickened the line art.
+4. **Cut-out.** `scripts/art/senna.py` does the rest:
+   - removes the plain background with the isnet-anime segmentation model (the rembg project's GitHub release, hash-pinned);
+   - trims the light fringe on the outline;
+   - unmixes edge colours, so nothing cream shows on a dark stage;
+   - resizes all five to 832×1248 (the editor's native size), so they share one frame.
 
-## 2. The other four expressions
+Run `python3 scripts/art/senna.py --preview` to rebuild them and write review sheets to `art-src/preview/`, then `npm run art` to ship them.
 
-Edit the neutral portrait, for example with FLUX.1 Kontext, and keep everything else identical:
+## Checks made
 
-- **PLAYFUL:** "Change only her expression: a small, dry, amused smile with one eyebrow raised."
-- **WORRIED:** "Change only her expression: brows drawn together, lips pressed, a concerned look."
-- **ANNOYED:** "Change only her expression: a flat, unimpressed stare, mouth tight."
-- **SURPRISED:** "Change only her expression: eyes wide, lips parted, spectacles slipping down her forehead."
+- **Framing:** same crop and scale on all five. The script requires this; the review sheets show it.
+- **Coverage:** nothing below the chin shows except her collar and sleeves.
+- **Drawing errors:** none. There is one face, no stray marks, and no text artefacts. Her hands are out of frame.
+- **Expressions:** all five are distinct, including annoyed (brows down, mouth closed) against worried (brows up, mouth open).
 
-Then remove the background (the `not-lain/background-removal` Space), so each portrait has a transparent background. Keep the frame and scale identical across all five.
+## The illustration, still to make
 
-## 3. Milestone illustration: "Lamplight in the Infirmary"
+FLUX.1 Kontext [dev], input `art-src/routes/SEN/generated/lamplight.input.png` (the neutral portrait on a 4:3 canvas), public at
+`https://raw.githubusercontent.com/Hurdamert/Royal-Dating-Sim/main/art-src/routes/SEN/generated/lamplight.input.png`:
 
-Edit the neutral portrait into a scene:
+> Show her seated at a wooden infirmary worktable in warm lamplight at night, sorting dried herbs into small glass jars, shelves of jars behind her, her spectacles on her nose, a small tired smile. Keep her face, hair, rose, pencil and clothes the same. Wide 4:3 scene, same painterly anime style, fully clothed.
 
-> Show her seated at a wooden infirmary worktable in warm lamplight, sorting dried herbs into labelled glass jars, shelves of jars behind her, spectacles on her nose, a small tired smile. Keep her face, hair and clothes the same. Wide 4:3 landscape scene, same painterly anime style. Fully clothed, all ages.
+FLUX.1 schnell (the quick text-only model) was tried for this and rejected: without the reference picture it gave her a fringe, amber or blue eyes and a second pair of glasses.
 
-## Checks before swapping in
+To swap it in:
 
-- **Five portraits:** 1024×1536 or larger, 2:3, transparent background, same crop and scale. The illustration: 1448×1086 (4:3).
-- **Coverage:** no exposed skin below the chin apart from her hands.
-- **Drawing errors:** none. Five fingers, one face, no stray limbs, no text artefacts.
-
-## Swapping in
-
-1. Put the six PNGs in `art-src/routes/SEN/` under the same file names.
-2. Record each file's tool, prompt, seed and hash in `ART.json`, and set `"status": "generated"`.
-3. Set `ART_PLACEHOLDER` in `src/ui/labels.ts` to `{}`, and update `CG_ALT.SEN` so it no longer says placeholder.
-4. Run `npm run art`. The route test checks that the alt text matches the art status.
+1. Save the output as `art-src/routes/SEN/generated/lamplight.generated.webp`.
+2. Add its entry, keyed `lamplight`, to `SOURCES.json`.
+3. Run `python3 scripts/art/senna.py`. ART.json becomes `generated`.
+4. Set `ART_PLACEHOLDER` in `src/ui/labels.ts` to `{}`, and remove "(placeholder)" from `CG_ALT.SEN`.
+5. Run `npm run art`. `routes.test.ts` checks that the labels match the art status.

@@ -70,6 +70,6 @@ All six reproduced exactly through the real engine (`witnesses.test.ts`); see th
 | All-ages art; Kaedra ash-silver hair, violet eyes | art policy unit test; `art:check`; screenshots | Auto ✔ · **Owner** visual sign-off |
 | Distinct face structures | Needs new artwork: `docs/art/CHARACTER_REDESIGN_BRIEF.md` | **Owner** (commission) |
 | Choice order (correct answer listed first in all 72 menus) | report §7 | **Owner decision** |
-| Fourth princess, Senna: 25 scenes in the frozen routes' shape; schedule, stats, staging from `content/routes/SEN/ROUTE.json`; winnable (Day 15 perfect, Day 26 impaired); version 1 saves and backups upgrade | `routes.test.ts`, `content.test.ts`, witnesses, `backup.test.ts` (schema 1 imports), E2E "Senna's route" | Auto ✔ · **Owner** read-through · art pending (placeholders) |
+| Fourth princess, Senna: 25 scenes in the frozen routes' shape; schedule, stats, staging from `content/routes/SEN/ROUTE.json`; winnable (Day 15 perfect, Day 26 impaired); version 1 saves and backups upgrade | `routes.test.ts`, `content.test.ts`, witnesses, `backup.test.ts` (schema 1 imports), E2E "Senna's route" | Auto ✔ · **Owner** read-through · portraits generated; milestone illustration pending (placeholder) |
 | Music: title opening then loop through character selection; Enter the Town in the prologue; silence in the game; on/off remembered | `music.test.ts`; E2E "Music: …" (emulates the click-to-start rule) | Auto ✔ · **Owner** listen-through (loop seam, volume) |
 

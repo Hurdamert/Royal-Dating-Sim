@@ -786,6 +786,8 @@ img {
 }
 .route-card label {
   display: grid;
+  /* Cards share a row height; keep every name directly under its portrait. */
+  align-content: start;
   cursor: pointer;
 }
 .route-card input {
@@ -849,6 +851,10 @@ img {
 }
 .field input[type='text'] {
   font: inherit;
+  /* Shrink with the panel on 320px screens instead of overflowing it. */
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
   min-height: 44px;
   padding: 8px 10px;
   border: 1px solid #8f8471;
