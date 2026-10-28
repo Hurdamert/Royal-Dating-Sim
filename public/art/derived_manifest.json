@@ -450,14 +450,14 @@
       "asset_id": "senna_senna_lamplight",
       "kind": "midpoint_CG",
       "file": "senna_senna_lamplight.webp",
-      "width": 1448,
-      "height": 1086,
-      "bytes": 22226,
-      "sha256": "76884815645f7d23ff679b668d1378a00208f9aebbc1c91351e73a4f3d3ce110",
+      "width": 1168,
+      "height": 880,
+      "bytes": 44988,
+      "sha256": "13ecef115d1c2f362ec6c2b5f76892db139cf29045617a4de3959f93954a7c71",
       "source_path": "art-src/routes/SEN/senna_senna_lamplight.png",
-      "source_sha256": "db14d2a6abca4a9af652029b4dab993e6ebf7881339830f9991bb0bb1f8b020a",
+      "source_sha256": "5d538b7be6b0c85304f6c24323cf9b08f5a31e16b256ab2f336afd068861d224",
       "route": "SEN",
-      "route_status": "placeholder"
+      "route_status": "generated"
     }
   ]
 }

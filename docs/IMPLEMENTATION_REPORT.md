@@ -163,9 +163,11 @@ How it works:
 
   A browser test also plays her route to a win through the UI.
 - **Saves.** The save format moves to version 2 (`ordinaryNext.SEN` and her two optional-event flags). Version 1 saves in the browser and version 1 backups are upgraded on read (`src/persistence/migrations.ts`), and an upgraded run replays its journal to the same state. Tests cover old backups, old stored records, and tampering with an old backup.
-- **Art.** Her five portraits were generated with the Hugging Face image tools at the owner's request: the neutral portrait with Qwen-Image, and the other four as FLUX.1 Kontext [dev] edits of it, so her face, hair and clothes match. `scripts/art/senna.py` cuts them out of their plain background (isnet-anime model, hash-pinned) at one size and frame. Raw outputs, prompts, seeds and the rejected attempts are recorded in `art-src/routes/SEN/generated/SOURCES.json` and `docs/art/SENNA_ART_PROMPTS.md`.
+- **Art.** Her art was made with the Hugging Face image tools at the owner's request:
+  - the neutral portrait with Qwen-Image;
+  - the other four expressions and the milestone illustration ("Lamplight in the Infirmary") as FLUX.1 Kontext [dev] edits of the neutral portrait, so her face, hair and clothes match.
 
-  Her milestone illustration is still a labelled placeholder: the free daily GPU allowance ran out before it was made. `ART.json` records each image's status (`partial` overall), and a test keeps the alt text and credits in step with it.
+  `scripts/art/senna.py` cuts the portraits out of their plain background (isnet-anime model, hash-pinned) at one size and frame. Raw outputs, prompts, seeds and the rejected attempts are recorded in `art-src/routes/SEN/generated/SOURCES.json` and `docs/art/SENNA_ART_PROMPTS.md`. `ART.json` records each image's status, and a test keeps the alt text and credits in step with it.
 
 **Kaedra's look.** She now has the alternate ash-silver hair and violet eyes from her bible. Her red cape and wings are recoloured to match, and her route colour moves from red to violet. Her eyebrows were left red-brown (one line in her specs to change). Face structure is unchanged (see §7). The commissioning brief for new art is `docs/art/CHARACTER_REDESIGN_BRIEF.md`.
 

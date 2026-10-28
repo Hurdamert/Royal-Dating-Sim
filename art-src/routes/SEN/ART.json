@@ -1,7 +1,7 @@
 {
   "route": "SEN",
-  "status": "partial",
-  "note": "Generated with Hugging Face image tools at the owner's request (\"Use Hugging Face for this\", 2026-10-25). Raw outputs and their prompts, seeds and models are in generated/SOURCES.json; scripts/art/senna.py makes these files from them. The midpoint illustration is still the placeholder; each asset's status says which it is.",
+  "status": "generated",
+  "note": "Generated with Hugging Face image tools at the owner's request (\"Use Hugging Face for this\", 2026-10-25). Raw outputs and their prompts, seeds and models are in generated/SOURCES.json; scripts/art/senna.py makes these files from them.",
   "assets": [
     {
       "asset_id": "senna_senna_neutral",
@@ -66,12 +66,14 @@
     {
       "asset_id": "senna_senna_lamplight",
       "kind": "midpoint_CG",
+      "status": "generated",
       "file": "senna_senna_lamplight.png",
-      "sha256": "db14d2a6abca4a9af652029b4dab993e6ebf7881339830f9991bb0bb1f8b020a",
-      "width": 1448,
-      "height": 1086,
-      "status": "placeholder",
-      "note": "Placeholder silhouette (scripts/art/senna_placeholder.py) until the generated illustration is made."
+      "sha256": "5d538b7be6b0c85304f6c24323cf9b08f5a31e16b256ab2f336afd068861d224",
+      "width": 1168,
+      "height": 880,
+      "from": "generated/lamplight.generated.webp",
+      "from_sha256": "fcb998eaa9b1694031d55e34ff301e5abc97e28a16824c32e419319ad42efffc",
+      "processing": "unchanged"
     }
   ]
 }

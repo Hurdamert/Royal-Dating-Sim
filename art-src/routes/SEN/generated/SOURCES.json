@@ -100,6 +100,26 @@
         "steps": 20
       },
       "review": "Kept. Rejected attempts: seed 15 at guidance 3.5 and seed 16 at guidance 3 gave stronger expressions but zoomed the framing in and thickened the line art, so they no longer matched the other four portraits."
+    },
+    "lamplight": {
+      "file": "lamplight.generated.webp",
+      "sha256": "fcb998eaa9b1694031d55e34ff301e5abc97e28a16824c32e419319ad42efffc",
+      "made": "2026-10-28",
+      "model": "black-forest-labs/FLUX.1-Kontext-dev",
+      "model_license": "FLUX.1 [dev] Non-Commercial License (outputs may be used for any purpose, including commercial)",
+      "space": "mcp-tools/FLUX.1-Kontext-Dev",
+      "tool": "FLUX_1_Kontext_Dev_infer",
+      "input": "lamplight.input.png",
+      "input_url": "https://raw.githubusercontent.com/Hurdamert/Royal-Dating-Sim/main/art-src/routes/SEN/generated/lamplight.input.png",
+      "input_note": "The neutral portrait (neutral.generated.webp) scaled onto a plain 1184x888 cream canvas, so the editor returns a 4:3 scene.",
+      "prompt": "Show her seated at a wooden infirmary worktable in warm lamplight at night, sorting dried herbs into small glass jars, shelves of jars behind her, her spectacles on her nose, a small tired smile. Keep her face, hair, rose, pencil and clothes the same. Wide 4:3 scene, same painterly anime style, fully clothed.",
+      "settings": {
+        "seed": 31,
+        "randomize_seed": false,
+        "guidance_scale": 2.5,
+        "steps": 20
+      },
+      "review": "Kept on the first try. Seated on a chair at the worktable, packing dried herbs into jars, wall lamp and shelves of jars behind. Her face, hair, rose, rosemary, pencil and gold-embroidered plum gown match the portraits; her eyes read amber in the warm light. She kept her spectacles pushed up on her head, as in every portrait, rather than on her nose. Fully clothed; both hands drawn correctly. The notebook on the table has faint illegible scribbles, no readable text. Earlier attempts (2026-10-26/27) were refused by the free GPU allowance, and a FLUX.1 schnell text-only try was rejected for not matching her (see docs/art/SENNA_ART_PROMPTS.md)."
     }
   }
 }

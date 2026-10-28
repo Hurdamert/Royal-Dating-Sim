@@ -4,7 +4,7 @@ A browser fantasy-romance visual novel. Choose one of three princesses — **Tav
 
 This repository implements `handoff/` — the **Royal Exceptions Implementation Agent Handoff v1.0**, kept byte-for-byte — as a playable game.
 
-- **Status:** feature-complete against the handoff, plus the owner's 2026-10-25 revision: rewritten dialogue, a first-run tutorial, all-ages art, Kaedra's new look, music, and a fourth princess: **Senna**, the apothecary princess (portraits generated with Hugging Face image tools; her milestone illustration is still a placeholder). All automated tests pass (see [docs/IMPLEMENTATION_REPORT.md](docs/IMPLEMENTATION_REPORT.md) for what ran where, deviations and open items).
+- **Status:** feature-complete against the handoff, plus the owner's 2026-10-25 revision: rewritten dialogue, a first-run tutorial, all-ages art, Kaedra's new look, music, and a fourth princess: **Senna**, the apothecary princess (her portraits and illustration made with Hugging Face image tools). All automated tests pass (see [docs/IMPLEMENTATION_REPORT.md](docs/IMPLEMENTATION_REPORT.md) for what ran where, deviations and open items).
 - **Writing:** [docs/writing/STYLE_GUIDE.md](docs/writing/STYLE_GUIDE.md) (how the game sounds, with research sources) and [docs/writing/DIALOGUE_REVISION_COMPARISON.md](docs/writing/DIALOGUE_REVISION_COMPARISON.md) (every scene, before and after).
 - **Screenshots:** [docs/screenshots/](docs/screenshots/) (desktop 1280×850 and phone 320×740).
 - **Owner checklist:** [docs/ACCEPTANCE_CHECKLIST.md](docs/ACCEPTANCE_CHECKLIST.md).

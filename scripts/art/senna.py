@@ -11,13 +11,11 @@ the six game images in art-src/routes/SEN/ and rewrites ART.json:
     unmixed from the background so nothing cream shows on a dark stage. All five
     share one size and framing: 832x1248, the image editor's native 2:3 size (the
     text-to-image neutral is downscaled to match, so nothing is upscaled);
-  * the midpoint illustration "Lamplight in the Infirmary": centre-cropped to 4:3.
+  * the midpoint illustration "Lamplight in the Infirmary": centre-cropped to 4:3
+    if needed (the editor's 1168x880 is within 1% of 4:3, so it ships as made).
 
-It refuses, and changes nothing, until all five portraits are present and match
-their recorded hashes (they replace the placeholders together, so the game never
-mixes real portraits with silhouettes). Until the illustration's raw image exists,
-the placeholder illustration stays, marked "placeholder" in ART.json, and the
-game's alt text and credits say so.
+It refuses, and changes nothing, unless all six raw images are present and match
+their recorded hashes.
 
   python3 scripts/art/senna.py            # write art-src/routes/SEN/*.png + ART.json
   python3 scripts/art/senna.py --preview  # also write review sheets to art-src/preview/
@@ -109,18 +107,12 @@ def crop_4x3(img):
 def main():
     src = json.load(open(os.path.join(RAW, 'SOURCES.json')))
     images = src['images']
-    present = lambda k: k in images and os.path.exists(os.path.join(RAW, images[k]['file']))
-    missing = [k for k in EXPRESSIONS if not present(k)]
+    missing = [k for k in EXPRESSIONS + [CG] if k not in images or not os.path.exists(os.path.join(RAW, images[k]['file']))]
     if missing:
-        sys.exit('Not all of Senna\'s portraits are here yet (missing: ' + ', '.join(missing) + '). Nothing changed.')
-    have_cg = present(CG)
-    for k in EXPRESSIONS + ([CG] if have_cg else []):
+        sys.exit('Not all of Senna\'s raw images are here (missing: ' + ', '.join(missing) + '). Nothing changed.')
+    for k in EXPRESSIONS + [CG]:
         if sha(os.path.join(RAW, images[k]['file'])) != images[k]['sha256']:
             sys.exit(f'FAIL generated/{images[k]["file"]} does not match SOURCES.json')
-    previous = json.load(open(os.path.join(DIR, 'ART.json')))
-    old_cg = next(a for a in previous['assets'] if a['kind'] == 'midpoint_CG')
-    if not have_cg and (old_cg.get('status', previous['status']) != 'placeholder' or sha(os.path.join(DIR, old_cg['file'])) != old_cg['sha256']):
-        sys.exit('FAIL the illustration is neither generated nor the recorded placeholder')
 
     session = model()
     assets = []
@@ -141,32 +133,26 @@ def main():
             'from': f'generated/{images[e]["file"]}', 'from_sha256': images[e]['sha256'],
             'processing': f'resized to {SPRITE[0]}x{SPRITE[1]}; background removed (isnet-anime, edge colours unmixed from background rgb{tuple(bg)})',
         })
-    if have_cg:
-        raw = Image.open(os.path.join(RAW, images[CG]['file'])).convert('RGB')
-        cg, box = crop_4x3(raw)
-        path = os.path.join(DIR, 'senna_senna_lamplight.png')
-        cg.save(path, optimize=True)
-        assets.append({
-            'asset_id': 'senna_senna_lamplight', 'kind': 'midpoint_CG', 'status': 'generated', 'file': 'senna_senna_lamplight.png', 'sha256': sha(path),
-            'width': cg.width, 'height': cg.height,
-            'from': f'generated/{images[CG]["file"]}', 'from_sha256': images[CG]['sha256'],
-            'processing': 'unchanged' if box is None else f'centre-cropped to 4:3 (box {box})',
-        })
-    else:
-        assets.append({**old_cg, 'status': 'placeholder',
-                       'note': 'Placeholder silhouette (scripts/art/senna_placeholder.py) until the generated illustration is made.'})
-    status = 'generated' if have_cg else 'partial'
+    raw = Image.open(os.path.join(RAW, images[CG]['file'])).convert('RGB')
+    cg, box = crop_4x3(raw)
+    path = os.path.join(DIR, 'senna_senna_lamplight.png')
+    cg.save(path, optimize=True)
+    assets.append({
+        'asset_id': 'senna_senna_lamplight', 'kind': 'midpoint_CG', 'status': 'generated', 'file': 'senna_senna_lamplight.png', 'sha256': sha(path),
+        'width': cg.width, 'height': cg.height,
+        'from': f'generated/{images[CG]["file"]}', 'from_sha256': images[CG]['sha256'],
+        'processing': 'unchanged' if box is None else f'centre-cropped to 4:3 (box {box})',
+    })
     record = {
         'route': 'SEN',
-        'status': status,
-        'note': 'Generated with Hugging Face image tools at the owner\'s request ("Use Hugging Face for this", 2026-10-25). Raw outputs and their prompts, seeds and models are in generated/SOURCES.json; scripts/art/senna.py makes these files from them.'
-        + ('' if have_cg else ' The midpoint illustration is still the placeholder; each asset\'s status says which it is.'),
+        'status': 'generated',
+        'note': 'Generated with Hugging Face image tools at the owner\'s request ("Use Hugging Face for this", 2026-10-25). Raw outputs and their prompts, seeds and models are in generated/SOURCES.json; scripts/art/senna.py makes these files from them.',
         'assets': assets,
     }
     with open(os.path.join(DIR, 'ART.json'), 'w') as f:
         json.dump(record, f, indent=2)
         f.write('\n')
-    print('wrote', len(assets), f'images; ART.json status {status}')
+    print('wrote', len(assets), 'images; ART.json status generated')
 
     if '--preview' in sys.argv:
         os.makedirs(os.path.join(ROOT, 'art-src/preview'), exist_ok=True)

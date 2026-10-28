@@ -14,10 +14,9 @@ export const ROUTE_FILE: Record<Route, string> = { TAV: 'tavri', NER: 'nerelle',
 /**
  * New-route art still on its placeholder (art-src/routes/<ROUTE>/ART.json, per
  * image): alt text and credits say so rather than describe art that is not on
- * screen yet. Senna's five portraits are generated; her midpoint illustration is
- * still the placeholder silhouette until it is made.
+ * screen yet. Senna's portraits and illustration are all generated now.
  */
-export const ART_PLACEHOLDER: Partial<Record<Route, { portraits?: true; illustration?: true }>> = { SEN: { illustration: true } };
+export const ART_PLACEHOLDER: Partial<Record<Route, { portraits?: true; illustration?: true }>> = {};
 export const LOCATION_NAME: Record<LocationId, string> = {
   home: 'Home',
   town_square: 'Town Square',
@@ -71,7 +70,7 @@ export const CG_ALT: Record<Route, string> = {
   TAV: 'Illustration: Tavri sitting on the rim of a garden fountain at night, one hand at her collar, her tail curled beside her.',
   NER: 'Illustration: Nerelle upright in the canal at night, her arms folded on the stone edge, her tail in the water and the lit city behind her.',
   KAE: 'Illustration: Kaedra, silver-haired, at a palace ceremony with a small spark of light at her hand.',
-  SEN: 'Illustration (placeholder): Senna seated at the infirmary worktable in lamplight, sorting dried herbs into labelled jars.',
+  SEN: 'Illustration: Senna seated at the infirmary worktable by lamplight at night, packing dried herbs into glass jars, her spectacles pushed up in her hair.',
 };
 
 /** Hearts are stored as half-units; display 0.0–10.0. */

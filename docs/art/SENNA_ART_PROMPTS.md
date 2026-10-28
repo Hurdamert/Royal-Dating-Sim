@@ -5,7 +5,7 @@ The owner asked for Senna's art to be made with the Hugging Face image tools ("U
 | Image | State | Made with |
 |---|---|---|
 | Five expression portraits | **Generated** (in the game) | Qwen-Image, then FLUX.1 Kontext [dev] edits |
-| Milestone illustration "Lamplight in the Infirmary" | **Placeholder** silhouette, labelled as one in alt text and credits | Still to make (see the last section) |
+| Milestone illustration "Lamplight in the Infirmary" | **Generated** (in the game) | FLUX.1 Kontext [dev] edit of the neutral portrait |
 
 ## Her look
 
@@ -43,19 +43,22 @@ Run `python3 scripts/art/senna.py --preview` to rebuild them and write review sh
 - **Drawing errors:** none. There is one face, no stray marks, and no text artefacts. Her hands are out of frame.
 - **Expressions:** all five are distinct, including annoyed (brows down, mouth closed) against worried (brows up, mouth open).
 
-## The illustration, still to make
+## How the illustration was made
 
-FLUX.1 Kontext [dev], input `art-src/routes/SEN/generated/lamplight.input.png` (the neutral portrait on a 4:3 canvas), public at
-`https://raw.githubusercontent.com/Hurdamert/Royal-Dating-Sim/main/art-src/routes/SEN/generated/lamplight.input.png`:
+FLUX.1 Kontext [dev] (Space `mcp-tools/FLUX.1-Kontext-Dev`), seed 31, guidance 2.5, 20 steps. The input was `art-src/routes/SEN/generated/lamplight.input.png`: the neutral portrait on a plain 4:3 canvas, so the editor returns a 4:3 scene. It was public at
+`https://raw.githubusercontent.com/Hurdamert/Royal-Dating-Sim/main/art-src/routes/SEN/generated/lamplight.input.png`.
 
 > Show her seated at a wooden infirmary worktable in warm lamplight at night, sorting dried herbs into small glass jars, shelves of jars behind her, her spectacles on her nose, a small tired smile. Keep her face, hair, rose, pencil and clothes the same. Wide 4:3 scene, same painterly anime style, fully clothed.
 
-FLUX.1 schnell (the quick text-only model) was tried for this and rejected: without the reference picture it gave her a fringe, amber or blue eyes and a second pair of glasses.
+The first try was kept:
 
-To swap it in:
+- She sits on a chair at the worktable, packing dried herbs into jars, with a wall lamp and shelves of jars behind her.
+- Her face, hair, rose, rosemary, pencil and gold-embroidered plum gown match the portraits.
+- Her eyes read amber in the warm light.
+- She kept her spectacles pushed up in her hair, as in every portrait, instead of on her nose.
 
-1. Save the output as `art-src/routes/SEN/generated/lamplight.generated.webp`.
-2. Add its entry, keyed `lamplight`, to `SOURCES.json`.
-3. Run `python3 scripts/art/senna.py`. ART.json becomes `generated`.
-4. Set `ART_PLACEHOLDER` in `src/ui/labels.ts` to `{}`, and remove "(placeholder)" from `CG_ALT.SEN`.
-5. Run `npm run art`. `routes.test.ts` checks that the labels match the art status.
+Checks: she is fully clothed; both hands are drawn correctly; the notebook on the table has only faint illegible scribbles, no readable text. The editor's 1168×880 is within 1% of 4:3, so it ships as made.
+
+Before that, FLUX.1 schnell (the quick text-only model) was tried while the editor's free GPU allowance was used up. It was rejected because, without the reference picture, it gave her a fringe, amber or blue eyes and a second pair of glasses.
+
+The illustration took two extra days because of that allowance. Each Kontext edit asks for about 90 seconds of the free account's small daily ZeroGPU allowance.
